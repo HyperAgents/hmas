@@ -1,39 +1,43 @@
-@prefix : <https://w3id.org/hyperagents#> .
+@base <https://ci.mines-stetienne.fr/hmas> .
+@prefix : <#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://ns.hyperagents.org/core#> .
 
-<http://ns.hyperagents.org/core#> rdf:type owl:Ontology .
+<#> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://ns.hyperagents.org/core#contains
+###  https://ci.mines-stetienne.fr/hmas#contains
 :contains rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isContainedBy ;
           rdfs:domain :Workspace ;
           rdfs:label "contains"@en .
 
 
-###  http://ns.hyperagents.org/core#containsAgent
+###  https://ci.mines-stetienne.fr/hmas#containsAgent
 :containsAgent rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :contains ;
+               rdfs:domain :Workspace ;
                rdfs:range :Agent ;
                rdfs:label "contains Agent"@en .
 
 
-###  http://ns.hyperagents.org/core#containsArtifact
+###  https://ci.mines-stetienne.fr/hmas#containsArtifact
 :containsArtifact rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :contains ;
+                  rdfs:domain :Workspace ;
                   rdfs:range :Artifact ;
                   rdfs:label "contains Artifact"@en .
 
 
-###  http://ns.hyperagents.org/core#describes
+###  https://ci.mines-stetienne.fr/hmas#describes
 :describes rdf:type owl:ObjectProperty ;
+           owl:inverseOf :isDescribedBy ;
            rdfs:domain [ rdf:type owl:Class ;
                          owl:unionOf ( :ResourceProfile
                                        :Signifier
@@ -42,20 +46,45 @@
            rdfs:label "describes"@en .
 
 
-###  http://ns.hyperagents.org/core#hasSignifier
+###  https://ci.mines-stetienne.fr/hmas#hasHomePlatform
+:hasHomePlatform rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :isHostedBy ;
+                 owl:inverseOf :hostsAgent ;
+                 rdfs:domain :Agent ;
+                 rdfs:range :Platform ;
+                 rdfs:label "has Home Platform"@en .
+
+
+###  https://ci.mines-stetienne.fr/hmas#hasHomeWorkspace
+:hasHomeWorkspace rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :isContainedBy ;
+                  owl:inverseOf :isHomeOf ;
+                  rdfs:label "has Home Workspace"@en .
+
+
+###  https://ci.mines-stetienne.fr/hmas#hasSignifier
 :hasSignifier rdf:type owl:ObjectProperty ;
               rdfs:domain :ResourceProfile ;
               rdfs:range :Signifier ;
               rdfs:label "has Signifier"@en .
 
 
-###  http://ns.hyperagents.org/core#hosts
+###  https://ci.mines-stetienne.fr/hmas#hosts
 :hosts rdf:type owl:ObjectProperty ;
+       owl:inverseOf :isHostedBy ;
        rdfs:domain :Platform ;
        rdfs:label "hosts"@en .
 
 
-###  http://ns.hyperagents.org/core#hostsWorkspace
+###  https://ci.mines-stetienne.fr/hmas#hostsAgent
+:hostsAgent rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :hosts ;
+            rdfs:domain :Platform ;
+            rdfs:range :Agent ;
+            rdfs:label "hosts Agent"@en .
+
+
+###  https://ci.mines-stetienne.fr/hmas#hostsWorkspace
 :hostsWorkspace rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hosts ;
                 rdfs:domain :Platform ;
@@ -63,41 +92,72 @@
                 rdfs:label "hosts Workspace"@en .
 
 
+###  https://ci.mines-stetienne.fr/hmas#isContainedBy
+:isContainedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:range :Workspace ;
+               rdfs:label "is Contained By"@en .
+
+
+###  https://ci.mines-stetienne.fr/hmas#isDescribedBy
+:isDescribedBy rdf:type owl:ObjectProperty ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( :ResourceProfile
+                                          :Signifier
+                                        )
+                          ] ;
+               rdfs:label "is Described By"@en .
+
+
+###  https://ci.mines-stetienne.fr/hmas#isHomeOf
+:isHomeOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :containsAgent ;
+          rdfs:domain :Workspace ;
+          rdfs:range :Agent ;
+          rdfs:label "is Home Of"@en .
+
+
+###  https://ci.mines-stetienne.fr/hmas#isHostedBy
+:isHostedBy rdf:type owl:ObjectProperty ;
+            rdfs:range :Platform ;
+            rdfs:label "is Hosted By"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
 
-###  http://ns.hyperagents.org/core#Agent
+###  https://ci.mines-stetienne.fr/hmas#Agent
 :Agent rdf:type owl:Class ;
        rdfs:comment "An entity that is capable of flexible autonomous behavior."@en ;
        rdfs:label "Agent" .
 
 
-###  http://ns.hyperagents.org/core#Artifact
+###  https://ci.mines-stetienne.fr/hmas#Artifact
 :Artifact rdf:type owl:Class ;
           rdfs:comment "An artifact is a resource (or tool) that exposes affordances to agents. Agents use artifacts to achieve their design objectives."@en ;
           rdfs:label "Artifact" .
 
 
-###  http://ns.hyperagents.org/core#Platform
+###  https://ci.mines-stetienne.fr/hmas#Platform
 :Platform rdf:type owl:Class ;
           rdfs:comment "A platform is a system providing a collection of features to support Hypermedia MAS. Common features include (...)."@en ;
           rdfs:label "Platform"@en .
 
 
-###  http://ns.hyperagents.org/core#ResourceProfile
+###  https://ci.mines-stetienne.fr/hmas#ResourceProfile
 :ResourceProfile rdf:type owl:Class ;
                  rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
                  rdfs:label "Resource Profile"@en .
 
 
-###  http://ns.hyperagents.org/core#Signifier
+###  https://ci.mines-stetienne.fr/hmas#Signifier
 :Signifier rdf:type owl:Class ;
            rdfs:comment "TODO"@en ;
            rdfs:label "Signifier" .
 
 
-###  http://ns.hyperagents.org/core#Workspace
+###  https://ci.mines-stetienne.fr/hmas#Workspace
 :Workspace rdf:type owl:Class ;
            rdfs:comment "A space or container of one or multiple activities involving a set of agents and potentially artifacts."@en ;
            rdfs:label "Workspace" .
