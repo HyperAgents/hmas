@@ -5,10 +5,12 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dc: <http://purl.org/dc/terms/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <http://schema.org/>.
+@prefix dct: <http://purl.org/dc/terms/>.
 
 
 #################################################################
@@ -21,13 +23,31 @@
                  "l'ontologie centrale pour la description de systèmes multi-agents hypermédias"@fr ;
     dc:issued "2021-11-21"^^xsd:date ;
     #dc:modified "2021-11-24"^^xsd:date ;
-    dc:contributor <http://ns.inria.fr/fabien.gandon#me> ;  #add yourselves here
-    # dc:creator <...> ;    ANDREI
-    # dc:publisher <...> ;  HYPERAGENTS
-    cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+    dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;  #add yourselves here
+    dct:contributor <http://maxime-lefrancois.info/me#> ;  #add yourselves here
+    dct:creator <http://iri.for/andrei> ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <#> .
 
+<http://ns.inria.fr/fabien.gandon#me> a schema:Person ;
+  schema:name "Fabien Gandon" ;
+  schema:email "fabien.gandon@inria.fr" ;
+  schema:url <http://fabien.info/> ;
+  schema:identifier <http://orcid.org/0000-0003-0543-1232> ;
+  schema:affiliation [ schema:name "Inria" ; schema:url <https://inria.fr/> ] .
+
+<http://maxime-lefrancois.info/me#> a schema:Person ;
+  schema:name "Maxime Lefrançois" ;
+  schema:email "maxime.lefrancois@emse.fr" ;
+  schema:url <http://maxime-lefrancois.info/> ;
+  schema:identifier <http://orcid.org/0000-0001-9814-8991> ;
+  schema:affiliation [ schema:name "MINES Saint-Étienne" ; schema:url <https://mines-stetienne.fr> ] .
+
+<http://iri.for/andrei> a schema:Person ;
+  schema:name "Andrei Ciortea" ;
+  schema:email "andrei.ciortea@unisg.ch" ;
+  schema:affiliation [ schema:name "University of St.Gallen" ; schema:url <https://www.unisg.ch> ] .
 
 #################################################################
 #    Classes
@@ -59,7 +79,7 @@
 
 
 :Signifier a owl:Class ;
-           rdfs:comment "TODO"@en ;
+           rdfs:comment "Structured data describing (one or multiple) affordances exposed by an artifact to agents. Structured data may include metadata about the signifier (e.g., creator, salience) or the described affordance (e.g., predicted pertinence)"@en ;
            rdfs:label "Signifier"@en, "Signifiant"@en .
 
 
