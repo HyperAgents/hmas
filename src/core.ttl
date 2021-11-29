@@ -18,11 +18,11 @@
 #################################################################
 
 <#> a owl:Ontology ;
-    dc:title "HMAS Core Ontology"@en, "Ontologie Centrale des SMAH"@fr ;
-    dc:description  "the core ontology to describe hypermedia multi-agent systems."@en,
+    dct:title "HMAS Core Ontology"@en, "Ontologie Centrale des SMAH"@fr ;
+    dct:description  "the core ontology to describe hypermedia multi-agent systems."@en,
                  "l'ontologie centrale pour la description de systèmes multi-agents hypermédias"@fr ;
-    dc:issued "2021-11-21"^^xsd:date ;
-    #dc:modified "2021-11-24"^^xsd:date ;
+    dct:issued "2021-11-21"^^xsd:date ;
+    #dct:modified "2021-11-24"^^xsd:date ;
     dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;  #add yourselves here
     dct:contributor <http://maxime-lefrancois.info/me#> ;  #add yourselves here
     dct:creator <http://iri.for/andrei> ;
