@@ -1,0 +1,14 @@
+# TBox is a formal model written in a proper language, such as OWL 2, implementing the description introduced in the motivating scenario;
+# [Source: SAMOD]
+@prefix hmas: <https://ci.mines-stetienne.fr/hmas/> .
+@prefix ex: <http://example.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+ex: a owl:Ontology ;
+  owl:imports <https://ci.mines-stetienne.fr/hmas#> .
+
+ex:Workshop a owl:Class ;
+  rdfs:subClassOf hmas:Workspace .
+
+ex:Robot a owl:Class ;
+  rdfs:subClassOf hmas:Agent .

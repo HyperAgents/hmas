@@ -1,0 +1,9 @@
+# ABox an exemplar dataset written in a proper language, such as OWL 2, implementing all the examples described in the motivating scenario according to the TBox;
+# [Source: SAMOD]
+@prefix hmas: <https://ci.mines-stetienne.fr/hmas/> .
+@prefix ex: <http://example.org/ontology#> .
+@base <http://example.org/> .
+
+<workshop> a ex:Workshop .
+<UG5> a ex:Robot .
+<workshop> hmas:hostsAgent <UG5> .
