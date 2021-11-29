@@ -80,7 +80,7 @@
 
 :Signifier rdf:type owl:Class ;
            rdfs:comment "Structured data describing (one or multiple) affordances exposed by an artifact to agents. Structured data may include metadata about the signifier (e.g., creator, salience) or the described affordance (e.g., predicted pertinence)."@en ;
-           rdfs:label "Signifier"@en .
+           rdfs:label "Signifier"@en, "Signifiant"@fr  .
 
 
 
