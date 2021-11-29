@@ -17,17 +17,15 @@
 #    Ontology Description
 #################################################################
 
-<#> rdf:type owl:Ontology ;
+<#> a owl:Ontology ;
     dct:title "HMAS Core Ontology"@en, "Ontologie Centrale des SMAH"@fr ;
     dct:description  "the core ontology to describe hypermedia multi-agent systems."@en,
                  "l'ontologie centrale pour la description de systèmes multi-agents hypermédias"@fr ;
     dct:issued "2021-11-21"^^xsd:date ;
-    dct:modified "2021-11-24"^^xsd:date ;
+    #dct:modified "2021-11-24"^^xsd:date ;
     dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;  #add yourselves here
     dct:contributor <http://maxime-lefrancois.info/me#> ;  #add yourselves here
     dct:creator <http://iri.for/andrei> ;
-    # ...
-    # dct:publisher <...> ;  HYPERAGENTS
     dct:license <http://creativecommons.org/licenses/by/3.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <#> .
@@ -56,27 +54,27 @@
 #################################################################
 
 
-:Agent rdf:type owl:Class ;
+:Agent a owl:Class ;
        rdfs:comment "An entity that is capable of flexible autonomous behavior."@en ;
-       rdfs:label "Agent"@en .
+       rdfs:label "Agent"@en, "Agent"@fr.
 
 
 
-:Artifact rdf:type owl:Class ;
+:Artifact a owl:Class ;
           rdfs:comment "An artifact is a resource (or tool) that exposes affordances to agents. Agents use artifacts to achieve their design objectives."@en ;
-          rdfs:label "Artifact"@en .
+          rdfs:label "Artifact"@en, "Artéfact"@en .
 
 
 
-:Platform rdf:type owl:Class ;
+:Platform a owl:Class ;
           rdfs:comment "A platform is a system providing a collection of features to support Hypermedia MAS. Common features include (...)."@en ;
-          rdfs:label "Platform"@en .
+          rdfs:label "Platform"@en, "Platforme"@fr .
 
 
 
-:ResourceProfile rdf:type owl:Class ;
+:ResourceProfile a owl:Class ;
                  rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
-                 rdfs:label "Resource Profile"@en .
+                 rdfs:label "Resource Profile"@en, "Profil de Resource"@fr .
 
 
 
@@ -86,10 +84,17 @@
 
 
 
-:Workspace rdf:type owl:Class ;
+:Workspace a owl:Class ;
            rdfs:comment "A space or container of one or multiple activities involving a set of agents and potentially artifacts."@en ;
-           rdfs:label "Workspace"@en .
+           rdfs:label "Workspace"@en, "Espace de Travail"@fr .
 
+
+### Top ontology constraints for coherent modeling 
+
+# disjoint top classes 
+
+[ a owl:AllDisjointClasses ;
+    owl:members ( :Agent :Artifact :Platform :ResourceProfile :Signifier :Workspace ) ] . 
 
 
 
@@ -98,32 +103,32 @@
 #################################################################
 
 
-:contains rdf:type owl:ObjectProperty ;
+:contains a owl:ObjectProperty ;
           owl:inverseOf :isContainedBy ;
           rdfs:domain :Workspace ;
           rdfs:label "contains"@en .
 
 
 
-:containsAgent rdf:type owl:ObjectProperty ;
+:containsAgent a owl:ObjectProperty ;
                rdfs:subPropertyOf :contains ;
                rdfs:domain :Workspace ;
                rdfs:range :Agent ;
-               rdfs:label "contains Agent"@en .
+               rdfs:label "contains agent"@en .
 
 
 
-:containsArtifact rdf:type owl:ObjectProperty ;
+:containsArtifact a owl:ObjectProperty ;
                   rdfs:subPropertyOf :contains ;
                   rdfs:domain :Workspace ;
                   rdfs:range :Artifact ;
-                  rdfs:label "contains Artifact"@en .
+                  rdfs:label "contains artifact"@en .
 
 
 
-:describes rdf:type owl:ObjectProperty ;
+:describes a owl:ObjectProperty ;
            owl:inverseOf :isDescribedBy ;
-           rdfs:domain [ rdf:type owl:Class ;
+           rdfs:domain [ a owl:Class ;
                          owl:unionOf ( :ResourceProfile
                                        :Signifier
                                      )
@@ -132,79 +137,79 @@
 
 
 
-:hasHomePlatform rdf:type owl:ObjectProperty ;
+:hasHomePlatform a owl:ObjectProperty ;
                  rdfs:subPropertyOf :isHostedBy ;
                  owl:inverseOf :hostsAgent ;
                  rdfs:domain :Agent ;
                  rdfs:range :Platform ;
-                 rdfs:label "has Home Platform"@en .
+                 rdfs:label "has home platform"@en .
 
 
 
-:hasHomeWorkspace rdf:type owl:ObjectProperty ;
+:hasHomeWorkspace a owl:ObjectProperty ;
                   rdfs:subPropertyOf :isContainedBy ;
                   owl:inverseOf :isHomeOf ;
-                  rdfs:label "has Home Workspace"@en .
+                  rdfs:label "has home workspace"@en .
 
 
 
-:hasSignifier rdf:type owl:ObjectProperty ;
+:hasSignifier a owl:ObjectProperty ;
               rdfs:domain :ResourceProfile ;
               rdfs:range :Signifier ;
-              rdfs:label "has Signifier"@en .
+              rdfs:label "has signifier"@en .
 
 
 
-:hosts rdf:type owl:ObjectProperty ;
+:hosts a owl:AsymmetricProperty ;
        owl:inverseOf :isHostedBy ;
        rdfs:domain :Platform ;
        rdfs:label "hosts"@en .
 
 
 
-:hostsAgent rdf:type owl:ObjectProperty ;
+:hostsAgent a owl:ObjectProperty ;
             rdfs:subPropertyOf :hosts ;
             rdfs:domain :Platform ;
             rdfs:range :Agent ;
-            rdfs:label "hosts Agent"@en .
+            rdfs:label "hosts agent"@en .
 
 
 
-:hostsWorkspace rdf:type owl:ObjectProperty ;
+:hostsWorkspace a owl:ObjectProperty ;
                 rdfs:subPropertyOf :hosts ;
                 rdfs:domain :Platform ;
                 rdfs:range :Workspace ;
-                rdfs:label "hosts Workspace"@en .
+                rdfs:label "hosts workspace"@en .
 
 
 
-:isContainedBy rdf:type owl:ObjectProperty ;
+:isContainedBy a owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                rdfs:range :Workspace ;
-               rdfs:label "is Contained By"@en .
+               rdfs:label "is contained by"@en .
 
 
 
-:isDescribedBy rdf:type owl:ObjectProperty ;
-               rdfs:range [ rdf:type owl:Class ;
+:isDescribedBy a owl:AsymmetricProperty ;
+               rdfs:range [ a owl:Class ;
                             owl:unionOf ( :ResourceProfile
                                           :Signifier
                                         )
                           ] ;
-               rdfs:label "is Described By"@en .
+               rdfs:label "is described by"@en .
 
 
 
-:isHomeOf rdf:type owl:ObjectProperty ;
+:isHomeOf a owl:AsymmetricProperty ;
           rdfs:subPropertyOf :containsAgent ;
           rdfs:domain :Workspace ;
           rdfs:range :Agent ;
-          rdfs:label "is Home Of"@en .
+          rdfs:label "is home of"@en .
 
 
 
-:isHostedBy rdf:type owl:ObjectProperty ;
+:isHostedBy a owl:AsymmetricProperty ;
             rdfs:range :Platform ;
-            rdfs:label "is Hosted By"@en .
+            rdfs:label "is hosted by"@en .
 
 
