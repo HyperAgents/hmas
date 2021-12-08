@@ -18,7 +18,7 @@ description: 
 
     Fabiana Gordana (@j) needs high-dose aspirin (more than 500 mg per day) because she has a terrible headache since she got pregnant. 
     
-    She connects to an online platform for medical products (UbarDrugSTORE) because she really doesn't have the strength to go into town. (UbarDrugSTORE rdfs:subClassOf Platform)
+    She connects to an online platform for medical products (UbarDrugSTORE) because she really doesn't have the strength to go into town. 
     
     Furthermore, she needs the drugs as soon as possible. UbarMedicament provides a home delivery service with a medical emergency option.
     
