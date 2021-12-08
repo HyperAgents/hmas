@@ -31,7 +31,7 @@ John's wife Ann, comes to know that such pills are dangerous. She then removes a
 
 Leturc, C., & Bonnet, G. (2020, May). A Deliberate BIAT Logic for Modeling Manipulations. In 19th International Conference on Autonomous Agents and Multiagent Systems.
 
-Bonnet, G., Leturc, C., Lorini, E., & Sartor, G. (2020). Influencing Choices by Changing Beliefs: A Logical Theory of Influence, Persuasion, and Deception. In Deceptive AI (pp. 124-141). Springer, Cham.
+Bonnet, G., Leturc, C., Lorini, E., & Sartor, G. (2020). Influencing Choices by Changing Beliefs: A Logical Theory of Influence, Persuasion, and Deception. In Deceptive AI (pp. 124-141). 
 
 Sakama, C., Caminada, M., & Herzig, A. (2015). A formal account of dishonesty. Logic Journal of the IGPL, 23(2), 259-294.
 
