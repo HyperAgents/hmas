@@ -8,3 +8,10 @@ The production engineer delegates a new manufacturing goal to the artificial age
 
 ## Feature: discovery of workspaces, workspace profiles and sub-workspaces
 The production engineer delegates a new manufacturing goal to the artificial agent, but this time this would require the agent to build a product across multiple manufacturing workspaces. To this end, the agent first needs to discover all manufacturing workspaces in the factory that are relevant to its manufacturing goal. The factory is organized in a hierarchy of workspaces with one root workspace that represents the factory. The agent is thus situated in a manufacturing workspace that is a sub-workspace in the larger factory workspace structure. The relations among workspaces in the factory (e.g., containment relations, relations of similarity) allow the agent to discover all relevant workspaces for achieving its manufacturing goal. To help agents determine what workspaces are relevant for achieving their manufacturing goals, each workspace carries a semantic profile that includes manufacturing-specific metadata, and relations to other workspaces, agents, and industrial devices available in that workspace. Once relevant workspaces are discovered, the agent can join (<--- here is the implicit workspace affordance that I meant) those workspaces to use any available industrial devices or to interact with other manfuacturing agents in that workspace.
+
+
+## Feature : discovery of norms associated with a workspace and sub-workspace 
+
+e.g. rules for using a tool 
+
+
