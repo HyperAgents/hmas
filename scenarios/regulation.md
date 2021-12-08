@@ -49,7 +49,7 @@ description: 
 
 
 
-## 2) Violation of a rule by lying on its profile data.
+## 2) Feature : violation of a rule by lying on its profile data.
 
     Fabiana Gordana (@j) is browsing on the web page of UbarDrugSTORE.
     
@@ -78,7 +78,7 @@ description: 
 
 
 
-## 3) Negligence of a platform and sanctions   
+## 3) Feature : negligence of a platform and sanctions   
 
     According to the law in France (Article R. 5125-74 of the Public Health Code), to distribute medicines, the UbarDrugSTORE platform must be on the list of pharmacy websites provided by the national order of pharmacists. (regulationOfInternetPlatforms)
     
