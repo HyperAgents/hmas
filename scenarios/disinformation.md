@@ -1,6 +1,6 @@
 # Core Vocabulary Scenarios: Disinformation
 
-## Quick definitions of terms 
+## Quick definitions of terms : manipulation, lying, sincerity and persuasion in MAS
 
 ### Manipulation definition in MAS [Leturc and Bonnet, 2020]
 
