@@ -4,7 +4,9 @@
 ## Basic features : knowing norms, detecting violations and defining sanctions
 
 Agent/Platform must know if it is allowed to perform an action
+
 description: 
+
   Agents must know the norms associated with an environment (its workspace) in real time and the associated punishments (since norms may change and be violated).
 
 
@@ -79,8 +81,13 @@ description: 
 ## 3) Negligence of a platform and sanctions   
 
     According to the law in France (Article R. 5125-74 of the Public Health Code), to distribute medicines, the UbarDrugSTORE platform must be on the list of pharmacy websites provided by the national order of pharmacists. (regulationOfInternetPlatforms)
+    
     Each supplier of UbarDrugSTORE must be either : a pharmacist established in France who is holder of a pharmacy, a pharmacist managing a mutualist pharmacy or an emergency mining pharmacy. 
+    
     However the supplier that provided drugs to Fabiana was an ex-Pharcamist who ceased his activity several years ago. 
+    
     The cessation of activity of the pharmacy therefore entails the closure of its account. 
+    
     The High Health Authority has been notified of this fraud and decided to sanction UbarDrugStore for its negligence.
+    
     The informed Ministry of Health ordered UbarDrugSTORE not to sell any more medicines until all suppliers on the platform had certified all information on their profile. 
