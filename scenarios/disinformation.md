@@ -1,16 +1,16 @@
 # Core Vocabulary Scenarios: Disinformation
 
-# Quick definitions of terms 
+## Quick definitions of terms 
 
-## Manipulation definition in MAS [Leturc and Bonnet, 2020]
+### Manipulation definition in MAS [Leturc and Bonnet, 2020]
 
-A manipulation is a (1) deliberate effect of an agent (called a \emph{manipulator}) to (2) instrumentalize another agent (called a \emph{victim}), (3) while making sure to conceal that effect.
+A manipulation is a (1) deliberate effect of an agent (called a manipulator) to (2) instrumentalize another agent (called a victim), (3) while making sure to conceal that effect.
 
-## Deception in MAS [Sakama et al. 2015]
+### Deception in MAS [Sakama et al. 2015]
 
-# Motivating scenarios
+## Motivating scenarios
 
-## Feature : persuading by deceiving an agent to do something
+### Feature : persuading by deceiving an agent to do something
 
 John is feeling back pain, and consequently he is consulting websites that offer medical advice as well as the opportunity to purchase drugs. 
 
