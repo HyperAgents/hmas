@@ -12,7 +12,7 @@ Lying is a communicative speech act of an agent (i.e. a liar) in which the liar 
 
 ### Sincerity in MAS [Sakama et al. 2015]
 
-An agent is sincere if, and only if, he believes all its communicative speech acts.
+An agent is sincere if, and only if, it believes all its communicative speech acts.
 
 ### Persuasion in MAS [Bonnet et al. 2021]
 
