@@ -14,7 +14,7 @@ description: 
 
 
 
-## 1) Standard motivating scenario : an agent must know the norms 
+## 1) Feature : an agent must know the norms 
 
     Fabiana Gordana (@j) needs high-dose aspirin (more than 500 mg per day) because she has a terrible headache since she got pregnant. 
     
