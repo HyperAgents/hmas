@@ -1,7 +1,7 @@
 
 # Regulation of agents and platforms
 
-## Quick definition of terms (@Adnane)
+## Quick definition of terms (cf. taxonomy proposed by Adnane)
 
 
 ## Basic features : knowing norms, detecting violations and defining sanctions
