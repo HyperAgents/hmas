@@ -20,7 +20,7 @@ An agent (i.e. persuader) persuades another agent (i.e. persuadee) if, and only 
 
 ## Motivating scenarios
 
-### Feature : persuading by deceiving an agent to do something
+### Feature : detecting bad persuasion (here : persuading by deceiving an agent to do something)
 
 John is feeling back pain, and consequently he is consulting websites that offer medical advice as well as the opportunity to purchase drugs. 
 
