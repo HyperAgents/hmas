@@ -49,6 +49,12 @@
   schema:email "andrei.ciortea@unisg.ch" ;
   schema:affiliation [ schema:name "University of St.Gallen" ; schema:url <https://www.unisg.ch> ] .
 
+<https://danaivach.inrupt.net/profile/card#me> a schema:Person ;
+  schema:name "Danai Vachtsevanou" ;
+  schema:email "danai.vachtsevanou@unisg.ch" ;
+  schema:url <https://danaivach.inrupt.net/profile/card> ;
+  schema:affiliation [ schema:name "University of St.Gallen" ; schema:url <https://www.unisg.ch> ] .
+
 #################################################################
 #    Classes
 #################################################################
