@@ -25,6 +25,7 @@
     #dct:modified "2021-11-24"^^xsd:date ;
     dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;  #add yourselves here
     dct:contributor <http://maxime-lefrancois.info/me#> ;  #add yourselves here
+    dct:contributor <https://danaivach.inrupt.net/profile/card#me> ;  #add yourselves here
     dct:creator <http://iri.for/andrei> ;
     dct:license <http://creativecommons.org/licenses/by/3.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
