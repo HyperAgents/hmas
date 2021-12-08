@@ -14,7 +14,7 @@ description: 
 
 
 
-## 1) Standard motivating scenario : an agent must know the norms (general case) 
+## 1) Standard motivating scenario : an agent must know the norms 
 
     Fabiana Gordana (@j) needs high-dose aspirin (more than 500 mg per day) because she has a terrible headache since she got pregnant. 
     
@@ -52,7 +52,7 @@ description: 
 
 
 
-## 2) Feature : violation of a rule by lying on its profile data.
+## 2) Feature : violation of a rule (here = by lying on its profile data)
 
     Fabiana Gordana (@j) is browsing on the web page of UbarDrugSTORE.
     
