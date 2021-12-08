@@ -30,7 +30,6 @@ description: 
     since (arguments) "Fabiana is pregnant", "Aspirin is dangerous for pregnant women when we consumed it more than 500 mg per day", then  (result) it is highly not recommended.
     However, Fabiana is very stubborn and places the order.
 
-## Then I have an industrial contact that works on disinformation. I will try to contact him and I will try to think my motivating scenarios with some of their issues. 
 
 
 
