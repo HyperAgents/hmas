@@ -1,6 +1,9 @@
 
 # Regulation of agents and platforms
 
+## Quick definition of terms (@Adnane)
+
+
 ## Basic features : knowing norms, detecting violations and defining sanctions
 
 Agent/Platform must know if it is allowed to perform an action
