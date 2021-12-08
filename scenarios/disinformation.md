@@ -10,6 +10,10 @@ A manipulation is a (1) deliberate effect of an agent (called a manipulator) to 
 
 Lying is a communicative speech act of an agent (i.e. a liar) in which the liar intends to make believe something that the liar himself does not believe.
 
+### Sincerity in MAS [Sakama et al. 2015]
+
+An agent is sincere if, and only if, he believes all its communicative speech acts.
+
 ## Motivating scenarios
 
 ### Feature : persuading by deceiving an agent to do something
