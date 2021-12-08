@@ -14,6 +14,10 @@ Lying is a communicative speech act of an agent (i.e. a liar) in which the liar 
 
 An agent is sincere if, and only if, he believes all its communicative speech acts.
 
+### Persuasion in MAS [Bonnet et al. 2021]
+
+An agent (i.e. persuader) persuades another agent (i.e. persuadee) if, and only if, the persuader known that by communicating a piece of information the persuadee changes its beliefs.
+
 ## Motivating scenarios
 
 ### Feature : persuading by deceiving an agent to do something
