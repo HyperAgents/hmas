@@ -6,7 +6,9 @@
 
 A manipulation is a (1) deliberate effect of an agent (called a manipulator) to (2) instrumentalize another agent (called a victim), (3) while making sure to conceal that effect.
 
-### Deception in MAS [Sakama et al. 2015]
+### Lying in MAS [Sakama et al. 2015]
+
+Lying is a communicative speech act of an agent (i.e. a liar) in which the liar intends to make believe something that the liar himself does not believe.
 
 ## Motivating scenarios
 
