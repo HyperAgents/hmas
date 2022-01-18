@@ -1,0 +1,170 @@
+@base <https://ci.mines-stetienne.fr/fna> .
+@prefix : <#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<#> rdf:type owl:Ontology ;
+                                       owl:imports <https://ci.mines-stetienne.fr/hmas#> .
+
+
+
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://ci.mines-stetienne.fr/fna#NormativeRule
+:Norm rdf:type owl:Class ;
+           rdfs:comment "A norm specification associated to a resource"@en ;
+           rdfs:label "Norm"@en .
+
+:NormPrecondition rdf:type owl:Class ;
+           rdfs:comment "A precondition specification associated to a norm to be applied"@en ;
+           rdfs:label "Norm"@en .
+           
+:NormSpecification rdf:type owl:Class ;
+           rdfs:comment "A specification described the content of a norm when a context (preconditions) is verified"@en ;
+           rdfs:label "Norm"@en .
+
+:PossibleFact rdf:type owl:Class ;
+           rdfs:comment "A possible fact describes a possible information about the real world that may occure or not"@en ;
+           rdfs:label "Fact"@en .
+
+:ProvedFact rdf:type owl:Class ;
+	   rdfs:subClassOf :PossibleFact ;
+           rdfs:comment "A proved fact describes a possible information that has been proved"@en ;
+           rdfs:label "Fact"@en .        
+           
+#:ContextualFact rdf:type owl:Class ; 
+#	    rdfs:subClassOf :PossibleFact ;
+#           rdfs:comment "A context describes a fac"@en ;
+#           rdfs:label "Fact"@en .
+
+
+
+:Modality rdf:type owl:Class ;
+           rdfs:comment "A modality may be associated to a ressource (e.g. belief, desire, intention, obligation, permission, etc.)"@en ;
+           rdfs:label "Modal type"@en .
+
+:Effect rdf:type owl:Class ; 
+	   rdfs:subClassOf :Modality ;
+           rdfs:comment "An effect modality refers to a consequence of an action "@en ;
+           rdfs:label "Effect"@en .
+
+:DeliberateEffect rdf:type owl:Class ; 
+	   rdfs:subClassOf :Modality ;
+           rdfs:comment "An effect that has been deliberated by an agent"@en ;
+           rdfs:label "Deliberate Effect"@en .
+
+:DoxasticModality rdf:type owl:Class ; 
+	   rdfs:subClassOf :Modality ;
+           rdfs:comment "A doxastic modality refers to an abstract type associated to belief "@en ;
+           rdfs:label "Belief"@en .
+
+:DeonticModality rdf:type owl:Class ; 
+	   rdfs:subClassOf :Modality ;
+           rdfs:comment "A deontic modality refers to an abstract type associated to obligation, neutral, prohibition or permission "@en ;
+           rdfs:label "Deontic duty"@en .
+
+:Obligation rdf:type owl:Class ; 
+	   rdfs:subClassOf :Modality ;
+           rdfs:comment "Obligation is deontic modal type associated with obligation (duty)"@en ;
+           rdfs:label "Obligation"@en .
+
+
+:Permission rdf:type owl:Class ; 
+	   rdfs:subClassOf :Modality ;
+           rdfs:comment "Right is deontic modal type associated with permission (right)"@en ;
+           rdfs:label "Permission"@en .
+
+:Prohibition rdf:type owl:Class ; 
+	   rdfs:subClassOf :Modality ;
+           rdfs:comment " is deontic modal type associated with prohibition (no-right)"@en ;
+           rdfs:label "Prohibition"@en .
+
+:Neutrality rdf:type owl:Class ; 
+	   rdfs:subClassOf :Modality ;
+           rdfs:comment "Neutrality is deontic modal type associated with a not obligatory, and not prohibited fact (i.e. contingent or privilege)"@en ;
+           rdfs:label "Neutrality"@en .
+           
+           
+:InterpretationMode rdf:type owl:Class ; 
+           rdfs:comment "Interpretation mode describes a formal mode to interprete a resource. (e.g. "@en ;
+           rdfs:label "Neutrality"@en .
+
+:ExegenetiqueInterpretation rdf:type owl:Class ; 
+	   rdfs:subClassOf :InterpretationMode ;
+           rdfs:comment "A law is interpreted through a linguistical approach"@en ;
+           rdfs:label "Social interpretation"@en .         
+      
+:AnalogousInterpretation rdf:type owl:Class ; 
+   rdfs:subClassOf :InterpretationMode ;
+   rdfs:comment "A law is interpreted through past application cases which are closed"@en ;
+   rdfs:label "Social interpretation"@en .   
+           
+:SocialInterpretation rdf:type owl:Class ; 
+	   rdfs:subClassOf :InterpretationMode ;
+           rdfs:comment "A law is interpreted through a social context"@en ;
+           rdfs:label "Social interpretation"@en .
+           
+:LegalApplication rdf:type owl:Class ; 
+           rdfs:comment "A legal application corresponds to typical effects of the application of legal norms  (e.g. power, liability, disability, immunity)"@en ;
+           rdfs:label "Legal Application"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://ci.mines-stetienne.fr/fna#hasNorm
+:hasNorm rdf:type owl:ObjectProperty ;
+                rdfs:range :Norm ;
+                rdfs:comment "Associates a norm to a resource"@en ;
+                rdfs:label "has norm"@en .
+
+###  https://ci.mines-stetienne.fr/fna#statedAs
+:statedAs rdf:type owl:ObjectProperty ;
+                rdfs:range :Modality ;
+                rdfs:comment "The resource is stated with a certain modality"@en ;
+                rdfs:label "is stated as"@en .
+
+   
+###  https://ci.mines-stetienne.fr/fna#occurred            
+:occurred rdf:type owl:ObjectProperty ;
+		rdfs:domain :PossibleFact ;
+                rdfs:range time:TemporalEntity ;
+                rdfs:comment "A relation that describes when a possible fact possibly occurred"@en ;
+                rdfs:label "has norm"@en .
+
+###  https://ci.mines-stetienne.fr/fna#occurred            
+:relatedEvidence rdf:type owl:ObjectProperty ;
+		rdfs:domain :ProvedFact ;
+                rdfs:range :ProvedFact ;
+                rdfs:comment "A relation that describes which are the related evidences associated to a proved fact"@en ;
+                rdfs:label "has norm"@en .
+
+                 
+                
+###  https://ci.mines-stetienne.fr/fna#hasNormPrecondition
+:hasNormPrecondition rdf:type owl:ObjectProperty ;
+		rdfs:domain :Norm ;
+                rdfs:range :ContextualFact ;
+                rdfs:comment "A resource may be associated to a normative rule"@en ;
+                rdfs:label "has Normative Rule"@en .  
+
+
+###  https://ci.mines-stetienne.fr/fna#hasNormSpecification
+:hasNormSpecification rdf:type owl:ObjectProperty ;
+		rdfs:domain :Norm ;
+                rdfs:range :NormSpecification ;
+                rdfs:comment "A resource may be associated to a normative rule"@en ;
+                rdfs:label "has Normative Rule"@en . 
+                
+                
+                 
+                
+
