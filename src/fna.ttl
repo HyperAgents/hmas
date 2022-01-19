@@ -33,12 +33,12 @@
 
 :PossibleFact rdf:type owl:Class ;
            rdfs:comment "A possible fact describes a possible information about the real world that may occure or not"@en ;
-           rdfs:label "Fact"@en .
+           rdfs:label "Possible fact"@en .
 
 :ProvedFact rdf:type owl:Class ;
 	   rdfs:subClassOf :PossibleFact ;
            rdfs:comment "A proved fact describes a possible information that has been proved"@en ;
-           rdfs:label "Fact"@en .        
+           rdfs:label "Proved fact"@en .        
            
 #:ContextualFact rdf:type owl:Class ; 
 #	    rdfs:subClassOf :PossibleFact ;
@@ -115,16 +115,45 @@
 :LegalApplication rdf:type owl:Class ; 
            rdfs:comment "A legal application corresponds to typical effects of the application of legal norms  (e.g. power, liability, disability, immunity)"@en ;
            rdfs:label "Legal Application"@en .
+        
+        
+   
+:ViolationCase rdf:type owl:Class ; 
+           rdfs:comment "Violation case states what is a typical case of violation for a given norm"@en ;
+           rdfs:label "Violation Case"@en .
+
+:PunishmentCase rdf:type owl:Class ; 
+           rdfs:comment "Punishment case states a sanction associated with a violation of a norm"@en ;
+           rdfs:label "Punishment case"@en .
+
 
 #################################################################
 #    Object Properties
 #################################################################
 
+
+
+
 ###  https://ci.mines-stetienne.fr/fna#hasNorm
-:hasNorm rdf:type owl:ObjectProperty ;
+:doesNotRespectNorm rdf:type owl:ObjectProperty ;
                 rdfs:range :Norm ;
-                rdfs:comment "Associates a norm to a resource"@en ;
-                rdfs:label "has norm"@en .
+                rdfs:comment "Associates a norm which is violated by a resource"@en ;
+                rdfs:label "does not respect the norm"@en .
+
+
+###  https://ci.mines-stetienne.fr/fna#hasAViolationCase
+:hasAViolationCase rdf:type owl:ObjectProperty ;
+		rdfs:domain :Norm ;
+                rdfs:range :ViolationCase ;
+                rdfs:comment "Associates cases of violation of a norm"@en ;
+                rdfs:label "has a violation case"@en .
+
+###  https://ci.mines-stetienne.fr/fna#hasNorm
+:hasPunishmentCase rdf:type owl:ObjectProperty ;
+                rdfs:domain :Norm ;
+               	rdfs:range :PunishmentCase ;
+                rdfs:comment "Associates a norm to a punishment in case of violation"@en ;
+                rdfs:label "has punishment"@en .
 
 ###  https://ci.mines-stetienne.fr/fna#statedAs
 :statedAs rdf:type owl:ObjectProperty ;
