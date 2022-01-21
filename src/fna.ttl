@@ -36,9 +36,14 @@
            rdfs:label "Possible fact"@en .
 
 :ProvedFact rdf:type owl:Class ;
-	   rdfs:subClassOf :PossibleFact ;
+           rdfs:subClassOf :PossibleFact ;
            rdfs:comment "A proved fact describes a possible information that has been proved"@en ;
            rdfs:label "Proved fact"@en .        
+
+:Hierarchy rdf:type owl:Class ;
+           rdfs:subClassOf :PossibleFact ;
+           rdfs:comment "A proved fact describes a possible information that has been proved"@en ;
+           rdfs:label "Proved fact"@en . 
            
 #:ContextualFact rdf:type owl:Class ; 
 #	    rdfs:subClassOf :PossibleFact ;
@@ -91,9 +96,15 @@
 	   rdfs:subClassOf :Modality ;
            rdfs:comment "Neutrality is deontic modal type associated with a not obligatory, and not prohibited fact (i.e. contingent or privilege)"@en ;
            rdfs:label "Neutrality"@en .
+ 
+ 
+ 
+ 
+:PreferenceRule rdf:type owl:Class ; 
+           rdfs:comment "Preference rule in legal context represents a priority on applied laws (e.g. Speciality, Posteriority, Hierarchy or based on an order on values)"@en ;
+           rdfs:label "Preference Rule"@en .          
            
-           
-:InterpretationMode rdf:type owl:Class ; 
+:LegalInterpretationMode rdf:type owl:Class ; 
            rdfs:comment "Interpretation mode describes a formal mode to interprete a resource. (e.g. "@en ;
            rdfs:label "Neutrality"@en .
 
@@ -169,7 +180,7 @@
                 rdfs:comment "A relation that describes when a possible fact possibly occurred"@en ;
                 rdfs:label "has norm"@en .
 
-###  https://ci.mines-stetienne.fr/fna#occurred            
+###  https://ci.mines-stetienne.fr/fna#relatedEvidence            
 :relatedEvidence rdf:type owl:ObjectProperty ;
 		rdfs:domain :ProvedFact ;
                 rdfs:range :ProvedFact ;
