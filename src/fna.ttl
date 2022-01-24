@@ -23,8 +23,17 @@
            rdfs:comment "A norm specification associated to a resource"@en ;
            rdfs:label "Norm"@en .
 
+
+# Question to ask : rdfs:subClassOf vs rdf:type ? 
+# Question to ask : applying SPARQL-GENERATE for (...) ?
+:EmergingBehavior rdf:type owl:Class  ;
+	   rdfs:subClassOf :Norm
+           rdfs:comment "An emerging behavior is a particular norm that describes a collective behavior (e.g. reciprocity, social proof, etc.)"@en ;
+           rdfs:label "EmergingBehavior"@en .
+
+
 :NormPrecondition rdf:type owl:Class ;
-           rdfs:comment "A precondition specification associated to a norm to be applied"@en ;
+           rdfs:comment "A precondition specification associated to a norm to be applied "@en ;
            rdfs:label "Norm"@en .
            
 :NormSpecification rdf:type owl:Class ;
@@ -45,12 +54,168 @@
            rdfs:comment "A proved fact describes a possible information that has been proved"@en ;
            rdfs:label "Proved fact"@en . 
            
-#:ContextualFact rdf:type owl:Class ; 
+# :ContextualFact rdf:type owl:Class ; 
 #	    rdfs:subClassOf :PossibleFact ;
 #           rdfs:comment "A context describes a fac"@en ;
 #           rdfs:label "Fact"@en .
 
+:Goal rdf:type :Norm ; 
+           rdfs:comment "A goal is a specific norm that describes an aim that an agent or a set of agents must achieve"@en ;
+           rdfs:label "Goal"@en .
 
+
+
+#:OrganisationSpecification rdf:type owl:Class ;
+#           rdfs:comment "A specification is a set of constraints and structure imposed on the agents by the designer, at design time"@en ;
+#           rdfs:label "Organisation specification"@en .  
+
+
+#:OrganisationEntity rdf:type owl:Class ;
+#           rdfs:comment "An entity is the instantiation of an organisation specification, and it is composed of a set of characteristics of the organisation, expressing the agents obligations"@en ;
+#           rdfs:label "Organisation entity"@en . 
+
+
+#:StructuralSpecification rdf:type owl:Class ;
+#           rdfs:comment "StructuralSpecification allows the specification of organisation as a hierarchy of groups(one root group, groups being eventually decomposed into sub-groups)"@en ;
+#           rdfs:label "Structural specification"@en .
+
+
+#:FunctionalSpecification rdf:type owl:Class ;
+#           rdfs:comment "FunctionalSpecification allows the definition of the dynamic side of the organisation by specifying  schemes, goals, plans, and missions"@en ;
+#           rdfs:label "Functional specification"@en .
+
+#:NormativeSpecification rdf:type owl:Class ;
+#           rdfs:comment "NormativeSpecification describes the regulation applied to the members of the organisation. The regulation takes the form of norms that are assigned to specific roles of the organisation, the missions (i.e. the set of goals) that  agents are permitted, forbidden or obliged to pursue while playing the corresponding role"@en ;
+#           rdfs:label "Normative specification"@en .
+
+#:RegulationStrategy rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Regulation strategy"@en .
+
+#:Regulation rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Regulation"@en .
+
+#:MetaRegulatoryStrategy rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "MetaRegulatoryStrategy"@en .
+
+#:Law rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Law"@en .
+
+#:Power rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Power"@en .
+
+#:Contract rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Contract"@en .
+
+#:Group rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Group"@en .
+
+#:Role rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Role"@en .
+
+#:OrganisationGoal rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "OrganisationGoal"@en .
+
+#:Mission rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Mission"@en .
+
+#:SocialPlan rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "SocialPlan"@en .
+
+#:SocialScheme rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "SocialScheme"@en .
+
+#:NormativeEntity rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "NormativeEntity"@en .
+
+#:RegulativeNorm rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "RegulativeNorm"@en .
+
+
+#:ConstitutiveNorm rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "ConstitutiveNorm"@en .
+
+#:Policy rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Policy"@en .
+
+#:Convention rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Convention"@en .
+
+#:Responsibility rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Responsibility"@en .
+
+#:ConformanceReport rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "ConformanceReport"@en .
+
+#:AccountabilityElement rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "AccountabilityElement"@en .
+
+#:RegulatorySystem rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "RegulatorySystem"@en .
+
+#:Governance rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Governance"@en .
+
+#:RelationalJustice rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "RelationalJustice"@en .
+
+#:Creation rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Creation"@en .
+
+#:Adoption rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Adoption"@en .
+
+#:Commitment rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Commitment"@en .
+
+#:Fulfilment rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Fulfilment"@en .
+
+#:Violation rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Violation"@en .
+
+#:Enactment rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Enactment"@en .
+
+#:Monitoring rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Monitoring"@en .
+
+#:ControlMean rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "ControlMean"@en .
+
+#:Enforcement rdf:type owl:Class ;
+#           rdfs:comment ""@en ;
+#           rdfs:label "Enforcement"@en .
 
 :Modality rdf:type owl:Class ;
            rdfs:comment "A modality may be associated to a ressource (e.g. belief, desire, intention, obligation, permission, etc.)"@en ;
