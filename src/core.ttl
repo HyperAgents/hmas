@@ -183,7 +183,6 @@
 
 
 #:isContainedBy a owl:ObjectProperty ;
-#               rdfs:subPropertyOf owl:topObjectProperty ;
 #               rdfs:range :Workspace ;
 #               rdfs:label "is contained by"@en .
 
