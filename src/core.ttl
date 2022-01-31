@@ -113,6 +113,7 @@
 :contains a owl:ObjectProperty ;
           owl:inverseOf :isContainedBy ;
           rdfs:domain :Workspace ;
+          rdfs:comment "A relation which describes the resources contained in a workspace "@en ;
           rdfs:label "contains"@en .
 
 
@@ -121,6 +122,7 @@
                rdfs:subPropertyOf :contains ;
                rdfs:domain :Workspace ;
                rdfs:range :Agent ;
+               rdfs:comment "A relation which agents are contained in a workspace "@en ;
                rdfs:label "contains agent"@en .
 
 
@@ -129,6 +131,7 @@
                   rdfs:subPropertyOf :contains ;
                   rdfs:domain :Workspace ;
                   rdfs:range :Artifact ;
+                  rdfs:comment "A relation which describes the artifacts contained in a workspace "@en ;
                   rdfs:label "contains artifact"@en .
 
 
@@ -140,6 +143,7 @@
                                        :Signifier
                                      )
                        ] ;
+           rdfs:comment "A relation which describes all signifiers associated to a resource profile"@en ;
            rdfs:label "describes"@en .
 
 
@@ -149,6 +153,7 @@
                  owl:inverseOf :hostsAgent ;
                  rdfs:domain :Agent ;
                  rdfs:range :Platform ;
+                 rdfs:comment "A relation which describes the home platforms for an agent"@en ;
                  rdfs:label "has home platform"@en .
 
 
@@ -156,6 +161,7 @@
 :hasHomeWorkspace a owl:ObjectProperty ;
                   rdfs:subPropertyOf :isContainedBy ;
                   owl:inverseOf :isHomeOf ;
+                  rdfs:comment "A relation which describes if a workspace is a home workspace for an agent "@en ;
                   rdfs:label "has home workspace"@en .
 
 
@@ -163,6 +169,7 @@
 :hasSignifier a owl:ObjectProperty ;
               rdfs:domain :ResourceProfile ;
               rdfs:range :Signifier ;
+              rdfs:comment "A relation between a resource profile and a signifier describing the affordances of the resource"@en ;
               rdfs:label "has signifier"@en .
 
 
@@ -170,6 +177,7 @@
 :hosts a owl:AsymmetricProperty ;
        owl:inverseOf :isHostedBy ;
        rdfs:domain :Platform ;
+       rdfs:comment "A relation which describes the resources hosted by a platform"@en ;
        rdfs:label "hosts"@en .
 
 
@@ -178,6 +186,7 @@
             rdfs:subPropertyOf :hosts ;
             rdfs:domain :Platform ;
             rdfs:range :Agent ;
+            rdfs:comment "A relation which describes the agents hosted by a platform"@en ;
             rdfs:label "hosts agent"@en .
 
 
@@ -186,6 +195,7 @@
                 rdfs:subPropertyOf :hosts ;
                 rdfs:domain :Platform ;
                 rdfs:range :Workspace ;
+                rdfs:comment "A relation which describes the workspaces hosted by a platform"@en ;
                 rdfs:label "hosts workspace"@en .
 
 
@@ -203,6 +213,7 @@
                                           :Signifier
                                         )
                           ] ;
+               rdfs:comment "A relation which maps the resource profiles and signifiers associated to a resource"@en ;
                rdfs:label "is described by"@en .
 
 
@@ -211,12 +222,13 @@
           rdfs:subPropertyOf :containsAgent ;
           rdfs:domain :Workspace ;
           rdfs:range :Agent ;
+          rdfs:comment "A relation which describes if a workspace is a home workspace for an agent"@en ;
           rdfs:label "is home of"@en .
 
 
 
 :isHostedBy a owl:AsymmetricProperty ;
             rdfs:range :Platform ;
+            rdfs:comment "A relation which describes what are the resources hosted by a platform"@en ;
             rdfs:label "is hosted by"@en .
-
 
