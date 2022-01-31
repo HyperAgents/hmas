@@ -118,21 +118,21 @@
 
 
 
-:containsAgent a owl:ObjectProperty ;
-               rdfs:subPropertyOf :contains ;
-               rdfs:domain :Workspace ;
-               rdfs:range :Agent ;
-               rdfs:comment "A relation which agents are contained in a workspace "@en ;
-               rdfs:label "contains agent"@en .
+#:containsAgent a owl:ObjectProperty ;
+#               rdfs:subPropertyOf :contains ;
+#               rdfs:domain :Workspace ;
+#               rdfs:range :Agent ;
+#               rdfs:comment "A relation which describes the agents contained in a workspace "@en ;
+#               rdfs:label "contains agent"@en .
 
 
 
-:containsArtifact a owl:ObjectProperty ;
-                  rdfs:subPropertyOf :contains ;
-                  rdfs:domain :Workspace ;
-                  rdfs:range :Artifact ;
-                  rdfs:comment "A relation which describes the artifacts contained in a workspace "@en ;
-                  rdfs:label "contains artifact"@en .
+#:containsArtifact a owl:ObjectProperty ;
+#                  rdfs:subPropertyOf :contains ;
+#                  rdfs:domain :Workspace ;
+#                  rdfs:range :Artifact ;
+#                  rdfs:comment "A relation which describes the artifacts contained in a workspace "@en ;
+#                  rdfs:label "contains artifact"@en .
 
 
 
@@ -148,21 +148,21 @@
 
 
 
-:hasHomePlatform a owl:ObjectProperty ;
-                 rdfs:subPropertyOf :isHostedBy ;
-                 owl:inverseOf :hostsAgent ;
-                 rdfs:domain :Agent ;
-                 rdfs:range :Platform ;
-                 rdfs:comment "A relation which describes the home platforms for an agent"@en ;
-                 rdfs:label "has home platform"@en .
+#:hasHomePlatform a owl:ObjectProperty ;
+#                 rdfs:subPropertyOf :isHostedBy ;
+#                 owl:inverseOf :hostsAgent ;
+#                 rdfs:domain :Agent ;
+#                 rdfs:range :Platform ;
+#                 rdfs:comment "?"@en ;
+#                 rdfs:label "has home platform"@en .
 
 
 
-:hasHomeWorkspace a owl:ObjectProperty ;
-                  rdfs:subPropertyOf :isContainedBy ;
-                  owl:inverseOf :isHomeOf ;
-                  rdfs:comment "A relation which describes if a workspace is a home workspace for an agent "@en ;
-                  rdfs:label "has home workspace"@en .
+#:hasHomeWorkspace a owl:ObjectProperty ;
+#                  rdfs:subPropertyOf :isContainedBy ;
+#                  owl:inverseOf :isHomeOf ;
+#                  rdfs:comment "?"@en ;
+#                  rdfs:label "has home workspace"@en .
 
 
 
@@ -177,33 +177,33 @@
 :hosts a owl:AsymmetricProperty ;
        owl:inverseOf :isHostedBy ;
        rdfs:domain :Platform ;
-       rdfs:comment "A relation which describes the resources hosted by a platform"@en ;
+       rdfs:comment "?"@en ;
        rdfs:label "hosts"@en .
 
 
 
-:hostsAgent a owl:ObjectProperty ;
-            rdfs:subPropertyOf :hosts ;
-            rdfs:domain :Platform ;
-            rdfs:range :Agent ;
-            rdfs:comment "A relation which describes the agents hosted by a platform"@en ;
+#:hostsAgent a owl:ObjectProperty ;
+#            rdfs:subPropertyOf :hosts ;
+#            rdfs:domain :Platform ;
+#            rdfs:range :Agent ;
+#            rdfs:comment "A relation which describes the agents hosted by a platform"@en ;
             rdfs:label "hosts agent"@en .
 
 
 
-:hostsWorkspace a owl:ObjectProperty ;
-                rdfs:subPropertyOf :hosts ;
-                rdfs:domain :Platform ;
-                rdfs:range :Workspace ;
-                rdfs:comment "A relation which describes the workspaces hosted by a platform"@en ;
-                rdfs:label "hosts workspace"@en .
+#:hostsWorkspace a owl:ObjectProperty ;
+#                rdfs:subPropertyOf :hosts ;
+#                rdfs:domain :Platform ;
+#                rdfs:range :Workspace ;
+#                rdfs:comment "A relation which describes the workspaces hosted by a platform"@en ;
+#                rdfs:label "hosts workspace"@en .
 
 
 
-:isContainedBy a owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty ;
-               rdfs:range :Workspace ;
-               rdfs:label "is contained by"@en .
+#:isContainedBy a owl:ObjectProperty ;
+#               rdfs:subPropertyOf owl:topObjectProperty ;
+#               rdfs:range :Workspace ;
+#               rdfs:label "is contained by"@en .
 
 
 
@@ -218,12 +218,12 @@
 
 
 
-:isHomeOf a owl:AsymmetricProperty ;
-          rdfs:subPropertyOf :containsAgent ;
-          rdfs:domain :Workspace ;
-          rdfs:range :Agent ;
-          rdfs:comment "A relation which describes if a workspace is a home workspace for an agent"@en ;
-          rdfs:label "is home of"@en .
+#:isHomeOf a owl:AsymmetricProperty ;
+#          rdfs:subPropertyOf :containsAgent ;
+#          rdfs:domain :Workspace ;
+#          rdfs:range :Agent ;
+#          rdfs:comment "?"@en ;
+#          rdfs:label "is home of"@en .
 
 
 
