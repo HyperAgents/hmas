@@ -110,29 +110,11 @@
 #################################################################
 
 
-:contains a owl:ObjectProperty ;
-          owl:inverseOf :isContainedBy ;
+:contains a owl:AsymmetricProperty ;
+          owl:inverseOf :isContainedIn ;
           rdfs:domain :Workspace ;
           rdfs:comment "A relation that describes the resources contained in a workspace."@en ;
           rdfs:label "contains"@en .
-
-
-
-#:containsAgent a owl:ObjectProperty ;
-#               rdfs:subPropertyOf :contains ;
-#               rdfs:domain :Workspace ;
-#               rdfs:range :Agent ;
-#               rdfs:comment "A relation which describes the agents contained in a workspace "@en ;
-#               rdfs:label "contains agent"@en .
-
-
-
-#:containsArtifact a owl:ObjectProperty ;
-#                  rdfs:subPropertyOf :contains ;
-#                  rdfs:domain :Workspace ;
-#                  rdfs:range :Artifact ;
-#                  rdfs:comment "A relation which describes the artifacts contained in a workspace "@en ;
-#                  rdfs:label "contains artifact"@en .
 
 
 
@@ -182,9 +164,10 @@
 
 
 
-#:isContainedBy a owl:ObjectProperty ;
-#               rdfs:range :Workspace ;
-#               rdfs:label "is contained by"@en .
+:isContainedIn a owl:AsymmetricProperty ;
+               rdfs:range :Workspace ;
+               rdfs:comment "A relation that describes the workspace that contains a resource."@en ;
+               rdfs:label "is contained in"@en .
 
 
 
