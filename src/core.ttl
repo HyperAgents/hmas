@@ -187,7 +187,7 @@
 #            rdfs:domain :Platform ;
 #            rdfs:range :Agent ;
 #            rdfs:comment "A relation which describes the agents hosted by a platform"@en ;
-            rdfs:label "hosts agent"@en .
+#            rdfs:label "hosts agent"@en .
 
 
 
