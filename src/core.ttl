@@ -92,7 +92,7 @@
 
 
 :Workspace a owl:Class ;
-           rdfs:comment "A space or container of one or multiple activities involving a set of agents and potentially artifacts."@en ;
+           rdfs:comment "A space or logical container of one or multiple activities involving a set of agents and potentially artifacts."@en ;
            rdfs:label "Workspace"@en, "Espace de Travail"@fr .
 
 
@@ -113,7 +113,7 @@
 :contains a owl:ObjectProperty ;
           owl:inverseOf :isContainedBy ;
           rdfs:domain :Workspace ;
-          rdfs:comment "A relation which describes the resources contained in a workspace "@en ;
+          rdfs:comment "A relation that describes the resources contained in a workspace."@en ;
           rdfs:label "contains"@en .
 
 
@@ -143,7 +143,7 @@
                                        :Signifier
                                      )
                        ] ;
-           rdfs:comment "A relation which describes all signifiers associated to a resource profile"@en ;
+           rdfs:comment "A relation that describes all signifiers associated to a resource profile."@en ;
            rdfs:label "describes"@en .
 
 
@@ -177,7 +177,7 @@
 :hosts a owl:AsymmetricProperty ;
        owl:inverseOf :isHostedBy ;
        rdfs:domain :Platform ;
-       rdfs:comment "?"@en ;
+       rdfs:comment "A relation between a platform and a resource hosted by the platform. Resources may include information resources or processes (e.g., a software agent)."@en ;
        rdfs:label "hosts"@en .
 
 
@@ -210,6 +210,6 @@
 
 :isHostedBy a owl:AsymmetricProperty ;
             rdfs:range :Platform ;
-            rdfs:comment "A relation which describes what are the resources hosted by a platform"@en ;
+            rdfs:comment "A relation between a resource and the platform hosting the resource."@en ;
             rdfs:label "is hosted by"@en .
 
