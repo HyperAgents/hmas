@@ -113,6 +113,12 @@
 :contains a owl:AsymmetricProperty ;
           owl:inverseOf :isContainedIn ;
           rdfs:domain :Workspace ;
+          rdfs:domain [ a owl:Class ;
+                        owl:unionOf ( :Agent
+                                      :Artifact
+                                      :Workspace
+                                    )
+                      ] ;
           rdfs:comment "A relation that describes the resources contained in a workspace."@en ;
           rdfs:label "contains"@en .
 
