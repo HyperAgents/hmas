@@ -157,7 +157,7 @@
 :hasSignifier a owl:ObjectProperty ;
               rdfs:domain :ResourceProfile ;
               rdfs:range :Signifier ;
-              rdfs:comment "A relation between a resource profile and a signifier describing an affordance of the resource."@en ;
+              rdfs:comment "A relation between a resource profile and a signifier describing an affordance associated to the resource."@en ;
               rdfs:label "has signifier"@en .
 
 
