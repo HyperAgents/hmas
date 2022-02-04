@@ -110,7 +110,7 @@
 #################################################################
 
 
-:contains a owl:AsymmetricProperty ;
+:contains a owl:AsymmetricProperty , owl:TransitiveProperty ;
           owl:inverseOf :isContainedIn ;
           rdfs:domain :Workspace ;
           rdfs:domain [ a owl:Class ;
