@@ -113,7 +113,7 @@
 :contains a owl:AsymmetricProperty ;
           owl:inverseOf :isContainedIn ;
           rdfs:domain :Workspace ;
-          rdfs:domain [ a owl:Class ;
+          rdfs:range [ a owl:Class ;
                         owl:unionOf ( :Agent
                                       :Artifact
                                       :Workspace
