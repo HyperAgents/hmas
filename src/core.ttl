@@ -21,7 +21,7 @@
     dct:title "Hypermedia MAS Core Ontology"@en, "Ontologie Centrale des SMAH"@fr ;
     dct:description  "An ontology to describe Hypermedia Multi-Agent Systems."@en,
                  "L'ontologie centrale pour la description de systèmes multi-agents hypermédias."@fr ;
-    dct:issued "2022-11-21"^^xsd:date ;
+    dct:issued "2021-11-21"^^xsd:date ;
     #dct:modified "2021-11-24"^^xsd:date ;
     dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;  #add yourselves here
     dct:contributor <http://maxime-lefrancois.info/me#> ;  #add yourselves here
