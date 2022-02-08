@@ -74,7 +74,7 @@
 
 
 :Platform a owl:Class ;
-          rdfs:comment "A platform is a system providing a collection of features to support Hypermedia MAS. Common features include (...)."@en ;
+          rdfs:comment "A platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organization, etc."@en ;
           rdfs:label "Platform"@en, "Platforme"@fr .
 
 
