@@ -119,7 +119,7 @@
                                       :Workspace
                                     )
                       ] ;
-          rdfs:comment "A relation that describes the resources contained in a workspace."@en ;
+          rdfs:comment "A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container."@en ;
           rdfs:label "contains"@en .
 
 
@@ -136,21 +136,21 @@
 
 
 
-#:hasHomePlatform a owl:ObjectProperty ;
-#                 rdfs:subPropertyOf :isHostedBy ;
-#                 owl:inverseOf :hostsAgent ;
-#                 rdfs:domain :Agent ;
-#                 rdfs:range :Platform ;
-#                 rdfs:comment "?"@en ;
-#                 rdfs:label "has home platform"@en .
+:hasHomePlatform a owl:ObjectProperty ;
+                 rdfs:subPropertyOf :isHostedBy ;
+                 owl:inverseOf :hostsAgent ;
+                 rdfs:domain :Agent ;
+                 rdfs:range :Platform ;
+                 rdfs:comment "The HAP of an agent is the AP on which the agent was created."@en ;
+                 rdfs:label "has home platform"@en .
 
 
 
-#:hasHomeWorkspace a owl:ObjectProperty ;
-#                  rdfs:subPropertyOf :isContainedBy ;
-#                  owl:inverseOf :isHomeOf ;
-#                  rdfs:comment "?"@en ;
-#                  rdfs:label "has home workspace"@en .
+:hasHomeWorkspace a owl:ObjectProperty ;
+                  rdfs:subPropertyOf :isContainedBy ;
+                  owl:inverseOf :isHomeOf ;
+                  rdfs:comment "The HW of an agent is the specific workspace where the agent spawned."@en ;
+                  rdfs:label "has home workspace"@en .
 
 
 
@@ -165,7 +165,7 @@
 :hosts a owl:AsymmetricProperty ;
        owl:inverseOf :isHostedBy ;
        rdfs:domain :Platform ;
-       rdfs:comment "A relation between a platform and a resource hosted by the platform. Resources may include information resources or processes (e.g., a software agent)."@en ;
+       rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
        rdfs:label "hosts"@en .
 
 
@@ -183,22 +183,22 @@
                                           :Signifier
                                         )
                           ] ;
-               rdfs:comment "A relation which maps the resource profiles and signifiers associated to a resource"@en ;
+               rdfs:comment "A relation which maps the resource profiles and signifiers associated to a resource."@en ;
                rdfs:label "is described by"@en .
 
 
 
-#:isHomeOf a owl:AsymmetricProperty ;
-#          rdfs:subPropertyOf :containsAgent ;
-#          rdfs:domain :Workspace ;
-#          rdfs:range :Agent ;
-#          rdfs:comment "?"@en ;
-#          rdfs:label "is home of"@en .
+:isHomeOf a owl:AsymmetricProperty ;
+          rdfs:subPropertyOf :containsAgent ;
+          rdfs:domain :Workspace ;
+          rdfs:range :Agent ;
+          rdfs:comment "The HW is the specific workspace where the agent spawned"@en ;
+          rdfs:label "is home of"@en .
 
 
 
 :isHostedBy a owl:AsymmetricProperty ;
             rdfs:range :Platform ;
-            rdfs:comment "A relation between a resource and the platform hosting the resource."@en ;
+            rdfs:comment "A relations that refers to the platform that hosts the resource. "@en ;
             rdfs:label "is hosted by"@en .
 
