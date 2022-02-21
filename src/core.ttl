@@ -74,9 +74,12 @@
 
 
 
-:Platform a owl:Class ;
+:MASPlatform a owl:Class ;
           rdfs:comment "A platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organization, etc."@en ;
-          rdfs:label "Platform"@en, "Platforme"@fr .
+          rdfs:label "Platform"@en, "Platforme"@fr ;
+          skos:example "Examples of hmas:MASPlatforms include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
+          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/20> .
+
 
 
 
@@ -107,7 +110,7 @@
 # disjoint top classes 
 
 [ a owl:AllDisjointClasses ;
-    owl:members ( :Agent :Artifact :Platform :ResourceProfile :Signifier :Workspace ) ] . 
+    owl:members ( :Agent :Artifact :MASPlatform :ResourceProfile :Signifier :Workspace ) ] . 
 
 
 
@@ -150,7 +153,7 @@
                  rdfs:subPropertyOf :isHostedBy ;
                  owl:inverseOf :hostsAgent ;
                  rdfs:domain :Agent ;
-                 rdfs:range :Platform ;
+                 rdfs:range :MASPlatform ;
                  rdfs:comment "The HAP of an agent is the AP on which the agent was created."@en ;
                  rdfs:label "has home platform"@en .
 
@@ -175,7 +178,7 @@
 
 :hosts a owl:AsymmetricProperty ;
        owl:inverseOf :isHostedBy ;
-       rdfs:domain :Platform ;
+       rdfs:domain :MASPlatform ;
        rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
        rdfs:label "hosts"@en ;
        dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
@@ -211,7 +214,7 @@
 
 
 :isHostedBy a owl:AsymmetricProperty ;
-            rdfs:range :Platform ;
+            rdfs:range :MASPlatform ;
             rdfs:comment "A relations that refers to the platform that hosts the resource. "@en ;
             rdfs:label "is hosted by"@en .
 
