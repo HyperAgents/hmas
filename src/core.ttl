@@ -164,12 +164,11 @@
 
 
 
-:hasSignifier a owl:ObjectProperty ;
+:exposesSignifier a owl:ObjectProperty ;
               rdfs:domain :ResourceProfile ;
               rdfs:range :Signifier ;
               rdfs:comment "A relation between a resource profile and a signifier describing an affordance associated to the resource."@en ;
               rdfs:label "has signifier"@en ;
-              skos:note "Suggestion to rename `:exposesSignifier`"@en ;
               dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
               rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> .
 
