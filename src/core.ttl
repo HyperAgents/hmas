@@ -158,11 +158,8 @@
 
 :hasHomeWorkspace a owl:ObjectProperty ;
                   rdfs:subPropertyOf :isContainedBy ;
-                  owl:inverseOf :isHomeOf ;
                   rdfs:comment "The HW of an agent is the specific workspace where the agent spawned."@en ;
                   rdfs:label "has home workspace"@en .
-
-
 
 :hasSignifier a owl:ObjectProperty ;
               rdfs:domain :ResourceProfile ;
@@ -198,16 +195,6 @@
                           ] ;
                rdfs:comment "A relation which maps the resource profiles and signifiers associated to a resource."@en ;
                rdfs:label "is described by"@en .
-
-
-
-:isHomeOf a owl:AsymmetricProperty ;
-          rdfs:subPropertyOf :containsAgent ;
-          rdfs:domain :Workspace ;
-          rdfs:range :Agent ;
-          rdfs:comment "The HW is the specific workspace where the agent spawned"@en ;
-          rdfs:label "is home of"@en .
-
 
 
 :isHostedBy a owl:AsymmetricProperty ;
