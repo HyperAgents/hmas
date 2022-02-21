@@ -11,6 +11,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <http://schema.org/>.
 @prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 
 
 #################################################################
@@ -81,13 +82,18 @@
 
 :ResourceProfile a owl:Class ;
                  rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
+                 skos:example "e.g., a TD document, a Hydra document, an STN platform description, a fipa:AgentPlatformDescription"@en ;
                  rdfs:label "Resource Profile"@en, "Profil de Resource"@fr .
 
 
 
 :Signifier rdf:type owl:Class ;
            rdfs:comment "Structured data describing (one or multiple) affordances exposed by an artifact to agents. Structured data may include metadata about the signifier (e.g., creator, salience) or the described affordance (e.g., predicted pertinence)."@en ;
-           rdfs:label "Signifier"@en, "Signifiant"@fr  .
+           rdfs:label "Signifier"@en, "Signifiant"@fr  ;
+           skos:note ":Signifier would fit as a superclass of td:InteractionAffordance and fipa:ServiceDescription"@en ;
+           skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies." ;
+           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491> .
+
 
 
 
@@ -132,6 +138,8 @@
                                      )
                        ] ;
            rdfs:comment "A relation that describes all signifiers associated to a resource profile."@en ;
+           skos:example ""@en ;
+           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> ;
            rdfs:label "describes"@en .
 
 
@@ -158,9 +166,10 @@
               rdfs:domain :ResourceProfile ;
               rdfs:range :Signifier ;
               rdfs:comment "A relation between a resource profile and a signifier describing an affordance associated to the resource."@en ;
-              rdfs:label "has signifier"@en .
-
-
+              rdfs:label "has signifier"@en ;
+              skos:note "Suggestion to rename `:exposesSignifier`"@en ;
+              dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
+              rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> .
 
 :hosts a owl:AsymmetricProperty ;
        owl:inverseOf :isHostedBy ;
