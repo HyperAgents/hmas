@@ -126,7 +126,9 @@
                                     )
                       ] ;
           rdfs:comment "A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container."@en ;
-          rdfs:label "contains"@en .
+          dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
+          rdfs:label "contains"@en ;
+          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> .
 
 
 
@@ -175,7 +177,9 @@
        owl:inverseOf :isHostedBy ;
        rdfs:domain :Platform ;
        rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
-       rdfs:label "hosts"@en .
+       rdfs:label "hosts"@en ;
+       dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
+       rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> .
 
 
 
