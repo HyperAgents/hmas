@@ -145,25 +145,6 @@
            rdfs:label "describes"@en .
 
 
-
-:hasHomePlatform a owl:ObjectProperty ;
-                 rdfs:subPropertyOf :isHostedBy ;
-                 owl:inverseOf :hostsAgent ;
-                 rdfs:domain :Agent ;
-                 rdfs:range :Platform ;
-                 rdfs:comment "The HAP of an agent is the AP on which the agent was created."@en ;
-                 rdfs:label "has home platform"@en .
-
-
-
-:hasHomeWorkspace a owl:ObjectProperty ;
-                  rdfs:subPropertyOf :isContainedBy ;
-                  owl:inverseOf :isHomeOf ;
-                  rdfs:comment "The HW of an agent is the specific workspace where the agent spawned."@en ;
-                  rdfs:label "has home workspace"@en .
-
-
-
 :hasSignifier a owl:ObjectProperty ;
               rdfs:domain :ResourceProfile ;
               rdfs:range :Signifier ;
@@ -198,16 +179,6 @@
                           ] ;
                rdfs:comment "A relation which maps the resource profiles and signifiers associated to a resource."@en ;
                rdfs:label "is described by"@en .
-
-
-
-:isHomeOf a owl:AsymmetricProperty ;
-          rdfs:subPropertyOf :containsAgent ;
-          rdfs:domain :Workspace ;
-          rdfs:range :Agent ;
-          rdfs:comment "The HW is the specific workspace where the agent spawned"@en ;
-          rdfs:label "is home of"@en .
-
 
 
 :isHostedBy a owl:AsymmetricProperty ;
