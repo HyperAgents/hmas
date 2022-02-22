@@ -2,6 +2,8 @@
 
 (inspired from https://mozillascience.github.io/working-open-workshop/contributing/ )
 
+(Ideas for the contributing doc : mentioning SAMOD and the dev tools by Maxime ??, How to use the rdfs:seeAlso and rdfs:comments ? e.g. rdfs:seeAlso may help to refer to issues ? and rdfs:comments can be used to give the definition of classes/props and some reflexions e.g. some conclusions of issues? )
+
 When contributing to this repository, please first discuss the change you wish to make :
 1. by opening an issue before ;
 2. discuss the problem with the different contributors ;
@@ -106,6 +108,8 @@ Explanations blablabla.
 
 
 ## Justifications of ontological choices
+
+(put this section into comments or in rdfs:comment ?? keep this file generic as a general methodology to contribute on HyperAgent)
 
 ### Issue name X OR explanation of using a certain class e.g. "Hostable/NotHostable" ?
 (I'm going to give an example of the structuration of this section through an example)
