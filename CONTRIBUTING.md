@@ -183,8 +183,8 @@ Current state of the issue : solved
 
 ### Removed classes : hmas:containsX where X in {Artifact,Agent}
 
-No motivating scenario for hmas:containsX
-Furthermore users can use hmas:contains on Agent rather than using hmas:containsAgent
+No motivating scenario for hmas:containsX. 
+Furthermore users can use hmas:contains on Agent rather than using hmas:containsAgent. 
 In issues #X we gave example that show that we do not need hmas:containsX properties since we can directly use hmas:contains
 and the type associated to the class gives us the type of entity contained in the workspace.
 
