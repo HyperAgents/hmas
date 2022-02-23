@@ -74,25 +74,23 @@
 
 
 :Hostable a owl:Class ;
-  rdfs:comment "An entity that can be hosted on a MAS platform"@en ;
+  rdfs:comment "A resource that can be hosted on a MAS platform"@en ;
   skos:example "an agent, an artefact, other MAS platforms, workspaces, resource profiles, signifiers, can be hosted on a MAS platform"@en ;
-  rdfs:label "Hostable"@en, "Hébergeable"@fr .
+  rdfs:label "Hostable"@en, "Hébergeable"@fr ;
+  rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
 
+:NotHostable rdf:type owl:Class ;
+           rdfs:comment "A resource that cannot be hosted by a MAS platform"@en ;
+           rdfs:label "NotHostable"@en, "NonHébergeable"@fr  ;
+           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
 
 :Platform a owl:Class ;
           rdfs:comment "A platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organization, etc."@en ;
           rdfs:label "Platform"@en, "Platforme"@fr ;
           rdfs:subClassOf :Hostable .
 
-:Hostable rdf:type owl:Class ;
-           rdfs:comment "A resource that can be hosted by a platform"@en ;
-           rdfs:label "Hostable"@en, "Hostable"@fr  ;
-           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
 
-:NotHostable rdf:type owl:Class ;
-           rdfs:comment "A resource that cannot be hosted by a platform"@en ;
-           rdfs:label "NotHostable"@en, "NonHostable"@fr  ;
-           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
+
 
 :ResourceProfile a owl:Class ;
                  rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
