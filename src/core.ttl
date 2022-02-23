@@ -78,7 +78,15 @@
           rdfs:comment "A platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organization, etc."@en ;
           rdfs:label "Platform"@en, "Platforme"@fr .
 
+:Hostable rdf:type owl:Class ;
+           rdfs:comment "A resource that can be hosted by a platform"@en ;
+           rdfs:label "Hostable"@en, "Hostable"@fr  ;
+           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
 
+:NotHostable rdf:type owl:Class ;
+           rdfs:comment "A resource that cannot be hosted by a platform"@en ;
+           rdfs:label "NotHostable"@en, "NonHostable"@fr  ;
+           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
 
 :ResourceProfile a owl:Class ;
                  rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
@@ -91,7 +99,7 @@
            rdfs:comment "Structured data describing (one or multiple) affordances exposed by an artifact to agents. Structured data may include metadata about the signifier (e.g., creator, salience) or the described affordance (e.g., predicted pertinence)."@en ;
            rdfs:label "Signifier"@en, "Signifiant"@fr  ;
            skos:note ":Signifier would fit as a superclass of td:InteractionAffordance and fipa:ServiceDescription"@en ;
-           skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies." ;
+           skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies."@en ;
            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491> .
 
 
