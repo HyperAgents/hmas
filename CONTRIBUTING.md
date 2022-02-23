@@ -2,8 +2,14 @@
 
 (inspired from https://mozillascience.github.io/working-open-workshop/contributing/ )
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. 
+(Ideas for the contributing doc : mentioning SAMOD and the dev tools by Maxime ??, How to use the rdfs:seeAlso and rdfs:comments ? e.g. rdfs:seeAlso may help to refer to issues ? and rdfs:comments can be used to give the definition of classes/props and some reflexions e.g. some conclusions of issues? )
+
+When contributing to this repository, please first discuss the change you wish to make :
+1. by opening an issue before ;
+2. discuss the problem with the different contributors ;
+3. close the issue when there is a consensus and capture the consensus and rationale in the ontology itself;
+4. keep a record summarizing the reflections in this file about the modifications that will be applied (section Justifications of ontological choices);
+5. do a pull request.
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
@@ -90,9 +96,103 @@ members of the project's leadership.
 
 ### Using the current classes and properties
 
+1) Use rather hmas:directlyContains and do not use hmas:transitivelyContains (only for requests)
+
+Explanations blablabla.
+
 ### Creating new classes and properties
 
 ### Modifying a class or a property
 
 ### Deleting a class or a property
 
+
+## Justifications of ontological choices
+
+(put this section into comments or in rdfs:comment ?? keep this file generic as a general methodology to contribute on HyperAgent)
+
+### Issue name X OR explanation of using a certain class e.g. "Hostable/NotHostable" ?
+(I'm going to give an example of the structuration of this section through an example)
+
+### hmas:platform issues
+
+1) ambiguïty of the definition with SSN ?
+
+-> Previous definition : "A platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organization, etc "
+
+
+Current state of the issue : solved
+
+Solution : 
+* rename it as :MASPlatform 
+* propose a new definition : ""
+
+### hmas:workspace issues
+
+1) hmas:Workspace seems similar to ldp:Container
+
+@Fabien said : LDP has the ldp:Container and the ldp:contains that links a container with resources in the container:
+https://www.w3.org/ns/ldp#
+
+Questions could be:
+
+    Is a hmas:Workspace rdfs:subClassOf ldp:Container ?
+    if yes should we (re)use ldp:contains ?
+    if not what is the difference and relation between them if any ?
+
+
+Current state of the issue : not solved
+
+Solution : 
+
+
+### hmas:hosts
+
+1) The range is not clear ?
+
+Reflexions of the range and the domains of hosts in the file :
+
+https://partage.imt.fr/index.php/apps/onlyoffice/536638000?filePath=%2FShared%2FHyperAgents%2FVocabularies%2FDomainsAndRanges.xlsx
+
+
+2) Do we need classes Hostable and NotHostable to set the range of hmas:hosts?
+
+
+### hmas:contains 
+
+1) Should we consider hmas:contains as the class ldp:contains ? 
+
+
+
+### hmas:hasHomeWorkspace and hmas:hasHomePlatform
+
+
+
+### hmas:describes
+
+
+1) the domain and range of hmas:describes ?
+
+Related issues : 
+https://github.com/HyperAgents/ns.hyperagents.org/issues/16
+
+
+Solution :
+* set clear the range as rdfs:ressource
+
+
+Current state of the issue : solved
+
+
+
+### Removed classes : hmas:containsX where X in {Artifact,Agent}
+
+No motivating scenario for hmas:containsX. 
+Furthermore users can use hmas:contains on Agent rather than using hmas:containsAgent. 
+In issues #X we gave example that show that we do not need hmas:containsX properties since we can directly use hmas:contains
+and the type associated to the class gives us the type of entity contained in the workspace.
+
+
+### hmas:Platform becomes hmas:MASPlatform
+
+### hmas:contains becomes hmas:TransitivelyContains
