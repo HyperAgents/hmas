@@ -98,9 +98,10 @@
 
 :ResourceProfile a owl:Class ;
                  rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
-                 skos:example "e.g., a TD document, a Hydra document, an STN platform description, a fipa:AgentPlatformDescription"@en ;
+                 skos:example "e.g., a Thing Description document, a Hydra document, an Socio-Technical Network platform description, a fipa:AgentPlatformDescription"@en ;
                  rdfs:label "Resource Profile"@en, "Profil de Resource"@fr ;
           rdfs:subClassOf :Hostable .
+
 
 
 
@@ -170,15 +171,16 @@
                  owl:inverseOf :hostsAgent ;
                  rdfs:domain :Agent ;
                  rdfs:range :MASPlatform ;
-                 rdfs:comment "The HAP of an agent is the AP on which the agent was created."@en ;
-                 rdfs:label "has home SMA platform"@en .
+                 rdfs:comment "The home platform of an agent is the platform on which the agent was created."@en ;
+                 rdfs:label "has home platform"@en .
+
 
 
 
 :hasHomeWorkspace a owl:ObjectProperty ;
                   rdfs:subPropertyOf :isContainedBy ;
                   owl:inverseOf :isHomeOf ;
-                  rdfs:comment "The HW of an agent is the specific workspace where the agent spawned."@en ;
+                  rdfs:comment "The home workspace of an agent is the specific workspace where the agent spawned."@en ;
                   rdfs:label "has home workspace"@en .
 
 
@@ -193,7 +195,6 @@
 
 :hosts a owl:AsymmetricProperty ;
        owl:inverseOf :isHostedBy ;
-
        rdfs:domain :Platform ;
        rdfs:range :Hostable ;
        rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
@@ -225,7 +226,7 @@
           rdfs:subPropertyOf :containsAgent ;
           rdfs:domain :Workspace ;
           rdfs:range :Agent ;
-          rdfs:comment "The HW is the specific workspace where the agent spawned"@en ;
+          rdfs:comment "The home workspace is the specific workspace where the agent spawned"@en ;
           rdfs:label "is home of"@en .
 
 
