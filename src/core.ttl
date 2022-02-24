@@ -211,6 +211,13 @@
             rdfs:comment "A relation that describes the workspace that contains a resource."@en ;
             rdfs:label "is contained in"@en .
 
+:isInteractingWith a owl:SymmetricProperty ;
+            rdfs:domain :Agent ;
+            rdfs:range :Agent ;
+            rdfs:comment "This relation describes an interaction that is currently occurring between two agents. "@en ;
+            rdfs:label "is interacting with"@en ;
+            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/25> .
+
 
 
 :isDescribedBy a owl:AsymmetricProperty ;
