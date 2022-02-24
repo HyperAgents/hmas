@@ -141,12 +141,16 @@
           owl:inverseOf :isContainedIn ;
           rdfs:domain :Workspace ;
           rdfs:range rdfs:Resource ;
-          rdfs:comment "A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container."@en ;
+          rdfs:comment "A relation that refers to all logical containers in which a resource is contained. (Never instantiate this class)"@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
-          rdfs:label "contains"@en ;
+          rdfs:label "transitivelyContains"@en ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> .
 
-
+:directlyContains a owl:AsymmetricProperty ;
+          rdfs:subPropertyOf :transitivelyContains ;
+          rdfs:comment "A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container."@en ;
+          dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/18#issuecomment-1040448029> ;
+          rdfs:label "directlyContains"@en .
 
 :describes a owl:ObjectProperty ;
            owl:inverseOf :isDescribedBy ;
