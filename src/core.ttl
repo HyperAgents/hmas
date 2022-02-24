@@ -137,15 +137,10 @@
 #################################################################
 
 
-:contains a owl:AsymmetricProperty , owl:TransitiveProperty ;
+:transitivelyContains a owl:AsymmetricProperty , owl:TransitiveProperty ;
           owl:inverseOf :isContainedIn ;
           rdfs:domain :Workspace ;
-          rdfs:range [ a owl:Class ;
-                        owl:unionOf ( :Agent
-                                      :Artifact
-                                      :Workspace
-                                    )
-                      ] ;
+          rdfs:range rdfs:Resource ;
           rdfs:comment "A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container."@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
           rdfs:label "contains"@en ;
