@@ -98,18 +98,38 @@ members of the project's leadership.
 
 1) Use rather hmas:directlyContains and do not use hmas:transitivelyContains (only for requests)
 
-Explanations blablabla.
+Related issues :
+https://github.com/HyperAgents/ns.hyperagents.org/issues/6
 
 ### Creating new classes and properties
 
+1) Do not duplicate the same difference in properties, classes and ranges/domains
+
+We mean by do not duplicating e.g. do not create a class hmas:containsArtifact if hmas:contains is enough since the type of ressource allows you to know the nature of the container. 
+
+Related issues :
+https://github.com/HyperAgents/ns.hyperagents.org/issues/6
+
 ### Modifying a class or a property
 
+
+
+
 ### Deleting a class or a property
+
+1) If a class is not necessary for the ontology and not justified by a motivating scenario, then this class can be delete.
+
+We seek to express our ontology in the most minimalist and simplest way possible. 
+We believe that the elegance of a formalism lies in its simplicity and generalization. 
+Apply the philosophy of an Occam's razor.
+
+Related issues :
+https://github.com/HyperAgents/ns.hyperagents.org/issues/6
 
 
 ## Justifications of ontological choices
 
-(put this section into comments or in rdfs:comment ?? keep this file generic as a general methodology to contribute on HyperAgent)
+(Question : put this section into comments or in rdfs:comment ?? keep this file generic as a general methodology to contribute on HyperAgent)
 
 ### Issue name X OR explanation of using a certain class e.g. "Hostable/NotHostable" ?
 (I'm going to give an example of the structuration of this section through an example)
