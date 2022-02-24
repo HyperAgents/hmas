@@ -119,6 +119,7 @@
 :Workspace a owl:Class ;
         rdfs:comment "A space or logical container of one or multiple activities involving a set of agents and potentially artifacts. Workspaces can contain agents, artifacts, and also other workspaces."@en ;
         rdfs:label "Workspace"@en, "Espace de Travail"@fr ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/24> ;
         rdfs:subClassOf :Hostable .
 
 
