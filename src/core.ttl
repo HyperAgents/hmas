@@ -77,6 +77,7 @@
         rdfs:comment "A resource that can be hosted on a MAS platform"@en ;
         skos:example "an agent, an artefact, other MAS platforms, workspaces, resource profiles, signifiers, can be hosted on a MAS platform"@en ;
         rdfs:label "Hostable"@en, "Hébergeable"@fr ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/8> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
 
 :NotHostable rdf:type owl:Class ;
