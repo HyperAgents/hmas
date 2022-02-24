@@ -161,7 +161,8 @@
                        ] ;
            rdfs:comment "A relation that describes all signifiers associated to a resource profile."@en ;
            skos:example ""@en ;
-           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> ;
+           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> ; 
+           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/26> ;
            rdfs:label "describes"@en .
 
 
