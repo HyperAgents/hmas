@@ -166,12 +166,12 @@
 
 
 
-:hasHomeSMAPlatform a owl:ObjectProperty ;
+:hasHomeMASPlatform a owl:ObjectProperty ;
            rdfs:subPropertyOf :isHostedBy ;
-           owl:inverseOf :hostsAgent ;
            rdfs:domain :Agent ;
            rdfs:range :MASPlatform ;
            rdfs:comment "The home platform of an agent is the platform on which the agent was created."@en ;
+           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/19> ;
            rdfs:label "has home platform"@en .
 
 
@@ -181,6 +181,7 @@
             rdfs:subPropertyOf :isContainedBy ;
             owl:inverseOf :isHomeOf ;
             rdfs:comment "The home workspace of an agent is the specific workspace where the agent spawned."@en ;
+            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/19> ;
             rdfs:label "has home workspace"@en .
 
 
