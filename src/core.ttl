@@ -232,7 +232,7 @@
 
 
 
-:isHomeOf a owl:AsymmetricProperty ;
+:isHomeWorkspaceOf a owl:AsymmetricProperty ;
             rdfs:subPropertyOf :containsAgent ;
             rdfs:domain :Workspace ;
             rdfs:range :Agent ;
