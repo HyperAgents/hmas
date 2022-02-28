@@ -93,7 +93,7 @@
 
 :Artifact a owl:Class ;
         rdfs:comment "A resource (or tool) that exposes affordances to agents. Agents use artifacts to achieve their design objectives."@en ;
-        rdfs:label "Artifact"@en, "Artefact"@en ;
+        rdfs:label "Artifact"@en, "Artefact"@fr ;
         rdfs:subClassOf :Hostable .
 
 
