@@ -78,12 +78,14 @@
         skos:example "an agent, an artefact, other MAS platforms, workspaces, resource profiles, signifiers, organizations, can be hosted on a MAS platform"@en ;
         rdfs:label "Hostable"@en, "Hébergeable"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/8> ;
-        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> ;
+        owl:disjointWith :NotHostable .
 
 :NotHostable rdf:type owl:Class ;
         rdfs:comment "A resource that cannot be hosted on a MAS platform"@en ;
         rdfs:label "NotHostable"@en, "NonHébergeable"@fr  ;
-        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> ;
+        owl:disjointWith :Hostable .
 
 
 :MASPlatform a owl:Class ;
@@ -91,9 +93,9 @@
         rdfs:label "MAS Platform"@en, "Platforme SMA"@fr ;
         skos:example "Examples of hmas:MASPlatforms include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/20> ;
-        rdfs:subClassOf :Hostable ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
-        rdfs:subClassOf :Artifact .
+        rdfs:subClassOf :Artifact ;
+        owl:disjointWith :Workspace .
 
 
 
@@ -113,7 +115,8 @@
         rdfs:label "Signifier"@en, "Signifiant"@fr  ;
         skos:note ":Signifier would fit as a superclass of td:InteractionAffordance and fipa:ServiceDescription"@en ;
         skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies."@en ;
-        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491> .
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491> ;
+        rdfs:subClassOf :NotHostable .
 
 
 
@@ -122,9 +125,9 @@
         rdfs:comment "A space or logical container of one or multiple activities involving a set of agents and potentially artifacts. Workspaces can contain agents, artifacts, and also other workspaces."@en ;
         rdfs:label "Workspace"@en, "Espace de Travail"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/24> ;
-        rdfs:subClassOf :Hostable ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
-        rdfs:subClassOf :Artifact .
+        rdfs:subClassOf :Artifact ;
+        owl:disjointWith :MASPlatform .
 
 
 
@@ -133,7 +136,7 @@
 # disjoint top classes 
 
 [ a owl:AllDisjointClasses ;
-    owl:members ( :Agent :Artifact :MASPlatform :ResourceProfile :Signifier :Workspace ) ] . 
+    owl:members ( :Agent :Artifact :ResourceProfile :Signifier ) ] . 
 
 
 
