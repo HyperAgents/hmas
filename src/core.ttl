@@ -229,7 +229,7 @@
 
 
 :hosts a owl:AsymmetricProperty ;
-            rdfs:domain :Platform ;
+            rdfs:domain :MASPlatform ;
             rdfs:range :Hostable ;
             rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
             rdfs:label "hosts"@en ;
