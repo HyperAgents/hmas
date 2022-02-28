@@ -168,23 +168,23 @@
 
 
 
-:hasHomeMASPlatform a owl:ObjectProperty ;
-           rdfs:subPropertyOf :isHostedBy ;
-           rdfs:domain :Agent ;
-           rdfs:range :MASPlatform ;
-           rdfs:comment "The home platform of an agent is the platform on which the agent was created."@en ;
-           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/19> ;
-           rdfs:label "has home platform"@en .
+#:hasHomeMASPlatform a owl:ObjectProperty ;
+#           rdfs:subPropertyOf :isHostedBy ;
+#           rdfs:domain :Agent ;
+#           rdfs:range :MASPlatform ;
+#           rdfs:comment "The home platform of an agent is the platform on which the agent was created."@en ;
+#           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/19> ;
+#           rdfs:label "has home platform"@en .
 
 
 
 
-:hasHomeWorkspace a owl:ObjectProperty ;
-            rdfs:subPropertyOf :isContainedBy ;
-            owl:inverseOf :isHomeOf ;
-            rdfs:comment "The home workspace of an agent is the specific workspace where the agent spawned."@en ;
-            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/19> ;
-            rdfs:label "has home workspace"@en .
+#:hasHomeWorkspace a owl:ObjectProperty ;
+#            rdfs:subPropertyOf :isContainedBy ;
+#            owl:inverseOf :isHomeOf ;
+#            rdfs:comment "The home workspace of an agent is the specific workspace where the agent spawned."@en ;
+#            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/19> ;
+#            rdfs:label "has home workspace"@en .
 
 
 :exposesSignifier a owl:ObjectProperty ;
@@ -194,6 +194,7 @@
             rdfs:label "exposes signifier"@en ;
             dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
             rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> .
+
 
 
 :hosts a owl:AsymmetricProperty ;
