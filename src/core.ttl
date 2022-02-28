@@ -231,7 +231,6 @@
             rdfs:label "is described by"@en .
 
 
-
 :isHomeOf a owl:AsymmetricProperty ;
             rdfs:domain :Workspace ;
             rdfs:range :Agent ;
