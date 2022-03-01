@@ -165,14 +165,15 @@
 #################################################################
 
 
-:transitivelyContains a owl:AsymmetricProperty , owl:TransitiveProperty ;
+:transitivelyContains a owl:TransitiveProperty ;
           owl:inverseOf :isContainedIn ;
           rdfs:domain :Workspace ;
           rdfs:range rdfs:Resource ;
           rdfs:comment "A relation that refers to all logical containers in which a resource is contained. (Never instantiate this class)"@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
           rdfs:label "transitivelyContains"@en ;
-          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> .
+          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
+          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> .
 
 :directlyContains a owl:AsymmetricProperty ;
           rdfs:subPropertyOf :transitivelyContains ;
