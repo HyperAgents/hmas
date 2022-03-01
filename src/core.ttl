@@ -105,11 +105,7 @@
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> ;
         owl:disjointWith :NotHostable .
 
-:NotHostable rdf:type owl:Class ;
-        rdfs:comment "A resource that cannot be hosted on a MAS platform"@en ;
-        rdfs:label "NotHostable"@en, "NonHébergeable"@fr  ;
-        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> ;
-        owl:disjointWith :Hostable .
+
 
 
 :MASPlatform a owl:Class ;
