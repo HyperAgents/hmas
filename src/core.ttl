@@ -87,7 +87,7 @@
 
 
 :Agent a owl:Class ;
-        rdfs:comment "An entity that is capable of flexible autonomous behavior."@en ;
+        rdfs:comment "An entity that is capable of autonomous behavior."@en ;
         rdfs:label "Agent"@en, "Agent"@fr ;
         rdfs:subClassOf :Hostable .
 
