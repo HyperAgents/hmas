@@ -101,6 +101,21 @@ members of the project's leadership.
 Related issues :
 https://github.com/HyperAgents/ns.hyperagents.org/issues/6
 
+
+2) When should you use rdfs:seeAlso instead of dct:source?
+
+Use dct:source when the described resource is derived from the related resource in whole or in part e.g. a particular comment that justifies the described resource or the motivating scenario.
+
+Use rdfs:seeAlso for every resources that is related to the described resource e.g. the rationale given in issues, similar resources.
+
+Related issues :
+...
+
+3) Use rdfs:comments to give the definition of your described resource
+ 
+Related issues :
+...
+
 ### Creating new classes and properties
 
 1) Do not duplicate the same difference in properties, classes and ranges/domains
@@ -130,6 +145,8 @@ https://github.com/HyperAgents/ns.hyperagents.org/issues/6
 ## Justifications of ontological choices
 
 (Question : put this section into comments or in rdfs:comment ?? keep this file generic as a general methodology to contribute on HyperAgent)
+
+[CL: I think this section will be removed ! The rdfs:seeAlso, dct:source will be used to make references to issues.]
 
 ### Issue name X OR explanation of using a certain class e.g. "Hostable/NotHostable" ?
 (I'm going to give an example of the structuration of this section through an example)
