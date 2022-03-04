@@ -143,6 +143,8 @@ Related issues :
 https://github.com/HyperAgents/ns.hyperagents.org/issues/6
 
 
+## Contributions guidelines 
+
 ## Justifications of ontological choices
 
 (Question : put this section into comments or in rdfs:comment ?? keep this file generic as a general methodology to contribute on HyperAgent)
