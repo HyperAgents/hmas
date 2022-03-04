@@ -7,7 +7,7 @@
 When contributing to this repository, please first discuss the change you wish to make :
 1. by opening an issue before ;
 2. discuss the problem with the different contributors ;
-3. close the issue when there is a consensus and capture the consensus and rationale in the ontology itself;
+3. close the issue when there is a consensus (we make a vote?) and capture the consensus and rationale in the ontology itself;
 4. keep a record summarizing the reflections in this file about the modifications that will be applied (section Justifications of ontological choices);
 5. do a pull request.
 
