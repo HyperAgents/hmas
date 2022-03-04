@@ -5,12 +5,12 @@
 (Ideas for the contributing doc : mentioning SAMOD and the dev tools by Maxime ??, How to use the rdfs:seeAlso and rdfs:comments ? e.g. rdfs:seeAlso may help to refer to issues ? and rdfs:comments can be used to give the definition of classes/props and some reflexions e.g. some conclusions of issues? )
 
 When contributing to this repository, please first discuss the change you wish to make :
-1. by opening an issue before ; (Give a standard name for title ? for classes and properties ? How name it ? Is there any convention ? )
+1. by opening an issue before ; (Give a standard name for title ? for classes and properties ? How names it ? Is there any convention ? )
 2. discuss the problem with the different contributors ;
 3. close the issue when there is a consensus (we make a vote?) and capture the consensus and rationale in the ontology itself;
 4. keep a record summarizing the reflections in this file about the modifications that will be applied (section Justifications of ontological choices);
 5. do a pull request.
-6. (Getting an approval before merging ?)
+6. (Getting an approval before merging ? Make a TaskForce to do the merging step ?)
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
