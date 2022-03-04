@@ -10,6 +10,7 @@ When contributing to this repository, please first discuss the change you wish t
 3. close the issue when there is a consensus (we make a vote?) and capture the consensus and rationale in the ontology itself;
 4. keep a record summarizing the reflections in this file about the modifications that will be applied (section Justifications of ontological choices);
 5. do a pull request.
+6. (Getting an approval before merging ?)
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
