@@ -5,11 +5,14 @@
 (Ideas for the contributing doc : mentioning SAMOD and the dev tools by Maxime ??, How to use the rdfs:seeAlso and rdfs:comments ? e.g. rdfs:seeAlso may help to refer to issues ? and rdfs:comments can be used to give the definition of classes/props and some reflexions e.g. some conclusions of issues? )
 
 When contributing to this repository, please first discuss the change you wish to make :
-1. by opening an issue before ;
+1. by opening an issue before ; (Give a standard name for title ? for classes and properties ? How names it ? Is there any convention ? CamelCase notation for classes/properties ?) (See that the issue has not been opened before ? Do not use an existing issue to talk about another issues that should be open ? Need a structure for the issue opening ?)
 2. discuss the problem with the different contributors ;
-3. close the issue when there is a consensus and capture the consensus and rationale in the ontology itself;
+3. close the issue when there is a consensus (we make a vote?) and capture the consensus and rationale in the ontology itself;
 4. keep a record summarizing the reflections in this file about the modifications that will be applied (section Justifications of ontological choices);
 5. do a pull request.
+6. (Getting an approval before merging ? Make a TaskForce to do the merging step ?)
+
+(idea: motivating scenario must be documented somewhere and ontologies must be based on this  )
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
@@ -101,6 +104,21 @@ members of the project's leadership.
 Related issues :
 https://github.com/HyperAgents/ns.hyperagents.org/issues/6
 
+
+2) When should you use rdfs:seeAlso instead of dct:source?
+
+Use dct:source when the described resource is derived from the related resource in whole or in part e.g. a particular comment that justifies the described resource or the motivating scenario.
+
+Use rdfs:seeAlso for every resources that is related to the described resource e.g. the rationale given in issues, similar resources.
+
+Related issues :
+...
+
+3) Use rdfs:comments to give the definition of your described resource
+ 
+Related issues :
+...
+
 ### Creating new classes and properties
 
 1) Do not duplicate the same difference in properties, classes and ranges/domains
@@ -127,9 +145,15 @@ Related issues :
 https://github.com/HyperAgents/ns.hyperagents.org/issues/6
 
 
+## Contributions guidelines 
+
 ## Justifications of ontological choices
 
+(idea: contributing file should not give the discussion of issues but only the methodology to contribute.)
+
 (Question : put this section into comments or in rdfs:comment ?? keep this file generic as a general methodology to contribute on HyperAgent)
+
+[CL: I think this section will be removed ! The rdfs:seeAlso, dct:source will be used to make references to issues.]
 
 ### Issue name X OR explanation of using a certain class e.g. "Hostable/NotHostable" ?
 (I'm going to give an example of the structuration of this section through an example)

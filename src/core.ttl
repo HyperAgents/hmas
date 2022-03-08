@@ -87,7 +87,7 @@
 
 
 :Agent a owl:Class ;
-        rdfs:comment "An entity that is capable of flexible autonomous behavior."@en ;
+        rdfs:comment "An entity that is capable of autonomous behavior."@en ;
         rdfs:label "Agent"@en, "Agent"@fr ;
         rdfs:subClassOf :Hostable .
 
@@ -105,15 +105,11 @@
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> ;
         owl:disjointWith :NotHostable .
 
-:NotHostable rdf:type owl:Class ;
-        rdfs:comment "A resource that cannot be hosted on a MAS platform"@en ;
-        rdfs:label "NotHostable"@en, "NonHébergeable"@fr  ;
-        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> ;
-        owl:disjointWith :Hostable .
 
 
-:MASPlatform a owl:Class ;
-        rdfs:comment "A MAS platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organizations, etc."@en ;
+
+:HypermediaMASPlatform a owl:Class ;
+        rdfs:comment "A Hypermedia MAS platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organizations, etc."@en ;
         rdfs:label "MAS Platform"@en, "Platforme SMA"@fr ;
         skos:example "Examples of hmas:MASPlatforms include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/20> ;
@@ -146,10 +142,12 @@
 
 
 :Workspace a owl:Class ;
-        rdfs:comment "A space or logical container of one or multiple activities involving a set of agents and potentially artifacts. Workspaces can contain agents, artifacts, and also other workspaces."@en ;
+        rdfs:comment "A logical container of one or multiple interactions among agents and potentially artifacts. Workspaces can contain any resource in general and in particular agents, artifacts, other workspaces, or platforms. A workspace can be a LDP container and this can be done by multi-typing the container or by multiple inheritance on a Class ex:Workcontainer. "@en ;
         rdfs:label "Workspace"@en, "Espace de Travail"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/24> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/36> ;
+        rdfs:seeAlso <https://www.w3.org/ns/ldp#> ;
         rdfs:subClassOf :Artifact ;
         owl:disjointWith :MASPlatform .
 
@@ -169,14 +167,15 @@
 #################################################################
 
 
-:transitivelyContains a owl:AsymmetricProperty , owl:TransitiveProperty ;
+:transitivelyContains a owl:TransitiveProperty ;
           owl:inverseOf :isContainedIn ;
           rdfs:domain :Workspace ;
           rdfs:range rdfs:Resource ;
           rdfs:comment "A relation that refers to all logical containers in which a resource is contained. (Never instantiate this class)"@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
           rdfs:label "transitivelyContains"@en ;
-          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> .
+          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
+          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> .
 
 :directlyContains a owl:AsymmetricProperty ;
           rdfs:subPropertyOf :transitivelyContains ;
