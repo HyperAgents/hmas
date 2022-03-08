@@ -111,7 +111,7 @@
 :HypermediaMASPlatform a owl:Class ;
         rdfs:comment "A Hypermedia MAS platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organizations, etc."@en ;
         rdfs:label "MAS Platform"@en, "Platforme SMA"@fr ;
-        skos:example "Examples of hmas:MASPlatforms include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
+        skos:example "Examples of hmas:HypermediaMASPlatform include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/20> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
         rdfs:subClassOf :Artifact ;
@@ -149,7 +149,7 @@
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/36> ;
         rdfs:seeAlso <https://www.w3.org/ns/ldp#> ;
         rdfs:subClassOf :Artifact ;
-        owl:disjointWith :MASPlatform .
+        owl:disjointWith :HypermediaMASPlatform .
 
 
 
@@ -228,7 +228,7 @@
 
 
 :hosts a owl:AsymmetricProperty ;
-            rdfs:domain :MASPlatform ;
+            rdfs:domain :HypermediaMASPlatform ;
             rdfs:range :Hostable ;
             rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
             rdfs:label "hosts"@en ;
@@ -265,7 +265,7 @@
 :isHostedBy a owl:AsymmetricProperty ; 
             owl:inverseOf :hosts ;
             rdfs:domain :Hostable ;
-            rdfs:range :MASPlatform ;
+            rdfs:range :HypermediaMASPlatform ;
             rdfs:comment "A relations that refers to the platform that hosts the resource. "@en ;
             rdfs:label "is hosted by"@en .
 
