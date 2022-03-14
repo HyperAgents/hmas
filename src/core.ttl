@@ -220,7 +220,7 @@
 :exposesSignifier a owl:ObjectProperty ;
             rdfs:domain :ResourceProfile ;
             rdfs:range :Signifier ;
-            rdfs:comment "A relation between a resource profile and a signifier describing an affordance associated to the resource."@en ;
+            rdfs:comment "A relation between a resource profile and a signifier"@en ;
             rdfs:label "exposes signifier"@en ;
             dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
             rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> .
