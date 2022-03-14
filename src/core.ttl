@@ -262,7 +262,7 @@
 
 
 
-:isHostedBy a owl:AsymmetricProperty ; 
+:isHostedOn a owl:AsymmetricProperty ; 
             owl:inverseOf :hosts ;
             rdfs:domain :Hostable ;
             rdfs:range :HypermediaMASPlatform ;
