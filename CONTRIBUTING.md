@@ -23,8 +23,12 @@ Please note we have a code of conduct, please follow it in all your interactions
 2. Update the README.md with details of changes to the interface, this includes new environment 
    variables, exposed ports, useful file locations and container parameters.
 3. Increase the version numbers in any examples files and the README.md to the new version that this
-   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
+   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/). 
+4. (Idea: The Pull Request must have the following title "Verb + object of the PR + ref to issue" e.g. Update definition of :Artifact #IssueArtifact" 
+   Create class :Toto #IssueToto 
+   A- The Pull Request's name must be as concise as possible
+   B- The PR must corresponds to an issue and only one issue (Don't do a BIG PR that groups many different issues !) ) 
+5. You may merge the Pull Request in once you have the sign-off of the different institution, or if you 
    do not have permission to do that, you may request the second reviewer to merge it for you.
 
 ## Code of Conduct
