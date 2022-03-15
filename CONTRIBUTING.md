@@ -7,10 +7,10 @@
 When contributing to this repository, please first discuss the change you wish to make :
 1. by opening an issue before ; (Give a standard name for title ? for classes and properties ? How names it ? Is there any convention ? CamelCase notation for classes/properties ?) (See that the issue has not been opened before ? Do not use an existing issue to talk about another issues that should be open ? Need a structure for the issue opening ?)
 2. discuss the problem with the different contributors ;
-3. close the issue when there is a consensus (we make a vote?) and capture the consensus and rationale in the ontology itself;
+3. close the issue when there is a consensus (make a vote?->maybe it is too restrictive.. the PR should be enough ?) and capture the consensus and rationale in the ontology itself;
 4. keep a record summarizing the reflections in this file about the modifications that will be applied (section Justifications of ontological choices);
 5. do a pull request.
-6. (Getting an approval before merging ? Make a TaskForce to do the merging step ?)
+6. (Get an approval before merging ? -> Make a TaskForce to do the merging step of all PR ?)
 
 (idea: motivating scenario must be documented somewhere and ontologies must be based on this  )
 
