@@ -92,7 +92,7 @@
         rdfs:subClassOf :Hostable .
 
 :Artifact a owl:Class ;
-        rdfs:comment "A resource (or tool) that exposes affordances to agents. Agents use artifacts to achieve their design objectives."@en ;
+        rdfs:comment "A resource (or tool) that agents can use."@en ;
         rdfs:label "Artifact"@en, "Artefact"@fr ;
         rdfs:subClassOf :Hostable .
 
