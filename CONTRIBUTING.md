@@ -35,10 +35,11 @@ When contributing to this repository, please first discuss the change you wish t
 
 
 Rules to open an issue : 
-   * be sure that the issue has not been opened/closed before 
-   * Do not use an existing issue to talk about another issues that should be open
-   * If the issue has been addressed and is closed, maybe it needs to be re-opened (how to do that ?)
-   * The issue title should be specific and should address only one single issue. 
+   * be sure that the issue has not been opened/closed before ;
+   * do not use an existing issue to talk about another issues that should be open ;
+   * if the issue has been addressed and is closed, maybe it needs to be re-opened (how to do that ?) ;
+   * the issue title should be specific and should address only one single issue? 
+   * the title structure of issues is ... ?
 
 ## Code of conduct
 
