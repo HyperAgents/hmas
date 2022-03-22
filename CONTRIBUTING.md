@@ -4,7 +4,7 @@ This document is inspired from :
 https://mozillascience.github.io/working-open-workshop/contributing/ 
 https://opensource.guide/fr/starting-a-project/
 
-Objective of this document :
+Objectives of this document :
 * provide a CONTRIBUTING file template about how to apply via GIT the SAMOD methodology
 * explain the methodology how to:
    1) create good issues or pull requests ;
@@ -12,7 +12,7 @@ Objective of this document :
    4) act with the community and behavioral expectations ;
    5) how to create a new story.
 
-Ideas for the contributing doc to add : 
+Ideas/questions for the contributing doc to add : 
 * propose a standard name for title of issues / PR / for classes and properties ? How to name a new class / property ?  => Open A new issue about e.g. considering a new CamelCase notation for classes/properties ??
 * the PR is usefull to make a vote and decide if we merge : say it !
 * talk about how to decide if a set of PR is considered as a new version : it is when all the stories features has been addressed and accepted.
@@ -21,6 +21,7 @@ Ideas for the contributing doc to add :
 * separate code of conduct from the contributing file ? 
 * add in PR process when we close the issue i.e. when it seems there is a consensus and capture the consensus and rationale in the ontology itself 
 * add in the PR process that you must keep a record summarizing the reflections in your PR by making a link toward the issue that is related and how to do that.
+* take from polifonia the methodology to create a new story ?? 
 
 When contributing to this repository, please first discuss the change you wish to make :
 1. by opening an issue before by following the rules how to open an issue ; 
