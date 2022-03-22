@@ -27,6 +27,22 @@ Ideas/questions for the contributing doc to add :
 * considering specifical files that refers all stories 
 * should we consider a set of peoples with roles and stories in our approach ? 
 
+
+
+Examples of contributing files :
+
+https://github.com/atom/atom/blob/master/CONTRIBUTING.md
+
+https://github.com/rails/rails/blob/main/CONTRIBUTING.md
+
+https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
+
+
+
+
+
+
+
 When contributing to this repository, please first discuss the change you wish to make :
 1. by opening an issue before by following the rules how to open an issue ; 
 2. discuss the problem with the different contributors by following the code of conduct ;
