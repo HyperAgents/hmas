@@ -155,12 +155,12 @@ This is a shared common space to share stories for the HyperAgents project. A st
 There is one folder for each Agent, named with the name of the Agent and their primary occupation.
 
     Check all existing Agents (there is one subfolder for each Persona in the "stories" folder), in order to see if there is already the Persona you need for your story. You will find a readme file in each folder, describing the Persona.
-    If you find a Persona that suits you, create a new file in the respective folder, named Name-of-the-persona#progressive-number_KeywordRepresentingTheMainGoal.md, and fill the file with your story, following this example.
-    If not, create a new folder, named Name-of-the-persona: Primary Occupation. If the persona has more than one role, use the primary role for naming the folder. Then, create a readme file (readme.md) describing the persona (see this example), and then a file with your story as this example.
+    If you find an Agent that suits you, create a new file in the respective folder, named Name-of-the-persona#progressive-number_KeywordRepresentingTheMainGoal.md, and fill the file with your story, following this example.
+    If not, create a new folder, named Name-of-the-agent: Primary Occupation. If the persona has more than one role, use the primary role for naming the folder. Then, create a readme file (readme.md) describing the persona (see this example), and then a file with your story as this example.
     Besides providing information about the four components of the story, you should additionally fill in a table with this information:
 
-    ID (Name-of-the-persona#progressive-number_KeywordRepresentingTheMainGoal)
-    Persona (name of the persona)
+    ID (Name-of-the-agent#progressive-number_KeywordRepresentingTheMainGoal)
+    Agent (name of the agent)
     Keywords (representing their goals)
     WP (WPs involved in the story)
     Pilots (pilots involved in the story)
@@ -170,9 +170,9 @@ There is one folder for each Agent, named with the name of the Agent and their p
         life changer (i.e. I would be able to make discoveries/works that now cannot be done or are extremely hard to do)
         breakthrough (i.e. this would be a breakthrough in my field)
 
-    After completing your story, you should update the "List of personas" and/or the "List of stories" in this README.md file.
+    After completing your story, you should update the "List of agents" and/or the "List of stories" in this README.md file.
 
-    If you created a new Persona: add to "List of personas" the name of the folder, and a link to the folder, following the examples. Then, add to "List of stories" the name of the story you created, and a link to the file.
+    If you created a new Agent: add to "List of agents" the name of the folder, and a link to the folder, following the examples. Then, add to "List of stories" the name of the story you created, and a link to the file.
     If you reused an existing Persona for your story: add to "List of stories" the name of the story you created, and a link to the file.
 
 
