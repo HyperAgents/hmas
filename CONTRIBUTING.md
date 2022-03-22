@@ -14,52 +14,35 @@ Objective of this document :
 
 Ideas for the contributing doc to add : 
 * propose a standard name for title of issues / PR / for classes and properties ? How to name a new class / property ?  => Open A new issue about e.g. considering a new CamelCase notation for classes/properties ??
-* the PR is usefull to make a vote and decide if we merge
+* the PR is usefull to make a vote and decide if we merge : say it !
 * talk about how to decide if a set of PR is considered as a new version : it is when all the stories features has been addressed and accepted.
 * how motivating scenario must be documented somewhere and how ontologies links to these motivating scenarios  
-* the structure of this file should be : each step of the contributing process as section/subsections
+* the structure of this file should be : each step of the contributing process is explained by the plan section/subsections ?
+* separate code of conduct from the contributing file ? 
+* add in PR process when we close the issue i.e. when it seems there is a consensus and capture the consensus and rationale in the ontology itself 
+* add in the PR process that you must keep a record summarizing the reflections in your PR by making a link toward the issue that is related and how to do that.
 
 When contributing to this repository, please first discuss the change you wish to make :
-1. by opening an issue before and be sure that the issue has not been opened/closed before : 
+1. by opening an issue before by following the rules how to open an issue ; 
+2. discuss the problem with the different contributors by following the code of conduct ;
+3. if a new feature is needed to the project, then follow the methodology how to create a new story ;
+4. do a pull request and wait for approval by following the pull request process.
+
+
+
+## Open an issue
+
+
+Rules to open an issue : 
+   * be sure that the issue has not been opened/closed before 
    * Do not use an existing issue to talk about another issues that should be open
    * If the issue has been addressed and is closed, maybe it needs to be re-opened (how to do that ?)
    * The issue title should be specific and should address only one single issue. 
 
-2. discuss the problem with the different contributors by following the code of conduct ;
-3. close the issue when it seems there is a consensus and capture the consensus and rationale in the ontology itself;
-4. keep a record summarizing the reflections in your PR by making a link toward the issue that is related ;
-5. do a pull request and wait for approval.
+## Code of conduct
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
-## Pull Request Process
-
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
-   build.
-2. Update the README.md with details of changes to the interface, this includes new environment 
-   variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this
-   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/). 
-4. (Idea: The Pull Request must have the following title "Verb + object of the PR + ref to issue" e.g. Update definition of :Artifact #IssueArtifact" 
-   Create class :Toto #IssueToto 
-   A- The Pull Request's name must be as concise as possible
-   B- The PR must corresponds to an issue and only one issue (Don't do a BIG PR that groups many different issues !) ) 
-5. You may merge the Pull Request in once you have the sign-off of the different institution, or if you 
-   do not have permission to do that, you may request the second reviewer to merge it for you.
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Code of Conduct
 
 ### Our Pledge
 
@@ -138,8 +121,52 @@ members of the project's leadership.
 
 
 
+## Motivating scenarios (or stories?)
+
+
+
+
+
+
+
+
+
+
+
+## Pull Request Process
+
+1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
+   build.
+2. Update the README.md with details of changes to the interface, this includes new environment 
+   variables, exposed ports, useful file locations and container parameters.
+3. Increase the version numbers in any examples files and the README.md to the new version that this
+   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/). 
+4. (Idea: The Pull Request must have the following title "Verb + object of the PR + ref to issue" e.g. Update definition of :Artifact #IssueArtifact" 
+   Create class :Toto #IssueToto 
+   A- The Pull Request's name must be as concise as possible
+   B- The PR must corresponds to an issue and only one issue (Don't do a BIG PR that groups many different issues !) ) 
+5. You may merge the Pull Request in once you have the sign-off of the different institution, or if you 
+   do not have permission to do that, you may request the second reviewer to merge it for you.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Good practices
+
+This party should be removed ?
 
 ### Using the current classes and properties
 
