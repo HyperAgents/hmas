@@ -1,18 +1,34 @@
 # Contributing
 
-(inspired from https://mozillascience.github.io/working-open-workshop/contributing/ )
+This document is inspired from : 
+https://mozillascience.github.io/working-open-workshop/contributing/ 
+https://opensource.guide/fr/starting-a-project/
 
-(Ideas for the contributing doc : mentioning SAMOD and the dev tools by Maxime ??, How to use the rdfs:seeAlso and rdfs:comments ? e.g. rdfs:seeAlso may help to refer to issues ? and rdfs:comments can be used to give the definition of classes/props and some reflexions e.g. some conclusions of issues? )
+Objective of this document :
+* provide a CONTRIBUTING file template about how to apply via GIT the SAMOD methodology
+* explain the methodology how to:
+   1) create good issues or pull requests ;
+   3) link to external documentation, mailing lists, or a code of conduct ;
+   4) act with the community and behavioral expectations ;
+   5) how to create a new story.
+
+Ideas for the contributing doc to add : 
+* propose a standard name for title of issues / PR / for classes and properties ? How to name a new class / property ?  => Open A new issue about e.g. considering a new CamelCase notation for classes/properties ??
+* the PR is usefull to make a vote and decide if we merge
+* talk about how to decide if a set of PR is considered as a new version : it is when all the stories features has been addressed and accepted.
+* how motivating scenario must be documented somewhere and how ontologies links to these motivating scenarios  
+* the structure of this file should be : each step of the contributing process as section/subsections
 
 When contributing to this repository, please first discuss the change you wish to make :
-1. by opening an issue before ; (ides: propose a standard name for title ? for classes and properties ? How names it ? Is there any convention ? CamelCase notation for classes/properties ?) (See that the issue has not been opened before ? Do not use an existing issue to talk about another issues that should be open ? Need a structure for the issue opening ?)
-2. discuss the problem with the different contributors ;
-3. close the issue when there is a consensus (make a vote?->maybe it is too restrictive.. the PR should be enough ?) and capture the consensus and rationale in the ontology itself;
-4. keep a record summarizing the reflections in this file about the modifications that will be applied (section Justifications of ontological choices);
-5. do a pull request.
-6. (Get an approval before merging ? -> Make a TaskForce to do the merging step of all PR ?)
+1. by opening an issue before and be sure that the issue has not been opened/closed before : 
+   * Do not use an existing issue to talk about another issues that should be open
+   * If the issue has been addressed and is closed, maybe it needs to be re-opened (how to do that ?)
+   * The issue title should be specific and should address only one single issue. 
 
-(idea: motivating scenario must be documented somewhere and ontologies must be based on this  )
+2. discuss the problem with the different contributors by following the code of conduct ;
+3. close the issue when it seems there is a consensus and capture the consensus and rationale in the ontology itself;
+4. keep a record summarizing the reflections in your PR by making a link toward the issue that is related ;
+5. do a pull request and wait for approval.
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
