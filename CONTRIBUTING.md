@@ -168,7 +168,7 @@ members of the project's leadership.
 
 ## Good practices
 
-This party should be removed ?
+This party should be removed ! But where to explain how the ontology should be used and how we can create new classes ? 
 
 ### Using the current classes and properties
 
