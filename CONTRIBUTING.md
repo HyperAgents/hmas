@@ -22,6 +22,8 @@ Ideas/questions for the contributing doc to add :
 * add in PR process when we close the issue i.e. when it seems there is a consensus and capture the consensus and rationale in the ontology itself 
 * add in the PR process that you must keep a record summarizing the reflections in your PR by making a link toward the issue that is related and how to do that.
 * take from polifonia the methodology to create a new story ?? 
+* considering specifical files that refers all stories 
+* should we consider a set of peoples with roles and stories in our approach ? 
 
 When contributing to this repository, please first discuss the change you wish to make :
 1. by opening an issue before by following the rules how to open an issue ; 
