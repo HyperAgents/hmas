@@ -1,7 +1,9 @@
 # Contributing
 
 This document is inspired from : 
+
 https://mozillascience.github.io/working-open-workshop/contributing/ 
+
 https://opensource.guide/fr/starting-a-project/
 
 Objectives of this document :
