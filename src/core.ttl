@@ -136,6 +136,7 @@
         skos:note ":Signifier would fit as a superclass of td:InteractionAffordance and fipa:ServiceDescription"@en ;
         skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491> ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/41> ;
         rdfs:subClassOf :NotHostable .
 
 
