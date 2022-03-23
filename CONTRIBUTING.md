@@ -25,7 +25,7 @@ Ideas/questions for the contributing doc to add :
 * add in the PR process that you must keep a record summarizing the reflections in your PR by making a link toward the issue that is related and how to do that.
 * take from polifonia the methodology to create a new story ?? 
 * considering specifical files that refers all stories 
-* should we consider a set of peoples with roles and stories in our approach ? 
+* should we consider a set of people with roles and stories in our approach ? here we would call this set : set of agents.
 
 
 
@@ -44,10 +44,10 @@ https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
 
 
 When contributing to this repository, please first discuss the change you wish to make :
-1. by opening an issue before by following the rules how to open an issue ; 
-2. discuss the problem with the different contributors by following the code of conduct ;
-3. if a new feature is needed to the project, then follow the methodology how to create a new story ;
-4. do a pull request and wait for approval by following the pull request process.
+1. by opening an issue before by following the rules how to open an issue (cf. Section~1); 
+2. discuss the problem with the different contributors by following the code of conduct (cf. Section~2);
+3. if a new feature is needed to the project, then create a new story by following the methodology  (cf. Section~3);
+4. do a pull request and wait for approval by following the pull request process (cf. Section~4).
 
 
 
