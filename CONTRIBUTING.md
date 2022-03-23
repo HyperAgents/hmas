@@ -26,7 +26,7 @@ Ideas/questions for the contributing doc to add :
 * take from polifonia the methodology to create a new story ?? 
 * considering specifical files that refers all stories 
 * should we consider a set of people with roles and stories in our approach ? here we would call this set : set of agents.
-* Create an explicit file CODE-OF-CONDUCT.md (cf. https://opensource.guide/fr/code-of-conduct/)   where we present the behaviour we expect from the community and where we present the use of the different classes/properties ??
+* Create an explicit file CODE-OF-CONDUCT.md (cf. https://opensource.guide/fr/code-of-conduct/)   where we present the behaviour we expect from the community and where we present the use of the different classes/properties e.g. put in this file the section #good-practices (because it shouldn't be in the contributing file : ) ??
 
 
 Examples of contributing files :
