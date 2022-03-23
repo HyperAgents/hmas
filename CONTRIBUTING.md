@@ -42,6 +42,8 @@ https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
 
 
 
+(Introduction : be explicit and synthetic about how to contribute to the project ?)
+
 
 When contributing to this repository, please first discuss the change you wish to make :
 1. by opening an issue before by following the rules how to open an issue (cf. Section~1); 
