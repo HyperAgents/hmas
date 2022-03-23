@@ -26,7 +26,7 @@ Ideas/questions for the contributing doc to add :
 * take from polifonia the methodology to create a new story ?? 
 * considering specifical files that refers all stories 
 * should we consider a set of people with roles and stories in our approach ? here we would call this set : set of agents.
-
+* Create an explicit file CODE-OF-CONDUCT.md (cf. https://opensource.guide/fr/code-of-conduct/)   where we present the behaviour we expect from the community and where we present the use of the different classes/properties ??
 
 
 Examples of contributing files :
@@ -56,12 +56,16 @@ When contributing to this repository, please first discuss the change you wish t
 
 Rules to open an issue : 
    * be sure that the issue has not been opened/closed before ;
-   * do not use an existing issue to talk about another issues that should be open ;
+   * do not use an existing issue to talk about another issues that should be opened ;
    * if the issue has been addressed and is closed, maybe it needs to be re-opened (how to do that ?) ;
    * the issue title should be specific and should address only one single issue? 
    * the title structure of issues is ... ?
+   e.g.  Create/Update/Delete/UseAPropertyFrom/ProblemWith ClassName/Property/Definition / General question ? / Bug : ... / ???
 
 ## Code of conduct
+
+
+
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
