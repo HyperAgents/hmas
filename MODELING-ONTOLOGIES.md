@@ -5,7 +5,7 @@ This file explains :
 * how to use different classes and properties for modeling ontologies ;
 * ...
 
-(notice : deleting/creating is more related to the contributing file and it should be integrated to the contributed file as specifical rules)
+(notice : creating/modifying/deleting is more related to the contributing file and it should be integrated to the contributed file as specifical rules)
 
 ## Using the current classes and properties
 
