@@ -1,50 +1,17 @@
-# Contributing
+# Contributing to an ontology on GIT
 
-This document is inspired from : 
-
-https://mozillascience.github.io/working-open-workshop/contributing/ 
-
-https://opensource.guide/fr/starting-a-project/
-
-Objectives of this document :
-* provide a CONTRIBUTING file template about how to apply via GIT the SAMOD methodology
-* explain the methodology how to:
-   1) create good issues or pull requests ;
+## Objectives
+This document provides guidelines to contribute to an ontology via GIT. 
+In particular we explain the how to:
+   1) create good issues or pull requests during the ontology design;
    3) link to external documentation, mailing lists, or a code of conduct ;
    4) act with the community and behavioral expectations ;
-   5) how to create a new story.
-
-Ideas/questions for the contributing doc to add : 
-* propose a standard name for title of issues / PR / for classes and properties ? How to name a new class / property ?  => Open A new issue about e.g. considering a new CamelCase notation for classes/properties ??
-* the PR is usefull to make a vote and decide if we merge : say it !
-* talk about how to decide if a set of PR is considered as a new version : it is when all the stories features has been addressed and accepted.
-* how motivating scenario must be documented somewhere and how ontologies links to these motivating scenarios  
-* the structure of this file should be : each step of the contributing process is explained by the plan section/subsections ?
-* separate code of conduct from the contributing file ? 
-* add in PR process when we close the issue i.e. when it seems there is a consensus and capture the consensus and rationale in the ontology itself 
-* add in the PR process that you must keep a record summarizing the reflections in your PR by making a link toward the issue that is related and how to do that.
-* take from polifonia the methodology to create a new story ?? 
-* considering specifical files that refers all stories 
-* should we consider a set of people with roles and stories in our approach ? here we would call this set : set of agents.
-* Create an explicit file CODE-OF-CONDUCT.md (cf. https://opensource.guide/fr/code-of-conduct/)   where we present the behaviour we expect from the community and where we present the use of the different classes/properties e.g. put in this file the section #good-practices (because it shouldn't be in the contributing file : ) ??
-
-
-Examples of contributing files :
-
-https://github.com/atom/atom/blob/master/CONTRIBUTING.md
-
-https://github.com/rails/rails/blob/main/CONTRIBUTING.md
-
-https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
+   5) how to create and link a new story.
 
 
 
-
-
-
-(Introduction : be explicit and synthetic about how to contribute to the project ?)
-
-
+## General rules for contributing
+Be explicit and synthetic about the contribution you want to make to the project.
 When contributing to this repository, please first discuss the change you wish to make :
 1. by opening an issue before by following the rules how to open an issue (cf. Section~1); 
 2. discuss the problem with the different contributors by following the code of conduct (cf. Section~2);
@@ -54,7 +21,6 @@ When contributing to this repository, please first discuss the change you wish t
 
 
 ## Open an issue
-
 
 Rules to open an issue : 
    * be sure that the issue has not been opened/closed before ;
@@ -233,16 +199,40 @@ Actually in our case, a motivating scenario is characterized by :
 
 
 
+## References 
+
+This document is inspired from : 
+
+https://mozillascience.github.io/working-open-workshop/contributing/ 
+
+https://opensource.guide/fr/starting-a-project/
+
+SAMOD methodology [REF]
 
 
+Examples of contributing files :
+
+https://github.com/atom/atom/blob/master/CONTRIBUTING.md
+
+https://github.com/rails/rails/blob/main/CONTRIBUTING.md
+
+https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
 
 
-
-
-
-
-
-
+## TODOs
+> Ideas/questions for the contributing doc to add : 
+* propose a standard name for title of issues / PR / for classes and properties ? How to name a new class / property ?  => Open A new issue about e.g. considering a new CamelCase notation for classes/properties ??
+* the PR is usefull to make a vote and decide if we merge : say it !
+* talk about how to decide if a set of PR is considered as a new version : it is when all the stories features has been addressed and accepted.
+* how motivating scenario must be documented somewhere and how ontologies links to these motivating scenarios  
+* the structure of this file should be : each step of the contributing process is explained by the plan section/subsections ?
+* separate code of conduct from the contributing file ? 
+* add in PR process when we close the issue i.e. when it seems there is a consensus and capture the consensus and rationale in the ontology itself 
+* add in the PR process that you must keep a record summarizing the reflections in your PR by making a link toward the issue that is related and how to do that.
+* take from polifonia the methodology to create a new story ?? 
+* considering specifical files that refers all stories 
+* should we consider a set of people with roles and stories in our approach ? here we would call this set : set of agents.
+* Create an explicit file CODE-OF-CONDUCT.md (cf. https://opensource.guide/fr/code-of-conduct/)   where we present the behaviour we expect from the community and where we present the use of the different classes/properties e.g. put in this file the section #good-practices (because it shouldn't be in the contributing file : ) ??
 
 
 
