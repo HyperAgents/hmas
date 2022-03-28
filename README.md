@@ -21,21 +21,17 @@ Please follow the [contributing file](https://github.com/HyperAgents/ns.hyperage
 ## IV - Authors
 
 
-* [Fabien Gandon](http://ns.inria.fr/fabien.gandon#me)
+* [Fabien Gandon](http://fabien.info/)
 
   email : fabien.gandon@inria.fr ;
-  
-  url : http://fabien.info/ ;
   
   affiliation : [INRIA](https://inria.fr/) .
 
 
 
-* [Chistopher Leturc](https://www.linkedin.com/in/christopher-leturc/) 
-* 
+* [Chistopher Leturc](https://emse.fr/~leturc/) 
+
   email : christopher.leturc@inria.fr" ;
-  
-  url : https://emse.fr/~leturc/ ;
   
   affiliation :  [INRIA](https://inria.fr/) .
 
@@ -43,8 +39,6 @@ Please follow the [contributing file](https://github.com/HyperAgents/ns.hyperage
 * [Maxime Lefrançois](http://maxime-lefrancois.info/me#) 
  
   email : maxime.lefrancois@emse.fr ;
-  
-  url : http://maxime-lefrancois.info/ ;
   
   affiliation : [EMSE](https://www.mines-stetienne.fr/) .
 
