@@ -9,7 +9,7 @@ The root of the repository contains three introductory files respectively descri
 
 
 
-## II -How to use the ontology
+## II - How to use the ontology
 
 A file describes how using the current ontology : [here](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/MODELING-ONTOLOGIES.md)
 
