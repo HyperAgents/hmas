@@ -51,7 +51,7 @@ Please follow the [contributing file](https://github.com/HyperAgents/ns.hyperage
 
 
 
-*  [Danai Vachtsevanou](https://danaivach.inrupt.net/profile/card#me) ;
+*  [Danai Vachtsevanou](https://danaivach.inrupt.net/profile/card#me) 
 
   email : danai.vachtsevanou@unisg.ch ;
   
