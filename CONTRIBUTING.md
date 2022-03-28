@@ -1,6 +1,6 @@
 # Contributing to an ontology on GIT
 
-## Objectives
+## I - Objectives
 This document provides guidelines to contribute to an ontology via GIT. 
 In particular we explain the how to:
    1) create good issues or pull requests during the ontology design;
@@ -10,17 +10,17 @@ In particular we explain the how to:
 
 
 
-## General rules for contributing
+## II - General rules for contributing
 Be explicit and synthetic about the contribution you want to make to the project.
 When contributing to this repository, please first discuss the change you wish to make :
-1. by opening an issue before by following the rules how to open an issue (cf. Section~1); 
-2. discuss the problem with the different contributors by following the code of conduct (cf. Section~2);
-3. if a new feature is needed to the project, then create a new story by following the methodology  (cf. Section~3);
-4. do a pull request and wait for approval by following the pull request process (cf. Section~4).
+1. by opening an issue before by following the rules how to open an issue (cf. Section~III); 
+2. discuss the problem with the different contributors by following the code of conduct (cf. Section~IV);
+3. if a new feature is needed to the project, then create a new story by following the methodology  (cf. Section~V);
+4. do a pull request and wait for approval by following the pull request process (cf. Section~VI).
 
 
 
-## Open an issue
+## III - Open an issue
 
 Rules to open an issue : 
    * be sure that the issue has not been opened/closed before ;
@@ -31,8 +31,12 @@ Rules to open an issue :
    e.g.  Create/Update/Delete/UseAPropertyFrom/ProblemWith ClassName/Property/Definition / General question ? / Bug : ... / ???
 
 
+## IV - Code of conduct
 
-## Motivating scenarios (or stories?)
+Please follow the code of conduct : [here](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/CODE-OF-CONDUCT.md).
+
+
+## V - Motivating scenarios (or stories?)
 
 
 
@@ -40,7 +44,7 @@ A motivating scenario is a small story problem that provides a short description
 
 This is a shared common space to share stories for the HyperAgents project. A story is a template for collecting requirements.
 
-### A story is composed of:
+### A) A story is composed of:
 
     Agent
         It is a research-based description of a typical user.
@@ -57,7 +61,7 @@ This is a shared common space to share stories for the HyperAgents project. A st
     Resources (optional)
         List of resources (with references/links) where it is expected or known that the persona can find what she's looking for.
 
-###  How to create a story
+### B) How to create a story
 
 There is one folder for each Agent, named with the name of the Agent and their primary occupation.
 
@@ -102,7 +106,7 @@ Actually in our case, a motivating scenario is characterized by :
   2) Workshop: A room or building in which goods are manufactured or repaired.
 
 
-## Pull Request Process
+## VI - Pull Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
    build.
@@ -119,7 +123,7 @@ Actually in our case, a motivating scenario is characterized by :
 
 
 
-## References 
+## VII - References 
 
 This document is inspired from : 
 
@@ -143,7 +147,7 @@ Examples of contributing files :
 * https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
 
 
-## TODOs
+## VIII - TODOs
 > Ideas/questions for the contributing doc to add : 
 * propose a standard name for title of issues / PR / for classes and properties ? How to name a new class / property ?  => Open A new issue about e.g. considering a new CamelCase notation for classes/properties ??
 * the PR is usefull to make a vote and decide if we merge (need to be explicitly precised)
