@@ -22,9 +22,13 @@ Please follow the [contributing file](https://github.com/HyperAgents/ns.hyperage
 
 
 * [Fabien Gandon](http://ns.inria.fr/fabien.gandon#me)
+
   email : fabien.gandon@inria.fr ;
+  
   url : http://fabien.info/ ;
+  
   schema:identifier <http://orcid.org/0000-0003-0543-1232> ;
+  
   affiliation : [INRIA](https://inria.fr/) .
 
 
