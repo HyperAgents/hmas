@@ -34,7 +34,7 @@ Rules to open an issue :
 
 ## Motivating scenarios (or stories?)
 
-(Inspired from https://github.com/polifonia-project/stories )
+
 
 A motivating scenario is a small story problem that provides a short description and a set of informal and intuitive examples to the problem it talks about. Usually, it implicitly bring with it an informal and intended semantics hidden behind natural language descriptions. [Source: SAMOD]
 
@@ -127,8 +127,10 @@ https://mozillascience.github.io/working-open-workshop/contributing/
 
 https://opensource.guide/fr/starting-a-project/
 
-SAMOD methodology [REF]
+SAMOD methodology [REF](https://essepuntato.it/samod/)
 
+
+[Polifonia project](https://github.com/polifonia-project/stories)
 
 Examples of contributing files :
 
