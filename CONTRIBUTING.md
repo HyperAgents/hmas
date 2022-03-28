@@ -123,28 +123,30 @@ Actually in our case, a motivating scenario is characterized by :
 
 This document is inspired from : 
 
-https://mozillascience.github.io/working-open-workshop/contributing/ 
+* https://mozillascience.github.io/working-open-workshop/contributing/ 
 
-https://opensource.guide/fr/starting-a-project/
-
-SAMOD methodology [REF](https://essepuntato.it/samod/)
+* https://opensource.guide/fr/starting-a-project/
 
 
-[Polifonia project](https://github.com/polifonia-project/stories)
+Applied methodologies :
+
+* [SAMOD methodology](https://essepuntato.it/samod/)
+
+* [Polifonia project](https://github.com/polifonia-project/stories)
 
 Examples of contributing files :
 
-https://github.com/atom/atom/blob/master/CONTRIBUTING.md
+* https://github.com/atom/atom/blob/master/CONTRIBUTING.md
 
-https://github.com/rails/rails/blob/main/CONTRIBUTING.md
+* https://github.com/rails/rails/blob/main/CONTRIBUTING.md
 
-https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
+* https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
 
 
 ## TODOs
 > Ideas/questions for the contributing doc to add : 
 * propose a standard name for title of issues / PR / for classes and properties ? How to name a new class / property ?  => Open A new issue about e.g. considering a new CamelCase notation for classes/properties ??
-* the PR is usefull to make a vote and decide if we merge : say it !
+* the PR is usefull to make a vote and decide if we merge (need to be explicitly precised)
 * talk about how to decide if a set of PR is considered as a new version : it is when all the stories features has been addressed and accepted.
 * how motivating scenario must be documented somewhere and how ontologies links to these motivating scenarios  
 * the structure of this file should be : each step of the contributing process is explained by the plan section/subsections ?
