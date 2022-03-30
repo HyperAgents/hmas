@@ -69,6 +69,14 @@ List of the latest versions :
   affiliation : [EMSE](https://mines-stetienne.fr) .
 
 
+* [Danai Vachtsevanou](https://danaivach.inrupt.net/profile/card#me)
+
+  email : danai.vachtsevanou@unisg.ch ;
+  
+  affiliation : [UNISG](https://www.unisg.ch/en) .
+
+
+
 ## V - Licence
 
 
