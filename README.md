@@ -33,47 +33,47 @@ List of the latest versions :
 
 * [Fabien Gandon](http://fabien.info/)
 
-  email : fabien.gandon@inria.fr ;
+  email : fabien.gandon@inria.fr 
   
-  affiliation : [INRIA](https://inria.fr/) .
+  affiliation : [INRIA](https://inria.fr/) 
 
 
 
 * [Chistopher Leturc](https://emse.fr/~leturc/) 
 
-  email : christopher.leturc@inria.fr" ;
+  email : christopher.leturc@inria.fr" 
   
-  affiliation :  [INRIA](https://inria.fr/) .
+  affiliation :  [INRIA](https://inria.fr/) 
 
 
 * [Maxime Lefrançois](http://maxime-lefrancois.info/me#) 
  
-  email : maxime.lefrancois@emse.fr ;
+  email : maxime.lefrancois@emse.fr 
   
-  affiliation : [EMSE](https://www.mines-stetienne.fr/) .
+  affiliation : [EMSE](https://www.mines-stetienne.fr/) 
 
 
 * [Andrei Ciortea](http://iri.for/andrei) 
 
-  email : andrei.ciortea@unisg.ch ;
+  email : andrei.ciortea@unisg.ch 
   
-  affiliation : [UNISG](https://www.unisg.ch/en)  .
+  affiliation : [UNISG](https://www.unisg.ch/en)  
 
 
 
 
-* [Olivier Boissier](https://www.emse.fr/~boissier/) ;
+* [Olivier Boissier](https://www.emse.fr/~boissier/) 
 
-  email : "olivier.boissier@emse.fr" ;
+  email : "olivier.boissier@emse.fr" 
   
-  affiliation : [EMSE](https://mines-stetienne.fr) .
+  affiliation : [EMSE](https://mines-stetienne.fr) 
 
 
 * [Danai Vachtsevanou](https://danaivach.inrupt.net/profile/card#me)
 
-  email : danai.vachtsevanou@unisg.ch ;
+  email : danai.vachtsevanou@unisg.ch 
   
-  affiliation : [UNISG](https://www.unisg.ch/en) .
+  affiliation : [UNISG](https://www.unisg.ch/en) 
 
 
 
