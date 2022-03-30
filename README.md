@@ -61,7 +61,7 @@ List of the latest versions :
 
 
 
-*  [Danai Vachtsevanou](https://danaivach.inrupt.net/profile/card#me) 
+*  [Danai Vachtsevanou](https://danaivach.inrupt.net/profile/card#me)
 
   email : danai.vachtsevanou@unisg.ch ;
   
