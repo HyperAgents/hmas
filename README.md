@@ -88,8 +88,11 @@ We thank INRIA/UNISG/EMSE for supporting and hosting this project.
 ## Ideas for the README
 
 Section :  Getting started ?
+
 Subsection: Prerequisites ?
+
 Subsection : Installing the project and dependencies ?
+
 Subsection : Running the project ?
 
 
