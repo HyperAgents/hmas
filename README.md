@@ -2,20 +2,30 @@
 
 
 ## I - General information
-This git repository contains the methodology and results of the ontology modelling activity of the HyperAgent project
+This git repository contains the methodology and results of the ontology modelling activity of the [HyperAgent project](https://www.hyperagents.org/).
 
 The root of the repository contains three introductory files respectively describing the code of conduct, the process for contributing and the method followed for designing this ontology.
 
+## II - Guide and standardistaiion
+
+### 1) How to use the ontology
+
+The file [current ontology](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/MODELING-ONTOLOGIES.md) describes :
+* the different features of the project
+* how to use in practice the ontology
+
+
+### 2) How to contribute to HyperAgent
+
+If you want to contribute, please follow the [contributing file](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/CONTRIBUTING.md).
+
+
+## III - Versions
 
 
 
-## II - How to use the ontology
-
-A file describes how to use the [current ontology](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/MODELING-ONTOLOGIES.md).
-
-## III - How to contribute to HyperAgent
-
-Please follow the [contributing file](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/CONTRIBUTING.md)
+List of the latest versions : 
+* V1 - (15/04/22) - [Core ontology]() 
 
 
 ## IV - Authors
@@ -68,9 +78,21 @@ Please follow the [contributing file](https://github.com/HyperAgents/ns.hyperage
 ## V - Licence
 
 
+## Acknowledgments
+
+We thank INRIA/UNISG/EMSE for supporting and hosting this project.
 
 
-## VI - References
+## Ideas for the README
+
+Section :  Getting started ?
+Subsection: Prerequisites ?
+Subsection : Installing the project and dependencies ?
+Subsection : Running the project ?
+
+
+
+## References
 
 
 * https://2associes.com/readme-sa-structure-et-son-contenu/
