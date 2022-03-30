@@ -61,12 +61,6 @@ List of the latest versions :
 
 
 
-*  [Danai Vachtsevanou](https://danaivach.inrupt.net/profile/card#me)
-
-  email : danai.vachtsevanou@unisg.ch ;
-  
-  affiliation : [UNISG](https://www.unisg.ch/en) .
-
 
 * [Olivier Boissier](https://www.emse.fr/~boissier/) ;
 
