@@ -267,5 +267,5 @@
             rdfs:domain :Hostable ;
             rdfs:range :HypermediaMASPlatform ;
             rdfs:comment "A relations that refers to the platform that hosts the resource. "@en ;
-            rdfs:label "is hosted by"@en .
+            rdfs:label "is hosted on"@en .
 
