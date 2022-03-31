@@ -92,7 +92,8 @@
         rdfs:subClassOf :Hostable .
 
 :Artifact a owl:Class ;
-        rdfs:comment "A resource that agents can use."@en ;
+        rdfs:comment "A resource that can be dynamically constructed, shared and used by agents to support their working activities and can be accessed via a hypermedia."@en ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/38> ;
         rdfs:label "Artifact"@en, "Artefact"@fr ;
         rdfs:subClassOf :Hostable .
 
