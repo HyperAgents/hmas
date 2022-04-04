@@ -40,9 +40,9 @@ Please follow the code of conduct : [here](https://github.com/HyperAgents/ns.hyp
 
 
 
-A motivating scenario is a small story problem that provides a short description and a set of informal and intuitive examples to the problem it talks about. Usually, it implicitly bring with it an informal and intended semantics hidden behind natural language descriptions. [Source: SAMOD]
+A motivating scenario is a small story problem that provides a short description and a set of informal and intuitive examples to the problem it talks about. Usually, it implicitly brings with it an informal and intended semantics hidden behind natural language descriptions. [Source: SAMOD]
 
-This is a shared common space to share stories for the HyperAgents project. A story is a template for collecting requirements.
+This is a shared common space how to share stories for the HyperAgents project. A story is a template for collecting requirements.
 
 ### A) A story is composed of:
 
