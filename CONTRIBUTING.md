@@ -153,9 +153,8 @@ Examples of contributing files :
 * the PR is usefull to make a vote and decide if we merge (need to be explicitly precised)
 * talk about how to decide if a set of PR is considered as a new version : it is when all the stories features has been addressed and accepted.
 * how motivating scenario must be documented somewhere and how ontologies links to these motivating scenarios  
-* the structure of this file should be : each step of the contributing process is explained by the plan section/subsections ?
-* separate code of conduct from the contributing file ? 
 * add in PR process when we close the issue i.e. when it seems there is a consensus and capture the consensus and rationale in the ontology itself 
+* the milestone is the limit DEADLINE for waiting for approval in PRs !!
 * add in the PR process that you must keep a record summarizing the reflections in your PR by making a link toward the issue that is related and how to do that.
 * take from polifonia the methodology to create a new story ?? 
 * considering specifical files that refers all stories 
