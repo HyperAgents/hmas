@@ -88,7 +88,7 @@ There is one folder for each Agent, named with the name of the Agent and their p
 
 
 
-Actually in our case, a motivating scenario is characterized by :
+Actually in our case, a motivating scenario is characterized by : (SHOULD BE DISCUSS WITH THE TEAM!)
 * name: e.g. robot unpacking in a workshop # characterises the motivating scenario
 * description: natural language description that presents a problem to address
   Some description of the motivating scenario
