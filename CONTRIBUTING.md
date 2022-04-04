@@ -23,9 +23,9 @@ When contributing to this repository, please first discuss the change you wish t
 ## III - Open an issue
 
 Rules to open an issue : 
-   * be sure that the issue has not been opened/closed before ;
-   * do not use an existing issue to talk about another issues that should be opened ;
-   * if the issue has been addressed and is closed, maybe it needs to be re-opened (how to do that ?) ;
+   * be sure that the issue has not been opened/closed before;
+   * do not use an existing issue to talk about another issues that should be opened;
+   * if the issue has been addressed and is closed, maybe it needs to be re-opened;
    * the issue title should be specific and should address only one single issue? 
    * the title structure of issues is ... ?
    e.g.  Create/Update/Delete/UseAPropertyFrom/ProblemWith ClassName/Property/Definition / General question ? / Bug : ... / ???
