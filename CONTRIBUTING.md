@@ -13,9 +13,9 @@ In particular we explain the how to:
 ## II - General rules for contributing
 Be explicit and synthetic about the contribution you want to make to the project.
 When contributing to this repository, please first discuss the change you wish to make :
-1. by opening an issue before by following the rules how to open an issue (cf. Section~III); 
+1. by opening an issue before and by following the rules on how to open an issue (cf. Section~III); 
 2. discuss the problem with the different contributors by following the code of conduct (cf. Section~IV);
-3. if a new feature is needed to the project, then create a new story by following the methodology  (cf. Section~V);
+3. if a new feature is to be created as a result, then make sure there is a story/scenario for that and follow the methodology  (cf. Section~V);
 4. do a pull request and wait for approval by following the pull request process (cf. Section~VI).
 
 
@@ -24,38 +24,39 @@ When contributing to this repository, please first discuss the change you wish t
 
 Rules to open an issue : 
    * be sure that the issue has not been opened/closed before;
-   * do not use an existing issue to talk about another issues that should be opened;
+   * do not use an existing issue to talk about another issue that should be opened;
    * if the issue has been addressed and is closed, maybe it needs to be re-opened;
-   * the issue title should be specific and should address only one single issue? 
-   * the title structure of issues is ... ?
-   e.g.  Create/Update/Delete/UseAPropertyFrom/ProblemWith ClassName/Property/Definition / General question ? / Bug : ... / ???
+   * the issue title should be specific and should address only one single issue; 
+   * the title structure of issues should make clear the problem and/or action to be discussed e.g.  Create/Update/Delete/...; Problem of formalization/defintion/... with Class/Property/... ;
 
 
 ## IV - Code of conduct
 
-Please follow the code of conduct : [here](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/CODE-OF-CONDUCT.md).
+Please follow the [code of conduct](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/CODE-OF-CONDUCT.md).
 
 
-## V - Motivating scenarios (or stories?)
-
+## V - Motivating scenarios / Stories
 
 
 A motivating scenario is a small story problem that provides a short description and a set of informal and intuitive examples to the problem it talks about. Usually, it implicitly brings with it an informal and intended semantics hidden behind natural language descriptions. [Source: SAMOD]
 
 This is a shared common space how to share stories for the HyperAgents project. A story is a template for collecting requirements.
 
-### A) A story is composed of:
+### A) A template for scenarios can include the following check list based on [Source: Scenario Template]:
 
     Agent
-        It is a research-based description of a typical user.
-        It contains attributes such as name, age, occupation (if the persona has more than one role, indicate which one is their primary role and which one(s) the secondary role(s)), and relevant characteristics of the person such as their knowledge and skills and their interests.
+        It is a research-based description of a typical user, stakeholder or software agent.
+        It contains attributes such as name, age, roles, and relevant characteristics of the person such as their knowledge, skills or interests. 
      Goal
-        It is a short textual description of the goal(s) that the persona needs to be addressed in the story.
-        maximum number of characters: 1200
+        It is a short textual description of the goal(s) that the agent to be addressed in the story. (maximum number of characters: 1200)
         The goal(s) is(are) also represented by a short (maximum 5) list of keywords.
     Scenario
-        It is a story describing how the persona's task/need/problem is solved before, during and after interaction with the resource/software/service being developed.
-        maximum number of characters: 1200
+        It is a story describing how the agent's task/need/problem is solved before, during and after interaction with the resource/software/service being developed. (maximum number of characters: 1200)
+    Resources
+        What is required in terms of resources (nature, services constrainst) for the agents to achieve their goals.
+    Flows
+        The imputs, outputs and flows of resources happening
+    Environment
     Competency questions (CQs)
         Question(s) the persona needs the resource/software/service to answer for satisfying their task/need/problem.
     Resources (optional)
@@ -132,7 +133,9 @@ This document is inspired from :
 * https://opensource.guide/fr/starting-a-project/
 
 
-Applied methodologies :
+Methodologies :
+
+* [Scenario Template](https://tel.archives-ouvertes.fr/tel-00378201) in Fabien Gandon. Distributed Artificial Intelligence And Knowledge Management: Ontologies And Multi-Agent Systems For A Corporate Semantic Web. Web. Université Nice Sophia Antipolis, 2002.
 
 * [SAMOD methodology](https://essepuntato.it/samod/)
 
