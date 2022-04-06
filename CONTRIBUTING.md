@@ -150,6 +150,20 @@ Examples of contributing files :
 * https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
 
 
+
+eXtreme Design ontology modelling methodology, using Github Actions:
+
+*    https://fiorelaciroku.github.io/XD-Testing/
+*    https://github.com/FiorelaCiroku/XD-Testing
+
+ROH: Hercules Network of Ontologies
+
+*    https://github.com/HerculesCRUE/ROH
+*    https://herculescrue.github.io/ROH/
+*    https://herculescrue.github.io/ROH/roh/
+
+
+
 ## VIII - TODOs
 > Ideas/questions for the contributing doc to add : 
 * propose a standard name for title of issues / PR / for classes and properties ? How to name a new class / property ?  => Open A new issue about e.g. considering a new CamelCase notation for classes/properties ??
@@ -163,6 +177,10 @@ Examples of contributing files :
 * considering specifical files that refers all stories 
 * should we consider a set of people with roles and stories in our approach ? here we would call this set : set of agents.
 * Create an explicit file CODE-OF-CONDUCT.md (cf. https://opensource.guide/fr/code-of-conduct/)   where we present the behaviour we expect from the community and where we present the use of the different classes/properties e.g. put in this file the section #good-practices (because it shouldn't be in the contributing file : ) ??
+
+
+
+
 
 
 
