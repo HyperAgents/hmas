@@ -162,7 +162,9 @@ ROH: Hercules Network of Ontologies
 *    https://herculescrue.github.io/ROH/
 *    https://herculescrue.github.io/ROH/roh/
 
+git.io :
 
+* https://github.blog/2011-11-10-git-io-github-url-shortener/
 
 ## VIII - TODOs
 > Ideas/questions for the contributing doc to add : 
