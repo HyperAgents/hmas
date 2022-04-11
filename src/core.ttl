@@ -256,11 +256,11 @@
             rdfs:label "is described by"@en .
 
 
-:isHomeOf a owl:ObjectProperty, owl:AsymmetricProperty ;
-            rdfs:domain :Workspace ;
-            rdfs:range :Agent ;
-            rdfs:comment "The home workspace is the specific workspace where the agent spawned"@en ;
-            rdfs:label "is home of"@en .
+#:isHomeOf a owl:ObjectProperty, owl:AsymmetricProperty ;
+#            rdfs:domain :Workspace ;
+#            rdfs:range :Agent ;
+#            rdfs:comment "The home workspace is the specific workspace where the agent spawned"@en ;
+#            rdfs:label "is home of"@en .
 
 :isHostedOn a owl:ObjectProperty, owl:AsymmetricProperty ; 
             owl:inverseOf :hosts ;
