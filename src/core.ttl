@@ -259,13 +259,10 @@
             rdfs:comment "The home workspace is the specific workspace where the agent spawned"@en ;
             rdfs:label "is home of"@en .
 
-
-
-
-:isHostedBy a owl:ObjectProperty, owl:AsymmetricProperty ; 
+:isHostedOn a owl:ObjectProperty, owl:AsymmetricProperty ; 
             owl:inverseOf :hosts ;
             rdfs:domain :Hostable ;
             rdfs:range :HypermediaMASPlatform ;
             rdfs:comment "A relations that refers to the platform that hosts the resource. "@en ;
-            rdfs:label "is hosted by"@en .
+            rdfs:label "is hosted on"@en .
 
