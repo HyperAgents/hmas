@@ -167,7 +167,7 @@
 #################################################################
 
 
-:transitivelyContains a owl:TransitiveProperty ;
+:transitivelyContains a owl:ObjectProperty, owl:TransitiveProperty ;
           owl:inverseOf :isContainedIn ;
           rdfs:domain :Workspace ;
           rdfs:range rdfs:Resource ;
@@ -177,7 +177,7 @@
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> .
 
-:directlyContains a owl:AsymmetricProperty ;
+:directlyContains a owl:ObjectProperty, owl:AsymmetricProperty ;
           rdfs:subPropertyOf :transitivelyContains ;
           rdfs:comment "A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container."@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/18#issuecomment-1040448029> ;
@@ -227,7 +227,7 @@
 
 
 
-:hosts a owl:AsymmetricProperty ;
+:hosts a owl:ObjectProperty, owl:AsymmetricProperty ;
             rdfs:domain :HypermediaMASPlatform ;
             rdfs:range :Hostable ;
             rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
@@ -237,13 +237,13 @@
 
 
 
-:isContainedIn a owl:AsymmetricProperty ;
+:isContainedIn a owl:ObjectProperty, owl:AsymmetricProperty ;
             rdfs:range :Workspace ;
             rdfs:comment "A relation that describes the workspace that contains a resource."@en ;
             rdfs:label "is contained in"@en .
 
 
-:isDescribedBy a owl:AsymmetricProperty ;
+:isDescribedBy a owl:ObjectProperty, owl:AsymmetricProperty ;
             rdfs:range [ a owl:Class ;
                             owl:unionOf ( :ResourceProfile
                                           :Signifier
@@ -253,16 +253,13 @@
             rdfs:label "is described by"@en .
 
 
-:isHomeOf a owl:AsymmetricProperty ;
+:isHomeOf a owl:ObjectProperty, owl:AsymmetricProperty ;
             rdfs:domain :Workspace ;
             rdfs:range :Agent ;
             rdfs:comment "The home workspace is the specific workspace where the agent spawned"@en ;
             rdfs:label "is home of"@en .
 
-
-
-
-:isHostedOn a owl:AsymmetricProperty ; 
+:isHostedOn a owl:ObjectProperty, owl:AsymmetricProperty ; 
             owl:inverseOf :hosts ;
             rdfs:domain :Hostable ;
             rdfs:range :HypermediaMASPlatform ;
