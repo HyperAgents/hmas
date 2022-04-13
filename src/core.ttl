@@ -28,7 +28,7 @@
     dct:contributor <https://danaivach.inrupt.net/profile/card#me> ; 
     dct:contributor <https://www.linkedin.com/in/christopher-leturc/> ; 
     dct:contributor <https://www.emse.fr/~boissier/> ; 
-    dct:creator <http://iri.for/andrei> ;
+    dct:creator <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <#> .
@@ -61,7 +61,7 @@
   schema:name "MINES Saint-Étienne" ;
   schema:url <https://mines-stetienne.fr> .
 
-<http://iri.for/andrei> a schema:Person ;
+<https://pod.inrupt.com/andreiciortea/profile/card#me> a schema:Person ;
   schema:name "Andrei Ciortea" ;
   schema:email "andrei.ciortea@unisg.ch" ;
   schema:affiliation <https://www.unisg.ch/en>  .
