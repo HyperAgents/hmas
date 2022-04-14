@@ -28,7 +28,7 @@
     dct:contributor <https://danaivach.inrupt.net/profile/card#me> ; 
     dct:contributor <https://www.linkedin.com/in/christopher-leturc/> ; 
     dct:contributor <https://www.emse.fr/~boissier/> ; 
-    dct:creator <http://iri.for/andrei> ;
+    dct:creator <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
     dct:license <http://creativecommons.org/licenses/by/3.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <#> .
@@ -61,7 +61,7 @@
   schema:name "MINES Saint-Étienne" ;
   schema:url <https://mines-stetienne.fr> .
 
-<http://iri.for/andrei> a schema:Person ;
+<https://pod.inrupt.com/andreiciortea/profile/card#me> a schema:Person ;
   schema:name "Andrei Ciortea" ;
   schema:email "andrei.ciortea@unisg.ch" ;
   schema:affiliation <https://www.unisg.ch/en>  .
@@ -92,7 +92,8 @@
         rdfs:subClassOf :Hostable .
 
 :Artifact a owl:Class ;
-        rdfs:comment "A resource (or tool) that exposes affordances to agents. Agents use artifacts to achieve their design objectives."@en ;
+        rdfs:comment "A resource that can be dynamically constructed, shared, and used by agents to support their activities. In a Hypermedia MAS, an artifact exposes and can be accessed through a hypermedia interface (in addition to other possible interfaces, such as a physical interface)."@en ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/38> ;
         rdfs:label "Artifact"@en, "Artefact"@fr ;
         rdfs:subClassOf :Hostable .
 
@@ -136,6 +137,7 @@
         skos:note ":Signifier would fit as a superclass of td:InteractionAffordance and fipa:ServiceDescription"@en ;
         skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491> ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/41> ;
         rdfs:subClassOf :Hostable .
 
 
@@ -167,7 +169,7 @@
 #################################################################
 
 
-:transitivelyContains a owl:TransitiveProperty ;
+:transitivelyContains a owl:ObjectProperty, owl:TransitiveProperty ;
           owl:inverseOf :isContainedIn ;
           rdfs:domain :Workspace ;
           rdfs:range rdfs:Resource ;
@@ -177,7 +179,7 @@
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> .
 
-:directlyContains a owl:AsymmetricProperty ;
+:directlyContains a owl:ObjectProperty, owl:AsymmetricProperty ;
           rdfs:subPropertyOf :transitivelyContains ;
           rdfs:comment "A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container."@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/18#issuecomment-1040448029> ;
@@ -220,30 +222,31 @@
 :exposesSignifier a owl:ObjectProperty ;
             rdfs:domain :ResourceProfile ;
             rdfs:range :Signifier ;
-            rdfs:comment "A relation between a resource profile and a signifier describing an affordance associated to the resource."@en ;
+            rdfs:comment "A relation between a resource profile and a signifier it exposes."@en ; 
             rdfs:label "exposes signifier"@en ;
             dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
             rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> .
 
 
 
-:hosts a owl:AsymmetricProperty ;
+:hosts a owl:ObjectProperty, owl:AsymmetricProperty ;
             rdfs:domain :HypermediaMASPlatform ;
             rdfs:range :Hostable ;
             rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
             rdfs:label "hosts"@en ;
             dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
-            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> .
+            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
+            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .
 
 
 
-:isContainedIn a owl:AsymmetricProperty ;
+:isContainedIn a owl:ObjectProperty, owl:AsymmetricProperty ;
             rdfs:range :Workspace ;
             rdfs:comment "A relation that describes the workspace that contains a resource."@en ;
             rdfs:label "is contained in"@en .
 
 
-:isDescribedBy a owl:AsymmetricProperty ;
+:isDescribedBy a owl:ObjectProperty, owl:AsymmetricProperty ;
             rdfs:range [ a owl:Class ;
                             owl:unionOf ( :ResourceProfile
                                           :Signifier
@@ -253,19 +256,16 @@
             rdfs:label "is described by"@en .
 
 
-:isHomeOf a owl:AsymmetricProperty ;
-            rdfs:domain :Workspace ;
-            rdfs:range :Agent ;
-            rdfs:comment "The home workspace is the specific workspace where the agent spawned"@en ;
-            rdfs:label "is home of"@en .
+#:isHomeOf a owl:ObjectProperty, owl:AsymmetricProperty ;
+#            rdfs:domain :Workspace ;
+#            rdfs:range :Agent ;
+#            rdfs:comment "The home workspace is the specific workspace where the agent spawned"@en ;
+#            rdfs:label "is home of"@en .
 
-
-
-
-:isHostedBy a owl:AsymmetricProperty ; 
+:isHostedOn a owl:ObjectProperty, owl:AsymmetricProperty ; 
             owl:inverseOf :hosts ;
             rdfs:domain :Hostable ;
             rdfs:range :HypermediaMASPlatform ;
             rdfs:comment "A relations that refers to the platform that hosts the resource. "@en ;
-            rdfs:label "is hosted by"@en .
+            rdfs:label "is hosted on"@en .
 
