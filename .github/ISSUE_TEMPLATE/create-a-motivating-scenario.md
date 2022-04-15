@@ -3,7 +3,7 @@ name: Create a motivating scenario
 about: When a new motivating scenario should be created
 title: "[CREATE MOTIVATING SCENARIO] ** Precise the name of your motivating scenario
   (SHOULDN'T BE CHANGED IN THE FUTURE) **"
-labels: ''
+labels: documentation, enhancement, motivating scenario
 assignees: ''
 
 ---
@@ -28,3 +28,7 @@ Please give the glossary of new terms you would like to integrate into the ontol
 
 ### **Formal description** 
 Please give the formal SPARQL request
+
+
+### **Link to query the related issues** 
+Please use the search box to generate a link to the list of related issues https://github.com/HyperAgents/ns.hyperagents.org/issues
