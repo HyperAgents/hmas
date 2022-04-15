@@ -103,8 +103,7 @@
         skos:example "an agent, an artefact, other MAS platforms, workspaces, resource profiles, signifiers, organizations, can be hosted on a MAS platform"@en ;
         rdfs:label "Hostable"@en, "Hébergeable"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/8> ;
-        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> ;
-        owl:disjointWith :NotHostable .
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
 
 
 
