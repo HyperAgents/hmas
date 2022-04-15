@@ -169,17 +169,18 @@
 
 
 :transitivelyContains a owl:ObjectProperty, owl:TransitiveProperty ;
-          owl:inverseOf :isContainedIn ;
+          owl:inverseOf :isTransitivelyContainedIn ;
           rdfs:domain :Workspace ;
           rdfs:range rdfs:Resource ;
-          rdfs:comment "A relation that refers to all logical containers in which a resource is contained. (Never instantiate this class)"@en ;
+          rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
           rdfs:label "transitivelyContains"@en ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> .
 
-:directlyContains a owl:ObjectProperty, owl:AsymmetricProperty ;
+:contains a owl:ObjectProperty ;
           rdfs:subPropertyOf :transitivelyContains ;
+          owl:inverseOf :isContainedIn ;
           rdfs:comment "A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container."@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/18#issuecomment-1040448029> ;
           rdfs:label "directlyContains"@en .
@@ -235,9 +236,18 @@
 
 
 
-:isContainedIn a owl:ObjectProperty, owl:AsymmetricProperty ;
+:isTransitivelyContainedIn a owl:ObjectProperty, owl:TransitiveProperty ;
+            rdfs:domain rdfs:Resource ;
             rdfs:range :Workspace ;
-            rdfs:comment "A relation that describes the workspace that contains a resource."@en ;
+            owl:inverseOf :transitivelyContains ;
+            rdfs:comment "A relation that refers to all workspaces in which a resource is contained. "@en ;
+            rdfs:label "is transitively contained in"@en .
+
+
+:isContainedIn a owl:ObjectProperty ;
+            rdfs:subPropertyOf :isTransitivelyContainedIn ;
+            owl:inverseOf :contains ;
+            rdfs:comment "A relation that describes a workspace that contains a resource."@en ;
             rdfs:label "is contained in"@en .
 
 
