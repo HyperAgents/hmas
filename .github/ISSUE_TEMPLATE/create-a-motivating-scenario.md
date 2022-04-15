@@ -1,8 +1,8 @@
 ---
 name: Create a motivating scenario
-about: Create a new motivating scenario
-title: "[CREATE MOTIVATING SCENARIO] ** Precise the features covered by your motivating
-  scenario **"
+about: When a new motivating scenario should be created
+title: "[CREATE MOTIVATING SCENARIO] ** Precise the name of your motivating scenario
+  (SHOULDN'T BE CHANGED IN THE FUTURE) **"
 labels: ''
 assignees: ''
 
