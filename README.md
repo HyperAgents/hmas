@@ -1,5 +1,6 @@
 # Hyperagent ontology git space
 
+![view of the ontology](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/resources/hmas-webvowl.jpg)
 
 ## I - General information
 This git repository contains the methodology and results of the ontology modelling activity of the [HyperAgent project](https://www.hyperagents.org/).
