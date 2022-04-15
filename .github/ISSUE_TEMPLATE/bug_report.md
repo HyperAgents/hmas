@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: bug, enhancement, methodology
+labels: bug, enhancement, methodology, ontology, question
 assignees: ''
 
 ---
