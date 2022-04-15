@@ -34,7 +34,8 @@ John's wife Ann, comes to know that such pills are dangerous. She then removes a
 
 
 
-
+# Related issues
+https://github.com/HyperAgents/ns.hyperagents.org/issues?q=in%3Abody+%22scenarios%2Fdisinformation.md%22
 
 
 # References 
