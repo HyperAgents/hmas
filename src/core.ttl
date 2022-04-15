@@ -185,18 +185,14 @@
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/18#issuecomment-1040448029> ;
           rdfs:label "directlyContains"@en .
 
-:describes a owl:ObjectProperty ;
-           owl:inverseOf :isDescribedBy ;
-           rdfs:domain [ a owl:Class ;
-                         owl:unionOf ( :ResourceProfile
-                                       :Signifier
-                                     )
-                       ] ;
-           rdfs:comment "A relation that describes all signifiers associated to a resource profile."@en ;
+:isProfileOf a owl:ObjectProperty ;
+           owl:inverseOf :hasProfile ;
+           rdfs:domain :ResourceProfile ;
+           rdfs:comment "A relation that links a resource profile to the resource it is a profile of."@en ;
            skos:example ""@en ;
            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> ; 
            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/26> ;
-           rdfs:label "describes"@en .
+           rdfs:label "is profile of"@en .
 
 
 
@@ -246,14 +242,11 @@
             rdfs:label "is contained in"@en .
 
 
-:isDescribedBy a owl:ObjectProperty, owl:AsymmetricProperty ;
-            rdfs:range [ a owl:Class ;
-                            owl:unionOf ( :ResourceProfile
-                                          :Signifier
-                                        )
-                          ] ;
-            rdfs:comment "A relation which maps the resource profiles and signifiers associated to a resource."@en ;
-            rdfs:label "is described by"@en .
+:hasProfile a owl:ObjectProperty, owl:AsymmetricProperty ;
+            rdfs:range :ResourceProfile ;
+            owl:inverseOf :isProfileOf ;
+            rdfs:comment "A relation that links a resource to its profile."@en ;
+            rdfs:label "has profile"@en .
 
 
 #:isHomeOf a owl:ObjectProperty, owl:AsymmetricProperty ;
