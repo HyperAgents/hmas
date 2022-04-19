@@ -1,7 +1,7 @@
 ---
 name: Delete a motivating scenario
 about: When a motivating scenario should be removed
-title: ''
+title: "[DELETE] Name of the motivating scenario"
 labels: ''
 assignees: ''
 
