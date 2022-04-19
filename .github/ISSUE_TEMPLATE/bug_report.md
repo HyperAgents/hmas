@@ -2,7 +2,8 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: bug, enhancement, methodology, ontology, question
+labels: bug, documentation, enhancement, methodology, motivating scenario, ontology,
+  question
 assignees: ''
 
 ---
