@@ -8,6 +8,10 @@ assignees: ''
 
 ---
 
-** ID of the corresponding modified motivating scenario **
+**List of the modifications you wish to apply in this update :**
+* ** Change title and short explanation  **
+* ** Modify short description and short explanation **
+* ...
 
-** COPY AND PASTE THE CORRESPONDING MOTIVATED SCENARIO **
+
+** COPY AND PASTE THE CORRESPONDING MOTIVATED SCENARIO WITH YOUR MODIFICATIONS **
