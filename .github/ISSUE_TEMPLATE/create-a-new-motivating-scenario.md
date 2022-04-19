@@ -9,27 +9,28 @@ assignees: ''
 
 # **Title of your new motivating scenario**
 
-
 ** Short introduction to present the context and the problem that the motivating scenario is going to solve **
+
 
 ## **A short description**
 
 ** Give a short description of the covered features as a little story ? **
+
 
 ## **Covered features** 
 
 The list of covered features : 
 * ** Complete the list of covered features **
 
+
 ## **A set of examples**
 
 ** The list of examples show concrete use cases **
 
+
 ### The name of the use case
 
 ** Your informal use case **
-
-
 
 
 ## **A glossary of new terms**
@@ -55,6 +56,7 @@ depends_on: []
 
 (...)
 
+
 ## **Formal description** 
 
 ** Please give the formal SPARQL request **
@@ -65,6 +67,7 @@ query: |-
  ** Example : SELECT ?workspace ?agent WHERE { ?workspace hmas:hosts ?agent } **
 output: ** Result :  { (<w>,<a>) s.t.<w> hmas:hosts <a>  }  **
 ```
+
 
 ### **Link to query the related issues** 
 ** Please use the search box to generate a link to the list of related issues.
