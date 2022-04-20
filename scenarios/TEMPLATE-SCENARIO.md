@@ -59,6 +59,7 @@ query: |-
 output: ** Result :  { (<w>,<a>) s.t.<w> hmas:hosts <a>  }  **
 ```
 
+** Please give an example of expected result (JSON format) **
 
 ### **Link to query the related issues** 
 ** Please use the search box to generate a link to the list of related issues.
