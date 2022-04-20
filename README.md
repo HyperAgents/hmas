@@ -42,7 +42,7 @@ List of the latest versions :
 
 * [Chistopher Leturc](https://emse.fr/~leturc/) 
 
-  email : christopher.leturc@inria.fr" 
+  email : christopher.leturc@inria.fr
   
   affiliation :  [INRIA](https://inria.fr/) 
 
