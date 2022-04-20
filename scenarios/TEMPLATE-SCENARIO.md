@@ -64,4 +64,4 @@ output: ** Result :  { (<w>,<a>) s.t.<w> hmas:hosts <a>  }  **
 ** Please use the search box to generate a link to the list of related issues.
 Replace the following text by : (1) name of the scenario file that will be created and (2) the url to refer to related issues **
 
-[name-of-this-file](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=name-of-this-file)
+* https://github.com/HyperAgents/ns.hyperagents.org/issues?q=name-of-this-file.md
