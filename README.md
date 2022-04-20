@@ -26,7 +26,7 @@ If you want to contribute, please follow the [contributing file](https://github.
 
 
 List of the latest versions : 
-* V1 - (15/04/22) - [Core ontology]() 
+* V1 - (15/04/22) - [Core ontology](https://github.com/HyperAgents/ns.hyperagents.org/milestone/1?closed=1) 
 
 
 ## IV - Authors
