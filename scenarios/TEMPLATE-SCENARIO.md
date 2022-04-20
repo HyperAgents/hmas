@@ -1,4 +1,4 @@
-# **Title of your new motivating scenario**
+# **Title of the motivating scenario**
 
 ** Short introduction to present the context and the problem that the motivating scenario is going to solve **
 
