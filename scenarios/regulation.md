@@ -1,20 +1,25 @@
 
 # Regulation of agents and platforms
 
-## Quick definition of terms (cf. taxonomy proposed by Adnane)
+The existence of norms, and laws in society allow to facilitate interactions between people. In Multi-Agent Systems it allows to regulate bad interactions. This motivating scenario allows to bring in HypermediaMASPlatform a way for building norms and laws so that HyperAgents understand these rules for interacting with other agents. 
+
+## **A short description**
+
+Norms and laws are explicitely considered in a hMAS. Thus, one agent needs to understand these norms to know if it is allowed to perform or not an action but also must know the sanctions when they are violated.  In case of violations of norms, sanctions have to be applied.  
+
+## **Covered features** 
+
+This motivating scenario aims to allow HyperAgents to:
+* know the norms of the MAS ;
+* detect violation of a norm when it happens ;
+* know and apply sanctions .
 
 
-## Basic features : knowing norms, detecting violations and defining sanctions
+## **A set of examples**
 
-Agent/Platform must know if it is allowed to perform an action
+The following example present the features.
 
-description: 
-
-  Agents must know the norms associated with an environment (its workspace) in real time and the associated punishments (since norms may change and be violated).
-
-
-
-## 1) Feature : an agent must know the norms 
+### 1) Feature : know the norms 
 
     Fabiana Gordana (@j) needs high-dose aspirin (more than 500 mg per day) because she has a terrible headache since she got pregnant. 
     
@@ -52,7 +57,7 @@ description: 
 
 
 
-## 2) Feature : detecting violation of a rule
+### 2) Feature : detect violation of a rule
 
     Fabiana Gordana (@j) is browsing on the web page of UbarDrugSTORE.
     
@@ -81,7 +86,7 @@ description: 
 
 
 
-## 3) Feature : applying sanctions 
+### 3) Feature : apply sanctions 
 
     According to the law in France (Article R. 5125-74 of the Public Health Code), to distribute medicines, the UbarDrugSTORE platform must be on the list of pharmacy websites provided by the national order of pharmacists. (regulationOfInternetPlatforms)
     
@@ -94,3 +99,45 @@ description: 
     The High Health Authority has been notified of this fraud and decided to sanction UbarDrugStore for its negligence.
     
     The informed Ministry of Health ordered UbarDrugSTORE not to sell any more medicines until all suppliers on the platform had certified all information on their profile. 
+    
+    
+## **A glossary of new terms**
+
+List of new terms introduced by the motivating scenario :
+* law : ...
+* norm : ...
+* punishment : ...
+
+
+## **Competency questions**
+
+```
+identifier: 1
+question: ** Question  **
+outcome: ** The result of your question **
+exemplar_answers: 
+|- ** Example of answers **
+
+** name of file of the motivating scenario ; ** 
+  -  
+depends_on: [] 
+```
+
+## **Formal description** 
+
+** Please give the formal SPARQL request **
+
+```
+cq: ** identifier of the competency question it **
+query: |-
+ ** Example : SELECT ?workspace ?agent WHERE { ?workspace hmas:hosts ?agent } **
+output: ** Result :  { (<w>,<a>) s.t.<w> hmas:hosts <a>  }  **
+```
+
+
+### **Link to query the related issues** 
+
+* [regulation](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=regulation)
+
+
+
