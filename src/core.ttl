@@ -66,6 +66,11 @@
   schema:email "andrei.ciortea@unisg.ch" ;
   schema:affiliation <https://www.unisg.ch/en>  .
 
+<https://pod.inrupt.com/smnmyr/profile/card#me> a schema:Person ;
+  schema:name "Simon Mayer" ;
+  schema:email "simon.mayer@unisg.ch" ;
+  schema:affiliation <https://www.unisg.ch/en>  .
+
 <https://www.unisg.ch/en> 
   schema:name "University of St.Gallen" ; 
   schema:url <https://www.unisg.ch> .
