@@ -27,7 +27,8 @@
     dct:contributor <http://maxime-lefrancois.info/me#> ; 
     dct:contributor <https://danaivach.inrupt.net/profile/card#me> ; 
     dct:contributor <https://www.linkedin.com/in/christopher-leturc/> ; 
-    dct:contributor <https://www.emse.fr/~boissier/> ; 
+    dct:contributor <https://www.emse.fr/~boissier/> ;
+    dct:contributor <https://pod.inrupt.com/smnmyr/profile/card#me> ;
     dct:creator <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
