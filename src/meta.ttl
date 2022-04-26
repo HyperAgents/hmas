@@ -44,9 +44,13 @@
                 rdfs:range :MotivatingScenario ;
                 rdfs:label "has MS"@en .
 
-:answersTheICQ rdf:type owl:AnnotationProperty, owl:AsymmetricProperty ;
+:answersTheICQ rdf:type owl:AnnotationProperty ;
+                rdfs:domain :MotivatingScenario ;
                 rdfs:range :InformalCompetencyQuestion ;
                 rdfs:label "answers the ICQ"@en .
 
-
+:hasGlossary rdf:type owl:AnnotationProperty ;
+                rdfs:domain :MotivatingScenario ;
+                rdfs:range doco:Glossary;
+                rdfs:label "has a glossary"@en .
 
