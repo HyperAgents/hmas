@@ -2,25 +2,29 @@
 
 ## I - Objectives
 This document provides guidelines to contribute to an ontology via GIT. 
-In particular we explain the how to:
-   1) create good issues or pull requests during the ontology design;
-   3) link to external documentation, mailing lists, or a code of conduct ;
-   4) act with the community and behavioral expectations ;
-   5) how to create and link a new story.
+We adapted the [SAMOD](https://essepuntato.it/samod/) to the GIT usage.
+
+We explain here the how to:
+   * contribute to the ontology design ;
+   * create good issues or good pull requests ;
+   * create and link a new motivating scenario ;
+   * link to external documentation, mailing lists  ;
+   * act with the community and behavioral expectations .
 
 
 
 ## II - General rules for contributing
+
 Be explicit and synthetic about the contribution you want to make to the project.
 When contributing to this repository, please first discuss the change you wish to make :
-1. by opening an issue before and by following the rules on how to open an issue (cf. Section~III); 
-2. discuss the problem with the different contributors by following the code of conduct (cf. Section~IV);
-3. if a new feature is to be created as a result, then make sure there is a story/scenario for that and follow the methodology  (cf. Section~V);
-4. do a pull request and wait for approval by following the pull request process (cf. Section~VI).
+1. by opening an issue before and by following the rules on how to open an issue (cf. Section~II.1); 
+2. discuss the problem with the different contributors by following the code of conduct (cf. Section~II.2);
+3. if a new feature is to be created as a result, then make sure there is a story/scenario for that and follow the methodology  (cf. Section~II.3);
+4. do a pull request and wait for approval by following the pull request process (cf. Section~II.4).
 
 
 
-## III - Open an issue
+### II.1) Open an issue
 
 Rules to open an issue : 
    * be sure that the issue has not been opened/closed before;
@@ -30,19 +34,18 @@ Rules to open an issue :
    * the title structure of issues should make clear the problem and/or action to be discussed e.g.  Create/Update/Delete/...; Problem of formalization/defintion/... with Class/Property/... ;
 
 
-## IV - Code of conduct
+### II.2) Code of conduct
 
 Please follow the [code of conduct](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/CODE-OF-CONDUCT.md).
 
 
-## V - Motivating scenarios / Stories
-
+### II.3) Motivating scenarios
 
 A motivating scenario is a small story problem that provides a short description and a set of informal and intuitive examples to the problem it talks about. Usually, it implicitly brings with it an informal and intended semantics hidden behind natural language descriptions. [Source: SAMOD]
 
 This is a shared common space how to share stories for the HyperAgents project. A story is a template for collecting requirements.
 
-### A) A template for scenarios can include the following check list based on [Source: Scenario Template]:
+*A) A template for scenarios can include the following check list based on [Source: Scenario Template]:*
 
     Agent
         It is a research-based description of a typical user, stakeholder or software agent.
@@ -62,7 +65,7 @@ This is a shared common space how to share stories for the HyperAgents project. 
     Resources (optional)
         List of resources (with references/links) where it is expected or known that the persona can find what she's looking for.
 
-### B) How to create a story
+*B) How to create a story*
 
 There is one folder for each Agent, named with the name of the Agent and their primary occupation.
 
@@ -107,7 +110,7 @@ Actually in our case, a motivating scenario is characterized by : (SHOULD BE DIS
   2) Workshop: A room or building in which goods are manufactured or repaired.
 
 
-## VI - Pull Request Process
+### II.4) Pull Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
    build.
@@ -124,7 +127,7 @@ Actually in our case, a motivating scenario is characterized by : (SHOULD BE DIS
 
 
 
-## VII - References 
+## III - References 
 
 This document is inspired from : 
 
@@ -166,7 +169,7 @@ git.io :
 
 * https://github.blog/2011-11-10-git-io-github-url-shortener/
 
-## VIII - TODOs
+## IV - TODOs
 > Ideas/questions for the contributing doc to add : 
 * propose a standard name for title of issues / PR / for classes and properties ? How to name a new class / property ?  => Open A new issue about e.g. considering a new CamelCase notation for classes/properties ??
 * the PR is usefull to make a vote and decide if we merge (need to be explicitly precised)
