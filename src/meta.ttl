@@ -1,4 +1,4 @@
-@base <https://ci.mines-stetienne.fr/meta> .
+@base <https://purl.org/meta> .
 @prefix : <#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -9,35 +9,44 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix schema: <http://schema.org/>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix schema: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+#@prefix doco: <http://purl.org/spar/doco#> .
 
 <#> rdf:type owl:Ontology ;
-                                       owl:imports <https://ci.mines-stetienne.fr/hmas#> .
+                                       owl:imports <https://purl.org/meta#> .
 
-
-:Issue a owl:Class ;
-        skos:definition "An issue is a tracking tool that is integrated with your GitHub repository to track ideas, work, and bugs without leaving GitHub."@en ;
+:Issue a owl:Annotation ;
+        skos:definition "An Issue is a tracking tool that is integrated with your GitHub repository to track ideas, work, and bugs without leaving GitHub."@en ;
         rdfs:seeAlso <https://github.com/features/issues> ;
         rdfs:label "Issue"@en .
 
-:MotivatingScenario a owl:Class ;
-        skos:definition "A motivating scenario is a small story problem that provides a short description and a set of informal and intuitive examples to the problem it talks about."@en ;
+:MotivatingScenario a owl:Annotation ;
+        skos:definition "A Motivating Scenario (MS) is a small story problem that provides a short description and a set of informal and intuitive examples to the problem it talks about."@en ;
         rdfs:seeAlso <https://essepuntato.it/samod/> ;
         dcterms:source <http://dx.doi.org/10.1109/MIS.2002.999223> ;
         rdfs:label "MotivatingScenario"@en .
 
+:InformalCompetencyQuestion a owl:Annotation ;
+        skos:definition "An Informal Competency Question (ICQ) is a natural language question that represents an informal requirement within a particular domain."@en ;
+        dcterms:source <http://dx.doi.org/10.1109/MIS.2002.999223> ;
+        rdfs:label "InformalCompetencyQuestion"@en .
 
-:hasIssue rdf:type owl:ObjectProperty, owl:AsymmetricProperty ;
+[ a owl:AllDisjointClasses ;
+    owl:members ( :Issue :MotivatingScenario :InformalCompetencyQuestion ) ] . 
+
+:hasIssue rdf:type owl:AnnotationProperty, owl:AsymmetricProperty ;
                 rdfs:range :Issue ;
                 rdfs:label "has issue"@en .
 
-:hasMotivatingScenario rdf:type owl:ObjectProperty, owl:AsymmetricProperty ;
+:hasMS rdf:type owl:AnnotationProperty, owl:AsymmetricProperty ;
                 rdfs:range :MotivatingScenario ;
-                rdfs:label "has motivating scenario"@en .
+                rdfs:label "has MS"@en .
 
-
+:answersTheICQ rdf:type owl:AnnotationProperty, owl:AsymmetricProperty ;
+                rdfs:range :InformalCompetencyQuestion ;
+                rdfs:label "answers the ICQ"@en .
 
 
 
