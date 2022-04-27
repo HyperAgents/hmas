@@ -1,8 +1,19 @@
 # Contributing to an ontology on GIT
 
-## I - Objectives
 This document provides guidelines to contribute to an ontology via GIT. 
 We adapted the [SAMOD](https://essepuntato.it/samod/) to the GIT usage.
+
+* Section~I presents the objectives of this document
+* Section~II presents the rules for contributing e.g. 
+* * Section~II.1 presents how to open an issue
+* * Section~II.2 presents the code of conduct
+* * Section~II.3 presents the motivating scenario
+* * Section~II.4 presents the Pull Request Process
+* Section~III presents the references
+* Section~IV the ToDOList for the contributing file
+
+## I - Objectives
+
 
 We explain here the how to:
    * contribute to the ontology design ;
