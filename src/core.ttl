@@ -16,6 +16,10 @@
 
 #################################################################
 #    Ontology Description
+#
+# OWL_PROFILE = OWL_2_RL (https://www.w3.org/TR/owl2-profiles/#OWL_2_RL)
+# Verified in https://github.com/HyperAgents/ns.hyperagents.org/issues/84
+#
 #################################################################
 
 <#> a owl:Ontology ;
