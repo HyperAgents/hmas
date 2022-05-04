@@ -40,6 +40,13 @@
   schema:name "University of St.Gallen" ;
   schema:url <https://www.unisg.ch> .
 
+<https://orcid.org/0000-0002-4506-2745> a schema:Person ;
+  schema:name "Luis Gustavo Nardin" ;
+  schema:email "luisgustavo.nardin@emse.fr" ;
+  schema:url <http://gnardin.github.io/website/> ;
+  schema:identifier <https://orcid.org/0000-0002-4506-2745> ;
+  schema:affiliation <https://www.mines-stetienne.fr/> .
+
 #################################################################
 #    Classes
 #################################################################

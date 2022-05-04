@@ -11,7 +11,8 @@ Organizations can be structured using multiple levels of authority and a vertica
 
 | ID | Question in natural language |
 |---|---|
-| q1 | TODO |
+| q1 | What are the available organizations? |
+| q2 | What are the organizations relationship? |
 
 ## Glossary
 

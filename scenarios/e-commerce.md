@@ -7,13 +7,13 @@ The existence of norms, and laws in society allow to facilitate interactions bet
 
 ### Feature: [Know the norms](./../tests/know-the-norms/feature.md)
 
-Fabiana Gordana (@j) needs high-dose aspirin (more than 500 mg per day) because she has a terrible headache since she got pregnant.
+Fabiana Gordana (@...) needs high-dose aspirin (more than 500 mg per day) because she has a terrible headache since she got pregnant.
 
 She connects to an online platform for medical products (UbarDrugSTORE) because she really doesn't have the strength to go into town.
 
 Furthermore, she needs the drugs as soon as possible. UbarMedicament provides a home delivery service with a medical emergency option.
 
-She logs in to the site with her login and password. 
+She logs in to the site with her login and password.
 
 She sees the site interface and goes to the products for sale tab and the non-morphine analgesics category.
 
@@ -72,7 +72,7 @@ According to the law in France (Article R. 5125-74 of the Public Health Code), t
 
 Each supplier of UbarDrugSTORE must be either : a pharmacist established in France who is holder of a pharmacy, a pharmacist managing a mutualist pharmacy or an emergency mining pharmacy.
 
-However the supplier that provided drugs to Fabiana was an ex-Pharcamist who ceased his activity several years ago.
+However the supplier that provided drugs to Fabiana was an ex-Pharmacist who ceased his activity several years ago.
 
 The cessation of activity of the pharmacy therefore entails the closure of its account.
 
