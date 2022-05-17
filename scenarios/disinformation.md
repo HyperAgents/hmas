@@ -1,4 +1,4 @@
-# Core Vocabulary Scenarios: Disinformation
+# Disinformation Domain
 
 ## Quick definitions of terms : manipulation, lying, sincerity and persuasion in MAS
 
@@ -18,7 +18,7 @@ An agent is sincere if, and only if, it believes all its communicative speech ac
 
 An agent (i.e. persuader) persuades another agent (i.e. persuadee) if, and only if, the persuader known that by communicating a piece of information the persuadee changes its beliefs.
 
-## Motivating scenarios
+## Features
 
 ### Feature : detecting bad persuasion (here : persuading by deceiving an agent to do something)
 
@@ -32,10 +32,10 @@ However the bot has deceived John because the bot knows that the drug creates ad
 
 John's wife Ann, comes to know that such pills are dangerous. She then removes all pills from the closet. As a consequence John does not take the drug.
 
-# Related issues
+## Related issues
 https://github.com/HyperAgents/ns.hyperagents.org/issues?q=in%3Abody+%22scenarios%2Fdisinformation.md%22
 
-# References
+## References
 
 Leturc, C., & Bonnet, G. (2020, May). A Deliberate BIAT Logic for Modeling Manipulations. In 19th International Conference on Autonomous Agents and Multiagent Systems.
 

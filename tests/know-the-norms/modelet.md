@@ -18,3 +18,6 @@ Norms and laws are explicitly considered in a hMAS. Thus, one agent needs to und
 * Norm: ...
 * Punishment: ...
 
+## Recommendations
+
+None

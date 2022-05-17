@@ -5,7 +5,7 @@ The existence of norms, and laws in society allow to facilitate interactions bet
 
 ## Features
 
-### Feature: [Know the norms](./../tests/know-the-norms/feature.md)
+### Feature: [Know the norms](./../tests/know-the-norms/modelet.md)
 
 Fabiana Gordana (@...) needs high-dose aspirin (more than 500 mg per day) because she has a terrible headache since she got pregnant.
 
@@ -80,5 +80,5 @@ The High Health Authority has been notified of this fraud and decided to sanctio
 
 The informed Ministry of Health ordered UbarDrugSTORE not to sell any more medicines until all suppliers on the platform had certified all information on their profile.
 
-### Link to query the related issues
+## Link to query the related issues
 * [regulation](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=regulation)
