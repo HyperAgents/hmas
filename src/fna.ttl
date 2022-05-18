@@ -32,8 +32,8 @@
            rdfs:label "EmergingBehavior"@en .
 
 
-:NormPrecondition rdf:type owl:Class ;
-           rdfs:comment "A precondition specification associated to a norm to be applied "@en ;
+:Hypothese rdf:type owl:Class ;
+           rdfs:comment "An Hypothese is a precondition specification associated to a norm to be applied "@en ;
            rdfs:label "Norm"@en .
            
 :NormSpecification rdf:type owl:Class ;
