@@ -1,4 +1,4 @@
-# Discover Organization
+# Discover Organization Entities
 
 ## Description
 Organizations are entities that Agents should be able to find and possibly join in order to achieve their goals.
