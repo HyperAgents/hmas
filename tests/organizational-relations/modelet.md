@@ -5,7 +5,7 @@ Organization Entities may interact with other Organization Entities through vari
 
 ## Examples
 1. [Mobility as a Service](../../scenarios/mobility-as-a-service.md)
-2. Extended Enterprise
+2. [Extended Enterprise](../../scenarios/extended-enterprise.md)
 
 ## Competency questions
 
