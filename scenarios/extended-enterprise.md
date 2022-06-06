@@ -5,9 +5,9 @@ The Extended Enterprise domain is illustrated using the example of a
 
 ## Features
 
-### Feature: [Discover Organization Entities](../../tests/discover-organization-entities/modelet.md)
+### Feature: [Discover Organization Entities](../tests/discover-organization-entities/modelet.md)
 
-### Feature: [Organizational Relations](./../tests/organizational-relations/modelet.md)
+### Feature: [Organizational Relations](../tests/organizational-relations/modelet.md)
 
 ### Feature: Laws, Norms, and Sanctions
 
