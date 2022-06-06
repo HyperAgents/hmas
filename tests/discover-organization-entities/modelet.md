@@ -5,7 +5,7 @@ Organizations are entities that Agents should be able to find and possibly join 
 
 ## Examples
 1. [Mobility as a Service](../../scenarios/mobility-as-a-service.md)
-2. Extended Enterprise
+2. [Extended Enterprise](../../scenarios/extended-enterprise.md)
 
 ## Competency questions
 
