@@ -39,7 +39,7 @@ Examples of MaaS enterprise norms and sanctions are:
 
 ## Features
 
-### Feature: [Discover Organization Entities](../../tests/discover-organization-entities/modelet.md)
+### Feature: [Discover Organization Entities](./../tests/discover-organization-entities/modelet.md)
 People who want to use a mobility service identifies existing MaaS organizations to decide which they want to join in order to achieve their goal of moving from one location to another. They also may want to know which other MaaS organizations they may join without conflicting with their existing membership.
 
 ### Feature: [Organizational Relations](./../tests/organizational-relations/modelet.md)
