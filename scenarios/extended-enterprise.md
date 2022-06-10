@@ -13,8 +13,18 @@ The interactions and coordination in the EE (sends a port order, makes an order 
 
 ### Feature: [Discover Organization Entities](../tests/discover-organization-entities/modelet.md)
 
+- A community composed of three organization entities HSG, MSE, EE. 
+- « HSG », « MSE » and « EE » are respectively situated in workspace PW, FW and (PW,FW,TW).
+- Some Agents situated in PW belong to HSG, others don’t, those situated in FW only belong to MSE, all belong to EE. 
+- Transport agent may only belongs to EE. 
+- If an agent is situated in two workspaces, it may belong to the three Organization entities.
+- Artifacts situated in PW may count-as material of HSG, those in FW count-as material of MSE and all may count-as material of EE.
+
+
 ### Feature: [Organizational Relations](../tests/organizational-relations/modelet.md)
 
+- TODO: add the relations among the organization entities.
+- 
 ### Feature: Laws, Norms, and Sanctions
 
 ### Feature: Regulation dependencies
