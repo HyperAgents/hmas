@@ -9,16 +9,24 @@ When looking at their agentification on the Web, there are three workspaces («�
 
 The interactions and coordination in the EE (sends a port order, makes an order for pot supply, supply pots) take place in the context of the « EE ».  
 
+A community composed of three organization entities HSG, MSE, EE. 
+
+HSG, MSE and EE are respectively contained in workspace PW, FW and (PW,FW,TW).
+
+Some Agents contained in PW are members of HSG, others don’t, those contained in FW are only members of MSE, all are members of EE. 
+Transport agent may only be members of EE. 
+
+If an agent is containted in PW and TW on one hand or FW and TW on the other hand, it may belong respectively to HSG and/or EE of MSE and/or EE.
+
+Artifacts contained in PW may count-as material of HSG, those in FW count-as material of MSE and all may count-as material of EE.
+
+HSG, MSE, EE are respectively contained in workspace PW, FW and (PW,FW,TW). Artifacts that are contained in PW may count-as material of  HSG, those contained in FW count-as material of MSE and all may count-as material of EE.
+
+HSG, MSE respectively containted in workspace PW and FW. EE includes HSG and MSE. It is thus contained in PW and FW. Agents contained in PW and FW may belong to one or several of organization entities. Artifacts of PW may be counted as material of HSG but not MSE. Artifacts of FW may be counted as material of MSE but not HSG. Artifacts of PW and FW may be counted as material of EE.
+
 ## Features
 
 ### Feature: [Discover Organization Entities](../tests/discover-organization-entities/modelet.md)
-
-- A community composed of three organization entities HSG, MSE, EE. 
-- « HSG », « MSE » and « EE » are respectively situated in workspace PW, FW and (PW,FW,TW).
-- Some Agents situated in PW belong to HSG, others don’t, those situated in FW only belong to MSE, all belong to EE. 
-- Transport agent may only belongs to EE. 
-- If an agent is situated in two workspaces, it may belong to the three Organization entities.
-- Artifacts situated in PW may count-as material of HSG, those in FW count-as material of MSE and all may count-as material of EE.
 
 
 ### Feature: [Organizational Relations](../tests/organizational-relations/modelet.md)
