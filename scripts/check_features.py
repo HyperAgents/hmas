@@ -1,7 +1,89 @@
 #!/usr/bin/env python3
 import os
-import traceback
 import mistune
+
+############################################################ assertions to check
+
+def test_feat_name(m):
+    assert "name" in m, ("must", "The feature has a name")
+
+def test_feat_desc(m):
+    assert "description" in m, ("must", "The feature has a description")
+
+def test_feat_dom(m):
+    assert len(m["domains"]) > 0, ("must", "The feature references at least one domain")
+
+def test_feat_cq(m):
+    assert len(m["questions"]) > 0, ("must", "The feature addresses at least one competency question")
+
+def test_feat_term(m):
+    # TODO add check that the term is referenced
+    assert len(m["terms"]) > 0, ("must", "The feature introduces at least one term")
+
+def test_feat_cbox(m):
+    id = m["id"]
+    assert os.path.exists(f"test/{id}/abox.ttl") and os.path.exists(f"test/{id}/tbox.ttl"), ("must", "The feature has a TBox and an example ABox")
+
+def test_q_sparql(m, q):
+    id = m["id"]
+    assert os.path.exists(f"test/{id}/{q}.rq"), ("must", "The competency question is formalized as a SPARQL query")
+
+def test_feat_eval(m):
+    # TODO rdflib call
+    assert True, ("must", "The SPARQL query evaluates to the expected answer for the feature's TBox and ABox")
+
+def test_feat_doms(m):
+    assert len(m["domains"]) > 1, ("should", "The feature references more than one domains")
+
+def test_feat_cqs(m):
+    assert len(m["questions"]) > 1, ("should", "The feature addresses more than one competecy question")
+
+def test_feat_terms(m):
+    assert len(m["terms"]) > 1, ("should", "The feature introduces more than one term")
+
+def test_term_feats(t):
+    # TODO
+    assert True, ("should", "The term is defined in only one feature")
+
+def test_term_feat(t):
+    # TODO
+    assert True, ("must", "The term is referenced in at least one feature")
+
+def test_dom_feat_ref(dom, m):
+    # TODO
+    assert True, ("must", "The domain has at least one motivating scenario for the ontology feature")
+
+test_feat = [
+    test_feat_name,
+    test_feat_desc,
+    test_feat_dom,
+    test_feat_cq,
+    test_feat_term,
+    test_feat_cbox,
+    test_feat_eval,
+    test_feat_doms,
+    test_feat_cqs
+]
+
+test_q = [
+    test_q_sparql
+]
+
+test_dom = [
+    # TODO if domain has name and desc
+    # TODO test if domain has at least one motivating scenario (feature)
+]
+
+test_term = [
+    test_term_feat,
+    test_term_feats
+]
+
+test_dom_feat = [
+    test_dom_feat_ref
+]
+
+############################################################# checking procedure
 
 # TODO as HTML instead?
 def get_text(ast):
@@ -14,129 +96,93 @@ def get_text(ast):
             text += get_text(child)
         return text
 
-# TODO pre-process AST to create sections?
-# TODO more generic function that takes an AST template?
-def find_section(ast, title):
+def find_section(ast, title, level=2):
     for (i, item) in enumerate(ast):
         if item["type"] == "heading" \
-        and item["level"] == 2 \
+        and item["level"] == level \
         and item["children"][0]["text"] == title \
         and len(ast) > i+1:
             return ast[i+1]
-    raise ValueError
+    return None
 
-def build_modelet(feat):
+def parse_domain(dom):
+    # TODO
+    return NotImplemented
+
+def parse_modelet(feat):
+    m = {
+        "id": feat,
+        "name": None,
+        "description": None,
+        "domains": [],
+        "questions": [],
+        "terms": []
+    }
+
+    f = f"test/{feat}/modelet.md"
+
+    if not os.path.exists(f):
+        return m
+
     get_ast = mistune.create_markdown(renderer='ast', plugins=['table'])
-    md = open(f"test/{feat}/modelet.md", "r").read()
+    md = open(f, "r").read()
     ast = get_ast(md)
 
-    m = {}
-    m["errors"] = []
-
-    # TODO generic function to manage errors
-
     # first element is the name of the feature
-    try:
-        assert ast[0]["type"] == "heading" and ast[0]["level"] == 1
+    if ast[0]["type"] == "heading" and ast[0]["level"] == 1:
         m["name"] = get_text(ast[0])
-    except AssertionError:
-        m["errors"].append({ "element": "title", "cause": "ill-formed" })
 
     # second element is the description of the feature
-    try:
-        descItem = find_section(ast, "Description")
-        assert descItem["type"] == "paragraph"
+    descItem = find_section(ast, "Description")
+    if descItem is not None and descItem["type"] == "paragraph":
         m["description"] = get_text(descItem)
-    except ValueError:
-        m["errors"].append({ "element": "description", "cause": "missing" })
-    except AssertionError:
-        m["errors"].append({ "element": "description", "cause": "ill-formed" })
 
     # next elements are references to domain
-    try:
-        exItem = find_section(ast, "Examples")
-        assert exItem["type"] == "list"
-        m["domains"] = []
+    exItem = find_section(ast, "Examples")
+    if exItem is not None and exItem["type"] == "list":
         for (i, item) in enumerate(exItem["children"]):
-            try:
-                assert len(item["children"]) == 1 and item["children"][0]["type"] == "block_text"
-                assert len(item["children"][0]["children"]) == 1 and item["children"][0]["children"][0]["type"] == "link"
-                ref = item["children"][0]["children"][0]["link"]
-                label = get_text(item["children"][0]["children"][0])
-                m["domains"].append({ "ref": ref, "label": label })
-            except AssertionError:
-                m["errors"].append({ "element": f"example {i}", "cause": "ill-formed" })
-    except ValueError:
-        m["errors"].append({ "element": "examples", "cause": "missing" })
-    except AssertionError:
-        m["errors"].append({ "element": "examples", "cause": "ill-formed" })
+            ex = {}
+            if len(item["children"]) == 1 and item["children"][0]["type"] == "block_text":
+                ex["label"] = get_text(item["children"][0]["children"][0])
+            if len(item["children"][0]["children"]) == 1 and item["children"][0]["children"][0]["type"] == "link":
+                ex["ref"] = item["children"][0]["children"][0]["link"]
+            m["domains"].append(ex)
 
     # next elements are competency questions
-    try:
-        qItem = find_section(ast, "Competency Questions")
-        assert qItem["type"] == "table"
-        m["questions"] = []
+    qItem = find_section(ast, "Competency Questions")
+    if qItem is not None and qItem["type"] == "table":
         for (i, item) in enumerate(qItem["children"][1]["children"]):
-            try:
-                assert len(item["children"]) == 2
+            if len(item["children"]) == 2:
                 id = get_text(item["children"][0])
                 m["questions"].append(id)
-            except AssertionError:
-                m["errors"].append({ "element": f"competency question {i}", "cause": "ill-formed" })
-    except ValueError:
-        m["errors"].append({ "element": "competency questions", "cause": "missing" })
-    except AssertionError:
-        m["errors"].append({ "element": "competency questions", "cause": "ill-formed" })
+            else:
+                m["questions"].append(None)
 
     # next element is the glossary
-    try:
-        glossaryItem = find_section(ast, "Glossary")
-        assert glossaryItem["type"] == "list"
-        m["terms"] = []
+    glossaryItem = find_section(ast, "Glossary")
+    if glossaryItem is not None and glossaryItem["type"] == "list":
         for item in glossaryItem["children"]:
-            try:
-                assert len(item["children"]) == 1 and item["children"][0]["type"] == "block_text"
-                assert len(item["children"][0]["children"]) > 0 and item["children"][0]["children"][0]["type"] == "link"
-                ref = item["children"][0]["children"][0]["link"]
-                label = get_text(item["children"][0]["children"][0])
-                m["terms"].append({ "ref": ref, "label": label })
-            except AssertionError:
-                m["errors"].append({ "element": f"term {i}", "cause": "ill-formed" })
-    except ValueError:
-        m["errors"].append({ "element": "terms", "cause": "missing" })
-    except AssertionError:
-        m["errors"].append({ "element": "terms", "cause": "ill-formed" })
+            t = {}
+            if len(item["children"]) == 1 and item["children"][0]["type"] == "block_text":
+                t["label"] = get_text(item["children"][0]["children"][0])
+            if len(item["children"][0]["children"]) > 0 and item["children"][0]["children"][0]["type"] == "link":
+                t["ref"] = item["children"][0]["children"][0]["link"]
+            m["terms"].append(t)
 
     return m
 
+report = []
+
 for feat in os.listdir("test"):
-    dir = f"test/{feat}/"
+    m = parse_modelet(feat)
 
-    # # every feature should be described in a modelet
-    # assert os.path.exists(dir + "modelet.md")
-    # # every feature should be associated with an ABox and a TBox
-    # assert os.path.exists(dir + "abox.ttl")
-    # assert os.path.exists(dir + "tbox.ttl")
-    # # every feature should be associated with a query
-    # # TODO don't hardcode 'q1'
-    # assert os.path.exists(dir + "q1.rq")
+    for test in test_feat:
+        try:
+            test(m)
+        except AssertionError as a:
+            report.append((feat, a))
 
-    try:
-        m = build_modelet(feat)
-        print(feat)
-        print(m)
-        print("\n")
-    except Exception as e:
-        print(feat + " is invalid")
-        traceback.print_exc()
+for error in report:
+    print(error)
 
-# every domain must have one motivating scenario for some feature
-# every motivating scenario must be associated with a modelet
-# every modelet must reference one or more scenarios
-# every modelet must include one or more competency questions (with query and answer set)
-# every modelet must include a TBox and an ABox
-# every query evaluation must equal the expected answer against the TBox and ABox
-# every modelet must reference one or more terms in a vocabulary included in the repository [to relax?]
-# every term must be referenced by one or more modelets
-
-# every modelet should refer to more than one scenario
+# TODO tests in /scenarios and /src directory
