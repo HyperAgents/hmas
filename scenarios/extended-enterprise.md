@@ -3,10 +3,10 @@
 ## Overview
 The Collaborative Enterprises (CE) domain is illustrated using the example of a network of factories working alltogether and forming a dynamic supply chain between them and eventually with other factories, suppliers or customers. As described in [Factories of the Future Multi-annual roadmap for the contractual PPP under the Horizon 2020](https://www.effra.eu/sites/default/files/factories_of_the_future_2020_roadmap.pdf), the trend of collaboration between multiple manufacturing enterprises is becoming an essential feature for day-to-day operations of both SMEs and large manufacturing enterprise irrespective of their size.
 
-To make it more concrete, we will consider one factory situated in Saint-Etienne (IT'M Factory at MSE) dedicated to filling product in pots produced in a factory situated in St Gallen at HSG. Both factories are connected by a supply chain.
+To make it more concrete, we will consider one factory situated in Saint-Etienne (IT'M Factory at MSE) dedicated to filling product in pots produced in a factory situated in St Gallen at HSG. Both factories are connected by a supply chain which is operated by a transportation company.
 
 ## Agentification
-The agentification of these two factories and transport company on the Web results in three workspaces (« PW » (Pot production Workspace) situated in HSG, « FW » (Pot filling Workspace) situated in MSE and « TW » (Transport Workspace ensuring the logistic of pot transportation from HSG to MSE). 
+The agentification of these two factories and transport company on the Web by the HyperAgent system results in three workspaces (« PW » (Pot production Workspace) situated in HSG, « FW » (Pot filling Workspace) situated in MSE and « TW » (Transport Workspace ensuring the logistic of pot transportation from HSG to MSE). 
 
 ## Organisations, Community
 The organisation «TO» of transporter agents is situated in «TW». The organisation «HSGO» of agents working in HSG Factory are situated in « PW », the organisation «MSEO» of agents working in MSE Factory is situated in « FW ». The community « CFC » built from these three organisations is situated in the three workspaces, by the way of those three organisations that compose it. 
