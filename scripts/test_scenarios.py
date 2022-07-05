@@ -4,65 +4,58 @@ import mistune
 
 ############################################################ assertions to check
 
-def test_feat_name(m):
-    assert "name" in m, ("must", "The feature has a name")
+def test_scenario_title(m):
+    assert "name" in m, ("must", "The scenario has a title")
 
-def test_feat_desc(m):
-    assert "description" in m, ("must", "The feature has a description")
+def test_scenario_desc(m):
+    assert "description" in m, ("must", "The scenario has a description")
 
-def test_feat_dom(m):
-    assert len(m["domains"]) > 0, ("must", "The feature references at least one domain")
+def test_scenario_cq(m):
+    assert len(m["questions"]) > 0, ("must", "The scenario addresses at least one competency question")
 
-def test_feat_cq(m):
-    assert len(m["questions"]) > 0, ("must", "The feature addresses at least one competency question")
+def test_scenario_term(m):
+    # TODO add check that the term is in onto.ttl
+    assert len(m["terms"]) > 0, ("must", "The scenario introduces at least one term")
 
-def test_feat_term(m):
-    # TODO add check that the term is referenced
-    assert len(m["terms"]) > 0, ("must", "The feature introduces at least one term")
+def test_scenario_tbox(m):
+    p = m["path"]
+    assert os.path.exists(f"{p}/onto.ttl"), ("must", "The scenario has ontological definitions")
 
-def test_feat_cbox(m):
-    id = m["id"]
-    assert os.path.exists(f"test/{id}/abox.ttl") and os.path.exists(f"test/{id}/tbox.ttl"), ("must", "The feature has a TBox and an example ABox")
+def test_scenario_abox(m):
+    p = m["path"]
+    assert os.path.exists(f"{p}/dataset.ttl"), ("must", "The scenario has an example dataset")
 
 def test_q_sparql(m, q):
-    id = m["id"]
-    assert os.path.exists(f"test/{id}/{q}.rq"), ("must", "The competency question is formalized as a SPARQL query")
+    p = m["path"]
+    assert os.path.exists(f"test/{p}/{q}.rq"), ("must", "The competency question is formalized as a SPARQL query")
 
-def test_feat_eval(m):
+def test_scenario_eval(m):
     # TODO rdflib call
-    assert True, ("must", "The SPARQL query evaluates to the expected answer for the feature's TBox and ABox")
+    assert True, ("must", "The SPARQL query evaluates to 'true' for the scenario's dataset")
 
-def test_feat_doms(m):
-    assert len(m["domains"]) > 1, ("should", "The feature references more than one domains")
-
-def test_feat_cqs(m):
+def test_scenario_cqs(m):
     assert len(m["questions"]) > 1, ("should", "The feature addresses more than one competecy question")
 
-def test_feat_terms(m):
+def test_scenario_terms(m):
     assert len(m["terms"]) > 1, ("should", "The feature introduces more than one term")
 
-def test_term_feats(t):
+def test_term_scenarios(t):
     # TODO
-    assert True, ("should", "The term is defined in only one feature")
+    assert True, ("should", "The ontology term is defined in only one scenario")
 
-def test_term_feat(t):
+def test_term_scenario(t):
     # TODO
-    assert True, ("must", "The term is referenced in at least one feature")
+    assert True, ("must", "The ontology term is referenced in at least one scenario")
 
-def test_dom_feat_ref(dom, m):
-    # TODO
-    assert True, ("must", "The domain has at least one motivating scenario for the ontology feature")
-
-test_feat = [
-    test_feat_name,
-    test_feat_desc,
-    test_feat_dom,
-    test_feat_cq,
-    test_feat_term,
-    test_feat_cbox,
-    test_feat_eval,
-    test_feat_doms,
-    test_feat_cqs
+test_scenario = [
+    test_scenario_title,
+    test_scenario_desc,
+    test_scenario_cq,
+    test_scenario_term,
+    test_scenario_tbox,
+    test_scenario_abox,
+    test_scenario_eval,
+    test_scenario_cqs
 ]
 
 test_q = [
@@ -75,12 +68,8 @@ test_dom = [
 ]
 
 test_term = [
-    test_term_feat,
-    test_term_feats
-]
-
-test_dom_feat = [
-    test_dom_feat_ref
+    test_term_scenario,
+    test_term_scenarios
 ]
 
 ############################################################# checking procedure
@@ -109,17 +98,17 @@ def parse_domain(dom):
     # TODO
     return NotImplemented
 
-def parse_modelet(feat):
+def parse_scenario(sc):
     m = {
-        "id": feat,
+        "id": sc.name,
+        "path": sc.path,
         "name": None,
         "description": None,
-        "domains": [],
         "questions": [],
         "terms": []
     }
 
-    f = f"test/{feat}/modelet.md"
+    f = f"{sc.path}/README.md"
 
     if not os.path.exists(f):
         return m
@@ -136,17 +125,6 @@ def parse_modelet(feat):
     descItem = find_section(ast, "Description")
     if descItem is not None and descItem["type"] == "paragraph":
         m["description"] = get_text(descItem)
-
-    # next elements are references to domain
-    exItem = find_section(ast, "Examples")
-    if exItem is not None and exItem["type"] == "list":
-        for (i, item) in enumerate(exItem["children"]):
-            ex = {}
-            if len(item["children"]) == 1 and item["children"][0]["type"] == "block_text":
-                ex["label"] = get_text(item["children"][0]["children"][0])
-            if len(item["children"][0]["children"]) == 1 and item["children"][0]["children"][0]["type"] == "link":
-                ex["ref"] = item["children"][0]["children"][0]["link"]
-            m["domains"].append(ex)
 
     # next elements are competency questions
     qItem = find_section(ast, "Competency Questions")
@@ -173,16 +151,17 @@ def parse_modelet(feat):
 
 report = []
 
-for feat in os.listdir("test"):
-    m = parse_modelet(feat)
+def is_dir(f): return f.is_dir()
 
-    for test in test_feat:
-        try:
-            test(m)
-        except AssertionError as a:
-            report.append((feat, a))
+for dom in filter(is_dir, os.scandir("domains")):
+    for sc in filter(is_dir, os.scandir(dom.path)) :
+        modelet = parse_scenario(sc)
+
+        for test in test_scenario:
+            try:
+                test(modelet)
+            except AssertionError as a:
+                report.append((sc.name, a))
 
 for error in report:
     print(error)
-
-# TODO tests in /scenarios and /src directory
