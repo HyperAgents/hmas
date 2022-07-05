@@ -1,11 +1,7 @@
 # Discover Organization Entities
 
 ## Description
-Organizations are entities that Agents should be able to find and possibly join in order to achieve their goals.
-
-## Examples
-1. [Mobility as a Service](../../scenarios/mobility-as-a-service.md)
-2. [Extended Enterprise](../../scenarios/extended-enterprise.md)
+People who want to use a mobility service identifies existing MaaS organizations to decide which they want to join in order to achieve their goal of moving from one location to another. They also may want to know which other MaaS organizations they may join without conflicting with their existing membership.
 
 ## Competency questions
 

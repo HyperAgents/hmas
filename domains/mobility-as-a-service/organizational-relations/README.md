@@ -1,11 +1,7 @@
 # Organizational Relations
 
 ## Description
-Organization Entities may interact with other Organization Entities through various types of relationships. Joining several Organizational Entities, Agents may need to take into account possible conflicts of regulations and institutional facts in their decision-making process.
-
-## Examples
-1. [Mobility as a Service](../../scenarios/mobility-as-a-service.md)
-2. [Extended Enterprise](../../scenarios/extended-enterprise.md)
+Mobility as a Service (MaaS) enterprises and countries are defined as Situated Regulated Organization Entities. MaaS enterprise SROEs are member of one or multiple country SROEs and the former regulations are subject to the laws and regulations of the latter.
 
 ## Competency questions
 
@@ -21,7 +17,7 @@ Organization Entities may interact with other Organization Entities through vari
 
 ## Glossary
 
-* [**Organization Entity**](../discover-organization/modelet.md#Glossary)
+* **Organization Entity**: Organization Entity is an organization situated on Agents and Artifacts, and regulated by a normative system.
 
 ### Recommendations
 
