@@ -38,6 +38,25 @@
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <#> .
 
+schema:Person a owl:Class .
+schema:name a owl:AnnotationProperty .
+schema:email a owl:AnnotationProperty .
+schema:url a owl:AnnotationProperty .
+schema:identifier a owl:AnnotationProperty .
+schema:affiliation a owl:AnnotationProperty .
+dct:title a owl:AnnotationProperty .
+dct:description a owl:AnnotationProperty .
+dct:contributor a owl:AnnotationProperty .
+dct:issued a owl:AnnotationProperty .
+dct:creator a owl:AnnotationProperty .
+dct:source a owl:AnnotationProperty .
+cc:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+skos:example a owl:AnnotationProperty .
+skos:note a owl:AnnotationProperty .
+
+
 <http://ns.inria.fr/fabien.gandon#me> a schema:Person ;
   schema:name "Fabien Gandon" ;
   schema:email "fabien.gandon@inria.fr" ;
@@ -181,7 +200,6 @@
 :transitivelyContains a owl:ObjectProperty, owl:TransitiveProperty ;
           owl:inverseOf :isTransitivelyContainedIn ;
           rdfs:domain :Workspace ;
-          rdfs:range rdfs:Resource ;
           rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
           rdfs:label "transitivelyContains"@en ;
@@ -247,7 +265,6 @@
 
 
 :isTransitivelyContainedIn a owl:ObjectProperty, owl:TransitiveProperty ;
-            rdfs:domain rdfs:Resource ;
             rdfs:range :Workspace ;
             owl:inverseOf :transitivelyContains ;
             rdfs:comment "A relation that refers to all workspaces in which a resource is contained. "@en ;
