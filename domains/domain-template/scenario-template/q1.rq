@@ -1,5 +1,6 @@
 prefix ex: <http://example.org/>
 
-select ?i {
+ask {
+    (bind ex:individual as ?i)
     ?i a ex:Class .
 }

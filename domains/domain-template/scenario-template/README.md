@@ -4,11 +4,6 @@
 
 _Short description of the feature, written in a way that it is independent of any domain of application. Domain-specific examples of use of the feature should be detailed in a motivating scenario in `/scenarios`. The `/scenarios` folder contains one Markdown file for all motivating scenarios that apply to a given domain of application. All files that have motivating scenarios referring to the feature described here should be in the list below._
 
-## Examples
-
-1. [_Domain 1_](../../scenarios/domain1.md)
-2. _..._
-
 ## Competency Questions
 
 | ID | Question in natural language |
