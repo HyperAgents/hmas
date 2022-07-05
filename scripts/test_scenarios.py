@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import mistune
+import rdflib
 
 ############################################################ assertions to check
 
@@ -25,19 +26,26 @@ def test_scenario_abox(m):
     p = m["path"]
     assert os.path.exists(f"{p}/dataset.ttl"), ("must", "The scenario has an example dataset")
 
-def test_q_sparql(m, q):
+def test_cq_sparql(m, q):
     p = m["path"]
-    assert os.path.exists(f"test/{p}/{q}.rq"), ("must", "The competency question is formalized as a SPARQL query")
+    assert os.path.exists(f"{p}/{q}.rq"), ("must", "The competency question is formalized as a SPARQL query")
 
-def test_scenario_eval(m):
-    # TODO rdflib call
-    assert True, ("must", "The SPARQL query evaluates to 'true' for the scenario's dataset")
+def test_cq_eval(m, q):
+    p = m["path"]
+    # read RDF dataset and ontological definitions
+    g = rdflib.Graph()
+    g.parse(f"{p}/dataset.ttl")
+    g.parse(f"{p}/onto.ttl")
+    # read SPARQL query
+    q = open(f"{p}/{q}.rq", "r").read()
+
+    assert g.query(q), ("must", "The SPARQL query evaluates to 'true' for the scenario's dataset")
 
 def test_scenario_cqs(m):
-    assert len(m["questions"]) > 1, ("should", "The feature addresses more than one competecy question")
+    assert len(m["questions"]) > 1, ("should", "The scenarion addresses more than one competecy question")
 
 def test_scenario_terms(m):
-    assert len(m["terms"]) > 1, ("should", "The feature introduces more than one term")
+    assert len(m["terms"]) > 1, ("should", "The scenario introduces more than one term")
 
 def test_term_scenarios(t):
     # TODO
@@ -54,17 +62,17 @@ test_scenario = [
     test_scenario_term,
     test_scenario_tbox,
     test_scenario_abox,
-    test_scenario_eval,
     test_scenario_cqs
 ]
 
-test_q = [
-    test_q_sparql
+test_cq = [
+    test_cq_sparql,
+    test_cq_eval
 ]
 
 test_dom = [
     # TODO if domain has name and desc
-    # TODO test if domain has at least one motivating scenario (feature)
+    # TODO test if domain has at least one motivating scenario
 ]
 
 test_term = [
@@ -117,11 +125,11 @@ def parse_scenario(sc):
     md = open(f, "r").read()
     ast = get_ast(md)
 
-    # first element is the name of the feature
+    # first element is the title of the scenario
     if ast[0]["type"] == "heading" and ast[0]["level"] == 1:
         m["name"] = get_text(ast[0])
 
-    # second element is the description of the feature
+    # second element is the description of the scenario
     descItem = find_section(ast, "Description")
     if descItem is not None and descItem["type"] == "paragraph":
         m["description"] = get_text(descItem)
@@ -154,14 +162,29 @@ report = []
 def is_dir(f): return f.is_dir()
 
 for dom in filter(is_dir, os.scandir("domains")):
+    for test in test_dom:
+        try:
+            test(m)
+        except AssertionError as a:
+            report.append((dom.name, a))
+
     for sc in filter(is_dir, os.scandir(dom.path)) :
-        modelet = parse_scenario(sc)
+        m = parse_scenario(sc)
 
         for test in test_scenario:
             try:
-                test(modelet)
+                test(m)
             except AssertionError as a:
                 report.append((sc.name, a))
+
+        # TODO test(s) on dataset
+
+        for cq in m["questions"]:
+            for test in test_cq:
+                try:
+                    test(m, cq)
+                except AssertionError as a:
+                    report.append((f"{sc.name}/{cq}", a))
 
 for error in report:
     print(error)
