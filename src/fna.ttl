@@ -23,17 +23,99 @@
            rdfs:comment "A norm specification associated to a resource"@en ;
            rdfs:label "Norm"@en .
 
+:GDPRArticle rdf:type owl:Class ;
+           rdfs:comment ""@en ;
+           rdfs:label "GDPR"@en .
+
+:GDPRTerm rdf:type owl:Class ;
+           rdfs:comment ""@en ;
+           rdfs:label "Term"@en .
+
+:GDPRText rdf:type owl:Class ;
+           rdfs:comment ""@en ;
+           rdfs:label "Text"@en .
+
+######  Article 9 Paragraph (2.a)  https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=FR#d1e1489-1-1
+### Processing of special categories of personal data
+
+# the data subject has given explicit consent to the processing of those personal data for one or more specified purposes, 
+:DataSubject (...)
+:Explicit rdfs:subClassOf :Consent
+:Processing ...
+:PersonalData
+:SpecifiedPurposes
+
+# Article 6
+:OrCondition
+# Article 9 (a) // Article 5
+:AndCondition
+
+# the first terms are group under a norm (to describe the exception, second part of the sentence...)
+<--- :Norm
+
+# ... except where Union or Member State law provide that the prohibition referred to in paragraph 1 may not be lifted by the data subject;
+# (Should we see as an attack relation ?)
+# 'except' : (do it later)
+:isAnExceptionTo rdf:type owl:ObjectProperty ;
+		rdfs:domain :Norm ;
+                rdfs:range :Norm ;
+                rdfs:comment ""@en ;
+                rdfs:label ""@en .
+
+
+
+
+:hasContent rdf:type owl:ObjectProperty ;
+		rdfs:domain :GDPRArticle ;
+                rdfs:range :GDPRText ;
+                rdfs:comment ""@en ;
+                rdfs:label ""@en .
+
+:hasTiltle rdf:type owl:ObjectProperty ;
+		rdfs:domain :GDPRArticle ;
+                rdfs:range STRINGATOM ;
+                rdfs:comment ""@en ;
+                rdfs:label ""@en .
+
+
+
+:PersonalData rdf:type owl:Class ;
+           rdfs:comment "any information  relating to an identified or identifiable natural person (‘data  subject’); an identifiable natural person is one who can be identified,  directly or indirectly, in particular by reference to an identifier such  as a name, an identification number, location data, an online  identifier or to one or more factors specific to the physical,  physiological, genetic, mental, economic, cultural or social identity of  that natural person."@en ;
+           rdfs:label "PersonalData"@en .
+
+
+
+:termRelatedToGDPRArticle rdf:type owl:ObjectProperty ;
+		rdfs:domain :GDPRTerm ;
+                rdfs:range :GDPRArticle ;
+                rdfs:comment "Associates cases of violation of a norm"@en ;
+                rdfs:label "has a violation case"@en .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Question to ask : rdfs:subClassOf vs rdf:type ? 
 # Question to ask : applying SPARQL-GENERATE for (...) ?
-:EmergingBehavior rdf:type owl:Class  ;
-	   rdfs:subClassOf :Norm
-           rdfs:comment "An emerging behavior is a particular norm that describes a collective behavior (e.g. reciprocity, social proof, etc.)"@en ;
-           rdfs:label "EmergingBehavior"@en .
+#:EmergingBehavior rdf:type owl:Class  ;
+#	   rdfs:subClassOf :Norm
+#           rdfs:comment "An emerging behavior is a particular norm that describes a collective behavior (e.g. reciprocity, social proof, etc.)"@en ;
+#           rdfs:label "EmergingBehavior"@en .
 
 
-:NormPrecondition rdf:type owl:Class ;
-           rdfs:comment "A precondition specification associated to a norm to be applied "@en ;
+:Hypothese rdf:type owl:Class ;
+           rdfs:comment "An Hypothese is a precondition specification associated to a norm to be applied "@en ;
            rdfs:label "Norm"@en .
            
 :NormSpecification rdf:type owl:Class ;
