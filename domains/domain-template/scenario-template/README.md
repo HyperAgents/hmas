@@ -15,7 +15,7 @@ _Any additional comment on the competency questions can be added after the table
 ## Glossary
 
 * [**_Term_**](https://purl.org/hmas/ns/Term): _definition of the term if it is newly defined in this modelet. Otherwise, reference to other modelet in which it has been defined, as showed below._.
-* [**_Other Term_**](https://purl.org/hmas/ns/OtherTerm): see [_Other scenario_](../other-feature/modelet.md).
+* [**_Other Term_**](https://purl.org/hmas/ns/OtherTerm): see [_Other scenario_](../other-scenario/README.md).
 * _..._
 
 ### Recommendations
