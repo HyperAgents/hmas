@@ -197,7 +197,12 @@ git.io :
 
 
 
-
+* Good practices on motivationg scenarios (no more than 5-8 new terms) <10
+* Scenario is the shortest story :
+* e.g. medical privacy (norm, organisation, hypothese) in factory ?
+* * Respect  Medical  Secret
+* * Respectful Medical Data Sharing (-> exceptions, ... )
+* * ...
 
 
 
