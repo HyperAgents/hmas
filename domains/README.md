@@ -1,4 +1,4 @@
-This folder contains the scenariios/stories motivating our ontology
+This folder contains the scenarios/stories motivating our ontology
 
 Here are some useful links:
 - [all issues concerning all scenarios](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=label%3A%22scenario%22)

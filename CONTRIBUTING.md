@@ -28,10 +28,10 @@ We explain here the how to:
 
 Be explicit and synthetic about the contribution you want to make to the project.
 When contributing to this repository, please first discuss the change you wish to make :
-1. by opening an issue before and by following the rules on how to open an issue (cf. Section~II.1); 
-2. discuss the problem with the different contributors by following the code of conduct (cf. Section~II.2);
-3. if a new feature is to be created as a result, then make sure there is a story/scenario for that and follow the methodology  (cf. Section~II.3);
-4. do a pull request and wait for approval by following the pull request process (cf. Section~II.4).
+1. by _opening an issue_ before and by following the rules on how to open an issue (cf. Section~II.1); 
+2. discuss the problem with the different contributors by following the _code of conduct_ (cf. Section~II.2);
+3. if a new feature is to be created as a result, then make sure there is a story/scenario for that and follow the methodology by _creating a motivating scenario_  (cf. Section~II.3);
+4. do a pull request and wait for approval by following the _pull request process_ (cf. Section~II.4).
 
 
 

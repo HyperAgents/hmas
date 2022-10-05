@@ -1,4 +1,4 @@
-# **Title of the motivating scenario**
+# **Title of the domains**
 
 ## **The motivating scenario**
 
