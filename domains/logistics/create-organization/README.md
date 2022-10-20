@@ -3,7 +3,7 @@
 ## Description
 John has experience in working in a successful specialized industrial logistics enterprise in Switzerland, the SL Logistics. He sees a business opportunity in providing the same service in France and creates the FL Logistics. Because of his own experience and the success of the SL Logistics, John decides to use the SL Logistics as a model to organize the FL Logistics.
 
-## Informal Competency Questions
+## Competency Questions
 
 | ID | Question in Natural Language |
 |---|---|
@@ -17,38 +17,6 @@ John has experience in working in a successful specialized industrial logistics 
 * **Organization Specification**: A declarative specification used to enact one or multiple Community Entities. The Community Specification defines the norms to become a member, to relate to other members, and to leave the Community, as well as the members' roles and their possible relationships.
 * **Organization Entity**: An Organization Entity is an organization situated on Agents and Artifacts, and regulated by a regulation system.
 
-## Formal Description
-
-### TBox
-
-TBD
-
-### ABox
-
-TBD
-
-### Questions
-
-#### Q1
-
-TBD
-
-#### Q2
-
-TBD
-
-#### Q3
-
-TBD
-
 ## Recommendations
-
-None
-
-## Related Issues
-
-* [Issue #105 - Create an Organization](https://github.com/HyperAgents/ns.hyperagents.org/issues/105)
-
-## Questions / Comments
 
 None
