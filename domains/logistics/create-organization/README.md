@@ -18,18 +18,18 @@ The SL Logistics has also several depots distributed in France.
 -----|-------------------------------------------------------------------------------------|
 | q1 | What are the available Organization Specifications?                                 |
 | q2 | What are the Organizations in the Workspace X?                                      |
-| q3 | How many Organizations are there in the Workspace X?                                 |
-| q4 | What is the Organization Specification of the Organization X?                        |
-| q5 | Is there any Organization enacting Organization Specification X in the Workspace Y?  |
-| q6 | What are the Organizations that enact the Organization Specification X?              |
-| q7 | What are the Agents and Artifacts that situate the Organization X?                   |
-| q8 | What are the Workspaces where the Organization X is placed at?                       |
-| What are the available Roles in the Organization X?                                 | q9  |
-| Is there Role R in the Organization X?                                              | q10 |
-| What are the available Missions in the Organization X?                              | q11 |
-| What are the available Spatial Roles in the Organization X?                         | q12 |
-| What are the available Facilities in the Organization X?                            | q13 |
-| What are the available Norms in the Organization X?                                 | q14 |
+| q3 | How many Organizations are there in the Workspace X?                                |
+| q4 | What is the Organization Specification of the Organization X?                       |
+| q5 | Is there any Organization enacting Organization Specification X in the Workspace Y? |
+| q6 | What are the Organizations that enact the Organization Specification X?             |
+| q7 | What are the Agents and Artifacts that situate the Organization X?                  |
+| q8 | What are the Workspaces where the Organization X is placed at?                      |
+| q9  | What are the available Roles in the Organization X?                                |
+| q10 | Is there Role R in the Organization X?                                             |
+| q11 | What are the available Missions in the Organization X?                             |
+| q12 | What are the available Spatial Roles in the Organization X?                        |
+| q13 | What are the available Facilities in the Organization X?                           |
+| q14 | What are the available Norms in the Organization X?                                |
 
 ## Glossary
 
