@@ -1,4 +1,4 @@
-# Online forum
+# Online forums
 
 ## Description
 
