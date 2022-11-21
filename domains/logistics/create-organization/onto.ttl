@@ -1,0 +1,124 @@
+@base <https://purl.org/hmas/regulation> .
+@prefix : <#> .
+@prefix hmas: <https://purl.org/hmas/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema: <http://schema.org/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+
+#################################################################
+#    Classes
+#################################################################
+
+:OrganizationSpecification a owl:Class ;
+    rdfs:comment "An Organization Specification is a declarative specification used to enact one or multiple Organizations."@en ;
+    rdfs:label "Organization Specification"@en .
+
+:Organization a owl:Class ;
+    rdfs:comment "An Organization is an entity situated on Agents and Artifacts, and regulated by a regulation system."@en ;
+    rdfs:label "Organization"@en .
+
+:OrganizationalGoal a owl:Class ;
+    rdfs:comment "An Organizational Goal is an objective that outlines expected results and guide Organization members' efforts."@en ;
+    rdfs:label "Organizational Goal"@en .
+
+:OrganizationalValue a owl:Class ;
+    rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an organization."@en ;
+    rdfs:label "Organizational Value"@en .
+        
+:Role a owl:Class ;
+    rdfs:comment "A Role is used to define the position that Agents can adopt in an Organization."@en ;
+    rdfs:label "Role"@en .
+
+:SocialRole a owl:Class ;
+    rdfs:comment "A Social Role is used to define the position that Agents can adopt in an Organization in relation to a Group."@en ;
+    rdfs:label "Social Role"@en .
+
+:SpatialRole a owl:Class ;
+    rdfs:comment "A Spatial Role is used to define the position that Agents can adopt in an Organization in relation to a Space."@en ;
+    rdfs:label "Spatial Role"@en .
+
+:Mission a owl:Class ;
+    rdfs:comment "A Mission gathers Organizational Goals that can be achieved by Agents in an Organization in relation to a Social Schema."@en ;
+    rdfs:label "Mission"@en .
+    
+:Facility a owl:Class ;
+    rdfs:comment "A Facility is used to define functions that are offered by Materials in an Organization in relation to a Space."@en ;
+    rdfs:label "Facility"@en .
+
+#################################################################
+#    Properties
+#################################################################
+
+:enacts a owl:ObjectProperty ;
+    rdfs:domain :OrganizationSpecification ;
+    rdfs:range :Organization ;
+    rdfs:inverseOf :defines ;
+    rdfs:comment "A relation that refers to an Organization that enacts an Organization Specification."@en ;
+    rdfs:label "enacts"@en .
+  
+:defines a owl:ObjectProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range :OrganizationSpecification ;
+    owl:inverseOf :enacts ;
+    rdfs:comment "A relation that refers to an Organization Specification that is enacted by an Organization."@en ;
+    rdfs:label "defines"@en .
+
+:hasGoal a owl:ObjectProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to an Organizational Goal of an Organization."@en ;
+    rdfs:label "has goal"@en .
+
+:hasValue a owl:ObjectProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range :OrganizationalValue ;
+    rdfs:comment "A relation that refers to an Organization Value of an Organization."@en ;
+    rdfs:label "has value"@en .
+      
+:providesRole a owl:ObjectProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range :Role ;
+    rdfs:comment "A relation that refers to a Role made available to Agents in the context of an Organization."@en ;
+    rdfs:label "provides role"@en .
+
+:proposesMission a owl:ObjectProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a Mission that can be executed in the context of an Organization."@en ;
+    rdfs:label "proposes mission"@en .
+    
+:proposesFacility a owl:ObjectProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range :Facility ;
+    rdfs:comment "A relation that refers to a Facility that can be played in the context of an Organization."@en ;
+    rdfs:label "proposes facility"@en .
+    
+:isSituatedOn a owl:ObjectProperty ;
+    schema:domainIncludes :Organization ;
+    schema:rangeIncludes [
+        a rdf:Alt ;
+        rdf:_1 :Agent ;
+        rdf:_2 :Artifact ] ;
+    rdfs:comment "An Organization is situated on Agents and Artifacts."@en ;
+    rdfs:label "is situated on"@en .
+
+:isMemberOf a owl:ObjectProperty ;
+    rdfs:domain :Agent ;
+    rdfs:range :Organization ;
+    rdfs:comment "An Agent is member of an Organization."@en ;
+    rdfs:label "is member of"@en .
+
+:isMaterialOf a owl:ObjectProperty ;
+    rdfs:domain :Artifact ;
+    rdfs:range :Organization ;
+    rdfs:comment "An Artifact is a material in an Organization."@en ;
+    rdfs:label "is material of"@en .

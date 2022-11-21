@@ -1,0 +1,195 @@
+@prefix ex: <http://example.org/> .
+@prefix hmas: <https://purl.org/hmas/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+#    Core Ontology
+#################################################################
+
+## Workspace
+ex:SwitzerlandWS a hmas:Workspace ;
+    hmas:contains [ a rdf:Bag ;
+        rdf:_1 ex:SL_Logistics ;
+        rdf:_3 ex:Alice ;
+        rdf:_4 ex:Bob ;
+        rdf:_5 ex:Carol ;
+        rdf:_6 ex:David ;
+        rdf:_7 ex:Elton ;
+        rdf:_13 ex:WarehouseStGallen ] .
+
+ex:FranceWS a hmas:Workspace ;
+    hmas:contains [ a rdf:Bag ;
+        rdf:_2 ex:FL_Logistics ;
+        rdf:_8 ex:Frank ;
+        rdf:_9 ex:Gabriel ;
+        rdf:_10 ex:Hellen ;
+        rdf:_11 ex:Igor ;
+        rdf:_12 ex:John ;
+        rdf:_14 ex:WarehouseLyon ;
+        rdf:_15 ex:WarehouseStEtienne ] .
+        
+## Agents
+ex:Alice a hmas:Agent ;
+    hmas:isContainedIn ex:SwitzerlandWS ;
+    hmas:isMemberOf ex:SL_Logistics .
+
+ex:Bob a hmas:Agent ;
+    hmas:isContainedIn ex:SwitzerlandWS ;
+    hmas:isMemberOf ex:SL_Logistics .
+
+ex:Carol a hmas:Agent ;
+    hmas:isContainedIn ex:SwitzerlandWS ;
+    hmas:isMemberOf ex:SL_Logistics .
+
+ex:David a hmas:Agent ;
+    hmas:isContainedIn ex:SwitzerlandWS ;
+    hmas:isMemberOf ex:SL_Logistics .
+
+ex:Elton a hmas:Agent ;
+    hmas:isContainedIn ex:SwitzerlandWS ;
+    hmas:isMemberOf ex:SL_Logistics .
+
+ex:Frank a hmas:Agent ;
+    hmas:isContainedIn ex:FranceWS ;
+    hmas:isMemberOf ex:FL_Logistics .
+
+ex:Gabriel a hmas:Agent ;
+    hmas:isContainedIn ex:FranceWS ;
+    hmas:isMemberOf ex:FL_Logistics .
+
+ex:Hellen a hmas:Agent ;
+    hmas:isContainedIn ex:FranceWS ;
+    hmas:isMemberOf ex:FL_Logistics .
+
+ex:Igor a hmas:Agent ;
+    hmas:isContainedIn ex:FranceWS ;
+    hmas:isMemberOf ex:FL_Logistics .
+
+ex:John a hmas:Agent ;
+    hmas:isContainedIn ex:FranceWS ;
+    hmas:isMemberOf ex:FL_Logistics .
+
+## Artifacts
+ex:WarehouseStGallen a hmas:Artifact ;
+    hmas:isContainedIn ex:SwitzerlandWS ;
+    hmas:isMaterialOf ex:SL_Logistics .
+    
+ex:WarehouseLyon a hmas:Artifact ;
+    hmas:isContainedIn ex:FranceWS ;
+    hmas:isMaterialOf ex:FL_Logistics .
+    
+ex:WarehouseStEtienne a hmas:Artifact ;
+    hmas:isContainedIn ex:FranceWS ;
+    hmas:isMaterialOf ex:FL_Logistics .
+
+#################################################################
+#    Regulation Ontology
+#################################################################
+
+## Organization Specification
+ex:Logistics a hmas:OrganizationSpecification ;
+    hmas:defines [ a rdf:Bag ;
+        rdf:_16 ex:SL_Logistics ;
+        rdf:_17 ex:FL_Logistics ] .
+
+## Organizational Goals
+ex:EnhancedCustomerService a hmas:OrganizationalGoal ;
+    rdfs:comment "Better handling of transportation and the overall logistics operation."@en ;
+    rdfs:label "enhanced customer service"@en .
+
+ex:EnhancedEfficiency a hmas:OrganizationalGoal ;
+    rdfs:comment "Increase the cost-effectiviness of the transportation system, reduce overhead costs and simplify the order processing."@en ;
+    rdfs:label "enhanced efficiency"@en .
+
+## Organizational Values
+ex:Commitmment a hmas:OrganizationalValue ;
+    rdfs:comment "Do everything you can to keep the organization promisses to the customers."@en ;
+    rdfs:label "commitmment"@en .
+
+ex:IntegrityRespect a hmas:OrganizationalValue ;
+    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
+    rdfs:label "integrity and respect"@en .
+    
+## Roles
+ex:HumanResourceOfficer a hmas:SocialRole .
+ex:FinanceOfficer a hmas:SocialRole .
+ex:AccountManager a hmas:SocialRole .
+ex:Planner a hmas:SocialRole .
+ex:Deliverer a hmas:SocialRole .
+
+## Missions
+ex:Hire a hmas:Mission .
+ex:ProcessPayment a hmas:Mission .
+ex:ProspectCustomer a hmas:Mission .
+ex:ScheduleDelivery a hmas:Mission .
+ex:Deliver a hmas:Mission .
+
+## Facility
+ex:DepotStGallen a hmas:Facility .
+ex:DepotLyon a hmas:Facility .
+ex:DepotStEtienne a hmas:Facility .
+
+## Organizations
+ex:SL_Logistics a hmas:Organization ;
+    hmas:enacts ex:Logistics ;
+    hmas:isContainedIn ex:SwitzerlandWS ;
+    hmas:hasGoal [ a rdf:Bag ;
+        rdf:_18 ex:EnhancedCustomerService ;
+        rdf:_19 ex:EnhancedEfficiency ] ;
+    hmas:hasValue [ a rdf:Bag ;
+        rdf:_20 ex:Commitmment ;
+        rdf:_21 ex:IntegrityRespect ] ;
+    hmas:providesRole [ a rdf:Bag ;
+        rdf:_22 ex:HumanResourceOfficer ;
+        rdf:_23 ex:FinanceOfficer ;
+        rdf:_24 ex:AccountManager ;
+        rdf:_25 ex:Planner ;
+        rdf:_26 ex:Deliverer ] ;
+    hmas:proposesMission [ a rdf:Bag ;
+        rdf:_27 ex:Hire ;
+        rdf:_28 ex:ProcessPayment ;
+        rdf:_29 ex:ProspectCustomer ;
+        rdf:_30 ex:ScheduleDelivery ;
+        rdf:_31 ex:Deliver ] ;
+    hmas:proposesFacility ex:DepotStGallen ;
+    hmas:isSituatedOn [ a rdf:Bag ;
+        rdf:_32 ex:Alice ;
+        rdf:_33 ex:Bob ;
+        rdf:_34 ex:Carol ;
+        rdf:_35 ex:David ;
+        rdf:_36 ex:Elton ] .
+        
+ex:FL_Logistics a hmas:Organization ;
+    hmas:enacts ex:Logistics ;
+    hmas:isContainedIn ex:FranceWS ;
+    hmas:hasGoal [ a rdf:Bag ;
+        rdf:_37 ex:EnhancedCustomerService ;
+        rdf:_38 ex:EnhancedEfficiency ] ;
+    hmas:hasValue [ a rdf:Bag ;
+        rdf:_39 ex:Commitmment ;
+        rdf:_40 ex:IntegrityRespect ] ;
+    hmas:providesRole [ a rdf:Bag ;
+        rdf:_41 ex:HumanResourceOfficer ;
+        rdf:_42 ex:FinanceOfficer ;
+        rdf:_43 ex:AccountManager ;
+        rdf:_44 ex:Planner ;
+        rdf:_45 ex:Deliverer ] ;
+    hmas:proposesMission [ a rdf:Bag ;
+        rdf:_46 ex:Hire ;
+        rdf:_47 ex:ProcessPayment ;
+        rdf:_48 ex:ProspectCustomer ;
+        rdf:_49 ex:ScheduleDelivery ;
+        rdf:_50 ex:Deliver ] ;
+    hmas:proposesFacility [ a rdf:Bag ;
+        rdf:_51 ex:DepotLyon ;
+        rdf:_52 ex:DepotStEtienne ] ;
+    hmas:isSituatedOn [ a rdf:Bag ;
+        rdf:_53 ex:Frank ;
+        rdf:_54 ex:Gabriel ;
+        rdf:_55 ex:Hellen ;
+        rdf:_56 ex:Igor ;
+        rdf:_57 ex:John ;
+        rdf:_58 ex:WarehouseLyon ;
+        rdf:_59 ex:WarehouseStEtienne ] .
