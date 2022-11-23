@@ -1,11 +1,11 @@
 # Create an Organization
 
 ## Description
-John has experience working in a successful specialized industrial logistics enterprise in Switzerland, the SL Logistics. He sees a business opportunity in providing the same service in France. Because of his own experience and the success of the SL Logistics, John decides to use the SL Logistics as a model to organize his own enterprise, the FL Logistics.
+John has experience working in a successful specialized industrial logistics enterprise, the SL Logistics. He sees a business opportunity in providing the same logistics services. Because of his own experience and the success of the SL Logistics, John intends to use the SL Logistics organization model as reference to organize his own enterprise, the FL Logistics.
 
-John, however, is unsure whether the company is viable and that business and organizational model are adequate for France. Thus, he produces a comparative analysis among the SL Logistics, other similar enterprises in France but whose business and organizational models are based on different assumptions, and other theoretical models (i.e., not yet enacted models). He concludes that the SL Logistics is viable and adequate for France, yet he will need to increase the number of warehouses due to the covered area in France.
+John, however, is unsure whether the organizational model is adequate in his case. Thus, he conducts a comparative analysis between the SL Logistics organizational model with similar enterprises but whose organizational model are based on different assumptions and some theoretical models (i.e., not yet enacted models). He concludes that the SL Logistics organizational model is adequate to create his enterprise.
 
-The main aspect of the SL Logistics that motivated John to copy the SL Logistics business and organizational model is the company culture reflected in their organizational values and goals:
+The main aspect of the SL Logistics that motivated John to copy its organizational model is the enterprise culture reflected in its organizational values and goals:
 
 * **Organizational Values**
   + _Commitment_: Do everything you can to keep the organization promisses to the customers.
@@ -14,7 +14,7 @@ The main aspect of the SL Logistics that motivated John to copy the SL Logistics
   + _Enhanced Customer Service_: Better handling of transportation and the overall logistics operation.
   + _Enhanced Efficiency_: Increase the cost-effectiviness of the transportation system, reduce overhead costs and simplify the order processing.
 
-Besides, the FL Logistics mirrors the composition of the SL Logistics and provides the following roles and responsibilities:
+Thus, the FL Logistics mirrors the composition of the SL Logistics and provides the following roles and responsibilities:
   1. _Human resources officer_: Hire, develop and look after employees.
   2. _Finance officer_: Ensure payable invoices are processed and payed, and receivable invoices payments are received.
   3. _Account manager_: Build and maintain a relationship with customers. Prospect and sell logistic services to industrial enterprises in France.
@@ -22,19 +22,15 @@ Besides, the FL Logistics mirrors the composition of the SL Logistics and provid
   5. _Transporter_: Transport goods between customers and logistics warehouses, or vice-versa.
   6. _Collector_: Collect goods in customers or logistics warehouses according to the plan elaborated by the _Planner_.
   7. _Deliverer_: Deliver goods to customers or logistics warehouses according to the plan elaborated by the _Planner_.
-  
-The FL Logistics has several warehouses distributed all over France to facilitate and streamline the collect and delivery of goods.
 
 ## Competency Questions
 
-| ID | Question in Natural Language                                                        |
------|-------------------------------------------------------------------------------------------------------------------------|
-| q1 | How can someone copy an enterprise X's business and organizational model for creating a new enterprise?                 |
-| q2 | How can someone discover the enterprises that follows a different business and organizational model than enterprise X?  |
-| q3 | How can someone create an enterprise based on an existing business and organizational model?                            |
-| q4 | What are the elements of the business and organizational models of the enterprise X?                                    |
-| q5 | What are the other enterprises that enact enterprise X's business and organizational model and are situated on Y?       |
-| q6 | What are the enterprises that are situated on Y?                                                                        |
+| ID | Question in Natural Language | Example |
+|----|------------------------------|---------|
+| q1 | How can someone copy an enterprise X's organizational model for creating a new enterprise?                           | How can John replicate the SL Logistics' organizational model to create the FL Logistics? |
+| q2 | How can someone discover the enterprises that follows a different organizational model to compare with enterprise X? | How can John discover similar enterprises whose organizational model are different to compare with SL Logistics' organizational model?                                |
+| q3 | How to restrict the discovery of enterprises with the same organizational model and situated on Y?                   | How can John discover enterprises with the same organizational model than SL Logistics that are accessible to him?                                                    |
+| q4 | How can someone create an enterprise based on an existing organizational model?                                      | If John identifies that the SL Logistics' organizational model is not adequate, how can he create a new enterprise from a theoretical model (i.e., not yet enacted)?  |
 
 ## Glossary
 
@@ -42,14 +38,14 @@ The FL Logistics has several warehouses distributed all over France to facilitat
 * **Organization**: An Organization is an entity situated on Agents and Artifacts, and regulated by a regulation system.
 * **Organizational Goal**: An Organizational Goal is an objective that outlines expected results and guide Organization members' efforts.
 * **Organizational Value**: An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an organization.
+* **Situated Organization**: An Organization is situated through its Members and Materials.
 * **Member**: A Member refers to an Agent that belongs to an Organization.
 * **Material**: A Material refers to an Artifact that belongs to an Organization.
 * **Role**: A Role is used to define the position that Agents can adopt in an Organization.
-* **Social Role**: A Social Role is used to define the position that Agents can adopt in an Organization in relation to a Group.
-* **Spatial Role**: A Spatial Role is used to define the position that Agents can adopt in an Organization in relation to a Space.
 * **Mission**: A Mission gathers Organizational Goals that can be achieved by Agents in an Organization in relation to a Social Activity.
 * **Facility**: A Facility is used to define functions that are offered by Materials in an Organization in relation to a Space.
 
 ## Recommendations
 
-None
+1. An Organization enacts one and only one Organization Specification.
+2. An Organization Specification cannot be enacted partially by an Organization.

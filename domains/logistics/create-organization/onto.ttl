@@ -4,7 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/>.
+@prefix schema: <http://schema.org/> .
 
 #################################################################
 #    Classes
@@ -30,14 +30,6 @@
     rdfs:comment "A Role is used to define the position that Agents can adopt in an Organization."@en ;
     rdfs:label "Role"@en .
 
-:SocialRole a owl:Class ;
-    rdfs:comment "A Social Role is used to define the position that Agents can adopt in an Organization in relation to a Group."@en ;
-    rdfs:label "Social Role"@en .
-
-:SpatialRole a owl:Class ;
-    rdfs:comment "A Spatial Role is used to define the position that Agents can adopt in an Organization in relation to a Space."@en ;
-    rdfs:label "Spatial Role"@en .
-
 :Mission a owl:Class ;
     rdfs:comment "A Mission gathers Organizational Goals that can be achieved by Agents in an Organization in relation to a Social Activity."@en ;
     rdfs:label "Mission"@en .
@@ -51,46 +43,46 @@
 #################################################################
 
 :enacts a owl:ObjectProperty ;
-    rdfs:domain :OrganizationSpecification ;
-    rdfs:range :Organization ;
+    schema:domainIncludes :OrganizationSpecification ;
+    schema:rangeIncludes :Organization ;
     rdfs:inverseOf :defines ;
     rdfs:comment "A relation that refers to an Organization that enacts an Organization Specification."@en ;
     rdfs:label "enacts"@en .
   
 :defines a owl:ObjectProperty ;
-    rdfs:domain :Organization ;
-    rdfs:range :OrganizationSpecification ;
+    schema:domainIncludes :Organization ;
+    schema:rangeIncludes :OrganizationSpecification ;
     owl:inverseOf :enacts ;
     rdfs:comment "A relation that refers to an Organization Specification that is enacted by an Organization."@en ;
     rdfs:label "defines"@en .
 
 :hasGoal a owl:ObjectProperty ;
-    rdfs:domain :Organization ;
-    rdfs:range :OrganizationalGoal ;
+    schema:domainIncludes :Organization ;
+    schema:rangeIncludes :OrganizationalGoal ;
     rdfs:comment "A relation that refers to an Organizational Goal of an Organization."@en ;
     rdfs:label "has goal"@en .
 
 :hasValue a owl:ObjectProperty ;
-    rdfs:domain :Organization ;
-    rdfs:range :OrganizationalValue ;
+    schema:domainIncludes :Organization ;
+    schema:rangeIncludes :OrganizationalValue ;
     rdfs:comment "A relation that refers to an Organization Value of an Organization."@en ;
     rdfs:label "has value"@en .
       
 :providesRole a owl:ObjectProperty ;
-    rdfs:domain :Organization ;
-    rdfs:range :Role ;
+    schema:domainIncludes :Organization ;
+    schema:rangeIncludes :Role ;
     rdfs:comment "A relation that refers to a Role made available to Agents in the context of an Organization."@en ;
     rdfs:label "provides role"@en .
 
 :proposesMission a owl:ObjectProperty ;
-    rdfs:domain :Organization ;
-    rdfs:range :Mission ;
+    schema:domainIncludes :Organization ;
+    schema:rangeIncludes :Mission ;
     rdfs:comment "A relation that refers to a Mission that can be executed in the context of an Organization."@en ;
     rdfs:label "proposes mission"@en .
     
 :proposesFacility a owl:ObjectProperty ;
-    rdfs:domain :Organization ;
-    rdfs:range :Facility ;
+    schema:domainIncludes :Organization ;
+    schema:rangeIncludes :Facility ;
     rdfs:comment "A relation that refers to a Facility that can be played in the context of an Organization."@en ;
     rdfs:label "proposes facility"@en .
     
@@ -101,13 +93,13 @@
     rdfs:label "is situated on"@en .
 
 :isMemberOf a owl:ObjectProperty ;
-    rdfs:domain :Agent ;
-    rdfs:range :Organization ;
-    rdfs:comment "A Member refers to an Agent that belongs to an Organization."@en ;
+    schema:domainIncludes :Agent ;
+    schema:rangeIncludes :Organization ;
+    rdfs:comment "An Agent is member of an Organization."@en ;
     rdfs:label "is member of"@en .
 
 :isMaterialOf a owl:ObjectProperty ;
-    rdfs:domain :Artifact ;
-    rdfs:range :Organization ;
-    rdfs:comment "A Material refers to an Artifact that belongs to an Organization."@en ;
+    schema:domainIncludes :Artifact ;
+    schema:rangeIncludes :Organization ;
+    rdfs:comment "An Artifact is part of an Organization."@en ;
     rdfs:label "is material of"@en .

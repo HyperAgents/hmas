@@ -44,6 +44,11 @@ ex:WarehouseStEtienne a hmas:Artifact ;
 
 ## Organization Specification
 ex:Logistics a hreg:OrganizationSpecification ;
+    hreg:hasGoal ex:EnhancedCustomerService, ex:EnhancedEfficiency ;
+    hreg:hasValue ex:Commitment, ex:IntegrityRespect ;
+    hreg:providesRole ex:HumanResourceOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Transporter, ex:Collector, ex:Deliverer ;
+    hreg:proposesMission ex:HumanResourceManagement, ex:FinancialManagement, ex:ComercialManagement, ex:PlanningManagement, ex:TransportGoods, ex:CollectGoods, ex:DeliverGoods ;
+    hreg:proposesFacility ex:PickingArea, ex:ReceivingArea ;
     hreg:defines ex:SL_Logistics, ex:FL_Logistics .
 
 ## Organizational Goals
@@ -65,13 +70,13 @@ ex:IntegrityRespect a hreg:OrganizationalValue ;
     rdfs:label "Integrity and Respect"@en .
     
 ## Roles
-ex:HumanResourceOfficer a hreg:SocialRole .
-ex:FinanceOfficer a hreg:SocialRole .
-ex:AccountManager a hreg:SocialRole .
-ex:Planner a hreg:SocialRole .
-ex:Transporter a hreg:SocialRole .
-ex:Collector a hreg:SpatialRole .
-ex:Deliverer a hreg:SpatialRole .
+ex:HumanResourceOfficer a hreg:Role .
+ex:FinanceOfficer a hreg:Role .
+ex:AccountManager a hreg:Role .
+ex:Planner a hreg:Role .
+ex:Transporter a hreg:Role .
+ex:Collector a hreg:Role .
+ex:Deliverer a hreg:Role .
 
 ## Missions
 ex:HumanResourceManagement a hreg:Mission .
@@ -89,18 +94,8 @@ ex:ReceivingArea a hreg:Facility .
 ## Organizations
 ex:SL_Logistics a hreg:Organization ;
     hreg:enacts ex:Logistics ;
-    hreg:hasGoal ex:EnhancedCustomerService, ex:EnhancedEfficiency ;
-    hreg:hasValue ex:Commitment, ex:IntegrityRespect ;
-    hreg:providesRole ex:HumanResourceOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Transporter, ex:Collector, ex:Deliverer ;
-    hreg:proposesMission ex:HumanResourceManagement, ex:FinancialManagement, ex:ComercialManagement, ex:PlanningManagement, ex:TransportGoods, ex:CollectGoods, ex:DeliverGoods ;
-    hreg:proposesFacility ex:PickingArea, ex:ReceivingArea ;
     hreg:isSituatedOn ex:Alice, ex:Bob, ex:Carol, ex:David, ex:Elton, ex:WarehouseStGallen .
         
 ex:FL_Logistics a hreg:Organization ;
     hreg:enacts ex:Logistics ;
-    hreg:hasGoal ex:EnhancedCustomerService, ex:EnhancedEfficiency ;
-    hreg:hasValue ex:Commitment, ex:IntegrityRespect ;
-    hreg:providesRole ex:HumanResourceOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Transporter, ex:Collector, ex:Deliverer ;
-    hreg:proposesMission ex:HumanResourceManagement, ex:FinancialManagement, ex:ComercialManagement, ex:PlanningManagement, ex:TransportGoods, ex:CollectGoods, ex:DeliverGoods ;
-    hreg:proposesFacility ex:PickingArea, ex:ReceivingArea ;
     hreg:isSituatedOn ex:Frank, ex:Gabriel, ex:Hellen, ex:Igor, ex:Jane, ex:WarehouseLyon, ex:WarehouseStEtienne .
