@@ -46,8 +46,8 @@ ex:WarehouseStEtienne a hmas:Artifact ;
 ex:Logistics a hreg:OrganizationSpecification ;
     hreg:hasGoal ex:EnhancedCustomerService, ex:EnhancedEfficiency ;
     hreg:hasValue ex:Commitment, ex:IntegrityRespect ;
-    hreg:providesRole ex:HumanResourceOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Transporter, ex:Collector, ex:Deliverer ;
-    hreg:proposesMission ex:HumanResourceManagement, ex:FinancialManagement, ex:ComercialManagement, ex:PlanningManagement, ex:TransportGoods, ex:CollectGoods, ex:DeliverGoods ;
+    hreg:providesRole ex:HumanResourceOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Carrier, ex:Collector, ex:Deliverer ;
+    hreg:proposesMission ex:HumanResourceManagement, ex:FinancialManagement, ex:ComercialManagement, ex:PlanningManagement, ex:CarryGoods, ex:CollectGoods, ex:DeliverGoods ;
     hreg:proposesFacility ex:PickingArea, ex:ReceivingArea ;
     hreg:defines ex:SL_Logistics, ex:FL_Logistics .
 
@@ -74,7 +74,7 @@ ex:HumanResourceOfficer a hreg:Role .
 ex:FinanceOfficer a hreg:Role .
 ex:AccountManager a hreg:Role .
 ex:Planner a hreg:Role .
-ex:Transporter a hreg:Role .
+ex:Carrier a hreg:Role .
 ex:Collector a hreg:Role .
 ex:Deliverer a hreg:Role .
 
@@ -83,7 +83,7 @@ ex:HumanResourceManagement a hreg:Mission .
 ex:FinancialManagement a hreg:Mission .
 ex:ComercialManagement a hreg:Mission .
 ex:PlanningManagement a hreg:Mission .
-ex:TransportGoods a hreg:Mission .
+ex:CarryGoods a hreg:Mission .
 ex:CollectGoods a hreg:Mission .
 ex:DeliverGoods a hreg:Mission .
 

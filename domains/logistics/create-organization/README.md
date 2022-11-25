@@ -1,9 +1,9 @@
 # Create an Organization
 
 ## Description
-John has experience working in a successful specialized industrial logistics enterprise, the SL Logistics. He sees a business opportunity in providing the same logistics services. Because of his own experience and the success of the SL Logistics, John intends to use the SL Logistics organization model as reference to organize his own enterprise, the FL Logistics.
+John has experience working in a successful specialized industrial logistics enterprise, the SL Logistics. He sees a business opportunity in providing the same logistics services and wants to create his own enterprise, the FL Logistics. Because of his own experience and the success of the SL Logistics, John intends to use the SL Logistics organization model as reference to organize the FL Logistics.
 
-John, however, is unsure whether the organizational model is adequate in his case. Thus, he conducts a comparative analysis between the SL Logistics organizational model with similar enterprises but whose organizational model are based on different assumptions and some theoretical models (i.e., not yet enacted models). He concludes that the SL Logistics organizational model is adequate to create his enterprise.
+John, however, is unsure whether the SL Logistics' organizational model is adequate in his case. Thus, he conducts a comparative analysis between the SL Logistics organizational model with similar enterprises but whose organizational model are based on different assumptions and some theoretical models (i.e., not yet enacted models). He concludes that the SL Logistics' organizational model is adequate to create the FL Logistics enterprise.
 
 The main aspect of the SL Logistics that motivated John to copy its organizational model is the enterprise culture reflected in its organizational values and goals:
 
@@ -14,12 +14,12 @@ The main aspect of the SL Logistics that motivated John to copy its organization
   + _Enhanced Customer Service_: Better handling of transportation and the overall logistics operation.
   + _Enhanced Efficiency_: Increase the cost-effectiviness of the transportation system, reduce overhead costs and simplify the order processing.
 
-Thus, the FL Logistics mirrors the composition of the SL Logistics and provides the following roles and responsibilities:
+Additionally, the FL Logistics will mirror the composition of the SL Logistics and provides the following roles and responsibilities:
   1. _Human resources officer_: Hire, develop and look after employees.
   2. _Finance officer_: Ensure payable invoices are processed and payed, and receivable invoices payments are received.
   3. _Account manager_: Build and maintain a relationship with customers. Prospect and sell logistic services to industrial enterprises in France.
   4. _Planner_: Plan the optimized delivery schedule according to the customers' requirements and constraints.
-  5. _Transporter_: Transport goods between customers and logistics warehouses, or vice-versa.
+  5. _Carrier_: Carry goods between customers and logistics warehouses, or vice-versa.
   6. _Collector_: Collect goods in customers or logistics warehouses according to the plan elaborated by the _Planner_.
   7. _Deliverer_: Deliver goods to customers or logistics warehouses according to the plan elaborated by the _Planner_.
 
@@ -47,5 +47,5 @@ Thus, the FL Logistics mirrors the composition of the SL Logistics and provides 
 
 ## Recommendations
 
-1. An Organization enacts one and only one Organization Specification.
-2. An Organization Specification cannot be enacted partially by an Organization.
+1. To be executable, an Organization has to fully enact an Organization Specification.
+2. An Organization enacts one and only one Organization Specification.
