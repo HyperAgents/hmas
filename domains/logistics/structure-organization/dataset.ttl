@@ -1,0 +1,123 @@
+@prefix ex: <http://example.org/> .
+@prefix hmas: <https://purl.org/hmas/core#> .
+@prefix hreg: <https://purl.org/hmas/regulation#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+#    Core Ontology
+#################################################################
+
+## Agents
+ex:Frank a hmas:Agent ;
+    hreg:isMemberOf ex:FL_Logistics ;
+    hreg:plays ex:FL_HumanResourcesOfficer .
+ex:Gabriel a hmas:Agent ;
+    hreg:isMemberOf ex:FL_Logistics ;
+    hreg:plays ex:FL_FinanceOfficer .
+ex:Hellen a hmas:Agent ;
+    hreg:isMemberOf ex:FL_Logistics ;
+    hreg:plays ex:FL_AccountManager .
+ex:Igor a hmas:Agent ;
+    hreg:isMemberOf ex:FL_Logistics ;
+    hreg:plays ex:FL_Planner .
+ex:Jane a hmas:Agent ;
+    hreg:isMemberOf ex:FL_Logistics ;
+    hreg:plays ex:FL_Carrier .
+
+## Artifacts
+ex:WarehouseLyon a hmas:Artifact ;
+    hreg:isMaterialOf ex:FL_Logistics .
+ex:WarehouseStEtienne a hmas:Artifact ;
+    hreg:isMaterialOf ex:FL_Logistics .
+
+#################################################################
+#    Regulation Ontology
+#################################################################
+
+## Organization Specification
+ex:Logistics a hreg:OrganizationSpecification ;
+    hreg:defines ex:FL_Logistics .
+
+## Organizational Goals
+ex:EnhancedCustomerService a hreg:OrganizationalGoal ;
+    rdfs:comment "Better handling of transportation and the overall logistics operation."@en ;
+    rdfs:label "Enhanced Customer Service"@en .
+
+ex:EnhancedEfficiency a hreg:OrganizationalGoal ;
+    rdfs:comment "Increase the cost-effectiviness of the transportation system, reduce overhead costs and simplify the order processing."@en ;
+    rdfs:label "Enhanced Efficiency"@en .
+
+## Organizational Values
+ex:Commitment a hreg:OrganizationalValue ;
+    rdfs:comment "Do everything you can to keep the organization promisses to the customers."@en ;
+    rdfs:label "Commitment"@en .
+
+ex:IntegrityRespect a hreg:OrganizationalValue ;
+    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
+    rdfs:label "Integrity and Respect"@en .
+
+## Roles
+ex:FL_HumanResourcesOfficer a hreg:SocialRole ;
+    hreg:belongsTo ex:FL_HumanResourcesDepartment .
+ex:FL_FinanceOfficer a hreg:SocialRole ;
+    hreg:belongsTo ex:FL_FinanceDeparment .
+ex:FL_AccountManager a hreg:SocialRole ;
+    hreg:belongsTo ex:FL_CommercialDepartment .
+ex:FL_Planner a hreg:SocialRole ;
+    hreg:belongsTo ex:FL_PlanningDepartment ;
+    hreg:isLinkedTo ex:FL_Carrier, ex:FL_Collector, ex:FL_Deliverer .
+ex:FL_Carrier a hreg:SocialRole ;
+    hreg:belongsTo ex:FL_ShippingDepartment ;
+    hreg:isLinkedTo ex:Planner .
+ex:FL_Collector a hreg:Role ;
+    hreg:belongsTo ex:FL_ShippingDepartment ;
+    hreg:isLinkedTo ex:Planner .
+ex:FL_Deliverer a hreg:Role ;
+    hreg:belongsTo ex:FL_ShippingDepartment ;
+    hreg:isLinkedTo ex:Planner .
+
+## Group
+ex:FL_HumanResourcesDepartment a hreg:Group ;
+    hreg:structures ex:FL_Logistics ;
+    hreg:relatesTo ex:FL_AdministrativeDepartment .
+ex:FL_FinanceDeparment a hreg:Group ;
+    hreg:structures ex:FL_Logistics ;
+    hreg:relatesTo ex:AdministrativeDepartment .
+ex:FL_CommercialDepartment a hreg:Group ;
+    hreg:structures ex:FL_Logistics ;
+    hreg:relatesTo ex:FL_OperationsDepartment .
+ex:FL_PlanningDepartment a hreg:Group ;
+    hreg:structures ex:FL_Logistics ;
+    hreg:relatesTo ex:FL_OperationsDepartment .
+ex:FL_ShippingDepartment a hreg:Group ;
+    hreg:structures ex:FL_Logistics ;
+    hreg:relatesTo ex:FL_OperationsDepartment .
+ex:FL_AdministrativeDepartment a hreg:Group ;
+    hreg:relatesTo ex:FL_HumanResourcesDepartment, ex:FL_FinanceDeparment .
+ex:FL_OperationsDepartment a hreg:Group ;
+    hreg:relatesTo ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment .
+
+## Missions
+ex:FL_HumanResourcesManagement a hreg:Mission .
+ex:FL_FinancialManagement a hreg:Mission .
+ex:FL_CommercialManagement a hreg:Mission .
+ex:FL_PlanningManagement a hreg:Mission .
+ex:FL_CarryGoods a hreg:Mission .
+ex:FL_CollectGoods a hreg:Mission .
+ex:FL_DeliverGoods a hreg:Mission .
+
+## Facility
+ex:FL_PickingArea a hreg:Facility .
+ex:FL_ReceivingArea a hreg:Facility .
+
+## Organizations      
+ex:FL_Logistics a hreg:Organization ;
+    hreg:enacts ex:Logistics ;
+    hreg:hasGoal ex:EnhancedCustomerService, ex:EnhancedEfficiency ;
+    hreg:hasValue ex:Commitment, ex:IntegrityRespect ;
+    hreg:providesRole ex:FL_HumanResourcesOfficer, ex:FL_FinanceOfficer, ex:FL_AccountManager, ex:FL_Planner, ex:FL_Carrier, ex:FL_Collector, ex:FL_Deliverer ;
+    hreg:isStructuredBy ex:FL_HumanResourcesDepartment, ex:FL_FinanceDeparment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment, ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment ;
+    hreg:proposesMission ex:FL_HumanResourcesManagement, ex:FL_FinancialManagement, ex:FL_CommercialManagement, ex:FL_PlanningManagement, ex:FL_CarryGoods, ex:FL_CollectGoods, ex:FL_DeliverGoods ;
+    hreg:proposesFacility ex:FL_PickingArea, ex:FL_ReceivingArea ;
+    hreg:isSituatedOn ex:Frank, ex:Gabriel, ex:Hellen, ex:Igor, ex:Jane, ex:WarehouseLyon, ex:WarehouseStEtienne .

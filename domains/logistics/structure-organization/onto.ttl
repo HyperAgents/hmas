@@ -1,0 +1,61 @@
+@base <https://purl.org/hmas/regulation> .
+@prefix : <#> .
+@prefix hmas: <https://purl.org/hmas/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+#################################################################
+#    Classes
+#################################################################
+
+:SocialRole a owl:Class ;
+    rdfs:comment "A Social Role is used to define the position that Agents can adopt in an Organization in relation to a Group."@en ;
+    rdfs:label "Social Role"@en .
+    
+:Group a owl:Class ;
+    rdfs:comment "A Group is a set of Agents that can exist in the structure of an Organization."@en ;
+    rdfs:label "Group"@en .
+    
+#################################################################
+#    Properties
+#################################################################
+
+:structures a owl:ObjectProperty ;
+    schema:domainIncludes :Group ;
+    schema:rangeIncludes :Organization ;
+    rdfs:inverseOf :isStructuredBy ;
+    rdfs:comment "A relation that refers to a Group that structures an Organization."@en ;
+    rdfs:label "structures"@en .
+
+:isStructuredBy a owl:ObjectProperty ;
+    schema:domainIncludes :Organization ;
+    schema:rangeIncludes :Group ;
+    rdfs:inverseOf :structures ;
+    rdfs:comment "A relation that refers to an Organization that is structured by a Group."@en ;
+    rdfs:label "is structured by"@en .
+    
+:plays a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Agent ;
+    schema:rangeIncludes :SocialRole ;
+    rdfs:comment "A relation that refers to a Social Role that an Agent plays in the context of an Organization."@en ;
+    rdfs:label "plays"@en .
+
+:belongsTo a owl:ObjectProperty ;
+    schema:domainIncludes :SocialRole ;
+    schema:rangeIncludes :Group ;
+    rdfs:comment "A relation that refers to a Social Role that is part of a Group."@en ;
+    rdfs:label "belongs to"@en .
+
+:isLinkedTo a owl:ObjectProperty ;
+    schema:domainIncludes :SocialRole ;
+    schema:rangeIncludes :SocialRole ;
+    rdfs:comment "A relation that refers to a relation between Social Roles."@en ;
+    rdfs:label "is linked to"@en .
+    
+:relatesTo a owl:ObjectProperty ;
+    schema:domainIncludes :Group ;
+    schema:rangeIncludes :Group ;
+    rdfs:comment "A relation that refers to a relation between Groups."@en ;
+    rdfs:label "relates to"@en .
