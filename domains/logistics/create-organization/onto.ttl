@@ -43,15 +43,15 @@
 #################################################################
 
 :enacts a owl:ObjectProperty ;
-    schema:domainIncludes :OrganizationSpecification ;
-    schema:rangeIncludes :Organization ;
+    schema:domainIncludes :Organization ;
+    schema:rangeIncludes :OrganizationSpecification ;
     rdfs:inverseOf :defines ;
     rdfs:comment "A relation that refers to an Organization that enacts an Organization Specification."@en ;
     rdfs:label "enacts"@en .
   
 :defines a owl:ObjectProperty ;
-    schema:domainIncludes :Organization ;
-    schema:rangeIncludes :OrganizationSpecification ;
+    schema:domainIncludes :OrganizationSpecification ;
+    schema:rangeIncludes :Organization ;
     owl:inverseOf :enacts ;
     rdfs:comment "A relation that refers to an Organization Specification that is enacted by an Organization."@en ;
     rdfs:label "defines"@en .

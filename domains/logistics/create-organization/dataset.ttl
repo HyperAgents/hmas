@@ -10,33 +10,33 @@
 
 ## Agents
 ex:Alice a hmas:Agent ;
-    hreg:isMemberOf :SL_Logistics .
+    hreg:isMemberOf ex:SL_Logistics .
 ex:Bob a hmas:Agent ;
-    hreg:isMemberOf :SL_Logistics .
+    hreg:isMemberOf ex:SL_Logistics .
 ex:Carol a hmas:Agent ;
-    hreg:isMemberOf :SL_Logistics .
+    hreg:isMemberOf ex:SL_Logistics .
 ex:David a hmas:Agent ;
-    hreg:isMemberOf :SL_Logistics .
+    hreg:isMemberOf ex:SL_Logistics .
 ex:Elton a hmas:Agent ;
-    hreg:isMemberOf :SL_Logistics .
+    hreg:isMemberOf ex:SL_Logistics .
 ex:Frank a hmas:Agent ;
-    hreg:isMemberOf :FL_Logistics .
+    hreg:isMemberOf ex:FL_Logistics .
 ex:Gabriel a hmas:Agent ;
-    hreg:isMemberOf :FL_Logistics .
+    hreg:isMemberOf ex:FL_Logistics .
 ex:Hellen a hmas:Agent ;
-    hreg:isMemberOf :FL_Logistics .
+    hreg:isMemberOf ex:FL_Logistics .
 ex:Igor a hmas:Agent ;
-    hreg:isMemberOf :FL_Logistics .
+    hreg:isMemberOf ex:FL_Logistics .
 ex:Jane a hmas:Agent ;
-    hreg:isMemberOf :FL_Logistics .
+    hreg:isMemberOf ex:FL_Logistics .
 
 ## Artifacts
 ex:WarehouseStGallen a hmas:Artifact ;
-    hreg:isMaterialOf :SL_Logistics .
+    hreg:isMaterialOf ex:SL_Logistics .
 ex:WarehouseLyon a hmas:Artifact ;
-    hreg:isMaterialOf :FL_Logistics .
+    hreg:isMaterialOf ex:FL_Logistics .
 ex:WarehouseStEtienne a hmas:Artifact ;
-    hreg:isMaterialOf :FL_Logistics .
+    hreg:isMaterialOf ex:FL_Logistics .
 
 #################################################################
 #    Regulation Ontology
@@ -44,11 +44,6 @@ ex:WarehouseStEtienne a hmas:Artifact ;
 
 ## Organization Specification
 ex:Logistics a hreg:OrganizationSpecification ;
-    hreg:hasGoal ex:EnhancedCustomerService, ex:EnhancedEfficiency ;
-    hreg:hasValue ex:Commitment, ex:IntegrityRespect ;
-    hreg:providesRole ex:HumanResourceOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Carrier, ex:Collector, ex:Deliverer ;
-    hreg:proposesMission ex:HumanResourceManagement, ex:FinancialManagement, ex:ComercialManagement, ex:PlanningManagement, ex:CarryGoods, ex:CollectGoods, ex:DeliverGoods ;
-    hreg:proposesFacility ex:PickingArea, ex:ReceivingArea ;
     hreg:defines ex:SL_Logistics, ex:FL_Logistics .
 
 ## Organizational Goals
@@ -70,32 +65,58 @@ ex:IntegrityRespect a hreg:OrganizationalValue ;
     rdfs:label "Integrity and Respect"@en .
     
 ## Roles
-ex:HumanResourceOfficer a hreg:Role .
-ex:FinanceOfficer a hreg:Role .
-ex:AccountManager a hreg:Role .
-ex:Planner a hreg:Role .
-ex:Carrier a hreg:Role .
-ex:Collector a hreg:Role .
-ex:Deliverer a hreg:Role .
+ex:SL_HumanResourcesOfficer a hreg:Role .
+ex:SL_FinanceOfficer a hreg:Role .
+ex:SL_AccountManager a hreg:Role .
+ex:SL_Planner a hreg:Role .
+ex:SL_Carrier a hreg:Role .
+ex:SL_Collector a hreg:Role .
+ex:SL_Deliverer a hreg:Role .
+ex:FL_HumanResourcesOfficer a hreg:Role .
+ex:FL_FinanceOfficer a hreg:Role .
+ex:FL_AccountManager a hreg:Role .
+ex:FL_Planner a hreg:Role .
+ex:FL_Carrier a hreg:Role .
+ex:FL_Collector a hreg:Role .
+ex:FL_Deliverer a hreg:Role .
 
 ## Missions
-ex:HumanResourceManagement a hreg:Mission .
-ex:FinancialManagement a hreg:Mission .
-ex:ComercialManagement a hreg:Mission .
-ex:PlanningManagement a hreg:Mission .
-ex:CarryGoods a hreg:Mission .
-ex:CollectGoods a hreg:Mission .
-ex:DeliverGoods a hreg:Mission .
+ex:SL_HumanResourcesManagement a hreg:Mission .
+ex:SL_FinancialManagement a hreg:Mission .
+ex:SL_CommercialManagement a hreg:Mission .
+ex:SL_PlanningManagement a hreg:Mission .
+ex:SL_CarryGoods a hreg:Mission .
+ex:SL_CollectGoods a hreg:Mission .
+ex:SL_DeliverGoods a hreg:Mission .
+ex:FL_HumanResourcesManagement a hreg:Mission .
+ex:FL_FinancialManagement a hreg:Mission .
+ex:FL_CommercialManagement a hreg:Mission .
+ex:FL_PlanningManagement a hreg:Mission .
+ex:FL_CarryGoods a hreg:Mission .
+ex:FL_CollectGoods a hreg:Mission .
+ex:FL_DeliverGoods a hreg:Mission .
 
 ## Facility
-ex:PickingArea a hreg:Facility .
-ex:ReceivingArea a hreg:Facility .
+ex:SL_PickingArea a hreg:Facility .
+ex:SL_ReceivingArea a hreg:Facility .
+ex:FL_PickingArea a hreg:Facility .
+ex:FL_ReceivingArea a hreg:Facility .
 
 ## Organizations
 ex:SL_Logistics a hreg:Organization ;
     hreg:enacts ex:Logistics ;
+    hreg:hasGoal ex:EnhancedCustomerService, ex:EnhancedEfficiency ;
+    hreg:hasValue ex:Commitment, ex:IntegrityRespect ;
+    hreg:providesRole ex:SL_HumanResourcesOfficer, ex:SL_FinanceOfficer, ex:SL_AccountManager, ex:SL_Planner, ex:SL_Carrier, ex:SL_Collector, ex:SL_Deliverer ;
+    hreg:proposesMission ex:SL_HumanResourcesManagement, ex:SL_FinancialManagement, ex:SL_CommercialManagement, ex:SL_PlanningManagement, ex:SL_CarryGoods, ex:SL_CollectGoods, ex:SL_DeliverGoods ;
+    hreg:proposesFacility ex:SL_PickingArea, ex:SL_ReceivingArea ;
     hreg:isSituatedOn ex:Alice, ex:Bob, ex:Carol, ex:David, ex:Elton, ex:WarehouseStGallen .
         
 ex:FL_Logistics a hreg:Organization ;
     hreg:enacts ex:Logistics ;
+    hreg:hasGoal ex:EnhancedCustomerService, ex:EnhancedEfficiency ;
+    hreg:hasValue ex:Commitment, ex:IntegrityRespect ;
+    hreg:providesRole ex:FL_HumanResourcesOfficer, ex:FL_FinanceOfficer, ex:FL_AccountManager, ex:FL_Planner, ex:FL_Carrier, ex:FL_Collector, ex:FL_Deliverer ;
+    hreg:proposesMission ex:FL_HumanResourcesManagement, ex:FL_FinancialManagement, ex:FL_CommercialManagement, ex:FL_PlanningManagement, ex:FL_CarryGoods, ex:FL_CollectGoods, ex:FL_DeliverGoods ;
+    hreg:proposesFacility ex:FL_PickingArea, ex:FL_ReceivingArea ;
     hreg:isSituatedOn ex:Frank, ex:Gabriel, ex:Hellen, ex:Igor, ex:Jane, ex:WarehouseLyon, ex:WarehouseStEtienne .
