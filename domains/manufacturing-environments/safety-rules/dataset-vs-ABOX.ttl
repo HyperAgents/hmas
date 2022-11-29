@@ -19,7 +19,7 @@
 
 :allTheDoorShouldBeClosedRule hmas:hasNormativeRequirement
 [ a rdf:Bag ;
-  rdf:li [ a sp:Ask ; sp:where ([ sp:subject :i3sLab ; sp:predicate :contains ; sp:object :smoke ] ) ].
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject :i3sLabWorkspace ; sp:predicate :contains ; sp:object :smoke ] ) ].
 ] .
 
 :allTheDoorShouldBeClosedRule hmas:obliges 
@@ -43,7 +43,31 @@
 
 
 # Real world assumptions : 
-:i3sLab :contains  :smoke .
+:i3sLab :a  hreg:Organization .
+:i3sLabSpecification a  hreg:Organization .
+
+:i3sLab hreg:enacts :i3sLabSpecification .
+:i3sLabSpecification hreg:defines :i3sLab .
+
+:i3sLabWorkspace hmas:contains :i3sLab .
+:i3sLabWorkspace hmas:contains  :smoke .
+
+:i3sLabSpecification :definesNorm :allTheDoorShouldBeClosedRule .
+:i3sLab :enforcesNorm :allTheDoorShouldBeClosedRule .
+
+:safetyGuard a hmas:Agent .
+:i3sLabWorkspace hmas:contains :safetyGuard .
+
+# It does not exist but..
+:i3sLabSpecification hreg:definesRole :Guard .
+
+# This, is currently allowed : 
+:i3sLab hreg:providesRoles :Guard .
+:Guard a hreg:SocialRole .
+
+# It does not exist but.. to know that currently the SafetyGuard :hasRole :Guard
+:safetyGuard ?:hasRole :Guard .
+
 
 :mydoor a :Door .
 :mydoor :isStated :opened .
