@@ -1,0 +1,9 @@
+PREFIX : <#> .
+
+select ?n
+where 
+{ 
+      ?n a hmas:Norm  .
+}
+
+

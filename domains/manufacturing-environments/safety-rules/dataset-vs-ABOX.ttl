@@ -1,0 +1,49 @@
+
+@base <https://ci.mines-stetienne.fr/fna> .
+@prefix : <#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix hmas: <https://ci.mines-stetienne.fr/hmas> .
+@prefix hreg: <https://ci.mines-stetienne.fr/regulation> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<#> rdf:type owl:Ontology ;
+                                       owl:imports <https://ci.mines-stetienne.fr/hmas#> .
+
+
+
+:allTheDoorShouldBeClosedRule a hmas:Norm .
+
+:allTheDoorShouldBeClosedRule hmas:hasNormativeRequirement
+[ a rdf:Bag ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject :i3sLab ; sp:predicate :contains ; sp:object :smoke ] ) ].
+] .
+
+:allTheDoorShouldBeClosedRule hmas:obliges 
+[ a rdf:Bag ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?door ; sp:predicate :isStatedAs ; sp:object :closed ] ) ]  ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?door ; sp:predicate :a ; sp:object :Door ] ) ] .
+] .
+
+:allTheDoorShouldBeClosedRule hmas:permits 
+[ a rdf:Bag ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?agent ; sp:predicate :leavesThrough ; sp:object ?exit-door  ] ) ] ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?exit-door  ; sp:predicate :a ; sp:object :EmergencyDoor ] ) ] .
+] .
+
+:allTheDoorShouldBeClosedRule hmas:forbids 
+[ a rdf:Bag ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?agent ; sp:predicate :takes ; sp:object ?elevator ] ) ] ; 
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?elevator ; sp:predicate :a ; sp:object :Elevator ] ) ] ;  
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?agent ; sp:predicate :a ; sp:object hmas:Agent ] ) ] .
+] .
+
+
+# Real world assumptions : 
+:i3sLab :contains  :smoke .
+
+:mydoor a :Door .
+:mydoor :isStated :opened .
