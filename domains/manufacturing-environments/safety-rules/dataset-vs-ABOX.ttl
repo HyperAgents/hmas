@@ -44,7 +44,7 @@
 
 # Real world assumptions : 
 :i3sLab :a  hreg:Organization .
-:i3sLabSpecification a  hreg:Organization .
+:i3sLabSpecification a  hreg:OrganizationSpecification .
 
 :i3sLab hreg:enacts :i3sLabSpecification .
 :i3sLabSpecification hreg:defines :i3sLab .
