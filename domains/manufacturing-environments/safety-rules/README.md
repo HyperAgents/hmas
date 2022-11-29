@@ -21,3 +21,12 @@ In the i3S Organization Entity, if there is a fire, then all the doors must be c
 * [**_Permission_**](https://purl.org/hmas/ns/Permission): A permission is associated with a norm and describes a state of affairs which is explicitly permitted when a norm is applied.
 
 
+# Related links
+
+* [link toward issues that are associated to the domain](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=manufacturing+environment)
+* [link toward issues that are associated to this motivating scenario](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=safety+rules)
+* [link toward related features that are associated to this motivating scenario](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=norm)
+
+
+
+
