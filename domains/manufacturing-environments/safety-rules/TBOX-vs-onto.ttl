@@ -1,4 +1,4 @@
-@base <https://ci.mines-stetienne.fr/fna> .
+@base <https://ci.mines-stetienne.fr/regulation> .
 @prefix : <#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix hmas: <https://ci.mines-stetienne.fr/hmas> .
