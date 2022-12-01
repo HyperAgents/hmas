@@ -30,7 +30,7 @@
                 rdfs:label "enforces the norm"@en .        
 
 :definesNorm rdf:type owl:ObjectProperty ;
-		rdfs:domain :OrganizationSpecification ;
+		rdfs:domain hreg:OrganizationSpecification ;
                 rdfs:range :Norm ;
                 rdfs:comment "An organization Specification defines a norm. "@en ;
                 rdfs:label "defines the norm"@en .        
