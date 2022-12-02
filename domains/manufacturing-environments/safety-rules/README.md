@@ -14,14 +14,14 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 
 # Glossary
 
-* [**_Regulative Norm_**](https://purl.org/hmas/ns/Norm): a specification of the standard behaviors one expects from others in an organization. 
-* [**_Normative Context_**](https://purl.org/hmas/ns/NormativeContext):  a specification which defines when a norm is applicable. 
-* [**_Normative Target_**](https://purl.org/hmas/ns/NormativeTarget) :  an agent or a group of agents concerned by a norm. 
-* [**_Normative Object_**](https://purl.org/hmas/ns/NormativeObject) :  a specification which defines the expected behavior by describing explicitly the expected behavior or implictly by describing the state of affairs. 
-* [**_Normative Modality_**](https://purl.org/hmas/ns/NormativeModality) :  a particular mode in which a norm should be interpreted e.g. as an obligation, prohibition, or permission.
-* [**_Obligation_**](https://purl.org/hmas/ns/Obligation):  a normative modality associated with a norm  that specifies a standard of behavior that must be achieved when a norm is activated. 
-* [**_Prohibition_**](https://purl.org/hmas/ns/Prohibition):  a normative modality associated with a norm  that specifies a standard of behavior that shouldn't be verified when a norm is activated.
-* [**_Permission_**](https://purl.org/hmas/ns/Permission):  a normative modality associated with a norm  that specifies a standard of behavior that is explicitly allowed when a norm is activated.
+* [**_Regulative Norm_**](https://purl.org/hmas/regulation#Norm): a specification of the standard behaviors one expects from others in an organization. 
+* [**_Normative Context_**](https://purl.org/hmas/regulation#NormativeContext):  a specification which defines when a norm is applicable. 
+* [**_Normative Target_**](https://purl.org/hmas/regulation#NormativeTarget) :  an agent or a group of agents concerned by a norm. 
+* [**_Normative Object_**](https://purl.org/hmas/regulation#NormativeObject) :  a specification which defines the expected behavior by describing explicitly the expected behavior or implictly by describing the state of affairs. 
+* [**_Normative Modality_**](https://purl.org/hmas/regulation#NormativeModality) :  a particular mode in which a norm should be interpreted e.g. as an obligation, prohibition, or permission.
+* [**_Obligation_**](https://purl.org/hmas/regulation#Obligation):  a normative modality associated with a norm  that specifies a standard of behavior that must be achieved when a norm is activated. 
+* [**_Prohibition_**](https://purl.org/hmas/regulation#Prohibition):  a normative modality associated with a norm  that specifies a standard of behavior that shouldn't be verified when a norm is activated.
+* [**_Permission_**](https://purl.org/hmas/regulation#Permission):  a normative modality associated with a norm  that specifies a standard of behavior that is explicitly allowed when a norm is activated.
 
 
 # Related links
