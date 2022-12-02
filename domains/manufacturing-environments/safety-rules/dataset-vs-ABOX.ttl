@@ -63,7 +63,7 @@
 
 # This, is currently allowed : 
 :i3sLab hreg:providesRoles :Guard .
-:Guard a hreg:SocialRole .
+:Guard a hreg:AuthorityRole .
 
 # It does not exist but.. to know that currently the SafetyGuard :hasRole :Guard
 :safetyGuard ?:hasRole :Guard .
