@@ -14,11 +14,18 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 
 # Glossary
 
-* [**_Norm_**](https://purl.org/hmas/ns/Norm): _ a specification of the standard behaviors that one expects from others in an organization._.
-* [**_Normative Requirement_**](https://purl.org/hmas/ns/NormativeRequirement): A Normative Requirement means those [portions](https://www.lawinsider.com/clause/portions) of [the Proposed](https://www.lawinsider.com/clause/the-proposed) [Standard Specification](https://www.lawinsider.com/clause/standard-specification) that are expressly [identified](https://www.lawinsider.com/clause/identified) [as required](https://www.lawinsider.com/clause/as-required) for [compliance with the](https://www.lawinsider.com/clause/compliance-with-the) Proposed Standard Specification [including](https://www.lawinsider.com/clause/including) those portions of an [optional](https://www.lawinsider.com/clause/optional) or [alternative](https://www.lawinsider.com/clause/alternative) portion of the Proposed Standard Specification that are identified as required for compliance with such optional or alternative portion.
-* [**_Obligation_**](https://purl.org/hmas/ns/Obligation): An obligation is associated with a norm and describes a state of affairs that must be maintained when a norm is applied. 
-* [**_Prohibition_**](https://purl.org/hmas/ns/Prohibition): A prohibition is associated with a norm and describes a state of affairs that shouldn't be verified when a norm is applied.
-* [**_Permission_**](https://purl.org/hmas/ns/Permission): A permission is associated with a norm and describes a state of affairs which is explicitly permitted when a norm is applied.
+* [**_Regulative Norm_**](https://purl.org/hmas/ns/Norm): _ a specification of the standard behaviors one expects from others in an organization._.
+* [**_Normative Context **](https://purl.org/hmas/ns/NormativeContext): a specification which defines when a norm is applicable.
+* [** Normative Target **](https://purl.org/hmas/ns/NormativeTarget) : an agent or a group of agents concerned by a norm.
+
+* [** Normative Object **]() : a specification which defines the expected behavior by describing explicitly the expected behavior or implictly by describing the state of affairs
+
+* [** Normative Modality **]() : 
+
+
+* [**_Obligation_**](https://purl.org/hmas/ns/Obligation): a normative modality associated with a norm  that specifies a standard of behavior that must be achieved when a norm is activated. 
+* [**_Prohibition_**](https://purl.org/hmas/ns/Prohibition): a normative modality associated with a norm  that specifies a standard of behavior that shouldn't be verified when a norm is activated.
+* [**_Permission_**](https://purl.org/hmas/ns/Permission): a normative modality associated with a norm  that specifies a standard of behavior that is explicitly allowed when a norm is activated.
 
 
 # Related links
