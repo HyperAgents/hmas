@@ -7,9 +7,9 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 | ID | Question in natural language |
 |---|---|
 | q1 | What are the set of norms ?|
-| q2 | Who are the agents under the regulation of a norm ?|
+| q2 | Who are the agents under the regulation of a norm ? adapt this xxx|
 | q3 | What are the norms that have not been respected ? |
-| q4 | What norms are applied to an organization (w.r.t. to a context) ? |
+| q4 | What norms are activated in an organization w.r.t. a context ? |
 
 
 # Glossary
