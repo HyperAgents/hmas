@@ -14,7 +14,7 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 
 # Glossary
 
-* [**_Norm_**](https://purl.org/hmas/ns/Norm): _Norms represent the standards of correct behavior that one expects from others._.
+* [**_Norm_**](https://purl.org/hmas/ns/Norm): _ a specification of the standard behaviors that one expects from others in an organization._.
 * [**_Normative Requirement_**](https://purl.org/hmas/ns/NormativeRequirement): A Normative Requirement means those [portions](https://www.lawinsider.com/clause/portions) of [the Proposed](https://www.lawinsider.com/clause/the-proposed) [Standard Specification](https://www.lawinsider.com/clause/standard-specification) that are expressly [identified](https://www.lawinsider.com/clause/identified) [as required](https://www.lawinsider.com/clause/as-required) for [compliance with the](https://www.lawinsider.com/clause/compliance-with-the) Proposed Standard Specification [including](https://www.lawinsider.com/clause/including) those portions of an [optional](https://www.lawinsider.com/clause/optional) or [alternative](https://www.lawinsider.com/clause/alternative) portion of the Proposed Standard Specification that are identified as required for compliance with such optional or alternative portion.
 * [**_Obligation_**](https://purl.org/hmas/ns/Obligation): An obligation is associated with a norm and describes a state of affairs that must be maintained when a norm is applied. 
 * [**_Prohibition_**](https://purl.org/hmas/ns/Prohibition): A prohibition is associated with a norm and describes a state of affairs that shouldn't be verified when a norm is applied.
