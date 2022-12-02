@@ -14,13 +14,13 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 
 # Glossary
 
-* [**_Regulative Norm_**](https://purl.org/hmas/ns/Norm): _ a specification of the standard behaviors one expects from others in an organization._.
-* [**_Normative Context **](https://purl.org/hmas/ns/NormativeContext): a specification which defines when a norm is applicable.
-* [** Normative Target **](https://purl.org/hmas/ns/NormativeTarget) : an agent or a group of agents concerned by a norm.
+* [**_Regulative Norm_**](https://purl.org/hmas/ns/Norm): _ a specification of the standard behaviors one expects from others in an organization._. x
+* [**_Normative Context **](https://purl.org/hmas/ns/NormativeContext): a specification which defines when a norm is applicable. x
+* [** Normative Target **](https://purl.org/hmas/ns/NormativeTarget) : an agent or a group of agents concerned by a norm. x
 
-* [** Normative Object **]() : a specification which defines the expected behavior by describing explicitly the expected behavior or implictly by describing the state of affairs
+* [** Normative Object **]() : a specification which defines the expected behavior by describing explicitly the expected behavior or implictly by describing the state of affairs. x
 
-* [** Normative Modality **]() : 
+* [** Normative Modality **]() : a ...
 
 
 * [**_Obligation_**](https://purl.org/hmas/ns/Obligation): a normative modality associated with a norm  that specifies a standard of behavior that must be achieved when a norm is activated. 
