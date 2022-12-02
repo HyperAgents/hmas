@@ -1,6 +1,6 @@
 # Description
 
-In the i3S Organization Entity, if there is a fire, then all the doors must be closed, it is forbidden for people to take the elevators and it is allowed for people to take the emergency exits. Thomas, a safety guard must ascertain which norms have not been respected and ensure that they are. Thus, Thomas must list a set of norms and which norms are applicable wrt their context of application, and be able to know norms that have not been respected. 
+In the i3S Organization, if there is a fire, then all the doors must be closed, it is forbidden for people to take the elevators and it is allowed for people to take the emergency exits. Thomas, a safety guard must ascertain which norms have not been respected and ensure that they are. Thus, Thomas must list a set of norms and which norms are applicable wrt their context of application, and be able to know norms that have not been respected. 
 
 # Competency Questions
 
