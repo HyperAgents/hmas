@@ -20,7 +20,7 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 
 * [** Normative Object **]() : a specification which defines the expected behavior by describing explicitly the expected behavior or implictly by describing the state of affairs. x
 
-* [** Normative Modality **]() : a ...
+* [** Normative Modality **]() : a particular mode in which a norm should be interpreted e.g. as an obligation, prohibition, or permission.
 
 
 * [**_Obligation_**](https://purl.org/hmas/ns/Obligation): a normative modality associated with a norm  that specifies a standard of behavior that must be achieved when a norm is activated. 
