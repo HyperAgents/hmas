@@ -10,7 +10,7 @@ The main aspect of the SL Logistics that motivated John to copy its organization
 * **Organizational Values**
   + _Commitment_: Do everything you can to keep the organization promisses to the customers.
   + _Integrity and Respect_: Communicate openly and honestly with the customers and other members of the organization.
-* **Organization Goals**
+* **Organizational Goals**
   + _Enhanced Customer Service_: Better handling of transportation and the overall logistics operation.
   + _Enhanced Efficiency_: Increase the cost-effectiviness of the transportation system, reduce overhead costs and simplify the order processing.
 
@@ -27,10 +27,10 @@ Additionally, the FL Logistics will mirror the composition of the SL Logistics a
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | How can someone copy an enterprise X's organizational model for creating a new enterprise?                           | How can John replicate the SL Logistics' organizational model to create the FL Logistics? |
-| q2 | How can someone discover the enterprises that follows a different organizational model to compare with enterprise X? | How can John discover similar enterprises whose organizational model are different to compare with SL Logistics' organizational model?                                |
-| q3 | How to restrict the discovery of enterprises with the same organizational model and situated on Y?                   | How can John discover enterprises with the same organizational model than SL Logistics that are accessible to him?                                                    |
-| q4 | How can someone create an enterprise based on an existing organizational model?                                      | If John identifies that the SL Logistics' organizational model is not adequate, how can he create a new enterprise from a theoretical model (i.e., not yet enacted)?  |
+| q1 | What is the enterprise X's organizational model that can be used to create a new enterprise?    | What is the SL Logistics' organizational model that John uses to create the FL Logistics? **ex:Logistics**                               |
+| q2 | What are the enterprises that follows a different organizational model than enterprise X?       | What are the enterprises that follows a different organizational model than SL Logistics? **ex:HSG_Factory**, **ex:ITM_Factory**         |
+| q3 | What are the enterprises with the same organizational model as enterprise X and contained in Y? | What are the enterprises with the same organizational model as SL Logistics and contained in same Workspace? **ex:GL\_Logistics**        |
+| q4 | What are the available organizational models that can be used to create an new enterprise?      | What are the available organizational models that can be used by John to create the FL Logistics? **ex:Logistics**, **ex:Manufacturing** |
 
 ## Glossary
 
@@ -41,9 +41,9 @@ Additionally, the FL Logistics will mirror the composition of the SL Logistics a
 * **Situated Organization**: An Organization is situated through its Members and Materials.
 * **Member**: A Member refers to an Agent that belongs to an Organization.
 * **Material**: A Material refers to an Artifact that belongs to an Organization.
-* **Role**: A Role is used to define the position that Agents can adopt in an Organization.
+* **Role**: A Role defines the position that Agents can adopt in an Organization.
 * **Mission**: A Mission gathers Organizational Goals that can be achieved by Agents in an Organization in relation to a Social Activity.
-* **Facility**: A Facility is used to define functions that are offered by Materials in an Organization in relation to a Space.
+* **Facility**: A Facility defines functions that are offered by Materials in an Organization in relation to a Space.
 
 ## Recommendations
 
