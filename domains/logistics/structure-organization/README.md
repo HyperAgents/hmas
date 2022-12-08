@@ -24,12 +24,11 @@ Jane is hired as a carrier. She was instructed to wait until she receives the sc
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the job positions not being performed by anyone in the enterprise X? | What are the vacant job positions in SL Logistics? |
-| q2 | Whom can someone know whom to interact with in the department X?              | How can Jane know whom to interact with in the Planning department? |
+| q1 | What are the job positions not being performed by anyone in the enterprise X?    | What are the job positions not being performed by anyone in the enterprise ex:FL\_Logistics? **ex:FL\_AccountantManager** |
+| q2 | What are the other agents to whom agent A can interact with in the department X? | What are the other agents to whom Jane can interact with in the Planning department? **ex:Igor**                         |
 
 ## Glossary
 
-* **Social Role**: A Social Role is used to define the position that Agents can adopt in an Organization in relation to a Group.
 * **Group**: A Group is a set of Agents that can exist in the structure of an Organization.
 * **Group Relationship**: A Group Relationship refers to the possible relations between groups.
 * **Social Link**: A Social Link is a type of interaction that can take place among agents when playing specific Roles in a Group.
