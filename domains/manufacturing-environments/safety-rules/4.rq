@@ -1,0 +1,7 @@
+PREFIX : <http://myontology.com#>
+
+SELECT ?norm
+WHERE {
+  ?organization :enforcesNorm ?norm .
+  ?norm :hasNormativeContext ?context .
+}
