@@ -1,4 +1,4 @@
-PREFIX : <http://myontology.com#>
+PREFIX : <#>
 
 SELECT ?agent
 WHERE {
