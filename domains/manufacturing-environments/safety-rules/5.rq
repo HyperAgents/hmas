@@ -1,0 +1,7 @@
+PREFIX : <#>
+
+SELECT ?norm
+WHERE {
+  ?norm :hasNormativeContext ?context .
+  FILTER(?context = :myContext)
+}
