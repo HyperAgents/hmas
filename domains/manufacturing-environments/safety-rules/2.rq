@@ -1,0 +1,6 @@
+PREFIX : <http://myontology.com#>
+
+SELECT ?agent
+WHERE {
+  ?norm :hasNormativeTarget ?agent .
+}
