@@ -1,9 +1,8 @@
-PREFIX : <#> .
+PREFIX : <#>
 
-select ?n
-where 
-{ 
-      ?n a hmas:Norm  .
+SELECT ?norm
+WHERE {
+  ?norm rdf:type :RegulativeNorm .
 }
 
 
