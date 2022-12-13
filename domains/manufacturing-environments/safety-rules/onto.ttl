@@ -13,11 +13,14 @@
                                        owl:imports <https://ci.mines-stetienne.fr/hmas#> .
 
 
-
-
 :RegulativeNorm rdf:type owl:Class ;
            rdfs:comment "A specification of the standard behaviors one expects from others in an organization."@en ;
            rdfs:label "Norm"@en .
+
+:NormativeContext rdf:type owl:Class ;
+  rdfs:comment "A context in which a norm is applicable"@en ;
+  rdfs:label "Normative Context"@en .
+
 
 :AuthorityRole rdf:subClassOf hreg:SocialRole ;
            rdfs:comment "The authority who has a power to apply a norm and which is in charge of applying the norm. It may be an :Agent or an :Organization. "@en ;
@@ -34,12 +37,6 @@
                 rdfs:range :Norm ;
                 rdfs:comment "An organization Specification defines a norm. "@en ;
                 rdfs:label "defines the norm"@en .        
-
-:hasNormativeContext rdf:type owl:ObjectProperty ;
-		rdfs:domain :Norm ;
-                rdfs:range rdfs:Container ;
-                rdfs:comment "A specification which defines when a norm is applicable. "@en ;
-                rdfs:label "has normative requirement"@en .    
 
 :hasNormativeTarget rdf:type owl:ObjectProperty ;
 		rdfs:domain :RegulativeNorm ;
@@ -58,7 +55,6 @@
 #                rdfs:range :AuthorityRole;
 #                rdfs:comment "It defines who is the authority in charge of applying the norm. "@en ;
 #                rdfs:label "has normative requirement"@en .
-
 
 
 :prohibits rdf:type owl:ObjectProperty ;
@@ -81,16 +77,18 @@
 
 
 
-
-
-
-
 :hasException rdf:type owl:ObjectProperty ;
                 rdfs:domain :Contextable .
                 rdfs:comment "Associates exceptions to a context of application of a norm"@en ;
-                rdfs:label has exception"@en .
+                rdfs:label "has exception"@en .
+  
 
-
+:hasNormativeContext rdf:type owl:ObjectProperty ;
+  rdfs:domain :RegulativeNorm ;
+  #rdfs:range rdfs:Container ;
+  rdfs:range :NormativeContext ;
+  rdfs:comment "A specification which defines when a norm is applicable. "@en ;
+  rdfs:label "has normative context"@en .
 
 
 :hasRespectStatus rdf:type owl:ObjectProperty ;
