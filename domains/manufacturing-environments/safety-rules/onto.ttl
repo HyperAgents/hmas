@@ -15,8 +15,8 @@
 
 
 
-:Norm rdf:type owl:Class ;
-           rdfs:comment "Norms represent the standards of correct behavior that one expects from others in an organization."@en ;
+:RegulativeNorm rdf:type owl:Class ;
+           rdfs:comment "A specification of the standard behaviors one expects from others in an organization."@en ;
            rdfs:label "Norm"@en .
 
 :AuthorityRole rdf:subClassOf hreg:SocialRole ;
@@ -35,14 +35,24 @@
                 rdfs:comment "An organization Specification defines a norm. "@en ;
                 rdfs:label "defines the norm"@en .        
 
-:hasNormativeRequirement rdf:type owl:ObjectProperty ;
+:hasNormativeContext rdf:type owl:ObjectProperty ;
 		rdfs:domain :Norm ;
                 rdfs:range rdfs:Container ;
-                rdfs:comment "A normative requirement is a set of state-of-affairs described by a container that MUST be verified to apply the norm. "@en ;
-                rdfs:label "has normative requirement"@en .         
+                rdfs:comment "A specification which defines when a norm is applicable. "@en ;
+                rdfs:label "has normative requirement"@en .    
 
+:hasNormativeTarget rdf:type owl:ObjectProperty ;
+		rdfs:domain :RegulativeNorm ;
+		rdfs:range :Role ;
+		rdfs:comment "An agent or a group of agents concerned by a norm." ;
+		rdfs:label "has normative target".
 
-        
+:hasNormativeObject rdf:type owl:ObjectProperty ;
+		rdfs:domain :RegulativeNorm ;
+		rdfs:range :Behavior ;
+		rdfs:comment "A specification which defines the expected behavior by describing explicitly the expected behavior or implictly by describing the state of affairs.";
+		rdfs:label "has normative object".
+	  
 #:hasPowerOn rdf:type owl:ObjectProperty ;
 #		rdfs:domain :Norm ;
 #                rdfs:range :AuthorityRole;
