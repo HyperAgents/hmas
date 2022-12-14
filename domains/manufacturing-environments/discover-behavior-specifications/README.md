@@ -20,11 +20,10 @@ The agent provides the expected input and uses the form in order to reset the ro
 | q4 | What are the forms that implement a given specified action?                                      | |
 
 ## Glossary
-- Behavior: A course of action (i.e., an ordered process, a succession of actions, a pattern of activity) that is performed by an agent when exploiting an affordance. (e.g., the execution of an AgentSpeak plan, or a behavior as defined in subsumption architecture, or a JADE behavior).
--	ActionExecution: A behavior that is the execution of exactly one action.
--	BehavioralSpecification: A specification that specifies a behavior.
--	ActionSpecification: A specification that specifies how to execute an action.
--	signifies: A relation between a behavior and a signifier that signifies it.
--	hasForm: A relation between an action specification and a form (https://www.w3.org/2019/wot/hypermedia#Form) that describes an implementation of the specified action.
--	hasAction: A relation between a behavioral specification and the specification of an action whose execution is part of the specified behavior.
--	Signifier: see [_Other scenario TBA_]().
+- **Behavior Execution**: A course of action performed by an agent upon exploiting a behavior possibility.
+-	**Action Execution**: A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request. 
+-	**Behavior Specification**: A specification that specifies a behavior, for example, as procedural knowledge (e.g., AgentSpeak plan) or code-on-demand (e.g., a script that implements a behavior).
+-	**Action Specification**: A specification that describes an action (e.g., through preconditions and postconditions) and how to execute the action, e.g. as a context-free request through a form.
+-	**Form**: A hypermedia control that describes how to execute an action as defined here: https://www.w3.org/2019/wot/hypermedia#Form.
+-	**Input**: An input of an action, which may include variables. The input may be used, for instance, in an action specification or in the representation of an action execution.
+- **Schema**: The schema of an input. For example, the schema may be a JSON data schema (https://www.w3.org/2019/wot/json-schema#DataSchema) or a SHACL shape (http://www.w3.org/ns/shacl#Shape).
