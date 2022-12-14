@@ -20,11 +20,11 @@ The agent provides the expected input and uses the form in order to reset the ro
 | q4 | What are the forms that implement a given specified action?                                      | |
 
 ## Glossary
-- Behavior (https://purl.org/hmas/interaction#Behavior): A course of action (i.e., an ordered process, a succession of actions, a pattern of activity) that is performed by an agent when exploiting an affordance. (e.g., the execution of an AgentSpeak plan, or a behavior as defined in subsumption architecture, or a JADE behavior).
--	ActionExecution (https://purl.org/hmas/interaction#ActionExecution): A behavior that is the execution of exactly one action.
--	BehavioralSpecification (https://purl.org/hmas/interaction#BehavioralSpecification): A specification that specifies a behavior.
--	ActionSpecification (https://purl.org/hmas/interaction#ActionSpecification): A specification that specifies how to execute an action.
--	signifies (https://purl.org/hmas/interaction#signifies): A relation between a behavior and a signifier that signifies it.
--	hasForm (https://purl.org/hmas/interaction#hasForm): A relation between an action specification and a form (https://www.w3.org/2019/wot/hypermedia#Form) that describes an implementation of the specified action.
--	hasAction (https://purl.org/hmas/interaction#hasAction): A relation between a behavioral specification and the specification of an action whose execution is part of the specified behavior.
--	Signifier (https://purl.org/hmas/core#Signifier): see [_Other scenario TBA_]().
+- Behavior: A course of action (i.e., an ordered process, a succession of actions, a pattern of activity) that is performed by an agent when exploiting an affordance. (e.g., the execution of an AgentSpeak plan, or a behavior as defined in subsumption architecture, or a JADE behavior).
+-	ActionExecution: A behavior that is the execution of exactly one action.
+-	BehavioralSpecification: A specification that specifies a behavior.
+-	ActionSpecification: A specification that specifies how to execute an action.
+-	signifies: A relation between a behavior and a signifier that signifies it.
+-	hasForm: A relation between an action specification and a form (https://www.w3.org/2019/wot/hypermedia#Form) that describes an implementation of the specified action.
+-	hasAction: A relation between a behavioral specification and the specification of an action whose execution is part of the specified behavior.
+-	Signifier: see [_Other scenario TBA_]().
