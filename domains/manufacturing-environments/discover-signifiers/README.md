@@ -17,7 +17,7 @@ The agent may search for all the signifiers in the manufacturing workspace, or f
 | q3 | What are the signifiers available in a given workspace?              | |
 
 ## Glossary
--	Signifier: A perceivable sign/cue that can be interpreted meaningfully to reveal information about affordances, e.g. about relational aspects of affordances based on environment/agent types and context that are expected in the Hypermedia MAS. The perceptability of a signifier can be managed by adjusting the salience of the signifier.
+-	Signifier: A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about behavior possibilities.
 -	IsExposedIn: A relation between a signifier and a resource profile it is exposed in.
 -	ResourceProfile: see [_Other scenario TBA_]().
 -	Artifact: see [_Other scenario TBA_]().
