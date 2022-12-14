@@ -22,3 +22,6 @@ The agent may search for all the signifiers in the manufacturing workspace, or f
 -	**Resource Profile**: see [_Other scenario TBA_]().
 -	**Artifact**: see [_Other scenario TBA_]().
 -	**Workspace**: see [_Other scenario TBA_]().
+
+## Recommendation 
+- The resource profile of an artifact can expose signifiers which reveal information about behavior possibilities offered by the artifact.
