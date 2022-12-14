@@ -4,9 +4,9 @@ Feature: Discovery of Behavior Specifications
 
 
 ## Description
-An agent A is situated in a manufacturing workspace that contains a robotic arm artifact. The resource profile of the robotic arm artifact exposes a signifier that reveals information about a behavior possibility ⁠—⁠ it signifies a specification describing how to move the gripper of the robotic arm artifact. Specifically, the specification describes the behavior of moving the gripper as an action that:
+An agent A is situated in a manufacturing workspace that contains a robotic arm artifact. The resource profile of the robotic arm artifact exposes a signifier S that reveals information about a behavior possibility ⁠—⁠ it signifies a specification SP describing how to move the gripper of the robotic arm artifact. Specifically, the SP describes the behavior of moving the gripper as an action that:
 - is of type [onto:SetGripper](https://ci.mines-stetienne.fr/kg/ontology#SetGripper),
-- expects an input of a schema [onto:GripperJoint](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and 
+- expects an input I of a schema [onto:GripperJoint](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and 
 - can be executed based on a set of hypermedia controls. The set of hypermedia controls contains two forms ⁠—⁠ a form describing an HTTP request, and a form describing a CoAP request.
 
 Agent A has discovered the exposed signifier and has the objective of behaving based on the signified specification. For this, agent A provides an input of the schema [onto:GripperJoint](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and sends an HTTP request based on one of the hypermedia controls. 
@@ -15,11 +15,11 @@ Agent A has discovered the exposed signifier and has the objective of behaving b
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the behavior specifications that a given signifier signifies?           | |
-| q2 | What are the action specifications that a given signifier signifies?             | |
-| q3 | What are the forms that describe how to execute a given specified action?        | |
-| q4 | What is the input that is expected by a given specified action?                  | |
-| q5 | What are the schemas of a given expected input?                                  | |
+| q1 | What are the behavior specifications that a given signifier signifies?           |What are the behavior specifications that signifier S signifies?|
+| q2 | What are the action specifications that a given signifier signifies?             |What are the action specifications that signifier S signifies?|
+| q3 | What are the forms that describe how to execute a given specified action?        |What are the forms that describe how to execute moving the gripper of the robotic arm artifact based on SP?|
+| q4 | What is the input that is expected by a given specified action?                  |What is the input that is expected for moving the gripper of the robotic arm artifact based on SP?|
+| q5 | What are the schemas of a given expected input?                                  |What are the schemas of the expected input I?|
 
 
 ## Glossary
