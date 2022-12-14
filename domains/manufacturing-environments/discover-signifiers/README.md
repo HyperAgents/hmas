@@ -4,18 +4,18 @@ Feature: Discovery of Signifiers
 
 
 ## Description
-An agent is situated in a manufacturing workspace that contains industrial artifacts, e.g. industrial devices, and other agents. The agent is responsible for operating a robotic arm artifact in the workspace, and cooperating with the other agents towards achieving production goals. For this, the agent has the objective of discovering signifiers, i.e. cues in the workspace that reveal information about how to interact with the robotic arm artifact and the other agents.
+An agent A is situated in a manufacturing workspace that contains industrial artifacts, e.g. industrial devices, and other agents. The agent is responsible for operating a robotic arm artifact in the workspace, and cooperating with the other agents towards achieving production goals. For this, agent A has the objective of discovering signifiers, i.e. cues in the workspace that reveal information about how to interact with the robotic arm artifact and the other agents.
 
-The agent discovers signifiers exposed in the profile of the robotic arm that is contained in the workspace, and signifiers exposed in the profile of an agent whose body is contained in the workspace.
+Agent A discovers signifiers exposed in the profile P1 of the robotic arm that is contained in the workspace, and signifiers exposed in the profile P2 of an agent B whose body is contained in the workspace.
 
 ## Competency Questions
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the signifiers exposed in a given resource profile?                          | |
-| q2 | What are the signifiers exposed in resource profiles contained in a given workspace?  | |
-| q3 | What are the signifiers exposed in resource profiles of a given artifact?             | |
-| q4 | What are the signifiers exposed in resource profiles of a given agent?                | |
+| q1 | What are the signifiers exposed in a given resource profile?                          | What are the signifiers exposed in resource profile P1?|
+| q2 | What are the signifiers exposed in resource profiles contained in a given workspace?  | What are the signifiers exposed in resources profile in the manufacturing workspace?|
+| q3 | What are the signifiers exposed in resource profiles of a given artifact?             | What are the signifiers exposed in resource profiles of the robotic arm artifact?|
+| q4 | What are the signifiers exposed in resource profiles of a given agent?                | What are the signifiers exposed in resource profiles of agent B?|
 
 ## Glossary
 -	**Signifier**: A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about behavior possibilities.
