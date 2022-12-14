@@ -17,8 +17,8 @@ The agent may search for all the signifiers in the manufacturing workspace, or f
 | q3 | What are the signifiers available in a given workspace?              | |
 
 ## Glossary
--	Signifier: A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about behavior possibilities.
--	Signifier Exposure: The condition of signfiers being available in the environment, and the act of making signifiers available in the environment.
--	ResourceProfile: see [_Other scenario TBA_]().
--	Artifact: see [_Other scenario TBA_]().
--	Workspace: see [_Other scenario TBA_]().
+-	**Signifier**: A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about behavior possibilities.
+-	**Signifier Exposure**: The condition of signfiers being available in the environment, and the act of making signifiers available in the environment.
+-	**Resource Profile**: see [_Other scenario TBA_]().
+-	**Artifact**: see [_Other scenario TBA_]().
+-	**Workspace**: see [_Other scenario TBA_]().
