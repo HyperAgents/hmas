@@ -30,3 +30,4 @@ Agent A has discovered the exposed signifier and has the objective of behaving b
 -	**Form**: A hypermedia control that describes how to execute an action as defined here: https://www.w3.org/2019/wot/hypermedia#Form.
 -	**Input**: An input of an action, which may include variables. The input may be used, for instance, in an action specification or in the representation of an action execution.
 - **Schema**: The schema of an input. For example, the schema may be a JSON data schema (https://www.w3.org/2019/wot/json-schema#DataSchema) or a SHACL shape (http://www.w3.org/ns/shacl#Shape).
+- **Signification of Behavior**: The act of revealing information about how to exploit a behavior possibility. 
