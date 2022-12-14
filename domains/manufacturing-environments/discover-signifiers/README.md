@@ -18,7 +18,7 @@ The agent may search for all the signifiers in the manufacturing workspace, or f
 
 ## Glossary
 -	Signifier: A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about behavior possibilities.
--	IsExposedIn: A relation between a signifier and a resource profile it is exposed in.
+-	Signifier Exposure: The condition of signfiers being available in the environment, and the act of making signifiers available in the environment.
 -	ResourceProfile: see [_Other scenario TBA_]().
 -	Artifact: see [_Other scenario TBA_]().
 -	Workspace: see [_Other scenario TBA_]().
