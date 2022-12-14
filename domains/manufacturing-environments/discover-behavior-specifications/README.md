@@ -4,25 +4,28 @@ Feature: Discovery of Behavior Specifications
 
 
 ## Description
-An agent is situated in a manufacturing workspace that contains a robotic arm artifact. The agent has discovered a signifier in the profile of the artifact that reveals information about the affordance resetable, which affords the agent to reset the state of the robotic arm.
+An agent A is situated in a manufacturing workspace that contains a robotic arm artifact. The resource profile of the robotic arm artifact exposes a signifier that reveals information about a behavior possibility ⁠—⁠ it signifies a specification describing how to move the gripper of the robotic arm artifact. Specifically, the specification describes the behavior of moving the gripper as an action that:
+- is of type [onto:SetGripper](https://ci.mines-stetienne.fr/kg/ontology#SetGripper),
+- expects an input of a schema [onto:GripperJoint](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and 
+- can be executed based on a set of hypermedia controls. The set of hypermedia controls contains two forms ⁠—⁠ a form describing an HTTP request, and a form describing a CoAP request.
 
-The agent has the objective of resetting the robotic arm based on the discovered signifier. The signifier reveals information about the specification of a behavior — here, the specification of an action that the agent can execute to exploit the affordance resetable. The specification specifies a form that implements the action.
-
-The agent provides the expected input and uses the form in order to reset the robotic arm. 
+Agent A has discovered the exposed signifier and has the objective of behaving based on the signified specification. For this, agent A provides an input of the schema [onto:GripperJoint](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and sends an HTTP request based on one of the hypermedia controls. 
 
 ## Competency Questions
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the action specifications that signifiers of a given resource profile signify?          | |
-| q2 | What is the action specification that that a given signifier signifies?                          | |
-| q3 | What are the forms that implement a given specified action?                                      | |
-| q4 | What are the forms that implement a given specified action?                                      | |
+| q1 | What are the behavior specifications that a given signifier signifies?           | |
+| q2 | What are the action specifications that a given signifier signifies?             | |
+| q3 | What are the forms that describe how to execute a given specified action?        | |
+| q4 | What is the input that is expected by a given specified action?                  | |
+| q5 | What are the schemas of a given expected input?                                  | |
+
 
 ## Glossary
 - **Behavior Execution**: A course of action performed by an agent upon exploiting a behavior possibility.
 -	**Action Execution**: A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request. 
--	**Behavior Specification**: A specification that specifies a behavior, for example, as procedural knowledge (e.g., AgentSpeak plan) or code-on-demand (e.g., a script that implements a behavior).
+-	**Behavior Specification**: A specification that describes a behavior, for example, as procedural knowledge (e.g., AgentSpeak plan) or code-on-demand (e.g., a script that implements a behavior).
 -	**Action Specification**: A specification that describes an action (e.g., through preconditions and postconditions) and how to execute the action, e.g. as a context-free request through a form.
 -	**Form**: A hypermedia control that describes how to execute an action as defined here: https://www.w3.org/2019/wot/hypermedia#Form.
 -	**Input**: An input of an action, which may include variables. The input may be used, for instance, in an action specification or in the representation of an action execution.
