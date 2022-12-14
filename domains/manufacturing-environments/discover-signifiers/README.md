@@ -25,3 +25,6 @@ The agent may search for all the signifiers in the manufacturing workspace, or f
 
 ## Recommendation 
 - The resource profile of an artifact can expose signifiers which reveal information about behavior possibilities offered by the artifact.
+- Agent can discover and interpret exposed signifiers to receive information about:
+   1. how to exploit behavior possibilities;
+   2. under which circumstances to exploit behavior possibilities.
