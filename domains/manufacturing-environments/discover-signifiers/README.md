@@ -17,8 +17,8 @@ The agent may search for all the signifiers in the manufacturing workspace, or f
 | q3 | What are the signifiers available in a given workspace?              | |
 
 ## Glossary
--	Signifier (https://purl.org/hmas/core#Signifier): A perceivable sign/cue that can be interpreted meaningfully to reveal information about affordances, e.g. about relational aspects of affordances based on environment/agent types and context that are expected in the Hypermedia MAS. The perceptability of a signifier can be managed by adjusting the salience of the signifier.
--	IsExposedIn (https://purl.org/hmas/core#exposedIn): A relation between a signifier and a resource profile it is exposed in.
--	ResourceProfile (https://purl.org/hmas/core#ResourceProfile): see [_Other scenario TBA_]().
--	Artifact (https://purl.org/hmas/core#Artifact): see [_Other scenario TBA_]().
--	Workspace (https://purl.org/hmas/core#Workspace): see [_Other scenario TBA_]().
+-	Signifier: A perceivable sign/cue that can be interpreted meaningfully to reveal information about affordances, e.g. about relational aspects of affordances based on environment/agent types and context that are expected in the Hypermedia MAS. The perceptability of a signifier can be managed by adjusting the salience of the signifier.
+-	IsExposedIn: A relation between a signifier and a resource profile it is exposed in.
+-	ResourceProfile: see [_Other scenario TBA_]().
+-	Artifact: see [_Other scenario TBA_]().
+-	Workspace: see [_Other scenario TBA_]().
