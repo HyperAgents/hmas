@@ -27,91 +27,118 @@ ex:WarehouseLyon a hmas:Artifact ;
 ex:WarehouseStEtienne a hmas:Artifact ;
     hmas:isMaterialOf ex:FL_Logistics .
 
+## Organization
+ex:Logistics rdfs:subClassOf hmas:Organization .
+
 #################################################################
 #    Regulation Ontology
 #################################################################
 
-## Organization Specification
-ex:Logistics a hmas:OrganizationSpecification ;
-    hmas:defines ex:FL_Logistics .
-
-## Organizational Goals
-ex:EnhancedCustomerService a hmas:OrganizationalGoal ;
-    rdfs:comment "Better handling of transportation and the overall logistics operation."@en ;
-    rdfs:label "Enhanced Customer Service"@en .
-
-ex:EnhancedEfficiency a hmas:OrganizationalGoal ;
-    rdfs:comment "Increase the cost-effectiviness of the transportation system, reduce overhead costs and simplify the order processing."@en ;
-    rdfs:label "Enhanced Efficiency"@en .
+# SPECIFICATION
 
 ## Organizational Values
-ex:Commitment a hmas:OrganizationalValue ;
+ex:Commitment rdfs:subClassOf hmas:OrganizationalValue ;
     rdfs:comment "Do everything you can to keep the organization promisses to the customers."@en ;
     rdfs:label "Commitment"@en .
 
-ex:IntegrityRespect a hmas:OrganizationalValue ;
+ex:IntegrityRespect rdfs:subClassOf hmas:OrganizationalValue ;
     rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
     rdfs:label "Integrity and Respect"@en .
 
 ## Roles
-ex:FL_HumanResourcesOfficer a hmas:Role ;
-    hmas:belongsTo ex:FL_HumanResourcesDepartment .
-ex:FL_FinanceOfficer a hmas:Role ;
-    hmas:belongsTo ex:FL_FinanceDeparment .
-ex:FL_AccountManager a hmas:Role ;
-    hmas:belongsTo ex:FL_CommercialDepartment .
-ex:FL_Planner a hmas:Role ;
-    hmas:belongsTo ex:FL_PlanningDepartment ;
-    hmas:isLinkedTo ex:FL_Carrier, ex:FL_Collector, ex:FL_Deliverer .
-ex:FL_Carrier a hmas:Role ;
-    hmas:belongsTo ex:FL_ShippingDepartment ;
-    hmas:isLinkedTo ex:Planner .
-ex:FL_Collector a hmas:Role ;
-    hmas:belongsTo ex:FL_ShippingDepartment ;
-    hmas:isLinkedTo ex:Planner .
-ex:FL_Deliverer a hmas:Role ;
-    hmas:belongsTo ex:FL_ShippingDepartment ;
-    hmas:isLinkedTo ex:Planner .
+ex:HumanResourcesOfficer rdfs:subClassOf hmas:Role .
+ex:FinanceOfficer rdfs:subClassOf hmas:Role .
+ex:AccountManager rdfs:subClassOf hmas:Role .
+ex:Planner rdfs:subClassOf hmas:Role .
+ex:Carrier rdfs:subClassOf hmas:Role .
+ex:Collector rdfs:subClassOf hmas:Role .
+ex:Deliverer rdfs:subClassOf hmas:Role .
 
 ## Group
-ex:FL_AdministrativeDepartment a hmas:Group ;
+ex:AdministrativeDepartment rdfs:subClassOf hmas:Group .
+ex:OperationsDepartment rdfs:subClassOf hmas:Group .
+ex:HumanResourcesDepartment rdfs:subClassOf hmas:Group .
+ex:FinanceDeparment rdfs:subClassOf hmas:Group .
+ex:CommercialDepartment rdfs:subClassOf hmas:Group .
+ex:PlanningDepartment rdfs:subClassOf hmas:Group .
+ex:ShippingDepartment rdfs:subClassOf hmas:Group .
+
+## Missions
+ex:HumanResourcesManagement rdfs:subClassOf hmas:Mission .
+ex:FinancialManagement rdfs:subClassOf hmas:Mission .
+ex:CommercialManagement rdfs:subClassOf hmas:Mission .
+ex:PlanningManagement rdfs:subClassOf hmas:Mission .
+ex:CarryGoods rdfs:subClassOf hmas:Mission .
+ex:CollectGoods rdfs:subClassOf hmas:Mission .
+ex:DeliverGoods rdfs:subClassOf hmas:Mission .
+
+## Facility
+ex:PickingArea rdfs:subClassOf hmas:Facility .
+ex:ReceivingArea rdfs:subClassOf hmas:Facility .
+
+# INSTANTIATION
+
+## Organizational Values
+ex:FL_Commitment a ex:Commitment .
+ex:FL_IntegrityRespect a ex:IntegrityRespect .
+
+## Roles
+ex:FL_HumanResourcesOfficer a ex:HumanResourcesOfficer ;
+    hmas:belongsTo ex:FL_HumanResourcesDepartment .
+ex:FL_FinanceOfficer a ex:FinanceOfficer ;
+    hmas:belongsTo ex:FL_FinanceDeparment .
+ex:FL_AccountManager a ex:AccountManager ;
+    hmas:belongsTo ex:FL_CommercialDepartment .
+ex:FL_Planner a ex:Planner ;
+    hmas:belongsTo ex:FL_PlanningDepartment ;
+    hmas:isLinkedTo ex:FL_Carrier, ex:FL_Collector, ex:FL_Deliverer .
+ex:FL_Carrier a ex:Carrier ;
+    hmas:belongsTo ex:FL_ShippingDepartment ;
+    hmas:isLinkedTo ex:FL_Planner .
+ex:FL_Collector a ex:Collector ;
+    hmas:belongsTo ex:FL_ShippingDepartment ;
+    hmas:isLinkedTo ex:FL_Planner .
+ex:FL_Deliverer a ex:Deliverer ;
+    hmas:belongsTo ex:FL_ShippingDepartment ;
+    hmas:isLinkedTo ex:FL_Planner .
+
+## Group
+ex:FL_AdministrativeDepartment a ex:AdministrativeDepartment ;
     hmas:structures ex:FL_Logistics .
-ex:FL_OperationsDepartment a hmas:Group ;
+ex:FL_OperationsDepartment a ex:OperationsDepartment ;
     hmas:structures ex:FL_Logistics .
-ex:FL_HumanResourcesDepartment a hmas:Group ;
+ex:FL_HumanResourcesDepartment a ex:HumanResourcesDepartment ;
     hmas:structures ex:FL_Logistics ;
     hmas:isSubGroupOf ex:FL_AdministrativeDepartment .
-ex:FL_FinanceDeparment a hmas:Group ;
+ex:FL_FinanceDeparment a ex:FinanceDeparment ;
     hmas:structures ex:FL_Logistics ;
     hmas:isSubGroupOf ex:AdministrativeDepartment .
-ex:FL_CommercialDepartment a hmas:Group ;
+ex:FL_CommercialDepartment a ex:CommercialDepartment ;
     hmas:structures ex:FL_Logistics ;
     hmas:isSubGroupOf ex:FL_OperationsDepartment .
-ex:FL_PlanningDepartment a hmas:Group ;
+ex:FL_PlanningDepartment a ex:PlanningDepartment ;
     hmas:structures ex:FL_Logistics ;
     hmas:isSubGroupOf ex:FL_OperationsDepartment .
-ex:FL_ShippingDepartment a hmas:Group ;
+ex:FL_ShippingDepartment a ex:ShippingDepartment ;
     hmas:structures ex:FL_Logistics ;
     hmas:isSubGroupOf ex:FL_OperationsDepartment .
 
 ## Missions
-ex:FL_HumanResourcesManagement a hmas:Mission .
-ex:FL_FinancialManagement a hmas:Mission .
-ex:FL_CommercialManagement a hmas:Mission .
-ex:FL_PlanningManagement a hmas:Mission .
-ex:FL_CarryGoods a hmas:Mission .
-ex:FL_CollectGoods a hmas:Mission .
-ex:FL_DeliverGoods a hmas:Mission .
+ex:FL_HumanResourcesManagement a ex:HumanResourcesManagement .
+ex:FL_FinancialManagement a ex:FinancialManagement .
+ex:FL_CommercialManagement a ex:CommercialManagement .
+ex:FL_PlanningManagement a ex:PlanningManagement .
+ex:FL_CarryGoods a ex:CarryGoods .
+ex:FL_CollectGoods a ex:CollectGoods .
+ex:FL_DeliverGoods a ex:DeliverGoods .
 
 ## Facility
-ex:FL_PickingArea a hmas:Facility .
-ex:FL_ReceivingArea a hmas:Facility .
+ex:FL_PickingArea a ex:PickingArea .
+ex:FL_ReceivingArea ex:ReceivingArea .
 
 ## Organizations      
-ex:FL_Logistics a hmas:Organization ;
-    hmas:enacts ex:Logistics ;
-    hmas:hasOrganizationalGoal ex:EnhancedCustomerService, ex:EnhancedEfficiency ;
-    hmas:hasOrganizationalValue ex:Commitment, ex:IntegrityRespect ;
+ex:FL_Logistics a ex:Logistics ;
+    hmas:hasOrganizationalValue ex:FL_Commitment, ex:FL_IntegrityRespect ;
     hmas:providesRole ex:FL_HumanResourcesOfficer, ex:FL_FinanceOfficer, ex:FL_AccountManager, ex:FL_Planner, ex:FL_Carrier, ex:FL_Collector, ex:FL_Deliverer ;
     hmas:isStructuredBy ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment, ex:FL_HumanResourcesDepartment, ex:FL_FinanceDeparment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment ;
     hmas:proposesMission ex:FL_HumanResourcesManagement, ex:FL_FinancialManagement, ex:FL_CommercialManagement, ex:FL_PlanningManagement, ex:FL_CarryGoods, ex:FL_CollectGoods, ex:FL_DeliverGoods ;
