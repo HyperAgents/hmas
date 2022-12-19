@@ -31,7 +31,13 @@ Agent A has discovered S and has the objective of behaving based on the signifie
 -	**Input**: An input of an action, which may include variables. The input may be used, for instance, in an action specification or in the representation of an action execution.
 - **Schema**: The schema of an input. For example, the schema may be a JSON data schema (https://www.w3.org/2019/wot/json-schema#DataSchema) or a SHACL shape (http://www.w3.org/ns/shacl#Shape).
 - **Signification of Behavior**: The act of revealing information about how to exploit a behavior possibility. 
-
+-	**Workspace**: see [_Other scenario TBA_]().
+-	**Resource Containment**: see [_Other scenario TBA_]().
+-	**Artifact**: see [_Other scenario TBA_]().
+-	**Agent**: see [_Other scenario TBA_]().
+-	**Resource Profile**: see [_Other scenario TBA_]().
+- **Signifier**: see [_Other scenario TBA_]().
+- **Signifier Exposure**: see [_Other scenario TBA_]().
 
 ## Recommendations
 - A signifier can signify a behavior specification for revealing information about how to exploit the relevant behavior possibility.
