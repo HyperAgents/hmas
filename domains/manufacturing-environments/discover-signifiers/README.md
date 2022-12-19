@@ -29,6 +29,6 @@ Agent A discovers signifiers exposed in the profile P1 of the robotic arm that i
 
 ## Recommendation 
 - The resource profile of an artifact can expose signifiers which reveal information about behavior possibilities offered by the artifact.
-- Agent can discover and interpret exposed signifiers to receive information about:
+- Agents can discover and interpret exposed signifiers to receive information about:
    1. how to exploit behavior possibilities;
    2. under which circumstances to exploit behavior possibilities.
