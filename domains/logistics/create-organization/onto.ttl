@@ -7,57 +7,29 @@
 #    Classes
 #################################################################
 
-hmas:OrganizationSpecification a owl:Class ;
-    rdfs:comment "An Organization Specification is a declarative specification used to enact one or multiple Organizations."@en ;
-    rdfs:label "Organization Specification"@en .
-
 hmas:Organization a owl:Class ;
     rdfs:comment "An Organization is an entity situated on Agents and Artifacts, and regulated by a regulation system."@en ;
     rdfs:label "Organization"@en .
-
-hmas:OrganizationalGoal a owl:Class ;
-    rdfs:comment "An Organizational Goal is an objective that outlines expected results and guide Organization members' efforts."@en ;
-    rdfs:label "Organizational Goal"@en .
 
 hmas:OrganizationalValue a owl:Class ;
     rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an organization."@en ;
     rdfs:label "Organizational Value"@en .
         
 hmas:Role a owl:Class ;
-    rdfs:comment "A Role defines the position that Agents can adopt in an Organization."@en ;
+    rdfs:comment "A Role defines positions in an Organization."@en ;
     rdfs:label "Role"@en .
 
 hmas:Mission a owl:Class ;
-    rdfs:comment "A Mission gathers Organizational Goals that can be achieved by Agents in an Organization in relation to a Social Activity."@en ;
+    rdfs:comment "A Mission gathers Organizational Goals."@en ;
     rdfs:label "Mission"@en .
     
 hmas:Facility a owl:Class ;
-    rdfs:comment "A Facility is used to define functions that are offered by Materials in an Organization in relation to a Space."@en ;
+    rdfs:comment "A Facility defines functions in an Organization."@en ;
     rdfs:label "Facility"@en .
 
 #################################################################
 #    Properties
 #################################################################
-
-hmas:enacts a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Organization ;
-    schema:rangeIncludes hmas:OrganizationSpecification ;
-    rdfs:inverseOf hmas:defines ;
-    rdfs:comment "A relation that refers to an Organization that enacts an Organization Specification."@en ;
-    rdfs:label "enacts"@en .
-  
-hmas:defines a owl:ObjectProperty ;
-    schema:domainIncludes hmas:OrganizationSpecification ;
-    schema:rangeIncludes hmas:Organization ;
-    owl:inverseOf hmas:enacts ;
-    rdfs:comment "A relation that refers to an Organization Specification that is enacted by an Organization."@en ;
-    rdfs:label "defines"@en .
-
-hmas:hasOrganizationalGoal a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Organization ;
-    schema:rangeIncludes hmas:OrganizationalGoal ;
-    rdfs:comment "A relation that refers to an Organizational Goal of an Organization."@en ;
-    rdfs:label "has organizational goal"@en .
 
 hmas:hasOrganizationalValue a owl:ObjectProperty ;
     schema:domainIncludes hmas:Organization ;

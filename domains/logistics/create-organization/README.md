@@ -5,14 +5,11 @@ John has experience working in a successful specialized industrial logistics ent
 
 John, however, is unsure whether the SL Logistics' organizational model is adequate in his case. Thus, he conducts a comparative analysis between the SL Logistics organizational model with similar enterprises but whose organizational model are based on different assumptions and some theoretical models (i.e., not yet enacted models). He concludes that the SL Logistics' organizational model is adequate to create the FL Logistics enterprise.
 
-The main aspect of the SL Logistics that motivated John to copy its organizational model is the enterprise culture reflected in its organizational values and goals:
+The main aspect of the SL Logistics that motivated John to copy its organizational model is the enterprise culture reflected in its organizational values:
 
 * **Organizational Values**
   + _Commitment_: Do everything you can to keep the organization promisses to the customers.
   + _Integrity and Respect_: Communicate openly and honestly with the customers and other members of the organization.
-* **Organizational Goals**
-  + _Enhanced Customer Service_: Better handling of transportation and the overall logistics operation.
-  + _Enhanced Efficiency_: Increase the cost-effectiviness of the transportation system, reduce overhead costs and simplify the order processing.
 
 Additionally, the FL Logistics will mirror the composition of the SL Logistics and provides the following roles and responsibilities:
   1. _Human resources officer_: Hire, develop and look after employees.
@@ -27,25 +24,22 @@ Additionally, the FL Logistics will mirror the composition of the SL Logistics a
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What is the enterprise X's organizational model that can be used to create a new enterprise?    | What is the SL Logistics' organizational model that John uses to create the FL Logistics? **ex:Logistics**                               |
+| q1 | What is the enterprise X's organizational model that can be used to create a new enterprise?    | What is the SL Logistics' organizational model that John can use to create the FL Logistics? **ex:Logistics**                            |
 | q2 | What are the enterprises that follows a different organizational model than enterprise X?       | What are the enterprises that follows a different organizational model than SL Logistics? **ex:HSG_Factory**, **ex:ITM_Factory**         |
-| q3 | What are the enterprises with the same organizational model as enterprise X and contained in Y? | What are the enterprises with the same organizational model as SL Logistics and contained in same Workspace? **ex:GL\_Logistics**        |
+| q3 | What are the enterprises with the same organizational model as enterprise X and contained in Y? | What are the enterprises with the same organizational model as SL Logistics and contained in same Workspace? **ex:GL_Logistics**         |
 | q4 | What are the available organizational models that can be used to create an new enterprise?      | What are the available organizational models that can be used by John to create the FL Logistics? **ex:Logistics**, **ex:Manufacturing** |
 
 ## Glossary
 
-* **Organization Specification**: An Organization Specification is a declarative specification used to enact one or multiple Organizations.
 * **Organization**: An Organization is an entity situated on Agents and Artifacts, and regulated by a regulation system.
-* **Organizational Goal**: An Organizational Goal is an objective that outlines expected results and guide Organization members' efforts.
 * **Organizational Value**: An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an organization.
 * **Situated Organization**: An Organization is situated through its Members and Materials.
 * **Member**: A Member refers to an Agent that belongs to an Organization.
 * **Material**: A Material refers to an Artifact that belongs to an Organization.
-* **Role**: A Role defines the position that Agents can adopt in an Organization.
-* **Mission**: A Mission gathers Organizational Goals that can be achieved by Agents in an Organization in relation to a Social Activity.
-* **Facility**: A Facility defines functions that are offered by Materials in an Organization in relation to a Space.
+* **Role**: A Role defines positions in an Organization.
+* **Mission**: A Mission gathers Organizational Goals.
+* **Facility**: A Facility defines functions in an Organization.
 
 ## Recommendations
 
-1. To be executable, an Organization has to fully enact an Organization Specification.
-2. An Organization enacts one and only one Organization Specification.
+None
