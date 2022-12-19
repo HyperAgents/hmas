@@ -36,6 +36,9 @@ ex:Logistics rdfs:subClassOf hmas:Organization .
 
 # SPECIFICATION
 
+# TODO
+# Required to include SHACL constraints to define the ex:Logistics Organization Specification
+
 ## Organizational Values
 ex:Commitment rdfs:subClassOf hmas:OrganizationalValue ;
     rdfs:comment "Do everything you can to keep the organization promisses to the customers."@en ;

@@ -24,14 +24,14 @@ Jane is hired as a carrier. She was instructed to wait until she receives the sc
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the job positions not being performed by anyone in the enterprise X?    | What are the roles not being performed by anyone in the ex:FL_Logistics? **ex:FL_AccountManager** |
-| q2 | What are the other agents to whom agent A can interact with in the department X? | What are the other agents to whom Jane can interact with in the ex:Planning group? **ex:Igor**    |
-| q3 | What are the departments not fully populated in enterprise Y?                    | What are the groups not fully populated in the ex:FL_Logistics? **ex:FL_CommercialDepartment**    |
-| q4 | What are the job positions of agent X?                                           | What are the roles played by agent ex:Igor **ex:FL_Planner**                                      |
+| q1 | What are the job positions not being performed by anyone in the enterprise X?    | What are the roles not being performed by anyone in the FL Logistics? **ex:FL_AccountManager** |
+| q2 | What are the other agents to whom agent A can interact with in the department X? | What are the other agents to whom Jane can interact with in the Planning group? **ex:Igor**    |
+| q3 | What are the departments not fully populated in enterprise Y?                    | What are the groups not fully populated in the FL Logistics? **ex:FL_CommercialDepartment**    |
+| q4 | What are the job positions of agent X?                                           | What are the roles played by agent Igor **ex:FL_Planner**                                      |
 
 ## Glossary
 
-* **Group**: A Group is a set of Roles that exists in an Organization..
+* **Group**: A Group is a set of Roles that exists in an Organization.
 * **Group Relationship**: A Group Relationship refers to a relationship between Groups.
 * **Social Link**: A Social Link is a type of interaction that can take place among Agents when playing a Role in a Group.
 
