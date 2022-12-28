@@ -1,0 +1,23 @@
+@base <https://purl.org/hmas/core> .
+@prefix : <#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+#    Classes
+#################################################################
+
+:Signifier a owl:Class ;
+         rdfs:label "Signifier"@en, "Signifiant"@fr  ;
+         rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about behavior possibilities."@en ;
+         rdfs:subClassOf :Hostable .
+
+#################################################################
+#    Properties
+#################################################################
+
+:isExposedIn a owl:ObjectProperty ;
+            rdfs:label "is exposed in"@en ;
+            rdfs:comment "A relation between a signifier and a resource profile it is exposed in."@en ;
+            rdfs:domain :Signifier ;
+            rdfs:range :ResourceProfile .
