@@ -1,0 +1,14 @@
+base <https://purl.org/hmas/core>
+prefix : <#>
+
+ask {
+    bind (<http://example.org/workspaces/manufacturing/artifacts/p1#s1> as ?s1)
+    bind (<http://example.org/workspaces/p0#manufacturing> as ?p0)
+    ?s1 a :Signifier .
+    ?p1 a :ResourceProfile .
+    ?a1 a :Artifact .
+    ?p0 a :Workspace .
+    ?s1 :isExposedIn ?p1 .
+    ?p1 :isProfileOf ?a1 .
+    ?a1 :isContainedIn ?p0 .
+}
