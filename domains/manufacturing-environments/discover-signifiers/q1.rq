@@ -1,0 +1,10 @@
+base <https://purl.org/hmas/core>
+prefix : <#>
+
+ask {
+    bind (<http://example.org/workspaces/manufacturing/artifacts/p1#s1> as ?s1)
+    bind (<http://example.org/workspaces/manufacturing/artifacts/p1> as ?p1)
+    ?s1 a :Signifier .
+    ?p1 a :ResourceProfile .
+    ?s1 :isExposedIn ?p1 .
+}
