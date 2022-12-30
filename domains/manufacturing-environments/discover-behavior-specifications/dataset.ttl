@@ -1,0 +1,56 @@
+@base <https://purl.org/hmas/core> .
+@prefix : <#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+#    Classes
+#################################################################
+
+:BehaviorExecution a owl:Class ;
+         rdfs:label "behavior execution"@en  ;
+         rdfs:comment "A course of action performed by an agent upon exploiting a behavior possibility."@en .
+
+:ActionExecution a owl:Class ;
+         rdfs:label "action execution"@en  ;
+         rdfs:comment "A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request."@en ;
+         rdfs:subClassOf :BehaviorExecution .
+
+:BehaviorSpecification a owl:Class ;
+         rdfs:label "behavior specification"@en  ;
+         rdfs:comment "A specification that describes a behavior, for example, as procedural knowledge (e.g., AgentSpeak plan) or code-on-demand (e.g., a script that implements a behavior)."@en .
+
+:ActionSpecification a owl:Class ;
+         rdfs:label "action specification"@en  ;
+         rdfs:comment "A specification that describes an action (e.g., through preconditions and postconditions) and how to execute the action, e.g. as a context-free request through a form."@en ;
+         rdfs:subClassOf :BehaviorSpecification .
+
+:Input a owl:Class ;
+         rdfs:label "input"@en  ;
+         rdfs:comment "An input of an action, which may include variables. The input may be used, for instance, in an action specification or in the representation of an action execution."@en .
+
+#################################################################
+#    Properties
+#################################################################
+
+:signifies a owl:ObjectProperty ;
+            rdfs:label "signifies"@en ;
+            rdfs:comment "A relation between a signifier and a behavior specification it signifies."@en ;
+            rdfs:domain :Signifier ;
+            rdfs:range :BehaviorSpecification .
+
+:hasForm a owl:ObjectProperty ;
+            rdfs:label "has form"@en ;
+            rdfs:comment "A relation between an action specification and a form that describes how to execute the specified action."@en ;
+            rdfs:domain :ActionSpecification .
+
+:expectsInput a owl:ObjectProperty ;
+            rdfs:label "expects input"@en ;
+            rdfs:comment "A relation between an action specification and the input that the specified action expects."@en ;
+            rdfs:domain :ActionSpecification ;
+            rdfs:range :Input .
+
+:hasSchema a owl:ObjectProperty ;
+            rdfs:label "has schema"@en ;
+            rdfs:comment "A relation between an input and the schema of the input."@en ;
+            rdfs:domain :Input .
