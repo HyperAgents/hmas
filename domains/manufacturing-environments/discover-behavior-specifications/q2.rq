@@ -1,0 +1,11 @@
+base <https://purl.org/hmas/interaction>
+prefix : <#>
+prefix hmas: <https://purl.org/hmas/core#>
+
+ask {
+    bind (<http://example.org/workspaces/manufacturing/artifacts/p#s> as ?s)
+    bind (<http://example.org/workspaces/manufacturing/artifacts/p#sp> as ?sp)
+    ?s a hmas:Signifier .
+    ?sp a :ActionSpecification .
+    ?s :signifies ?sp .
+}
