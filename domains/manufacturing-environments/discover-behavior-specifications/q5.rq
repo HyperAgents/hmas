@@ -1,0 +1,10 @@
+base <https://purl.org/hmas/interaction>
+prefix : <#>
+prefix hmas: <https://purl.org/hmas/core#>
+
+ask {
+    bind (<http://example.org/workspaces/manufacturing/artifacts/p#schema> as ?sc)
+    bind (<http://example.org/workspaces/manufacturing/artifacts/p#input> as ?i)
+    ?i a :Input .
+    ?i :hasSchema ?sc.
+}
