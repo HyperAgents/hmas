@@ -1,56 +1,34 @@
-@base <https://purl.org/hmas/core> .
+@base <https://purl.org/hmas/interaction> .
 @prefix : <#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hmas: <https://purl.org/hmas/core#> .
+@prefix phantom: <https://ci.mines-stetienne.fr/kg/ontology#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
 
-#################################################################
-#    Classes
-#################################################################
+<http://example.org/workspaces/manufacturing/artifacts/p> a hmas:ResourceProfile;
+    hmas:exposesSignifier <http://example.org/workspaces/manufacturing/artifacts/p#s> .
 
-:BehaviorExecution a owl:Class ;
-         rdfs:label "behavior execution"@en  ;
-         rdfs:comment "A course of action performed by an agent upon exploiting a behavior possibility."@en .
+<http://example.org/workspaces/manufacturing/artifacts/p#s> a hmas:Signifier ;
+    :signifies <http://example.org/workspaces/manufacturing/artifacts/p#sp> .
 
-:ActionExecution a owl:Class ;
-         rdfs:label "action execution"@en  ;
-         rdfs:comment "A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request."@en ;
-         rdfs:subClassOf :BehaviorExecution .
+<http://example.org/workspaces/manufacturing/artifacts/p#sp> a :ActionSpecification, phantom:SetGripper ;
+    :hasForm <http://example.org/workspaces/manufacturing/artifacts/p#http-form> ;
+    :hasForm <http://example.org/workspaces/manufacturing/artifacts/p#coap-form> ;
+    :expectsInput <http://example.org/workspaces/manufacturing/artifacts/p#input> .
 
-:BehaviorSpecification a owl:Class ;
-         rdfs:label "behavior specification"@en  ;
-         rdfs:comment "A specification that describes a behavior, for example, as procedural knowledge (e.g., AgentSpeak plan) or code-on-demand (e.g., a script that implements a behavior)."@en .
+<http://example.org/workspaces/manufacturing/artifacts/p#http-form> a hctl:Form;
+    htv:methodName "PUT";
+    hctl:hasTarget <https://api.interactions.ics.unisg.ch/leubot1/v1.3.4/reset>.
 
-:ActionSpecification a owl:Class ;
-         rdfs:label "action specification"@en  ;
-         rdfs:comment "A specification that describes an action (e.g., through preconditions and postconditions) and how to execute the action, e.g. as a context-free request through a form."@en ;
-         rdfs:subClassOf :BehaviorSpecification .
+<http://example.org/workspaces/manufacturing/artifacts/p#coap-form> a hctl:Form;
+    htv:methodName "PUT";
+    hctl:hasTarget <coaps://api.interactions.ics.unisg.ch/leubot1/v1.3.4/reset>.
 
-:Input a owl:Class ;
-         rdfs:label "input"@en  ;
-         rdfs:comment "An input of an action, which may include variables. The input may be used, for instance, in an action specification or in the representation of an action execution."@en .
+<http://example.org/workspaces/manufacturing/artifacts/p#input> a :Input ;
+    :hasSchema <http://example.org/workspaces/manufacturing/artifacts/p#schema> .
 
-#################################################################
-#    Properties
-#################################################################
-
-:signifies a owl:ObjectProperty ;
-            rdfs:label "signifies"@en ;
-            rdfs:comment "A relation between a signifier and a behavior specification it signifies."@en ;
-            rdfs:domain :Signifier ;
-            rdfs:range :BehaviorSpecification .
-
-:hasForm a owl:ObjectProperty ;
-            rdfs:label "has form"@en ;
-            rdfs:comment "A relation between an action specification and a form that describes how to execute the specified action."@en ;
-            rdfs:domain :ActionSpecification .
-
-:expectsInput a owl:ObjectProperty ;
-            rdfs:label "expects input"@en ;
-            rdfs:comment "A relation between an action specification and the input that the specified action expects."@en ;
-            rdfs:domain :ActionSpecification ;
-            rdfs:range :Input .
-
-:hasSchema a owl:ObjectProperty ;
-            rdfs:label "has schema"@en ;
-            rdfs:comment "A relation between an input and the schema of the input."@en ;
-            rdfs:domain :Input .
+<http://example.org/workspaces/manufacturing/artifacts/p#schema> a js:ObjectSchema, phantom:GripperJoint ;
+    js:properties [ a js:IntegerSchema ;
+        js:propertyName "phantom:hasGripperValue"
+    ] .
