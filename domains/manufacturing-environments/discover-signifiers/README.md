@@ -6,7 +6,7 @@ Feature: Discovery of Signifiers
 ## Description
 An agent A is situated in a manufacturing workspace that contains industrial artifacts (e.g.UR5 collaborative robot arm and a PhantomX robot arm) and other agents. The agent is responsible for operating a robotic arm artifact in the workspace, and cooperating with the other agents towards achieving production goals. To this end, agent A has the objective of discovering signifiers, i.e. cues in the workspace that reveal information about how to interact with the robotic arm artifact and the other agents.
 
-Agent A discovers signifiers exposed in the profile P1 of the robotic arm, and signifiers exposed in the profile P2 of a FIPA message transport service that the agent can use to send messages to other agents via HTTP.  Both the robotic arm and the message transport service are contained in the workspace along with their profiles.
+Agent A discovers signifiers exposed in the profile P1 of the robotic arm, and signifiers exposed in the profile P2 of a FIPA agent platform that the agent can use to send messages to other agents (e.g. via HTTP).  Both the robotic arm and the FIPA agent platform are contained in the workspace along with their profiles.
 
 ## Competency Questions
 
