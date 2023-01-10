@@ -4,12 +4,12 @@ Feature: Discovery of Behavior Specifications
 
 
 ## Description
-An agent A is situated in a manufacturing workspace that contains a robotic arm artifact. The resource profile of the robotic arm artifact exposes a signifier S that reveals information about a behavior possibility ⁠—⁠ it signifies a specification SP describing how to move the gripper of the robotic arm artifact. Specifically, SP describes the behavior of moving the gripper as an action that:
-- is of type [onto:SetGripper](https://ci.mines-stetienne.fr/kg/ontology#SetGripper),
-- expects an input I of a schema [onto:GripperJoint](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and 
-- can be executed based on a set of hypermedia controls. The set of hypermedia controls contains two forms ⁠—⁠ a form describing an HTTP request, and a form describing a CoAP request.
+An agent A is situated in a manufacturing workspace that contains a robotic arm artifact. The resource profile of the robotic arm artifact exposes a signifier S that provides a specification SP that describes how to exploit a behavior possibility, such as how to move the gripper of the robotic arm artifact. Specifically, SP is an action specification that describes the behavior of moving the gripper as an action that:
+- is of type onto:SetGripper (https://ci.mines-stetienne.fr/kg/ontology#SetGripper),
+- expects an input I of a schema onto:GripperJoint (https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and
+- can be executed via a hypermedia control from a set of hypermedia controls:. The set of hypermedia controls contains two forms ⁠—⁠ a form describing an HTTP request, and a form describing a CoAP request.
 
-Agent A has discovered S and has the objective of behaving based on the signified SP. For this, agent A provides an input of the schema [onto:GripperJoint](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and sends an HTTP request based on one of the hypermedia controls. 
+Agent A has discovered S and has the objective of behaving based on the signified SP. To this end, agent A provides an input of the schema onto:GripperJoint, and sends an HTTP request based on one of the forms.
 
 ## Competency Questions
 
