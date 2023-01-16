@@ -19,6 +19,7 @@
 #################################################################
 
 <#> a owl:Ontology ;
+    owl:imports hmas: ;
     dct:title "Hypermedia MAS Interaction Ontology"@en, "Ontologie d'Interaction des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems."@en, 
                   "L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias."@fr ;
@@ -43,6 +44,12 @@
   schema:name "University of St.Gallen" ;
   schema:url <https://www.unisg.ch> .
 
+<https://danaivach.inrupt.net/profile/card#me> a schema:Person ;
+  schema:name "Danai Vachtsevanou" ;
+  schema:email "danai.vachtsevanou@unisg.ch" ;
+  schema:url <https://danaivach.inrupt.net/profile/card> ;
+  schema:affiliation <https://www.unisg.ch/en> .
+
 <https://pod.inrupt.com/andreiciortea/profile/card#me> a schema:Person ;
   schema:name "Andrei Ciortea" ;
   schema:email "andrei.ciortea@unisg.ch" ;
@@ -52,12 +59,6 @@
   schema:name "Simon Mayer" ;
   schema:email "simon.mayer@unisg.ch" ;
   schema:affiliation <https://www.unisg.ch/en>  .
-
-<https://danaivach.inrupt.net/profile/card#me> a schema:Person ;
-  schema:name "Danai Vachtsevanou" ;
-  schema:email "danai.vachtsevanou@unisg.ch" ;
-  schema:url <https://danaivach.inrupt.net/profile/card> ;
-  schema:affiliation <https://www.unisg.ch/en> .
 
 schema:Person a owl:Class .
 schema:name a owl:AnnotationProperty .
