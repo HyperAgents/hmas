@@ -2,11 +2,11 @@
  prefix : <#>
 
  ask {
-     bind (<http://example.org/workspaces/manufacturing/artifacts/p1#s1> as ?s1)
-     bind (<http://example.org/workspaces/manufacturing/artifacts/p1#leubot1> as ?a1)
-     ?s1 a :Signifier .
-     ?p1 a :ResourceProfile .
-     ?a1 a :Artifact .
-     ?s1 :isExposedIn ?p1 .
-     ?p1 :isProfileOf ?a1 .
+     bind (ex:gripperMovable as ?s)
+     bind (ex:ur5 as ?a)
+     ?s a :Signifier .
+     ?p a :ResourceProfile .
+     ?a a :Artifact .
+     ?s :isExposedIn ?p .
+     ?p :isProfileOf ?a .
  }

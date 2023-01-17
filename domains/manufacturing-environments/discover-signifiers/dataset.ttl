@@ -1,14 +1,14 @@
 @base <https://purl.org/hmas/core> .
 @prefix : <#> .
+@prefix ex: <http://example.org/> .
 
-<http://example.org/workspaces/manufacturing/artifacts/p1#s1> a :Signifier ;
-    :isExposedIn <http://example.org/workspaces/manufacturing/artifacts/p1> .
+ex:gripperMovable a :Signifier ;
+    :isExposedIn ex:ur5Profile .
 
-<http://example.org/workspaces/manufacturing/artifacts/p1> a :ResourceProfile ;
-    :isProfileOf <http://example.org/workspaces/manufacturing/artifacts/p1#leubot1> .
+ex:ur5Profile a :ResourceProfile ;
+    :isProfileOf ex:ur5 .
 
-<http://example.org/workspaces/manufacturing/artifacts/p1#leubot1> a :Artifact ;
-    :isContainedIn <http://example.org/workspaces/p0#manufacturing>.
+ex:ur5 a :Artifact ;
+    :isContainedIn ex:manufacturingWorkspace .
 
-<http://example.org/workspaces/p0#manufacturing> a :Workspace;
-    :hasProfile <http://example.org/workspaces/p0> .
+ex:manufacturingWorkspace a :Workspace .

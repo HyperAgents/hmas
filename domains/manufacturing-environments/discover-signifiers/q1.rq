@@ -1,10 +1,11 @@
 base <https://purl.org/hmas/core>
 prefix : <#>
+prefix ex: <http://example.org/>
 
 ask {
-    bind (<http://example.org/workspaces/manufacturing/artifacts/p1#s1> as ?s1)
-    bind (<http://example.org/workspaces/manufacturing/artifacts/p1> as ?p1)
-    ?s1 a :Signifier .
-    ?p1 a :ResourceProfile .
-    ?s1 :isExposedIn ?p1 .
+    bind (ex:gripperMovable as ?s)
+    bind (ex:ur5Profile as ?p)
+    ?s a :Signifier .
+    ?p a :ResourceProfile .
+    ?s :isExposedIn ?p .
 }
