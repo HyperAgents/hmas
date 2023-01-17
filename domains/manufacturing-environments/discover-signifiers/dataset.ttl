@@ -1,23 +1,13 @@
 @base <https://purl.org/hmas/core> .
 @prefix : <#> .
-@prefix fipa: <https://ci.mines-stetienne.fr/fipa#> .
 
 <http://example.org/workspaces/manufacturing/artifacts/p1#s1> a :Signifier ;
     :isExposedIn <http://example.org/workspaces/manufacturing/artifacts/p1> .
 
-<http://example.org/workspaces/manufacturing/artifacts/p2#s2> a :Signifier ;
-    :isExposedIn <http://example.org/workspaces/manufacturing/artifacts/p2> .
-
 <http://example.org/workspaces/manufacturing/artifacts/p1> a :ResourceProfile ;
     :isProfileOf <http://example.org/workspaces/manufacturing/artifacts/p1#leubot1> .
 
-<http://example.org/workspaces/manufacturing/artifacts/p2> a fipa:AgentPlatformDescription ;
-    :isProfileOf <http://example.org/workspaces/manufacturing/artifacts/p2#platform> .
-
 <http://example.org/workspaces/manufacturing/artifacts/p1#leubot1> a :Artifact ;
-    :isContainedIn <http://example.org/workspaces/p0#manufacturing>.
-
-<http://example.org/workspaces/manufacturing/artifacts/p2#platform> a fipa:FIPAAgentPlatform ;
     :isContainedIn <http://example.org/workspaces/p0#manufacturing>.
 
 <http://example.org/workspaces/p0#manufacturing> a :Workspace;
