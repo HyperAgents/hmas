@@ -311,3 +311,9 @@ _:norman2013 dcterms:bibliographicCitation "Norman, D. (2013). The design of eve
             rdfs:comment "A relations that refers to the platform that hosts the resource. "@en ;
             rdfs:label "is hosted on"@en .
 
+:isExposedIn a owl:ObjectProperty ;
+            rdfs:label "is exposed in"@en ;
+            owl:inverseOf :exposesSignifier ;
+            rdfs:comment "A relation between a signifier and a resource profile it is exposed in."@en ;
+            rdfs:domain :Signifier ;
+            rdfs:range :ResourceProfile .
