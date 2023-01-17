@@ -18,12 +18,12 @@ A production engineer uses a Web frontend to configure and operate a factory com
 
 ## Glossary
 
-* [**Workspace**](https://ci.mines-stetienne.fr/hmas/core#Workspace): A logical container of one or multiple interactions among agents and artifacts.
-* [**Agent**](https://ci.mines-stetienne.fr/hmas/core#Agent): An entity that is capable of autonomous behavior.
-* [**Artifact**](https://ci.mines-stetienne.fr/hmas/core#Agent):  A resource that can be dynamically constructed, shared, and used by agents to support their activities.
-* [**Resource Containment**](https://ci.mines-stetienne.fr/hmas/core#Agent): A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container.
-* [**Resource Profile**](https://ci.mines-stetienne.fr/hmas/core#Agent): Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers.
-* [**Signifier**](https://purl.org/hmas/ns/OtherTerm): see [_Other scenario_](../other-scenario/README.md).
+* [**Workspace**](https://purl.org/hmas/core#Workspace): A logical container of one or multiple interactions among agents and artifacts.
+* [**Agent**](https://purl.org/hmas/core#Agent): An entity that is capable of autonomous behavior.
+* [**Artifact**](https://purl.org/hmas/core#Artifact):  A resource that can be dynamically constructed, shared, and used by agents to support their activities.
+* [**Resource Containment**](	https://purl.org/hmas/core#contains): A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container.
+* [**Resource Profile**](https://purl.org/hmas/core#ResourceProfile): Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers.
+* [**Signifier**](https://purl.org/hmas/core#Signifier): see [Other scenario](../discover-signifiers/README.md).
 
 ### Recommendations
 
