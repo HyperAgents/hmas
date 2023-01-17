@@ -1,7 +1,77 @@
-@prefix ex: <http://example.org/> .
+@base <https://purl.org/hmas/core> .
+@prefix : <#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 
-ex:Class a owl:Class ;
-         rdfs:label "Class" ;
-         rdfs:comment "Example class for testing purposes" .
+
+#################################################################
+#    Classes
+#################################################################
+
+:Agent a owl:Class ;
+        rdfs:comment "An entity that is capable of autonomous behavior."@en ;
+        rdfs:label "Agent"@en, "Agent"@fr .
+
+:Artifact a owl:Class ;
+        rdfs:comment "A resource that can be dynamically constructed, shared, and used by agents to support their activities. In a Hypermedia MAS, an artifact exposes and can be accessed through a hypermedia interface (in addition to other possible interfaces, such as a physical interface)."@en ;
+        rdfs:label "Artifact"@en, "Artefact"@fr .
+
+:ResourceProfile a owl:Class ;
+        rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
+        skos:example "e.g., a Thing Description document, a Hydra document, an Socio-Technical Network platform description, a fipa:AgentDescription"@en ;
+        rdfs:label "Resource Profile"@en, "Profil de Ressource"@fr .
+
+:Workspace a owl:Class ;
+        rdfs:comment "A logical container of one or multiple interactions among agents and potentially artifacts. Workspaces can contain any resource in general and in particular agents, artifacts, other workspaces, or platforms. A workspace can be a LDP container and this can be done by multi-typing the container or by multiple inheritance on a Class ex:Workcontainer. "@en ;
+        rdfs:label "Workspace"@en, "Espace de Travail"@fr ;
+        rdfs:seeAlso <https://www.w3.org/ns/ldp#> .
+
+### Top ontology constraints for coherent modeling 
+
+# disjoint top classes 
+
+[ a owl:AllDisjointClasses ;
+    owl:members ( :Agent :Artifact :ResourceProfile :Workspace ) ] .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:transitivelyContains a owl:ObjectProperty, owl:TransitiveProperty ;
+          owl:inverseOf :isTransitivelyContainedIn ;
+          rdfs:domain :Workspace ;
+          rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;
+          rdfs:label "transitivelyContains"@en .
+
+:contains a owl:ObjectProperty ;
+          rdfs:subPropertyOf :transitivelyContains ;
+          owl:inverseOf :isContainedIn ;
+          rdfs:comment "A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container."@en ;
+          rdfs:label "directlyContains"@en .
+
+:isProfileOf a owl:ObjectProperty ;
+           owl:inverseOf :hasProfile ;
+           rdfs:domain :ResourceProfile ;
+           rdfs:comment "A relation that links a resource profile to the resource it is a profile of."@en ;
+           skos:example ""@en ;
+           rdfs:label "is profile of"@en .
+
+:isTransitivelyContainedIn a owl:ObjectProperty, owl:TransitiveProperty ;
+            rdfs:range :Workspace ;
+            owl:inverseOf :transitivelyContains ;
+            rdfs:comment "A relation that refers to all workspaces in which a resource is contained. "@en ;
+            rdfs:label "is transitively contained in"@en .
+
+:isContainedIn a owl:ObjectProperty ;
+            rdfs:subPropertyOf :isTransitivelyContainedIn ;
+            owl:inverseOf :contains ;
+            rdfs:comment "A relation that describes a workspace that contains a resource."@en ;
+            rdfs:label "is contained in"@en .
+
+:hasProfile a owl:ObjectProperty, owl:AsymmetricProperty ;
+            rdfs:range :ResourceProfile ;
+            owl:inverseOf :isProfileOf ;
+            rdfs:comment "A relation that links a resource to its profile."@en ;
+            rdfs:label "has profile"@en .

@@ -1,0 +1,10 @@
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:autonomousBob as ?agent1)
+    bind (ex:factorySupervisor as ?agent2)
+
+    ex:productionCell1 hmas:contains ?agent1, ?agent2 .
+    ?agent1 a hmas:Agent .
+    ?agent2 a hmas:Agent .
+}

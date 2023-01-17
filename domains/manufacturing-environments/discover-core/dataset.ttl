@@ -1,3 +1,37 @@
+@prefix hmas: <https://purl.org/hmas/core#> .
 @prefix ex: <http://example.org/> .
 
-ex:individual a ex:Class .
+
+ex:factory a hmas:Workspace ;
+    hmas:hasResourceProfile ex:factoryProfile ;
+    hmas:contains ex:groundFloor .
+
+ex:factoryProfile a hmas:ResourceProfile .
+
+ex:groundFloor a hmas:Workspace ;
+    hmas:contains ex:productionCell1 , ex:productionCell2 .
+
+ex:productionCell1 a hmas:Workspace ;
+    hmas:contains ex:ur5, ex:phantomX, ex:autonomousBob, ex:factorySupervisor .
+
+ex:ur5 a hmas:Artifact, ex:UR5Robot .
+
+ex:phantomX a hmas:Artifact, ex:PhantomXRobot .
+
+ex:autonomousBob a hmas:Agent .
+
+ex:factorySupervisor a hmas:Agent .
+
+ex:productionCell2 a hmas:Workspace ;
+    hmas:contains ex:autonomousBob .
+
+
+################################################################################################
+#   The following triples are required for passing the tests (and should have been inferred):
+################################################################################################
+
+ex:factory hmas:contains ex:productionCell1, ex:productionCell2 . # q2
+
+ex:groundFloor hmas:isContainedIn ex:factory . # q3
+
+ex:autonomousBob hmas:isContainedIn ex:productionCell1, ex:productionCell2 . # q6

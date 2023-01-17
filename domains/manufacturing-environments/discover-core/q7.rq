@@ -1,0 +1,8 @@
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:factoryProfile as ?profile)
+
+    ex:factory hmas:hasResourceProfile ?profile .
+    ?profile a hmas:ResourceProfile .
+}
