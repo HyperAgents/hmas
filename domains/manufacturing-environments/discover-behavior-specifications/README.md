@@ -4,22 +4,22 @@ Feature: Discovery of Behavior Specifications
 
 
 ## Description
-An agent A is situated in a manufacturing workspace that contains a robotic arm artifact. The resource profile of the robotic arm artifact exposes a signifier S that provides a specification SP that describes how to exploit a behavior possibility, such as how to move the gripper of the robotic arm artifact. Specifically, SP is an action specification that describes the behavior of moving the gripper as an action that:
+An agent is situated in a manufacturing workspace that contains a robotic arm artifact. The resource profile of the robotic arm artifact exposes a signifier that provides a specification describing how to exploit a behavior possibility, such as how to move the gripper of the robotic arm artifact. Specifically, it is an action specification that describes the behavior of moving the gripper as an action that:
 - is of type onto:SetGripper (https://ci.mines-stetienne.fr/kg/ontology#SetGripper),
-- expects an input I of a schema onto:GripperJoint (https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and
-- can be executed via a hypermedia control from a set of hypermedia controls:. The set of hypermedia controls contains two forms ⁠—⁠ a form describing an HTTP request, and a form describing a CoAP request.
+- expects an input of the schema onto:GripperJoint (https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and
+- can be executed via a hypermedia control from a set of hypermedia controls: The set of hypermedia controls contains two forms ⁠—⁠ a form describing an HTTP request, and a form describing a CoAP request.
 
-Agent A has discovered S and has the objective of behaving based on the signified SP. To this end, agent A provides an input of the schema onto:GripperJoint, and sends an HTTP request based on one of the forms.
+The agent has discovered the signifier and has the objective of behaving based on the signified SP. To this end, the agent provides an input of the schema onto:GripperJoint, and sends an HTTP request based on one of the forms.
 
 ## Competency Questions
 
-| ID | Question in Natural Language | Example |
-|----|------------------------------|---------|
-| q1 | What are the behavior specifications that a given signifier signifies?           |What are the behavior specifications that signifier S signifies?|
-| q2 | What are the action specifications that a given signifier signifies?             |What are the action specifications that signifier S signifies?|
-| q3 | What are the forms that describe how to execute a given specified action?        |What are the forms that describe how to execute moving the gripper of the robotic arm artifact based on SP?|
-| q4 | What is the input that is expected by a given specified action?                  |What is the input that is expected for moving the gripper of the robotic arm artifact based on SP?|
-| q5 | What are the schemas of a given expected input?                                  |What are the schemas of the expected input I?|
+| ID | Question in Natural Language | Example                                                                                                                                   |
+|----|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| q1 | What are the behavior specifications that a given signifier signifies?           | Behavior specifications that signifier `ex:gripperMovable` signifies: `ex:moveGripper`                                                    |
+| q2 | What are the action specifications that a given signifier signifies?             | Action specifications that signifier `ex:gripperMovable` signifies: `ex:moveGripper`                                                      |
+| q3 | What are the forms that describe how to execute a given specified action?        | Forms that describe how to execute moving the gripper of the robotic arm artifact based on `ex:moveGripper`: `ex:httpForm`, `ex:coapForm` |
+| q4 | What is the input that is expected by a given specified action?                  | Input that is expected for moving the gripper of the robotic arm artifact based on `ex:moveGripper`: `ex:gripperJoint`                    |
+| q5 | What are the schemas of a given expected input?                                  | Schemas of the expected input `ex:moveGripper`: `ex:gripperJointSchema`                                                                   |
 
 
 ## Glossary

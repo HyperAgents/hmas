@@ -2,11 +2,12 @@ base <https://purl.org/hmas/interaction>
 prefix : <#>
 prefix hmas: <https://purl.org/hmas/core#>
 prefix hctl: <https://www.w3.org/2019/wot/hypermedia#>
+prefix ex: <http://example.org/>
 
 ask {
-    bind (<http://example.org/workspaces/manufacturing/artifacts/p#http-form> as ?f1)
-    bind (<http://example.org/workspaces/manufacturing/artifacts/p#coap-form> as ?f2)
-    bind (<http://example.org/workspaces/manufacturing/artifacts/p#sp> as ?sp)
+    bind (ex:httpForm as ?f1)
+    bind (ex:coapForm as ?f2)
+    bind (ex:moveGripper as ?sp)
     ?f1 a hctl:Form .
     ?f2 a hctl:Form .
     ?sp a :ActionSpecification .

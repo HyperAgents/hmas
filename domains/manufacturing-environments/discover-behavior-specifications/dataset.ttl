@@ -5,30 +5,31 @@
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix htv: <http://www.w3.org/2011/http#> .
 @prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix ex: <http://example.org/> .
 
-<http://example.org/workspaces/manufacturing/artifacts/p> a hmas:ResourceProfile;
-    hmas:exposesSignifier <http://example.org/workspaces/manufacturing/artifacts/p#s> .
+ex:ur5Profile a hmas:ResourceProfile;
+    hmas:exposesSignifier ex:gripperMovable .
 
-<http://example.org/workspaces/manufacturing/artifacts/p#s> a hmas:Signifier ;
-    :signifies <http://example.org/workspaces/manufacturing/artifacts/p#sp> .
+ex:gripperMovable a hmas:Signifier ;
+    :signifies ex:moveGripper .
 
-<http://example.org/workspaces/manufacturing/artifacts/p#sp> a :ActionSpecification, phantom:SetGripper ;
-    :hasForm <http://example.org/workspaces/manufacturing/artifacts/p#http-form> ;
-    :hasForm <http://example.org/workspaces/manufacturing/artifacts/p#coap-form> ;
-    :expectsInput <http://example.org/workspaces/manufacturing/artifacts/p#input> .
+ex:moveGripper a :ActionSpecification, phantom:SetGripper ;
+    :hasForm ex:httpForm ;
+    :hasForm ex:coapForm ;
+    :expectsInput ex:gripperJoint .
 
-<http://example.org/workspaces/manufacturing/artifacts/p#http-form> a hctl:Form;
+ex:httpForm a hctl:Form;
     htv:methodName "PUT";
     hctl:hasTarget <https://api.interactions.ics.unisg.ch/leubot1/v1.3.4/reset>.
 
-<http://example.org/workspaces/manufacturing/artifacts/p#coap-form> a hctl:Form;
+ex:coapForm a hctl:Form;
     htv:methodName "PUT";
     hctl:hasTarget <coaps://api.interactions.ics.unisg.ch/leubot1/v1.3.4/reset>.
 
-<http://example.org/workspaces/manufacturing/artifacts/p#input> a :Input ;
-    :hasSchema <http://example.org/workspaces/manufacturing/artifacts/p#schema> .
+ex:gripperJoint a :Input ;
+    :hasSchema ex:gripperJointSchema .
 
-<http://example.org/workspaces/manufacturing/artifacts/p#schema> a js:ObjectSchema, phantom:GripperJoint ;
+ex:gripperJointSchema a js:ObjectSchema, phantom:GripperJoint ;
     js:properties [ a js:IntegerSchema ;
         js:propertyName "phantom:hasGripperValue"
     ] .
