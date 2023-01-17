@@ -160,7 +160,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :Signifier rdf:type owl:Class ;
-        rdfs:comment "Structured data that support the use of a resource by agents. Structured data may include metadata about the signifier (e.g., creator, salience)."@en ;
+        rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility."@en ;
         rdfs:label "Signifier"@en, "Signifiant"@fr  ;
         skos:note ":Signifier would fit as a superclass of td:InteractionAffordance and fipa:ServiceDescription"@en ;
         skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies."@en ;

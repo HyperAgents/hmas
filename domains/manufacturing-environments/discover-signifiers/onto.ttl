@@ -11,7 +11,7 @@
 
 :Signifier a owl:Class ;
          rdfs:label "Signifier"@en, "Signifiant"@fr  ;
-         rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about behavior possibilities."@en ;
+         rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility."@en ;
          rdfs:subClassOf :Hostable .
 
 :Affordance a skos:Concept ;
