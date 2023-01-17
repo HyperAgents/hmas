@@ -8,17 +8,20 @@ A manufacturing agent operating on a shop floor in St. Gallen is delegated a goa
 
 | ID | Question in natural language | Example of answer |
 |---|---|---|
-| q1 | What is the Hypermedia MAS platform that hosts a given agent? | an example instance |
-| q2 | What is the resource profile of a given Hypermedia MAS platform? | an example instance |
-| q3 | What is a signifier for a FIPA message transport service of a given platform? | an example instance |
+| q1 | What is the Hypermedia MAS platform that hosts a given agent? | Hypermedia MAS Platform that hosts Saint-Étienne agent `ex:agentSaintEtienne`: `ex:platformSaintEtienne` |
+| q2 | What is the resource profile of a given agent? | Resource profile of Saint-Étienne agent `ex:agentSaintEtienne`: `ex:agentSaintEtienneProfile` |
+| q3 | What is the resource profile of a given Hypermedia MAS platform? | Resource profile of Saint-Étienne Hypermedia MAS Platform `ex:platformSaintEtienne`: `ex:platformSaintEtienneProfile` |
+| q4 | What is a signifier for a FIPA message transport service of a given platform? | Signifier exposed in the resource profile of the Saint-Étienne Hypermedia MAS Platform `ex:platformSaintEtienne`: `ex:signifer` |
+
+For competency question q4, it is outside the scope of this scenario to represent the actual signifier (e.g., a signifier that describes a FIPA message transport service). The terms required to create such a representation will be introduced by the interaction ontology.
 
 ## Glossary
 
 * [**Hypermedia MAS Platform**](https://purl.org/hmas/core#HypermediaMASPlatform): A Hypermedia MAS platform is a system providing a collection of features to support Hypermedia MAS.
 * [**Resource Hosting**](https://purl.org/hmas/core#isHostedOn): A relation between a resource (e.g., an agent) and the Hypermedia MAS Platform that hosts the resource.
-* [**Agent**](https://purl.org/hmas/ns/OtherTerm): see [Other scenario](../discover-core/README.md).
-* [**Resource Profile**](https://purl.org/hmas/ns/OtherTerm): see [Other scenario](../discover-core/README.md).
-* [**Signifier**](https://purl.org/hmas/ns/OtherTerm): see [Other scenario](../discover-signifiers/README.md).
+* [**Agent**](https://purl.org/hmas/core#Agent): see [Other scenario](../discover-core/README.md).
+* [**Resource Profile**](https://purl.org/hmas/core#ResourceProfile): see [Other scenario](../discover-core/README.md).
+* [**Signifier**](https://purl.org/hmas/core#Signifier): see [Other scenario](../discover-signifiers/README.md).
 
 ### Recommendations
 

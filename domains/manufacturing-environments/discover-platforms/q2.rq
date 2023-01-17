@@ -1,0 +1,9 @@
+prefix hmas: <https://purl.org/hmas/core#>
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:agentSaintEtienneProfile as ?profile)
+
+    ex:agentSaintEtienne hmas:hasResourceProfile ?profile .
+    ?profile a hmas:ResourceProfile .
+}

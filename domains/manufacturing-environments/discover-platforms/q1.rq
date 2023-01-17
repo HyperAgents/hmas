@@ -1,0 +1,10 @@
+prefix hmas: <https://purl.org/hmas/core#>
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:platformSaintEtienne as ?platform)
+
+    ex:agentSaintEtienne hmas:isHostedOn ?platform .
+
+    ?platform a hmas:HypermediaMASPlatform .
+}
