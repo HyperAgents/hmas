@@ -110,6 +110,19 @@ skos:note a owl:AnnotationProperty .
   schema:email "olivier.boissier@emse.fr" ;
   schema:affiliation <https://mines-stetienne.fr> .
 
+:Affordance a skos:Concept ;
+    skos:prefLabel "affordance"@en ;
+    skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;
+    skos:scopeNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007] and is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;
+    dcterms:references _:chemeroTurvey2007 ;
+    dcterms:references _:norman2013 .
+
+_:chemeroTurvey2007 dcterms:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;
+    rdfs:label "Chemero and Turvey, 2007"@en .
+
+_:norman2013 dcterms:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;
+    rdfs:label "Norman, 2013"@en .
+
 #################################################################
 #    Classes
 #################################################################

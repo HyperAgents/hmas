@@ -5,15 +5,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-#################################################################
-#    Classes
-#################################################################
-
-:Signifier a owl:Class ;
-         rdfs:label "Signifier"@en, "Signifiant"@fr  ;
-         rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility."@en ;
-         rdfs:subClassOf :Hostable .
-
 :Affordance a skos:Concept ;
     skos:prefLabel "affordance"@en ;
     skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;
@@ -26,6 +17,15 @@ _:chemeroTurvey2007 dcterms:bibliographicCitation "Chemero, A., & Turvey, M. T. 
 
 _:norman2013 dcterms:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;
     rdfs:label "Norman, 2013"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+:Signifier a owl:Class ;
+         rdfs:label "Signifier"@en, "Signifiant"@fr  ;
+         rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility."@en ;
+         rdfs:subClassOf :Hostable .
 
 #################################################################
 #    Properties
