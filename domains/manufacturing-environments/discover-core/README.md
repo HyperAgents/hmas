@@ -8,13 +8,13 @@ A production engineer uses a Web frontend to configure and operate a factory com
 
 | ID | Question in natural language | Example of answer |
 |---|---|---|
-| q1 | What are the workspaces directly contained in a given workspace? | an example instance |
-| q2 | What are all the workspaces contained in a given workspace (directly or indirectly)? | an example instance |
-| q3 | What is the parent workspace of a given workspace? | an example instance |
-| q4 | What are the artifacts contained in a given workspace? | an example instance |
-| q5 | What are the agents contained in a given workspace? | an example instance |
-| q6 | What are all the workspaces that contain a given agent? | an example instance |
-| q7 | What is the profile of a given resource? | an example instance |
+| q1 | What are the workspaces directly contained in a given workspace? | Workspaces contained on the factory's ground floor `ex:groundFloor`: `ex:productionCell1` and `ex:productionCell2` |
+| q2 | What are all the workspaces contained in a given workspace (directly or indirectly)? | All workspaces contained in factory `ex:factory`: `ex:groundFloor`, `ex:productionCell1`, and `ex:productionCell2` |
+| q3 | What is the parent workspace of a given workspace? | Parent workspace of ground floor workspace `ex:groundFloor`: `ex:factory` |
+| q4 | What are the artifacts contained in a given workspace? | Artifacts contained in workspace `ex:productionCell1`: `ex:ur5` and `ex:phantomX` |
+| q5 | What are the agents contained in a given workspace? | Agents contained in workspace `ex:productionCell1`: `ex:autonomousBob` and `ex:factorySupervisor` |
+| q6 | What are all the workspaces that contain a given agent? | Workspaces containing agent `ex:autonomousBob`: `ex:productionCell1` and `productionCell2` |
+| q7 | What is the profile of a given resource? | Resource profile of the factory workspace `ex:factory`: `ex:factoryProfile` |
 
 ## Glossary
 
@@ -27,4 +27,6 @@ A production engineer uses a Web frontend to configure and operate a factory com
 
 ### Recommendations
 
-_If the newly defined terms are to be used in a particular way, details can be given here to make readers understand what is considered a good practice. Similarly, a comparison with existing vocabularies can be given here, such that readers understand how to combine these vocabularies with the newly defined terms or why these vocabularies are not suitable here._
+TODOs:
+- [ ] position `hmas:Agent` w.r.t to [foaf:Agent](http://xmlns.com/foaf/0.1/#term_Agent), [foaf:Person](http://xmlns.com/foaf/0.1/#term_Person), [schema:Person](https://schema.org/Person), etc.
+- [ ] position `hmas:Workspace` w.r.t. [ldp:Container](https://www.w3.org/ns/ldp#Container)
