@@ -1,5 +1,6 @@
  base <https://purl.org/hmas/core>
  prefix : <#>
+ prefix ex: <http://example.org/>
 
  ask {
      bind (ex:gripperMovable as ?s)
