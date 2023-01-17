@@ -10,11 +10,11 @@ The agent discovers signifiers exposed in the profile of the robotic arm that is
 
 ## Competency Questions
 
-| ID | Question in Natural Language                                                                      | Example                                                                                                           |
-|----|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| q1 | What are the signifiers exposed in a given resource profile?                                      | Signifiers exposed in resource profile `ex:ur5Profile`: `ex:gripperMovable`                                       |
-| q2 | What are the signifiers exposed in resource profiles of artifacts contained in a given workspace? | Signifiers exposed in resource profiles of artifacts contained in `ex:manufacturingWorkspace`: `ex:gripperMovable` |
-| q3 | What are the signifiers exposed in resource profiles of a given artifact?                         | Signifiers exposed in resource profiles of `ex:ur5`: `ex:gripperMovable`                                          |
+| ID | Question in Natural Language                                                                      | Example                                                                                                                      |
+|----|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| q1 | What are the signifiers exposed in a given resource profile?                                      | Signifiers exposed in resource profile `ex:ur5Profile`: `ex:gripperMovable`                                                  |
+| q2 | What are the signifiers exposed in resource profiles of artifacts contained in a given workspace? | Signifiers exposed in resource profiles of artifacts contained in workspace `ex:manufacturingWorkspace`: `ex:gripperMovable` |
+| q3 | What are the signifiers exposed in resource profiles of a given artifact?                         | Signifiers exposed in resource profiles of artifact `ex:ur5`: `ex:gripperMovable`                                            |
 
 ## Glossary
 - **Signifier**: A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility.
