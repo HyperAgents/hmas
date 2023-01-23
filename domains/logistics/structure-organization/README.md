@@ -27,7 +27,7 @@ Jane is hired as a carrier. She was instructed to wait until she receives the sc
 | q1 | What are the job positions not being performed by anyone in the enterprise X?    | What are the roles not being performed by anyone in the FL Logistics? **ex:FL_AccountManager** |
 | q2 | What are the other agents to whom agent A can interact with in the department X? | What are the other agents to whom Jane can interact with in the Planning group? **ex:Igor**    |
 | q3 | What are the departments not fully populated in enterprise Y?                    | What are the groups not fully populated in the FL Logistics? **ex:FL_CommercialDepartment**    |
-| q4 | What are the job positions of agent X?                                           | What are the roles played by agent Igor **ex:FL_Planner**                                      |
+| q4 | What are the job positions of agent X?                                           | What are the roles played by agent Igor? **ex:FL_Planner**                                     |
 
 ## Glossary
 

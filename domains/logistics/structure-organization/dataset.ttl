@@ -36,9 +36,280 @@ ex:Logistics rdfs:subClassOf hmas:Organization .
 
 # SPECIFICATION
 
-# TODO
-# Required to include SHACL constraints to define the ex:Logistics Organization Specification
+## Organization Specifications
+ex:LogisticsShape a sh:NodeShape ;
+    sh:targetClass ex:Logistics ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:qualifiedValueShape [ sh:class ex:Commitment ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:qualifiedValueShape [ sh:class ex:IntegrityRespect ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:HumanResourcesOfficer ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:FinanceOfficer ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:AccountManager ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Planner ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Carrier ] ;
+        sh:qualifiedMinCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Collector ] ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Deliverer ] ;
+        ] ;
+    sh:property [
+        sh:path hmas:isStructuredBy ;
+        sh:minCount 5 ;
+        sh:maxCount 5 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedValueShape [ sh:class ex:AdministrativeDepartment ] ;
+        sh:qualifiedValuesShapeDisjoint true ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedValueShape [ sh:class ex:OperationsDepartment ] ;
+        sh:qualifiedValuesShapeDisjoint true ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedValueShape [ sh:class ex:HumanResourcesDepartment ] ;
+        sh:qualifiedValuesShapeDisjoint true ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedValueShape [ sh:class ex:FinanceDeparment ] ;
+        sh:qualifiedValuesShapeDisjoint true ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedValueShape [ sh:class ex:CommercialDepartment ] ;
+        sh:qualifiedValuesShapeDisjoint true ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedValueShape [ sh:class ex:PlanningDepartment ] ;
+        sh:qualifiedValuesShapeDisjoint true ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
+        sh:qualifiedValuesShapeDisjoint true ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:HumanResourcesManagement ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:FinancialManagement ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:CommercialManagement ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:PlanningManagement ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:CarryGoods ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:CollectGoods ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:DeliverGoods ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesFacility ;
+        sh:qualifiedValueShape [ sh:class ex:PickingArea ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesFacility ;
+        sh:qualifiedValueShape [ sh:class ex:ReceivingArea ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] .
 
+## Role Specifications
+ex:HumanResourcesOfficerShape a sh:NodeShape ;
+    sh:targetClass ex:HumanResourcesOfficer ;
+    sh:property [
+        sh:path hmas:belongsTo ;
+        sh:qualifiedValueShape [ sh:class ex:HumanResourcesDepartment ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] .
+
+ex:FinanceOfficerShape a sh:NodeShape ;
+    sh:targetClass ex:FinanceOfficer ;
+    sh:property [
+        sh:path hmas:belongsTo ;
+        sh:qualifiedValueShape [ sh:class ex:FinanceDeparment ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] .
+
+ex:AccountManagerShape a sh:NodeShape ;
+    sh:targetClass ex:AccountManager ;
+    sh:property [
+        sh:path hmas:belongsTo ;
+        sh:qualifiedValueShape [ sh:class ex:CommercialDepartment ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] .
+
+ex:PlannerShape a sh:NodeShape ;
+    sh:targetClass ex:Planner ;
+    sh:property [
+        sh:path hmas:belongsTo ;
+        sh:qualifiedValueShape [ sh:class ex:PlanningDepartment ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:or (
+        sh:property [
+            sh:path hmas:isLinkedTo ;
+            sh:qualifiedValueShape [ sh:class ex:Carrier ] ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            ]
+        sh:property [
+            sh:path hmas:isLinkedTo ;
+            sh:qualifiedValueShape [ sh:class ex:Collector ] ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            ]
+        sh:property [
+            sh:path hmas:isLinkedTo ;
+            sh:qualifiedValueShape [ sh:class ex:Deliverer ] ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            ]
+        ) .
+        
+ex:CarrierShape a sh:NodeShape ;
+    sh:targetClass ex:Carrier ;
+    sh:property [
+        sh:path hmas:belongsTo ;
+        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
+        ] .
+
+ex:CollectorShape a sh:NodeShape ;
+    sh:targetClass ex:Collector ;
+    sh:property [
+        sh:path hmas:belongsTo ;
+        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
+        ] .
+
+ex:DelivererShape a sh:NodeShape ;
+    sh:targetClass ex:Deliverer ;
+    sh:property [
+        sh:path hmas:belongsTo ;
+        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
+        ] .
+
+ex:HumanResourcesDepartmentShape a sh:NodeShape ;
+    sh:targetClass ex:HumanResourcesDepartment ;
+    sh:property [
+        sh:path hmas:isSubGroupOf ;
+        sh:qualifiedValueShape [ sh:class ex:AdministrativeDepartment ] ;
+        ] .
+
+ex:FinanceDeparmentShape a sh:NodeShape ;
+    sh:targetClass ex:FinanceDeparment ;
+    sh:property [
+        sh:path hmas:isSubGroupOf ;
+        sh:qualifiedValueShape [ sh:class ex:AdministrativeDepartment ] ;
+        ] .
+
+ex:CommercialDepartmentShape a sh:NodeShape ;
+    sh:targetClass ex:CommercialDepartment ;
+    sh:property [
+        sh:path hmas:isSubGroupOf ;
+        sh:qualifiedValueShape [ sh:class ex:OperationsDepartment ] ;
+        ] .
+
+ex:PlanningDepartmentShape a sh:NodeShape ;
+    sh:targetClass ex:PlanningDepartment ;
+    sh:property [
+        sh:path hmas:isSubGroupOf ;
+        sh:qualifiedValueShape [ sh:class ex:OperationsDepartment ] ;
+        ] .
+
+ex:ShippingDepartmentShape a sh:NodeShape ;
+    sh:targetClass ex:ShippingDepartment ;
+    sh:property [
+        sh:path hmas:isSubGroupOf ;
+        sh:qualifiedValueShape [ sh:class ex:OperationsDepartment ] ;
+        ] .
+        
 ## Organizational Values
 ex:Commitment rdfs:subClassOf hmas:OrganizationalValue ;
     rdfs:comment "Do everything you can to keep the organization promisses to the customers."@en ;
