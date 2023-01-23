@@ -7,10 +7,6 @@
 #    Classes
 #################################################################
 
-hmas:Organization a owl:Class ;
-    rdfs:comment "An Organization is an entity situated on Agents and Artifacts, and regulated by a regulation system."@en ;
-    rdfs:label "Organization"@en .
-
 hmas:OrganizationalValue a owl:Class ;
     rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an organization."@en ;
     rdfs:label "Organizational Value"@en .
@@ -54,21 +50,3 @@ hmas:proposesFacility a owl:ObjectProperty ;
     schema:rangeIncludes hmas:Facility ;
     rdfs:comment "A relation that refers to a Facility that can be played in the context of an Organization."@en ;
     rdfs:label "proposes facility"@en .
-    
-hmas:isSituatedOn a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Organization ;
-    schema:rangeIncludes hmas:Agent, hmas:Artifact ;
-    rdfs:comment "An Organization is situated on Agents and Artifacts."@en ;
-    rdfs:label "is situated on"@en .
-
-hmas:isMemberOf a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Agent ;
-    schema:rangeIncludes hmas:Organization ;
-    rdfs:comment "An Agent is member of an Organization."@en ;
-    rdfs:label "is member of"@en .
-
-hmas:isMaterialOf a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Artifact ;
-    schema:rangeIncludes hmas:Organization ;
-    rdfs:comment "An Artifact is part of an Organization."@en ;
-    rdfs:label "is material of"@en .
