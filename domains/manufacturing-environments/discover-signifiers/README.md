@@ -31,3 +31,5 @@ The agent discovers signifiers exposed in the profile of the robotic arm that is
 - Agents can discover and interpret exposed signifiers to receive information about:
    1. how to exploit behavior possibilities;
    2. under which circumstances to exploit behavior possibilities.
+- TODOS:
+  - [ ] position `hint:Signifier` w.r.t to [td:InteractionAffordance](https://www.w3.org/2019/wot/td#InteractionAffordance).
