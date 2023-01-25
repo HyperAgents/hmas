@@ -6,7 +6,7 @@ ask {
     bind (ex:productionCell1 as ?cell1)
     bind (ex:productionCell2 as ?cell2)
 
-    ex:factory hmas:contains ?groundFloor, ?cell1, ?cell2 .
+    ex:factory hmas:transitivelyContains ?groundFloor, ?cell1, ?cell2 .
 
     ?groundFloor a hmas:Workspace .
     ?cell1 a hmas:Workspace .
