@@ -1,5 +1,5 @@
-@base <https://purl.org/hmas/interaction> .
-@prefix : <#> .
+@base <https://purl.org/hmas/interaction/> .
+@prefix : <> .
 @prefix hmas: <https://purl.org/hmas/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -18,7 +18,7 @@
 #    Ontology Description
 #################################################################
 
-<#> a owl:Ontology ;
+: a owl:Ontology ;
     owl:imports hmas: ;
     dct:title "Hypermedia MAS Interaction Ontology"@en, "Ontologie d'Interaction des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems."@en, 
