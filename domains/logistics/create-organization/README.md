@@ -28,14 +28,12 @@ Additionally, the FL Logistics will mirror the composition of the SL Logistics a
 | q2 | What are the enterprises that follows a different organizational model than enterprise X?       | What are the enterprises that follows a different organizational model than SL Logistics? **ex:HSG_Factory**, **ex:ITM_Factory**         |
 | q3 | What are the enterprises with the same organizational model as enterprise X and contained in Y? | What are the enterprises with the same organizational model as SL Logistics and contained in same Workspace? **ex:GL_Logistics**         |
 | q4 | What are the available organizational models that can be used to create an new enterprise?      | What are the available organizational models that can be used by John to create the FL Logistics? **ex:Logistics**, **ex:Manufacturing** |
+| q5 | What are the values of a given organization?                                                    | What are the values of the SL Logistics? **ex:SL_Commitment**, **ex:SL_IntegrityRespect**                                                |
+| q6 | What are the elements composing a given organization model?                                     | What are the values of the SL Logistics organization model? **ex:HumanResourcesOfficer**, **ex:FinanceOfficer**, **ex:AccountManager**, **ex:Planner**, **ex:Carrier**, **ex:Collector**, **ex:Deliverer**, **ex:HumanResourcesManagement**, **ex:FinancialManagement**, **ex:CommercialManagement**, **ex:PlanningManagement**, **ex:CarryGoods**, **ex:CollectGoods**, **ex:DeliverGoods**, **ex:PickingArea**, **ex:ReceivingArea** |
 
 ## Glossary
 
-* **Organization**: An Organization is an entity situated on Agents and Artifacts, and regulated by a regulation system.
 * **Organizational Value**: An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an organization.
-* **Situated Organization**: An Organization is situated through its Members and Materials.
-* **Member**: A Member refers to an Agent that belongs to an Organization.
-* **Material**: A Material refers to an Artifact that belongs to an Organization.
 * **Role**: A Role defines positions in an Organization.
 * **Mission**: A Mission gathers Organizational Goals.
 * **Facility**: A Facility defines functions in an Organization.
