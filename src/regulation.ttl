@@ -51,9 +51,48 @@
 #    Classes
 #################################################################
 
-
+hmas:Group a owl:Class ;
+    rdfs:comment "A Group is a set of Roles that exists in an Organization."@en ;
+    rdfs:label "Group"@en .
 
 #################################################################
 #    Object Properties
 #################################################################
 
+hmas:structures a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Group ;
+    schema:rangeIncludes hmas:Organization ;
+    rdfs:inverseOf hmas:isStructuredBy ;
+    rdfs:comment "A relation that refers to a Group that structures an Organization."@en ;
+    rdfs:label "structures"@en .
+
+hmas:isStructuredBy a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Organization ;
+    schema:rangeIncludes hmas:Group ;
+    rdfs:inverseOf hmas:structures ;
+    rdfs:comment "A relation that refers to an Organization that is structured by a Group."@en ;
+    rdfs:label "is structured by"@en .
+    
+hmas:plays a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Agent ;
+    schema:rangeIncludes hmas:Role ;
+    rdfs:comment "A relation that refers to a Role that an Agent plays in a Group."@en ;
+    rdfs:label "plays"@en .
+
+hmas:belongsTo a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Role ;
+    schema:rangeIncludes hmas:Group ;
+    rdfs:comment "A relation that refers to a Role that is part of a Group."@en ;
+    rdfs:label "belongs to"@en .
+
+hmas:isLinkedTo a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Role ;
+    schema:rangeIncludes hmas:Role ;
+    rdfs:comment "A relation that refers to a relation between two Roles."@en ;
+    rdfs:label "is linked to"@en .
+    
+hmas:isSubGroupOf a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Group ;
+    schema:rangeIncludes hmas:Group ;
+    rdfs:comment "A relation that refers to a subgroup relationship between two Groups."@en ;
+    rdfs:label "is subgroup of"@en .
