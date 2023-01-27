@@ -1,6 +1,4 @@
-@base <https://purl.org/hmas/regulation> .
-@prefix : <#> .
-@prefix hmas: <https://purl.org/hmas/core#> .
+@prefix hmas: <https://purl.org/hmas/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -51,9 +49,46 @@
 #    Classes
 #################################################################
 
+hmas:OrganizationalValue a owl:Class ;
+    rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an organization."@en ;
+    rdfs:label "Organizational Value"@en .
+        
+hmas:Role a owl:Class ;
+    rdfs:comment "A Role defines positions in an Organization."@en ;
+    rdfs:label "Role"@en .
 
+hmas:Mission a owl:Class ;
+    rdfs:comment "A Mission gathers Organizational Goals."@en ;
+    rdfs:label "Mission"@en .
+    
+hmas:Facility a owl:Class ;
+    rdfs:comment "A Facility defines functions in an Organization."@en ;
+    rdfs:label "Facility"@en .
 
 #################################################################
 #    Object Properties
 #################################################################
 
+hmas:hasOrganizationalValue a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Organization ;
+    schema:rangeIncludes hmas:OrganizationalValue ;
+    rdfs:comment "A relation that refers to an Organization Value of an Organization."@en ;
+    rdfs:label "has organizational value"@en .
+      
+hmas:providesRole a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Organization ;
+    schema:rangeIncludes hmas:Role ;
+    rdfs:comment "A relation that refers to a Role made available to Agents in the context of an Organization."@en ;
+    rdfs:label "provides role"@en .
+
+hmas:proposesMission a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Organization ;
+    schema:rangeIncludes hmas:Mission ;
+    rdfs:comment "A relation that refers to a Mission that can be executed in the context of an Organization."@en ;
+    rdfs:label "proposes mission"@en .
+    
+hmas:proposesFacility a owl:ObjectProperty ;
+    schema:domainIncludes hmas:Organization ;
+    schema:rangeIncludes hmas:Facility ;
+    rdfs:comment "A relation that refers to a Facility that can be played in the context of an Organization."@en ;
+    rdfs:label "proposes facility"@en .
