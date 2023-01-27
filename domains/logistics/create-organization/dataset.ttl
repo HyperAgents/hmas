@@ -45,7 +45,7 @@ ex:Manufacturing rdfs:subClassOf hmas:Organization .
 
 # SPECIFICATION
 
-## Organization Specifications
+## Organization Specification
 ex:LogisticsShape a sh:NodeShape ;
     sh:targetClass ex:Logistics ;
     sh:property [
@@ -88,14 +88,19 @@ ex:LogisticsShape a sh:NodeShape ;
         sh:path hmas:providesRole ;
         sh:qualifiedValueShape [ sh:class ex:Carrier ] ;
         sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
         sh:qualifiedValueShape [ sh:class ex:Collector ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;        
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
         sh:qualifiedValueShape [ sh:class ex:Deliverer ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;        
         ] ;
     sh:property [
         sh:path hmas:isStructuredBy ;
@@ -238,6 +243,10 @@ ex:PickingArea rdfs:subClassOf hmas:Facility .
 ex:ReceivingArea rdfs:subClassOf hmas:Facility .
 
 # INSTANTIATION
+
+## Organizational Values
+ex:SL_Commitment a ex:Commitment .
+ex:SL_IntegrityRespect a ex:IntegrityRespect .
 
 ## Roles
 ex:SL_HumanResourcesOfficer a ex:HumanResourcesOfficer .
