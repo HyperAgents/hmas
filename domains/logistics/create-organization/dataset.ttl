@@ -1,6 +1,7 @@
 @prefix ex: <http://example.org/> .
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 
 #################################################################
 #    Core Ontology
@@ -263,7 +264,7 @@ ex:SL_FinancialManagement a ex:FinancialManagement .
 ex:SL_CommercialManagement a ex:CommercialManagement .
 ex:SL_PlanningManagement a ex:PlanningManagement .
 ex:SL_CarryGoods a ex:CarryGoods .
-ex:SL_CollectGoods a ex:CollectGoods
+ex:SL_CollectGoods a ex:CollectGoods .
 ex:SL_DeliverGoods a ex:DeliverGoods .
 
 ## Facility
@@ -283,4 +284,4 @@ ex:GL_Logistics a ex:Logistics ;
         
 ex:HSG_Factory a ex:Manufacturing .
 
-ex:ITM_Factory a ex:Manufacturing .    
+ex:ITM_Factory a ex:Manufacturing .
