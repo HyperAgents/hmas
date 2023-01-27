@@ -28,7 +28,6 @@ Jane is hired as a carrier. She was instructed to wait until she receives the sc
 | q2 | What are the other agents to whom agent A can interact with in the department X? | What are the other agents to whom Jane can interact with in the Planning group? **ex:Igor**    |
 | q3 | What are the departments not fully populated in enterprise Y?                    | What are the groups not fully populated in the FL Logistics? **ex:FL_CommercialDepartment**    |
 | q4 | What are the job positions of agent X?                                           | What are the roles played by agent Igor? **ex:FL_Planner**                                     |
-
 ## Glossary
 
 * **Group**: A Group is a set of Roles that exists in an Organization.

@@ -2,6 +2,7 @@
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 
 #################################################################
 #    Core Ontology
@@ -79,14 +80,19 @@ ex:LogisticsShape a sh:NodeShape ;
         sh:path hmas:providesRole ;
         sh:qualifiedValueShape [ sh:class ex:Carrier ] ;
         sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
         sh:qualifiedValueShape [ sh:class ex:Collector ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
         sh:qualifiedValueShape [ sh:class ex:Deliverer ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isStructuredBy ;
