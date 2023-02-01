@@ -1,6 +1,5 @@
-base <https://purl.org/hmas/interaction/>
-prefix : <>
-prefix hmas: <https://purl.org/hmas/core#>
+base <https://purl.org/hmas/interaction>
+prefix hmas: <https://purl.org/hmas/>
 prefix hctl: <https://www.w3.org/2019/wot/hypermedia#>
 prefix ex: <http://example.org/>
 
@@ -10,7 +9,7 @@ ask {
     bind (ex:moveGripper as ?sp)
     ?f1 a hctl:Form .
     ?f2 a hctl:Form .
-    ?sp a :ActionSpecification .
-    ?sp :hasForm ?f1 .
-    ?sp :hasForm ?f2 .
+    ?sp a hmas:ActionSpecification .
+    ?sp hmas:hasForm ?f1 .
+    ?sp hmas:hasForm ?f2 .
 }

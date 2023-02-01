@@ -1,10 +1,9 @@
-base <https://purl.org/hmas/interaction/>
-prefix : <>
-prefix hmas: <https://purl.org/hmas/core#>
+base <https://purl.org/hmas/interaction>
+prefix hmas: <https://purl.org/hmas/>
 
 ask {
     bind (ex:gripperJointSchema as ?sc)
     bind (ex:gripperJoint as ?i)
-    ?i a :Input .
-    ?i :hasSchema ?sc.
+    ?i a hmas:Input .
+    ?i hmas:hasSchema ?sc.
 }
