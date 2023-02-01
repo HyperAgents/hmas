@@ -16,15 +16,13 @@
 #    Ontology Description
 #################################################################
 
-<#> rdf:type owl:Ontology ;
+hmas:regulation rdf:type owl:Ontology ;
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,
     "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
     dct:issued "2022-05-01"^^xsd:date ;
     ## dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;
-    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
-    vann:preferredNamespacePrefix "hreg" ;
-    vann:preferredNamespaceUri <#> .
+    cc:license <https://creativecommons.org/licenses/by/4.0/> .
 
 <https://inria.fr/>
   schema:name "Inria" ;
