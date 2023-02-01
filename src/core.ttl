@@ -1,5 +1,5 @@
-@base <https://purl.org/hmas/core> .
-@prefix : <#> .
+@base <https://purl.org/hmas/> .
+@prefix : <> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -22,7 +22,7 @@
 #
 #################################################################
 
-<#> a owl:Ontology ;
+:core a owl:Ontology ;
     dct:title "Hypermedia MAS Core Ontology"@en, "Ontologie Centrale des SMA Hypermédias"@fr ;
     dct:description  "An ontology to describe Hypermedia Multi-Agent Systems."@en,
                  "L'ontologie centrale pour la description de systèmes multi-agents hypermédias."@fr ;
@@ -116,11 +116,13 @@ skos:note a owl:AnnotationProperty .
 
 
 :Agent a owl:Class ;
+        rdfs:isDefinedBy :core ;
         rdfs:comment "An entity that is capable of autonomous behavior."@en ;
         rdfs:label "Agent"@en, "Agent"@fr ;
         rdfs:subClassOf :Hostable .
 
 :Artifact a owl:Class ;
+        rdfs:isDefinedBy :core ;
         rdfs:comment "A resource that can be dynamically constructed, shared, and used by agents to support their activities. In a Hypermedia MAS, an artifact exposes and can be accessed through a hypermedia interface (in addition to other possible interfaces, such as a physical interface)."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/38> ;
         rdfs:label "Artifact"@en, "Artefact"@fr ;
@@ -128,6 +130,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :Hostable a owl:Class ;
+        rdfs:isDefinedBy :core ;
         rdfs:comment "A resource that can be hosted on a MAS platform"@en ;
         skos:example "an agent, an artefact, other MAS platforms, workspaces, resource profiles, signifiers, organizations, can be hosted on a MAS platform"@en ;
         rdfs:label "Hostable"@en, "Hébergeable"@fr ;
@@ -138,6 +141,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :HypermediaMASPlatform a owl:Class ;
+        rdfs:isDefinedBy :core ;
         rdfs:comment "A Hypermedia MAS platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organizations, etc."@en ;
         rdfs:label "MAS Platform"@en, "Platforme SMA"@fr ;
         skos:example "Examples of hmas:HypermediaMASPlatform include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
@@ -151,6 +155,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :ResourceProfile a owl:Class ;
+        rdfs:isDefinedBy :core ;
         rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
         skos:example "e.g., a Thing Description document, a Hydra document, an Socio-Technical Network platform description, a fipa:AgentDescription"@en ;
         rdfs:label "Resource Profile"@en, "Profil de Ressource"@fr ;
@@ -160,6 +165,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :Signifier rdf:type owl:Class ;
+        rdfs:isDefinedBy :core ;
         rdfs:comment "Structured data that support the use of a resource by agents. Structured data may include metadata about the signifier (e.g., creator, salience)."@en ;
         rdfs:label "Signifier"@en, "Signifiant"@fr  ;
         skos:note ":Signifier would fit as a superclass of td:InteractionAffordance and fipa:ServiceDescription"@en ;
@@ -172,6 +178,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :Workspace a owl:Class ;
+        rdfs:isDefinedBy :core ;
         rdfs:comment "A logical container of one or multiple interactions among agents and potentially artifacts. Workspaces can contain any resource in general and in particular agents, artifacts, other workspaces, or platforms. A workspace can be a LDP container and this can be done by multi-typing the container or by multiple inheritance on a Class ex:Workcontainer. "@en ;
         rdfs:label "Workspace"@en, "Espace de Travail"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/24> ;
@@ -198,6 +205,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :transitivelyContains a owl:ObjectProperty, owl:TransitiveProperty ;
+          rdfs:isDefinedBy :core ;
           owl:inverseOf :isTransitivelyContainedIn ;
           rdfs:domain :Workspace ;
           rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;
@@ -207,6 +215,7 @@ skos:note a owl:AnnotationProperty .
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> .
 
 :contains a owl:ObjectProperty ;
+          rdfs:isDefinedBy :core ;
           rdfs:subPropertyOf :transitivelyContains ;
           owl:inverseOf :isContainedIn ;
           rdfs:comment "A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container."@en ;
@@ -214,6 +223,7 @@ skos:note a owl:AnnotationProperty .
           rdfs:label "directlyContains"@en .
 
 :isProfileOf a owl:ObjectProperty ;
+           rdfs:isDefinedBy :core ;
            owl:inverseOf :hasProfile ;
            rdfs:domain :ResourceProfile ;
            rdfs:comment "A relation that links a resource profile to the resource it is a profile of."@en ;
@@ -244,6 +254,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :exposesSignifier a owl:ObjectProperty ;
+            rdfs:isDefinedBy :core ;
             rdfs:domain :ResourceProfile ;
             rdfs:range :Signifier ;
             rdfs:comment "A relation between a resource profile and a signifier it exposes."@en ; 
@@ -254,6 +265,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :hosts a owl:ObjectProperty, owl:AsymmetricProperty ;
+            rdfs:isDefinedBy :core ;
             rdfs:domain :HypermediaMASPlatform ;
             rdfs:range :Hostable ;
             rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
@@ -265,6 +277,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :isTransitivelyContainedIn a owl:ObjectProperty, owl:TransitiveProperty ;
+            rdfs:isDefinedBy :core ;
             rdfs:range :Workspace ;
             owl:inverseOf :transitivelyContains ;
             rdfs:comment "A relation that refers to all workspaces in which a resource is contained. "@en ;
@@ -272,6 +285,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :isContainedIn a owl:ObjectProperty ;
+            rdfs:isDefinedBy :core ;
             rdfs:subPropertyOf :isTransitivelyContainedIn ;
             owl:inverseOf :contains ;
             rdfs:comment "A relation that describes a workspace that contains a resource."@en ;
@@ -279,6 +293,7 @@ skos:note a owl:AnnotationProperty .
 
 
 :hasProfile a owl:ObjectProperty, owl:AsymmetricProperty ;
+            rdfs:isDefinedBy :core ;
             rdfs:range :ResourceProfile ;
             owl:inverseOf :isProfileOf ;
             rdfs:comment "A relation that links a resource to its profile."@en ;
@@ -292,6 +307,7 @@ skos:note a owl:AnnotationProperty .
 #            rdfs:label "is home of"@en .
 
 :isHostedOn a owl:ObjectProperty, owl:AsymmetricProperty ; 
+            rdfs:isDefinedBy :core ;
             owl:inverseOf :hosts ;
             rdfs:domain :Hostable ;
             rdfs:range :HypermediaMASPlatform ;
