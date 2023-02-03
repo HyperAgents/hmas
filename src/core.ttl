@@ -204,9 +204,8 @@ skos:note a owl:AnnotationProperty .
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> .
 
-:isTransitivelyContainedIn
+:isTransitivelyContainedIn rdfs:seeAlso :transitivelyContains ;
           rdfs:isDefinedBy :core ; 
-          rdfs:seeAlso :transitivelyContains ;
           rdfs:label "is transitively contained in"@en, "est transitivement contenu dans"@fr .
 
 :contains a owl:ObjectProperty ;
@@ -216,6 +215,10 @@ skos:note a owl:AnnotationProperty .
           rdfs:comment "A relation that refers to a direct logical containment relation and is related to the definition of a workspace as a logical container."@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/18#issuecomment-1040448029> ;
           rdfs:label "directly contains"@en, "contient directement"@fr .
+
+:isContainedIn rdfs:seeAlso :contains ;
+          rdfs:isDefinedBy :core ; 
+          rdfs:label "is directly contained in"@en, "est directement contenu dans"@fr .
 
 :isProfileOf a owl:ObjectProperty ;
            rdfs:isDefinedBy :core ;
