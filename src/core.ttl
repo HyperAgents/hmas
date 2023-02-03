@@ -228,7 +228,11 @@ skos:note a owl:AnnotationProperty .
            skos:example ""@en ;
            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> ; 
            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/26> ;
-           rdfs:label "is profile of"@en .
+           rdfs:label "is profile of"@en, "est le profil de"@fr .
+
+:hasProfile rdfs:seeAlso :isProfileOf ;
+          rdfs:isDefinedBy :core ; 
+          rdfs:label "has for profile"@en, "a pour profil"@fr .
 
 :exposesSignifier a owl:ObjectProperty ;
             rdfs:isDefinedBy :core ;
