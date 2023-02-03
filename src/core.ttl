@@ -136,7 +136,6 @@ skos:note a owl:AnnotationProperty .
         rdfs:label "Artifact"@en, "Artéfact"@fr ;
         rdfs:subClassOf :Hostable .
 
-
 :Hostable a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A resource that can be hosted on a MAS platform"@en ;
@@ -145,22 +144,15 @@ skos:note a owl:AnnotationProperty .
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/8> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
 
-
-
-
 :HypermediaMASPlatform a owl:Class ;
         rdfs:isDefinedBy :core ;
-        rdfs:comment "A Hypermedia MAS platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organizations, etc."@en ;
-        rdfs:label "MAS Platform"@en, "Platforme SMA"@fr ;
+        rdfs:comment "A Hypermedia MAS (HMAS) platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organizations, etc."@en ;
+        rdfs:label "HMAS Platform"@en, "Platforme SMAH"@fr ;
         skos:example "Examples of hmas:HypermediaMASPlatform include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/20> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
         rdfs:subClassOf :Artifact ;
         owl:disjointWith :Workspace .
-
-
-
-
 
 :ResourceProfile a owl:Class ;
         rdfs:isDefinedBy :core ;
@@ -168,9 +160,6 @@ skos:note a owl:AnnotationProperty .
         skos:example "e.g., a Thing Description document, a Hydra document, an Socio-Technical Network platform description, a fipa:AgentDescription"@en ;
         rdfs:label "Resource Profile"@en, "Profil de Ressource"@fr ;
         rdfs:subClassOf :Hostable .
-
-
-
 
 :Signifier rdf:type owl:Class ;
         rdfs:isDefinedBy :core ;
@@ -182,9 +171,6 @@ skos:note a owl:AnnotationProperty .
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/41> ;
         rdfs:subClassOf :Hostable .
 
-
-
-
 :Workspace a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A logical container of one or multiple interactions among agents and potentially artifacts. Workspaces can contain any resource in general and in particular agents, artifacts, other workspaces, or platforms. A workspace can be a LDP container and this can be done by multi-typing the container or by multiple inheritance on a Class ex:Workcontainer. "@en ;
@@ -195,8 +181,6 @@ skos:note a owl:AnnotationProperty .
         rdfs:seeAlso <https://www.w3.org/ns/ldp#> ;
         rdfs:subClassOf :Artifact ;
         owl:disjointWith :HypermediaMASPlatform .
-
-
 
 ### Top ontology constraints for coherent modeling 
 
