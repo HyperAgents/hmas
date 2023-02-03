@@ -20,10 +20,13 @@ hmas:regulation rdf:type owl:Ontology ;
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,
     "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
-    dct:issued "2022-05-01"^^xsd:date ;
+    dct:issued "2023-04-30"^^xsd:date ;
     ## dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;
-    cc:license <https://creativecommons.org/licenses/by/4.0/> .
-
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:imports hmas:core ;
+    vann:preferredNamespacePrefix "hmas" ;
+    vann:preferredNamespaceUri hmas .
+    
 <https://inria.fr/>
   schema:name "Inria" ;
   schema:url <https://inria.fr/> .
@@ -48,18 +51,22 @@ hmas:regulation rdf:type owl:Ontology ;
 #################################################################
 
 hmas:OrganizationalValue a owl:Class ;
+    rdfs:isDefinedBy hmas:regulation ;
     rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an organization."@en ;
     rdfs:label "Organizational Value"@en .
         
 hmas:Role a owl:Class ;
+    rdfs:isDefinedBy hmas:regulation ;
     rdfs:comment "A Role defines positions in an Organization."@en ;
     rdfs:label "Role"@en .
 
 hmas:Mission a owl:Class ;
+    rdfs:isDefinedBy hmas:regulation ;
     rdfs:comment "A Mission gathers Organizational Goals."@en ;
     rdfs:label "Mission"@en .
     
 hmas:Facility a owl:Class ;
+    rdfs:isDefinedBy hmas:regulation ;
     rdfs:comment "A Facility defines functions in an Organization."@en ;
     rdfs:label "Facility"@en .
 
@@ -70,23 +77,27 @@ hmas:Facility a owl:Class ;
 hmas:hasOrganizationalValue a owl:ObjectProperty ;
     schema:domainIncludes hmas:Organization ;
     schema:rangeIncludes hmas:OrganizationalValue ;
+    rdfs:isDefinedBy hmas:regulation ;
     rdfs:comment "A relation that refers to an Organization Value of an Organization."@en ;
     rdfs:label "has organizational value"@en .
       
 hmas:providesRole a owl:ObjectProperty ;
     schema:domainIncludes hmas:Organization ;
     schema:rangeIncludes hmas:Role ;
+    rdfs:isDefinedBy hmas:regulation ;
     rdfs:comment "A relation that refers to a Role made available to Agents in the context of an Organization."@en ;
     rdfs:label "provides role"@en .
 
 hmas:proposesMission a owl:ObjectProperty ;
     schema:domainIncludes hmas:Organization ;
     schema:rangeIncludes hmas:Mission ;
+    rdfs:isDefinedBy hmas:regulation ;
     rdfs:comment "A relation that refers to a Mission that can be executed in the context of an Organization."@en ;
     rdfs:label "proposes mission"@en .
     
 hmas:proposesFacility a owl:ObjectProperty ;
     schema:domainIncludes hmas:Organization ;
     schema:rangeIncludes hmas:Facility ;
+    rdfs:isDefinedBy hmas:regulation ;
     rdfs:comment "A relation that refers to a Facility that can be played in the context of an Organization."@en ;
     rdfs:label "proposes facility"@en .
