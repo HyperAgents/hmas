@@ -199,9 +199,9 @@ skos:note a owl:AnnotationProperty .
           rdfs:isDefinedBy :core ;
           owl:inverseOf :isTransitivelyContainedIn ;
           rdfs:domain :Workspace ;
-          rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;
+          rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
-          rdfs:label "transitivelyContains"@en ;
+          rdfs:label "transitively contains"@en ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> .
 
