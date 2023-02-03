@@ -81,7 +81,6 @@ skos:note a owl:AnnotationProperty .
   schema:identifier <https://orcid.org/0000-0003-0821-6095> ;
   schema:affiliation <https://inria.fr/> .
 
-
 <http://maxime-lefrancois.info/me#> a schema:Person ;
   schema:name "Maxime Lefrançois" ;
   schema:email "maxime.lefrancois@emse.fr" ;
@@ -190,6 +189,7 @@ skos:note a owl:AnnotationProperty .
 
 
 
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -234,7 +234,6 @@ skos:note a owl:AnnotationProperty .
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> ; 
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/26> ;
           rdfs:label "is profile of"@en, "est le profil de"@fr .
-
 
 :hasProfile a owl:ObjectProperty, owl:AsymmetricProperty ;
           rdfs:isDefinedBy :core ;
