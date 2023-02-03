@@ -204,6 +204,11 @@ skos:note a owl:AnnotationProperty .
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> .
 
+:isTransitivelyContainedIn
+          rdfs:isDefinedBy :core ; 
+          rdfs:seeAlso :transitivelyContains ;
+          rdfs:label "is transitively contained in"@en, "est transitivement contenu dans"@fr .
+
 :contains a owl:ObjectProperty ;
           rdfs:isDefinedBy :core ;
           rdfs:subPropertyOf :transitivelyContains ;
