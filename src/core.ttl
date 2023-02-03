@@ -204,8 +204,11 @@ skos:note a owl:AnnotationProperty .
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> .
 
-:isTransitivelyContainedIn rdfs:seeAlso :transitivelyContains ;
-          rdfs:isDefinedBy :core ; 
+:isTransitivelyContainedIn a owl:ObjectProperty, owl:TransitiveProperty ;
+          rdfs:isDefinedBy :core ;
+          rdfs:range :Workspace ;
+          owl:inverseOf :transitivelyContains ;
+          rdfs:comment "A relation that refers to all workspaces in which a resource is contained. "@en ;
           rdfs:label "is transitively contained in"@en, "est transitivement contenu dans"@fr .
 
 :contains a owl:ObjectProperty ;
@@ -216,62 +219,48 @@ skos:note a owl:AnnotationProperty .
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/18#issuecomment-1040448029> ;
           rdfs:label "directly contains"@en, "contient directement"@fr .
 
-:isContainedIn rdfs:seeAlso :contains ;
-          rdfs:isDefinedBy :core ; 
+:isContainedIn a owl:ObjectProperty ;
+          rdfs:isDefinedBy :core ;
+          rdfs:subPropertyOf :isTransitivelyContainedIn ;
+          owl:inverseOf :contains ;
+          rdfs:comment "A relation that describes a workspace that contains a resource."@en ;
           rdfs:label "is directly contained in"@en, "est directement contenu dans"@fr .
 
 :isProfileOf a owl:ObjectProperty ;
-           rdfs:isDefinedBy :core ;
-           owl:inverseOf :hasProfile ;
-           rdfs:domain :ResourceProfile ;
-           rdfs:comment "A relation that links a resource profile to the resource it is a profile of."@en ;
-           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> ; 
-           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/26> ;
-           rdfs:label "is profile of"@en, "est le profil de"@fr .
+          rdfs:isDefinedBy :core ;
+          owl:inverseOf :hasProfile ;
+          rdfs:domain :ResourceProfile ;
+          rdfs:comment "A relation that links a resource profile to the resource it is a profile of."@en ;
+          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> ; 
+          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/26> ;
+          rdfs:label "is profile of"@en, "est le profil de"@fr .
 
-:hasProfile rdfs:seeAlso :isProfileOf ;
-          rdfs:isDefinedBy :core ; 
+
+:hasProfile a owl:ObjectProperty, owl:AsymmetricProperty ;
+          rdfs:isDefinedBy :core ;
+          rdfs:range :ResourceProfile ;
+          owl:inverseOf :isProfileOf ;
+          rdfs:comment "A relation that links a resource to its profile."@en ;
           rdfs:label "has for profile"@en, "a pour profil"@fr .
 
 :exposesSignifier a owl:ObjectProperty ;
-            rdfs:isDefinedBy :core ;
-            rdfs:domain :ResourceProfile ;
-            rdfs:range :Signifier ;
-            rdfs:comment "A relation between a resource profile and a signifier it exposes."@en ; 
-            rdfs:label "exposes signifier"@en, "expose le signifiant"@fr ;
-            dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
-            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> .
+          rdfs:isDefinedBy :core ;
+          rdfs:domain :ResourceProfile ;
+          rdfs:range :Signifier ;
+          rdfs:comment "A relation between a resource profile and a signifier it exposes."@en ; 
+          rdfs:label "exposes signifier"@en, "expose le signifiant"@fr ;
+          dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
+          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> .
 
 :hosts a owl:ObjectProperty, owl:AsymmetricProperty ;
             rdfs:isDefinedBy :core ;
             rdfs:domain :HypermediaMASPlatform ;
             rdfs:range :Hostable ;
             rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
-            rdfs:label "hosts"@en ;
+            rdfs:label "hosts"@en, "héberge"@fr ;
             dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
             rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
             rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .
-
-:isTransitivelyContainedIn a owl:ObjectProperty, owl:TransitiveProperty ;
-            rdfs:isDefinedBy :core ;
-            rdfs:range :Workspace ;
-            owl:inverseOf :transitivelyContains ;
-            rdfs:comment "A relation that refers to all workspaces in which a resource is contained. "@en ;
-            rdfs:label "is transitively contained in"@en .
-
-:isContainedIn a owl:ObjectProperty ;
-            rdfs:isDefinedBy :core ;
-            rdfs:subPropertyOf :isTransitivelyContainedIn ;
-            owl:inverseOf :contains ;
-            rdfs:comment "A relation that describes a workspace that contains a resource."@en ;
-            rdfs:label "is contained in"@en .
-
-:hasProfile a owl:ObjectProperty, owl:AsymmetricProperty ;
-            rdfs:isDefinedBy :core ;
-            rdfs:range :ResourceProfile ;
-            owl:inverseOf :isProfileOf ;
-            rdfs:comment "A relation that links a resource to its profile."@en ;
-            rdfs:label "has profile"@en .
 
 :isHostedOn a owl:ObjectProperty, owl:AsymmetricProperty ; 
             rdfs:isDefinedBy :core ;
