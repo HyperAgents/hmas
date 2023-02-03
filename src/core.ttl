@@ -36,7 +36,7 @@
     dct:creator <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
-    vann:preferredNamespaceUri <#> .
+    vann:preferredNamespaceUri <> .
 
 schema:Person a owl:Class .
 schema:name a owl:AnnotationProperty .
