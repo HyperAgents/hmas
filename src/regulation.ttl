@@ -16,7 +16,7 @@
 #    Ontology Description
 #################################################################
 
-hmas:regulationVocabulary rdf:type owl:Ontology ;
+hmas:regulation rdf:type owl:Ontology ;
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,
     "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
@@ -52,7 +52,7 @@ hmas:regulationVocabulary rdf:type owl:Ontology ;
 
 hmas:TestRegulation a owl:Class ;
   rdfs:comment "testing the redirections"@en ;
-  rdfs:isDefinedBy hmas:regulationVocabulary .
+  rdfs:isDefinedBy hmas:regulation .
 
 
 #################################################################

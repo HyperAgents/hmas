@@ -16,7 +16,7 @@
 #    Ontology Description
 #################################################################
 
-hmas:interactionVocabulary rdf:type owl:Ontology ;
+hmas:interaction rdf:type owl:Ontology ;
     dct:title "Hypermedia MAS Interaction Ontology"@en, "Ontologie d'Interaction des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems."@en,
     "L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias."@fr ;
@@ -64,7 +64,7 @@ hmas:interactionVocabulary rdf:type owl:Ontology ;
 
 hmas:TestInteraction a owl:Class ;
   rdfs:comment "testing the redirections"@en ;
-  rdfs:isDefinedBy hmas:interactionVocabulary .
+  rdfs:isDefinedBy hmas:interaction .
 
 #################################################################
 #    Object Properties
