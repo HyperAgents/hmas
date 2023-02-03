@@ -38,6 +38,10 @@
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <> .
 
+#################################################################
+#    define external primitives to validate ontology
+#################################################################
+
 schema:Person a owl:Class .
 schema:name a owl:AnnotationProperty .
 schema:email a owl:AnnotationProperty .
@@ -56,6 +60,10 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 skos:example a owl:AnnotationProperty .
 skos:note a owl:AnnotationProperty .
 
+
+#################################################################
+#    contributors
+#################################################################
 
 <http://ns.inria.fr/fabien.gandon#me> a schema:Person ;
   schema:name "Fabien Gandon" ;
