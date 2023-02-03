@@ -4,15 +4,3 @@ RewriteRule ^$ %1core [R=302]
 RewriteCond %{REQUEST_URI} ^(.*/)$
 RewriteRule ^(.*/)$ %1core [R=302]
 
-
-RewriteCond %{REQUEST_URI} ^/hmas/(Agent|Artifact|Hostable|HypermediaMASPlatform|ResourceProfile|Signifier|Workspace|transitivelyContains|contains|isProfileOf|exposesSignifier|hosts|isTransitivelyContainedIn|isContainedIn|hasProfile|isHostedOn)$
-RewriteRule ^(.*)$ /hmas/core#$1 [R=303,NE]
-
-RewriteCond %{REQUEST_URI} ^/hmas/(AgentIdentifierDescription|AgentPlatformDescription|FIPAAgentPlatform|HTTPMessageTransportService|IIOPMessageTransportService|hasServiceName|hasServiceType|MessageTransportService|APService)$
-RewriteRule ^(.*)$ /hmas/fipa#$1 [R=303,NE]
-
-RewriteCond %{REQUEST_URI} ^/hmas/(SomeRegulationConcept)$
-RewriteRule ^(.*)$ /hmas/regulation#$1 [R=303,NE]
-
-RewriteCond %{REQUEST_URI} ^/hmas/(SomeInteractionConcept)$
-RewriteRule ^(.*)$ /hmas/interaction#$1 [R=303,NE]
