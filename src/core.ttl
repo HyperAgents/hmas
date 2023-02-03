@@ -25,7 +25,7 @@
 :core a owl:Ontology ;
     dct:title "Hypermedia MAS Core Ontology"@en, "Ontologie Centrale des SMA Hypermédias"@fr ;
     dct:description  "An ontology to describe Hypermedia Multi-Agent Systems."@en,
-                 "L'ontologie centrale pour la description de systèmes multi-agents hypermédias."@fr ;
+                 "Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;
     dct:issued "2021-11-21"^^xsd:date ;
     dct:contributor <http://ns.inria.fr/fabien.gandon#me> ; 
     dct:contributor <http://maxime-lefrancois.info/me#> ; 
