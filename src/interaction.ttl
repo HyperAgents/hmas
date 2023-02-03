@@ -28,7 +28,7 @@ hmas:interaction a owl:Ontology ;
     dct:contributor <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
     dct:contributor <https://pod.inrupt.com/smnmyr/profile/card#me> ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
-    vann:preferredNamespacePrefix "hint" ;
+    vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <#> .
 
 <https://inria.fr/>
@@ -82,24 +82,29 @@ skos:note a owl:AnnotationProperty .
 #################################################################
 
 hmas:ActionExecution a owl:Class ;
+                 rdfs:isDefinedBy hmas:interaction ;
                  rdfs:subClassOf hmas:BehaviorExecution ;
                  rdfs:comment "A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request."@en ;
                  rdfs:label "action execution"@en .
 
 hmas:ActionSpecification a owl:Class ;
+                     rdfs:isDefinedBy hmas:interaction ;
                      rdfs:subClassOf hmas:BehaviorSpecification ;
                      rdfs:comment "A specification that describes an action (e.g., through preconditions and postconditions) and how to execute the action, e.g. as a context-free request through a form."@en ;
                      rdfs:label "action specification"@en .
 
 hmas:BehaviorExecution a owl:Class ;
+                   rdfs:isDefinedBy hmas:interaction ;
                    rdfs:comment "A course of action performed by an agent upon exploiting a behavior possibility."@en ;
                    rdfs:label "behavior execution"@en .
 
 hmas:BehaviorSpecification a owl:Class ;
+                       rdfs:isDefinedBy hmas:interaction ;
                        rdfs:comment "A specification that describes a behavior, for example, as procedural knowledge (e.g., AgentSpeak plan) or code-on-demand (e.g., a script that implements a behavior)."@en ;
                        rdfs:label "behavior specification"@en .
 
 hmas:Input a owl:Class ;
+       rdfs:isDefinedBy hmas:interaction ;
        rdfs:comment "An input of an action, which may include variables. The input may be used, for instance, in an action specification or in the representation of an action execution."@en ;
        rdfs:label "input"@en .
 
@@ -108,21 +113,25 @@ hmas:Input a owl:Class ;
 #################################################################
 
 hmas:expectsInput a owl:ObjectProperty ;
+              rdfs:isDefinedBy hmas:interaction ;
               rdfs:domain hmas:ActionSpecification ;
               rdfs:range hmas:Input ;
               rdfs:comment "A relation between an action specification and the input that the specified action expects."@en ;
               rdfs:label "expects input"@en .
 
 hmas:hasForm a owl:ObjectProperty ;
+         rdfs:isDefinedBy hmas:interaction ;
          rdfs:domain hmas:ActionSpecification ;
          rdfs:comment "A relation between an action specification and a form that describes how to execute the specified action."@en ;
          rdfs:label "has form"@en .
 
 hmas:hasSchema a owl:ObjectProperty ;
+           rdfs:isDefinedBy hmas:interaction ;
            rdfs:comment "A relation between an input and the schema of the input."@en ;
            rdfs:label "has schema"@en .
 
 hmas:signifies a owl:ObjectProperty ;
+           rdfs:isDefinedBy hmas:interaction ;
            rdfs:domain hmas:Signifier ;
            rdfs:range hmas:BehaviorSpecification ;
            rdfs:comment "A relation between a signifier and a behavior specification it signifies."@en ;
