@@ -1,6 +1,4 @@
-@base <https://purl.org/hmas/regulation> .
-@prefix : <#> .
-@prefix hmas: <https://purl.org/hmas/core#> .
+@prefix hmas: <https://purl.org/hmas/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -18,15 +16,16 @@
 #    Ontology Description
 #################################################################
 
-<#> rdf:type owl:Ontology ;
+hmas:regulationVocabulary rdf:type owl:Ontology ;
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,
     "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
     dct:issued "2022-05-01"^^xsd:date ;
     ## dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
-    vann:preferredNamespacePrefix "hreg" ;
-    vann:preferredNamespaceUri <#> .
+    owl:imports hmas:core ;
+    vann:preferredNamespacePrefix "hmas" ;
+    vann:preferredNamespaceUri hmas: .
 
 <https://inria.fr/>
   schema:name "Inria" ;
@@ -51,6 +50,9 @@
 #    Classes
 #################################################################
 
+hmas:TestRegulation a owl:Class ;
+  rdfs:comment "testing the redirections"@en ;
+  rdfs:isDefinedBy hmas:regulationVocabulary .
 
 
 #################################################################

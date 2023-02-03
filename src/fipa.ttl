@@ -1,27 +1,29 @@
-@base <https://ci.mines-stetienne.fr/fipa> .
-@prefix : <#> .
+@prefix hmas: <https://purl.org/hmas/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 
-<#> rdf:type owl:Ontology ;
-                                       owl:imports <https://ci.mines-stetienne.fr/hmas#> .
+hmas:fipaVocabulary rdf:type owl:Ontology ;
+    owl:imports hmas:core ;
+    vann:preferredNamespacePrefix "hmas" ;
+    vann:preferredNamespaceUri hmas: .
 
 #################################################################
 #    Object Properties
 #################################################################
 
 ###  https://ci.mines-stetienne.fr/fipa#hasServiceName
-:hasServiceName rdf:type owl:ObjectProperty ;
-                rdfs:domain :APService ;
+hmas:hasServiceName rdf:type owl:ObjectProperty ;
+                rdfs:domain hmas:APService ;
                 rdfs:label "has Service Name"@en .
 
 
 ###  https://ci.mines-stetienne.fr/fipa#hasServiceType
-:hasServiceType rdf:type owl:ObjectProperty ;
-                rdfs:domain :APService ;
+hmas:hasServiceType rdf:type owl:ObjectProperty ;
+                rdfs:domain hmas:APService ;
                 rdfs:label "has Service Type"@en .
 
 
@@ -30,49 +32,49 @@
 #################################################################
 
 ###  https://ci.mines-stetienne.fr/fipa#APService
-:APService rdf:type owl:Class ;
+hmas:APService rdf:type owl:Class ;
            rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)."@en ;
            rdfs:label "Agent Platform Service"@en .
 
 
 ###  https://ci.mines-stetienne.fr/fipa#AgentIdentifierDescription
-:AgentIdentifierDescription rdf:type owl:Class ;
+hmas:AgentIdentifierDescription rdf:type owl:Class ;
                             rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#ResourceProfile> ;
                             rdfs:comment "A resource profile that describes an agent using the Agent Identifier Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)."@en ;
                             rdfs:label "Agent Identifier Description"@en .
 
 
 ###  https://ci.mines-stetienne.fr/fipa#AgentPlatformDescription
-:AgentPlatformDescription rdf:type owl:Class ;
+hmas:AgentPlatformDescription rdf:type owl:Class ;
                           rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#ResourceProfile> ;
                           rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)."@en ;
                           rdfs:label "Agent Platform Description"@en .
 
 
 ###  https://ci.mines-stetienne.fr/fipa#FIPAAgentPlatform
-:FIPAAgentPlatform rdf:type owl:Class ;
+hmas:FIPAAgentPlatform rdf:type owl:Class ;
                    rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#Platform> ;
                    rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)."@en ;
                    rdfs:label "FIPA Agent Platform"@en .
 
 
 ###  https://ci.mines-stetienne.fr/fipa#HTTPMessageTransportService
-:HTTPMessageTransportService rdf:type owl:Class ;
-                             rdfs:subClassOf :MessageTransportService ;
+hmas:HTTPMessageTransportService rdf:type owl:Class ;
+                             rdfs:subClassOf hmas:MessageTransportService ;
                              rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for HTTP Specification (http://fipa.org/specs/fipa00084/SC00084F.html)."@en ;
                              rdfs:label "HTTP Message Transport Service"@en .
 
 
 ###  https://ci.mines-stetienne.fr/fipa#IIOPMessageTransportService
-:IIOPMessageTransportService rdf:type owl:Class ;
-                             rdfs:subClassOf :MessageTransportService ;
+hmas:IIOPMessageTransportService rdf:type owl:Class ;
+                             rdfs:subClassOf hmas:MessageTransportService ;
                              rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for IIOP Specification (http://fipa.org/specs/fipa00075/SC00075G.html)."@en ;
                              rdfs:label "IIOP Message Transport Service"@en .
 
 
 ###  https://ci.mines-stetienne.fr/fipa#MessageTransportService
-:MessageTransportService rdf:type owl:Class ;
-                         rdfs:subClassOf :APService ;
+hmas:MessageTransportService rdf:type owl:Class ;
+                         rdfs:subClassOf hmas:APService ;
                          rdfs:comment "A service for transporting messages among agents that conforms to the FIPA Message Transport Service Specification (http://fipa.org/specs/fipa00067/SC00067F.html)."@en ;
                          rdfs:label "Message Transport Service"@en .
 
