@@ -16,7 +16,7 @@ base = "https://ci.mines-stetienne.fr/hmas"
 os.makedirs("public", exist_ok=True)
 shutil.copytree("resources", "public", dirs_exist_ok=True)
 
-for input_file_path in [ "src/core.ttl" , "src/fipa.ttl" ]:
+for input_file_path in [ "src/core.ttl" , "src/interaction.ttl", "src/regulation.ttl", "src/fipa.ttl" ]:
     dest_path = input_file_path.replace("src/" , "public/")[0:-4]
 
     # parse and check ttl syntax
