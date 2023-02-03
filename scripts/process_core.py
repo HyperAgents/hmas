@@ -6,12 +6,13 @@ import shutil
 import subprocess
 import rdflib
 from rdflib import Graph, URIRef, Literal, BNode
-from rdflib.namespace import RDF, OWL, DCTERMS, XSD
+from rdflib.namespace import RDF, RDFS, OWL, DCTERMS, XSD
 import pylode
 
 logging.basicConfig(level=logging.DEBUG)
 
-base = "https://ci.mines-stetienne.fr/hmas"
+#base = "https://ci.mines-stetienne.fr/hmas"
+base = "https://purl.org/hmas/"
 
 os.makedirs("public", exist_ok=True)
 shutil.copytree("resources", "public", dirs_exist_ok=True)
@@ -78,4 +79,17 @@ for input_file_path in [ "src/core.ttl" , "src/interaction.ttl", "src/regulation
         output.write(g.serialize(format='nt', encoding='utf-8'))
 
 
+    # append term redirections to the htaccess
 
+    with open("public/.htaccess", "a") as f:
+        definedTerms = []
+        for definedTerm in g.subjects(RDFS.isDefinedBy, ontology):
+            localName = str(definedTerm)[len(base):]
+            if localName == '':
+                continue
+            definedTerms.append(localName)
+        if len(definedTerms) != 0:
+            f.write(f"""
+RewriteCond %{{REQUEST_URI}} ^/hmas/({"|".join(definedTerms)})$
+RewriteRule ^(.*)$ /hmas/{dest_path[7:]}#$1 [R=303,NE]
+            """)
