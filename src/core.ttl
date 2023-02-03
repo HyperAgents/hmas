@@ -122,6 +122,13 @@ skos:note a owl:AnnotationProperty .
 #    Classes
 #################################################################
 
+:Hostable a owl:Class ;
+        rdfs:isDefinedBy :core ;
+        rdfs:comment "A resource that can be hosted on a MAS platform"@en ;
+        skos:example "an agent, an artefact, other MAS platforms, workspaces, resource profiles, signifiers, organizations, can be hosted on a MAS platform"@en ;
+        rdfs:label "Hostable"@en, "Hébergeable"@fr ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/8> ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
 
 :Agent a owl:Class ;
         rdfs:isDefinedBy :core ;
@@ -135,14 +142,6 @@ skos:note a owl:AnnotationProperty .
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/38> ;
         rdfs:label "Artifact"@en, "Artéfact"@fr ;
         rdfs:subClassOf :Hostable .
-
-:Hostable a owl:Class ;
-        rdfs:isDefinedBy :core ;
-        rdfs:comment "A resource that can be hosted on a MAS platform"@en ;
-        skos:example "an agent, an artefact, other MAS platforms, workspaces, resource profiles, signifiers, organizations, can be hosted on a MAS platform"@en ;
-        rdfs:label "Hostable"@en, "Hébergeable"@fr ;
-        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/8> ;
-        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
 
 :HypermediaMASPlatform a owl:Class ;
         rdfs:isDefinedBy :core ;
