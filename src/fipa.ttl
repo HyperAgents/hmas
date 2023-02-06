@@ -6,6 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
+@base <https://purl.org/hmas/> .
+
 hmas:fipaVocabulary rdf:type owl:Ontology ;
     owl:imports hmas:core ;
     vann:preferredNamespacePrefix "hmas" ;
