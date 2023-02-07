@@ -18,14 +18,14 @@ A production engineer uses a Web frontend to configure and operate a factory. Th
 
 ## Glossary
 
-* [**Workspace**](https://purl.org/hmas/core#Workspace): A logical container of one or multiple interactions among agents and artifacts.
-* [**Agent**](https://purl.org/hmas/core#Agent): An entity that is capable of autonomous behavior.
-* [**Artifact**](https://purl.org/hmas/core#Artifact):  A resource that can be dynamically constructed, shared, and used by agents to support their activities.
-* [**Resource Containment**](	https://purl.org/hmas/core#contains): A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container.
-* [**Resource Profile**](https://purl.org/hmas/core#ResourceProfile): Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers.
-* [**Signifier**](https://purl.org/hmas/core#Signifier): see [Other scenario](../discover-signifiers/README.md).
+* [**Workspace**](https://purl.org/hmas/Workspace): A logical container of one or multiple interactions among agents and artifacts.
+* [**Agent**](https://purl.org/hmas/Agent): An entity that is capable of autonomous behavior.
+* [**Artifact**](https://purl.org/hmas/Artifact):  A resource that can be dynamically constructed, shared, and used by agents to support their activities.
+* [**Resource Containment**](https://purl.org/hmas/contains): A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container.
+* [**Resource Profile**](https://purl.org/hmas/ResourceProfile): Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers.
+* [**Signifier**](https://purl.org/hmas/Signifier): see [Other scenario](../discover-signifiers/README.md).
 
 ### Recommendations
 
-The term `hmas:Agent` relates to [foaf:Agent](http://xmlns.com/foaf/0.1/#term_Agent), [foaf:Person](http://xmlns.com/foaf/0.1/#term_Person), [schema:Person](https://schema.org/Person), [stn:Agent](https://w3id.org/stn/core#Agent), [stn:Person](https://w3id.org/stn/core#Person), [dbpedia-owl:Agent](http://dbpedia.org/ontology/Agent), [prov:Agent](http://www.w3.org/ns/prov#Agent).
-The term `hmas:Workspace` relates to [ldp:Container](https://www.w3.org/ns/ldp#Container).
+The term [hmas:Agent](https://purl.org/hmas/Agent) relates to [foaf:Agent](http://xmlns.com/foaf/0.1/#term_Agent), [foaf:Person](http://xmlns.com/foaf/0.1/#term_Person), [schema:Person](https://schema.org/Person), [stn:Agent](https://w3id.org/stn/core#Agent), [stn:Person](https://w3id.org/stn/core#Person), [dbpedia-owl:Agent](http://dbpedia.org/ontology/Agent), [prov:Agent](http://www.w3.org/ns/prov#Agent).
+The term [hmas:Workspace](https://purl.org/hmas/Workspace) relates to [ldp:Container](https://www.w3.org/ns/ldp#Container).
