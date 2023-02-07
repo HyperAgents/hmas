@@ -1,0 +1,15 @@
+base <https://purl.org/hmas/core>
+prefix : <#>
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:gripperMovable as ?s)
+    bind (ex:manufacturingWorkspace as ?w)
+    ?s a :Signifier .
+    ?p a :ResourceProfile .
+    ?a a :Artifact .
+    ?w a :Workspace .
+    ?s :isExposedIn ?p .
+    ?p :isProfileOf ?a .
+    ?a :isContainedIn ?w .
+}

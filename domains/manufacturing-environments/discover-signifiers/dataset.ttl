@@ -1,0 +1,14 @@
+@base <https://purl.org/hmas/core> .
+@prefix : <#> .
+@prefix ex: <http://example.org/> .
+
+ex:gripperMovable a :Signifier ;
+    :isExposedIn ex:ur5Profile .
+
+ex:ur5Profile a :ResourceProfile ;
+    :isProfileOf ex:ur5 .
+
+ex:ur5 a :Artifact ;
+    :isContainedIn ex:manufacturingWorkspace .
+
+ex:manufacturingWorkspace a :Workspace .

@@ -1,0 +1,11 @@
+base <https://purl.org/hmas/core>
+prefix : <#>
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:gripperMovable as ?s)
+    bind (ex:ur5Profile as ?p)
+    ?s a :Signifier .
+    ?p a :ResourceProfile .
+    ?s :isExposedIn ?p .
+}
