@@ -1,11 +1,10 @@
-base <https://purl.org/hmas/interaction>
-prefix hmas: <https://purl.org/hmas/>
+prefix : <https://purl.org/hmas/>
 prefix ex: <http://example.org/>
 
 ask {
     bind (ex:gripperJoint as ?i)
     bind (ex:moveGripper as ?sp)
-    ?i a hmas:Input .
-    ?sp a hmas:ActionSpecification .
-    ?sp hmas:expectsInput ?i .
+    ?i a :Input .
+    ?sp a :ActionSpecification .
+    ?sp :expectsInput ?i .
 }

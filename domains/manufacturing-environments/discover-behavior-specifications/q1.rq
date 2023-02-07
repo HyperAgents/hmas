@@ -1,10 +1,9 @@
-base <https://purl.org/hmas/interaction>
-prefix hmas: <https://purl.org/hmas/>
+prefix : <https://purl.org/hmas/>
 prefix ex: <http://example.org/>
 
 ask {
     bind (ex:gripperMovable as ?s)
     bind (ex:moveGripper as ?sp)
-    ?s a hmas:Signifier .
-    ?s hmas:signifies ?sp .
+    ?s a :Signifier .
+    ?s :signifies ?sp .
 }
