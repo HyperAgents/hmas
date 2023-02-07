@@ -1,0 +1,14 @@
+prefix : <https://purl.org/hmas/>
+prefix hctl: <https://www.w3.org/2019/wot/hypermedia#>
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:httpForm as ?f1)
+    bind (ex:coapForm as ?f2)
+    bind (ex:moveGripper as ?sp)
+    ?f1 a hctl:Form .
+    ?f2 a hctl:Form .
+    ?sp a :ActionSpecification .
+    ?sp :hasForm ?f1 .
+    ?sp :hasForm ?f2 .
+}

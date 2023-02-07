@@ -1,0 +1,33 @@
+@prefix : <https://purl.org/hmas/> .
+@prefix phantom: <https://ci.mines-stetienne.fr/kg/ontology#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix ex: <http://example.org/> .
+
+ex:ur5Profile a :ResourceProfile;
+    :exposesSignifier ex:gripperMovable .
+
+ex:gripperMovable a :Signifier ;
+    :signifies ex:moveGripper .
+
+ex:moveGripper a :ActionSpecification, phantom:SetGripper ;
+    :hasForm ex:httpForm ;
+    :hasForm ex:coapForm ;
+    :expectsInput ex:gripperJoint .
+
+ex:httpForm a hctl:Form;
+    htv:methodName "PUT";
+    hctl:hasTarget <https://api.interactions.ics.unisg.ch/leubot1/v1.3.4/reset>.
+
+ex:coapForm a hctl:Form;
+    htv:methodName "PUT";
+    hctl:hasTarget <coaps://api.interactions.ics.unisg.ch/leubot1/v1.3.4/reset>.
+
+ex:gripperJoint a :Input ;
+    :hasSchema ex:gripperJointSchema .
+
+ex:gripperJointSchema a js:ObjectSchema, phantom:GripperJoint ;
+    js:properties [ a js:IntegerSchema ;
+        js:propertyName "phantom:hasGripperValue"
+    ] .

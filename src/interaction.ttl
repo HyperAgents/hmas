@@ -1,6 +1,5 @@
-@base <https://purl.org/hmas/interaction> .
-@prefix : <#> .
-@prefix hmas: <https://purl.org/hmas/core#> .
+@base <https://purl.org/hmas/> .
+@prefix : <> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -18,18 +17,19 @@
 #    Ontology Description
 #################################################################
 
-<#> rdf:type owl:Ontology ;
+:interaction a owl:Ontology ;
+    owl:imports :core ;
     dct:title "Hypermedia MAS Interaction Ontology"@en, "Ontologie d'Interaction des SMA Hypermédias"@fr ;
-    dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems."@en,
-    "L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias."@fr ;
+    dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems."@en, 
+                  "L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias."@fr ;
     dct:issued "2023-01-13"^^xsd:date ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     dct:creator <https://danaivach.inrupt.net/profile/card#me> ;
     dct:contributor <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
     dct:contributor <https://pod.inrupt.com/smnmyr/profile/card#me> ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
-    vann:preferredNamespacePrefix "hint" ;
-    vann:preferredNamespaceUri <#> .
+    vann:preferredNamespacePrefix "hmas" ;
+    vann:preferredNamespaceUri <> .
 
 <https://inria.fr/>
   schema:name "Inria" ;
@@ -43,6 +43,12 @@
   schema:name "University of St.Gallen" ;
   schema:url <https://www.unisg.ch> .
 
+<https://danaivach.inrupt.net/profile/card#me> a schema:Person ;
+  schema:name "Danai Vachtsevanou" ;
+  schema:email "danai.vachtsevanou@unisg.ch" ;
+  schema:url <https://danaivach.inrupt.net/profile/card> ;
+  schema:affiliation <https://www.unisg.ch/en> .
+
 <https://pod.inrupt.com/andreiciortea/profile/card#me> a schema:Person ;
   schema:name "Andrei Ciortea" ;
   schema:email "andrei.ciortea@unisg.ch" ;
@@ -53,18 +59,80 @@
   schema:email "simon.mayer@unisg.ch" ;
   schema:affiliation <https://www.unisg.ch/en>  .
 
-<https://danaivach.inrupt.net/profile/card#me> a schema:Person ;
-  schema:name "Danai Vachtsevanou" ;
-  schema:email "danai.vachtsevanou@unisg.ch" ;
-  schema:url <https://danaivach.inrupt.net/profile/card> ;
-  schema:affiliation <https://www.unisg.ch/en> .
+schema:Person a owl:Class .
+schema:name a owl:AnnotationProperty .
+schema:email a owl:AnnotationProperty .
+schema:url a owl:AnnotationProperty .
+schema:identifier a owl:AnnotationProperty .
+schema:affiliation a owl:AnnotationProperty .
+dct:title a owl:AnnotationProperty .
+dct:description a owl:AnnotationProperty .
+dct:contributor a owl:AnnotationProperty .
+dct:issued a owl:AnnotationProperty .
+dct:creator a owl:AnnotationProperty .
+dct:source a owl:AnnotationProperty .
+cc:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+skos:example a owl:AnnotationProperty .
+skos:note a owl:AnnotationProperty .
 
 #################################################################
 #    Classes
 #################################################################
 
+:ActionExecution a owl:Class ;
+                 rdfs:isDefinedBy :interaction ;
+                 rdfs:subClassOf :BehaviorExecution ;
+                 rdfs:comment "A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request."@en ;
+                 rdfs:label "action execution"@en .
 
+:ActionSpecification a owl:Class ;
+                     rdfs:isDefinedBy :interaction ;
+                     rdfs:subClassOf :BehaviorSpecification ;
+                     rdfs:comment "A specification that describes an action (e.g., through preconditions and postconditions) and how to execute the action, e.g. as a context-free request through a form."@en ;
+                     rdfs:label "action specification"@en .
+
+:BehaviorExecution a owl:Class ;
+                   rdfs:isDefinedBy :interaction ;
+                   rdfs:comment "A course of action performed by an agent upon exploiting a behavior possibility."@en ;
+                   rdfs:label "behavior execution"@en .
+
+:BehaviorSpecification a owl:Class ;
+                       rdfs:isDefinedBy :interaction ;
+                       rdfs:comment "A specification that describes a behavior, for example, as procedural knowledge (e.g., AgentSpeak plan) or code-on-demand (e.g., a script that implements a behavior)."@en ;
+                       rdfs:label "behavior specification"@en .
+
+:Input a owl:Class ;
+       rdfs:isDefinedBy :interaction ;
+       rdfs:comment "An input of an action, which may include variables. The input may be used, for instance, in an action specification or in the representation of an action execution."@en ;
+       rdfs:label "input"@en .
 
 #################################################################
 #    Object Properties
 #################################################################
+
+:expectsInput a owl:ObjectProperty ;
+              rdfs:isDefinedBy :interaction ;
+              rdfs:domain :ActionSpecification ;
+              rdfs:range :Input ;
+              rdfs:comment "A relation between an action specification and the input that the specified action expects."@en ;
+              rdfs:label "expects input"@en .
+
+:hasForm a owl:ObjectProperty ;
+         rdfs:isDefinedBy :interaction ;
+         rdfs:domain :ActionSpecification ;
+         rdfs:comment "A relation between an action specification and a form that describes how to execute the specified action."@en ;
+         rdfs:label "has form"@en .
+
+:hasSchema a owl:ObjectProperty ;
+           rdfs:isDefinedBy :interaction ;
+           rdfs:comment "A relation between an input and the schema of the input."@en ;
+           rdfs:label "has schema"@en .
+
+:signifies a owl:ObjectProperty ;
+           rdfs:isDefinedBy :interaction ;
+           rdfs:domain :Signifier ;
+           rdfs:range :BehaviorSpecification ;
+           rdfs:comment "A relation between a signifier and a behavior specification it signifies."@en ;
+           rdfs:label "signifies"@en .

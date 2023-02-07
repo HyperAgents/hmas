@@ -1,0 +1,8 @@
+prefix : <https://purl.org/hmas/>
+
+ask {
+    bind (ex:gripperJointSchema as ?sc)
+    bind (ex:gripperJoint as ?i)
+    ?i a :Input .
+    ?i :hasSchema ?sc.
+}

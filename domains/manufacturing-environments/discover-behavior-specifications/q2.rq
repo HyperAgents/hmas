@@ -1,0 +1,10 @@
+prefix : <https://purl.org/hmas/>
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:gripperMovable as ?s)
+    bind (ex:moveGripper as ?sp)
+    ?s a :Signifier .
+    ?sp a :ActionSpecification .
+    ?s :signifies ?sp .
+}
