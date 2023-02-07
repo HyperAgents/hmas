@@ -148,7 +148,8 @@ skos:note a owl:AnnotationProperty .
         rdfs:label "HMAS Platform"@en, "Platforme SMAH"@fr ;
         skos:example "Examples of hmas:HypermediaMASPlatform include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/20> ;
-        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> .
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
+        rdfs:subClassOf :Hostable .
 
 :ResourceProfile a owl:Class ;
         rdfs:isDefinedBy :core ;
