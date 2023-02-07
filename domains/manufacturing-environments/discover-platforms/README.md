@@ -17,13 +17,12 @@ For competency question q4, it is outside the scope of this scenario to represen
 
 ## Glossary
 
-* [**Hypermedia MAS Platform**](https://purl.org/hmas/core#HypermediaMASPlatform): A Hypermedia MAS platform is a system providing a collection of features to support Hypermedia MAS.
-* [**Resource Hosting**](https://purl.org/hmas/core#isHostedOn): A relation between a resource (e.g., an agent) and the Hypermedia MAS Platform that hosts the resource.
-* [**Agent**](https://purl.org/hmas/core#Agent): see [Other scenario](../discover-core/README.md).
-* [**Resource Profile**](https://purl.org/hmas/core#ResourceProfile): see [Other scenario](../discover-core/README.md).
-* [**Signifier**](https://purl.org/hmas/core#Signifier): see [Other scenario](../discover-signifiers/README.md).
+* [**Hypermedia MAS Platform**](https://purl.org/hmas/HypermediaMASPlatform): A Hypermedia MAS platform is a system providing a collection of features to support Hypermedia MAS.
+* [**Resource Hosting**](https://purl.org/hmas/isHostedOn): A relation between a resource (e.g., an agent) and the Hypermedia MAS Platform that hosts the resource.
+* [**Agent**](https://purl.org/hmas/Agent): see [Other scenario](../discover-core/README.md).
+* [**Resource Profile**](https://purl.org/hmas/ResourceProfile): see [Other scenario](../discover-core/README.md).
+* [**Signifier**](https://purl.org/hmas/Signifier): see [Other scenario](../discover-signifiers/README.md).
 
 ### Recommendations
 
-TODOs:
-- [ ] TODO
+The term [hmas:HypermediaMASPlatform](https://purl.org/hmas/HypermediaMASPlatform) relates to [stn:Platform](https://w3id.org/stn/core#Platform). It is different from [sosa:Platform](https://www.w3.org/TR/vocab-ssn/#SOSAPlatform) (see also [Issue #20](https://github.com/HyperAgents/ns.hyperagents.org/issues/20)).
