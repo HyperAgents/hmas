@@ -6,9 +6,9 @@ _Short description of the scenario to motivate the introduction of new ontologic
 
 ## Competency Questions
 
-| ID | Question in natural language | Example of answer |
-|---|---|---|
-| q1 | _What are the instances of the example class?_ | an example instance |
+| ID | Question in natural language |
+|---|---|
+| q1 | _What are the instances of the example class?_ |
 
 _Any additional comment on the competency questions can be added after the table._
 
