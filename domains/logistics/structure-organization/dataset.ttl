@@ -47,7 +47,7 @@ ex:WarehouseStEtienne a hmas:Artifact ;
 
 ## Organization Specifications
 ex:Logistics a sh:NodeShape ;
-    rdfs:subClassOf hmas:Organization
+    rdfs:subClassOf hmas:Organization ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
         sh:qualifiedValueShape [ sh:class ex:Commitment ] ;
