@@ -1,14 +1,24 @@
-@prefix hmas: <https://purl.org/hmas/> .
+@base <https://purl.org/hmas/> .
+@prefix : <> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix schema: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 #################################################################
 #    Classes
 #################################################################
 
-hmas:Group a owl:Class ;
-    rdfs:isDefinedBy hmas:regulation ;
+:Group a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Group is a set of Roles that exists in an Organization."@en ;
     rdfs:label "Group"@en .
     
@@ -16,46 +26,46 @@ hmas:Group a owl:Class ;
 #    Properties
 #################################################################
 
-hmas:structures a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Group ;
-    schema:rangeIncludes hmas:Organization ;
-    rdfs:isDefinedBy hmas:regulation ;
-    rdfs:inverseOf hmas:isStructuredBy ;
+:structures a owl:ObjectProperty ;
+    schema:domainIncludes :Group ;
+    schema:rangeIncludes :Organization ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:inverseOf :isStructuredBy ;
     rdfs:comment "A relation that refers to a Group that structures an Organization."@en ;
     rdfs:label "structures"@en .
 
-hmas:isStructuredBy a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Organization ;
-    schema:rangeIncludes hmas:Group ;
-    rdfs:isDefinedBy hmas:regulation ;
-    rdfs:inverseOf hmas:structures ;
+:isStructuredBy a owl:ObjectProperty ;
+    schema:domainIncludes :Organization ;
+    schema:rangeIncludes :Group ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:inverseOf :structures ;
     rdfs:comment "A relation that refers to an Organization that is structured by a Group."@en ;
     rdfs:label "is structured by"@en .
     
-hmas:plays a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Agent ;
-    schema:rangeIncludes hmas:Role ;
-    rdfs:isDefinedBy hmas:regulation ;
+:plays a owl:ObjectProperty ;
+    schema:domainIncludes :Agent ;
+    schema:rangeIncludes :Role ;
+    rdfs:isDefinedBy :regulation ;
     rdfs:comment "A relation that refers to a Role that an Agent plays in a Group."@en ;
     rdfs:label "plays"@en .
 
-hmas:belongsTo a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Role ;
-    schema:rangeIncludes hmas:Group ;
-    rdfs:isDefinedBy hmas:regulation ;
+:belongsTo a owl:ObjectProperty ;
+    schema:domainIncludes :Role ;
+    schema:rangeIncludes :Group ;
+    rdfs:isDefinedBy :regulation ;
     rdfs:comment "A relation that refers to a Role that is part of a Group."@en ;
     rdfs:label "belongs to"@en .
 
-hmas:isLinkedTo a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Role ;
-    schema:rangeIncludes hmas:Role ;
-    rdfs:isDefinedBy hmas:regulation ;
+:isLinkedTo a owl:ObjectProperty ;
+    schema:domainIncludes :Role ;
+    schema:rangeIncludes :Role ;
+    rdfs:isDefinedBy :regulation ;
     rdfs:comment "A relation that refers to a relation between two Roles."@en ;
     rdfs:label "is linked to"@en .
     
-hmas:isSubGroupOf a owl:ObjectProperty ;
-    schema:domainIncludes hmas:Group ;
-    schema:rangeIncludes hmas:Group ;
-    rdfs:isDefinedBy hmas:regulation ;
+:isSubGroupOf a owl:ObjectProperty ;
+    schema:domainIncludes :Group ;
+    schema:rangeIncludes :Group ;
+    rdfs:isDefinedBy :regulation ;
     rdfs:comment "A relation that refers to a subgroup relationship between two Groups."@en ;
     rdfs:label "is subgroup of"@en .

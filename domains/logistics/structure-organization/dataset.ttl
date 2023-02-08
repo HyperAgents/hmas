@@ -1,6 +1,5 @@
 @prefix ex: <http://example.org/> .
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
@@ -8,28 +7,37 @@
 #    Core Ontology
 #################################################################
 
+## Workspace
+ex:LogisticsWS a hmas:Workspace ;
+    hmas:contains ex:John, ex:Frank, ex:Gabriel, ex:Igor, ex:Jane, ex:WarehouseLyon, ex:WarehouseStEtienne .
+
 ## Agents
+ex:John a hmas:Agent ;
+    hmas:isContainedIn ex:LogisticsWS .
 ex:Frank a hmas:Agent ;
+    hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMemberOf ex:FL_Logistics ;
     hmas:plays ex:FL_HumanResourcesOfficer .
 ex:Gabriel a hmas:Agent ;
+    hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMemberOf ex:FL_Logistics ;
     hmas:plays ex:FL_FinanceOfficer .
 ex:Igor a hmas:Agent ;
+    hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMemberOf ex:FL_Logistics ;
     hmas:plays ex:FL_Planner .
 ex:Jane a hmas:Agent ;
+    hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMemberOf ex:FL_Logistics ;
     hmas:plays ex:FL_Carrier .
 
 ## Artifacts
 ex:WarehouseLyon a hmas:Artifact ;
+    hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMaterialOf ex:FL_Logistics .
 ex:WarehouseStEtienne a hmas:Artifact ;
+    hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMaterialOf ex:FL_Logistics .
-
-## Organization
-ex:Logistics rdfs:subClassOf hmas:Organization .
 
 #################################################################
 #    Regulation Ontology
@@ -38,8 +46,8 @@ ex:Logistics rdfs:subClassOf hmas:Organization .
 # SPECIFICATION
 
 ## Organization Specifications
-ex:LogisticsShape a sh:NodeShape ;
-    sh:targetClass ex:Logistics ;
+ex:Logistics a sh:NodeShape ;
+    rdfs:subClassOf hmas:Organization
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
         sh:qualifiedValueShape [ sh:class ex:Commitment ] ;
@@ -203,9 +211,18 @@ ex:LogisticsShape a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         ] .
 
+## Organizational Values Specifications
+ex:Commitment rdfs:subClassOf hmas:OrganizationalValue ;
+    rdfs:comment "Do everything you can to keep the organization promisses to the customers."@en ;
+    rdfs:label "Commitment"@en .
+
+ex:IntegrityRespect rdfs:subClassOf hmas:OrganizationalValue ;
+    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
+    rdfs:label "Integrity and Respect"@en .
+
 ## Role Specifications
-ex:HumanResourcesOfficerShape a sh:NodeShape ;
-    sh:targetClass ex:HumanResourcesOfficer ;
+ex:HumanResourcesOfficer a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role ;
     sh:property [
         sh:path hmas:belongsTo ;
         sh:qualifiedValueShape [ sh:class ex:HumanResourcesDepartment ] ;
@@ -213,8 +230,8 @@ ex:HumanResourcesOfficerShape a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         ] .
 
-ex:FinanceOfficerShape a sh:NodeShape ;
-    sh:targetClass ex:FinanceOfficer ;
+ex:FinanceOfficer a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role ;
     sh:property [
         sh:path hmas:belongsTo ;
         sh:qualifiedValueShape [ sh:class ex:FinanceDeparment ] ;
@@ -222,8 +239,8 @@ ex:FinanceOfficerShape a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         ] .
 
-ex:AccountManagerShape a sh:NodeShape ;
-    sh:targetClass ex:AccountManager ;
+ex:AccountManager a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role ;
     sh:property [
         sh:path hmas:belongsTo ;
         sh:qualifiedValueShape [ sh:class ex:CommercialDepartment ] ;
@@ -231,8 +248,8 @@ ex:AccountManagerShape a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         ] .
 
-ex:PlannerShape a sh:NodeShape ;
-    sh:targetClass ex:Planner ;
+ex:Planner a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role ;
     sh:property [
         sh:path hmas:belongsTo ;
         sh:qualifiedValueShape [ sh:class ex:PlanningDepartment ] ;
@@ -260,90 +277,64 @@ ex:PlannerShape a sh:NodeShape ;
             ]
         ) .
         
-ex:CarrierShape a sh:NodeShape ;
-    sh:targetClass ex:Carrier ;
+ex:Carrier a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role ;
     sh:property [
         sh:path hmas:belongsTo ;
         sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
         ] .
 
-ex:CollectorShape a sh:NodeShape ;
-    sh:targetClass ex:Collector ;
+ex:Collector a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role ;
     sh:property [
         sh:path hmas:belongsTo ;
         sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
         ] .
 
-ex:DelivererShape a sh:NodeShape ;
-    sh:targetClass ex:Deliverer ;
+ex:Deliverer a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role ;
     sh:property [
         sh:path hmas:belongsTo ;
         sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
         ] .
 
-ex:HumanResourcesDepartmentShape a sh:NodeShape ;
-    sh:targetClass ex:HumanResourcesDepartment ;
+## Group Specifications
+ex:HumanResourcesDepartment a sh:NodeShape ;
+    rdfs:subClassOf hmas:Group ;
     sh:property [
         sh:path hmas:isSubGroupOf ;
         sh:qualifiedValueShape [ sh:class ex:AdministrativeDepartment ] ;
         ] .
 
-ex:FinanceDeparmentShape a sh:NodeShape ;
-    sh:targetClass ex:FinanceDeparment ;
+ex:FinanceDeparment a sh:NodeShape ;
+    rdfs:subClassOf hmas:Group ;
     sh:property [
         sh:path hmas:isSubGroupOf ;
         sh:qualifiedValueShape [ sh:class ex:AdministrativeDepartment ] ;
         ] .
 
-ex:CommercialDepartmentShape a sh:NodeShape ;
-    sh:targetClass ex:CommercialDepartment ;
+ex:CommercialDepartment a sh:NodeShape ;
+    rdfs:subClassOf hmas:Group ;
     sh:property [
         sh:path hmas:isSubGroupOf ;
         sh:qualifiedValueShape [ sh:class ex:OperationsDepartment ] ;
         ] .
 
-ex:PlanningDepartmentShape a sh:NodeShape ;
-    sh:targetClass ex:PlanningDepartment ;
+ex:PlanningDepartment a sh:NodeShape ;
+    rdfs:subClassOf hmas:Group ;
     sh:property [
         sh:path hmas:isSubGroupOf ;
         sh:qualifiedValueShape [ sh:class ex:OperationsDepartment ] ;
         ] .
 
-ex:ShippingDepartmentShape a sh:NodeShape ;
-    sh:targetClass ex:ShippingDepartment ;
+ex:ShippingDepartment a sh:NodeShape ;
+    rdfs:subClassOf hmas:Group ;
     sh:property [
         sh:path hmas:isSubGroupOf ;
         sh:qualifiedValueShape [ sh:class ex:OperationsDepartment ] ;
         ] .
-        
-## Organizational Values
-ex:Commitment rdfs:subClassOf hmas:OrganizationalValue ;
-    rdfs:comment "Do everything you can to keep the organization promisses to the customers."@en ;
-    rdfs:label "Commitment"@en .
 
-ex:IntegrityRespect rdfs:subClassOf hmas:OrganizationalValue ;
-    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
-    rdfs:label "Integrity and Respect"@en .
-
-## Roles
-ex:HumanResourcesOfficer rdfs:subClassOf hmas:Role .
-ex:FinanceOfficer rdfs:subClassOf hmas:Role .
-ex:AccountManager rdfs:subClassOf hmas:Role .
-ex:Planner rdfs:subClassOf hmas:Role .
-ex:Carrier rdfs:subClassOf hmas:Role .
-ex:Collector rdfs:subClassOf hmas:Role .
-ex:Deliverer rdfs:subClassOf hmas:Role .
-
-## Group
-ex:AdministrativeDepartment rdfs:subClassOf hmas:Group .
-ex:OperationsDepartment rdfs:subClassOf hmas:Group .
-ex:HumanResourcesDepartment rdfs:subClassOf hmas:Group .
-ex:FinanceDeparment rdfs:subClassOf hmas:Group .
-ex:CommercialDepartment rdfs:subClassOf hmas:Group .
-ex:PlanningDepartment rdfs:subClassOf hmas:Group .
-ex:ShippingDepartment rdfs:subClassOf hmas:Group .
-
-## Missions
+## Mission Specifications
 ex:HumanResourcesManagement rdfs:subClassOf hmas:Mission .
 ex:FinancialManagement rdfs:subClassOf hmas:Mission .
 ex:CommercialManagement rdfs:subClassOf hmas:Mission .
@@ -352,7 +343,7 @@ ex:CarryGoods rdfs:subClassOf hmas:Mission .
 ex:CollectGoods rdfs:subClassOf hmas:Mission .
 ex:DeliverGoods rdfs:subClassOf hmas:Mission .
 
-## Facility
+## Facility Specifications
 ex:PickingArea rdfs:subClassOf hmas:Facility .
 ex:ReceivingArea rdfs:subClassOf hmas:Facility .
 
@@ -382,7 +373,7 @@ ex:FL_Deliverer a ex:Deliverer ;
     hmas:belongsTo ex:FL_ShippingDepartment ;
     hmas:isLinkedTo ex:FL_Planner .
 
-## Group
+## Groups
 ex:FL_AdministrativeDepartment a ex:AdministrativeDepartment ;
     hmas:structures ex:FL_Logistics .
 ex:FL_OperationsDepartment a ex:OperationsDepartment ;
@@ -412,9 +403,9 @@ ex:FL_CarryGoods a ex:CarryGoods .
 ex:FL_CollectGoods a ex:CollectGoods .
 ex:FL_DeliverGoods a ex:DeliverGoods .
 
-## Facility
+## Facilities
 ex:FL_PickingArea a ex:PickingArea .
-ex:FL_ReceivingArea ex:ReceivingArea .
+ex:FL_ReceivingArea a ex:ReceivingArea .
 
 ## Organizations      
 ex:FL_Logistics a ex:Logistics ;
