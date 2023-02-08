@@ -1,4 +1,5 @@
-@prefix hmas: <https://purl.org/hmas/> .
+@base <https://purl.org/hmas/> .
+@prefix : <> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -12,22 +13,20 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 
-@base <https://purl.org/hmas/> .
-
 #################################################################
 #    Ontology Description
 #################################################################
 
-hmas:regulation rdf:type owl:Ontology ;
+:regulation rdf:type owl:Ontology ;
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,
     "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
     dct:issued "2022-05-01"^^xsd:date ;
     ## dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
-    owl:imports hmas:core ;
+    owl:imports :core ;
     vann:preferredNamespacePrefix "hmas" ;
-    vann:preferredNamespaceUri hmas: .
+    vann:preferredNamespaceUri <> .
 
 <https://inria.fr/>
   schema:name "Inria" ;
@@ -52,9 +51,9 @@ hmas:regulation rdf:type owl:Ontology ;
 #    Classes
 #################################################################
 
-hmas:TestRegulation a owl:Class ;
+:TestRegulation a owl:Class ;
   rdfs:comment "testing the redirections"@en ;
-  rdfs:isDefinedBy hmas:regulation .
+  rdfs:isDefinedBy :regulation .
 
 
 #################################################################
