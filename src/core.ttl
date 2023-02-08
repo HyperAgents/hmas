@@ -124,7 +124,7 @@ skos:note a owl:AnnotationProperty .
 :Hostable a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A resource that can be hosted on a MAS platform"@en ;
-        skos:example "Agents, artifacts, workspaces, resource profiles, signifiers, organizations, can be hosted on a MAS platform"@en ;
+        skos:example "Agents, artifacts, resource profiles, and signifiers can be hosted on a MAS platform"@en ;
         rdfs:label "Hostable"@en, "Hébergeable"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/8> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
