@@ -24,12 +24,12 @@ Additionally, the FL Logistics will mirror the composition of the SL Logistics a
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What is the enterprise X's organizational model that can be used to create a new enterprise?    | What is the SL Logistics' organizational model that John can use to create the FL Logistics? **ex:Logistics**                            |
-| q2 | What are the enterprises that follows a different organizational model than enterprise X?       | What are the enterprises that follows a different organizational model than SL Logistics? **ex:HSG_Factory**, **ex:ITM_Factory**         |
-| q3 | What are the enterprises with the same organizational model as enterprise X and contained in Y? | What are the enterprises with the same organizational model as SL Logistics and contained in same Workspace? **ex:GL_Logistics**         |
-| q4 | What are the available organizational models that can be used to create an new enterprise?      | What are the available organizational models that can be used by John to create the FL Logistics? **ex:Logistics**, **ex:Manufacturing** |
-| q5 | What are the values of a given organization?                                                    | What are the values of the SL Logistics? **ex:SL_Commitment**, **ex:SL_IntegrityRespect**                                                |
-| q6 | What are the elements composing a given organization model?                                     | What are the values of the SL Logistics organization model? **ex:HumanResourcesOfficer**, **ex:FinanceOfficer**, **ex:AccountManager**, **ex:Planner**, **ex:Carrier**, **ex:Collector**, **ex:Deliverer**, **ex:HumanResourcesManagement**, **ex:FinancialManagement**, **ex:CommercialManagement**, **ex:PlanningManagement**, **ex:CarryGoods**, **ex:CollectGoods**, **ex:DeliverGoods**, **ex:PickingArea**, **ex:ReceivingArea** |
+| q1 | What is the enterprise X's organizational model that can be used to create a new enterprise?        | What is the SL Logistics' organizational model that John can use to create the FL Logistics? **ex:Logistics**                            |
+| q2 | What are the enterprises that follows a different organizational model than enterprise X?           | What are the enterprises that follows a different organizational model than SL Logistics? **ex:HSG_Factory**, **ex:ITM_Factory**         |
+| q3 | What are the enterprises with the same organizational model as the enterprise X and contained in Y? | What are the enterprises with the same organizational model as the SL Logistics and contained in the same Workspace? **ex:GL_Logistics** |
+| q4 | What are the available organizational models that can be used to create an new enterprise?          | What are the available organizational models that can be used by John to create the FL Logistics? **ex:Logistics**, **ex:Manufacturing** |
+| q5 | What are the organizational values of a given organization?                                         | What are the organizational values of the SL Logistics? **ex:SL_Commitment**, **ex:SL_IntegrityRespect**                                 |
+| q6 | What are the elements composing a given organization model?                                         | What are the values of the SL Logistics organization model? **ex:HumanResourcesOfficer**, **ex:FinanceOfficer**, **ex:AccountManager**, **ex:Planner**, **ex:Carrier**, **ex:Collector**, **ex:Deliverer**, **ex:HumanResourcesManagement**, **ex:FinancialManagement**, **ex:CommercialManagement**, **ex:PlanningManagement**, **ex:CarryGoods**, **ex:CollectGoods**, **ex:DeliverGoods**, **ex:PickingArea**, **ex:ReceivingArea**                   |
 
 ## Glossary
 

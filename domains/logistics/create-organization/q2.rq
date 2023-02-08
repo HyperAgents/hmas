@@ -1,0 +1,29 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+ask {
+    bind (ex:HSG_Factory as ?hsgOrg)
+    bind (ex:ITM_Factory as ?itmOrg)
+    
+    ex:SL_Logistics a ?slOrgModel .
+    ?slOrgModel a sh:NodeShape ;
+                rdfs:subClassOf hmas:Organization .
+    ?hsgOrg a ?hsgOrgModel .
+    ?hsgOrgModel a sh:NodeShape ;
+                 rdfs:subClassOf hmas:Organization .
+    ?itmOrg a ?itmOrgModel .
+    ?itmOrgModel a sh:NodeShape ;
+                 rdfs:subClassOf hmas:Organization .
+
+    filter (?slOrgModel != ?hsgOrgModel &&
+            ?slOrgModel != ?itmOrgModel)
+}
+
+# QUESTION
+# How can we guarantee that both Organizations exist without duplicating the code?
+# This representation could be simplified to
+#        filter (?org in (ex:HSG_Factory,ex:ITM_Factory))
+# But it does not represent what we want to capture with the
+# competency question.

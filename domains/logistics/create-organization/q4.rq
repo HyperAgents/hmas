@@ -1,0 +1,19 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+ask {
+    ?orgModel a sh:NodeShape ;
+              rdfs:subClassOf hmas:Organization .
+              
+    filter (ex:Logistics = ?orgModel ||
+            ex:Manufacturing = ?orgModel)
+}
+
+# QUESTION
+# How can we guarantee that both Organization Models exist?
+# This representation could be simplified to
+#        filter (?orgModel in (ex:Logistics,ex:Manufacturing))
+# But it still does not represent what we want to capture with the
+# competency question.

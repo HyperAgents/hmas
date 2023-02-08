@@ -9,9 +9,11 @@
 
 ## Workspace
 ex:LogisticsWS a hmas:Workspace ;
-    hmas:contains ex:Alice, ex:Bob, ex:Carol, ex:David, ex:Elton, ex:WarehouseStGallen .
+    hmas:contains ex:John, ex:Alice, ex:Bob, ex:Carol, ex:David, ex:Elton, ex:WarehouseStGallen .
 
 ## Agents
+ex:John a hmas:Agent ;
+    hmas:isContainedIn ex:SL_Logistics .
 ex:Alice a hmas:Agent ;
     hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMemberOf ex:SL_Logistics .
@@ -36,10 +38,6 @@ ex:WarehouseStGallen a hmas:Artifact ;
     hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMaterialOf ex:SL_Logistics .
 
-## Organization
-ex:Logistics rdfs:subClassOf hmas:Organization .
-ex:Manufacturing rdfs:subClassOf hmas:Organization .
-
 #################################################################
 #    Regulation Ontology
 #################################################################
@@ -47,8 +45,8 @@ ex:Manufacturing rdfs:subClassOf hmas:Organization .
 # SPECIFICATION
 
 ## Organization Specification
-ex:LogisticsShape a sh:NodeShape ;
-    sh:targetClass ex:Logistics ;
+ex:Logistics a sh:NodeShape ;
+    rdfs:subClassOf hmas:Organization ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
         sh:qualifiedValueShape [ sh:class ex:Commitment ] ;
@@ -104,60 +102,6 @@ ex:LogisticsShape a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;        
         ] ;
     sh:property [
-        sh:path hmas:isStructuredBy ;
-        sh:minCount 5 ;
-        sh:maxCount 5 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isStructuredBy ;
-        sh:qualifiedValueShape [ sh:class ex:AdministrativeDepartment ] ;
-        sh:qualifiedValuesShapeDisjoint true ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isStructuredBy ;
-        sh:qualifiedValueShape [ sh:class ex:OperationsDepartment ] ;
-        sh:qualifiedValuesShapeDisjoint true ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isStructuredBy ;
-        sh:qualifiedValueShape [ sh:class ex:HumanResourcesDepartment ] ;
-        sh:qualifiedValuesShapeDisjoint true ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isStructuredBy ;
-        sh:qualifiedValueShape [ sh:class ex:FinanceDeparment ] ;
-        sh:qualifiedValuesShapeDisjoint true ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isStructuredBy ;
-        sh:qualifiedValueShape [ sh:class ex:CommercialDepartment ] ;
-        sh:qualifiedValuesShapeDisjoint true ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isStructuredBy ;
-        sh:qualifiedValueShape [ sh:class ex:PlanningDepartment ] ;
-        sh:qualifiedValuesShapeDisjoint true ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isStructuredBy ;
-        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
-        sh:qualifiedValuesShapeDisjoint true ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
         sh:path hmas:proposesMission ;
         sh:qualifiedValueShape [ sh:class ex:HumanResourcesManagement ] ;
         sh:qualifiedMinCount 1 ;
@@ -211,6 +155,9 @@ ex:LogisticsShape a sh:NodeShape ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
+
+ex:Manufacturing a sh:NodeShape ;
+    rdfs:subClassOf hmas:Organization .
 
 ## Organizational Values
 ex:Commitment rdfs:subClassOf hmas:OrganizationalValue ;
@@ -273,7 +220,7 @@ ex:SL_ReceivingArea a ex:ReceivingArea .
 
 ## Organizations
 ex:SL_Logistics a ex:Logistics ;
-    hmas:hasValue ex:SL_Commitment, ex:SL_IntegrityRespect ;
+    hmas:hasOrganizationalValue ex:SL_Commitment, ex:SL_IntegrityRespect ;
     hmas:providesRole ex:SL_HumanResourcesOfficer, ex:SL_FinanceOfficer, ex:SL_AccountManager, ex:SL_Planner, ex:SL_Carrier, ex:SL_Collector, ex:SL_Deliverer ;
     hmas:proposesMission ex:SL_HumanResourcesManagement, ex:SL_FinancialManagement, ex:SL_CommercialManagement, ex:SL_PlanningManagement, ex:SL_CarryGoods, ex:SL_CollectGoods, ex:SL_DeliverGoods ;
     hmas:proposesFacility ex:SL_PickingArea, ex:SL_ReceivingArea ;

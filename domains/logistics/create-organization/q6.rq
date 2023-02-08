@@ -1,0 +1,49 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+ask {
+    ex:SL_Logistics a ?orgModel .
+    ?orgModel a sh:NodeShape ;
+              rdfs:subClassOf hmas:Organization ;
+              sh:property [
+                sh:path hmas:hasOrganizationalValue ;
+                sh:qualifiedValueShape [
+                  sh:class ?orgModelOrgValue
+                ]
+              ] .
+    ?orgModel a sh:NodeShape ;
+              rdfs:subClassOf hmas:Organization ;
+              sh:property [
+                sh:path hmas:providesRole ;
+                sh:qualifiedValueShape [
+                  sh:class ?orgModelRole
+                ]
+              ] .
+    ?orgModel a sh:NodeShape ;
+              rdfs:subClassOf hmas:Organization ;
+              sh:property [
+                sh:path hmas:proposesMission ;
+                sh:qualifiedValueShape [
+                  sh:class ?orgModelMission
+                ]
+              ] .
+    ?orgModel a sh:NodeShape ;
+              rdfs:subClassOf hmas:Organization ;
+              sh:property [
+                sh:path hmas:proposesFacility ;
+                sh:qualifiedValueShape [
+                  sh:class ?orgModelFacility
+                ]
+              ] .
+
+    filter (?orgModelOrgValue in (ex:Commitment,ex:IntegrityRespect) &&
+            ?orgModelRole in (ex:HumanResourcesOfficer,ex:FinanceOfficer,ex:AccountManager,ex:Planner,ex:Carrier,ex:Collector,ex:Deliverer) &&
+            ?orgModelMission in (ex:HumanResourcesManagement,ex:FinancialManagement,ex:CommercialManagement,ex:PlanningManagement, ex:CarryGoods,ex:CollectGoods,ex:DeliverGoods) &&
+            ?orgModelFacility in (ex:PickingArea,ex:ReceivingArea))
+}
+
+
+# QUESTION
+# How can we guarantee that all elements exist?

@@ -1,0 +1,19 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+ask {
+    ex:SL_Logistics hmas:hasOrganizationalValue ?orgValue .
+    
+    filter (ex:SL_Commitment = ?orgValue ||
+            ex:SL_IntegrityRespect = ?orgValue)    
+}
+
+
+# QUESTION
+# How can we guarantee that both Organizational Values exist?
+# This representation could be simplified to
+#        filter (?orgValue in (ex:SL_Commitment,ex:SL_IntegrityRespect))
+# But it still does not represent what we want to capture with the
+# competency question.
