@@ -1,0 +1,13 @@
+prefix ex: <http://example.org/>
+prefix hmas: <https://purl.org/hmas/>
+
+ask {
+    ex:factory hmas:isSituatedOn ?x .
+    ?workspace a hmas:Workspace ;
+               hmas:contains ?x .
+
+    filter (ex:productionCell1 = ?workspace ||
+            ex:productionCell2 = ?workspace)
+}
+
+# How do we guarantee that the factory is situated on both production cells?

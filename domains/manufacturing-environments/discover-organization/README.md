@@ -8,7 +8,7 @@ A factory contains various industrial artifacts (e.g., industrial machinery, ind
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
 | q1 | What is the organization regulating X?                             | What is the organization regulating the factory? **ex:factory**                                          |
-| q2 | What are the organizations of a given workspace?                   | What are the organizations of the factory workspace? **ex:factory**                                      |
+| q2 | What are the organizations of a given workspace?                   | What are the organizations of the productionCell1 workspace? **ex:factory**                              |
 | q3 | What are the workspaces in which a given organization is situated? | What are the workspaces in which the factory is situated? **ex:productionCell1**, **ex:productionCell2** |
 | q4 | What are the agents member of a given organization?                | What are the agents member of the factory? **ex:autonomousBob**, **ex:factorySupervisor**                |
 | q5 | What are the artifacts part of a given organization?               | What are the artifacts part of the factory? **ex:ur5**, **ex:phantomX**                                  |
