@@ -1,0 +1,36 @@
+@prefix ex: <http://example.org/> .
+@prefix hmas: <https://purl.org/hmas/> .
+
+#################################################################
+#    Core Ontology
+#################################################################
+
+ex:factoryWS a hmas:Workspace ;
+    hmas:contains ex:groundFloor .
+
+ex:groundFloor a hmas:Workspace ;
+    hmas:contains ex:productionCell1, ex:productionCell2 .
+
+ex:productionCell1 a hmas:Workspace ;
+    hmas:contains ex:ur5, ex:phantomX, ex:autonomousBob, ex:factorySupervisor .
+
+ex:productionCell2 a hmas:Workspace ;
+    hmas:contains ex:autonomousBob .
+
+ex:ur5 a hmas:Artifact, ex:UR5Robot ;
+    hmas:isMaterialOf ex:factory .
+
+ex:phantomX a hmas:Artifact, ex:PhantomXRobot ;
+    hmas:isMaterialOf ex:factory .
+
+ex:autonomousBob a hmas:Agent ;
+    hmas:isMemberOf ex:factory .
+
+ex:factorySupervisor a hmas:Agent ;
+    hmas:isMemberOf ex:factory .
+
+ex:factoryProfile a hmas:ResourceProfile .
+
+ex:factory a hmas:Organization ;
+    hmas:hasResourceProfile ex:factoryProfile ;
+    hmas:isSituatedOn ex:autonomousBob, ex:factorySupervisor, ex:ur5, ex:phantomX .

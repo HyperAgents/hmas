@@ -180,6 +180,11 @@ skos:note a owl:AnnotationProperty .
         rdfs:subClassOf :Artifact ;
         owl:disjointWith :HypermediaMASPlatform .
 
+:Organization a owl:Class ;
+        rdfs:isDefinedBy :core ;
+        rdfs:comment "An Organization is an entity situated on Agents and Artifacts, and regulated by a regulation system."@en ;
+        rdfs:label "Organization"@en .
+
 ### Top ontology constraints for coherent modeling 
 
 # disjoint top classes 
@@ -269,6 +274,26 @@ skos:note a owl:AnnotationProperty .
           rdfs:comment "A relations that refers to the platform that hosts the resource. "@en ;
           rdfs:label "is hosted on"@en, "est hébergé sur"@fr .
 
+:isMemberOf a owl:ObjectProperty ;
+          schema:domainIncludes :Agent ;
+          schema:rangeIncludes :Organization ;
+          rdfs:isDefinedBy :core ;
+          rdfs:comment "A relation that refers to an Agent that belongs to an Organization."@en ;
+          rdfs:label "is member of"@en .
+      
+:isMaterialOf a owl:ObjectProperty ;
+          schema:domainIncludes :Artifact ;
+          schema:rangeIncludes :Organization ;
+          rdfs:isDefinedBy :core ;
+          rdfs:comment "A relation that refers to an Artifact that belongs to an Organization."@en ;
+          rdfs:label "is material of"@en .
+
+:isSituatedOn a owl:ObjectProperty ;
+          schema:domainIncludes :Organization ;
+          schema:rangeIncludes :Agent, :Artifact ;
+          rdfs:isDefinedBy :core ;
+          rdfs:comment "A relation that refers to an Organization situated through its Members and Materials."@en ;
+          rdfs:label "is situated on"@en .
 
 #### 
 # Notions of HOME saved for later
