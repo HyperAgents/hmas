@@ -169,7 +169,7 @@ skos:note a owl:AnnotationProperty .
 
 :Workspace a owl:Class ;
         rdfs:isDefinedBy :core ;
-        rdfs:comment "A logical container of one or multiple interactions among agents and potentially artifacts. Workspaces can contain any resource in general and in particular agents, artifacts, other workspaces, or platforms. A workspace can be a LDP container and this can be done by multi-typing the container or by multiple inheritance on a Class ex:Workcontainer. "@en ;
+        rdfs:comment "A container for one or multiple interactions among agents and potentially artifacts. Workspaces can contain any resource in general and in particular agents, artifacts, or other workspaces. A workspace can be a Linked Data Platform container and this can be done by multi-typing the container or by multiple inheritance on a class ex:Workcontainer."@en ;
         rdfs:label "Workspace"@en, "Espace de Travail"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/24> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
