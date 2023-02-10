@@ -1,9 +1,6 @@
 prefix ex: <http://example.org/>
 prefix hmas: <https://purl.org/hmas/>
 
-prefix ex: <http://example.org/>
-prefix hmas: <https://purl.org/hmas/>
-
 ask {
     bind (ex:ur5 as ?ag1)
     bind (ex:phantomX as ?ag2)

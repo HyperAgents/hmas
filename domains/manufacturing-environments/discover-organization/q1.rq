@@ -1,9 +1,8 @@
-
 prefix ex: <http://example.org/>
 prefix hmas: <https://purl.org/hmas/>
 
 ask {
-    bind (ex:factory as ?org)
+    bind (ex:factoryOrganization as ?org)
     
     ?org a hmas:Organization .
 }

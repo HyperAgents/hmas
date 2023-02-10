@@ -2,7 +2,7 @@ prefix ex: <http://example.org/>
 prefix hmas: <https://purl.org/hmas/>
 
 ask {
-    ex:factory hmas:isSituatedOn ?x .
+    ex:factoryOrganization hmas:isSituatedOn ?x .
     ?workspace a hmas:Workspace ;
                hmas:contains ?x .
 
