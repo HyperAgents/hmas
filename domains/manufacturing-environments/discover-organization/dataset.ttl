@@ -7,12 +7,15 @@
 
 ex:factoryProfile a hmas:ResourceProfile .
 
+ex:factoryOrganizationProfile a hmas:ResourceProfile .
+
 ex:factoryOrganization a hmas:Organization ;
+    hmas:hasResourceProfile ex:factoryOrganizationProfile ;
     hmas:isSituatedOn ex:autonomousBob, ex:factorySupervisor, ex:ur5, ex:phantomX .
 
 ex:factoryBuilding a hmas:Workspace ;
     hmas:hasResourceProfile ex:factoryProfile ;
-    hmas:contains ex:groundFloor .
+    hmas:contains ex:groundFloor, ex:factoryOrganizationProfile .
 
 ex:groundFloor a hmas:Workspace ;
     hmas:contains ex:productionCell1, ex:productionCell2 .
