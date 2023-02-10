@@ -5,7 +5,13 @@
 #    Core Ontology
 #################################################################
 
-ex:factoryWS a hmas:Workspace ;
+ex:factoryProfile a hmas:ResourceProfile .
+
+ex:factoryOrganization a hmas:Organization ;
+    hmas:isSituatedOn ex:autonomousBob, ex:factorySupervisor, ex:ur5, ex:phantomX .
+
+ex:factoryBuilding a hmas:Workspace ;
+    hmas:hasResourceProfile ex:factoryProfile ;
     hmas:contains ex:groundFloor .
 
 ex:groundFloor a hmas:Workspace ;
@@ -28,9 +34,3 @@ ex:autonomousBob a hmas:Agent ;
 
 ex:factorySupervisor a hmas:Agent ;
     hmas:isMemberOf ex:factory .
-
-ex:factoryProfile a hmas:ResourceProfile .
-
-ex:factory a hmas:Organization ;
-    hmas:hasResourceProfile ex:factoryProfile ;
-    hmas:isSituatedOn ex:autonomousBob, ex:factorySupervisor, ex:ur5, ex:phantomX .
