@@ -24,13 +24,13 @@ ex:productionCell2 a hmas:Workspace ;
     hmas:contains ex:autonomousBob .
 
 ex:ur5 a hmas:Artifact, ex:UR5Robot ;
-    hmas:isMaterialOf ex:factory .
+    hmas:isMaterialOf ex:factoryOrganization .
 
 ex:phantomX a hmas:Artifact, ex:PhantomXRobot ;
-    hmas:isMaterialOf ex:factory .
+    hmas:isMaterialOf ex:factoryOrganization .
 
 ex:autonomousBob a hmas:Agent ;
-    hmas:isMemberOf ex:factory .
+    hmas:isMemberOf ex:factoryOrganization .
 
 ex:factorySupervisor a hmas:Agent ;
-    hmas:isMemberOf ex:factory .
+    hmas:isMemberOf ex:factoryOrganization .
