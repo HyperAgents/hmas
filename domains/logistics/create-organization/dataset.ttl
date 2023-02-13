@@ -223,10 +223,9 @@ ex:SL_Logistics a ex:Logistics ;
     hmas:hasOrganizationalValue ex:SL_Commitment, ex:SL_IntegrityRespect ;
     hmas:providesRole ex:SL_HumanResourcesOfficer, ex:SL_FinanceOfficer, ex:SL_AccountManager, ex:SL_Planner, ex:SL_Carrier, ex:SL_Collector, ex:SL_Deliverer ;
     hmas:proposesMission ex:SL_HumanResourcesManagement, ex:SL_FinancialManagement, ex:SL_CommercialManagement, ex:SL_PlanningManagement, ex:SL_CarryGoods, ex:SL_CollectGoods, ex:SL_DeliverGoods ;
-    hmas:proposesFacility ex:SL_PickingArea, ex:SL_ReceivingArea ;
-
-ex:GL_Logistics a ex:Logistics ;
-    hmas:isSituatedOn ex:Walter .
+    hmas:proposesFacility ex:SL_PickingArea, ex:SL_ReceivingArea .
+    
+ex:GL_Logistics a ex:Logistics .
         
 ex:HSG_Factory a ex:Manufacturing .
 
