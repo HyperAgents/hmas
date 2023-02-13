@@ -413,5 +413,4 @@ ex:FL_Logistics a ex:Logistics ;
     hmas:providesRole ex:FL_HumanResourcesOfficer, ex:FL_FinanceOfficer, ex:FL_AccountManager, ex:FL_Planner, ex:FL_Carrier, ex:FL_Collector, ex:FL_Deliverer ;
     hmas:isStructuredBy ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment, ex:FL_HumanResourcesDepartment, ex:FL_FinanceDeparment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment ;
     hmas:proposesMission ex:FL_HumanResourcesManagement, ex:FL_FinancialManagement, ex:FL_CommercialManagement, ex:FL_PlanningManagement, ex:FL_CarryGoods, ex:FL_CollectGoods, ex:FL_DeliverGoods ;
-    hmas:proposesFacility ex:FL_PickingArea, ex:FL_ReceivingArea ;
-    hmas:isSituatedOn ex:Frank, ex:Gabriel, ex:Igor, ex:Jane, ex:WarehouseLyon, ex:WarehouseStEtienne .
+    hmas:proposesFacility ex:FL_PickingArea, ex:FL_ReceivingArea .
