@@ -2,12 +2,10 @@ prefix ex: <http://example.org/>
 prefix hmas: <https://purl.org/hmas/>
 
 ask {
-    ex:factoryOrganization hmas:isSituatedOn ?x .
-    ?workspace a hmas:Workspace ;
-               hmas:contains ?x .
-
-    filter (ex:productionCell1 = ?workspace ||
-            ex:productionCell2 = ?workspace)
+    bind (ex:ur5 as ?ag1)
+    bind (ex:phantomX as ?ag2)
+    
+    ?ag1 hmas:isMaterialOf ?org .
+    ?ag2 hmas:isMaterialOf ?org .
+    ?org a hmas:Organization .
 }
-
-# How do we guarantee that the factory is situated on both production cells?

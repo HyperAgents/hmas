@@ -10,8 +10,7 @@ ex:factoryProfile a hmas:ResourceProfile .
 ex:factoryOrganizationProfile a hmas:ResourceProfile .
 
 ex:factoryOrganization a hmas:Organization ;
-    hmas:hasResourceProfile ex:factoryOrganizationProfile ;
-    hmas:isSituatedOn ex:autonomousBob, ex:factorySupervisor, ex:ur5, ex:phantomX .
+    hmas:hasResourceProfile ex:factoryOrganizationProfile .
 
 ex:factoryBuilding a hmas:Workspace ;
     hmas:hasResourceProfile ex:factoryProfile ;

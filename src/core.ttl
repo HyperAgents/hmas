@@ -288,13 +288,6 @@ skos:note a owl:AnnotationProperty .
           rdfs:comment "A relation that refers to an Artifact that belongs to an Organization."@en ;
           rdfs:label "is material of"@en .
 
-:isSituatedOn a owl:ObjectProperty ;
-          schema:domainIncludes :Organization ;
-          schema:rangeIncludes :Agent, :Artifact ;
-          rdfs:isDefinedBy :core ;
-          rdfs:comment "A relation that refers to an Organization situated through its Members and Materials."@en ;
-          rdfs:label "is situated on"@en .
-
 #### 
 # Notions of HOME saved for later
 ####

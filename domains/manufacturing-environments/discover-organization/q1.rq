@@ -3,6 +3,9 @@ prefix hmas: <https://purl.org/hmas/>
 
 ask {
     bind (ex:factoryOrganization as ?org)
-    
-    ?org a hmas:Organization .
+
+    ex:factoryBuilding a hmas:Workspace ;
+                       hmas:contains ?x .
+    ?org a hmas:Organization ;
+         hmas:hasResourceProfile ?x .
 }
