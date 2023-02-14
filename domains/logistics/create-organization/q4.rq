@@ -13,7 +13,5 @@ ask {
 
 # QUESTION
 # How can we guarantee that both Organization Models exist?
-# This representation could be simplified to
-#        filter (?orgModel in (ex:Logistics,ex:Manufacturing))
-# But it still does not represent what we want to capture with the
-# competency question.
+# The current SPRAQL Query does not represent what we want to capture
+# with this competency question.
