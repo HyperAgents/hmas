@@ -259,15 +259,6 @@ _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyda
           rdfs:comment "A relation that links a resource to its profile."@en ;
           rdfs:label "has for profile"@en, "a pour profil"@fr .
 
-:exposesSignifier a owl:ObjectProperty ;
-          rdfs:isDefinedBy :core ;
-          rdfs:domain :ResourceProfile ;
-          rdfs:range :Signifier ;
-          rdfs:comment "A relation between a resource profile and a signifier it exposes."@en ; 
-          rdfs:label "exposes signifier"@en, "expose le signifiant"@fr ;
-          dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
-          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> .
-
 :hosts a owl:ObjectProperty, owl:AsymmetricProperty ;
           rdfs:isDefinedBy :core ;
           rdfs:domain :HypermediaMASPlatform ;
@@ -293,6 +284,16 @@ _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyda
             rdfs:comment "A relation between a signifier and a resource profile it is exposed in."@en ;
             rdfs:domain :Signifier ;
             rdfs:range :ResourceProfile .
+
+:exposesSignifier a owl:ObjectProperty ;
+          rdfs:isDefinedBy :core ;
+          rdfs:domain :ResourceProfile ;
+          rdfs:range :Signifier ;
+          owl:inverseOf :isExposedIn ;
+          rdfs:comment "A relation between a resource profile and a signifier it exposes."@en ; 
+          rdfs:label "exposes signifier"@en, "expose le signifiant"@fr ;
+          dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
+          rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> .
 
 #### 
 # Notions of HOME saved for later
