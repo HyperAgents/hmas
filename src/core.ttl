@@ -127,9 +127,11 @@ skos:note a owl:AnnotationProperty .
     dct:references _:norman2013 .
 
 _:chemeroTurvey2007 dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;
+    dct:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;
     rdfs:label "Chemero and Turvey, 2007"@en .
 
 _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;
+    dct:identifier <https://mitpress.mit.edu/9780262640374/> ;
     rdfs:label "Norman, 2013"@en .
 
 #################################################################
