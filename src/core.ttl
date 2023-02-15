@@ -279,7 +279,7 @@ _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyda
 
 :isExposedIn a owl:ObjectProperty ;
             rdfs:isDefinedBy :core ;
-            rdfs:label "is exposed in"@en ;
+            rdfs:label "is exposed in"@en, "est exposé dans"@fr ;
             owl:inverseOf :exposesSignifier ;
             rdfs:comment "A relation between a signifier and a resource profile it is exposed in."@en ;
             rdfs:domain :Signifier ;
