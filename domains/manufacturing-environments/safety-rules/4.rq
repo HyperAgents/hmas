@@ -4,5 +4,8 @@ SELECT ?norm
 WHERE {
   ?organization :enforcesNorm ?norm .
   ?norm :hasNormativeContext ?context .
-  FILTER(?context = :myContext)
+  ?workspace :isPossiblyDescribedBy ?worldWithNorms .
+  ?worldWithNorms :hasDeonticSpecification ?norm .
+  ?workspace :isPossiblyDescribedBy ?context .
+  FILTER(?workspace = :myWorkspace && ?organization = :myOrganization)
 }
