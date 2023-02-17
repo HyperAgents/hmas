@@ -113,8 +113,6 @@
 :hasNormativeContext rdf:type owl:ObjectProperty ;
   rdfs:domain :RegulativeNorm ;
   rdfs:range :NormativeContext ;
-  #rdfs:range rdfs:Container ;
-  rdfs:range :NormativeContext ;
   rdfs:comment "A specification which defines when a norm is applicable. "@en ;
   rdfs:label "has normative context"@en .
 
