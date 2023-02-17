@@ -20,7 +20,7 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 ## Glossary
 
 * [**_Regulative Norm_**](https://purl.org/hmas/regulation#Norm): a specification of the standard behaviors one expects from others in an organization. 
-* [**_Possible World_**](https://purl.org/hmas/regulation#PossibleWorld): a possible world is a ressource that describes a state of affair of the world.
+* [**_Possible World_**](https://purl.org/hmas/regulation#PossibleWorld): a possible world is a ressource that describes a state of affair of a world.
 * [**_Normative Context_**](https://purl.org/hmas/regulation#NormativeContext):  a specification is a possible world which defines when a norm is applicable. 
 * [**_Normative Target_**](https://purl.org/hmas/regulation#NormativeTarget) :  an agent or a group of agents which have social roles concerned by a regulative norm. 
 * [**_Modality_**](https://purl.org/hmas/regulation#NormativeModality) :  a particular mode in which a possible world should be interpreted e.g. as an obligation, prohibition, or permission.
