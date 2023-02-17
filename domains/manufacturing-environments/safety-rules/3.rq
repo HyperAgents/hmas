@@ -2,5 +2,12 @@ PREFIX : <#>
 
 SELECT ?norm
 WHERE {
-  ?norm :hasRespectStatus false .
+  ?organization :enforcesNorm ?norm .
+  ?norm :hasNormativeContext ?context .
+  ?norm :prohibits ?prohibition .
+  ?workspace :isPossiblyDescribedBy ?worldWithNorms .
+  ?worldWithNorms :hasDeonticSpecification ?norm .
+  ?workspace :isPossiblyDescribedBy ?context .
+  ?workspace :isPossiblyDescribedBy ?prohibition .
+  FILTER(?workspace = :myWorkspace && ?organization = :myOrganization)
 }
