@@ -14,31 +14,19 @@
 
 
 
-:allTheDoorShouldBeClosedRule a hmas:Norm .
+:safetyRule a :RegulativeNorm .
 
-:allTheDoorShouldBeClosedRule hmas:hasNormativeRequirement
-[ a rdf:Bag ;
-  rdf:li [ a sp:Ask ; sp:where ([ sp:subject :i3sLabWorkspace ; sp:predicate :contains ; sp:object :smoke ] ) ].
-] .
+:possibleWorldWithNorms a :PossibleWorld .
+:possibleWorldWithNorms :hasDeonticSpecification :safetyRule .
 
-:allTheDoorShouldBeClosedRule hmas:obliges 
-[ a rdf:Bag ;
-  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?door ; sp:predicate :isStatedAs ; sp:object :closed ] ) ]  ;
-  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?door ; sp:predicate :a ; sp:object :Door ] ) ] .
-] .
+:worldWithFire a :PossibleWorld .
+:worldWheredoorsAreClosed a :Obligation .
 
-:allTheDoorShouldBeClosedRule hmas:permits 
-[ a rdf:Bag ;
-  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?agent ; sp:predicate :leavesThrough ; sp:object ?exit-door  ] ) ] ;
-  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?exit-door  ; sp:predicate :a ; sp:object :EmergencyDoor ] ) ] .
-] .
+:safetyRule :hasNormativeContext :worldWithFire .
+:safetyRule :obliges :worldWheredoorsAreClosed .
 
-:allTheDoorShouldBeClosedRule hmas:forbids 
-[ a rdf:Bag ;
-  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?agent ; sp:predicate :takes ; sp:object ?elevator ] ) ] ; 
-  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?elevator ; sp:predicate :a ; sp:object :Elevator ] ) ] ;  
-  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?agent ; sp:predicate :a ; sp:object hmas:Agent ] ) ] .
-] .
+
+
 
 
 # Real world assumptions : 
@@ -51,22 +39,25 @@
 :i3sLabWorkspace hmas:contains :i3sLab .
 :i3sLabWorkspace hmas:contains  :smoke .
 
-:i3sLabSpecification :definesNorm :allTheDoorShouldBeClosedRule .
-:i3sLab :enforcesNorm :allTheDoorShouldBeClosedRule .
+:i3sLabWorkspace :isPossiblyDescribedBy :possibleWorldWithNorms .
+:i3sLabWorkspace :isPossiblyDescribedBy :worldWithFire .
+
+:i3sLabSpecification :definesNorm :safetyRule .
+:i3sLab :enforcesNorm :safetyRule .
 
 :safetyGuard a hmas:Agent .
 :i3sLabWorkspace hmas:contains :safetyGuard .
 
 # It does not exist but..
-:i3sLabSpecification hreg:definesRole :Guard .
+:safetyGuardRole :a hreg:SocialRole .
+# :safetyGuardRole a hreg:AuthorityRole .
+:i3sLabSpecification hreg:definesRole :safetyGuardRole .
 
 # This, is currently allowed : 
-:i3sLab hreg:providesRoles :Guard .
-:Guard a hreg:AuthorityRole .
+:i3sLab hreg:providesRoles :safetyGuardRole .
+
 
 # It does not exist but.. to know that currently the SafetyGuard :hasRole :Guard
-:safetyGuard ?:hasRole :Guard .
+:safetyGuard hreg:hasRole :safetyGuardRole .
 
 
-:mydoor a :Door .
-:mydoor :isStated :opened .
