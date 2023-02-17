@@ -2,10 +2,8 @@ prefix ex: <http://example.org/>
 prefix hmas: <https://purl.org/hmas/>
 
 ask {
-    bind (ex:ur5 as ?ag1)
-    bind (ex:phantomX as ?ag2)
-    
-    ?ag1 hmas:isMaterialOf ?org .
-    ?ag2 hmas:isMaterialOf ?org .
+    ex:ur5 hmas:isMaterialOf ?org .
+    ex:phantomX hmas:isMaterialOf ?org .
+
     ?org a hmas:Organization .
 }

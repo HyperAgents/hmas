@@ -20,22 +20,22 @@
 :Organization a owl:Class ;
     rdfs:isDefinedBy :core ;
     rdfs:comment "An Organization is an entity situated on Agents and Artifacts, and regulated by a regulation system."@en ;
-    rdfs:label "Organization"@en .
+    rdfs:label "organization"@en, "organisation"@en-GB, "organization"@en-us, "organisation"@fr .
 
 #################################################################
 #    Properties
 #################################################################
 
 :isMemberOf a owl:ObjectProperty ;
-    schema:domainIncludes :Agent ;
-    schema:rangeIncludes :Organization ;
     rdfs:isDefinedBy :core ;
-    rdfs:comment "A relation that refers to an Agent that belongs to an Organization."@en ;
+    rdfs:domain :Agent ;
+    rdfs:range :Organization ;
+    rdfs:isDefinedBy :core ;    rdfs:comment "A relation that refers to an Agent that belongs to an Organization."@en ;
     rdfs:label "is member of"@en .
       
 :isMaterialOf a owl:ObjectProperty ;
-    schema:domainIncludes :Artifact ;
-    schema:rangeIncludes :Organization ;
     rdfs:isDefinedBy :core ;
-    rdfs:comment "A relation that refers to an Artifact that belongs to an Organization."@en ;
+    rdfs:domain :Artifact ;
+    rdfs:range :Organization ;
+    rdfs:isDefinedBy :core ;    rdfs:comment "A relation that refers to an Artifact that belongs to an Organization."@en ;
     rdfs:label "is material of"@en .

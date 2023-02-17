@@ -2,10 +2,9 @@ prefix ex: <http://example.org/>
 prefix hmas: <https://purl.org/hmas/>
 
 ask {
-    bind (ex:factoryOrganization as ?org)
-
+    ex:factoryOrganization a hmas:Organization ;
+                           hmas:hasResourceProfile ?x .
+  
     ex:factoryBuilding a hmas:Workspace ;
                        hmas:contains ?x .
-    ?org a hmas:Organization ;
-         hmas:hasResourceProfile ?x .
 }
