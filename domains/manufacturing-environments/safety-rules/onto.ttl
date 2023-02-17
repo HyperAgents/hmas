@@ -78,6 +78,12 @@
 #                rdfs:label "has normative requirement"@en .
 
 
+:isPossiblyDescribedBy rdf:type owl:ObjectProperty ;
+                rdfs:domain :Workspace ;
+                rdfs:range :PossibleWorld ;
+                rdfs:comment "A workspace state is associated with a set of possible worlds. "@en ;
+                rdfs:label "has a possible world"@en .
+
 :hasDeonticSpecification rdf:type owl:ObjectProperty ;
                 rdfs:domain :PossibleWorld ;
                 rdfs:range :RegulativeNorm ;
@@ -102,6 +108,11 @@
                 rdfs:comment "An obligation is associated with a norm and describes a state of affairs that must be maintained when a norm is applied."@en ;
                 rdfs:label "obliges"@en .
 
+:hasDeonticSpecification rdf:type owl:ObjectProperty ;
+                rdfs:domain :PossibleWorld ;
+                rdfs:range :RegulativeNorm ;
+                rdfs:comment "A possible world may have some deontic specifications. "@en ;
+                rdfs:label "has deontic specification"@en .
 
 
 #:hasException rdf:type owl:ObjectProperty ;
@@ -117,11 +128,11 @@
   rdfs:label "has normative context"@en .
 
 
-:hasRespectStatus rdf:type owl:ObjectProperty ;
-  rdfs:domain :RegulativeNorm ;
-  rdfs:range xsd:boolean ;
-  rdfs:comment "Indicates whether a norm has been respected or not"@en ;
-  rdfs:label "has respect status"@en .
+#:hasRespectStatus rdf:type owl:ObjectProperty ;
+#  rdfs:domain :RegulativeNorm ;
+#  rdfs:range xsd:boolean ;
+#  rdfs:comment "Indicates whether a norm has been respected or not"@en ;
+#  rdfs:label "has respect status"@en .
 
 
 
