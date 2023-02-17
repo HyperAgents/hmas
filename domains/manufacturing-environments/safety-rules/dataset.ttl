@@ -20,10 +20,10 @@
 :possibleWorldWithNorms :hasDeonticSpecification :safetyRule .
 
 :worldWithFire a :PossibleWorld .
-:worldWheredoorsAreClosed a :Obligation .
+:worldWhereDoorsAreClosed a :Obligation .
 
 :safetyRule :hasNormativeContext :worldWithFire .
-:safetyRule :obliges :worldWheredoorsAreClosed .
+:safetyRule :obliges :worldWhereDoorsAreClosed .
 
 
 
