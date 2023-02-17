@@ -43,27 +43,27 @@
   rdfs:comment "A possible world that describes a prohibition."@en ;
   rdfs:label "Prohibition"@en .
 
-#:AuthorityRole rdf:subClassOf hreg:SocialRole ;
-#           rdfs:comment "The authority who has a power to apply a norm and which is in charge of applying the norm. It may be an :Agent or an :Organization. "@en ;
-#           rdfs:label "Authority"@en .
+:AuthorityRole rdf:subClassOf hreg:SocialRole ;
+           rdfs:comment "The authority who has a power to apply a norm and which is in charge of applying the norm. It may be an :Agent or an :Organization. "@en ;
+           rdfs:label "Authority"@en .
 
-#:enforcesNorm rdf:type owl:ObjectProperty ;
-#		rdfs:domain hreg:Organization ;
-#                rdfs:range :RegulativeNorm ;
-#                rdfs:comment "An organization enforces a norm. "@en ;
-#                rdfs:label "enforces the norm"@en .        
+:enforcesNorm rdf:type owl:ObjectProperty ;
+		rdfs:domain hreg:Organization ;
+                rdfs:range :RegulativeNorm ;
+                rdfs:comment "An organization enforces a norm. "@en ;
+                rdfs:label "enforces the norm"@en .        
 
-#:definesNorm rdf:type owl:ObjectProperty ;
-#		rdfs:domain hreg:OrganizationSpecification ;
-#                rdfs:range :RegulativeNorm ;
-#                rdfs:comment "An organization Specification defines a norm. "@en ;
-#                rdfs:label "defines the norm"@en .        
+:definesNorm rdf:type owl:ObjectProperty ;
+		rdfs:domain hreg:OrganizationSpecification ;
+                rdfs:range :RegulativeNorm ;
+                rdfs:comment "An organization Specification defines a norm. "@en ;
+                rdfs:label "defines the norm"@en .        
 
-#:hasNormativeTarget rdf:type owl:ObjectProperty ;
-#		rdfs:domain :RegulativeNorm ;
-#		rdfs:range :Role ;
-#		rdfs:comment "An agent or a group of agents concerned by a norm." ;
-#		rdfs:label "has normative target".
+:hasNormativeTarget rdf:type owl:ObjectProperty ;
+		rdfs:domain :RegulativeNorm ;
+		rdfs:range :Role ;
+		rdfs:comment "An agent or a group of agents concerned by a norm." ;
+		rdfs:label "has normative target".
 
 #:hasNormativeObject rdf:type owl:ObjectProperty ;
 #		rdfs:domain :RegulativeNorm ;
@@ -71,11 +71,11 @@
 #		rdfs:comment "A specification which defines the expected behavior by describing explicitly the expected behavior or implictly by describing the state of affairs.";
 #		rdfs:label "has normative object".
 	  
-#:hasPowerOn rdf:type owl:ObjectProperty ;
-#		rdfs:domain :Norm ;
-#                rdfs:range :AuthorityRole;
-#                rdfs:comment "It defines who is the authority in charge of applying the norm. "@en ;
-#                rdfs:label "has normative requirement"@en .
+:beInChargeOfEnforcingTheRegulativeNorm rdf:type owl:ObjectProperty ;
+		rdfs:domain :RegulativeNorm ;
+                rdfs:range :AuthorityRole;
+                rdfs:comment "It defines who is the authority in charge of applying the norm. "@en ;
+                rdfs:label "be in charge of enforcing the regulative norm"@en .
 
 
 :isPossiblyDescribedBy rdf:type owl:ObjectProperty ;
