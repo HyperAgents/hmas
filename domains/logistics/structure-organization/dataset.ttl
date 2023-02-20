@@ -9,7 +9,7 @@
 
 ## Workspace
 ex:LogisticsWS a hmas:Workspace ;
-    hmas:contains ex:John, ex:Frank, ex:Gabriel, ex:Igor, ex:Jane, ex:WarehouseLyon, ex:WarehouseStEtienne .
+    hmas:contains ex:John, ex:Frank, ex:Gabriel, ex:Igor, ex:Jane, ex:WarehouseLyon, ex:WarehouseStEtienne, ex:FL_LogisticsProfile .
 
 ## Agents
 ex:John a hmas:Agent ;
@@ -214,11 +214,11 @@ ex:Logistics a sh:NodeShape ;
 ## Organizational Values Specifications
 ex:Commitment rdfs:subClassOf hmas:OrganizationalValue ;
     rdfs:comment "Do everything you can to keep the organization promisses to the customers."@en ;
-    rdfs:label "Commitment"@en .
+    rdfs:label "commitment"@en, "engagement"@fr .
 
 ex:IntegrityRespect rdfs:subClassOf hmas:OrganizationalValue ;
     rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
-    rdfs:label "Integrity and Respect"@en .
+    rdfs:label "integrity and respect"@en, "intégrité et respect"@fr .
 
 ## Role Specifications
 ex:HumanResourcesOfficer a sh:NodeShape ;
@@ -407,8 +407,11 @@ ex:FL_DeliverGoods a ex:DeliverGoods .
 ex:FL_PickingArea a ex:PickingArea .
 ex:FL_ReceivingArea a ex:ReceivingArea .
 
-## Organizations      
+## Organizations
+ex:FL_LogisticsProfile a hmas:ResourceProfile .
+
 ex:FL_Logistics a ex:Logistics ;
+    hmas:hasResourceProfile ex:FL_LogisticsProfile ;
     hmas:hasOrganizationalValue ex:FL_Commitment, ex:FL_IntegrityRespect ;
     hmas:providesRole ex:FL_HumanResourcesOfficer, ex:FL_FinanceOfficer, ex:FL_AccountManager, ex:FL_Planner, ex:FL_Carrier, ex:FL_Collector, ex:FL_Deliverer ;
     hmas:isStructuredBy ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment, ex:FL_HumanResourcesDepartment, ex:FL_FinanceDeparment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment ;
