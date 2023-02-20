@@ -11,10 +11,9 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 | ID | Question in Natural Language | Example                                                                                                                                   |
 |----|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | q1 | What are the set of norms ?           |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
-| q2 | Who are the agents under the regulation of a norm ?             | Example2                                                  |
-| q3 | What are the norms that have not been respected ?        | Example3 |
-| q4 | What norms are activated in an organization w.r.t. a context ?                  | Example4                  |
-| q5 | What norms are activated in an organization w.r.t. a context ?                  | Example4                  |
+| q2 | Who are the agents concerned by the regulative norm ?             | `ex:I3SStaff` a `hreg:SocialRole`                                                  |
+| q3 | What are the norms that have not been respected ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q4 | What norms are activated in an organization w.r.t. a context ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
 
 
 
@@ -31,12 +30,16 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 
 ## Recommendations
 
-- An obligatory behaviour can be described explictly with a possible world where the obligatory behaviour occurred e.g. "close all the doors" is an explicite behaviour which is verified in this possible world typed as an obligation.
-- An obligatory behaviour can be also described implictly by defining a set possible worlds that should be reached e.g. "all the doors must be closed" is a possible world typed as an obligation and describes all the behaviours that should bring it about this state of affairs.
-- A prohibited behaviour can be described explictly with a possible world where the prohibited behaviour occurred e.g. "open all the doors" is an explicite behaviour which is verified in this possible world typed as a prohibition.
-- A prohibited behaviour can be also described implictly by defining a set possible worlds that should be avoided e.g. "all the doors must be opened" is a possible world typed as a prohibition and describes all the behaviours that should prevent from reaching this state of affairs.
+* An obligatory behaviour can be described explictly with a possible world where the obligatory behaviour occurred e.g. "close all the doors" is an explicite behaviour which is verified in this possible world typed as an obligation.
+* An obligatory behaviour can be also described implictly by defining a set possible worlds that should be reached e.g. "all the doors must be closed" is a possible world typed as an obligation and describes all the behaviours that should bring it about this state of affairs.
+* A prohibited behaviour can be described explictly with a possible world where the prohibited behaviour occurred e.g. "open all the doors" is an explicite behaviour which is verified in this possible world typed as a prohibition.
+* A prohibited behaviour can be also described implictly by defining a set possible worlds that should be avoided e.g. "all the doors must be opened" is a possible world typed as a prohibition and describes all the behaviours that should prevent from reaching this state of affairs.
 * [**_Modality_**](https://purl.org/hmas/regulation#NormativeModality) :  a modality would be a particular mode in which a possible world should be interpreted e.g. as an obligation, prohibition, or permission. It is not introduced in the glossary since there is no reason to introduce it explicitly.
+* A possible world can be any ressource, a [named graph](https://en.wikipedia.org/wiki/Named_graph) or a [quoted graph](https://w3c.github.io/rdf-star/cg-spec/editors_draft.html)
 
+## Questions
+
+* Should we call "possible world" or "possible hyperworld" ? 
 
 ## Related links
 
