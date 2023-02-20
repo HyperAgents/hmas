@@ -50,11 +50,17 @@
 
 # It does not exist but..
 :safetyGuardRole :a hreg:SocialRole .
+:I3SStaff :a hreg:SocialRole .
 # :safetyGuardRole a hreg:AuthorityRole .
 :i3sLabSpecification hreg:definesRole :safetyGuardRole .
+:i3sLabSpecification hreg:definesRole :I3SStaff .
 
 # This, is currently allowed : 
 :i3sLab hreg:providesRoles :safetyGuardRole .
+
+:i3sLab hreg:providesRoles :I3SStaff .
+
+:safetyRule :hasNormativeTarget :I3SStaff .
 
 
 # It does not exist but.. to know that currently the SafetyGuard :hasRole :Guard
