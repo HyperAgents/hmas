@@ -4,16 +4,13 @@ prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
 ask {
-    bind (ex:HSG_Factory as ?hsgOrg)
-    bind (ex:ITM_Factory as ?itmOrg)
-    
     ex:SL_Logistics a ?slOrgModel .
     ?slOrgModel a sh:NodeShape ;
                 rdfs:subClassOf hmas:Organization .
-    ?hsgOrg a ?hsgOrgModel .
+    ex:HSG_Factory a ?hsgOrgModel .
     ?hsgOrgModel a sh:NodeShape ;
                  rdfs:subClassOf hmas:Organization .
-    ?itmOrg a ?itmOrgModel .
+    ex:ITM_Factory a ?itmOrgModel .
     ?itmOrgModel a sh:NodeShape ;
                  rdfs:subClassOf hmas:Organization .
 

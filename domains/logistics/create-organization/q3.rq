@@ -4,11 +4,12 @@ prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
 ask {
-    bind (ex:GL_Logistics as ?glOrg)
-
-    ex:SL_Logistics a ?orgModel .
     ?orgModel a sh:NodeShape ;
               rdfs:subClassOf hmas:Organization .
-    ?glOrg a ?orgModel .
-    ?workspace hmas:contains ex:SL_Logistics, ?glOrg .
+    ex:SL_Logistics a ?orgModel ;
+                    hmas:hasResourceProfile ?slOrgProfile.
+    ex:GL_Logistics a ?orgModel ;
+                    hmas:hasResourceProfile ?glOrgProfile .
+    ?workspace hmas:contains ?slOrgProfile, ?glOrgProfile .
+  
 }

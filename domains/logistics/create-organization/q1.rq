@@ -4,9 +4,7 @@ prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
 ask {
-    bind (ex:Logistics as ?orgModel)
-    
-    ex:SL_Logistics a ?orgModel .
+    ex:SL_Logistics a ex:Logistics .
     ?orgModel a sh:NodeShape .
     ?orgModel rdfs:subClassOf hmas:Organization .
 }
