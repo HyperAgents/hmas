@@ -14,6 +14,7 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 | q2 | Who are the agents under the regulation of a norm ?             | Example2                                                  |
 | q3 | What are the norms that have not been respected ?        | Example3 |
 | q4 | What norms are activated in an organization w.r.t. a context ?                  | Example4                  |
+| q5 | What norms are activated in an organization w.r.t. a context ?                  | Example4                  |
 
 
 
