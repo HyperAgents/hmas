@@ -1,6 +1,0 @@
-PREFIX : <#>
-
-SELECT ?agent
-WHERE {
-  ?norm :hasNormativeTarget ?agent .
-}
