@@ -46,7 +46,7 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 * A prohibited behaviour can be described explictly with a possible world where the prohibited behaviour occurred e.g. "open all the doors" is an explicite behaviour which is verified in this possible world typed as a prohibition.
 * A prohibited behaviour can be also described implictly by defining a set possible worlds that should be avoided e.g. "all the doors must be opened" is a possible world typed as a prohibition and describes all the behaviours that should prevent from reaching this state of affairs.
 * [**_Modality_**](https://purl.org/hmas/regulation#NormativeModality) :  a modality would be a particular mode in which a possible world should be interpreted e.g. as an obligation, prohibition, or permission. It is not introduced in the glossary since there is no reason to introduce it explicitly.
-* A possible world can be any ressource, a [named graph](https://en.wikipedia.org/wiki/Named_graph) or a [quoted graph](https://w3c.github.io/rdf-star/cg-spec/editors_draft.html)
+* A possible world can be any ressource, a [named graph](https://en.wikipedia.org/wiki/Named_graph) or a [quoted graph](https://w3c.github.io/rdf-star/cg-spec/editors_draft.html). A possible world are reified triplets, it may also be described by [singleton property](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4350149/) or the standard [RDF reification](https://www.w3.org/DesignIssues/Reify.html). This choice of reification will change the given Competency Questions written in SPARQL. We choosed the standard RDF reification in this motivating scenario. For more details, we refer the reader to the issue [here](https://github.com/HyperAgents/ns.hyperagents.org/issues/141).
 
 ## Questions
 
