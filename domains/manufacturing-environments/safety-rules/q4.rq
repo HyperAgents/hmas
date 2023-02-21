@@ -1,0 +1,6 @@
+PREFIX : <#>
+
+SELECT ?role
+WHERE {
+  ?norm :hasNormativeTarget ?role .
+}
