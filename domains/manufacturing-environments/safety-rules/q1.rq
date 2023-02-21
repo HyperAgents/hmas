@@ -1,8 +1,9 @@
 PREFIX : <#>
+prefix ex: <http://example.org/>
 
-SELECT ?norm
-WHERE {
-  ?norm rdf:type :RegulativeNorm .
+ask {
+    bind (ex:safetyRule as ?i)
+    ?i rdf:type :RegulativeNorm .
 }
 
 
