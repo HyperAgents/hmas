@@ -9,8 +9,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 
+@prefix ex: <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
 <#> rdf:type owl:Ontology ;
-                                       owl:imports <https://ci.mines-stetienne.fr/hmas#> .
+    owl:imports <https://ci.mines-stetienne.fr/hmas#> .
 
 
 
