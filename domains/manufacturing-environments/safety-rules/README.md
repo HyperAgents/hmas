@@ -11,7 +11,8 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 | ID | Question in Natural Language | Example                                                                                                                                   |
 |----|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | q1 | What are the set of norms ?           |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
-| q2 (New) | What are the set of norms w.r.t. an organization  |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
+| q2 (New) | What are the set of norms that are defined in an organization specification ?  |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
+| q2 (New) | What are the set of norms that are enforced in an organization ?  |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
 | q2 (Old) -> q3 | Who are the roles concerned by the regulative norm ?             | `ex:I3SStaff` a `hreg:SocialRole`                                                  |
 | q3 (Old) -> q4 | What are the norms that have not still been respected ?        | `ex:safetyRule` a `:RegulativeNorm`  |
 | q5 (New) | What are the norms that have been violated ?        | `ex:safetyRule` a `:RegulativeNorm`  |
@@ -22,7 +23,8 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 | q10 (New) | What are the states of affairs that ought not to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
 | q11 (New) | What are the states of affairs that ought to be when a norm is applicable?        | `ex:safetyRule` a `:RegulativeNorm`  |
 | q4 (Old) -> q12 | What norms are activated in an organization w.r.t. a context ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
-
+| q13 (old) | Who are in charge of enforcing a regulative norm ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
+| q14 (old) | Who are the set of possible worlds that describe the state of affairs of a workspace ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
 
 
 ## Glossary
