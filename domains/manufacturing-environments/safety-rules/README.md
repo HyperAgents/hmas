@@ -20,14 +20,14 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 ## Glossary
 
 * [**_Regulative Norm_**](https://purl.org/hmas/regulation#Norm): a specification of the standard behaviors one expects from others in an organization. 
-* [**_Possible World_**](https://purl.org/hmas/regulation#PossibleWorld): a possible world is a ressource that describes a state of affair of a world.
+* [**_Possible World_**](https://purl.org/hmas/regulation#PossibleWorld): a possible world is a ressource that describes a state of affairs of a world.
 * [**_Normative Context_**](https://purl.org/hmas/regulation#NormativeContext):  a normative context is a possible world which describes a state of affairs when a norm is applicable. (At least one normative context should be verified.)
-* [**_Normative Target_**](https://purl.org/hmas/regulation#NormativeTarget) :  an agent or a group of agents which have social roles concerned by a regulative norm. 
+* [**_Normative Target_**](https://purl.org/hmas/regulation#NormativeTarget) :  an agent or a group of agents which have social roles. These social roles are concerned by the regulative norm. 
 * [**_Deontic Specification_**](https://purl.org/hmas/regulation#NormativeModality) :  a deontic specification specifies from a possible world, what are the regulative norms that should be considered.
-* [**_Obligation_**](https://purl.org/hmas/regulation#Obligation):  a normative modality associated with a norm  that specifies a standard of behavior that must be achieved when a norm is activated. 
-* [**_Prohibition_**](https://purl.org/hmas/regulation#Prohibition):  a normative modality associated with a norm  that specifies a standard of behavior that shouldn't be verified when a norm is activated.
-* [**_Permission_**](https://purl.org/hmas/regulation#Permission):  a normative modality associated with a norm  that specifies a standard of behavior that is explicitly allowed when a norm is activated.
-
+* [**_Obligation_**](https://purl.org/hmas/regulation#Obligation):  an obligation is a possible world which describes a state of affairs of what ought to be. It is associated with a norm and can specify a standard of behavior that must be achieved when a norm is activated. 
+* [**_Prohibition_**](https://purl.org/hmas/regulation#Prohibition): a prohibition is a possible world which describes a state of affairs of what ought not to be. It is associated with a norm and can specify a standard of behavior that should never be achieved when a norm is activated. 
+* [**_Permission_**](https://purl.org/hmas/regulation#Permission):  a prohibition is a possible world which describes a state of affairs of what is allowed to be. It is associated with a norm and can specify a standard of behavior that can be achieved when a norm is activated.  
+* 
 ## Recommendations
 
 * An obligatory behaviour can be described explictly with a possible world where the obligatory behaviour occurred e.g. "close all the doors" is an explicite behaviour which is verified in this possible world typed as an obligation.
