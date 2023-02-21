@@ -11,20 +11,20 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 | ID | Question in Natural Language | Example                                                                                                                                   |
 |----|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | q1 | What are the set of norms ?           |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
-| q2 (New) | What are the set of norms that are defined in an organization specification ?  |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
-| q2 (New) | What are the set of norms that are enforced in an organization ?  |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
-| q2 (Old) -> q3 | Who are the roles concerned by the regulative norm ?             | `ex:I3SStaff` a `hreg:SocialRole`                                                  |
-| q3 (Old) -> q4 | What are the norms that have not still been respected ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q5 (New) | What are the norms that have been violated ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q6 (New) | What are the behaviours that are explicitely allowed ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q7 (New) | What are the behaviours that are not allowed (or <=> prohibited) ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q8 (New) | What are the behaviours that are obliged ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q9 (New) | What are the states of affairs that are allowed to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q10 (New) | What are the states of affairs that ought not to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q11 (New) | What are the states of affairs that ought to be when a norm is applicable?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q4 (Old) -> q12 | What norms are activated in an organization w.r.t. a context ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
-| q13 (old) | Who are in charge of enforcing a regulative norm ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
-| q14 (old) | Who are the set of possible worlds that describe the state of affairs of a workspace ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
+| q2 | What are the set of norms that are defined in an organization specification ?  |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
+| q3  | What are the set of norms that are enforced in an organization ?  |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
+| q4 | Who are the roles concerned by the regulative norm ?             | `ex:I3SStaff` a `hreg:SocialRole`                                                  |
+| q5 | What are the norms that have not still been respected ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q6  | What are the norms that have been violated ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q7  | What are the behaviours that are explicitely allowed ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q8  | What are the behaviours that are not allowed (or <=> prohibited) ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q9 | What are the behaviours that are obliged ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q10 | What are the states of affairs that are allowed to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q11  | What are the states of affairs that ought not to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q12  | What are the states of affairs that ought to be when a norm is applicable?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q13 | What norms are activated in an organization w.r.t. a context ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
+| q14 | Who are in charge of enforcing a regulative norm ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
+| q15 | Who are the set of possible worlds that describe the state of affairs of a workspace ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
 
 
 ## Glossary
@@ -46,7 +46,7 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 * A prohibited behaviour can be described explictly with a possible world where the prohibited behaviour occurred e.g. "open all the doors" is an explicite behaviour which is verified in this possible world typed as a prohibition.
 * A prohibited behaviour can be also described implictly by defining a set possible worlds that should be avoided e.g. "all the doors must be opened" is a possible world typed as a prohibition and describes all the behaviours that should prevent from reaching this state of affairs.
 * [**_Modality_**](https://purl.org/hmas/regulation#NormativeModality) :  a modality would be a particular mode in which a possible world should be interpreted e.g. as an obligation, prohibition, or permission. It is not introduced in the glossary since there is no reason to introduce it explicitly.
-* A possible world can be any ressource, a [named graph](https://en.wikipedia.org/wiki/Named_graph) or a [quoted graph](https://w3c.github.io/rdf-star/cg-spec/editors_draft.html). A possible world are reified triplets, it may also be described by [singleton property](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4350149/) or the standard [RDF reification](https://www.w3.org/DesignIssues/Reify.html). This choice of reification will change the given Competency Questions written in SPARQL. We choosed the standard RDF reification in this motivating scenario. For more details, we refer the reader to the issue [here](https://github.com/HyperAgents/ns.hyperagents.org/issues/141).
+* A possible world can be any ressource, a [named graph](https://en.wikipedia.org/wiki/Named_graph) or a [quoted graph](https://w3c.github.io/rdf-star/cg-spec/editors_draft.html). A possible world are reified triplets, it may also be described by [singleton property](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4350149/) or the [standard RDF reification or using N3](https://www.w3.org/DesignIssues/Reify.html). This choice of reification will change the given Competency Questions written in SPARQL. We choosed the standard RDF reification in this motivating scenario. For more details, we refer the reader to the issue [here](https://github.com/HyperAgents/ns.hyperagents.org/issues/141).
 
 ## Questions
 
