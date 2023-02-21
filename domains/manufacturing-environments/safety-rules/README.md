@@ -11,9 +11,17 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 | ID | Question in Natural Language | Example                                                                                                                                   |
 |----|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | q1 | What are the set of norms ?           |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
-| q2 | Who are the agents concerned by the regulative norm ?             | `ex:I3SStaff` a `hreg:SocialRole`                                                  |
-| q3 | What are the norms that have not been respected ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q4 | What norms are activated in an organization w.r.t. a context ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
+| q2 (New) | What are the set of norms w.r.t. an organization  |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
+| q2 (Old) -> q3 | Who are the roles concerned by the regulative norm ?             | `ex:I3SStaff` a `hreg:SocialRole`                                                  |
+| q3 (Old) -> q4 | What are the norms that have not still been respected ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q5 (New) | What are the norms that have been violated ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q6 (New) | What are the behaviours that are explicitely allowed ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q7 (New) | What are the behaviours that are not allowed (or <=> prohibited) ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q8 (New) | What are the behaviours that are obliged ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q9 (New) | What are the states of affairs that are allowed to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q10 (New) | What are the states of affairs that ought not to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q11 (New) | What are the states of affairs that ought to be when a norm is applicable?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q4 (Old) -> q12 | What norms are activated in an organization w.r.t. a context ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
 
 
 
@@ -27,7 +35,8 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 * [**_Obligation_**](https://purl.org/hmas/regulation#Obligation):  an obligation is a possible world which describes a state of affairs of what ought to be. It is associated with a norm and can specify a standard of behavior that must be achieved when a norm is activated. 
 * [**_Prohibition_**](https://purl.org/hmas/regulation#Prohibition): a prohibition is a possible world which describes a state of affairs of what ought not to be. It is associated with a norm and can specify a standard of behavior that should never be achieved when a norm is activated. 
 * [**_Permission_**](https://purl.org/hmas/regulation#Permission):  a prohibition is a possible world which describes a state of affairs of what is allowed to be. It is associated with a norm and can specify a standard of behavior that can be achieved when a norm is activated.  
-* 
+
+
 ## Recommendations
 
 * An obligatory behaviour can be described explictly with a possible world where the obligatory behaviour occurred e.g. "close all the doors" is an explicite behaviour which is verified in this possible world typed as an obligation.
