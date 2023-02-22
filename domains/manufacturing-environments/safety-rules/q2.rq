@@ -5,8 +5,8 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix hmas: <https://purl.org/hmas/>
 
 ask {
-    bind (:i3sLabSpecification :definesNorm ?i)
-    ?i rdf:type :RegulativeNorm .
+    bind (ex:i3sLabSpecification hmas:definesNorm ?i)
+    ?i rdf:type hmas:RegulativeNorm .
 }
 
 
