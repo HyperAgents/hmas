@@ -13,7 +13,7 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 | q1 | What are the set of norms ?           |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
 | q2 | What are the set of norms that are defined in an organization specification ?  |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
 | q3  | What are the set of norms that are enforced in an organization ?  |  `ex:AllDoorsShouldBeClosed` a `:RegulativeNorm`                                                    |
-| q4 | Who are the roles concerned by the regulative norm ?             | `ex:I3SStaff` a `hreg:SocialRole`                                                  |
+| q4 | Which are the roles concerned by the regulative norm ?             | `ex:I3SStaff` a `hreg:SocialRole`                                                  |
 | q5 | What are the norms that have not still been respected ?        | `ex:safetyRule` a `:RegulativeNorm`  |
 | q6  | What are the norms that have been violated ?        | `ex:safetyRule` a `:RegulativeNorm`  |
 | q7  | What are the behaviours that are explicitely allowed ?        | `ex:safetyRule` a `:RegulativeNorm`  |
