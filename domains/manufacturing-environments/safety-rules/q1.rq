@@ -1,5 +1,10 @@
-PREFIX : <#>
+
 prefix ex: <http://example.org/>
+prefix ex: <http://example.org/>
+prefix : <> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
 
 ask {
     bind (:safetyRule as ?i)
