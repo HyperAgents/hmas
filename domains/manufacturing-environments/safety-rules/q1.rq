@@ -2,7 +2,7 @@ PREFIX : <#>
 prefix ex: <http://example.org/>
 
 ask {
-    bind (ex:safetyRule as ?i)
+    bind (:safetyRule as ?i)
     ?i rdf:type :RegulativeNorm .
 }
 
