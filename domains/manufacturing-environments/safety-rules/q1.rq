@@ -7,8 +7,8 @@ prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
 ask {
-    bind (:safetyRule as ?i)
-    ?i rdf:type :RegulativeNorm .
+    bind (ex:safetyRule as ?i)
+    ?i rdf:type hmas:RegulativeNorm .
 }
 
 
