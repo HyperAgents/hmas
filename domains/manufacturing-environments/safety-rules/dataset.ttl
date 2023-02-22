@@ -1,72 +1,61 @@
-@base <https://ci.mines-stetienne.fr/fna> .
-@prefix : <#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix hmas: <https://ci.mines-stetienne.fr/hmas> .
-@prefix hreg: <https://ci.mines-stetienne.fr/regulation> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-
 @prefix ex: <http://example.org/> .
+@prefix hmas: <https://purl.org/hmas/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
-<#> rdf:type owl:Ontology ;
-    owl:imports <https://ci.mines-stetienne.fr/hmas#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 
 
 
-:safetyRule a :RegulativeNorm .
+ex:safetyRule a hmas:RegulativeNorm .
 
-:possibleWorldWithNorms a :PossibleWorld .
-:possibleWorldWithNorms :hasDeonticSpecification :safetyRule .
+ex:possibleWorldWithNorms a :PossibleWorld .
+ex:possibleWorldWithNorms hmas:hasDeonticSpecification ex:safetyRule .
 
-:worldWithFire a :PossibleWorld .
-:worldWhereDoorsAreClosed a :Obligation .
+ex:worldWithFire a :PossibleWorld .
+ex:worldWhereDoorsAreClosed a :Obligation .
 
-:safetyRule :hasNormativeContext :worldWithFire .
-:safetyRule :obliges :worldWhereDoorsAreClosed .
+ex:safetyRule hmas:hasNormativeContext ex:worldWithFire .
+ex:safetyRule hmas:obliges ex:worldWhereDoorsAreClosed .
 
 
 
 
 
 # Real world assumptions : 
-:i3sLab :a  hreg:Organization .
-:i3sLabSpecification a  hreg:OrganizationSpecification .
+ex:i3sLab :a  hreg:Organization .
+ex:i3sLabSpecification a  hreg:OrganizationSpecification .
 
-:i3sLab hreg:enacts :i3sLabSpecification .
-:i3sLabSpecification hreg:defines :i3sLab .
+ex:i3sLab hmas:enacts ex:i3sLabSpecification .
+ex:i3sLabSpecification hmas:defines ex:exi3sLab .
 
-:i3sLabWorkspace hmas:contains :i3sLab .
-:i3sLabWorkspace hmas:contains  :smoke .
+ex:i3sLabWorkspace hmas:contains ex:i3sLab .
+ex:i3sLabWorkspace hmas:contains  ex:smoke .
 
-:i3sLabWorkspace :isPossiblyDescribedBy :possibleWorldWithNorms .
-:i3sLabWorkspace :isPossiblyDescribedBy :worldWithFire .
+ex:i3sLabWorkspace hmas:isPossiblyDescribedBy ex:possibleWorldWithNorms .
+ex:i3sLabWorkspace hmas:isPossiblyDescribedBy ex:worldWithFire .
 
-:i3sLabSpecification :definesNorm :safetyRule .
-:i3sLab :enforcesNorm :safetyRule .
+ex:i3sLabSpecification hmas:definesNorm ex:safetyRule .
+ex:i3sLab hmas:enforcesNorm ex:safetyRule .
 
-:safetyGuard a hmas:Agent .
-:i3sLabWorkspace hmas:contains :safetyGuard .
+ex:safetyGuard a hmas:Agent .
+ex:i3sLabWorkspace hmas:contains ex:safetyGuard .
 
 # It does not exist but..
-:safetyGuardRole :a hreg:SocialRole .
-:I3SStaff :a hreg:SocialRole .
-# :safetyGuardRole a hreg:AuthorityRole .
-:i3sLabSpecification hreg:definesRole :safetyGuardRole .
-:i3sLabSpecification hreg:definesRole :I3SStaff .
+ex:safetyGuardRole a hmas:SocialRole .
+:I3SStaff a hmas:SocialRole .
+
+ex:safetyGuardRole a hmas:AuthorityRole .
+ex:i3sLabSpecification hmas:definesRole ex:safetyGuardRole .
+ex:i3sLabSpecification hmas:definesRole ex:I3SStaff .
 
 # This, is currently allowed : 
-:i3sLab hreg:providesRoles :safetyGuardRole .
+ex:i3sLab hmas:providesRoles ex:safetyGuardRole .
 
-:i3sLab hreg:providesRoles :I3SStaff .
+ex:i3sLab hmas:providesRoles ex:I3SStaff .
 
-:safetyRule :hasNormativeTarget :I3SStaff .
+ex:safetyRule hmas:hasNormativeTarget ex:I3SStaff .
 
 
 # It does not exist but.. to know that currently the SafetyGuard :hasRole :Guard
-:safetyGuard hreg:hasRole :safetyGuardRole .
+ex:safetyGuard hmas:hasRole ex:safetyGuardRole .
 
 
