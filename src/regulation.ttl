@@ -98,16 +98,16 @@
 #################################################################
 
 
-:enforcesNorm rdf:type owl:ObjectProperty ;
+:enforcesRegulativeNorm rdf:type owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain hreg:Organization ;
+    rdfs:domain :Organization ;
     rdfs:range :RegulativeNorm ;
     rdfs:comment "An organization enforces a norm. "@en ;
     rdfs:label "enforces the norm"@en .
 
 :definesRegulativeNorm rdf:type owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain hreg:Organization ;
+    rdfs:domain :Organization ;
     rdfs:range :RegulativeNorm ;
     rdfs:comment "An organization Specification defines a norm. "@en ;
     rdfs:label "defines the norm"@en .
