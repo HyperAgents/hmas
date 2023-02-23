@@ -51,19 +51,19 @@
     rdfs:comment "The authority who has a power to apply a norm and which is in charge of applying the norm. It may be an :Agent or an :Organization. "@en ;
     rdfs:label "Authority"@en .
 
-:enforcesNorm rdf:type owl:ObjectProperty ;
+:enforcesRegulativeNorm rdf:type owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain hreg:Organization ;
+    rdfs:domain :Organization ;
     rdfs:range :RegulativeNorm ;
     rdfs:comment "An organization enforces a norm. "@en ;
-    rdfs:label "enforces the norm"@en .        
+    rdfs:label "enforces the norm"@en .
 
 :definesRegulativeNorm rdf:type owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain hreg:Organization ;
+    rdfs:domain :Organization ;
     rdfs:range :RegulativeNorm ;
     rdfs:comment "An organization Specification defines a norm. "@en ;
-    rdfs:label "defines the norm"@en .        
+    rdfs:label "defines the norm"@en .
 
 :hasNormativeTarget rdf:type owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
