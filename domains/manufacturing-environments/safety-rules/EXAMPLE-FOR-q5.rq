@@ -6,24 +6,26 @@ ask {
   bind (ex:i3sLabWorkspace as ?workspace ) 
   bind (ex:i3sLab as ?organization)
   bind (ex:safetyRule as ?norm)
-  ?organization :enforcesNorm ?norm .
-  ?norm :hasNormativeContext ?context .
-  ?norm :prohibits ?prohibition .
-  ?workspace :isPossiblyDescribedBy ?worldWithNorms .
-  ?worldWithNorms :hasDeonticSpecification ?norm .
-  ?workspace :isPossiblyDescribedBy ?context .
-  ?workspace :isPossiblyDescribedBy ?prohibition .
+  ?organization hmas:enforcesNorm ?norm .
+  ?norm hmas:hasNormativeContext ?context .
+  ?norm hmas:prohibits ?prohibition .
+  ?prohibition a hmas:Prohibition .
+  ?workspace hmas:isPossiblyDescribedBy ?worldWithNorms .
+  ?worldWithNorms hmas:hasDeonticSpecification ?norm .
+  ?workspace hmas:isPossiblyDescribedBy ?context .
+  ?workspace hmas:isPossiblyDescribedBy ?prohibition .
 }
 
 
 SELECT ?norm
 WHERE {
-  ?organization :enforcesNorm ?norm .
-  ?norm :hasNormativeContext ?context .
-  ?norm :prohibits ?prohibition .
-  ?workspace :isPossiblyDescribedBy ?worldWithNorms .
-  ?worldWithNorms :hasDeonticSpecification ?norm .
-  ?workspace :isPossiblyDescribedBy ?context .
-  ?workspace :isPossiblyDescribedBy ?prohibition .
-  FILTER(?workspace = :i3sLabWorkspace && ?organization = :i3sLab)
+  ?organization hmas:enforcesNorm ?norm .
+  ?norm hmas:hasNormativeContext ?context .
+  ?prohibition a hmas:Prohibition .
+  ?norm hmas:prohibits ?prohibition .
+  ?workspace hmas:isPossiblyDescribedBy ?worldWithNorms .
+  ?worldWithNorms hmas:hasDeonticSpecification ?norm .
+  ?workspace hmas:isPossiblyDescribedBy ?context .
+  ?workspace hmas:isPossiblyDescribedBy ?prohibition .
+  FILTER(?workspace = ex:i3sLabWorkspace &&  ?norm = ex:safetyRule && ?organization = ex:i3sLab)
 }
