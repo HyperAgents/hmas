@@ -22,30 +22,31 @@ ex:safetyRule hmas:obliges ex:worldWhereDoorsAreClosed .
 
 # Real world assumptions : 
 ex:i3sLab :a  hreg:Organization .
-ex:i3sLabSpecification a  hreg:OrganizationSpecification .
+#ex:i3sLabSpecification a  hreg:OrganizationSpecification .
 
-ex:i3sLab hmas:enacts ex:i3sLabSpecification .
-ex:i3sLabSpecification hmas:defines ex:exi3sLab .
+#ex:i3sLab hmas:enacts ex:i3sLabSpecification .
+#ex:i3sLabSpecification hmas:defines ex:exi3sLab .
 
+ex:i3sLabWorkspace a hmas:Workspace .
 ex:i3sLabWorkspace hmas:contains ex:i3sLab .
 ex:i3sLabWorkspace hmas:contains  ex:smoke .
 
 ex:i3sLabWorkspace hmas:isPossiblyDescribedBy ex:possibleWorldWithNorms .
 ex:i3sLabWorkspace hmas:isPossiblyDescribedBy ex:worldWithFire .
 
-ex:i3sLabSpecification hmas:definesNorm ex:safetyRule .
-ex:i3sLab hmas:enforcesNorm ex:safetyRule .
+#ex:i3sLabSpecification hmas:definesNorm ex:safetyRule .
+ex:i3sLab hmas:definesRegulativeNorm ex:safetyRule .
+ex:i3sLab hmas:enforcesRegulativeNorm ex:safetyRule .
 
 ex:safetyGuard a hmas:Agent .
 ex:i3sLabWorkspace hmas:contains ex:safetyGuard .
 
-# It does not exist but..
-ex:safetyGuardRole a hmas:SocialRole .
-:I3SStaff a hmas:SocialRole .
 
+ex:I3SStaff a hmas:SocialRole .
 ex:safetyGuardRole a hmas:AuthorityRole .
-ex:i3sLabSpecification hmas:definesRole ex:safetyGuardRole .
-ex:i3sLabSpecification hmas:definesRole ex:I3SStaff .
+
+ex:i3sLab hmas:definesRole ex:safetyGuardRole .
+ex:i3sLab hmas:definesRole ex:I3SStaff .
 
 # This, is currently allowed : 
 ex:i3sLab hmas:providesRoles ex:safetyGuardRole .
@@ -54,6 +55,7 @@ ex:i3sLab hmas:providesRoles ex:I3SStaff .
 
 ex:safetyRule hmas:hasNormativeTarget ex:I3SStaff .
 
+ex:safetyRule hmas:beInChargeOfEnforcingTheRegulativeNorm ex:safetyGuardRole .
 
 # It does not exist but.. to know that currently the SafetyGuard :hasRole :Guard
 ex:safetyGuard hmas:hasRole ex:safetyGuardRole .
