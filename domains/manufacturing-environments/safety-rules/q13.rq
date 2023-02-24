@@ -2,10 +2,14 @@ PREFIX : <#>
 
 SELECT ?norm
 WHERE {
+  ?norm a hmas:RegulativeNorm .
+  ?workspace a hmas:Workspace .
+  ?worldWithNorms a hmas:PossibleWorld .
+  ?organization a hmas:Organization .
   ?organization :enforcesRegulativeNorm ?norm .
   ?norm :hasNormativeContext ?context .
   ?workspace :isPossiblyDescribedBy ?worldWithNorms .
   ?worldWithNorms :hasDeonticSpecification ?norm .
   ?workspace :isPossiblyDescribedBy ?context .
-  FILTER(?workspace = :myWorkspace && ?organization = :myOrganization)
+  FILTER(?workspace = :i3SWorkspace && ?organization = :i3SLab)
 }
