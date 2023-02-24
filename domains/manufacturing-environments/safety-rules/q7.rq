@@ -1,0 +1,15 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix hmas: <https://purl.org/hmas/>
+
+# Cannot express this SPARQL query !
+# Need to add the possible world semantics into behaviour class e.g. map the effects of this behaviour on the workspace's possible worlds.
+# Thinking about a property :behavior :removesPossibleWorld :pastWorld .
+# :behavior ::hasPrecondition :precondition .
+# :Precondition rdf:subClassOf :PossibleWorld .
+# :Postcondition rdf:subClassOf :PossibleWorld .
+# :behavior :hasPostcondition :postcondition .
+
+# :behavior :bringsItAboutThat :newPossibleWorldAdded .
+
+# :behavior :canBeFullfilled xsd:boolean"true".
