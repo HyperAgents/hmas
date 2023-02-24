@@ -7,4 +7,15 @@ ask {
     ?i rdf:type hmas:RegulativeNorm .
 }
 
+# example of how to get a dynamic list of values to test : 
+ask {
+    ?i rdf:type hmas:RegulativeNorm .
+    
+    {
+        SELECT ?i WHERE {
+            ?i rdf:type hmas:RegulativeNorm .
+        } 
+    }
+}
+
 
