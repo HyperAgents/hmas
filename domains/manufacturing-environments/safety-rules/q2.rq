@@ -11,7 +11,7 @@ ask {
     {
         SELECT ?i WHERE {
             bind (ex:i3sLab as ?org)
-            ?spec hmas:definesRegulativeNorm ?i .
+            ?org hmas:definesRegulativeNorm ?i .
         } 
     }
 }
