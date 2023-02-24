@@ -8,12 +8,10 @@ ask {
   bind (ex:safetyRule as ?norm)
   ?organization hmas:enforcesNorm ?norm .
   ?norm hmas:hasNormativeContext ?context .
-  ?norm hmas:prohibits ?prohibition .
-  ?prohibition a hmas:Prohibition .
   ?workspace hmas:isPossiblyDescribedBy ?worldWithNorms .
   ?worldWithNorms hmas:hasDeonticSpecification ?norm .
+  ?context a hmas:NormativeContext .
   ?workspace hmas:isPossiblyDescribedBy ?context .
-  ?workspace hmas:isPossiblyDescribedBy ?prohibition .
 }
 
 
@@ -22,10 +20,9 @@ WHERE {
   ?organization hmas:enforcesNorm ?norm .
   ?norm hmas:hasNormativeContext ?context .
   ?prohibition a hmas:Prohibition .
-  ?norm hmas:prohibits ?prohibition .
   ?workspace hmas:isPossiblyDescribedBy ?worldWithNorms .
   ?worldWithNorms hmas:hasDeonticSpecification ?norm .
   ?workspace hmas:isPossiblyDescribedBy ?context .
-  ?workspace hmas:isPossiblyDescribedBy ?prohibition .
+  ?context a hmas:NormativeContext .
   FILTER(?workspace = ex:i3sLabWorkspace &&  ?norm = ex:safetyRule && ?organization = ex:i3sLab)
 }
