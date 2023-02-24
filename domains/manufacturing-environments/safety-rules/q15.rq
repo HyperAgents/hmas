@@ -1,0 +1,19 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix hmas: <https://purl.org/hmas/>
+
+ask {
+  bind (ex:i3sLabWorkspace as ?workspace ) 
+  ?workspace hmas:isPossiblyDescribedBy ?world .
+  ?workspace a hmas:Workspace .
+  ?world a hmas:PossibleWorld .
+}
+
+
+SELECT ?norm
+WHERE {
+  ?workspace hmas:isPossiblyDescribedBy ?world .
+  ?workspace a hmas:Workspace .
+  ?world a hmas:PossibleWorld .
+  FILTER(ex:i3sLabWorkspace as ?workspace)
+}
