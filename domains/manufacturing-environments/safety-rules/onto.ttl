@@ -46,6 +46,12 @@
     rdfs:comment "A possible world that describes a prohibition."@en ;
     rdfs:label "Prohibition"@en .
 
+[ a owl:AllDisjointClasses ;
+    owl:members ( :Prohibition :Obligation :NormativeContext ) ] . 
+
+[ a owl:AllDisjointClasses ;
+    owl:members ( :Prohibition :Permission :NormativeContext ) ] . 
+
 :AuthorityRole rdf:subClassOf hmas:SocialRole ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "The authority who has a power to apply a norm and which is in charge of applying the norm. It may be an :Agent or an :Organization. "@en ;
