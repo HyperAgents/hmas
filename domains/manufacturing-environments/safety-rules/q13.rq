@@ -2,7 +2,7 @@ PREFIX : <#>
 
 SELECT ?norm
 WHERE {
-  ?organization :enforcesNorm ?norm .
+  ?organization :enforcesRegulativeNorm ?norm .
   ?norm :hasNormativeContext ?context .
   ?workspace :isPossiblyDescribedBy ?worldWithNorms .
   ?worldWithNorms :hasDeonticSpecification ?norm .
