@@ -12,6 +12,10 @@ ask {
   bind (ex:i3sLabWorkspace as ?workspace ) 
   bind (ex:i3sLab as ?organization)
   bind (ex:safetyRule as ?norm)
+  ?norm a hmas:RegulativeNorm .
+  ?workspace a hmas:Workspace .
+  ?worldWithNorms a hmas:PossibleWorld .
+  ?organization a hmas:Organization .
   ?organization hmas:enforcesRegulativeNorm ?norm .
   ?norm hmas:hasNormativeContext ?context .
   ?norm hmas:prohibits ?prohibition .
@@ -25,6 +29,10 @@ ask {
 
 SELECT ?norm
 WHERE {
+  ?norm a hmas:RegulativeNorm .
+  ?workspace a hmas:Workspace .
+  ?worldWithNorms a hmas:PossibleWorld .
+  ?organization a hmas:Organization .
   ?organization hmas:enforcesRegulativeNorm ?norm .
   ?norm hmas:hasNormativeContext ?context .
   ?norm hmas:prohibits ?prohibition .
