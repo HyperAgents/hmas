@@ -4,6 +4,7 @@ prefix hmas: <https://purl.org/hmas/>
 
 ask {
     bind (ex:safetyRule as ?i)
+    ?i a hmas:RegulativeNorm .
     ?i :hasNormativeTarget ?role .
     ?role rdf:type hmas:Role .
 }
