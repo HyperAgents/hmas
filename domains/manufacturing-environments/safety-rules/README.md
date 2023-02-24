@@ -52,6 +52,12 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 
 * Should we call "possible world" or "possible hyperworld" ? 
 
+## ToDo
+
+* Correct the examples in the README.md
+* Correct hmas:enforcesNorm in hmas:enforcesRegulativeNorm 
+* Check for hmas:definesRegulativeNorm too -.-'
+
 ## Related links
 
 * [link toward issues that are associated to the domain](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=manufacturing+environment)
