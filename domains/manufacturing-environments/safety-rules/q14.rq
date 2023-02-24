@@ -7,6 +7,9 @@ ask {
   bind (ex:i3sLabWorkspace as ?workspace ) 
   bind (ex:i3sLab as ?organization)
   bind (ex:safetyRule as ?norm)
+  ?norm a hmas:RegulativeNorm .
+  ?workspace a hmas:Workspace .
+  ?organization a hmas:Organization .
   ?organization hmas:enforcesRegulativeNorm ?norm .
   ?norm hmas:beInChargeOfEnforcingTheRegulativeNorm ?role.
   ?agent hmas:hasRole ?role .
@@ -16,6 +19,10 @@ ask {
 
 SELECT ?agent
 WHERE {
+  ?norm a hmas:RegulativeNorm .
+  ?workspace a hmas:Workspace .
+  ?worldWithNorms a hmas:PossibleWorld .
+  ?organization a hmas:Organization .
   ?organization hmas:enforcesRegulativeNorm ?norm .
   ?norm hmas:beInChargeOfEnforcingTheRegulativeNorm ?role.
   ?agent hmas:hasRole ?role .
