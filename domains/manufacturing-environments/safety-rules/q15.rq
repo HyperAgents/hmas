@@ -4,6 +4,7 @@ prefix hmas: <https://purl.org/hmas/>
 
 ask {
   bind (ex:i3sLabWorkspace as ?workspace ) 
+  ?workspace a hmas:Workspace .
   ?workspace hmas:isPossiblyDescribedBy ?world .
   ?workspace a hmas:Workspace .
   ?world a hmas:PossibleWorld .
@@ -12,6 +13,7 @@ ask {
 
 SELECT ?norm
 WHERE {
+  ?norm a hmas:RegulativeNorm .
   ?workspace hmas:isPossiblyDescribedBy ?world .
   ?workspace a hmas:Workspace .
   ?world a hmas:PossibleWorld .
