@@ -151,10 +151,10 @@
 
 :seesToItThat rdf:type owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Behavior ;
+    rdfs:domain hmas:Behavior ;
     rdfs:range :PossibleWorld ;
-    rdfs:comment "A specification which defines what a behavior brings it about. "@en ;
-    rdfs:label "brings it about"@en .
+    rdfs:comment "A specification which defines what a behavior sees to it that. "@en ;
+    rdfs:label "sees to it that"@en .
 
 #:hasRespectStatus rdf:type owl:ObjectProperty ;
 #  rdfs:domain :RegulativeNorm ;
