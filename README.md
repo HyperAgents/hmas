@@ -10,7 +10,7 @@ Our systems use semantic hypermedia to enable uniform interaction among heteroge
 To undertake this investigation, HyperAgents brings together internationally recognized researchers actively contributing to research on autonomous agents and MAS, the Web architecture and the Web of Things, Semantic Web and Linked Data, and to the standardization of the Web.
 
 
-![view of the ontology](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/resources/hmas-webvowl.jpg)
+![view of the ontology](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/resources/hmas-webvowl-v2.jpg)
 
 
 ## I - General information
