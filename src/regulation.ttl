@@ -1,3 +1,4 @@
+
 @base <https://purl.org/hmas/> .
 @prefix : <> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -28,6 +29,7 @@
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <> .
 
+
 <https://inria.fr/>
   schema:name "Inria" ;
   schema:url <https://inria.fr/> .
@@ -51,6 +53,22 @@
 #    Classes
 #################################################################
 
+:WebOfAgents rdf:type owl:Class ;
+  rdfs:comment "Web of Agents is a subset of the web." ;
+  rdsf:label "WebOfAgents"@en .
+
+:RegulatedWeb rdf:type owl:Class ;
+  rdfs:comment "A Regulated Web is a subset of the Web of Agents arranged in one or several Situated Regulated Organization Enttities."@en ;
+  rdfs:label "RegulatedWeb"@en .
+
+:SituatedRegulatedOrganizationEntity rdf:type owl:Class ;
+  rdfs:comment "An organization entity situated on agents and artifacts, and regulated by a normative system."@en ;
+  rdfs:label "SituatedRegulatedOrganizationEntity"@en .
+
+:InstitutionEntity rdf:type owl:Class ;
+  rdfs:comment "An Institution entity situates artifacts (events, states) and agents (actions) in the regulations and organization of Situated Regulated Organization Entities."@en ;
+  rdfs:label "InstitutionEntity"@en .
+
 :TestRegulation a owl:Class ;
   rdfs:comment "testing the redirections"@en ;
   rdfs:isDefinedBy :regulation .
@@ -59,4 +77,39 @@
 #################################################################
 #    Object Properties
 #################################################################
+
+:includes a owl:ObjectProperty ;
+            rdfs:domain :SituatedRegulatedOrganizationEntity ;
+            rdfs:range :SituatedRegulatedOrganizationEntity ;
+            rdfs:comment "A relation of containment of two Situation Regulated Organization Entities."@en ;
+            rdfs:label "includes"@en .
+
+# Are the Workspace or the Agents and Artifacts that situate a SROE?
+:situates a owl:ObjectProperty ;
+            owl:inverseOf :isSituatedIn ;
+            rdfs:domain [
+              core:Agent ;
+              core:Artifact
+            ] ;
+            rdfs:range :SituatedRegulatedOrganizationEntity ;
+            rdfs:comment "A relation that specifies that agents and artifacts are part and regulated by the Situated Regulated Organization Entity."@en ;
+            rdfs:label "situates"@en .
+
+:isSituatedIn a owl:ObjectProperty ;
+                owl:inverseOf :situates ;
+                rdfs:domain :SituatedRegulatedOrganizationEntity ;
+                rdfs:range [
+                  core:Agent ;
+                  core:Artifact
+                ] ;
+                rdfs:comment "A relation that specifies that a Situated Regulated Organization Entity includes and regulates a set of agents and artifacts."@en ;
+                rdfs:label "is situated in"@en .
+
+# Unsure about the domain and range because we may not be dealing only with single resources, but with set of resources
+# Will we require regulations to be defined w.r.t. institutional facts only? If so, everything will have to be constituted as an Institutional Fact before they can be regulated.
+:countAs a owl:ObjectProperty ;
+           rdfs:domain rdfs:Resource ;
+           rdfs:range rdfs:Resource ;
+           rdfs:comment "Links resources to institutional facts."@en ;
+           rdfs:label "count-as"@en .
 
