@@ -7,22 +7,24 @@
 
 ex:safetyRule a hmas:RegulativeNorm .
 
-ex:possibleWorldWithNorms a :PossibleWorld .
+ex:possibleWorldWithNorms a hmas:PossibleWorld .
 ex:possibleWorldWithNorms hmas:hasDeonticSpecification ex:safetyRule .
 
-ex:worldWithFire a :PossibleWorld .
-ex:worldWhereDoorsAreClosed a :Obligation .
+ex:worldWithFire a hmas:PossibleWorld .
+ex:worldWhereDoorsAreClosed a hmas:Obligation .
 
 ex:safetyRule hmas:hasNormativeContext ex:worldWithFire .
 ex:safetyRule hmas:obliges ex:worldWhereDoorsAreClosed .
+
+ex:worldWhereADoorIsOpened a hmas:PossibleWorld .
 
 
 
 
 
 # Real world assumptions : 
-ex:i3sLab :a  hreg:Organization .
-#ex:i3sLabSpecification a  hreg:OrganizationSpecification .
+ex:i3sLab :a  hmas:Organization .
+#ex:i3sLabSpecification a  hmas:OrganizationSpecification .
 
 #ex:i3sLab hmas:enacts ex:i3sLabSpecification .
 #ex:i3sLabSpecification hmas:defines ex:exi3sLab .
@@ -59,5 +61,24 @@ ex:safetyRule hmas:beInChargeOfEnforcingTheRegulativeNorm ex:safetyGuardRole .
 
 # It does not exist but.. to know that currently the SafetyGuard :hasRole :Guard
 ex:safetyGuard hmas:hasRole ex:safetyGuardRole .
+
+
+
+# defining behaviors is missing :
+
+:closeAllDoorsSpecification a hmas:BehaviorSpecification .
+:closeAllDoorsSpecification hmas:seesToItThat ex:worldWhereDoorsAreClosed .
+
+:openADoorSpecification a hmas:BehaviorSpecification .
+:openADoorSpecification hmas:seesToItThat ex:worldWhereADoorIsOpened .
+
+
+# We must describe that a :Workspace cannot be described at the same time by the possible worlds : 
+# ex:worldWhereADoorIsOpened and ex:worldWhereDoorsAreClosed
+#[ rdf:type owl:AllDisjointClasses ;
+#  owl:members ( :closeAllDoorsSpecification
+#                :openADoorSpecification
+#              )
+#] .
 
 
