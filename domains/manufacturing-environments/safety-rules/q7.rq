@@ -2,6 +2,25 @@ prefix ex: <http://example.org/>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix hmas: <https://purl.org/hmas/>
 
+ask {
+  bind (ex:i3sLabWorkspace as ?workspace ) 
+  bind (ex:i3sLab as ?organization)
+  bind (ex:safetyRule as ?norm)
+  ?norm a hmas:RegulativeNorm .
+  ?workspace a hmas:Workspace .
+  ?worldWithNorms a hmas:PossibleWorld .
+  ?organization a hmas:Organization .
+  ?organization hmas:enforcesRegulativeNorm ?norm .
+  ?norm hmas:hasNormativeContext ?context .
+  ?norm hmas:prohibits ?prohibition .
+  ?prohibition a hmas:Prohibition .
+  ?workspace hmas:isPossiblyDescribedBy ?worldWithNorms .
+  ?worldWithNorms hmas:hasDeonticSpecification ?norm .
+  ?workspace hmas:isPossiblyDescribedBy ?context .
+  ?workspace hmas:isPossiblyDescribedBy ?prohibition .
+}
+
+
 # Cannot express this SPARQL query !
 # Need to add the possible world semantics into behaviour class e.g. map the effects of this behaviour on the workspace's possible worlds.
 # Thinking about a property :behavior :removesPossibleWorld :pastWorld .
