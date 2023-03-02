@@ -82,3 +82,23 @@ ex:safetyGuard hmas:hasRole ex:safetyGuardRole .
 #] .
 
 
+#ex:MyClass rdf:type owl:Class ;
+#  owl:disjointWith [
+#    rdf:type owl:Class ;
+#    owl:intersectionOf (
+#      ex:MyClass
+#      [ rdf:type owl:Class ;
+#        owl:oneOf ( ex:o1 ex:o2 )
+#      ]
+#    )
+#  ] .
+
+#ex:MyClass rdf:type owl:Class ;
+#  owl:disjointWith [
+#    rdf:type owl:Class ;
+#    owl:Restriction [
+#      owl:onProperty ex:myProperty ;
+#      owl:someValuesFrom ex:o1
+#    ]
+#  ] .
+
