@@ -21,6 +21,28 @@ ask {
 }
 
 
+#:door28 a :ClosedDoor .
+#:door27 a :OpenDoor .
+#:door12 a :Door .
+#:WorldWithFire :definedBy ""ASK {?x a :Fire}""^^sparql:ask .
+#GRAPH :WorldWithFire { [a :Fire] } .
+#""FROM ?aWorld ASK {?x a :Fire}""^^sparql:ask => ?aWorld isPossiblyDescribed :WorldWithFire .
+# 
+
+
+#?workspace hmas:isPossiblyDescribedBy ?theDoorIsOpened .
+#?workspace hmas:isPossiblyDescribedBy ?theDoorIsClosed .
+#?workspace hmas:isPossiblyDescribedBy ?stateOfAffair3 .
+
+#worldWithNorms R_context normativeContexWorld1 
+#worldWithNorms R_ideal permissionWorld2
+#worldWithNorms R_ideal permissionWorld3
+
+
+
+
+
+
 # Cannot express this SPARQL query !
 # Need to add the possible world semantics into behaviour class e.g. map the effects of this behaviour on the workspace's possible worlds.
 # Thinking about a property :behavior :removesPossibleWorld :pastWorld .
