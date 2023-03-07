@@ -26,6 +26,11 @@
 #  rdfs:comment "A modality specifies qualities of the truth contained in a possible world."@en ;
 #  rdfs:label "Normative Context"@en .
 
+#:StateOfAffairs rdf:subClassOf :PossibleWorld ;
+#    rdfs:isDefinedBy :regulation ;
+#    rdfs:comment "A context in which a norm is applicable."@en ;
+#    rdfs:label "Normative Context"@en .
+
 :NormativeContext rdf:subClassOf :PossibleWorld ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A context in which a norm is applicable."@en ;
