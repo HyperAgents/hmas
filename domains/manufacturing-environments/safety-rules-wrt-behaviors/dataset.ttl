@@ -1,0 +1,104 @@
+@prefix ex: <http://example.org/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+
+
+ex:safetyRule a hmas:RegulativeNorm .
+
+ex:possibleWorldWithNorms a hmas:PossibleWorld .
+ex:possibleWorldWithNorms hmas:hasDeonticSpecification ex:safetyRule .
+
+ex:worldWithFire a hmas:PossibleWorld .
+ex:worldWhereDoorsAreClosed a hmas:Obligation .
+
+ex:safetyRule hmas:hasNormativeContext ex:worldWithFire .
+ex:safetyRule hmas:obliges ex:worldWhereDoorsAreClosed .
+
+ex:worldWhereADoorIsOpened a hmas:PossibleWorld .
+
+
+
+
+
+# Real world assumptions : 
+ex:i3sLab :a  hmas:Organization .
+#ex:i3sLabSpecification a  hmas:OrganizationSpecification .
+
+#ex:i3sLab hmas:enacts ex:i3sLabSpecification .
+#ex:i3sLabSpecification hmas:defines ex:exi3sLab .
+
+ex:i3sLabWorkspace a hmas:Workspace .
+ex:i3sLabWorkspace hmas:contains ex:i3sLab .
+ex:i3sLabWorkspace hmas:contains  ex:smoke .
+
+ex:i3sLabWorkspace hmas:isPossiblyDescribedBy ex:possibleWorldWithNorms .
+ex:i3sLabWorkspace hmas:isPossiblyDescribedBy ex:worldWithFire .
+
+#ex:i3sLabSpecification hmas:definesNorm ex:safetyRule .
+ex:i3sLab hmas:definesRegulativeNorm ex:safetyRule .
+ex:i3sLab hmas:enforcesRegulativeNorm ex:safetyRule .
+
+ex:safetyGuard a hmas:Agent .
+ex:i3sLabWorkspace hmas:contains ex:safetyGuard .
+
+
+ex:I3SStaff a hmas:SocialRole .
+ex:safetyGuardRole a hmas:AuthorityRole .
+
+ex:i3sLab hmas:definesRole ex:safetyGuardRole .
+ex:i3sLab hmas:definesRole ex:I3SStaff .
+
+# This, is currently allowed : 
+ex:i3sLab hmas:providesRoles ex:safetyGuardRole .
+
+ex:i3sLab hmas:providesRoles ex:I3SStaff .
+
+ex:safetyRule hmas:hasNormativeTarget ex:I3SStaff .
+
+ex:safetyRule hmas:beInChargeOfEnforcingTheRegulativeNorm ex:safetyGuardRole .
+
+# It does not exist but.. to know that currently the SafetyGuard :hasRole :Guard
+ex:safetyGuard hmas:hasRole ex:safetyGuardRole .
+
+
+
+# defining behaviors is missing :
+
+:closeAllDoorsSpecification a hmas:BehaviorSpecification .
+:closeAllDoorsSpecification hmas:seesToItThat ex:worldWhereDoorsAreClosed .
+
+:openADoorSpecification a hmas:BehaviorSpecification .
+:openADoorSpecification hmas:seesToItThat ex:worldWhereADoorIsOpened .
+
+
+# We must describe that a :Workspace cannot be described at the same time by the possible worlds : 
+# ex:worldWhereADoorIsOpened and ex:worldWhereDoorsAreClosed
+#[ rdf:type owl:AllDisjointClasses ;
+#  owl:members ( :closeAllDoorsSpecification
+#                :openADoorSpecification
+#              )
+#] .
+
+
+#ex:MyClass rdf:type owl:Class ;
+#  owl:disjointWith [
+#    rdf:type owl:Class ;
+#    owl:intersectionOf (
+#      ex:MyClass
+#      [ rdf:type owl:Class ;
+#        owl:oneOf ( ex:o1 ex:o2 )
+#      ]
+#    )
+#  ] .
+
+#ex:MyClass rdf:type owl:Class ;
+#  owl:disjointWith [
+#    rdf:type owl:Class ;
+#    owl:Restriction [
+#      owl:onProperty ex:myProperty ;
+#      owl:someValuesFrom ex:o1
+#    ]
+#  ] .
+
