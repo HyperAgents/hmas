@@ -10,7 +10,7 @@ In the i3S Organization, if there is a fire, then it is forbidden for people to 
 
 | ID | Question in Natural Language | Example                                                                                                                                   |
 |----|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| q7  | What are the behaviours that are explicitely allowed ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q1  | What are the behaviours that are explicitely allowed ?        | `ex:safetyRule` a `:RegulativeNorm`  |
 | q8  | What are the behaviours that are not allowed (or <=> prohibited) ?        | `ex:safetyRule` a `:RegulativeNorm`  |
 | q9 | What are the behaviours that are obliged ?        | `ex:safetyRule` a `:RegulativeNorm`  |
 
