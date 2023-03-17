@@ -1,5 +1,5 @@
-# Discover Regulative Norms
-Feature: Discovery of Regulative Norms
+# Discover of Applicable Regulative Norms w.r.t. the states
+Feature: Discovery of Applicable Regulative Norms w.r.t. the states
 
 ## Description
 
