@@ -16,15 +16,12 @@ In the i3S Organization, if there is a fire, then all the doors must be closed. 
 | q4 | What are the roles concerned by the regulative norm ?             | `ex:I3SStaff` a `hreg:SocialRole`                                                  |
 | q5 | What are the norms that have not still been respected ?        | `ex:safetyRule` a `:RegulativeNorm`  |
 | q6  | What are the norms that have been violated ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q7  | What are the behaviours that are explicitely allowed ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q8  | What are the behaviours that are not allowed (or <=> prohibited) ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q9 | What are the behaviours that are obliged ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q10 | What are the states of affairs that are allowed to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q11  | What are the states of affairs that ought not to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q12  | What are the states of affairs that ought to be when a norm is applicable?        | `ex:safetyRule` a `:RegulativeNorm`  |
-| q13 | What norms are activated in an organization w.r.t. a context ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
-| q14 | Who are in charge of enforcing a regulative norm ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
-| q15 | What are the set of possible worlds that describe the state of affairs of a workspace ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
+| q7 | What are the states of affairs that are allowed to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q8  | What are the states of affairs that ought not to be when a norm is applicable ?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q9  | What are the states of affairs that ought to be when a norm is applicable?        | `ex:safetyRule` a `:RegulativeNorm`  |
+| q10 | What norms are activated in an organization w.r.t. a context ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
+| q11 | Who are in charge of enforcing a regulative norm ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
+| q12 | What are the set of possible worlds that describe the state of affairs of a workspace ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
 
 
 ## Glossary
