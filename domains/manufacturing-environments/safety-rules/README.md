@@ -21,7 +21,7 @@ In the i3S Organization, if there is a fire, then all the doors must be closed. 
 | q9  | What are the states of affairs that ought to be when a norm is applicable?        | `ex:safetyRule` a `:RegulativeNorm`  |
 | q10 | What norms are activated in an organization w.r.t. a context ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
 | q11 | Who are in charge of enforcing a regulative norm ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
-| q12 | What are the set of possible worlds that describe the state of affairs of a workspace ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
+
 
 
 ## Glossary
