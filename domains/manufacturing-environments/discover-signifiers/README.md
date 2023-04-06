@@ -21,11 +21,11 @@ The agent discovers signifiers exposed in the profile of the robotic arm artifac
 - **Signifier Exposure**: The state of signifiers being available in the environment.
 - **Signifier Exposing**: The act of making signifiers available in the environment.
 - **Affordance**: A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment [Chemero and Turvey, 2007].
-- **Workspace**: see [_Other scenario TBA_]().
-- **Resource Containment**: see [_Other scenario TBA_]().
-- **Artifact**: see [_Other scenario TBA_]().
-- **Agent**: see [_Other scenario TBA_]().
-- **Resource Profile**: see [_Other scenario TBA_]().
+- **Workspace**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
+- **Resource Containment**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
+- **Artifact**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
+- **Agent**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
+- **Resource Profile**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
 
 [Chemero and Turvey, 2007] Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36.
 
