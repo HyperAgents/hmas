@@ -4,7 +4,7 @@ Feature: Discovery of Signifiers
 
 
 ## Description
-An agent is situated in a manufacturing workspace that contains industrial artifacts (e.g. a UR5 collaborative robot arm and a PhantomX robot arm). The agent is responsible for operating a robotic arm artifact in the workspace towards achieving production goals. To this end, the agent has the objective of discovering signifiers, i.e. cues in the workspace that reveal information about how to exploit behavior possibilities, such as how to move the gripper of the robotic arm artifact.
+An agent is contained in a manufacturing workspace that contains industrial artifacts (e.g. a UR5 collaborative robot arm and a PhantomX robot arm). The agent operates the robotic arm artifact in the workspace towards achieving production goals. To this end, the agent discovers signifiers, i.e. perceivable signs/cues that can be interpreted meaningfully by an agent to reveal information about behavior possibilities, such as how to move the gripper of the robotic arm artifact.
 
 The agent discovers signifiers exposed in the profile of the robotic arm that is contained in the workspace.
 
@@ -17,7 +17,7 @@ The agent discovers signifiers exposed in the profile of the robotic arm that is
 | q3 | What are the signifiers exposed in resource profiles of a given artifact?                         | Signifiers exposed in resource profiles of artifact `ex:ur5`: `ex:gripperMovable`                                            |
 
 ## Glossary
-- **Signifier**: A plot of land devoted to the growing of crops.
+- **Signifier**: A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility.
 - **Signifier Exposure**: The condition of signifiers being available in the environment, and the act of making signifiers available in the environment.
 - **Affordance**: A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment.
 - **Workspace**: see [_Other scenario TBA_]().
