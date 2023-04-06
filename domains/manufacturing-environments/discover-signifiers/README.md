@@ -18,7 +18,8 @@ The agent discovers signifiers exposed in the profile of the robotic arm artifac
 
 ## Glossary
 - **Signifier**: A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility.
-- **Signifier Exposure**: The condition of signifiers being available in the environment, and the act of making signifiers available in the environment.
+- **Signifier Exposure**: The state of signifiers being available in the environment.
+- **Signifier Exposing**: The act of making signifiers available in the environment.
 - **Affordance**: A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment.
 - **Workspace**: see [_Other scenario TBA_]().
 - **Resource Containment**: see [_Other scenario TBA_]().
