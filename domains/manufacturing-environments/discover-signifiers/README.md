@@ -6,7 +6,7 @@ Feature: Discovery of Signifiers
 ## Description
 An agent is contained in a manufacturing workspace that contains industrial artifacts (e.g. a UR5 collaborative robot arm and a PhantomX robot arm). The agent operates the robotic arm artifact in the workspace towards achieving production goals. To this end, the agent discovers signifiers, i.e. perceivable signs/cues that can be interpreted meaningfully by an agent to reveal information about behavior possibilities, such as how to move the gripper of the robotic arm artifact.
 
-The agent discovers signifiers exposed in the profile of the robotic arm that is contained in the workspace.
+The agent discovers signifiers exposed in the profile of the robotic arm artifact.
 
 ## Competency Questions
 
