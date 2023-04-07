@@ -3,7 +3,7 @@
 
 
 ex:factory a hmas:Workspace ;
-    hmas:hasResourceProfile ex:factoryProfile ;
+    hmas:hasProfile ex:factoryProfile ;
     hmas:contains ex:groundFloor .
 
 ex:factoryProfile a hmas:ResourceProfile .
