@@ -1,6 +1,3 @@
-------------------------
-| members              |
-========================
-| ex:autonomousBob     |
-| ex:factorySupervisor |
-------------------------
+members
+http://example.org/autonomousBob
+http://example.org/factorySupervisor
