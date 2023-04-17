@@ -1,0 +1,8 @@
+PREFIX : <#>
+
+SELECT ?norm
+WHERE {
+  ?norm rdf:type :RegulativeNorm .
+}
+
+

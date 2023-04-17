@@ -197,6 +197,11 @@ _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyda
         rdfs:subClassOf :Artifact ;
         owl:disjointWith :HypermediaMASPlatform .
 
+:Organization a owl:Class ;
+        rdfs:isDefinedBy :core ;
+        rdfs:comment "An Organization is an entity situated on Agents and Artifacts, and regulated by a regulation system."@en ;
+        rdfs:label "organization"@en, "organisation"@en-GB, "organization"@en-us, "organisation"@fr .
+
 ### Top ontology constraints for coherent modeling 
 
 # disjoint top classes 
@@ -294,6 +299,20 @@ _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyda
           rdfs:label "exposes signifier"@en, "expose le signifiant"@fr ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> .
+
+:isMemberOf a owl:ObjectProperty ;
+          rdfs:isDefinedBy :core ;
+          rdfs:domain :Agent ;
+          rdfs:range :Organization ;
+          rdfs:comment "A relation between an Agent and an Organization it belongs to."@en ;
+          rdfs:label "is member of"@en .
+      
+:isMaterialOf a owl:ObjectProperty ;
+          rdfs:isDefinedBy :core ;
+          rdfs:domain :Artifact ;
+          rdfs:range :Organization ;
+          rdfs:comment "A relation between an Artifact and an Organization it belongs to."@en ;
+          rdfs:label "is material of"@en .
 
 #### 
 # Notions of HOME saved for later
