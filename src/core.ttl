@@ -118,6 +118,7 @@ skos:note a owl:AnnotationProperty .
   schema:affiliation <https://mines-stetienne.fr> .
 
 :Affordance a skos:Concept ;
+    rdfs:isDefinedBy :core ;
     skos:prefLabel "affordance"@en ;
     skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;
     skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;
