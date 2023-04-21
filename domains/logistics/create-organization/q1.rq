@@ -6,7 +6,7 @@ prefix hmas: <https://purl.org/hmas/>
 select ?orgModel
 where {
   ex:SL_Logistics a ?orgModel .
-  ?orgModel a sh:NodeShape .
-  ?orgModel rdfs:subClassOf hmas:Organization .
+  ?orgModel a sh:NodeShape ;
+            rdfs:subClassOf hmas:Organization .
 }
 order by ?orgModel
