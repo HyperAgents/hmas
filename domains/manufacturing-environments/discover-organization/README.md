@@ -7,9 +7,9 @@ A factory contains various industrial artifacts (e.g., industrial machinery, ind
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the discoverable organizations in a given workspace? | What are the discoverable organizations in the factory building workspace? **ex:factoryOrganization** |
-| q2 | What are the members of a given organization?                 | What are the members of the factory organization? **ex:autonomousBob**, **ex:factorySupervisor**      |
-| q3 | What are the materials of a given organization?               | What are the materials of the factory organization? **ex:ur5**, **ex:phantomX**                       |
+| q1 | What are the discoverable organizations in a given workspace? | What are the discoverable organizations in the factory building workspace? `ex:factoryOrganization` |
+| q2 | What are the members of a given organization?                 | What are the members of the factory organization? `ex:autonomousBob`, `ex:factorySupervisor`        |
+| q3 | What are the materials of a given organization?               | What are the materials of the factory organization? `ex:ur5`, `ex:phantomX`                         |
 
 ## Glossary
 
