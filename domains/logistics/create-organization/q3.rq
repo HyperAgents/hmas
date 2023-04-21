@@ -3,13 +3,21 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
-ask {
-    ?orgModel a sh:NodeShape ;
+select ?org
+where {
+  ex:SL_Logistics a ?slOrgModel ;
+                  hmas:hasResourceProfile ?slOrgProfile .
+  ?slOrgModel a sh:NodeShape ;
               rdfs:subClassOf hmas:Organization .
-    ex:SL_Logistics a ?orgModel ;
-                    hmas:hasResourceProfile ?slOrgProfile.
-    ex:GL_Logistics a ?orgModel ;
-                    hmas:hasResourceProfile ?glOrgProfile .
-    ?workspace hmas:contains ?slOrgProfile, ?glOrgProfile .
   
+  ?org a ?orgModel ;
+       hmas:hasResourceProfile ?orgProfile .
+  ?orgModel a sh:NodeShape ;
+            rdfs:subClassOf hmas:Organization .
+
+  ?workspace hmas:contains ?slOrgProfile, ?orgProfile .
+
+  filter(?slOrgModel = ?orgModel &&
+         ?org != ex:SL_Logistics)
 }
+order by ?org

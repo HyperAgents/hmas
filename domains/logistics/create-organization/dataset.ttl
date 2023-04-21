@@ -219,7 +219,8 @@ ex:SL_PickingArea a ex:PickingArea .
 ex:SL_ReceivingArea a ex:ReceivingArea .
 
 ## Organizations
-ex:SL_LogisticsProfile a hmas:ResourceProfile .
+ex:SL_LogisticsProfile a hmas:ResourceProfile ;
+    hmas:isContainedIn ex:LogisticsWS .
 
 ex:SL_Logistics a ex:Logistics ;
     hmas:hasResourceProfile ex:SL_LogisticsProfile ;
@@ -228,17 +229,20 @@ ex:SL_Logistics a ex:Logistics ;
     hmas:proposesMission ex:SL_HumanResourcesManagement, ex:SL_FinancialManagement, ex:SL_CommercialManagement, ex:SL_PlanningManagement, ex:SL_CarryGoods, ex:SL_CollectGoods, ex:SL_DeliverGoods ;
     hmas:proposesFacility ex:SL_PickingArea, ex:SL_ReceivingArea .
 
-ex:GL_LogisticsProfile a hmas:ResourceProfile .
+ex:GL_LogisticsProfile a hmas:ResourceProfile ;
+    hmas:isContainedIn ex:LogisticsWS .
 
 ex:GL_Logistics a ex:Logistics ;
     hmas:hasResourceProfile ex:GL_LogisticsProfile .
 
-ex:HSG_FactoryProfile a hmas:ResourceProfile .
+ex:HSG_FactoryProfile a hmas:ResourceProfile ;
+    hmas:isContainedIn ex:LogisticsWS .
 
 ex:HSG_Factory a ex:Manufacturing ;
     hmas:hasResourceProfile ex:HSG_FactoryProfile .
 
-ex:ITM_FactoryProfile a hmas:ResourceProfile .
+ex:ITM_FactoryProfile a hmas:ResourceProfile ;
+    hmas:isContainedIn ex:LogisticsWS .
 
 ex:ITM_Factory a ex:Manufacturing ;
     hmas:hasResourceProfile ex:ITM_FactoryProfile .

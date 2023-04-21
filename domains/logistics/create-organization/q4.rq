@@ -3,15 +3,9 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
-ask {
-    ?orgModel a sh:NodeShape ;
-              rdfs:subClassOf hmas:Organization .
-              
-    filter (ex:Logistics = ?orgModel ||
-            ex:Manufacturing = ?orgModel)
+select ?orgModel
+where {
+  ?orgModel a sh:NodeShape ;
+            rdfs:subClassOf hmas:Organization .
 }
-
-# QUESTION
-# How can we guarantee that both Organization Models exist?
-# The current SPRAQL Query does not represent what we want to capture
-# with this competency question.
+order by ?orgModel

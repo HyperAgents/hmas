@@ -58,10 +58,4 @@ select distinct ?key ?val {
         bind (?orgModelFacility as ?val)
     }
 }
-
-# Answers are expected to be of the form:
-# "orgValue" ex:Commitment
-# "orgValue" ex:IntegrityRespect
-# "role"     ex:HumanResourcesOfficer
-# "role"     ex:FinanceOfficer
-# ...
+order by ?key

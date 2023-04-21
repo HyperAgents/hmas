@@ -3,20 +3,16 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
-ask {
-    ex:SL_Logistics a ?slOrgModel .
-    ?slOrgModel a sh:NodeShape ;
-                rdfs:subClassOf hmas:Organization .
-    ex:HSG_Factory a ?hsgOrgModel .
-    ?hsgOrgModel a sh:NodeShape ;
-                 rdfs:subClassOf hmas:Organization .
-    ex:ITM_Factory a ?itmOrgModel .
-    ?itmOrgModel a sh:NodeShape ;
-                 rdfs:subClassOf hmas:Organization .
+select ?org
+where {
+  ex:SL_Logistics a ?slOrgModel .
+  ?slOrgModel a sh:NodeShape ;
+              rdfs:subClassOf hmas:Organization .
+  
+  ?org a ?orgModel .
+  ?orgModel a sh:NodeShape ;
+            rdfs:subClassOf hmas:Organization .
 
-    filter (?slOrgModel != ?hsgOrgModel &&
-            ?slOrgModel != ?itmOrgModel)
+  filter(?slOrgModel != ?orgModel)
 }
-
-# QUESTION
-# How can we guarantee that both Organizations exist without duplicating the code?
+order by ?org

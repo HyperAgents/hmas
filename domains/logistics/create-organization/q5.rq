@@ -3,15 +3,8 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
-ask {
-    ex:SL_Logistics hmas:hasOrganizationalValue ?orgValue .
-    
-    filter (ex:SL_Commitment = ?orgValue ||
-            ex:SL_IntegrityRespect = ?orgValue)    
+select ?orgValue
+where {
+  ex:SL_Logistics hmas:hasOrganizationalValue ?orgValue .
 }
-
-
-# QUESTION
-# How can we guarantee that both Organizational Values exist?
-# The current SPRAQL Query does not represent what we want to capture
-# with this competency question.
+order by ?orgValue
