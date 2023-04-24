@@ -10,6 +10,7 @@ where {
   { ?orgModel a sh:NodeShape . }
   union
   { ?orgShape a sh:NodeShape ;
-              sh:targetClass ?orgModel }
+              sh:targetClass ?orgModel .
+  }
 }
 order by ?orgModel
