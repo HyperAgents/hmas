@@ -4,6 +4,5 @@ prefix hmas: <https://purl.org/hmas/>
 select ?members
 where {
   ?members hmas:isMemberOf ?org .
-  ?org a hmas:Organization .
 }
 order by ?members
