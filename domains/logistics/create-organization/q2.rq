@@ -10,14 +10,16 @@ where {
   { ?slOrgModel a sh:NodeShape . }
   union
   { ?slOrgShape a sh:NodeShape ;
-                sh:targetClass ?slOrgModel }
+                sh:targetClass ?slOrgModel .
+  }
   
   ?org a ?orgModel .
   ?orgModel rdfs:subClassOf hmas:Organization .
   { ?orgModel a sh:NodeShape . }
   union
   { ?orgShape a sh:NodeShape ;
-              sh:targetClass ?orgModel }
+              sh:targetClass ?orgModel .
+  }
   
   filter(?slOrgModel != ?orgModel)
 }
