@@ -44,6 +44,12 @@ ex:WarehouseStGallen a hmas:Artifact ;
 
 # SPECIFICATION
 
+## NOTE: Regulation entities' specification can be represented
+##       using implicit or explicit Target Class SHACL. Here we
+##       decided to use implicit Target Class SHACL because we
+##       do not expect any extensions for this scenario and we
+##       wanted to avoid extra labels.
+
 ## Organization Specification
 ex:Logistics a sh:NodeShape ;
     rdfs:subClassOf hmas:Organization ;
