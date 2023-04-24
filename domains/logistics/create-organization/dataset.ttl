@@ -161,7 +161,7 @@ ex:Manufacturing a sh:NodeShape ;
 
 ## Organizational Values
 ex:Commitment rdfs:subClassOf hmas:OrganizationalValue ;
-    rdfs:comment "Do everything you can to keep the organization promisses to the customers."@en ;
+    rdfs:comment "Do everything you can to keep the organization commitment to the customers."@en ;
     rdfs:label "commitment"@en, "engagement"@fr .
 
 ex:IntegrityRespect rdfs:subClassOf hmas:OrganizationalValue ;
