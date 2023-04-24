@@ -3,6 +3,6 @@ prefix hmas: <https://purl.org/hmas/>
 
 select ?members
 where {
-  ?members hmas:isMemberOf ?org .
+  ?members hmas:isMemberOf ex:factoryOrganization .
 }
 order by ?members
