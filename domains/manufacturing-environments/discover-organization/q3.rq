@@ -3,7 +3,6 @@ prefix hmas: <https://purl.org/hmas/>
 
 select ?materials
 where {
-  ?materials hmas:isMaterialOf ?org .
-  ?org a hmas:Organization .
+  ?materials hmas:isMaterialOf ex:factoryOrganization .
 }
 order by ?materials
