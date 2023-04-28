@@ -229,7 +229,7 @@ ex:SL_LogisticsProfile a hmas:ResourceProfile ;
     hmas:isContainedIn ex:LogisticsWS .
 
 ex:SL_Logistics a ex:Logistics ;
-    hmas:hasResourceProfile ex:SL_LogisticsProfile ;
+    hmas:hasProfile ex:SL_LogisticsProfile ;
     hmas:hasOrganizationalValue ex:SL_Commitment, ex:SL_IntegrityRespect ;
     hmas:providesRole ex:SL_HumanResourcesOfficer, ex:SL_FinanceOfficer, ex:SL_AccountManager, ex:SL_Planner, ex:SL_Carrier, ex:SL_Collector, ex:SL_Deliverer ;
     hmas:proposesMission ex:SL_HumanResourcesManagement, ex:SL_FinancialManagement, ex:SL_CommercialManagement, ex:SL_PlanningManagement, ex:SL_CarryGoods, ex:SL_CollectGoods, ex:SL_DeliverGoods ;
@@ -239,16 +239,16 @@ ex:GL_LogisticsProfile a hmas:ResourceProfile ;
     hmas:isContainedIn ex:LogisticsWS .
 
 ex:GL_Logistics a ex:Logistics ;
-    hmas:hasResourceProfile ex:GL_LogisticsProfile .
+    hmas:hasProfile ex:GL_LogisticsProfile .
 
 ex:HSG_FactoryProfile a hmas:ResourceProfile ;
     hmas:isContainedIn ex:LogisticsWS .
 
 ex:HSG_Factory a ex:Manufacturing ;
-    hmas:hasResourceProfile ex:HSG_FactoryProfile .
+    hmas:hasProfile ex:HSG_FactoryProfile .
 
 ex:ITM_FactoryProfile a hmas:ResourceProfile ;
     hmas:isContainedIn ex:LogisticsWS .
 
 ex:ITM_Factory a ex:Manufacturing ;
-    hmas:hasResourceProfile ex:ITM_FactoryProfile .
+    hmas:hasProfile ex:ITM_FactoryProfile .
