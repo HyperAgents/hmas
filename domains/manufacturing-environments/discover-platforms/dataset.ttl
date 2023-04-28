@@ -1,4 +1,4 @@
-@prefix hmas: <https://purl.org/hmas/core#> .
+@prefix hmas: <https://purl.org/hmas/> .
 @prefix fipa: <https://purl.org/fipa#> .
 @prefix ex: <http://example.org/> .
 
@@ -8,7 +8,7 @@ ex:agentStGallen a hmas:Agent ;
 ex:platformStGallen a hmas:HypermediaMASPlatform .
 
 ex:agentSaintEtienne a hmas:Agent ;
-	hmas:hasResourceProfile ex:agentSaintEtienneProfile ;
+    hmas:hasProfile ex:agentSaintEtienneProfile ;
     hmas:isHostedOn ex:platformSaintEtienne .
 
 ex:agentSaintEtienneProfile a hmas:ResourceProfile ;

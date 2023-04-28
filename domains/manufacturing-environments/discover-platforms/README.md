@@ -19,9 +19,6 @@ For competency question q4, it is outside the scope of this scenario to represen
 
 * [**Hypermedia MAS Platform**](https://purl.org/hmas/HypermediaMASPlatform): A Hypermedia MAS platform is a system providing a collection of features to support Hypermedia MAS.
 * [**Resource Hosting**](https://purl.org/hmas/isHostedOn): A relation between a resource (e.g., an agent) and the Hypermedia MAS Platform that hosts the resource.
-* [**Agent**](https://purl.org/hmas/Agent): see [Other scenario](../discover-core/README.md).
-* [**Resource Profile**](https://purl.org/hmas/ResourceProfile): see [Other scenario](../discover-core/README.md).
-* [**Signifier**](https://purl.org/hmas/Signifier): see [Other scenario](../discover-signifiers/README.md).
 
 ### Recommendations
 
