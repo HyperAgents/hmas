@@ -1,4 +1,4 @@
-prefix hmas: <https://purl.org/hmas/core#>
+prefix hmas: <https://purl.org/hmas/
 prefix ex: <http://example.org/>
 
 ask {

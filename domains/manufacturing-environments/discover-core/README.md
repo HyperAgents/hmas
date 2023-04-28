@@ -23,7 +23,6 @@ A production engineer uses a Web frontend to configure and operate a factory. Th
 * [**Artifact**](https://purl.org/hmas/Artifact):  A resource that can be dynamically constructed, shared, and used by agents to support their activities.
 * [**Resource Containment**](https://purl.org/hmas/contains): A relation that refers to a logical containment relation and is related to the definition of a workspace as a logical container.
 * [**Resource Profile**](https://purl.org/hmas/ResourceProfile): Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers.
-* [**Signifier**](https://purl.org/hmas/Signifier): see [Other scenario](../discover-signifiers/README.md).
 
 ### Recommendations
 
