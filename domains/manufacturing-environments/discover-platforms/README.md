@@ -1,4 +1,4 @@
-# Discovery of Hypermedia MAS Platforms and their Profiles
+# Discovery of Hypermedia MAS Platforms, Profiles and Signifiers
 
 ## Description
 
