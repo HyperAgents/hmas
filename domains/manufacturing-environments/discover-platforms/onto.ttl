@@ -11,6 +11,7 @@
 #################################################################
 
 :HypermediaMASPlatform a owl:Class ;
+        rdfs:isDefinedBy :core ;
         rdfs:comment "A Hypermedia MAS platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organizations, etc."@en ;
         rdfs:label "MAS Platform"@en, "Platforme SMA"@fr ;
         skos:example "Examples of hmas:HypermediaMASPlatform include Twitter, Facebook, a JADE node/deployment, or a JaCaMo node/deployment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en .
@@ -20,6 +21,7 @@
 #################################################################
 
 :hosts a owl:ObjectProperty, owl:AsymmetricProperty ;
+            rdfs:isDefinedBy :core ;
             rdfs:domain :HypermediaMASPlatform ;
             rdfs:range :Hostable ;
             rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
@@ -29,6 +31,7 @@
             rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .
 
 :isHostedOn a owl:ObjectProperty, owl:AsymmetricProperty ; 
+            rdfs:isDefinedBy :core ;
             owl:inverseOf :hosts ;
             rdfs:domain :Hostable ;
             rdfs:range :HypermediaMASPlatform ;
