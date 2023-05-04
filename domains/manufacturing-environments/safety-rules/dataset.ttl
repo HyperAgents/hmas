@@ -1,0 +1,72 @@
+@base <https://ci.mines-stetienne.fr/fna> .
+@prefix : <#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix hmas: <https://ci.mines-stetienne.fr/hmas> .
+@prefix hreg: <https://ci.mines-stetienne.fr/regulation> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<#> rdf:type owl:Ontology ;
+                                       owl:imports <https://ci.mines-stetienne.fr/hmas#> .
+
+
+
+:allTheDoorShouldBeClosedRule a hmas:Norm .
+
+:allTheDoorShouldBeClosedRule hmas:hasNormativeRequirement
+[ a rdf:Bag ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject :i3sLabWorkspace ; sp:predicate :contains ; sp:object :smoke ] ) ].
+] .
+
+:allTheDoorShouldBeClosedRule hmas:obliges 
+[ a rdf:Bag ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?door ; sp:predicate :isStatedAs ; sp:object :closed ] ) ]  ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?door ; sp:predicate :a ; sp:object :Door ] ) ] .
+] .
+
+:allTheDoorShouldBeClosedRule hmas:permits 
+[ a rdf:Bag ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?agent ; sp:predicate :leavesThrough ; sp:object ?exit-door  ] ) ] ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?exit-door  ; sp:predicate :a ; sp:object :EmergencyDoor ] ) ] .
+] .
+
+:allTheDoorShouldBeClosedRule hmas:forbids 
+[ a rdf:Bag ;
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?agent ; sp:predicate :takes ; sp:object ?elevator ] ) ] ; 
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?elevator ; sp:predicate :a ; sp:object :Elevator ] ) ] ;  
+  rdf:li [ a sp:Ask ; sp:where ([ sp:subject ?agent ; sp:predicate :a ; sp:object hmas:Agent ] ) ] .
+] .
+
+
+# Real world assumptions : 
+:i3sLab :a  hreg:Organization .
+:i3sLabSpecification a  hreg:OrganizationSpecification .
+
+:i3sLab hreg:enacts :i3sLabSpecification .
+:i3sLabSpecification hreg:defines :i3sLab .
+
+:i3sLabWorkspace hmas:contains :i3sLab .
+:i3sLabWorkspace hmas:contains  :smoke .
+
+:i3sLabSpecification :definesNorm :allTheDoorShouldBeClosedRule .
+:i3sLab :enforcesNorm :allTheDoorShouldBeClosedRule .
+
+:safetyGuard a hmas:Agent .
+:i3sLabWorkspace hmas:contains :safetyGuard .
+
+# It does not exist but..
+:i3sLabSpecification hreg:definesRole :Guard .
+
+# This, is currently allowed : 
+:i3sLab hreg:providesRoles :Guard .
+:Guard a hreg:AuthorityRole .
+
+# It does not exist but.. to know that currently the SafetyGuard :hasRole :Guard
+:safetyGuard ?:hasRole :Guard .
+
+
+:mydoor a :Door .
+:mydoor :isStated :opened .
