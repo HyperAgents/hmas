@@ -27,6 +27,7 @@ Containment relations between workspaces and the entities they contain allow age
 
 Agents, artifacts, documents, and other entities in a Hypermedia MAS are hosted on one or multiple platforms that provide various services to support the MAS. Hosting relations allow agents to discover hosting platforms together with any services they may provide. For example, a Hypermedia MAS for manufacturing may be implemented using a FIPA-compliant platform such as JADE. An agent in such a system is then hosted on an instance of a JADE platform, which provides an HTTP-based message transport service for interacting with the agents it hosts. A hosting relation can be used to advertise the hosting platform in the Resource Profile of an agent. Dereferencing the URI of the hosting platform would then retrieve a Resource profile of the platform, including any services the platform may provide. 
 
+
 ## Interaction Vocabulary
 The following features aim to enable autonomous agents to discover and interpret how to exploit affordances for interacting with artifacts and other agents in hypermedia environments. 
 
