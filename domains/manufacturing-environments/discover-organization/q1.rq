@@ -4,7 +4,7 @@ prefix hmas: <https://purl.org/hmas/>
 select ?org
 where {
   ?org a hmas:Organization ;
-       hmas:hasResourceProfile ?x .
+       hmas:hasProfile ?x .
   ex:factoryBuilding a hmas:Workspace ;
                      hmas:contains ?x .
 }
