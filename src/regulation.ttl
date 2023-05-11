@@ -21,32 +21,18 @@
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,
     "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
-    dct:issued "2023-04-30"^^xsd:date ;
-    ## dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;
-    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:issued "2022-05-01"^^xsd:date ;
     owl:imports :core ;
+    dct:contributor <https://www.emse.fr/~boissier/> ;
+    dct:contributor <https://www.linkedin.com/in/christopher-leturc/> ;
+    dct:contributor <https://danaivach.inrupt.net/profile/card#me> ;
+    dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;
+    dct:contributor <http://maxime-lefrancois.info/me#> ;
+    dct:creator <https://orcid.org/0000-0002-4506-2745> ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <> .
     
-<https://inria.fr/>
-  schema:name "Inria" ;
-  schema:url <https://inria.fr/> .
-
-<https://www.mines-stetienne.fr/>
-  schema:name "MINES Saint-Étienne" ;
-  schema:url <https://mines-stetienne.fr> .
-
-<https://www.unisg.ch/en>
-  schema:name "University of St.Gallen" ;
-  schema:url <https://www.unisg.ch> .
-
-<https://orcid.org/0000-0002-4506-2745> a schema:Person ;
-  schema:name "Luis Gustavo Nardin" ;
-  schema:email "luisgustavo.nardin@emse.fr" ;
-  schema:url <http://gnardin.github.io/website/> ;
-  schema:identifier <https://orcid.org/0000-0002-4506-2745> ;
-  schema:affiliation <https://www.mines-stetienne.fr/> .
-
 #################################################################
 #    Classes
 #################################################################
@@ -58,17 +44,17 @@
         
 :Role a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Role defines positions in an Organization."@en ;
+    rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization."@en ;
     rdfs:label "role"@en, "rôle"@fr .
 
 :Mission a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Mission gathers Organizational Goals."@en ;
+    rdfs:comment "A Mission gathers what Agents have to achieve in an Organization."@en ;
     rdfs:label "mission"@en, "mission"@fr .
     
 :Facility a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Facility defines functions in an Organization."@en ;
+    rdfs:comment "A Facility defines functions of materials (i.e., Artifacts) in an Organization."@en ;
     rdfs:label "facility"@en, "facilité"@fr .
 
 #################################################################
@@ -101,5 +87,5 @@
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
     rdsf:range :Facility ;
-    rdfs:comment "A relation that refers to a Facility that can be played in the context of an Organization."@en ;
+    rdfs:comment "A relation that refers to a Facility made available to Artifacts in the context of an Organization."@en ;
     rdfs:label "proposes facility"@en, "fournit de facilité"@fr .
