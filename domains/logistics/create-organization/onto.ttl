@@ -24,17 +24,17 @@
         
 :Role a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Role defines positions in an Organization."@en ;
+    rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization."@en ;
     rdfs:label "role"@en, "rôle"@fr .
 
 :Mission a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Mission gathers Organizational Goals."@en ;
+    rdfs:comment "A Mission gathers what Agents have to achieve in an Organization."@en ;
     rdfs:label "mission"@en, "mission"@fr .
     
 :Facility a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Facility defines functions in an Organization."@en ;
+    rdfs:comment "A Facility defines functions of materials (i.e., Artifacts) in an Organization."@en ;
     rdfs:label "facility"@en, "facilité"@fr .
 
 #################################################################
@@ -67,5 +67,5 @@
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
     rdsf:range :Facility ;
-    rdfs:comment "A relation that refers to a Facility that can be played in the context of an Organization."@en ;
+    rdfs:comment "A relation that refers to a Facility made available to Artifacts in the context of an Organization."@en ;
     rdfs:label "proposes facility"@en, "fournit de facilité"@fr .

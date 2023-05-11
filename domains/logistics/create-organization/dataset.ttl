@@ -9,11 +9,12 @@
 
 ## Workspace
 ex:LogisticsWS a hmas:Workspace ;
-    hmas:contains ex:John, ex:Alice, ex:Bob, ex:Carol, ex:David, ex:Elton, ex:WarehouseStGallen, ex:SL_LogisticsProfile, ex:GL_LogisticsProfile, ex:HSG_FactoryProfile, ex:ITM_FactoryProfile .
+    hmas:contains ex:John, ex:Alice, ex:Bob, ex:Carol, ex:David, ex:Elton, ex:Walter, ex:WarehouseStGallen, ex:SL_LogisticsProfile, ex:GL_LogisticsProfile, ex:HSG_FactoryProfile, ex:ITM_FactoryProfile .
 
 ## Agents
 ex:John a hmas:Agent ;
-    hmas:isContainedIn ex:SL_Logistics .
+    hmas:isContainedIn ex:LogisticsWS ;
+    hmas:isMemberOf ex:SL_Logistics .
 ex:Alice a hmas:Agent ;
     hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMemberOf ex:SL_Logistics .

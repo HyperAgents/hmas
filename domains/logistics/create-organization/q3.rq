@@ -6,10 +6,10 @@ prefix hmas: <https://purl.org/hmas/>
 select ?org
 where {
   ex:SL_Logistics a ?orgModel ;
-                  hmas:hasResourceProfile ?slOrgProfile .
+                  hmas:hasProfile ?slOrgProfile .
 
   ?org a ?orgModel ;
-       hmas:hasResourceProfile ?orgProfile .
+       hmas:hasProfile ?orgProfile .
   
   ?orgModel rdfs:subClassOf hmas:Organization .
   { ?orgModel a sh:NodeShape . }

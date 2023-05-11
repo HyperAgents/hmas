@@ -1,0 +1,29 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select ?role
+where {
+  ex:SL_Logistics a ?orgModel .
+  ?orgModel rdfs:subClassOf hmas:Organization ;
+            sh:property [
+              sh:path  hmas:providesRole ;
+              sh:qualifiedValueShape [ sh:class ?roleModel ] ;
+            ] .
+  { ?orgModel a sh:NodeShape . }
+  union
+  { ?orgShape a sh:NodeShape ;
+              sh:targetClass ?orgModel .
+  }
+
+  ?roleModel rdfs:subClassOf hmas:Role .
+  { ?roleModel a sh:NodeShape . }
+  union
+  { ?roleShape a sh:NodeShape ;
+               sh:targetClass ?roleModel .
+  }
+  
+  ?role a ?roleModel
+}
+order by ?role
