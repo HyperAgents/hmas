@@ -28,25 +28,29 @@ The FL Logistics also mirrors the functions of the spacial layout by defining a 
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What is the organization X's organization model that can be used to create a new organization?        | What is the SL Logistics' organization model that John can use to create the FL Logistics organization? `ex:Logistics`                              |
-| q2 | What are the organizations that follow a different organization model than organization X?            | What are the organizations that follows a different organization model than SL Logistics organization? `ex:HSG_Factory`, `ex:ITM_Factory`           |
-| q3 | What are the organizations with the same organization model as the organization X and contained in Y? | What are the organizations with the same organization model as the SL Logistics organization and contained in the same Workspace? `ex:GL_Logistics` |
-| q4 | What are the available organization models that can be used to create a new organization?             | What are the available organization models that can be used by John to create the FL Logistics organization? `ex:Logistics`, `ex:Manufacturing`     |
-| q5 | What are the organizational values of a given organization?                                           | What are the organizational values of the SL Logistics? `ex:SL_Commitment`, `ex:SL_IntegrityRespect`                                                |
-| q6 | What are the elements composing a given organization model?                                           | What are the values of the SL Logistics organization model? `ex:HumanResourcesOfficer`, `ex:FinanceOfficer`, `ex:AccountManager`, `ex:Planner`, `ex:Carrier`, `ex:Collector`, `ex:Deliverer`, `ex:HumanResourcesManagement`, `ex:FinancialManagement`, `ex:CommercialManagement`, `ex:PlanningManagement`, `ex:CarryGoods`, `ex:CollectGoods`, `ex:DeliverGoods`, `ex:PickingArea`, `ex:ReceivingArea`                                                              |
-| q7 | What are the roles provided by the organization X?                                                    | What are the roles provided by the SL Logistics organization? `ex:SL_HumanResourcesOfficer`, `ex:SL_FinanceOfficer`, `ex:SL_AccountManager`, `ex:SL_Planner`, `ex:SL_Carrier`, `ex:SL_Collector`, `ex:SL_Deliverer`             |
-| q8 | What are the missions proposed by the organization X?                                                 | What are the missions proposed by the SL Logistics organization? `ex:SL_HumanResourcesManagement`, `ex:SL_FinancialManagement`, `ex:SL_CommercialManagement`, `ex:SL_PlanningManagement`, `ex:SL_CarryGoods`, `ex:SL_CollectGoods`, `ex:SL_DeliverGoods`                                                    |
-| q9 | What are the facilities proposed by the organization model X?                                         | What are the facilities proposed by the SL Logistics organization? `ex:SL_PickingArea`, `ex:SL_ReceivingArea`
+| q1 | What is the organization X's organization model that can be used to create a new organization?       | What is the SL Logistics' organization model that John can use to create the FL Logistics organization? `ex:Logistics`                             |
+| q2 | What are the organizations that follow a different organization model than organization X?           | What are the organizations that follows a different organization model than SL Logistics organization? `ex:HSG_Factory`, `ex:ITM_Factory`          |
+| q3 | What are the organizations with the same organization model as the organization X and situated on Y? | What are the organizations with the same organization model as the SL Logistics organization and situated on the same Workspace? `ex:GL_Logistics` |
+| q4 | What are the available organization models that can be used to create a new organization?            | What are the available organization models that can be used by John to create the FL Logistics organization? `ex:Logistics`, `ex:Manufacturing`    |
+| q5 | What are the organizational values of a given organization?                                          | What are the organizational values of the SL Logistics? `ex:SL_Commitment`, `ex:SL_IntegrityRespect`                                               |
+| q6 | What are the elements composing a given organization model?                                          | What are the values of the SL Logistics organization model? `ex:HumanResourcesOfficer`, `ex:FinanceOfficer`, `ex:AccountManager`, `ex:Planner`, `ex:Carrier`, `ex:Collector`, `ex:Deliverer`, `ex:HumanResourcesManagement`, `ex:FinancialManagement`, `ex:CommercialManagement`, `ex:PlanningManagement`, `ex:CarryGoods`, `ex:CollectGoods`, `ex:DeliverGoods`, `ex:PickingArea`, `ex:ReceivingArea`                                                             |
+| q7 | What are the roles provided by the organization X?                                                   | What are the roles provided by the SL Logistics organization? `ex:SL_HumanResourcesOfficer`, `ex:SL_FinanceOfficer`, `ex:SL_AccountManager`, `ex:SL_Planner`, `ex:SL_Carrier`, `ex:SL_Collector`, `ex:SL_Deliverer`            |
+| q8 | What are the missions proposed by the organization X?                                                | What are the missions proposed by the SL Logistics organization? `ex:SL_HumanResourcesManagement`, `ex:SL_FinancialManagement`, `ex:SL_CommercialManagement`, `ex:SL_PlanningManagement`, `ex:SL_CarryGoods`, `ex:SL_CollectGoods`, `ex:SL_DeliverGoods`                                                   |
+| q9 | What are the facilities proposed by the organization X?                                              | What are the facilities proposed by the SL Logistics organization? `ex:SL_PickingArea`, `ex:SL_ReceivingArea`                                      |
 
 ## Glossary
 
-* **Organization Model**: An Organization Model is the combination of Roles, Missions, and Facilities in a consistent way.
+![image](create-organization.png)
+
+* **Organization Model**: An Organization Model is the combination of Roles, Missions, and Facilities in a consistent way used to enact one or multiple Organizations.
 * **Organizational Value**: An Organizational Value is a belief about a socially or personally desirable end state or action that is explicitly or implicitly shared by members of an organization.
 * **Role**: A Role defines positions of members (i.e., Agents) in an Organization.
 * **Mission**: A Mission gathers what Agents have to achieve in an Organization.
 * **Facility**: A Facility defines functions of materials (i.e., Artifacts) in an Organization.
-
-![image](create-organization.png)
+* **Organization**: see (domains/manufacturing-environments/discover-organization/README.md)[Discover Organizations, their Members and Materials in Hypermedia Environments] scenario.
+* **Agent**: see (domains/manufacturing-environments/discover-core/README.md)[Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments] scenario.
+* **Artifact**: see (domains/manufacturing-environments/discover-core/README.md)[Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments] scenario.
+* **Workspace**: see (domains/manufacturing-environments/discover-core/README.md)[Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments] scenario.
 
 ## Recommendations
 
