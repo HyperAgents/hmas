@@ -47,10 +47,10 @@ The FL Logistics also mirrors the functions of the spacial layout by defining a 
 * **Role**: A Role defines positions of members (i.e., Agents) in an Organization.
 * **Mission**: A Mission gathers what Agents have to achieve in an Organization.
 * **Facility**: A Facility defines functions of materials (i.e., Artifacts) in an Organization.
-* **Organization**: see (domains/manufacturing-environments/discover-organization/README.md)[Discover Organizations, their Members and Materials in Hypermedia Environments] scenario.
-* **Agent**: see (domains/manufacturing-environments/discover-core/README.md)[Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments] scenario.
-* **Artifact**: see (domains/manufacturing-environments/discover-core/README.md)[Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments] scenario.
-* **Workspace**: see (domains/manufacturing-environments/discover-core/README.md)[Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments] scenario.
+* **Organization**: see [Discover Organizations, their Members and Materials in Hypermedia Environments](domains/manufacturing-environments/discover-organization/README.md) scenario.
+* **Agent**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](domains/manufacturing-environments/discover-core/README.md) scenario.
+* **Artifact**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](domains/manufacturing-environments/discover-core/README.md) scenario.
+* **Workspace**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](domains/manufacturing-environments/discover-core/README.md) scenario.
 
 ## Recommendations
 
