@@ -7,7 +7,7 @@ A factory contains various industrial artifacts (e.g., industrial machinery, ind
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the discoverable organizations in a given workspace? | What are the discoverable organizations in the factory building workspace? `ex:factoryOrganization` |
+| q1 | What are the discoverable organizations in a given workspace? | What are the discoverable organizations in the production cell 1 workspace? `ex:factoryOrganization` |
 | q2 | What are the members of a given organization?                 | What are the members of the factory organization? `ex:autonomousBob`, `ex:factorySupervisor`        |
 | q3 | What are the materials of a given organization?               | What are the materials of the factory organization? `ex:ur5`, `ex:phantomX`                         |
 
@@ -16,6 +16,9 @@ A factory contains various industrial artifacts (e.g., industrial machinery, ind
 * **Organization**: An Organization is an entity representing a collection of Agents and Artifacts, and regulated by a regulation system.
 * **Member**: A Member refers to an Agent that belongs to an Organization.
 * **Material**: A Material refers to an Artifact that belongs to an Organization.
+* **Agent**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/domains/manufacturing-environments/discover-core/README.md) scenario.
+* **Artifact**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/domains/manufacturing-environments/discover-core/README.md) scenario.
+* **Workspace**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/domains/manufacturing-environments/discover-core/README.md) scenario.
 
 ## Recommendations
 
