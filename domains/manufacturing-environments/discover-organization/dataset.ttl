@@ -14,13 +14,13 @@ ex:factoryOrganization a hmas:Organization ;
 
 ex:factoryBuilding a hmas:Workspace ;
     hmas:hasProfile ex:factoryProfile ;
-    hmas:contains ex:groundFloor, ex:factoryOrganizationProfile .
+    hmas:contains ex:groundFloor .
 
 ex:groundFloor a hmas:Workspace ;
     hmas:contains ex:productionCell1, ex:productionCell2 .
 
 ex:productionCell1 a hmas:Workspace ;
-    hmas:contains ex:ur5, ex:phantomX, ex:autonomousBob, ex:factorySupervisor .
+    hmas:contains ex:ur5, ex:phantomX , ex:autonomousBob, ex:factorySupervisor .
 
 ex:productionCell2 a hmas:Workspace ;
     hmas:contains ex:autonomousBob .
