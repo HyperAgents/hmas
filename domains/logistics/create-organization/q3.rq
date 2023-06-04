@@ -7,9 +7,7 @@ select distinct ?org
 where {
   ex:SL_Logistics a ?orgModel .
 
-  { ?a hmas:isMemberOf ex:SL_Logistics . }
-  union
-  { ?a hmas:isMaterialOf ex:SL_Logistics . }
+  ?a ( hmas:isMemberOf | hmas:isMaterialOf ) ex:SL_Logistics .
   
   ?org a ?orgModel .
   
@@ -20,9 +18,7 @@ where {
               sh:targetClass ?orgModel .
   }
 
-  { ?x hmas:isMemberOf ?org . }
-  union
-  { ?x hmas:isMaterialOf ?org . }
+  ?x ( hmas:isMemberOf | hmas:isMaterialOf ) ?org .
 
   ?workspace hmas:contains ?a, ?x .
 
