@@ -72,7 +72,8 @@ skos:note a owl:AnnotationProperty .
   schema:identifier <http://orcid.org/0000-0003-0543-1232> ;
   schema:affiliation <https://inria.fr/> .
 
-<https://inria.fr/> schema:name "Inria" ; schema:url <https://inria.fr/> .
+<https://inria.fr/> schema:name "Inria" ;
+  schema:url <https://inria.fr/> .
 
 <https://www.linkedin.com/in/christopher-leturc/> a schema:Person ;
   schema:name "Chistopher Leturc" ;
@@ -116,6 +117,13 @@ skos:note a owl:AnnotationProperty .
   schema:name "Olivier Boissier" ;
   schema:email "olivier.boissier@emse.fr" ;
   schema:affiliation <https://mines-stetienne.fr> .
+
+<https://orcid.org/0000-0002-4506-2745> a schema:Person ;
+  schema:name "Luis Gustavo Nardin" ;
+  schema:email "luisgustavo.nardin@emse.fr" ;
+  schema:url <http://gnardin.github.io/website/> ;
+  schema:identifier <https://orcid.org/0000-0002-4506-2745> ;
+  schema:affiliation <https://www.mines-stetienne.fr/> .
 
 :Affordance a skos:Concept ;
     rdfs:isDefinedBy :core ;
@@ -197,8 +205,6 @@ _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyda
 
 [ a owl:AllDisjointClasses ;
     owl:members ( :Agent :Artifact :ResourceProfile :Signifier ) ] . 
-
-
 
 
 #################################################################
