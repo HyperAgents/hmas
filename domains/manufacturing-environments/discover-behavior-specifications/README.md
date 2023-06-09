@@ -7,7 +7,7 @@ Feature: Discovery of Behavior Specifications
 An agent is situated in a manufacturing workspace that contains a robotic arm artifact. The resource profile of the robotic arm artifact exposes a signifier that provides a specification describing how to exploit a behavior possibility, such as how to move the gripper of the robotic arm. Specifically, it is a behavior specification that defines a single action that specifies the moving of the gripper. This action specification:
 - is of type `onto:SetGripper` (https://ci.mines-stetienne.fr/kg/ontology#SetGripper),
 - expects an input of the schema `onto:GripperJoint` (https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and
-- can be executed via a hypermedia control from a set of hypermedia controls: The set of hypermedia controls contains two forms ⁠—⁠ a form describing an HTTP request, and a form describing a CoAP request.
+- can be executed via a hypermedia control from a set of hypermedia controls: The set of hypermedia controls contains two forms ⁠—⁠ a form describing an HTTP request, and a form describing a request based on the Constrained Application Protocol (CoAP).
 
 The agent has discovered the signifier and has the objective of behaving based on the signified SP. To this end, the agent provides an input of the schema `onto:GripperJoint`, and sends an HTTP request based on one of the forms.
 
