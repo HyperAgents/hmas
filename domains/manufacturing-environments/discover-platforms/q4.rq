@@ -1,0 +1,11 @@
+prefix hmas: <https://purl.org/hmas/>
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:signifier as ?signifier)
+
+    ex:platformSaintEtienne hmas:hasResourceProfile ?platformProfile .
+    ?platformProfile hmas:exposesSignifier ?signifier .
+
+    ?signifier a hmas:Signifier .
+}
