@@ -17,8 +17,8 @@ The agent has discovered the signifier and has the objective of behaving based o
 |----|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | q1 | What are the behavior specifications that a given signifier signifies?           | Behavior specifications that signifier `ex:gripperMovable` signifies: `ex:moveGripper`                                                    |
 | q2 | What are the action specifications that a given signifier signifies?             | Action specifications that signifier `ex:gripperMovable` signifies: `ex:moveGripper`                                                      |
-| q3 | What are the forms that describe how to execute a given specified action?        | Forms that describe how to execute moving the gripper of the robotic arm artifact based on `ex:moveGripper`: `ex:httpForm`, `ex:coapForm` |
-| q4 | What is the input that is expected by a given specified action?                  | Input that is expected for moving the gripper of the robotic arm artifact based on `ex:moveGripper`: `ex:gripperJoint`                    |
+| q3 | What are the forms that describe how to execute an action based on a given action specification?        | Forms that describe how to execute moving the gripper of the robotic arm artifact based on `ex:moveGripper`: `ex:httpForm`, `ex:coapForm` |
+| q4 | What is the input that is expected to execute an action based on a given action specification?                  | Input that is expected for moving the gripper of the robotic arm artifact based on `ex:moveGripper`: `ex:gripperJoint`                    |
 | q5 | What are the schemas of a given expected input?                                  | Schemas of the expected input `ex:moveGripper`: `ex:gripperJointSchema`                                                                   |
 
 
