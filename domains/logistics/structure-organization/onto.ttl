@@ -17,9 +17,14 @@
 #    Classes
 #################################################################
 
+:Membership a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A Membership indicates the Role played by an Agent in a Group of an Organization." ;
+    rdfs:label "membership"@en, "l'appartenance"@fr .
+    
 :Group a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Group is a set of Roles that exists in an Organization."@en ;
+    rdfs:comment "A Group structures an Organization."@en ;
     rdfs:label "group"@en, "groupe"@fr .
     
 #################################################################
@@ -42,27 +47,27 @@
     rdfs:comment "A relation that refers to an Organization that is structured by a Group."@en ;
     rdfs:label "is structured by"@en, "est structuré par"@fr .
     
-:plays a owl:ObjectProperty ;
+:isMembershipOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Agent ;
-    rdfs:range :Role ;
-    rdfs:comment "A relation that refers to a Role that an Agent plays in a Group."@en ;
-    rdfs:label "plays"@en, "joue"@fr .
+    rdfs:domain :Membership ;
+    rdfs:range :Agent ;
+    rdfs:comment "A relation that refers to the Agent involved in a Membership."@en ;
+    rdfs:label "is membership of"@en, "est l'appartenance à"@fr .
 
-:belongsTo a owl:ObjectProperty ;
+:isMembershipFor a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Role ;
+    rdfs:domain :Membership ;
+    rdfs:range :Role ;
+    rdfs:comment "A relation that refers to the Role involved in a Membership."@en ;
+    rdfs:label "is membership for"@en, "est l'adhésion pour"@fr .
+
+:isMembershipIn a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Membership ;
     rdfs:range :Group ;
-    rdfs:comment "A relation that refers to a Role that is part of a Group."@en ;
-    rdfs:label "belongs to"@en, "appartient à"@fr .
-
-:isLinkedTo a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Role ;
-    rdfs:range :Role ;
-    rdfs:comment "A relation that refers to a relation between two Roles."@en ;
-    rdfs:label "is linked to"@en, "est lié à"@fr .
-    
+    rdfs:comment "A relation that refers to the Group involved in a Membership."@en ;
+    rdfs:label "is membership in"@en, "est l'appartenance à"@fr .
+        
 :isSubGroupOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Group ;
