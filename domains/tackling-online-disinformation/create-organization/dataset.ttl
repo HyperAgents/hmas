@@ -146,7 +146,7 @@ ex:NewsNetwork a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:proposesFacility ;
-        sh:qualifiedValueShape [ sh:class ex:TODAnnotatingService ] ;
+        sh:qualifiedValueShape [ sh:class ex:NewsNetworkAnnotatingService ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
@@ -196,7 +196,7 @@ ex:ControlMission a sh:NodeShape ;
     rdfs:subClassOf hmas:Mission .
 
 ## Facilities
-ex:TODAnnotatingService a sh:NodeShape ;
+ex:NewsNetworkAnnotatingService a sh:NodeShape ;
     rdfs:subClassOf hmas:Facility .
 
 # INSTANTIATION
@@ -223,7 +223,7 @@ ex:DPr_SystemFunctionalityMission a ex:SystemFunctionalityMission .
 ex:DPr_ControlMission a ex:ControlMission .
 
 ## Facility
-ex:DPr_TODAnnotatingService a ex:TODAnnotatingService.
+ex:DPr_NewsNetworkAnnotatingService a ex:NewsNetworkAnnotatingService.
 
 ## Organizations
 ex:DPr_NetworkProfile a hmas:ResourceProfile .
@@ -233,7 +233,7 @@ ex:DPr_NetworkProfile a ex:NewsNetwork ;
     hmas:hasOrganizationalValue ex:DPr_Accountability, ex:DPr_Transparency ;
     hmas:providesRole ex:DPr_ActiveUser, ex:DPr_Journalist, ex:DPr_GeneralEvaluator, ex:DPr_GeneralInvestigator, ex:DPr_ImageInvestigator, ex:DPr_Admin, ex:DPr_Aggregator, ex:DPr_Contol;
     hmas:proposesMission ex:DPr_ContentEvaluationMission, ex:DPr_ArticleCredibilityMission, ex:DPr_ImageProvenanceMission, ex:DPr_SystemFunctionalityMission, ex:DPr_ControlMission ;
-    hmas:proposesFacility DPr_TODAnnotatingService .
+    hmas:proposesFacility DPr_NewsNetworkAnnotatingService .
 
 ex:GG_NetworkProfile a hmas:ResourceProfile .
 
