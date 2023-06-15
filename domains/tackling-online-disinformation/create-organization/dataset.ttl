@@ -233,7 +233,7 @@ ex:DPr_NetworkProfile a ex:NewsNetwork ;
     hmas:hasOrganizationalValue ex:DPr_Accountability, ex:DPr_Transparency ;
     hmas:providesRole ex:DPr_ActiveUser, ex:DPr_Journalist, ex:DPr_GeneralEvaluator, ex:DPr_GeneralInvestigator, ex:DPr_ImageInvestigator, ex:DPr_Admin, ex:DPr_Aggregator, ex:DPr_Contol;
     hmas:proposesMission ex:DPr_ContentEvaluationMission, ex:DPr_ArticleCredibilityMission, ex:DPr_ImageProvenanceMission, ex:DPr_SystemFunctionalityMission, ex:DPr_ControlMission ;
-    hmas:proposesFacility ex:SL_PickingArea, ex:SL_ReceivingArea .
+    hmas:proposesFacility DPr_TODAnnotatingService .
 
 ex:GG_NetworkProfile a hmas:ResourceProfile .
 
