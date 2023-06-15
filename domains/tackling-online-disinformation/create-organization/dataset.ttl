@@ -226,9 +226,10 @@ ex:DPr_ControlMission a ex:ControlMission .
 ex:DPr_NewsNetworkAnnotatingService a ex:NewsNetworkAnnotatingService.
 
 ## Organizations
-ex:DPr_NetworkProfile a hmas:ResourceProfile .
+ex:DPr_NetworkProfile a hmas:ResourceProfile; 
+    hmas:isProfileOf DPr_Network.
 
-ex:DPr_NetworkProfile a ex:NewsNetwork ;
+ex:DPr_Network a ex:NewsNetwork ;
     hmas:hasProfile ex:DPr_NetworkProfile ;
     hmas:hasOrganizationalValue ex:DPr_Accountability, ex:DPr_Transparency ;
     hmas:providesRole ex:DPr_ActiveUser, ex:DPr_Journalist, ex:DPr_GeneralEvaluator, ex:DPr_GeneralInvestigator, ex:DPr_ImageInvestigator, ex:DPr_Admin, ex:DPr_Aggregator, ex:DPr_Contol;
