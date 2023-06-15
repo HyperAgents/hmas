@@ -27,7 +27,7 @@ The TOD organization provides the following roles and responsibilities:
   9. _Control_: Control the functionality of the system, e.g. by ensuring that community guidelines are met.
 
 Additionally, the TOD organization proposes the following facility that members of the organization can use to achieve organizational goals:
-  + _Annotating service_: Agents can interact with the facility to search for the original sources of images and annotate online information with the discovered sources.
+  + _News network annotating service_: Agents can interact with the facility to search for the original sources of images and annotate online information with the discovered sources.
 
 ## Competency Questions
 
@@ -38,10 +38,10 @@ Additionally, the TOD organization proposes the following facility that members 
 | q3 | What are the organizations with the same organization model as the organization X and situated on Y? | What are the organizations with the same organization model as the DPr Network organization and situated on the same Workspace? `ex:GGNetwork` |
 | q4 | What are the available organization models that can be used to create a new organization?            | What are the available organization models that can be used by Alice to create the TOD organization? `ex:NewsNetwork`, `ex:Manufacturing`    |
 | q5 | What are the organizational values of a given organization?                                          | What are the organizational values of the DPr Network organization? `ex:DPr_Accountability`, `ex:DPr_Transparency`                                               |
-| q6 | What are the elements composing a given organization model?                                          | What are the elements composing the DPr Network's organization model? `ex:ActiveUser`, `ex:Journalist`, `ex:GeneralEvaluator`, `ex:GeneralInvestigator`, `ex:ImageInvestigator`, `ex:Admin`, `ex:Aggregator`, `ex:Control`, `ex:ContentEvaluationMission`, `ex:ArticleCredibilityMission`, `ex:ImageProvenanceMission`, `ex:SystemFunctionalityMission`, `ex:ControlMission`, `ex:TODAnnotatingServiceMission`                                                             |
+| q6 | What are the elements composing a given organization model?                                          | What are the elements composing the DPr Network's organization model? `ex:ActiveUser`, `ex:Journalist`, `ex:GeneralEvaluator`, `ex:GeneralInvestigator`, `ex:ImageInvestigator`, `ex:Admin`, `ex:Aggregator`, `ex:Control`, `ex:ContentEvaluationMission`, `ex:ArticleCredibilityMission`, `ex:ImageProvenanceMission`, `ex:SystemFunctionalityMission`, `ex:ControlMission`, `ex:NewsNetworkAnnotatingService`                                                             |
 | q7 | What are the roles provided by the organization X?                                                   | What are the roles provided by the DPr Network organization? `ex:DPr_ActiveUser`, `ex:DPr_Journalist`, `ex:DPr_GeneralEvaluator`, `ex:DPr_GeneralInvestigator`, `ex:DPr_ImageInvestigator`, `ex:DPr_Admin`, `ex:DPr_Aggregator`, `ex:DPr_Control`           |
 | q8 | What are the missions proposed by the organization X?                                                | What are the missions proposed by the DPr Network organization? `ex:DPr_ContentEvaluationMission`, `ex:DPr_ArticleCredibilityMission`, `ex:DPr_ImageProvenanceMission`, `ex:DPr_SystemFunctionalityMission`, `ex:DPr_ControlMission`                                                   |
-| q9 | What are the facilities proposed by the organization X?                                              | What are the facilities proposed by the DPr Network organization? `ex:DPr_TODAnnotatingServiceMission`                                     |
+| q9 | What are the facilities proposed by the organization X?                                              | What are the facilities proposed by the DPr Network organization? `ex:DPr_NewsNetworkAnnotatingService`                                     |
 
 ## Glossary
 
