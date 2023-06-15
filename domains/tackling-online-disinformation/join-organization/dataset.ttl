@@ -1,0 +1,420 @@
+@prefix ex: <http://example.org/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xs: <https://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+#    Core Ontology
+#################################################################
+
+## Workspace
+ex:NewsNetworkWS a hmas:Workspace ;
+    hmas:contains ex:John, ex:Alice, ex:Bob, ex:Carol, ex:David, ex:Elton, ex:Walter, ex:AnnotatingService, ex:OrganizationBoard.
+
+## Agents
+ex:John a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:TOD_Network .
+ex:Alice a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:TOD_Network .
+ex:Bob a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:TOD_Network .
+ex:Carol a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:TOD_Network .
+ex:David a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:TOD_Network .
+ex:Elton a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:TOD_Network .
+ex:Walter a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:TOD_Network .
+    
+## Artifacts
+ex:AnnotatingService a hmas:Artifact ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMaterialOf ex:TOD_Network .
+ex:OrganizationBoard a hmas:Artifact ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMaterialOf ex:TOD_Network ;
+	hmas:hasProfile ex:OrganizationBoardProfile.
+
+#################################################################
+#    Regulation Ontology
+#################################################################
+
+# SPECIFICATION
+
+## NOTE: Regulation entities' specification can be represented
+##       using implicit or explicit Target Class SHACL. Here we
+##       decided to use implicit Target Class SHACL because we
+##       do not expect any extensions for this scenario and we
+##       wanted to avoid extra labels.
+
+## Organization Specification
+ex:NewsNetwork a sh:NodeShape ;
+    rdfs:subClassOf hmas:Organization ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:qualifiedValueShape [ sh:class ex:Accountability ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:qualifiedValueShape [ sh:class ex:Transparency ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:ActiveUser ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Journalist ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:GeneralEvaluator ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:GeneralInvestigator ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:ImageInvestigator ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Admin ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;        
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Aggregator ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;        
+        ] ;
+	sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Control ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;        
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:ContentEvaluationMission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:ArticleCredibilityMission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:ImageProvenanceMission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:SystemFunctionalityMission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:ControlMission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesFacility ;
+        sh:qualifiedValueShape [ sh:class ex:NewsNetworkAnnotatingService ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+	sh:property [
+        sh:path hmas:proposesFacility ;
+        sh:qualifiedValueShape [ sh:class ex:NewsNetworkOrganizationBoard ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+	sh:property [
+        sh:path hmas:proposesFacility ;
+        sh:qualifiedValueShape [ sh:class ex:NewsNetworkGroupBoard ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] .
+
+## Organizational Values
+ex:Accountability a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalValue ;
+    rdfs:comment "Accompany information evaluations with details about who contributed to the tackling disinformation process, e.g. which agents evaluated the information."@en ;
+    rdfs:label "accountability"@en, "responsabilité"@fr .
+
+ex:Transparency a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalValue ;
+    rdfs:comment "Accompany information evaluations with details about how one contributed to the tackling disinformation process, e.g. what external services were used to evaluate the information."@en ;
+    rdfs:label "transparency"@en, "transparence"@fr .
+    
+## Roles
+ex:ActiveUser a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role .
+ex:Journalist a sh:NodeShape ;
+    rdfs:subClassOf hmas:ActiveUser .
+ex:GeneralEvaluator a sh:NodeShape ;
+    rdfs:subClassOf hmas:Journalist .
+ex:GeneralInvestigator a sh:NodeShape ;
+    rdfs:subClassOf hmas:Journalist .
+ex:ImageInvestigator a sh:NodeShape ;
+    rdfs:subClassOf hmas:Journalist .
+ex:Admin a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role .
+ex:Agreegator a sh:NodeShape ;
+    rdfs:subClassOf hmas:Admin .
+ex:Control a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role .
+
+## Missions
+ex:ContentEvaluationMission a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:ArticleCredibilityMission a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:ImageProvenanceMission a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:SystemFunctionalityMission a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:ControlMission a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+
+## Facilities
+ex:NewsNetworkAnnotatingService a sh:NodeShape ;
+    rdfs:subClassOf hmas:Facility .
+ex:NewsNetworkOrganizationBoard a sh:NodeShape ;
+    rdfs:subClassOf hmas:Facility .
+ex:NewsNetworkGroupBoard a sh:NodeShape ;
+    rdfs:subClassOf hmas:Facility .
+
+## Group 
+ex:OnlineDisinformationTacklingTeam a sh:NodeShape ;
+    rdfs:subClassOf hmas:Group .
+
+## Membership
+ex:OnlineDisinformationTacklingMembership a sh:NodeShape ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipFor ;
+        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedValueShape [ sh:class ex:OnlineDisinformationTacklingTeam ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] .
+
+# INSTANTIATION
+
+## Organizational Values
+ex:TOD_Accountability a ex:Accountability .
+ex:TOD_Transparency a ex:Transparency .
+
+# Groups
+## Groups
+ex:TOD_OnlineDisinformationTacklingTeam a ex:OnlineDisinformationTacklingTeam ;
+    hmas:structures ex:TOD_Network .
+
+## Roles
+ex:TOD_ActiveUser a ex:ActiveUser .
+ex:TOD_Journalist a ex:Journalist .
+ex:TOD_GeneralEvaluator a ex:GeneralEvaluator .
+ex:TOD_GeneralInvestigator a ex:GeneralInvestigator .
+ex:TOD_ImageInvestigator a ex:ImageInvestigator .
+ex:TOD_Admin a ex:Admin .
+ex:TOD_Aggregator a ex:Aggregator .
+ex:TOD_Control a ex:Control .
+
+## Missions
+ex:TOD_ContentEvaluationMission a ex:ContentEvaluationMission .
+ex:TOD_ArticleCredibilityMission a ex:ArticleCredibilityMission .
+ex:TOD_ImageProvenanceMission a ex:ImageProvenanceMission .
+ex:TOD_SystemFunctionalityMission a ex:SystemFunctionalityMission .
+ex:TOD_ControlMission a ex:ControlMission .
+
+## Facility
+ex:TOD_NewsNetworkAnnotatingService a ex:NewsNetworkAnnotatingService.
+ex:TOD_NewsNetworkOrganizationBoard a ex:NewsNetworkOrganizationBoard.
+ex:TOD_Network hmas:proposesFacility ex:TOD_NewsNetworkGroupBoard.
+
+
+## Organizations
+ex:TOD_NetworkProfile a hmas:ResourceProfile;
+	hmas:isProfileOf ex:TOD_Network.
+	
+ex:TOD_Network a ex:NewsNetwork ;
+    hmas:hasProfile ex:TOD_NetworkProfile ;
+    hmas:hasOrganizationalValue ex:TOD_Accountability, ex:TOD_Transparency ;
+    hmas:providesRole ex:TOD_ActiveUser, ex:TOD_Journalist, ex:TOD_GeneralEvaluator, ex:TOD_GeneralInvestigator, ex:TOD_ImageInvestigator, ex:TOD_Admin, ex:TOD_Aggregator, ex:TOD_Contol;
+    hmas:proposesMission ex:TOD_ContentEvaluationMission, ex:TOD_ArticleCredibilityMission, ex:TOD_ImageProvenanceMission, ex:TOD_SystemFunctionalityMission, ex:TOD_ControlMission ;
+    hmas:proposesFacility ex:TOD_NewsNetworkAnnotatingService, ex:TOD_NewsNetworkOrganizationBoard .
+	
+#################################################################
+#    Interaction Ontology
+#################################################################
+
+## Organization board profile
+ex:OrganizationBoardProfile a hmas:ResourceProfile;
+	hmas:isProfileOf ex:OrganizationBoard;
+	hmas:exposesSignifier ex:EnterOrganizationSignifier, ex:CreateGroupSignifier.
+
+## Signifiers
+ex:EnterSignifier a hmas:Signifier;
+	hmas:signifies ex:EnterOrganization.
+ex:CreateGroupSignifier a hmas:Signifier;
+	hmas:signifies ex:CreateGroup.
+
+## Action Execution Specifications
+ex:EnterOrganization a sh:NodeShape ;
+    rdfs:subClassOf hmas:ActionExecution ;
+    sh:property [
+    	sh:path prov:used ;
+    	sh:hasValue ex:HTTPForm1 ;
+  	] ;
+  	sh:property [
+    	sh:path hmas:hasInput;
+    	sh:qualifiedValueShape ex:Credentials ;
+    	sh:qualifiedMinCount 1 ;
+    	sh:qualifiedMaxCount 1 ;
+  	] .
+	
+ex:CreateGroup a sh:NodeShape ;
+    rdfs:subClassOf hmas:ActionExecution ;
+    sh:property [
+    	sh:path prov:used ;
+    	sh:hasValue ex:HTTPForm2 ;
+  	] ;
+  	sh:property [
+    	sh:path hmas:hasInput;
+    	sh:qualifiedValueShape ex:Credentials ;
+    	sh:qualifiedMinCount 1 ;
+    	sh:qualifiedMaxCount 1 ;
+  	] .
+
+## Forms
+ex:HTTPForm1 a hctl:Form ;
+	hctl:target <http://example.org/OrganizationBoard/connections> ;
+	hctl:forContentType "application/json" ;
+	htv:methodName "POST".
+
+ex:HTTPForm2 a hctl:Form ;
+	hctl:target <http://example.org/OrganizationBoard/groups> ;
+	hctl:forContentType "application/json" ;
+	htv:methodName "POST".
+
+## Input Specifications
+ex:Credentials a sh:NodeShape ;
+    rdfs:subClassOf hmas:Input ;
+    sh:property [
+    	sh:path [ sh:inversePath rdf:type ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+    	sh:path ex:hasHypothesisAPIKey ;
+    	sh:qualifiedValueShape xs:string ;
+    	sh:qualifiedMinCount 1 ;
+    	sh:qualifiedMaxCount 1 ;
+  	] .
+
+ex:GroupInput a sh:NodeShape ;
+    rdfs:subClassOf hmas:Input ;
+    sh:property [
+    	sh:path [ sh:inversePath rdf:type ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+    	sh:path ex:hasGroupClass ;
+    	sh:qualifiedValueShape hmas:Group ;
+    	sh:qualifiedMinCount 1 ;
+    	sh:qualifiedMaxCount 1 ;
+  	] .
+
+## GROUP BOARD INITIALIZATION
+ex:NewsNetworkWS hmas:contains ex:GroupBoard.
+
+ex:GroupBoard a hmas:Artifact ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMaterialOf ex:TOD_Network ;
+	hmas:hasProfile ex:GroupBoardProfile.
+	
+## Group board profile
+ex:GroupBoardProfile a hmas:ResourceProfile;
+	hmas:isProfileOf ex:GroupBoard;
+	hmas:exposesSignifier ex:CreateMembershipSignifier.
+
+## Signifiers
+ex:CreateMembershipSignifier a hmas:Signifier;
+	hmas:signifies ex:CreateMembership.
+
+## Action Execution Specifications
+ex:CreateMembership a sh:NodeShape ;
+    rdfs:subClassOf hmas:ActionExecution ;
+    sh:property [
+    	sh:path prov:used ;
+    	sh:hasValue ex:HTTPForm3 ;
+  	] ;
+  	sh:property [
+    	sh:path hmas:hasInput;
+    	sh:qualifiedValueShape ex:MembershipInput ;
+    	sh:qualifiedMinCount 1 ;
+    	sh:qualifiedMaxCount 1 ;
+  	] .
+	
+## Forms
+ex:HTTPForm3 a hctl:Form ;
+	hctl:target <http://example.org/GroupBoard/memberships> ;
+	hctl:forContentType "application/json" ;
+	htv:methodName "POST".
+
+ex:MembershipInput a sh:NodeShape ;
+    rdfs:subClassOf hmas:Input, ex:OnlineDisinformationTacklingMembership ;
+    sh:property [
+    	sh:path [ sh:inversePath rdf:type ] ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
