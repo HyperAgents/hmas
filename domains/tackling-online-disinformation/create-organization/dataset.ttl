@@ -223,7 +223,7 @@ ex:DPr_SystemFunctionalityMission a ex:SystemFunctionalityMission .
 ex:DPr_ControlMission a ex:ControlMission .
 
 ## Facility
-ex:DPr_TODAnnotatingService a ex:TODAnntoatingService.
+ex:DPr_TODAnnotatingService a ex:TODAnnotatingService.
 
 ## Organizations
 ex:DPr_NetworkProfile a hmas:ResourceProfile .
