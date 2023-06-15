@@ -27,7 +27,7 @@ The TOD organization provides the following roles and responsibilities:
   9. _Control_: Control the functionality of the system, e.g. by ensuring that community guidelines are met.
 
 Additionally, the TOD organization proposes the following facility that members of the organization can use to achieve organizational goals:
-  + _Annotator facility_: Agents can interact with the facility to search for the original sources of images and annotate online information with the discovered sources.
+  + _Annotating service_: Agents can interact with the facility to search for the original sources of images and annotate online information with the discovered sources.
 
 ## Competency Questions
 
