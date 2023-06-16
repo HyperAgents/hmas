@@ -5,3 +5,16 @@ Alice had decided to copy the DPr Network's organizational model to create the T
 
 Carol has an article published online that she wants to evaluate. Therefore, she decides to create a group so that she can become a member of a tackling online disinformation team for that article. First, she interacts with the organization board artifact to create such a team based on information that she discovers on the artifact's profile. The creation of the tackling disinformation team is reflected in the hypermedia environment with the creation of a group board artifact that can be used to manage the new team. Then, Carol interacts with the group board artifact to become a member of the team as a general evaluator, based on information that she discovers on the group board artifact's profile.  
 
+## Competency Questions
+
+| ID | Question in Natural Language | Example |
+|----|------------------------------|---------|
+| q1 | What are the artifacts contained in a workspace X?  | What are the artifacts contained in the News Network workspace? `ex:AnnotatingService`, `ex:OrganizationBoard`|
+| q2 | Of what organizations is an artifact X a material? | Of what organizations if the organization board artifact a material? `ex:TOD_Network`            |
+| q3 | What is the profile of an artifact X ? | What is the profile of the organization board artifact? `ex:OrganizationBoardProfile`            |
+| q4 | What are the signifiers exposed in a profile X? | What are the signifiers exposed in the profile of the organization board artifact? `ex:EnterOrganizationSignifier`, `ex:CreateGroupSignifier` |
+| q5 | What is the specification of an action execution signified by a signifier X? |  What is the specification of an action execution signified by `ex:EnterOrganizationSignifier`?  `ex:EnterOrganization`              |
+| q6 | What are the forms in a specification of an action execution X?  |  What are the forms in `ex:EnterOrganization`? `ex:HTTPForm1`         |
+| q7 | What is the input specification in a specification of an action execution X?  | What is the input specification in a specification of an action execution X?  `ex:Credentials`  |
+
+
