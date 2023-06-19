@@ -187,17 +187,17 @@ ex:Transparency a sh:NodeShape ;
 ex:ActiveUser a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
 ex:Journalist a sh:NodeShape ;
-    rdfs:subClassOf hmas:ActiveUser .
+    rdfs:subClassOf ex:ActiveUser .
 ex:GeneralEvaluator a sh:NodeShape ;
-    rdfs:subClassOf hmas:Journalist .
+    rdfs:subClassOf ex:Journalist .
 ex:GeneralInvestigator a sh:NodeShape ;
-    rdfs:subClassOf hmas:Journalist .
+    rdfs:subClassOf ex:Journalist .
 ex:MediaInvestigator a sh:NodeShape ;
-    rdfs:subClassOf hmas:Journalist .
+    rdfs:subClassOf ex:Journalist .
 ex:Admin a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
 ex:Agreegator a sh:NodeShape ;
-    rdfs:subClassOf hmas:Admin .
+    rdfs:subClassOf ex:Admin .
 ex:Control a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
 
@@ -216,17 +216,15 @@ ex:ControlMission a sh:NodeShape ;
 ## Facilities
 ex:NewsNetworkAnnotatingService a sh:NodeShape ;
     rdfs:subClassOf hmas:Facility .
-ex:NewsNetworkOrganizationBoard a sh:NodeShape ;
-    rdfs:subClassOf hmas:Facility .
-ex:NewsNetworkGroupBoard a sh:NodeShape ;
-    rdfs:subClassOf hmas:Facility .
 
 ## Group 
-ex:OnlineDisinformationTacklingTeam a sh:NodeShape ;
+ex:ActiveUsers a sh:NodeShape ;
+    rdfs:subClassOf hmas:Group .
+ex:ArticleEvaluators a sh:NodeShape ;
     rdfs:subClassOf hmas:Group .
 
 ## Membership
-ex:OnlineDisinformationTacklingMembership a sh:NodeShape ;
+ex:ActiveUserMembership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -236,13 +234,97 @@ ex:OnlineDisinformationTacklingMembership a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:qualifiedValueShape [ sh:class ex:ActiveUser ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class ex:OnlineDisinformationTacklingTeam ] ;
+        sh:qualifiedValueShape [ sh:class ex:ActiveUsers ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] .
+
+ex:ArticleGeneralEvaluatorMembership a sh:NodeShape ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipFor ;
+        sh:qualifiedValueShape [ sh:class ex:GeneralEvaluator ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedValueShape [ sh:class ex:ArticleEvaluators ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] .
+
+ex:ArticleGeneralInvestigatorMembership a sh:NodeShape ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipFor ;
+        sh:qualifiedValueShape [ sh:class ex:GeneralInvestigator ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedValueShape [ sh:class ex:ArticleEvaluators ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] .
+
+ex:ArticleMediaInvestigatorMembership a sh:NodeShape ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipFor ;
+        sh:qualifiedValueShape [ sh:class ex:MediaInvestigator ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedValueShape [ sh:class ex:ArticleEvaluators ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] .
+
+ex:ArticleAggregatorMembership a sh:NodeShape ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipFor ;
+        sh:qualifiedValueShape [ sh:class ex:Aggregator ] ;
+        sh:quantifiedMinCount 1 ;
+        sh:quantifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedValueShape [ sh:class ex:ArticleEvaluators ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] .
@@ -255,7 +337,7 @@ ex:TOD_Transparency a ex:Transparency .
 
 # Groups
 ## Groups
-ex:TOD_OnlineDisinformationTacklingTeam a ex:OnlineDisinformationTacklingTeam ;
+ex:TOD_ActiveUsers a ex:ActiveUsers ;
     hmas:structures ex:TOD_Network .
 
 ## Roles
@@ -297,124 +379,99 @@ ex:TOD_Network a ex:NewsNetwork ;
 #################################################################
 
 ## Organization board profile
-ex:OrganizationBoardProfile a hmas:ResourceProfile;
+ex:organizationBoardProfile a hmas:ResourceProfile;
 	hmas:isProfileOf ex:OrganizationBoard;
-	hmas:exposesSignifier ex:EnterOrganizationSignifier, ex:CreateGroupSignifier.
+	hmas:exposesSignifier ex:enactActiveUserMembershipSignifier, ex:enactGroupSignifier.
 
 ## Signifiers
-ex:EnterSignifier a hmas:Signifier;
-	hmas:signifies ex:EnterOrganization.
-ex:CreateGroupSignifier a hmas:Signifier;
-	hmas:signifies ex:CreateGroup.
+ex:enactActiveUserMembershipSignifier a hmas:Signifier;
+	hmas:signifies ex:EnactActiveUserMembership.
+ex:enactGroupSignifier a hmas:Signifier;
+	hmas:signifies ex:EnactGroup.
 
 ## Action Execution Specifications
-ex:EnterOrganization a sh:NodeShape ;
+ex:EnactActiveUserMembership a sh:NodeShape ;
     rdfs:subClassOf hmas:ActionExecution ;
     sh:property [
     	sh:path prov:used ;
-    	sh:hasValue ex:HTTPForm1 ;
+    	sh:hasValue ex:httpForm1 ;
   	] ;
   	sh:property [
     	sh:path hmas:hasInput;
-    	sh:qualifiedValueShape ex:Credentials ;
+    	sh:qualifiedValueShape [ sh:class ex:ActiveUserMembership ] ;
     	sh:qualifiedMinCount 1 ;
     	sh:qualifiedMaxCount 1 ;
   	] .
 	
-ex:CreateGroup a sh:NodeShape ;
+ex:EnactGroup a sh:NodeShape ;
     rdfs:subClassOf hmas:ActionExecution ;
     sh:property [
     	sh:path prov:used ;
-    	sh:hasValue ex:HTTPForm2 ;
+    	sh:hasValue ex:httpForm2 ;
   	] ;
   	sh:property [
     	sh:path hmas:hasInput;
-    	sh:qualifiedValueShape ex:Credentials ;
+    	sh:qualifiedValueShape [ 
+      		sh:or ( # this is not validated properly
+				[ sh:class ex:ActiveUsers ]
+				[ sh:class ex:ArticleEvaluators ] 
+				)
+        	] ;
     	sh:qualifiedMinCount 1 ;
     	sh:qualifiedMaxCount 1 ;
   	] .
 
 ## Forms
-ex:HTTPForm1 a hctl:Form ;
-	hctl:target <http://example.org/OrganizationBoard/connections> ;
+ex:httpForm1 a hctl:Form ;
+	hctl:target <http://example.org/OrganizationBoard/memberships> ;
 	hctl:forContentType "application/json" ;
 	htv:methodName "POST".
 
-ex:HTTPForm2 a hctl:Form ;
+ex:httpForm2 a hctl:Form ;
 	hctl:target <http://example.org/OrganizationBoard/groups> ;
 	hctl:forContentType "application/json" ;
 	htv:methodName "POST".
 
-## Input Specifications
-ex:Credentials a sh:NodeShape ;
-    rdfs:subClassOf hmas:Input ;
-    sh:property [
-    	sh:path [ sh:inversePath rdf:type ] ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-    ] ;
-    sh:property [
-    	sh:path ex:hasHypothesisAPIKey ;
-    	sh:qualifiedValueShape xs:string ;
-    	sh:qualifiedMinCount 1 ;
-    	sh:qualifiedMaxCount 1 ;
-  	] .
-
-ex:GroupInput a sh:NodeShape ;
-    rdfs:subClassOf hmas:Input ;
-    sh:property [
-    	sh:path [ sh:inversePath rdf:type ] ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-    ] ;
-    sh:property [
-    	sh:path ex:hasGroupClass ;
-    	sh:qualifiedValueShape hmas:Group ;
-    	sh:qualifiedMinCount 1 ;
-    	sh:qualifiedMaxCount 1 ;
-  	] .
-
 ## GROUP BOARD INITIALIZATION
 ex:NewsNetworkWS hmas:contains ex:GroupBoard.
 
-ex:GroupBoard a hmas:Artifact ;
+ex:groupBoard a hmas:Artifact ;
     hmas:isContainedIn ex:NewsNetworkWS ;
     hmas:isMaterialOf ex:TOD_Network ;
-	hmas:hasProfile ex:GroupBoardProfile.
+	hmas:hasProfile ex:groupBoardProfile.
 	
 ## Group board profile
-ex:GroupBoardProfile a hmas:ResourceProfile;
-	hmas:isProfileOf ex:GroupBoard;
-	hmas:exposesSignifier ex:CreateMembershipSignifier.
+ex:groupBoardProfile a hmas:ResourceProfile;
+	hmas:isProfileOf ex:groupBoard;
+	hmas:exposesSignifier ex:enactMembershipSignifier.
 
 ## Signifiers
-ex:CreateMembershipSignifier a hmas:Signifier;
-	hmas:signifies ex:CreateMembership.
+ex:enactMembershipSignifier a hmas:Signifier;
+	hmas:signifies ex:EnactMembership.
 
 ## Action Execution Specifications
-ex:CreateMembership a sh:NodeShape ;
+ex:EnactMembership a sh:NodeShape ;
     rdfs:subClassOf hmas:ActionExecution ;
     sh:property [
     	sh:path prov:used ;
-    	sh:hasValue ex:HTTPForm3 ;
+    	sh:hasValue ex:httpForm3 ;
   	] ;
   	sh:property [
     	sh:path hmas:hasInput;
-    	sh:qualifiedValueShape ex:MembershipInput ;
+    	sh:qualifiedValueShape [ 
+      		sh:or ( # this is not validated properly
+				[ sh:class ex:ArticleGeneralEvaluatorMembership ]
+				[ sh:class ex:ArticleGeneralInvestigatorMembership ] 
+                [ sh:class ex:ArticleMediaInvestigatorMembership ] 
+                [ sh:class ex:ArticleAggregatorMembership ] 
+				)
+        	] ;
     	sh:qualifiedMinCount 1 ;
     	sh:qualifiedMaxCount 1 ;
   	] .
 	
 ## Forms
-ex:HTTPForm3 a hctl:Form ;
+ex:httpForm3 a hctl:Form ;
 	hctl:target <http://example.org/GroupBoard/memberships> ;
 	hctl:forContentType "application/json" ;
 	htv:methodName "POST".
-
-ex:MembershipInput a sh:NodeShape ;
-    rdfs:subClassOf hmas:Input, ex:OnlineDisinformationTacklingMembership ;
-    sh:property [
-    	sh:path [ sh:inversePath rdf:type ] ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-    ] .
