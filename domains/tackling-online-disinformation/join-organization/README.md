@@ -19,10 +19,10 @@ Upon examining the group board artifact's profile, Carol perceives information a
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the artifacts contained in given workspace?  | What are the artifacts contained in the News Network workspace? `ex:AnnotatingService`, `ex:OrganizationBoard`, `ex:GroupBoard` |
+| q1 | What are the artifacts contained in given workspace?  | What are the artifacts contained in the News Network workspace? `ex:AnnotatingService`, `ex:organizationBoard`, `ex:groupBoard` |
 | q2 | Of what organizations is given artifact a material? | Of what organizations is the organization board artifact a material? `ex:TOD_Network`            |
 | q3 | What is the profile of given artifact? | What is the profile of the organization board artifact? `ex:OrganizationBoardProfile`            |
-| q4 | What are the signifiers exposed in a given profile? | What are the signifiers exposed in the profile of the organization board artifact? `ex:EnterOrganizationSignifier`, `ex:CreateGroupSignifier` |
-| q5 | What is the specification of an action execution signified by a given signifier? |  What is the specification of an action execution signified by `ex:EnterOrganizationSignifier`?  `ex:EnterOrganization`              |
-| q6 | What are the forms in a given specification of an action execution?  |  What are the forms in the specification `ex:EnterOrganization`? `ex:HTTPForm1`         |
-| q7 | What is the input specification in a given specification of an action execution?  | What is the input specification in the specification `ex:EnterOrganization`?  `ex:Credentials`  |
+| q4 | What are the signifiers exposed in a given profile? | What are the signifiers exposed in the profile of the organization board artifact? `ex:EnactActiveUserMembershipSignifier`, `ex:EnactGroupSignifier` |
+| q5 | What is the specification of an action execution signified by a given signifier? |  What is the specification of an action execution signified by `ex:EnactActiveUserMembershipSignifier`?  `ex:EnactActiveUserMembership`              |
+| q6 | What are the forms in a given specification of an action execution?  |  What are the forms in the specification `ex:EnactActiveUserMembership`? `ex:httpForm1`         |
+| q7 | What is the input specification in a given specification of an action execution?  | What is the input specification in the specification ex:EnactActiveUserMembership`?  `ex:ActiveUsers`, `ex:ArticleEvaluators ` |
