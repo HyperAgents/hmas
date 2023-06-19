@@ -1,4 +1,4 @@
-@prefix ex: <http://example.org/> .
+a@prefix ex: <http://example.org/> .
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -92,7 +92,7 @@ ex:NewsNetwork a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
-        sh:qualifiedValueShape [ sh:class ex:ImageInvestigator ] ;
+        sh:qualifiedValueShape [ sh:class ex:MediaInvestigator ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
@@ -174,7 +174,7 @@ ex:GeneralEvaluator a sh:NodeShape ;
     rdfs:subClassOf hmas:Journalist .
 ex:GeneralInvestigator a sh:NodeShape ;
     rdfs:subClassOf hmas:Journalist .
-ex:ImageInvestigator a sh:NodeShape ;
+ex:MediaInvestigator a sh:NodeShape ;
     rdfs:subClassOf hmas:Journalist .
 ex:Admin a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
@@ -210,7 +210,7 @@ ex:DPr_ActiveUser a ex:ActiveUser .
 ex:DPr_Journalist a ex:Journalist .
 ex:DPr_GeneralEvaluator a ex:GeneralEvaluator .
 ex:DPr_GeneralInvestigator a ex:GeneralInvestigator .
-ex:DPr_ImageInvestigator a ex:ImageInvestigator .
+ex:DPr_MediaInvestigator a ex:MediaInvestigator .
 ex:DPr_Admin a ex:Admin .
 ex:DPr_Aggregator a ex:Aggregator .
 ex:DPr_Control a ex:Control .
@@ -232,7 +232,7 @@ ex:DPr_NetworkProfile a hmas:ResourceProfile;
 ex:DPr_Network a ex:NewsNetwork ;
     hmas:hasProfile ex:DPr_NetworkProfile ;
     hmas:hasOrganizationalValue ex:DPr_Accountability, ex:DPr_Transparency ;
-    hmas:providesRole ex:DPr_ActiveUser, ex:DPr_Journalist, ex:DPr_GeneralEvaluator, ex:DPr_GeneralInvestigator, ex:DPr_ImageInvestigator, ex:DPr_Admin, ex:DPr_Aggregator, ex:DPr_Contol;
+    hmas:providesRole ex:DPr_ActiveUser, ex:DPr_Journalist, ex:DPr_GeneralEvaluator, ex:DPr_GeneralInvestigator, ex:DPr_MediaInvestigator, ex:DPr_Admin, ex:DPr_Aggregator, ex:DPr_Contol;
     hmas:proposesMission ex:DPr_ContentEvaluationMission, ex:DPr_ArticleCredibilityMission, ex:DPr_ImageProvenanceMission, ex:DPr_SystemFunctionalityMission, ex:DPr_ControlMission ;
     hmas:proposesFacility DPr_NewsNetworkAnnotatingService .
 
