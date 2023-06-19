@@ -3,12 +3,12 @@
 ## Description
 Alice has experience working as a journalist in a reputable news organization, the DPr Network. 
 Throughout her career, she has witnessed the growing problem of online disinformation and the negative impact it has on society. 
-Motivated to combat these issues on a broader scale, she decides to create her own organization dedicated to tackle online disinformation, the TOD organization. 
+Motivated to combat these issues on a broader scale, she decides to enact her own organization dedicated to tackling online disinformation, the TOD organization. 
 Inspired by her experience at the DPr Network, Alice intends to use the News Network organization model based on which the DPr Network organization has been enacted, as reference to organize the TOD organization.
 
 Alice is contained in the News Network workspace, a shared space for news network members, including members of the DPr Network. The workspace also contains a repository artifact that is used for storing and managing organization models. Alice interacts with the repository artifact to retrieve the News Network organization models. 
 
-To ensure the effectiveness of the upcoming TOD organization, she conducts a comparative analysis between the News Network organization model and and other similar organization models, as well as theoretical organization models proposed by experts in the field. She concludes that the News Network organization model provides a solid foundation for the creation of the TOD organization.
+To ensure the effectiveness of the upcoming TOD organization, she conducts a comparative analysis between the News Network organization model and and other similar organization models, as well as theoretical organization models proposed by experts in the field. She concludes that the News Network organization model provides a solid foundation for the enactment of the TOD organization.
 
 Any organization enacted based on the News Network organization model is characterized by the following properties:
 
@@ -33,7 +33,7 @@ Any organization enacted based on the News Network organization model is charact
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the available organization models that can be used to create a new organization? | What are the available organization models that can be used by Alice to create the TOD organization? `ex:NewsNetwork`, `ex:Manufacturing`    |
+| q1 | What are the available organization models that can be used to enact a new organization? | What are the available organization models that can be used by Alice to enact the TOD organization? `ex:NewsNetwork`, `ex:Manufacturing`    |
 | q2 | What are the elements composing a given organization model?  | What are the elements composing the News Network organization model? `ex:ActiveUser`, `ex:Journalist`, `ex:GeneralEvaluator`, `ex:GeneralInvestigator`, `ex:ImageInvestigator`, `ex:Admin`, `ex:Aggregator`, `ex:Control`, `ex:ContentEvaluationMission`, `ex:ArticleCredibilityMission`, `ex:ImageProvenanceMission`, `ex:SystemFunctionalityMission`, `ex:ControlMission`, `ex:NewsNetworkAnnotatingService`       |
 | q2 | What are the organizational values of an organization that is enacted based on a given organization model?  | What are the organizational values of an organization that is enacted based on the News Network organization model? `ex:Accountability`, `ex:Transparency`   |
 | q4 | What are the roles provided by an organization that is enacted based on a given organization model?  | What are the roles provided by an organization that is enacted based on the News Network organization model? `ex:ActiveUser`, `ex:Journalist`, `ex:GeneralEvaluator`, `ex:GeneralInvestigator`, `ex:ImageInvestigator`, `ex:Admin`, `ex:Aggregator`, `ex:Control` |
@@ -42,6 +42,7 @@ Any organization enacted based on the News Network organization model is charact
 
 ## Glossary
 
+* **Organization Enactment**: [TBA]
 * **Organization Model**: see [Create an Organization](https://github.com/HyperAgents/ns.hyperagents.org/tree/master/domains/logistics/create-organization/README.md) scenario.
 * **Organizational Value**: see [Create an Organization](https://github.com/HyperAgents/ns.hyperagents.org/tree/master/domains/logistics/create-organization/README.md) scenario.
 * **Role**: see [Create an Organization](https://github.com/HyperAgents/ns.hyperagents.org/tree/master/domains/logistics/create-organization/README.md) scenario.
