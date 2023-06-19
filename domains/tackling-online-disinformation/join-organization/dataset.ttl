@@ -101,7 +101,7 @@ ex:NewsNetwork a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
-        sh:qualifiedValueShape [ sh:class ex:ImageInvestigator ] ;
+        sh:qualifiedValueShape [ sh:class ex:MediaInvestigator ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
@@ -159,7 +159,7 @@ ex:NewsNetwork a sh:NodeShape ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
-	sh:property [
+    sh:property [
         sh:path hmas:proposesFacility ;
         sh:qualifiedValueShape [ sh:class ex:NewsNetworkOrganizationBoard ] ;
         sh:qualifiedMinCount 1 ;
@@ -192,7 +192,7 @@ ex:GeneralEvaluator a sh:NodeShape ;
     rdfs:subClassOf hmas:Journalist .
 ex:GeneralInvestigator a sh:NodeShape ;
     rdfs:subClassOf hmas:Journalist .
-ex:ImageInvestigator a sh:NodeShape ;
+ex:MediaInvestigator a sh:NodeShape ;
     rdfs:subClassOf hmas:Journalist .
 ex:Admin a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
@@ -263,7 +263,7 @@ ex:TOD_ActiveUser a ex:ActiveUser .
 ex:TOD_Journalist a ex:Journalist .
 ex:TOD_GeneralEvaluator a ex:GeneralEvaluator .
 ex:TOD_GeneralInvestigator a ex:GeneralInvestigator .
-ex:TOD_ImageInvestigator a ex:ImageInvestigator .
+ex:TOD_MediaInvestigator a ex:MediaInvestigator .
 ex:TOD_Admin a ex:Admin .
 ex:TOD_Aggregator a ex:Aggregator .
 ex:TOD_Control a ex:Control .
@@ -288,7 +288,7 @@ ex:TOD_NetworkProfile a hmas:ResourceProfile;
 ex:TOD_Network a ex:NewsNetwork ;
     hmas:hasProfile ex:TOD_NetworkProfile ;
     hmas:hasOrganizationalValue ex:TOD_Accountability, ex:TOD_Transparency ;
-    hmas:providesRole ex:TOD_ActiveUser, ex:TOD_Journalist, ex:TOD_GeneralEvaluator, ex:TOD_GeneralInvestigator, ex:TOD_ImageInvestigator, ex:TOD_Admin, ex:TOD_Aggregator, ex:TOD_Contol;
+    hmas:providesRole ex:TOD_ActiveUser, ex:TOD_Journalist, ex:TOD_GeneralEvaluator, ex:TOD_GeneralInvestigator, ex:TOD_MediaInvestigator, ex:TOD_Admin, ex:TOD_Aggregator, ex:TOD_Contol;
     hmas:proposesMission ex:TOD_ContentEvaluationMission, ex:TOD_ArticleCredibilityMission, ex:TOD_ImageProvenanceMission, ex:TOD_SystemFunctionalityMission, ex:TOD_ControlMission ;
     hmas:proposesFacility ex:TOD_NewsNetworkAnnotatingService, ex:TOD_NewsNetworkOrganizationBoard .
 	
