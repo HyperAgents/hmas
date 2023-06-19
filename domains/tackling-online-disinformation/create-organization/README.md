@@ -4,19 +4,19 @@
 Alice has experience working as a journalist in a reputable news organization, the DPr Network. 
 Throughout her career, she has witnessed the growing problem of online disinformation and the negative impact it has on society. 
 Motivated to combat these issues on a broader scale, she decides to create her own organization dedicated to tackle online disinformation, the TOD organization. 
-Inspired by her experience at DPr Network, Alice intends to use the DPr Network's organization model as reference to organize the TOD organization.
+Inspired by her experience at the DPr Network, Alice intends to use the News Network organization model based on which the DPr Network organization has been enacted, as reference to organize the TOD organization.
 
-The resource profile of the DPr Network organization is contained in a workspace. To ensure the effectiveness of TOD, she conducts a comparative analysis between DPr Network's organization model
+Alice is contained in the News Network workspace, a shared space for news network members, including members of the DPr Network. The workspace also contains a repository artifact that is used for storing and managing organization models. Alice interacts with the repository artifact to retrieve the News Network organization models. 
 
-Alice, however, is unsure whether the DPr Network's organization model is adequate in her case. Thus, she conducts a comparative analysis between
-DPr Network's organization model and other existing organizations focused on combating disinformation, as well as theoretical organization models proposed by experts in the field.  
-She concludes that the DPr Network's organization model provides a solid foundation for the creation of the TOD organization.
+To ensure the effectiveness of the upcoming TOD organization, she conducts a comparative analysis between the News Network organization model and and other similar organization models, as well as theoretical organization models proposed by experts in the field. She concludes that the News Network organization model provides a solid foundation for the creation of the TOD organization.
 
-The main aspect of the DPr Network that motivated Alice to copy its organization model is the network's culture reflected in its organizational values:
+Any organization enacted based on the News Network organization model is characterized by the following properties:
+
++ The organization has the following organizational values:
   + _Accountability_: Accompany information evaluations with details about who contributed to the tackling disinformation process, e.g. which agents evaluated the information. 
   + _Transparency_: Accompany information evaluations with details about how one contributed to the tackling disinformation process, e.g. what external services were used to evaluate the information.
  
-The TOD organization provides the following roles and responsibilities:
++ The organization provides the following roles with their responsibilities:
   1. _Active user_: Evaluate online information or consume the aggregated evaluation of prior active users.
   2. _Journalist_: Evaluate online information (a type of active user).
   3. _General evaluator_: Annotate online information based on the general impression of the information (a type of journalist).
@@ -26,22 +26,19 @@ The TOD organization provides the following roles and responsibilities:
   8. _Aggregator_: Annotate online information based on aggregated evaluations to give a summarized overview of the evaluation results (a type of admin).
   9. _Control_: Control the functionality of the system, e.g. by ensuring that community guidelines are met.
 
-Additionally, the TOD organization proposes the following facility that members of the organization can use to achieve organizational goals:
++ The organization proposes the following facility that members of the organization can use to achieve organizational goals:
   + _News network annotating service_: Agents can interact with the facility to search for the original sources of images and annotate online information with the discovered sources.
 
 ## Competency Questions
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What is the organization X's organization model that can be used to create a new organization?       | What is the DPr Network's organization model that Alice can use to create the TOD organization? `ex:NewsNetwork`                             |
-| q2 | What are the organizations that follow a different organization model than organization X?           | What are the organizations that follows a different organization model than the DPr Network organization? `ex:HSG_Factory`, `ex:ITM_Factory`          |
-| q3 | What are the organizations with the same organization model as the organization X and situated on Y? | What are the organizations with the same organization model as the DPr Network organization and situated on the same Workspace? `ex:GGNetwork` |
-| q4 | What are the available organization models that can be used to create a new organization?            | What are the available organization models that can be used by Alice to create the TOD organization? `ex:NewsNetwork`, `ex:Manufacturing`    |
-| q5 | What are the organizational values of a given organization?                                          | What are the organizational values of the DPr Network organization? `ex:DPr_Accountability`, `ex:DPr_Transparency`                                               |
-| q6 | What are the elements composing a given organization model?                                          | What are the elements composing the DPr Network's organization model? `ex:ActiveUser`, `ex:Journalist`, `ex:GeneralEvaluator`, `ex:GeneralInvestigator`, `ex:ImageInvestigator`, `ex:Admin`, `ex:Aggregator`, `ex:Control`, `ex:ContentEvaluationMission`, `ex:ArticleCredibilityMission`, `ex:ImageProvenanceMission`, `ex:SystemFunctionalityMission`, `ex:ControlMission`, `ex:NewsNetworkAnnotatingService`                                                             |
-| q7 | What are the roles provided by the organization X?                                                   | What are the roles provided by the DPr Network organization? `ex:DPr_ActiveUser`, `ex:DPr_Journalist`, `ex:DPr_GeneralEvaluator`, `ex:DPr_GeneralInvestigator`, `ex:DPr_ImageInvestigator`, `ex:DPr_Admin`, `ex:DPr_Aggregator`, `ex:DPr_Control`           |
-| q8 | What are the missions proposed by the organization X?                                                | What are the missions proposed by the DPr Network organization? `ex:DPr_ContentEvaluationMission`, `ex:DPr_ArticleCredibilityMission`, `ex:DPr_ImageProvenanceMission`, `ex:DPr_SystemFunctionalityMission`, `ex:DPr_ControlMission`                                                   |
-| q9 | What are the facilities proposed by the organization X?                                              | What are the facilities proposed by the DPr Network organization? `ex:DPr_NewsNetworkAnnotatingService`                                     |
+| q1 | What are the available organization models that can be used to create a new organization? | What are the available organization models that can be used by Alice to create the TOD organization? `ex:NewsNetwork`, `ex:Manufacturing`    |
+| q2 | What are the elements composing a given organization model?  | What are the elements composing the News Network organization model? `ex:ActiveUser`, `ex:Journalist`, `ex:GeneralEvaluator`, `ex:GeneralInvestigator`, `ex:ImageInvestigator`, `ex:Admin`, `ex:Aggregator`, `ex:Control`, `ex:ContentEvaluationMission`, `ex:ArticleCredibilityMission`, `ex:ImageProvenanceMission`, `ex:SystemFunctionalityMission`, `ex:ControlMission`, `ex:NewsNetworkAnnotatingService`       |
+| q2 | What are the organizational values of an organization that is enacted based on a given organization model?  | What are the organizational values of an organization that is enacted based on the News Network organization model? `ex:Accountability`, `ex:Transparency`   |
+| q4 | What are the roles provided by an organization that is enacted based on a given organization model?  | What are the roles provided by an organization that is enacted based on the News Network organization model? `ex:ActiveUser`, `ex:Journalist`, `ex:GeneralEvaluator`, `ex:GeneralInvestigator`, `ex:ImageInvestigator`, `ex:Admin`, `ex:Aggregator`, `ex:Control` |
+| q5 | What are the missions proposed by an organization that is enacted based on a given organization model?     | What are the missions proposed by an organization that is enacted based on the News Network organization model? `ex:ContentEvaluationMission`, `ex:ArticleCredibilityMission`, `ex:ImageProvenanceMission`, `ex:SystemFunctionalityMission`, `ex:ControlMission`                                                   |
+| q6 | What are the facilities proposed by an organization that is enacted based on a given organization model?   | What are the facilities proposed by an organization that is enacted based on the News Network organization model? `ex:NewsNetworkAnnotatingService`                                     |
 
 ## Glossary
 
@@ -57,4 +54,7 @@ Additionally, the TOD organization proposes the following facility that members 
 
 ## Recommendations
 
-None
+In the hypermedia environment, agents can discover organization models in order to examine the modeling choices of existing organizations or create new organizations using the discovered organization models. This can be achieved through various methods, including:
+- Interacting with shared artifacts that offer the possibility to retrieve, store, and manage organization models. 
+- Interacting with artifacts that are materials of organizations themselves, and they offer the possibility to retrieve, store, and manage the organization models of their associated organizations.
+- Discovering organization models through the resource profiles of the organizations that are enacted based on these models. 
