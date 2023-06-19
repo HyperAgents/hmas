@@ -25,4 +25,4 @@ Upon examining the group board artifact's profile, Carol perceives information a
 | q4 | What are the signifiers exposed in a given profile? | What are the signifiers exposed in the profile of the organization board artifact? `ex:EnactActiveUserMembershipSignifier`, `ex:EnactGroupSignifier` |
 | q5 | What is the specification of an action execution signified by a given signifier? |  What is the specification of an action execution signified by `ex:EnactActiveUserMembershipSignifier`?  `ex:EnactActiveUserMembership`              |
 | q6 | What are the forms in a given specification of an action execution?  |  What are the forms in the specification `ex:EnactActiveUserMembership`? `ex:httpForm1`         |
-| q7 | What is the input specification in a given specification of an action execution?  | What is the input specification in the specification ex:EnactActiveUserMembership`?  `ex:ActiveUsers`, `ex:ArticleEvaluators ` |
+| q7 | What is the input specification in a given specification of an action execution?  | What is the input specification in the specification ex:EnactActiveUserMembership?  `ex:ActiveUsers`, `ex:ArticleEvaluators` |
