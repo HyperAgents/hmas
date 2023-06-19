@@ -24,5 +24,11 @@ Upon examining the group board artifact's profile, Carol perceives information a
 | q3 | What is the profile of given artifact? | What is the profile of the organization board artifact? `ex:OrganizationBoardProfile`            |
 | q4 | What are the signifiers exposed in a given profile? | What are the signifiers exposed in the profile of the organization board artifact? `ex:EnactActiveUserMembershipSignifier`, `ex:EnactGroupSignifier` |
 | q5 | What is the specification of an action execution signified by a given signifier? |  What is the specification of an action execution signified by `ex:EnactActiveUserMembershipSignifier`?  `ex:EnactActiveUserMembership`              |
-| q6 | What are the forms in a given specification of an action execution?  |  What are the forms in the specification `ex:EnactActiveUserMembership`? `ex:httpForm1`         |
+| q6 | What are the forms in a given specification of an action execution?  |  What are the forms in the specification `ex:EnactActiveUserMembership`? `ex:httpForm1` |
 | q7 | What is the input specification in a given specification of an action execution?  | What is the input specification in the specification ex:EnactActiveUserMembership?  `ex:ActiveUsers`, `ex:ArticleEvaluators` |
+
+## Recommendations
++ In the hypermedia environment, diverse entities, such as agents that are members and artifacts that are materials of an organization, can provide interaction possibilities to enable agents' interaction with the organization.
++ Agents have the flexibility to join organizations through various processes determined by the organization designers, which may involve:
+  + The submission of an application for joining the organization, subject to evaluation, acceptance, or rejection by the organization authorities. Upon acceptance, the agent becomes a member of the organization, and gains the ability to interact with the organization, such as enacting a membership.
+  + Alternatively, in implicit application processes, agents enter the organization upon interacting towards contributing as members, for instance, by enacting a membership or committing to a mission.
