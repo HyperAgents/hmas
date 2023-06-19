@@ -21,7 +21,7 @@ Any organization enacted based on the News Network organization model is charact
   2. _Journalist_: Evaluate online information (a type of active user).
   3. _General evaluator_: Annotate online information based on the general impression of the information (a type of journalist).
   4. _General investigator_: Annotate online information based on the credibility rating of the information, publishers, authors etc. (a type of journalist).
-  5. _Image investigator_: Annotate online information based on the original sources of its images (a type of journalist).
+  5. _Media investigator_: Annotate online information based on the original sources of its images (a type of journalist).
   7. _Admin_: Ensure the functionality of the system, e.g. by assigning missions to groups of agents.
   8. _Aggregator_: Annotate online information based on aggregated evaluations to give a summarized overview of the evaluation results (a type of admin).
   9. _Control_: Control the functionality of the system, e.g. by ensuring that community guidelines are met.
