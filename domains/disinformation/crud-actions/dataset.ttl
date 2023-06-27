@@ -1,0 +1,42 @@
+@prefix : <https://purl.org/hmas/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+:CreatePostAction
+    a sh:NodeShape, owl:Class ;
+    rdfs:subClassof :CreateAction ;
+    sh:property [
+        sh:path [ sh:inversePath prov:wasGeneratedBy ] ;
+        sh:class sioc:Post
+    ] .
+
+:CreateAnswerAction
+    a sh:NodeShape, owl:Class ;
+    rdfs:subClassof :CreateAction ;
+    sh:property [
+        sh:path [ sh:inversePath prov:wasGeneratedBy ] ;
+        sh:and (
+            [
+                sh:classs sioc:Post
+            ]
+            [
+                sh:property [
+                    sh:path [ sh:inversePath sioc:has_reply ] ;
+                    sh:minCount 1
+                ]
+            ]
+        )
+    ] .
+
+:DeleteForumAction
+    a sh:NodeShape, owl:Class ;
+    rdfs:subClassof :DeleteAction ;
+    sh:property [
+        sh:path prov:used ;
+        sh:class sioc:Forum
+    ] .

@@ -1,0 +1,46 @@
+@prefix : <https://purl.org/hmas/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+:interaction a owl:Ontology .
+
+:CreateAction
+    a sh:NodeShape, owl:Class ;
+    sh:property [
+        sh:path [ sh:inversePath prov:wasGeneratedBy ] ;
+        sh:node [
+            sh:property [
+                sh:path [ sh:inversePath dct:isReplacedBy ] ;
+                sh:maxCount 0
+            ]
+        ]
+    ] ;
+    rdfs:isDefinedBy :interaction .
+
+:ReplaceAction
+    a sh:NodeShape, owl:Class ;
+	sh:property [
+		sh:path ( [ sh:inversePath prov:wasGeneratedBy ] dct:isReplacedBy ) ;
+		sh:equals prov:used
+	] ;
+    rdfs:isDefinedBy :interaction .
+
+# TODO UpdateAction (to POST new triples to an existing resource)
+
+:DeleteAction
+    a sh:NodeShape, owl:Class ;
+    sh:property [
+        sh:path prov:used ;
+        sh:node [
+              sh:property [
+                  sh:path dct:isReplacedBy ;
+                  sh:maxCount 0
+              ]
+        ]
+    ] ;
+    rdfs:isDefinedBy :interaction .
