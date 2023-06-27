@@ -1,4 +1,5 @@
 @prefix : <https://purl.org/hmas/> .
+@prefix ex: <https://example.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix time: <http://www.w3.org/2006/time#> .
@@ -7,7 +8,7 @@
 @prefix sioc: <http://rdfs.org/sioc/ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
-:CreatePostAction
+ex:CreatePostAction
     a sh:NodeShape, owl:Class ;
     rdfs:subClassof :CreateAction ;
     sh:property [
@@ -15,7 +16,7 @@
         sh:class sioc:Post
     ] .
 
-:CreateAnswerAction
+ex:CreateAnswerAction
     a sh:NodeShape, owl:Class ;
     rdfs:subClassof :CreateAction ;
     sh:property [
@@ -33,7 +34,7 @@
         )
     ] .
 
-:DeleteForumAction
+ex:DeleteForumAction
     a sh:NodeShape, owl:Class ;
     rdfs:subClassof :DeleteAction ;
     sh:property [

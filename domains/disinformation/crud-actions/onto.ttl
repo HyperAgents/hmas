@@ -9,6 +9,8 @@
 
 :interaction a owl:Ontology .
 
+# TODO should prov:used statements be specialized to better capture actions?
+
 :CreateAction
     a sh:NodeShape, owl:Class ;
     sh:property [
@@ -44,3 +46,11 @@
         ]
     ] ;
     rdfs:isDefinedBy :interaction .
+
+:initiated
+    a owl:ObjectProperty ;
+    rdfs:comment "The form submitted to a server initiates activity (performed on the server) that transforms resources" ;
+    rdfs:domain hctl:Form ;
+    rdfs:range prov:Activity .
+
+# TODO improve relationship between signifiers/forms and actions

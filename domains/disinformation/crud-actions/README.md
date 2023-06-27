@@ -6,12 +6,13 @@ Most basic Web interfaces follow the Create/Replace/Update/Delete pattern to man
 
 ## Competency Questions
 
-
 | ID | Question in natural language | Example of answer |
 |---|---|---|
-| q1 | What request to send to post a message? | POST /posts |
-| q2 | What request to send to edit a post? | PUT /posts/123 |
-| q3 | What request to send to delete a peviously posted message? | DELETE /posts/123 |
+| q1_1 | What request to send to post a message? | POST /topics/random/posts |
+| q1_2 | What request to send to respond to a post? | POST /topics/random/posts/123/answers |
+| q2 | What request to send to edit a post? | PUT /topics/random/posts/123 |
+| q3 | What request to send to delete a peviously posted message? | DELETE /topics/random/posts/123 |
+| q4 | What request to send to add a user to some forum? | POST /topics/random |
 
 Editing a post may either be executed as a single update operation, as a replace operation or as a sequence of delete and create operations. In case the three options have different side effects, an agent should be informed of the side effects of each action.
 
