@@ -181,7 +181,7 @@ skos:note a owl:AnnotationProperty .
 # disjoint top classes 
 
 [ a owl:AllDisjointClasses ;
-    owl:members ( :Agent :Artifact :Workspace :HypermediaMASPlatform :ResourceProfile :Signifier ) ] . 
+    owl:members ( :Agent :Artifact :ResourceProfile :Signifier ) ] . 
 
 
 
