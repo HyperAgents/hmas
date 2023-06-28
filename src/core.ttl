@@ -147,6 +147,14 @@ _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyda
 #    Classes
 #################################################################
 
+:Hostable a owl:Class ;
+        rdfs:isDefinedBy :core ;
+        rdfs:comment "A resource that can be hosted on a MAS platform"@en ;
+        skos:example "Agents, artifacts, resource profiles, and signifiers can be hosted on a MAS platform"@en ;
+        rdfs:label "Hostable"@en, "Hébergeable"@fr ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/8> ;
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/23> .
+
 :Agent a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "An entity that is capable of autonomous behavior."@en ;
@@ -164,9 +172,7 @@ _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyda
         rdfs:label "HMAS Platform"@en, "Platforme SMAH"@fr ;
         skos:example "Examples of hmas:HypermediaMASPlatform include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/20> ;
-        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
-        rdfs:subClassOf :Artifact ;
-        owl:disjointWith :Workspace .
+        rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> .
 
 :ResourceProfile a owl:Class ;
         rdfs:isDefinedBy :core ;
@@ -185,14 +191,12 @@ _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyda
 
 :Workspace a owl:Class ;
         rdfs:isDefinedBy :core ;
-        rdfs:comment "A logical container of one or multiple interactions among agents and potentially artifacts. Workspaces can contain any resource in general and in particular agents, artifacts, other workspaces, or platforms. A workspace can be a LDP container and this can be done by multi-typing the container or by multiple inheritance on a Class ex:Workcontainer. "@en ;
+        rdfs:comment "A container for one or multiple interactions among agents and potentially artifacts. Workspaces can contain any resource in general and in particular agents, artifacts, or other workspaces. A workspace can be a Linked Data Platform container and this can be done by multi-typing the container or by multiple inheritance on a class ex:Workcontainer."@en ;
         rdfs:label "Workspace"@en, "Espace de Travail"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/24> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/36> ;
-        rdfs:seeAlso <https://www.w3.org/ns/ldp#> ;
-        rdfs:subClassOf :Artifact ;
-        owl:disjointWith :HypermediaMASPlatform .
+        rdfs:seeAlso <https://www.w3.org/ns/ldp#> .
 
 :Organization a owl:Class ;
         rdfs:isDefinedBy :core ;
