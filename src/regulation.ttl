@@ -88,7 +88,7 @@
 
 #:WebOfAgents rdf:type owl:Class ;
 #  rdfs:comment "Web of Agents is a subset of the web." ;
-#  rdsf:label "WebOfAgents"@en .
+#  rdfs:label "WebOfAgents"@en .
 
 #:RegulatedWeb rdf:type owl:Class ;
 #  rdfs:comment "A Regulated Web is a subset of the Web of Agents arranged in one or several Situated Regulated Organization Enttities."@en ;
@@ -140,7 +140,7 @@
 :proposesFacility a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
-    rdsf:range :Facility ;
+    rdfs:range :Facility ;
     rdfs:comment "A relation that refers to a Facility made available to Artifacts in the context of an Organization."@en ;
     rdfs:label "proposes facility"@en, "fournit de facilité"@fr .
 
