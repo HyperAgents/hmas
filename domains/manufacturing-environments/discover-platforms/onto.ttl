@@ -1,0 +1,39 @@
+@base <https://purl.org/hmas/> .
+@prefix : <> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+
+
+#################################################################
+#    Classes
+#################################################################
+
+:HypermediaMASPlatform a owl:Class ;
+        rdfs:isDefinedBy :core ;
+        rdfs:comment "A Hypermedia MAS platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organizations, etc."@en ;
+        rdfs:label "MAS Platform"@en, "Platforme SMA"@fr ;
+        skos:example "Examples of hmas:HypermediaMASPlatform include Twitter, Facebook, a JADE node/deployment, or a JaCaMo node/deployment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:hosts a owl:ObjectProperty, owl:AsymmetricProperty ;
+            rdfs:isDefinedBy :core ;
+            rdfs:domain :HypermediaMASPlatform ;
+            rdfs:range :Hostable ;
+            rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
+            rdfs:label "hosts"@en ;
+            dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
+            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
+            rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .
+
+:isHostedOn a owl:ObjectProperty, owl:AsymmetricProperty ; 
+            rdfs:isDefinedBy :core ;
+            owl:inverseOf :hosts ;
+            rdfs:domain :Hostable ;
+            rdfs:range :HypermediaMASPlatform ;
+            rdfs:comment "A relation that refers to the platform that hosts an information resource or a process."@en ;
+            rdfs:label "is hosted on"@en .

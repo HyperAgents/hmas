@@ -1,0 +1,12 @@
+prefix hmas: <https://purl.org/hmas/>
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:ur5 as ?artifact1)
+    bind (ex:phantomX as ?artifact2)
+
+    ex:productionCell1 hmas:contains ?artifact1, ?artifact2 .
+    
+    ?artifact1 a hmas:Artifact .
+    ?artifact2 a hmas:Artifact .
+}

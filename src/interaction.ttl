@@ -1,6 +1,5 @@
-@base <https://purl.org/hmas/interaction> .
-@prefix : <#> .
-@prefix hmas: <https://purl.org/hmas/core#> .
+@base <https://purl.org/hmas/> .
+@prefix : <> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -18,7 +17,7 @@
 #    Ontology Description
 #################################################################
 
-<#> rdf:type owl:Ontology ;
+:interaction rdf:type owl:Ontology ;
     dct:title "Hypermedia MAS Interaction Ontology"@en, "Ontologie d'Interaction des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems."@en,
     "L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias."@fr ;
@@ -28,8 +27,9 @@
     dct:contributor <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
     dct:contributor <https://pod.inrupt.com/smnmyr/profile/card#me> ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
-    vann:preferredNamespacePrefix "hint" ;
-    vann:preferredNamespaceUri <#> .
+    owl:imports :core ;
+    vann:preferredNamespacePrefix "hmas" ;
+    vann:preferredNamespaceUri <> .
 
 <https://inria.fr/>
   schema:name "Inria" ;
@@ -63,7 +63,9 @@
 #    Classes
 #################################################################
 
-
+:TestInteraction a owl:Class ;
+  rdfs:comment "testing the redirections"@en ;
+  rdfs:isDefinedBy :interaction .
 
 #################################################################
 #    Object Properties
