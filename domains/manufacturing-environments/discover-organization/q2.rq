@@ -1,9 +1,8 @@
 prefix ex: <http://example.org/>
 prefix hmas: <https://purl.org/hmas/>
 
-ask {
-    ex:autonomousBob hmas:isMemberOf ?org .
-    ex:factorySupervisor hmas:isMemberOf ?org .
-
-    ?org a hmas:Organization .
+select ?members
+where {
+  ?members hmas:isMemberOf ex:factoryOrganization .
 }
+order by ?members

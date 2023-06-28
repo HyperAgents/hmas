@@ -1,8 +1,5 @@
-
 @base <https://purl.org/hmas/> .
 @prefix : <> .
-@prefix hmas: <https://purl.org/hmas/core#> .
-
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -25,47 +22,45 @@
     dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,
     "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
     dct:issued "2022-05-01"^^xsd:date ;
-    ## dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;
-    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     owl:imports :core ;
+    dct:contributor <https://www.emse.fr/~boissier/> ;
+    dct:contributor <https://www.linkedin.com/in/christopher-leturc/> ;
+    dct:contributor <https://danaivach.inrupt.net/profile/card#me> ;
+    dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;
+    dct:contributor <http://maxime-lefrancois.info/me#> ;
+    dct:creator <https://orcid.org/0000-0002-4506-2745> ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <> .
-
-
-<https://inria.fr/>
-  schema:name "Inria" ;
-  schema:url <https://inria.fr/> .
-
-<https://www.mines-stetienne.fr/>
-  schema:name "MINES Saint-Étienne" ;
-  schema:url <https://mines-stetienne.fr> .
-
-<https://www.unisg.ch/en>
-  schema:name "University of St.Gallen" ;
-  schema:url <https://www.unisg.ch> .
-
-<https://orcid.org/0000-0002-4506-2745> a schema:Person ;
-  schema:name "Luis Gustavo Nardin" ;
-  schema:email "luisgustavo.nardin@emse.fr" ;
-  schema:url <http://gnardin.github.io/website/> ;
-  schema:identifier <https://orcid.org/0000-0002-4506-2745> ;
-  schema:affiliation <https://www.mines-stetienne.fr/> .
-
-<https://orcid.org/0000-0003-0821-6095> a schema:Person ;
-  schema:name "Chistopher Leturc" ;
-  schema:email "christopher.leturc@inria.fr" ;
-  schema:url <https://www.linkedin.com/in/christopher-leturc/> ;
-  schema:identifier <https://orcid.org/0000-0003-0821-6095> ;
-  schema:affiliation <https://inria.fr/> .
 
 #################################################################
 #    Classes
 #################################################################
+:OrganizationalValue a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an Organization."@en ;
+    rdfs:label "organizational value"@en, "valeur organisationnelle"@fr .
+        
+:Role a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization."@en ;
+    rdfs:label "role"@en, "rôle"@fr .
+
+:Mission a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A Mission gathers what Agents have to achieve in an Organization."@en ;
+    rdfs:label "mission"@en, "mission"@fr .
+    
+:Facility a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A Facility defines functions of materials (i.e., Artifacts) in an Organization."@en ;
+    rdfs:label "facility"@en, "facilité"@fr .
+
 :RegulativeNorm rdf:type owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A specification of the standard behaviors one expects from others in an organization."@en ;
     rdfs:label "Norm"@en .
-
+    
 :PossibleWorld rdf:type owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A possible world is a ressource that describes a state of affair of the world."@en ;
@@ -111,7 +106,6 @@
 #  rdfs:comment "testing the redirections"@en ;
 #  rdfs:isDefinedBy :regulation .
 
-
 :AuthorityRole rdf:subClassOf hmas:SocialRole ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "The authority who has a power to apply a norm and which is in charge of applying the norm. It may be an :Agent or an :Organization. "@en ;
@@ -120,6 +114,35 @@
 #################################################################
 #    Object Properties
 #################################################################
+
+:hasOrganizationalValue a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :OrganizationalValue ;
+    rdfs:comment "A relation that refers to an Organization Value of an Organization."@en ;
+    rdfs:label "has organizational value"@en, "a une valeur organisationnelle"@fr .
+      
+:providesRole a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :Role ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A relation that refers to a Role made available to Agents in the context of an Organization."@en ;
+    rdfs:label "provides role"@en, "fournit un rôle"@fr .
+
+:proposesMission a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a Mission that can be executed in the context of an Organization."@en ;
+    rdfs:label "proposes mission"@en, "fournit une mission"@fr .
+    
+:proposesFacility a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdsf:range :Facility ;
+    rdfs:comment "A relation that refers to a Facility made available to Artifacts in the context of an Organization."@en ;
+    rdfs:label "proposes facility"@en, "fournit de facilité"@fr .
 
 :enforcesRegulativeNorm rdf:type owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
@@ -148,7 +171,6 @@
     rdfs:range :AuthorityRole;
     rdfs:comment "It defines who is the authority in charge of applying the norm. "@en ;
     rdfs:label "be in charge of enforcing the regulative norm"@en .
-
 
 :isPossiblyDescribedBy rdf:type owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
@@ -233,5 +255,3 @@
 #           rdfs:range rdfs:Resource ;
 #           rdfs:comment "Links resources to institutional facts."@en ;
 #           rdfs:label "count-as"@en .
-
-

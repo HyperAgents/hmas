@@ -1,10 +1,13 @@
 prefix ex: <http://example.org/>
 prefix hmas: <https://purl.org/hmas/>
 
-ask {
-    ex:factoryOrganization a hmas:Organization ;
-                           hmas:hasResourceProfile ?x .
+select distinct ?org
+where {
+  ?org a hmas:Organization .
   
-    ex:factoryBuilding a hmas:Workspace ;
-                       hmas:contains ?x .
+  ex:productionCell1 a hmas:Workspace ;
+                     hmas:contains ?x .
+
+  ?x hmas:isMaterialOf | hmas:isMemberOf ?org .
 }
+order by ?org
