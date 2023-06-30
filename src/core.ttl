@@ -191,7 +191,7 @@ _:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyda
 
 :Workspace a owl:Class ;
         rdfs:isDefinedBy :core ;
-        rdfs:comment "A logical container for any resource in general and in particular for agents, artifacts, platforms or other workspaces. Workspaces can be created or deleted by agents on a needed basis and all agent interactions happen in the context a workspace whether or not it was explicitly reified. A workspace can be, for instance, implemented on top of an LDP indirect container."@en ;
+        rdfs:comment "A logical container for any resource in general and in particular for agents, artifacts or other workspaces. Workspaces can be created or deleted by agents on a needed basis and all agent interactions happen in the context a workspace whether or not it was explicitly reified. A workspace can be, for instance, implemented on top of an LDP indirect container."@en ;
         rdfs:label "Workspace"@en, "Espace de Travail"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/24> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
