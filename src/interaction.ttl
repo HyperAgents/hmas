@@ -31,52 +31,6 @@
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <> .
 
-<https://inria.fr/>
-  schema:name "Inria" ;
-  schema:url <https://inria.fr/> .
-
-<https://www.mines-stetienne.fr/>
-  schema:name "MINES Saint-Étienne" ;
-  schema:url <https://mines-stetienne.fr> .
-
-<https://www.unisg.ch/en>
-  schema:name "University of St.Gallen" ;
-  schema:url <https://www.unisg.ch> .
-
-<https://danaivach.inrupt.net/profile/card#me> a schema:Person ;
-  schema:name "Danai Vachtsevanou" ;
-  schema:email "danai.vachtsevanou@unisg.ch" ;
-  schema:url <https://danaivach.inrupt.net/profile/card> ;
-  schema:affiliation <https://www.unisg.ch/en> .
-
-<https://pod.inrupt.com/andreiciortea/profile/card#me> a schema:Person ;
-  schema:name "Andrei Ciortea" ;
-  schema:email "andrei.ciortea@unisg.ch" ;
-  schema:affiliation <https://www.unisg.ch/en>  .
-
-<https://pod.inrupt.com/smnmyr/profile/card#me> a schema:Person ;
-  schema:name "Simon Mayer" ;
-  schema:email "simon.mayer@unisg.ch" ;
-  schema:affiliation <https://www.unisg.ch/en>  .
-
-schema:Person a owl:Class .
-schema:name a owl:AnnotationProperty .
-schema:email a owl:AnnotationProperty .
-schema:url a owl:AnnotationProperty .
-schema:identifier a owl:AnnotationProperty .
-schema:affiliation a owl:AnnotationProperty .
-dct:title a owl:AnnotationProperty .
-dct:description a owl:AnnotationProperty .
-dct:contributor a owl:AnnotationProperty .
-dct:issued a owl:AnnotationProperty .
-dct:creator a owl:AnnotationProperty .
-dct:source a owl:AnnotationProperty .
-cc:license a owl:AnnotationProperty .
-vann:preferredNamespacePrefix a owl:AnnotationProperty .
-vann:preferredNamespaceUri a owl:AnnotationProperty .
-skos:example a owl:AnnotationProperty .
-skos:note a owl:AnnotationProperty .
-
 #################################################################
 #    Classes
 #################################################################
