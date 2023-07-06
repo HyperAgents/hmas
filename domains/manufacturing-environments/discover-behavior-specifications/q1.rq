@@ -1,9 +1,12 @@
 prefix : <https://purl.org/hmas/>
 prefix ex: <http://example.org/>
+prefix sh: <http://www.w3.org/ns/shacl#> 
 
-ask {
-    bind (ex:gripperMovable as ?s)
-    bind (ex:moveGripper as ?sp)
-    ?s a :Signifier .
-    ?s :signifies ?sp .
+select ?actionExecutionSpec
+where {
+    ex:gripperMovable a :Signifier .
+    ex:gripperMovable :signifies ?actionExecutionSpec .
+    ?actionExecutionSpec a sh:NodeShape .
+    ?actionExecutionSpec sh:class :ActionExecution .
 }
+order by ?actionExecutionSpec
