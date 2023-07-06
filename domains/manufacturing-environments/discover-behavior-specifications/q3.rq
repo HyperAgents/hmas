@@ -1,14 +1,12 @@
 prefix : <https://purl.org/hmas/>
-prefix hctl: <https://www.w3.org/2019/wot/hypermedia#>
 prefix ex: <http://example.org/>
+prefix sh: <http://www.w3.org/ns/shacl#> 
 
-ask {
-    bind (ex:httpForm as ?f1)
-    bind (ex:coapForm as ?f2)
-    bind (ex:moveGripper as ?sp)
-    ?f1 a hctl:Form .
-    ?f2 a hctl:Form .
-    ?sp a :ActionSpecification .
-    ?sp :hasForm ?f1 .
-    ?sp :hasForm ?f2 .
+select ?inputType
+where {
+    ex:moveGripperShape sh:property ?propertySpec .
+  	?propertySpec sh:path :hasInput .
+  	?propertySpec sh:qualifiedValueShape ?inputSpec .   
+    ?inputSpec sh:class ?inputType .
 }
+order by ?inputType
