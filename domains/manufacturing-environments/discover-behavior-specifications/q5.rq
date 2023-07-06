@@ -5,13 +5,16 @@ prefix prov: <http://www.w3.org/ns/prov#>
 
 select ?form
 where {
-    ex:moveGripperShape sh:property ?propertySpec .
-  	?propertySpec sh:path prov:used .
-  	{ ?propertySpec sh:hasValue ?form . }  
-    union
-    { ?propertySpec sh:or ?formShapeList . 
-	  ?formShapeList rdf:rest*/rdf:first ?formShape . 
-	  ?formShape sh:hasValue ?form .
+	ex:moveGripperShape sh:property ?propertySpec .
+	?propertySpec sh:path prov:used .
+	{ 
+		?propertySpec sh:hasValue ?form . 
+	}  
+	union
+	{ 
+		?propertySpec sh:or ?formShapeList . 
+		?formShapeList rdf:rest*/rdf:first ?formShape . 
+		?formShape sh:hasValue ?form .
 	}  
 }
 order by ?form
