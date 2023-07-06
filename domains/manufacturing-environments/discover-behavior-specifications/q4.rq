@@ -1,10 +1,13 @@
 prefix : <https://purl.org/hmas/>
 prefix ex: <http://example.org/>
+prefix sh: <http://www.w3.org/ns/shacl#> 
 
-ask {
-    bind (ex:gripperJoint as ?i)
-    bind (ex:moveGripper as ?sp)
-    ?i a :Input .
-    ?sp a :ActionSpecification .
-    ?sp :expectsInput ?i .
+select ?inputProperty
+where {
+    ex:moveGripperShape sh:property ?propertySpec .
+  	?propertySpec sh:path :hasInput .
+  	?propertySpec sh:qualifiedValueShape ?inputSpec .   
+    ?inputSpec sh:property ?inputPropertySpec .
+    ?inputPropertySpec sh:path ?inputProperty .
 }
+order by ?inputProperty
