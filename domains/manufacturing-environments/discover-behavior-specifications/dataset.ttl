@@ -11,7 +11,7 @@ ex:ur5Profile a :ResourceProfile;
     :exposesSignifier ex:gripperMovable .
 
 ex:gripperMovable a :Signifier ;
-    :signifies ex:moveGripper .
+    :signifies ex:moveGripperShape .
 
 ex:moveGripperShape a sh:NodeShape;
 	sh:class :ActionExecution ;
