@@ -4,40 +4,39 @@ Feature: Discovery of Behavior Specifications
 
 
 ## Description
-An agent is situated in a manufacturing workspace that contains a robotic arm artifact. The resource profile of the robotic arm artifact exposes a signifier that provides a specification describing how to exploit a behavior possibility, such as how to move the gripper of the robotic arm. Specifically, it is a behavior specification that specifies a single action of moving the gripper. This behavior specification is an action specification that:
-- is of type `onto:SetGripper` (https://ci.mines-stetienne.fr/kg/ontology#SetGripper),
-- expects an input of the schema `onto:GripperJoint` (https://ci.mines-stetienne.fr/kg/ontology#GripperJoint), and
-- can be executed via a hypermedia control from a set of hypermedia controls: The set of hypermedia controls contains two forms ⁠—⁠ a form describing an HTTP request, and a form describing a request based on the Constrained Application Protocol (CoAP).
+An agent is situated in a manufacturing workspace that contains a robotic arm artifact. In the same workspace, a signifier signifies information about how to exploit a behavior possibility offered by the robotic arm artifact, specifically, information about how to move the gripper of the robotic arm. This information specifies a set of contraints on how to execute the action of moving the gripper:
+- the action execution should have an [`onto:GripperJoint`](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint) as input;
+- the action execution should use on of the following hypermedia controls: 
+  - a form describing an HTTP request,
+  - a form describing a request based on the Constrained Application Protocol (CoAP).
 
-The agent has discovered the signifier and has the objective of behaving based on the signified behavior specification (here, the signified action specification). To this end, the agent provides an input of the schema `onto:GripperJoint`, and sends an HTTP request based on one of the forms.
+The agent discovers the signifier, that is exposed in the profile of the robotic arm artifact. Based on the signified information, the agent moves the gripper by providing an [`onto:GripperJoint`](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint) as input, and sends an HTTP request based on one of the forms.
  
 ## Competency Questions
 
 | ID | Question in Natural Language | Example                                                                                                                                   |
 |----|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| q1 | What are the behavior specifications that a given signifier signifies?           | Behavior specifications that signifier `ex:gripperMovable` signifies: `ex:moveGripper`                                                    |
-| q2 | What are the action specifications that a given signifier signifies?             | Action specifications that signifier `ex:gripperMovable` signifies: `ex:moveGripper`                                                      |
-| q3 | What are the forms that describe how to execute an action based on a given action specification?        | Forms that describe how to execute moving the gripper of the robotic arm artifact based on `ex:moveGripper`: `ex:httpForm`, `ex:coapForm` |
-| q4 | What is the input that is expected to execute an action based on a given action specification?                  | Input that is expected for moving the gripper of the robotic arm artifact based on `ex:moveGripper`: `ex:gripperJoint`                    |
-| q5 | What are the schemas of a given expected input?                                  | Schemas of the expected input `ex:moveGripper`: `ex:gripperJointSchema`                                                                   |
+| q1 | What is the action execution specification that a given signifier signifies? | Specification that signifier `ex:gripperMovable` signifies: `ex:moveGripper`  |
+| q2 | What are the constraints on the input that an action execution should have based on a given specification? | Constaints on the input that the execution of moving the gripper should have based on `ex:moveGripper`: `ex:gripperJoint` |
+| q3 | What are forms that an action execution should use based on a given specification?  | Forms that the execution of moving the gripper should use based on `ex:moveGripper`: `ex:httpForm`, `ex:coapForm` |
+
 
 
 ## Glossary
 - **Behavior Execution**: A course of action performed by an agent upon exploiting a behavior possibility.
-- **Action Execution**: A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request. 
-- **Behavior Specification**: A specification that describes a behavior, for example, as procedural knowledge (e.g., AgentSpeak plan) or code-on-demand (e.g., a script that implements a behavior).
-- **Action Specification**: A specification that describes an action (e.g., through preconditions and postconditions) and how to execute the action, e.g. as a context-free request through a form.
-- **Form**: A hypermedia control that describes how to execute an action as defined here: https://www.w3.org/2019/wot/hypermedia#Form.
-- **Input**: An input of an action, which may include variables. The input may be used, for instance, in an action specification or in the representation of an action execution.
-- **Schema**: The schema of an input. For example, the schema may be a JSON data schema (https://www.w3.org/2019/wot/json-schema#DataSchema) or a SHACL shape (http://www.w3.org/ns/shacl#Shape).
-- **Signification of Behavior**: The act of revealing information about how to exploit a behavior possibility. 
-- **Workspace**: see [_Other scenario TBA_]().
-- **Resource Containment**: see [_Other scenario TBA_]().
-- **Artifact**: see [_Other scenario TBA_]().
-- **Agent**: see [_Other scenario TBA_]().
-- **Resource Profile**: see [_Other scenario TBA_]().
-- **Signifier**: see [_Other scenario TBA_]().
-- **Signifier Exposure**: see [_Other scenario TBA_]().
+- **Action Execution**: A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request.
+- **Input**: An input of an action, for example, in the representation of an action execution.
+- **Form**: A hypermedia control that describes how to execute an action as defined here, for example, an [`hctl:Form`](https://www.w3.org/2019/wot/hypermedia#Form).
+- **Signification of Behavior**: The act of revealing information about how to exploit a behavior possibility.
+- **Signifier**: see [Discovery of Signifiers](../discover-signifiers/README.md).
+- **Signifier Exposure**: see [Discovery of Signifiers](../discover-signifiers/README.md).
+- **Situatedness**: see [Discovery of Signifiers](../discover-signifiers/README.md).
+- **Workspace**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
+- **Resource Containment**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
+- **Artifact**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
+- **Agent**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
+- **Resource Profile**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
+
 
 ## Recommendations
 - A signifier can signify a behavior specification for revealing information about how to exploit the relevant behavior possibility.
