@@ -26,38 +26,12 @@
     dct:creator <https://danaivach.inrupt.net/profile/card#me> ;
     dct:contributor <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
     dct:contributor <https://pod.inrupt.com/smnmyr/profile/card#me> ;
+    dct:contributor <http://ns.inria.fr/fabien.gandon#me> ; 
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     owl:imports :core ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <> .
 
-<https://inria.fr/>
-  schema:name "Inria" ;
-  schema:url <https://inria.fr/> .
-
-<https://www.mines-stetienne.fr/>
-  schema:name "MINES Saint-Étienne" ;
-  schema:url <https://mines-stetienne.fr> .
-
-<https://www.unisg.ch/en>
-  schema:name "University of St.Gallen" ;
-  schema:url <https://www.unisg.ch> .
-
-<https://pod.inrupt.com/andreiciortea/profile/card#me> a schema:Person ;
-  schema:name "Andrei Ciortea" ;
-  schema:email "andrei.ciortea@unisg.ch" ;
-  schema:affiliation <https://www.unisg.ch/en>  .
-
-<https://pod.inrupt.com/smnmyr/profile/card#me> a schema:Person ;
-  schema:name "Simon Mayer" ;
-  schema:email "simon.mayer@unisg.ch" ;
-  schema:affiliation <https://www.unisg.ch/en>  .
-
-<https://danaivach.inrupt.net/profile/card#me> a schema:Person ;
-  schema:name "Danai Vachtsevanou" ;
-  schema:email "danai.vachtsevanou@unisg.ch" ;
-  schema:url <https://danaivach.inrupt.net/profile/card> ;
-  schema:affiliation <https://www.unisg.ch/en> .
 
 #################################################################
 #    Classes
