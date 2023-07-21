@@ -33,6 +33,7 @@
     dct:contributor <https://danaivach.inrupt.net/profile/card#me> ; 
     dct:contributor <https://orcid.org/0000-0003-0821-6095>  ; 
     dct:contributor <https://orcid.org/0000-0002-2956-0533> ; 
+    dct:contributor <https://orcid.org/0000-0002-4506-2745> ;
     dct:contributor <https://pod.inrupt.com/smnmyr/profile/card#me> ;
     dct:contributor <https://www.vcharpenay.link/#me> ;
     dct:contributor <http://w3id.org/people/az/me> ;
