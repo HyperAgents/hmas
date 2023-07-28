@@ -1,5 +1,5 @@
-@base <https://ci.mines-stetienne.fr/regulation> .
-@prefix : <#> .
+@base <https://purl.org/hmas/> .
+@prefix : <> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix hmas: <https://ci.mines-stetienne.fr/hmas> .
 @prefix hreg: <https://ci.mines-stetienne.fr/regulation> .
@@ -12,34 +12,25 @@
 <#> rdf:type owl:Ontology ;
                                        owl:imports <https://ci.mines-stetienne.fr/hmas#> .
 
-#@prefix : <http://purl.org/hmas/>
 
 :possible-worlds a owl:Ontology .
+
 :PossibleWorld a rdfs:Class ;
     rdfs:comment "A possible world is a reified set of RDF triples."@en ;
+    rdfs:isDefinedBy :possible-worlds ;
     rdfs:label "PossibleWorld"@en .
 
 
 :NAryRelation a rdfs:Class ; 
     rdfs:comment "A specification of the standard behaviors one expects from others in an organization."@en ;
+    rdfs:isDefinedBy :possible-worlds ;
     rdfs:label "NAryRelation"@en .
 
 :hasNAryRelation a rdf:Property ;
     rdfs:comment "A specification of the standard behaviors one expects from others in an organization."@en ;
+    rdfs:isDefinedBy :possible-worlds ;
     rdfs:label "hasNAryRelation"@en ;
     rdfs:range :NAryRelation .
     
-:fromARessource :hasNAryRelation [
-    a :NAryRelation ;
-    :param1 :arg1 ;
-    :param2 :arg2 ;
-    ...
-    :paramN :argN ] 
-
-:MyModalOperator rdfs:subClassOf :NAryRelation .
-
-:myParameterN a rdf:Property ;
-    rdfs:domain :MyModalOperator ;
-    rdfs:range :PossibleWorld .
 
 
