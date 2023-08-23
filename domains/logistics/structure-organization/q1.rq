@@ -1,0 +1,49 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?role
+where {
+  ex:FL_Logistics a ?orgModel ;
+                  hmas:providesRole ?role  .
+  
+  ?orgModel rdfs:subClassOf hmas:Organization .
+  { ?orgModel a sh:NodeShape . }
+  union
+  { ?orgShape a sh:NodeShape ;
+              sh:targetClass ?orgModel . }
+
+  ?role a ?roleModel .
+  ?roleModel rdfs:subClassOf hmas:Role .
+  { ?roleModel a sh:NodeShape . }
+  union
+  { ?roleShape a sh:NodeShape ;
+               sh:targetClass ?roleModel . }
+
+  ?group a ?groupModel .
+  ?groupModel rdfs:subClassOf hmas:Group .
+  { ?groupModel a sh:NodeShape . }
+  union
+  { ?groupShape a sh:NodeShape ;
+                sh:targetClass ?groupModel . }
+
+  ?membershipModel rdfs:subClassOf hmas:Membership ;
+                   sh:property [
+                     sh:path hmas:isMembershipFor ;
+                     sh:qualifiedValueShape [ sh:class ?roleModel ] ;
+                     ] ;
+                   sh:property [
+                     sh:path hmas:isMembershipIn ;
+                     sh:qualifiedValueShape [ sh:class ?groupModel ] ;
+                     ] .
+  { ?membershipModel a sh:NodeShape . }
+  union
+  { ?membershipShape a sh:NodeShape ;
+                       sh:targetClass ?membershipModel . }
+
+  FILTER NOT EXISTS {
+    ?membership a ?membershipModel .
+  }
+}
+order by ?role

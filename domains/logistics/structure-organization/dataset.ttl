@@ -9,33 +9,27 @@
 
 ## Workspace
 ex:LogisticsWS a hmas:Workspace ;
-    hmas:contains ex:John, ex:Frank, ex:Gabriel, ex:Igor, ex:Jane, ex:WarehouseLyon, ex:WarehouseStEtienne .
+    hmas:contains ex:John, ex:Frank, ex:Gabriel, ex:Igor, ex:Jane, ex:Kate, ex:WarehouseLyon, ex:WarehouseStEtienne .
 
 ## Agents
 ex:John a hmas:Agent ;
     hmas:isContainedIn ex:LogisticsWS ;
-    hmas:isMemberOf ex:FL_Logistics ;
-    hmas:isMembershipOf ex:FL_Director_Administrative .
+    hmas:isMemberOf ex:FL_Logistics .
 ex:Frank a hmas:Agent ;
     hmas:isContainedIn ex:LogisticsWS ;
-    hmas:isMemberOf ex:FL_Logistics ;
-    hmas:isMembershipOf ex:FL_Officer_HumanResources .
+    hmas:isMemberOf ex:FL_Logistics .
 ex:Gabriel a hmas:Agent ;
     hmas:isContainedIn ex:LogisticsWS ;
-    hmas:isMemberOf ex:FL_Logistics ;
-    hmas:isMembershipOf ex:FL_Officer_Finance .
+    hmas:isMemberOf ex:FL_Logistics .
 ex:Igor a hmas:Agent ;
     hmas:isContainedIn ex:LogisticsWS ;
-    hmas:isMemberOf ex:FL_Logistics ;
-    hmas:isMembershipOf ex:FL_Planner_Planning .
+    hmas:isMemberOf ex:FL_Logistics .
 ex:Jane a hmas:Agent ;
     hmas:isContainedIn ex:LogisticsWS ;
-    hmas:isMemberOf ex:FL_Logistics ;
-    hmas:isMembershipOf ex:FL_Carrier_Shipping .
+    hmas:isMemberOf ex:FL_Logistics .
 ex:Kate a hmas:Agent ;
     hmas:isContainedIn ex:LogisticsWS ;
-    hmas:isMaterialOf ex:FL_Logistics ;
-    hmas:isMembershipOf ex:FL_Director_Operations .
+    hmas:isMemberOf ex:FL_Logistics .
     
 ## Artifacts
 ex:WarehouseLyon a hmas:Artifact ;
@@ -243,35 +237,26 @@ ex:IntegrityRespect a sh:NodeShape ;
 ## Role Specifications
 ex:Director a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
-    
 ex:HumanResourcesOfficer a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
-
 ex:FinanceOfficer a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
-
 ex:AccountManager a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
-
 ex:Planner a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
-        
 ex:Carrier a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
-
 ex:Collector a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
-
 ex:Deliverer a sh:NodeShape ;
     rdfs:subClassOf hmas:Role .
 
 ## Group Specifications
 ex:AdministrativeDepartment a sh:NodeShape ;
     rdfs:subClassOf hmas:Group .
-
 ex:OperationsDepartment a sh:NodeShape ;
     rdfs:subClassOf hmas:Group .
-    
 ex:HumanResourcesDepartment a sh:NodeShape ;
     rdfs:subClassOf hmas:Group ;
     sh:property [
@@ -280,7 +265,6 @@ ex:HumanResourcesDepartment a sh:NodeShape ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-
 ex:FinanceDepartment a sh:NodeShape ;
     rdfs:subClassOf hmas:Group ;
     sh:property [
@@ -289,7 +273,6 @@ ex:FinanceDepartment a sh:NodeShape ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-
 ex:CommercialDepartment a sh:NodeShape ;
     rdfs:subClassOf hmas:Group ;
     sh:property [
@@ -298,7 +281,6 @@ ex:CommercialDepartment a sh:NodeShape ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-
 ex:PlanningDepartment a sh:NodeShape ;
     rdfs:subClassOf hmas:Group ;
     sh:property [
@@ -307,7 +289,6 @@ ex:PlanningDepartment a sh:NodeShape ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-
 ex:ShippingDepartment a sh:NodeShape ;
     rdfs:subClassOf hmas:Group ;
     sh:property [
@@ -316,30 +297,29 @@ ex:ShippingDepartment a sh:NodeShape ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-
+        
 ## Membership Specifications
-ex:Director_Administrative a sh:NodeShape ;
+ex:Director_Administrative_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
-        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:qualifiedValueShape [ sh:class ex:Agent ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:qualifiedValueShape [ sh:class ex:Director ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class hmas:Group ] ;
+        sh:qualifiedValueShape [ sh:class ex:AdministrativeDepartment ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] .
-
-ex:Director_Operations a sh:NodeShape ;
+ex:Director_Operations_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -349,18 +329,17 @@ ex:Director_Operations a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:qualifiedValueShape [ sh:class ex:Director ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class hmas:Group ] ;
+        sh:qualifiedValueShape [ sh:class ex:OperationsDepartment ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] .
-
-ex:Officer_HumanResources a sh:NodeShape ;
+ex:Officer_HumanResources_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -370,18 +349,17 @@ ex:Officer_HumanResources a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:qualifiedValueShape [ sh:class ex:HumanResourcesOfficer ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class hmas:Group ] ;
+        sh:qualifiedValueShape [ sh:class ex:HumanResourcesDepartment ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] .
-
-ex:Officer_Finance a sh:NodeShape ;
+ex:Officer_Finance_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -391,18 +369,17 @@ ex:Officer_Finance a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:qualifiedValueShape [ sh:class ex:FinanceOfficer ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class hmas:Group ] ;
+        sh:qualifiedValueShape [ sh:class ex:FinanceDepartment ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] .
-
-ex:AccountManager_Commercial a sh:NodeShape ;
+ex:AccountManager_Commercial_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -412,18 +389,17 @@ ex:AccountManager_Commercial a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:qualifiedValueShape [ sh:class ex:AccountManager ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class hmas:Group ] ;
+        sh:qualifiedValueShape [ sh:class ex:CommercialDepartment ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] .
-
-ex:Planner_Planning a sh:NodeShape ;
+ex:Planner_Planning_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -433,18 +409,17 @@ ex:Planner_Planning a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:qualifiedValueShape [ sh:class ex:Planner ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class hmas:Group ] ;
+        sh:qualifiedValueShape [ sh:class ex:PlanningDepartment ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] .
-
-ex:Carrier_Shipping a sh:NodeShape ;
+ex:Carrier_Shipping_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -454,18 +429,17 @@ ex:Carrier_Shipping a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:qualifiedValueShape [ sh:class ex:Carrier ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class hmas:Group ] ;
+        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] .
-
-ex:Collector_Shipping a sh:NodeShape ;
+ex:Collector_Shipping_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -475,18 +449,17 @@ ex:Collector_Shipping a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:qualifiedValueShape [ sh:class ex:Collector ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class hmas:Group ] ;
+        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] .
-
-ex:Deliverer_Shipping a sh:NodeShape ;
+ex:Deliverer_Shipping_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -496,13 +469,13 @@ ex:Deliverer_Shipping a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Role ] ;
+        sh:qualifiedValueShape [ sh:class ex:Deliverer ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class hmas:Group ] ;
+        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
         sh:quantifiedMinCount 1 ;
         sh:quantifiedMaxCount 1 ;
         ] .
@@ -520,6 +493,10 @@ ex:DeliverGoods rdfs:subClassOf hmas:Mission .
 ex:PickingArea rdfs:subClassOf hmas:Facility .
 ex:ReceivingArea rdfs:subClassOf hmas:Facility .
 
+## Relation Specifications
+ex:canCommunicate rdfs:subPropertyOf hmas:hasMembershipRelation .
+ex:hasAuthority rdfs:subPropertyOf hmas:hasGroupRelation .
+
 # INSTANTIATION
 
 ## Organizational Values
@@ -536,7 +513,7 @@ ex:FL_HumanResourcesDepartment a ex:HumanResourcesDepartment ;
     hmas:isSubGroupOf ex:FL_AdministrativeDepartment .
 ex:FL_FinanceDepartment a ex:FinanceDepartment ;
     hmas:structures ex:FL_Logistics ;
-    hmas:isSubGroupOf ex:AdministrativeDepartment .
+    hmas:isSubGroupOf ex:FL_AdministrativeDepartment .
 ex:FL_CommercialDepartment a ex:CommercialDepartment ;
     hmas:structures ex:FL_Logistics ;
     hmas:isSubGroupOf ex:FL_OperationsDepartment .
@@ -547,41 +524,56 @@ ex:FL_ShippingDepartment a ex:ShippingDepartment ;
     hmas:structures ex:FL_Logistics ;
     hmas:isSubGroupOf ex:FL_OperationsDepartment .
 
+ex:FL_AdministrativeDepartment ex:hasAuthority ex:FL_HumanResourcesDepartment, ex:FL_FinanceDepartment .
+ex:FL_OperationsDepartment ex:hasAuthority ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment .
+
+## Roles
+ex:FL_Director a ex:Director .
+ex:FL_HumanResourcesOfficer a ex:HumanResourcesOfficer .
+ex:FL_FinanceOfficer a ex:FinanceOfficer .
+ex:FL_AccountManager a ex:AccountManager .
+ex:FL_Planner a ex:Planner .
+ex:FL_Carrier a ex:Carrier .
+ex:FL_Collector a ex:Collector .
+ex:FL_Deliverer a ex:Deliverer .
+
 ## Memberships
-ex:FL_Director_Administrative a ex:Director_Administrative ;
-        hmas:isMembershipOf ex:John ;
-        hmas:isMembershipFor ex:Director ;
-        hmas:isMembershipIn ex:FL_AdministrativeDepartment .
+ex:FL_Director_Administrative a ex:Director_Administrative_Membership ;
+    hmas:isMembershipOf ex:John ;
+    hmas:isMembershipFor ex:FL_Director ;
+    hmas:isMembershipIn ex:FL_AdministrativeDepartment .
+ex:FL_Director_Operations a ex:Director_Operations_Membership ;
+    hmas:isMembershipOf ex:Kate ;
+    hmas:isMembershipFor ex:FL_Director ;
+    hmas:isMembershipIn ex:FL_OperationsDepartment .
+ex:FL_Officer_HumanResources a ex:Officer_HumanResources_Membership ;
+    hmas:isMembershipOf ex:Frank ;
+    hmas:isMembershipFor ex:FL_HumanResourcesOfficer ;
+    hmas:isMembershipIn ex:FL_HumanResourcesDepartment .
+ex:FL_Officer_Finance a ex:Officer_Finance_Membership ;
+    hmas:isMembershipOf ex:Gabriel ;
+    hmas:isMembershipFor ex:FL_FinanceOfficer ;
+    hmas:isMembershipIn ex:FL_FinanceDepartment .
+ex:FL_Planner_Planning a ex:Planner_Planning_Membership ;
+    hmas:isMembershipOf ex:Igor ;
+    hmas:isMembershipFor ex:FL_Planner ;
+    hmas:isMembershipIn ex:FL_PlanningDepartment .
+ex:FL_Carrier_Shipping a ex:Carrier_Shipping_Membership ;
+    hmas:isMembershipOf ex:Jane ;
+    hmas:isMembershipFor ex:FL_Carrier ;
+    hmas:isMembershipIn ex:FL_ShippingDepartment .
+ex:FL_Collector_Shipping a ex:Collector_Shipping_Membership ;
+    hmas:isMembershipOf ex:Jane ;
+    hmas:isMembershipFor ex:FL_Collector ;
+    hmas:isMembershipIn ex:FL_ShippingDepartment .
+ex:FL_Deliverer_Shipping a ex:Deliverer_Shipping_Membership ;
+    hmas:isMembershipOf ex:Jane ;
+    hmas:isMembershipFor ex:FL_Deliverer ;
+    hmas:isMembershipIn ex:FL_ShippingDepartment .
 
-ex:FL_Director_Operations a ex:Director_Operations ;
-        hmas:isMembershipOf ex:Kate ;
-        hmas:isMembershipFor ex:Director ;
-        hmas:isMembershipIn ex:FL_OperationsDepartment .
-
-ex:FL_Officer_HumanResources a ex:Officer_HumanResources ;
-        hmas:isMembershipOf ex:Frank ;
-        hmas:isMembershipFor ex:HumanResourcesOfficer ;
-        hmas:isMembershipIn ex:FL_HumanResourcesDepartment .
-
-ex:FL_Officer_Finance a ex:Officer_Finance ;
-        hmas:isMembershipOf ex:Gabriel ;
-        hmas:isMembershipFor ex:FinanceOfficer ;
-        hmas:isMembershipIn ex:FL_FinanceDepartment .
-
-ex:FL_AccountManager_Commercial a ex:AccountManager_Commercial ;
-        hmas:isMembershipFor ex:AccountManager ;
-        hmas:isMembershipIn ex:FL_CommercialDepartment .
-
-ex:FL_Planner_Planning a ex:Planner_Planning ;
-        hmas:isMembershipOf ex:Igor ;
-        hmas:isMembershipFor ex:Planner ;
-        hmas:isMembershipIn ex:FL_PlanningDepartment .
-
-ex:FL_Carrier_Shipping a ex:Carrier_Shipping ;
-        hmas:isMembershipOf ex:Jane ;
-        hmas:isMembershipFor ex:Carrier ;
-        hmas:isMembershipIn ex:FL_ShippingDepartment .
-
+ex:FL_Planner_Planning ex:canCommunicate ex:FL_Carrier_Shipping .
+ex:FL_Carrier_Shipping ex:canCommunicate ex:FL_Planner_Planning .
+    
 ## Missions
 ex:FL_HumanResourcesManagement a ex:HumanResourcesManagement .
 ex:FL_FinancialManagement a ex:FinancialManagement .
@@ -601,7 +593,7 @@ ex:FL_LogisticsProfile a hmas:ResourceProfile .
 ex:FL_Logistics a ex:Logistics ;
     hmas:hasResourceProfile ex:FL_LogisticsProfile ;
     hmas:hasOrganizationalValue ex:FL_Commitment, ex:FL_IntegrityRespect ;
-    hmas:providesRole ex:HumanResourcesOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Carrier, ex:Collector, ex:Deliverer ;
+    hmas:providesRole ex:FL_Director, ex:FL_HumanResourcesOfficer, ex:FL_FinanceOfficer, ex:FL_AccountManager, ex:FL_Planner, ex:FL_Carrier, ex:FL_Collector, ex:FL_Deliverer ;
     hmas:isStructuredBy ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment, ex:FL_HumanResourcesDepartment, ex:FL_FinanceDepartment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment ;
     hmas:proposesMission ex:FL_HumanResourcesManagement, ex:FL_FinancialManagement, ex:FL_CommercialManagement, ex:FL_PlanningManagement, ex:FL_CarryGoods, ex:FL_CollectGoods, ex:FL_DeliverGoods ;
     hmas:proposesFacility ex:FL_PickingArea, ex:FL_ReceivingArea .
