@@ -29,7 +29,9 @@ where {
               hmas:isMembershipFor ?role ;
               hmas:isMembershipIn ?group .
 
-  ?membership ex:canCommunicateWith ?otherMembership .
+  ?interaction rdfs:subPropertyOf hmas:hasMembershipInteractionWith .
+
+  ?membership ?interaction ?otherMembership .
 
   ?otherMembership a ?otherMembershipModel ;
                    hmas:isMembershipOf ?agent .
