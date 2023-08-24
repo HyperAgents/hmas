@@ -121,12 +121,12 @@
     rdfs:comment "A relation that refers to the Group involved in a Membership."@en ;
     rdfs:label "is membership in"@en, "est l'appartenance à"@fr .
 
-:hasMembershipRelation a owl:ObjectProperty ;
+:hasMembershipInteractionWith a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Membership ;
     rdfs:range :Membership ;
     rdfs:comment "A relation that refers to the interaction between Agents member of two Memberships."@en ;
-    rdfs:label "has membership relation"@en, "a une relation d'appartenance"@fr .
+    rdfs:label "has membership interaction with"@en, "a une interaction d'adhésion avec"@fr .
 
 :structures a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
@@ -144,12 +144,12 @@
     rdfs:comment "A relation that refers to an Organization that is structured by a Group."@en ;
     rdfs:label "is structured by"@en, "est structuré par"@fr .
 
-:hasGroupRelation a owl:ObjectProperty ;
+:hasGroupInteractionWith a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Group ;
     rdfs:range :Group ;
     rdfs:comment "A relation that refers to the interaction between Agents member of two Memberships involving two Groups."@en ;
-    rdfs:label "has group relation"@en, "a une relation de groupe"@fr .
+    rdfs:label "has group interaction with"@en, "a une interaction de groupe avec"@fr .
 
 :isSubGroupOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;

@@ -304,180 +304,180 @@ ex:Director_Administrative_Membership a sh:NodeShape ;
     sh:property [
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class ex:Agent ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
         sh:qualifiedValueShape [ sh:class ex:Director ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedValueShape [ sh:class ex:AdministrativeDepartment ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] .
 ex:Director_Operations_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
         sh:qualifiedValueShape [ sh:class ex:Director ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedValueShape [ sh:class ex:OperationsDepartment ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] .
 ex:Officer_HumanResources_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
         sh:qualifiedValueShape [ sh:class ex:HumanResourcesOfficer ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedValueShape [ sh:class ex:HumanResourcesDepartment ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] .
 ex:Officer_Finance_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
         sh:qualifiedValueShape [ sh:class ex:FinanceOfficer ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedValueShape [ sh:class ex:FinanceDepartment ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] .
 ex:AccountManager_Commercial_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
         sh:qualifiedValueShape [ sh:class ex:AccountManager ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedValueShape [ sh:class ex:CommercialDepartment ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] .
 ex:Planner_Planning_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
         sh:qualifiedValueShape [ sh:class ex:Planner ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedValueShape [ sh:class ex:PlanningDepartment ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] .
 ex:Carrier_Shipping_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
         sh:qualifiedValueShape [ sh:class ex:Carrier ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] .
 ex:Collector_Shipping_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
         sh:qualifiedValueShape [ sh:class ex:Collector ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] .
 ex:Deliverer_Shipping_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
         sh:qualifiedValueShape [ sh:class ex:Deliverer ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
-        sh:quantifiedMinCount 1 ;
-        sh:quantifiedMaxCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] .
 
 ## Mission Specifications
@@ -494,8 +494,8 @@ ex:PickingArea rdfs:subClassOf hmas:Facility .
 ex:ReceivingArea rdfs:subClassOf hmas:Facility .
 
 ## Relation Specifications
-ex:canCommunicate rdfs:subPropertyOf hmas:hasMembershipRelation .
-ex:hasAuthority rdfs:subPropertyOf hmas:hasGroupRelation .
+ex:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipInteractionWith .
+ex:hasAuthorityOver rdfs:subPropertyOf hmas:hasGroupInteractionWith .
 
 # INSTANTIATION
 
@@ -524,8 +524,8 @@ ex:FL_ShippingDepartment a ex:ShippingDepartment ;
     hmas:structures ex:FL_Logistics ;
     hmas:isSubGroupOf ex:FL_OperationsDepartment .
 
-ex:FL_AdministrativeDepartment ex:hasAuthority ex:FL_HumanResourcesDepartment, ex:FL_FinanceDepartment .
-ex:FL_OperationsDepartment ex:hasAuthority ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment .
+ex:FL_AdministrativeDepartment ex:hasAuthorityOver ex:FL_HumanResourcesDepartment, ex:FL_FinanceDepartment .
+ex:FL_OperationsDepartment ex:hasAuthorityOver ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment .
 
 ## Roles
 ex:FL_Director a ex:Director .
@@ -571,8 +571,8 @@ ex:FL_Deliverer_Shipping a ex:Deliverer_Shipping_Membership ;
     hmas:isMembershipFor ex:FL_Deliverer ;
     hmas:isMembershipIn ex:FL_ShippingDepartment .
 
-ex:FL_Planner_Planning ex:canCommunicate ex:FL_Carrier_Shipping .
-ex:FL_Carrier_Shipping ex:canCommunicate ex:FL_Planner_Planning .
+ex:FL_Planner_Planning ex:canCommunicateWith ex:FL_Carrier_Shipping .
+ex:FL_Carrier_Shipping ex:canCommunicateWith ex:FL_Planner_Planning .
     
 ## Missions
 ex:FL_HumanResourcesManagement a ex:HumanResourcesManagement .
