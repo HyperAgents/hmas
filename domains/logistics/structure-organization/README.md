@@ -1,7 +1,7 @@
 # Structure the Social Context within an Organization
 
 ## Description
-John had decided to copy the SL Logistics' organization model to create the FL Logistics organization. John structures the FL Logistics into seven departments: Human Resources (HR), Finance, Commercial, Planning, Shipping, Administrative, and Operations. The HR and Finance departments are allocated under the Administrative department, while the Commercial, Planning, and Shipping departments are allocated under the Operations department. The Administrative and Operations departments have a director. The same person cannot be the director of both departments at the same time.
+John had decided to copy the SL Logistics' organization model to create the FL Logistics organization. John structures the FL Logistics into seven departments: Human Resources (HR), Finance, Commercial, Planning, Shipping, Administrative, and Operations. The HR and Finance departments are allocated under the Administrative department, while the Commercial, Planning, and Shipping departments are allocated under the Operations department. The Administrative and Operations departments have a director. The same agent cannot be the director of both departments at the same time.
 
 Associated to each of these departments, the organization defines a set of job positions as follows:
 1. Administrative department : _administrative director_
@@ -28,13 +28,13 @@ Jane, an artificial agent, is deployed as a  _carrier_. Jane can communicate wit
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the job positions not being played by anyone in the organization X?                                                                    | What are the job positions not being played by anyone in the FL Logistics organization? `ex:FL_AccountManager`            |
+| q1 | What are the job positions not being played by anyone in the organization X?                                                                    | What are the job positions not being played by anyone in the FL Logistics organization? `ex:FL_AccountManager`                    |
 | q2 | What are the agents to whom agent A can interact with in the organization X?                            | What are the agents to whom Jane can interact with in the FL Logistics organization? `ex:Igor`                    |
-| q3 | What are the memberships not fully populated in the organization X? | What are the memberships not fully populated in the FL Logistics organization? `ex:AccountManager_Commercial_Membership`  |
-| q4 | What are the job positions of agent A in the organization X?        | What are the job positions played by agent Igor in the FL Logistics organization? `ex:FL_Planner`                         |
-| q5 | What are the departments in the organization X                      | What are the departments in the FL Logistics organization? `ex:FL_AdministrativeDepartment`, `ex:FL_CommercialDepartment`, `ex:FL_FinanceDepartment`, `ex:FL_HumanResourcesDepartment`, `ex:FL_OperationsDepartment`, `ex:FL_PlanningDepartment`, `ex:FL_ShippingDepartment`      |
-| q6 | What are the departments under the department Y in the organization X?                                                                          | What are the departments under the Administrative department in the FL Logistics organization? `ex:FL_FinanceDepartment`, `ex:FL_HumanResourcesDepartment`                                            |
-| q7 | What are the memberships to which agent A is incompatible with in the organization X?                                                           | What are the memberships to which John is incompatible with in the FL Logistics organization? `ex:FL_Director_Operations` |
+| q3 | What are the memberships not fully populated in the organization X? | What are the memberships not fully populated in the FL Logistics organization? `ex:AccountManager_Commercial_Membership`          |
+| q4 | What are the job positions of agent A in the organization X?        | What are the job positions played by agent Igor in the FL Logistics organization? `ex:FL_Planner`                                 |
+| q5 | What are the departments in the organization X                      | What are the departments in the FL Logistics organization? `ex:FL_AdministrativeDepartment`, `ex:FL_CommercialDepartment`, `ex:FL_FinanceDepartment`, `ex:FL_HumanResourcesDepartment`, `ex:FL_OperationsDepartment`, `ex:FL_PlanningDepartment`, `ex:FL_ShippingDepartment`              |
+| q6 | What are the departments under the department Y in the organization X?                                                                          | What are the departments under the Administrative department in the FL Logistics organization? `ex:FL_FinanceDepartment`, `ex:FL_HumanResourcesDepartment`                                                    |
+| q7 | What are the memberships to which agent A is incompatible with in the organization X?                                                           | What are the memberships to which John is incompatible with in the FL Logistics organization? `ex:Director_Operations_Membership` |
 
 ## Glossary
 
@@ -53,6 +53,41 @@ Jane, an artificial agent, is deployed as a  _carrier_. Jane can communicate wit
 
 ## Recommendations
 
-* The **Membership Interaction** and **Group Interaction** must not be used directly, a sub-property must be created to explicit the exact interaction between memberships and groups respectively.
+* The **Membership Interaction** and **Group Interaction** must not be used directly, a sub-property must be created to explicit the exact interaction between respectively memberships and groups being represented.
 
-* The **Memberships Incompatibility** will be represented as SHACL shapes when using the ontology.
+* The **Memberships Incompatibility** is represented as SHACL shape when using the ontology. For example, the SHACL shape to constrain the same agent to be the director of two departments at the same time.
+
+```
+ex:
+    sh:declare [
+        sh:prefix "ex" ;
+        sh:namespace "http://example.org/" ;
+        ] .
+hmas:
+    sh:declare [
+        sh:prefix "hmas" ;
+        sh:namespace "https://purl.org/hmas/" ;
+        ] .
+rdfs:
+    sh:declare [
+        sh:prefix "rdfs" ;
+        sh:namespace "http://www.w3.org/2000/01/rdf-schema#" ;
+        ] .
+
+ex:incompatibilityShape a sh:PropertyShape ;
+    sh:targetClass hmas:Agent ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message  "The same agent cannot play the Director role in two different memberships simultaneously." ;
+        sh:prefixes ex:, hmas:, rdfs: ;
+        sh:select   """
+			SELECT (?agent as $this) (COUNT(?s) as ?c)
+      WHERE {
+        ?s hmas:isMembershipOf ?agent .
+        ?s hmas:isMembershipFor ?role .
+        ?role a ex:Director .
+      }
+      GROUP BY ?agent ?role
+      HAVING (COUNT(?s) > 1)
+			""" ; ] .
+```

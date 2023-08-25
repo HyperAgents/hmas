@@ -3,6 +3,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
+## SHACL SPARQL-Constraint prefixes
+ex:
+    sh:declare [
+        sh:prefix "ex" ;
+        sh:namespace "http://example.org/" ;
+        ] .
+hmas:
+    sh:declare [
+        sh:prefix "hmas" ;
+        sh:namespace "https://purl.org/hmas/" ;
+        ] .
+rdfs:
+    sh:declare [
+        sh:prefix "rdfs" ;
+        sh:namespace "http://www.w3.org/2000/01/rdf-schema#" ;
+        ] .
+
 #################################################################
 #    Core Ontology
 #################################################################
@@ -479,6 +496,24 @@ ex:Deliverer_Shipping_Membership a sh:NodeShape ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
+
+ex:incompatibilityShape a sh:PropertyShape ;
+    sh:targetClass hmas:Agent ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message  "The same agent cannot play the Director role in two different memberships simultaneously." ;
+        sh:prefixes ex:, hmas:, rdfs: ;
+        sh:select """
+			SELECT (?agent as $this) (COUNT(?s) as ?c)
+      WHERE {
+        ?s hmas:isMembershipOf ?agent .
+        ?s hmas:isMembershipFor ?role .
+        ?role a ex:Director .
+      }
+      GROUP BY ?agent ?role
+      HAVING (COUNT(?s) > 1)
+			""" ;
+      ] .
 
 ## Mission Specifications
 ex:HumanResourcesManagement rdfs:subClassOf hmas:Mission .
