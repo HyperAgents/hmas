@@ -3,10 +3,10 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
-select ?groups
+select ?group
 where {
   ex:FL_Logistics a ?orgModel ;
-                  hmas:isStructuredBy ?groups .
+                  hmas:isStructuredBy ?group .
 
   ?orgModel rdfs:subClassOf hmas:Organization .
   { ?orgModel a sh:NodeShape . }
@@ -14,8 +14,8 @@ where {
   { ?orgShape a sh:NodeShape ;
               sh:targetClass ?orgModel . }
   
-  ?groups a ?groupModel ;
-          hmas:isSubGroupOf ex:FL_AdministrativeDepartment .
+  ?group a ?groupModel ;
+         hmas:isSubGroupOf ex:FL_AdministrativeDepartment .
 
   ?groupModel rdfs:subClassOf hmas:Group .
   { ?groupModel a sh:NodeShape . }
@@ -23,4 +23,4 @@ where {
   { ?groupShape a sh:NodeShape ;
                 sh:targetClass ?groupModel . }
 }
-order by ?groups
+order by ?group
