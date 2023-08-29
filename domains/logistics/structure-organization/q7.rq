@@ -3,48 +3,17 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
-select ?membershipModel
-where {
-  ex:John a hmas:Agent ;
-          hmas:isMemberOf ex:FL_Logistics .
+select ?incompatibilityConstraint
+where {  
+  ex:FL_Logistics a ?orgModel .
 
-  ?role a ex:Director .
-  
-  ex:FL_Logistics a ?orgModel ;
-                  hmas:providesRole ?role ;
-                  hmas:isStructuredBy ?group .
-
-  ?orgModel rdfs:subClassOf hmas:Organization .
+  ?orgModel rdfs:subClassOf hmas:Organization ;
+            (sh:property/sh:node)+ ?incompatibilityConstraint .
   { ?orgModel a sh:NodeShape . }
   union
   { ?orgShape a sh:NodeShape ;
               sh:targetClass ?orgModel . }
-  
-  ?group a ?groupModel .
 
-  ?groupModel rdfs:subClassOf hmas:Group .
-  { ?groupModel a sh:NodeShape . }
-  union
-  { ?groupShape a sh:NodeShape ;
-                sh:targetClass ?groupModel . }
-
-  ?membershipModel rdfs:subClassOf hmas:Membership ;
-                   sh:property [
-                     sh:path hmas:isMembershipFor ;
-                     sh:qualifiedValueShape [ sh:class ex:Director ]
-                     ] ;
-                   sh:property [
-                     sh:path hmas:isMembershipIn ;
-                     sh:qualifiedValueShape [ sh:class ?groupModel ]
-                     ] .
-  { ?membershipModel a sh:NodeShape . }
-  union
-  { ?membershipShape a sh:NodeShape ;
-                     sh:targetClass ?membershipModel . }
-
-  FILTER NOT EXISTS {
-    ?membership a ?membershipModel ;
-                hmas:isMembershipOf ex:John .
-  }
+  ?incompatibilityConstraint sh:targetClass hmas:Agent .
 }
-order by ?membershipModel
+order by ?incompatibilityConstraint
