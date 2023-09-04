@@ -5,35 +5,18 @@ prefix hmas: <https://purl.org/hmas/>
 
 select distinct ?agent
 where {
-  ex:Jane hmas:isMemberOf ex:FL_Logistics .
-  
-  ex:FL_Logistics a ?orgModel ;
-                  hmas:providesRole ?role ;
+  ex:FL_Logistics hmas:providesRole ?role ;
                   hmas:isStructuredBy ?group .
   
-  ?orgModel rdfs:subClassOf hmas:Organization .
-  { ?orgModel a sh:NodeShape . }
-  union
-  { ?orgShape a sh:NodeShape ;
-              sh:targetClass ?orgModel . }
-  
-  ?membershipModel rdfs:subClassOf hmas:Membership .
-  { ?membershipModel a sh:NodeShape . }
-  union
-  { ?membershipShape a sh:NodeShape ;
-                     sh:targetClass ?membershipModel .
-  }
-
   ?membership a ?membershipModel ;
               hmas:isMembershipOf ex:Jane ;
               hmas:isMembershipFor ?role ;
               hmas:isMembershipIn ?group .
 
-  ?interaction rdfs:subPropertyOf hmas:hasMembershipInteractionWith .
+  ?relationship rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
 
-  ?membership ?interaction ?otherMembership .
+  ?membership ?relationship ?otherMembership .
 
-  ?otherMembership a ?otherMembershipModel ;
-                   hmas:isMembershipOf ?agent .
+  ?otherMembership hmas:isMembershipOf ?agent .
 }
 order by ?agent

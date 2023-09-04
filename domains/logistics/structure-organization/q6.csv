@@ -1,3 +1,2 @@
-groups
-http://example.org/FL_FinanceDepartment
-http://example.org/FL_HumanResourcesDepartment
+incompatibilityConstraint
+http://example.org/directorIncompatibilityShape

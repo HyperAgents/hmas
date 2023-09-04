@@ -5,13 +5,8 @@ prefix hmas: <https://purl.org/hmas/>
 
 select ?group
 where {
-  ex:FL_Logistics a ?orgModel ;
-                  hmas:isStructuredBy ?group .
-
-  ?orgModel rdfs:subClassOf hmas:Organization .
-  { ?orgModel a sh:NodeShape . }
-  union
-  { ?orgShape a sh:NodeShape ;
-              sh:targetClass ?orgModel . }
+  ex:FL_Logistics hmas:isStructuredBy ?group .
+  
+  ?group hmas:isSubGroupOf ex:FL_AdministrativeDepartment .
 }
 order by ?group

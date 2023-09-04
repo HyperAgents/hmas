@@ -1,2 +1,8 @@
-role
-http://example.org/FL_Planner
+group
+http://example.org/FL_AdministrativeDepartment
+http://example.org/FL_CommercialDepartment
+http://example.org/FL_FinanceDepartment
+http://example.org/FL_HumanResourcesDepartment
+http://example.org/FL_OperationsDepartment
+http://example.org/FL_PlanningDepartment
+http://example.org/FL_ShippingDepartment

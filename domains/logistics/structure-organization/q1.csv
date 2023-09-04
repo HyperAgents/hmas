@@ -1,2 +1,2 @@
-role
-http://example.org/FL_AccountManager
+role,group,membershipModel
+http://example.org/FL_AccountManager,http://example.org/FL_CommercialDepartment,http://example.org/AccountManager_Commercial_Membership
