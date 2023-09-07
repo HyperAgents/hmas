@@ -464,17 +464,26 @@ ex:directorIncompatibilityShape a sh:NodeShape ;
         ] .
 
 ## Mission Specifications
-ex:HumanResourcesManagement rdfs:subClassOf hmas:Mission .
-ex:FinancialManagement rdfs:subClassOf hmas:Mission .
-ex:CommercialManagement rdfs:subClassOf hmas:Mission .
-ex:PlanningManagement rdfs:subClassOf hmas:Mission .
-ex:CarryGoods rdfs:subClassOf hmas:Mission .
-ex:CollectGoods rdfs:subClassOf hmas:Mission .
-ex:DeliverGoods rdfs:subClassOf hmas:Mission .
+ex:HumanResourcesManagement a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:FinancialManagement a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:CommercialManagement a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:PlanningManagement a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:CarryGoods a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:CollectGoods a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:DeliverGoods a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
 
 ## Facility Specifications
-ex:PickingArea rdfs:subClassOf hmas:Facility .
-ex:ReceivingArea rdfs:subClassOf hmas:Facility .
+ex:PickingArea a sh:NodeShape ;
+    rdfs:subClassOf hmas:Facility .
+ex:ReceivingArea a sh:NodeShape ;
+    rdfs:subClassOf hmas:Facility .
 
 ## Relation Specifications
 ex:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
