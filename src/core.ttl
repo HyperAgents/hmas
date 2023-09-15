@@ -100,6 +100,8 @@ skos:note a owl:AnnotationProperty .
   schema:name "Andrei Ciortea" ;
   schema:email "andrei.ciortea@unisg.ch" ;
   schema:mainEntityOfPage <http://andreiciortea.ro/> ;
+  schema:identifier "https://orcid.org/0000-0003-0721-4135#orcid-id"^^xsd:anyURI ;
+  owl:sameAs <https://orcid.org/0000-0003-0721-4135> ;
   schema:affiliation <http://dbpedia.org/resource/University_of_St._Gallen>  .
 
 <https://id.inrupt.com/smnmyr> a schema:Person ;
@@ -114,6 +116,8 @@ skos:note a owl:AnnotationProperty .
   schema:name "Danai Vachtsevanou" ;
   schema:email "danai.vachtsevanou@unisg.ch" ;
   schema:mainEntityOfPage <https://scholar.google.com/citations?user=ju1FICsAAAAJ> ;
+  schema:identifier "https://orcid.org/0000-0002-6697-0427#orcid-id"^^xsd:anyURI ;
+  owl:sameAs <https://orcid.org/0000-0002-6697-0427> ;
   schema:affiliation <http://dbpedia.org/resource/University_of_St._Gallen> .
 
 <https://orcid.org/0000-0002-2956-0533> a schema:Person ;
