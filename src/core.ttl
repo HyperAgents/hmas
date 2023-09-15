@@ -27,14 +27,14 @@
     dct:description  "An ontology to describe Hypermedia Multi-Agent Systems."@en,
                  "Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;
     dct:issued "2021-11-21"^^xsd:date ;
-    dct:creator <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
+    dct:creator <https://id.inrupt.com/andreiciortea> ;
     dct:contributor <http://ns.inria.fr/fabien.gandon#me> ; 
     dct:contributor <http://maxime-lefrancois.info/me#> ; 
     dct:contributor <https://danaivach.inrupt.net/profile/card#me> ; 
     dct:contributor <https://orcid.org/0000-0003-0821-6095>  ; 
     dct:contributor <https://orcid.org/0000-0002-2956-0533> ; 
     dct:contributor <https://orcid.org/0000-0002-4506-2745> ;
-    dct:contributor <https://pod.inrupt.com/smnmyr/profile/card#me> ;
+    dct:contributor <https://id.inrupt.com/smnmyr> ;
     dct:contributor <https://www.vcharpenay.link/#me> ;
     dct:contributor <http://w3id.org/people/az/me> ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
@@ -96,13 +96,13 @@ skos:note a owl:AnnotationProperty .
   owl:sameAs <https://orcid.org/0000-0001-9814-8991> ;
   schema:affiliation <http://dbpedia.org/resource/École_nationale_supérieure_des_mines_de_Saint-Étienne> .
 
-<https://pod.inrupt.com/andreiciortea/profile/card#me> a schema:Person ;
+<https://id.inrupt.com/andreiciortea> a schema:Person ;
   schema:name "Andrei Ciortea" ;
   schema:email "andrei.ciortea@unisg.ch" ;
   schema:mainEntityOfPage <http://andreiciortea.ro/> ;
   schema:affiliation <http://dbpedia.org/resource/University_of_St._Gallen>  .
 
-<https://pod.inrupt.com/smnmyr/profile/card#me> a schema:Person ;
+<https://id.inrupt.com/smnmyr> a schema:Person ;
   schema:name "Simon Mayer" ;
   schema:email "simon.mayer@unisg.ch" ;
   schema:mainEntityOfPage <https://www.linkedin.com/in/simon-mayer-b7979936/> ;
