@@ -1,0 +1,8 @@
+PREFIX : <#>
+
+SELECT ?norm
+WHERE {
+  ?organization :enforcesNorm ?norm .
+  ?norm :hasNormativeContext ?context .
+  FILTER(?context = :myContext)
+}

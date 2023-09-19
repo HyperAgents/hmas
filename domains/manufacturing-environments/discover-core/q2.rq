@@ -1,0 +1,14 @@
+prefix hmas: <https://purl.org/hmas/>
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:groundFloor as ?groundFloor)
+    bind (ex:productionCell1 as ?cell1)
+    bind (ex:productionCell2 as ?cell2)
+
+    ex:factory hmas:transitivelyContains ?groundFloor, ?cell1, ?cell2 .
+
+    ?groundFloor a hmas:Workspace .
+    ?cell1 a hmas:Workspace .
+    ?cell2 a hmas:Workspace .
+}
