@@ -14,13 +14,13 @@ The agent discovers the signifier, that is exposed in the profile of the robotic
  
 ## Competency Questions
 
-| ID | Question in Natural Language | Example                                                                                                                                   |
-|----|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| q1 | What is the action execution specification that a given signifier signifies? | Specification that signifier `ex:gripperMovable` signifies: `ex:moveGripperShape`  |
-| q2 | What are the constraints on the input that an action execution should have based on a given specification? | Constaints on the input that the execution of moving the gripper should have based on `ex:moveGripperShape`: `ex:gripperJointShape` |
-| q3 | What is the type of the input that an action execution should have based on a given specification? | Type of the input that the execution of moving the gripper should have based on `ex:moveGripperShape`: `onto:GripperJoint` |
-| q4 | What are the properties that the input of an action execution should have based on a given specification? | Properties of the input that the execution of moving the gripper should have based on `ex:moveGripperShape`: `ex:hasGripperValue` |
-| q5 | What are forms that an action execution should use based on a given specification?  | Forms that the execution of moving the gripper should use based on `ex:moveGripperShape`: `ex:httpForm`, `ex:coapForm` |
+| ID | Question in Natural Language                                                                                              | Example                                                                                                                   |
+|----|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| q1 | What is the action execution specification that a given signifier signifies?                                              | Specification that signifier `ex:gripperMovable` signifies: `ex:moveGripperShape`                                         |
+| q2 | What is the specification of the input based on a given action execution specification?                      | Specification of the input for the execution of moving the gripper based on `ex:moveGripperShape`: `ex:gripperJointShape` |
+| q3 | What is the type of the input that an action execution should have based on a given action execution specification?       | Type of the input that the execution of moving the gripper should have based on `ex:moveGripperShape`: `onto:GripperJoint` |
+| q4 | What are the properties that the input of an action execution should have based on a given action execution specification? | Properties of the input that the execution of moving the gripper should have based on `ex:moveGripperShape`: `ex:hasGripperValue` |
+| q5 | What are forms that an action execution should use based on a given action execution specification?                       | Forms that the execution of moving the gripper should use based on `ex:moveGripperShape`: `ex:httpForm`, `ex:coapForm`    |
 
 
 
