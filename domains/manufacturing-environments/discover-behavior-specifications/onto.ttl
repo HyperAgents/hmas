@@ -33,11 +33,11 @@
               rdfs:domain :ActionExecution ;
               rdfs:range :Input ;
               rdfs:comment "A relation between an action execution and the input that it has."@en ;
-              rdfs:label "has input"@en .
+              rdfs:label "has input"@en, "a une entrée"@fr .
 
 :signifies a owl:ObjectProperty ;
            rdfs:isDefinedBy :interaction ;
            rdfs:domain :Signifier ;
            rdfs:range sh:NodeShape ;
            rdfs:comment "A relation between a signifier and a behavior specification it signifies."@en ;
-           rdfs:label "signifies"@en .
+           rdfs:label "signifies"@en, "signifie"@fr .
