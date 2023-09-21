@@ -1,5 +1,6 @@
 @base <https://purl.org/hmas/> .
 @prefix : <> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
@@ -37,6 +38,6 @@
 :signifies a owl:ObjectProperty ;
            rdfs:isDefinedBy :interaction ;
            rdfs:domain :Signifier ;
-           rdfs:range :BehaviorSpecification ;
+           rdfs:range sh:NodeShape ;
            rdfs:comment "A relation between a signifier and a behavior specification it signifies."@en ;
            rdfs:label "signifies"@en .
