@@ -6,7 +6,7 @@ select ?actionExecutionSpec
 where {
     ex:gripperMovable a hmas:Signifier ;
         hmas:signifies ?actionExecutionSpec .
-    ?actionExecutionSpec a sh:NodeShape .
-    ?actionExecutionSpec sh:class hmas:ActionExecution .
+    ?actionExecutionSpec a sh:NodeShape ;
+        sh:class hmas:ActionExecution .
 }
 order by ?actionExecutionSpec
