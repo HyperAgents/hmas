@@ -1,4 +1,4 @@
-@prefix : <https://purl.org/hmas/> .
+@prefix hmas: <https://purl.org/hmas/> .
 @prefix onto: <https://ci.mines-stetienne.fr/kg/ontology#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix htv: <http://www.w3.org/2011/http#> .
@@ -7,14 +7,14 @@
 @prefix xs: <https://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/> .
 
-ex:ur5Profile a :ResourceProfile;
-    :exposesSignifier ex:gripperMovable .
+ex:ur5Profile a hmas:ResourceProfile;
+    hmas:exposesSignifier ex:gripperMovable .
 
-ex:gripperMovable a :Signifier ;
-    :signifies ex:moveGripperShape .
+ex:gripperMovable a hmas:Signifier ;
+    hmas:signifies ex:moveGripperShape .
 
 ex:moveGripperShape a sh:NodeShape;
-	sh:class :ActionExecution ;
+	sh:class hmas:ActionExecution ;
  	sh:property [
 		sh:path prov:used ;
         sh:minCount 1;
@@ -25,10 +25,10 @@ ex:moveGripperShape a sh:NodeShape;
 	    ) ;
   	] ;
 	sh:property [
-		sh:path :hasInput;
+		sh:path hmas:hasInput;
     	sh:qualifiedValueShape ex:gripperJointShape ;
     	sh:qualifiedMinCount 1 ;
-    	sh:qualifiedMaxCount 1 
+    	sh:qualifiedMaxCount 1
   	] .
 
 ex:gripperJointShape a sh:NodeShape ;
