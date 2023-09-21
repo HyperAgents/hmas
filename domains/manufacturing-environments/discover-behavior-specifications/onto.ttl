@@ -11,17 +11,17 @@
                  rdfs:isDefinedBy :interaction ;
                  rdfs:subClassOf :BehaviorExecution ;
                  rdfs:comment "A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request."@en ;
-                 rdfs:label "action execution"@en .
+                 rdfs:label "action execution"@en,  "exécution de l'action"@fr .
 
 :BehaviorExecution a owl:Class ;
                    rdfs:isDefinedBy :interaction ;
                    rdfs:comment "A course of action performed by an agent upon exploiting a behavior possibility."@en ;
-                   rdfs:label "behavior execution"@en .
+                   rdfs:label "behavior execution"@en, "exécution du comportement"@fr .
 
 :Input a owl:Class ;
        rdfs:isDefinedBy :interaction ;
        rdfs:comment "An input of an action, for example, in the representation of an action execution."@en ;
-       rdfs:label "input"@en .
+       rdfs:label "input"@en, "entrée"@fr .
 
 #################################################################
 #    Object Properties
