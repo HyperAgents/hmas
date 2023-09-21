@@ -1,6 +1,7 @@
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix onto: <https://ci.mines-stetienne.fr/kg/ontology#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix pto:   <http://www.productontology.org/id/> .
 @prefix htv: <http://www.w3.org/2011/http#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -8,7 +9,13 @@
 @prefix ex: <http://example.org/> .
 
 ex:ur5Profile a hmas:ResourceProfile;
+    hmas:isProfileOf ex:ur5;
     hmas:exposesSignifier ex:gripperMovable .
+
+ex:ur5 a hmas:Artifact, pto:Robotic_arm ;
+    hmas:isContainedIn ex:manufacturingWksp .
+
+ex:manufacturingWksp a hmas:Workspace .
 
 ex:gripperMovable a hmas:Signifier ;
     hmas:signifies ex:moveGripperShape .
