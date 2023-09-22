@@ -1,4 +1,6 @@
-rdflib==6.0.0
+rdflib==7.0.0
 markdown==3.4.4
 pyparsing==2.4.7
 mistune==2.0.2
+dominate
+beautifulsoup4
