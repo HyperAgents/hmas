@@ -4,4 +4,4 @@ pyparsing==2.4.7
 mistune==2.0.2
 dominate
 beautifulsoup4
-pylode @ git+https://github.com/HyperAgents/pyLODE@skos_tags
+#pylode@git+https://github.com/HyperAgents/pyLODE@skos_tags

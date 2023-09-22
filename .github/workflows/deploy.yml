@@ -16,7 +16,7 @@ jobs:
       with:
         python-version: '3.x'
         cache: 'pip'
-    - run: pip install -r .acimov/requirements.txt
+    - run: pip install -r .acimov/requirements.txt && pip install pylode@git+https://github.com/HyperAgents/pyLODE@skos_tags
     - run: python .acimov/process_core.py
     - name: rsync deployments
       uses: burnett01/rsync-deployments@5.1
