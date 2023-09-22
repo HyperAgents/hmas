@@ -19,7 +19,7 @@ base = "https://purl.org/hmas/"
 os.makedirs("public", exist_ok=True)
 shutil.copytree("resources", "public", dirs_exist_ok=True)
 
-for input_file_path in [ "src/core.ttl" ]:
+for input_file_path in [ "src/core.ttl", "src/interaction.ttl" , "src/regulation.ttl", "src/meta.ttl", "src/fipa.ttl"]:
     input_file_path_head = input_file_path[:-4] + ".head"
     input_file_path_tail = input_file_path[:-4] + ".tail"
     dest_path = input_file_path.replace("src/" , "public/")[0:-4]
@@ -30,12 +30,14 @@ for input_file_path in [ "src/core.ttl" ]:
         g.parse(input_file_path)
     except rdflib.plugins.parsers.notation3.BadSyntax as err:
         err_string = str(err).replace('\n', '\n  ')
-        logging.error(f"File {file_path} {err_string}")
-        sys.exit(1) # exit with error code if there is a parsing error
+        logging.error(f"File {dest_path} {err_string}")
+        pass
+#        sys.exit(1) # exit with error code if there is a parsing error
 
     if len(list(g.subjects(RDF.type, OWL.Ontology))) != 1: # check there is one ontology declaration
         logging.error("There MUST be exactly one triple: `?ontology rdf:type owl:Ontology`")
-        sys.exit(1) # exit with error code if there is a parsing error
+        pass
+#        sys.exit(1) # exit with error code if there is a parsing error
 
     for ontology in g.subjects(RDF.type, OWL.Ontology):
         logging.debug(f"The ontology is {ontology.n3()}")
@@ -76,32 +78,29 @@ for input_file_path in [ "src/core.ttl" ]:
     of = Path(dest_path+ ".fr.html")
     od.make_html(of, include_css=False)
     
-#     html = pylode.MakeDocco(input_data_file=input_file_path).document()
-#     with open(dest_path+ ".html", "w") as output:
-#         output.write(html)
-#     # with open(dest_path+ ".ttl", "wb") as output:
-#     #     output.write(g.serialize(format='ttl', encoding='utf-8'))
-#     # with open(dest_path+ ".rdf", "wb") as output:
-#     #     output.write(g.serialize(format='pretty-xml', encoding='utf-8'))
-#     # with open(dest_path+ ".json-ld", "wb") as output:
-#     #     output.write(g.serialize(format='json-ld', indent=4, encoding='utf-8'))
-#     # with open(dest_path+ ".n3", "wb") as output:
-#     #     output.write(g.serialize(format='n3', encoding='utf-8'))
-#     # with open(dest_path+ ".nt", "wb") as output:
-#     #     output.write(g.serialize(format='nt', encoding='utf-8'))
+    shutil.copy(input_file_path, dest_path+ ".ttl")
+    
+    with open(dest_path+ ".rdf", "wb") as output:
+        output.write(g.serialize(format='pretty-xml', encoding='utf-8'))
+    with open(dest_path+ ".json-ld", "wb") as output:
+        output.write(g.serialize(format='json-ld', indent=4, encoding='utf-8'))
+    with open(dest_path+ ".n3", "wb") as output:
+        output.write(g.serialize(format='n3', encoding='utf-8'))
+    with open(dest_path+ ".nt", "wb") as output:
+        output.write(g.serialize(format='nt', encoding='utf-8'))
 
 
-#     # append term redirections to the htaccess
+    # append term redirections to the htaccess
 
-#     with open("public/.htaccess", "a") as f:
-#         definedTerms = []
-#         for definedTerm in g.subjects(RDFS.isDefinedBy, ontology):
-#             localName = str(definedTerm)[len(base):]
-#             if localName == '':
-#                 continue
-#             definedTerms.append(localName)
-#         if len(definedTerms) != 0:
-#             f.write(f"""
-# RewriteCond %{{REQUEST_URI}} ^/hmas/({"|".join(definedTerms)})$
-# RewriteRule ^(.*)$ /hmas/{dest_path[7:]}#$1 [R=303,NE]
-#             """)
+    with open("public/.htaccess", "a") as f:
+        definedTerms = []
+        for definedTerm in g.subjects(RDFS.isDefinedBy, ontology):
+            localName = str(definedTerm)[len(base):]
+            if localName == '':
+                continue
+            definedTerms.append(localName)
+        if len(definedTerms) != 0:
+            f.write(f"""
+RewriteCond %{{REQUEST_URI}} ^/hmas/({"|".join(definedTerms)})$
+RewriteRule ^(.*)$ /hmas/{dest_path[7:]}#$1 [R=303,NE]
+            """)
