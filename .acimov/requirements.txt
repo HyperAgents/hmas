@@ -1,5 +1,5 @@
 rdflib==6.0.0
-pylode @ git+https://github.com/HyperAgents/pyLODE@skos_tags
+markdown==3.4.4
 pyparsing==2.4.7
 mistune==2.0.2
-markdown==3.4.4
+pylode @ git+https://github.com/HyperAgents/pyLODE@skos_tags
