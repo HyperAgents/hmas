@@ -27,13 +27,16 @@
     dct:description  "An ontology to describe Hypermedia Multi-Agent Systems."@en,
                  "Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;
     dct:issued "2021-11-21"^^xsd:date ;
+    dct:creator <https://id.inrupt.com/andreiciortea> ;
     dct:contributor <http://ns.inria.fr/fabien.gandon#me> ; 
     dct:contributor <http://maxime-lefrancois.info/me#> ; 
     dct:contributor <https://danaivach.inrupt.net/profile/card#me> ; 
-    dct:contributor <https://www.linkedin.com/in/christopher-leturc/> ; 
-    dct:contributor <https://www.emse.fr/~boissier/> ;
-    dct:contributor <https://pod.inrupt.com/smnmyr/profile/card#me> ;
-    dct:creator <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
+    dct:contributor <https://orcid.org/0000-0003-0821-6095>  ; 
+    dct:contributor <https://orcid.org/0000-0002-2956-0533> ; 
+    dct:contributor <https://orcid.org/0000-0002-4506-2745> ;
+    dct:contributor <https://id.inrupt.com/smnmyr> ;
+    dct:contributor <https://www.vcharpenay.link/#me> ;
+    dct:contributor <http://w3id.org/people/az/me> ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <>  .
@@ -44,11 +47,14 @@
 #################################################################
 
 schema:Person a owl:Class .
+schema:CollegeOrUniversity a owl:Class .
+schema:ResearchOrganization a owl:Class .
 schema:name a owl:AnnotationProperty .
 schema:email a owl:AnnotationProperty .
 schema:url a owl:AnnotationProperty .
 schema:identifier a owl:AnnotationProperty .
 schema:affiliation a owl:AnnotationProperty .
+schema:mainEntityOfPage  a owl:AnnotationProperty .
 dct:title a owl:AnnotationProperty .
 dct:description a owl:AnnotationProperty .
 dct:contributor a owl:AnnotationProperty .
@@ -66,65 +72,117 @@ skos:note a owl:AnnotationProperty .
 #    contributors
 #################################################################
 
+### People
+
 <http://ns.inria.fr/fabien.gandon#me> a schema:Person ;
   schema:name "Fabien Gandon" ;
   schema:email "fabien.gandon@inria.fr" ;
-  schema:url <http://fabien.info/> ;
-  schema:identifier <http://orcid.org/0000-0003-0543-1232> ;
-  schema:affiliation <https://inria.fr/> .
+  schema:mainEntityOfPage <http://fabien.info/> ;
+  schema:identifier "https://orcid.org/0000-0003-0543-1232#orcid-id"^^xsd:anyURI ;
+  owl:sameAs <https://orcid.org/0000-0003-0543-1232> ;
+  schema:affiliation <http://dbpedia.org/resource/French_Institute_for_Research_in_Computer_Science_and_Automation> .
 
-<https://inria.fr/> schema:name "Inria" ;
-  schema:url <https://inria.fr/> .
-
-<https://www.linkedin.com/in/christopher-leturc/> a schema:Person ;
+<https://orcid.org/0000-0003-0821-6095>  a schema:Person ;
   schema:name "Chistopher Leturc" ;
   schema:email "christopher.leturc@inria.fr" ;
-  schema:url <https://www.linkedin.com/in/christopher-leturc/> ;
-  schema:identifier <https://orcid.org/0000-0003-0821-6095> ;
-  schema:affiliation <https://inria.fr/> .
+  schema:mainEntityOfPage <https://www.linkedin.com/in/christopher-leturc/> ;
+  schema:identifier "https://orcid.org/0000-0003-0821-6095#orcid-id"^^xsd:anyURI ;
+  schema:affiliation <http://dbpedia.org/resource/French_Institute_for_Research_in_Computer_Science_and_Automation> .
 
 <http://maxime-lefrancois.info/me#> a schema:Person ;
   schema:name "Maxime Lefrançois" ;
   schema:email "maxime.lefrancois@emse.fr" ;
-  schema:url <http://maxime-lefrancois.info/> ;
-  schema:identifier <http://orcid.org/0000-0001-9814-8991> ;
-  schema:affiliation <https://www.mines-stetienne.fr/> .
+  schema:mainEntityOfPage <http://maxime-lefrancois.info/> ;
+  schema:identifier "https://orcid.org/0000-0001-9814-8991#orcid-id"^^xsd:anyURI ;
+  owl:sameAs <https://orcid.org/0000-0001-9814-8991> ;
+  schema:affiliation <http://dbpedia.org/resource/École_nationale_supérieure_des_mines_de_Saint-Étienne> .
 
-<https://www.mines-stetienne.fr/>
-  schema:name "MINES Saint-Étienne" ;
-  schema:url <https://mines-stetienne.fr> .
-
-<https://pod.inrupt.com/andreiciortea/profile/card#me> a schema:Person ;
+<https://id.inrupt.com/andreiciortea> a schema:Person ;
   schema:name "Andrei Ciortea" ;
   schema:email "andrei.ciortea@unisg.ch" ;
-  schema:affiliation <https://www.unisg.ch/en>  .
+  schema:mainEntityOfPage <http://andreiciortea.ro/> ;
+  schema:identifier "https://orcid.org/0000-0003-0721-4135#orcid-id"^^xsd:anyURI ;
+  owl:sameAs <https://orcid.org/0000-0003-0721-4135> ;
+  schema:affiliation <http://dbpedia.org/resource/University_of_St._Gallen>  .
 
-<https://pod.inrupt.com/smnmyr/profile/card#me> a schema:Person ;
+<https://id.inrupt.com/smnmyr> a schema:Person ;
   schema:name "Simon Mayer" ;
   schema:email "simon.mayer@unisg.ch" ;
-  schema:affiliation <https://www.unisg.ch/en>  .
-
-<https://www.unisg.ch/en> 
-  schema:name "University of St.Gallen" ; 
-  schema:url <https://www.unisg.ch> .
+  schema:mainEntityOfPage <https://www.linkedin.com/in/simon-mayer-b7979936/> ;
+  schema:identifier "https://orcid.org/0000-0001-6367-3454#orcid-id"^^xsd:anyURI ;
+  owl:sameAs <https://orcid.org/0000-0001-6367-3454> ;
+  schema:affiliation <http://dbpedia.org/resource/University_of_St._Gallen>  .
 
 <https://danaivach.inrupt.net/profile/card#me> a schema:Person ;
   schema:name "Danai Vachtsevanou" ;
   schema:email "danai.vachtsevanou@unisg.ch" ;
-  schema:url <https://danaivach.inrupt.net/profile/card> ;
-  schema:affiliation <https://www.unisg.ch/en> .
+  schema:mainEntityOfPage <https://scholar.google.com/citations?user=ju1FICsAAAAJ> ;
+  schema:identifier "https://orcid.org/0000-0002-6697-0427#orcid-id"^^xsd:anyURI ;
+  owl:sameAs <https://orcid.org/0000-0002-6697-0427> ;
+  schema:affiliation <http://dbpedia.org/resource/University_of_St._Gallen> .
 
-<https://www.emse.fr/~boissier/> a schema:Person ;
+<https://orcid.org/0000-0002-2956-0533> a schema:Person ;
   schema:name "Olivier Boissier" ;
   schema:email "olivier.boissier@emse.fr" ;
-  schema:affiliation <https://www.mines-stetienne.fr/> .
+  schema:mainEntityOfPage <https://www.emse.fr/~boissier/> ;
+  schema:identifier "https://orcid.org/0000-0002-2956-0533#orcid-id"^^xsd:anyURI ;
+  schema:affiliation <http://dbpedia.org/resource/École_nationale_supérieure_des_mines_de_Saint-Étienne> .
 
 <https://orcid.org/0000-0002-4506-2745> a schema:Person ;
   schema:name "Luis Gustavo Nardin" ;
   schema:email "luisgustavo.nardin@emse.fr" ;
-  schema:url <http://gnardin.github.io/website/> ;
-  schema:identifier <https://orcid.org/0000-0002-4506-2745> ;
-  schema:affiliation <https://www.mines-stetienne.fr/> .
+  schema:mainEntityOfPage <http://gnardin.github.io/website/> ;
+  schema:identifier "https://orcid.org/0000-0002-4506-2745#orcid-id"^^xsd:anyURI ;
+  schema:affiliation <http://dbpedia.org/resource/École_nationale_supérieure_des_mines_de_Saint-Étienne> .
+
+<https://www.vcharpenay.link/#me> a schema:Person ;
+  schema:name "Victor Charpenay" ;
+  schema:email "victor.charpenay@emse.fr" ;
+  schema:mainEntityOfPage <https://www.vcharpenay.link/> ;
+  schema:identifier "https://orcid.org/0000-0002-9210-1583#orcid-id"^^xsd:anyURI ;
+  schema:affiliation <http://dbpedia.org/resource/École_nationale_supérieure_des_mines_de_Saint-Étienne> .
+  
+<http://w3id.org/people/az/me> a schema:Person ;
+   schema:name "Antoine Zimmermann" ;
+   schema:email "antoine.zimmermann@emse.fr" ;
+   schema:mainEntityOfPage <http://w3id.org/people/az/cv> ;
+   schema:identifier "https://orcid.org/0000-0003-1502-6986#orcid-id"^^xsd:anyURI, "http://w3id.org/people/az/me"^^xsd:anyURI ;
+   schema:affiliation <http://dbpedia.org/resource/École_nationale_supérieure_des_mines_de_Saint-Étienne> .
+
+
+<https://orcid.org/0000-0003-4509-9537> a schema:Person ;
+  schema:name "Yousouf Taghzouti" ;
+  schema:email "yousouf.taghzouti@emse.fr" ;
+  schema:mainEntityOfPage <https://youctagh.github.io/> ;
+  schema:identifier "https://orcid.org/0000-0003-4509-9537#orcid-id"^^xsd:anyURI ;
+  schema:affiliation <http://dbpedia.org/resource/École_nationale_supérieure_des_mines_de_Saint-Étienne> .
+
+<https://orcid.org/0000-0002-3497-8758> a schema:Person ;
+  schema:name "Nesrine Hafiene" ;
+  schema:email "nesrine.hafiene@emse.fr" ;
+  schema:mainEntityOfPage <https://www.linkedin.com/in/nesrine-hafiene-059120114/> ;
+  schema:identifier "https://orcid.org/0000-0002-3497-8758#orcid-id"^^xsd:anyURI ;
+  schema:affiliation <http://dbpedia.org/resource/École_nationale_supérieure_des_mines_de_Saint-Étienne> .
+
+#### affiliations
+
+<http://dbpedia.org/resource/University_of_St._Gallen> a schema:CollegeOrUniversity ;
+  schema:name "University of St.Gallen" ; 
+  schema:mainEntityOfPage <https://www.unisg.ch> .
+
+<http://dbpedia.org/resource/École_nationale_supérieure_des_mines_de_Saint-Étienne> a schema:CollegeOrUniversity ;
+  schema:name "MINES Saint-Étienne" ;
+  schema:mainEntityOfPage <https://mines-stetienne.fr> .
+
+<http://dbpedia.org/resource/French_Institute_for_Research_in_Computer_Science_and_Automation> a schema:ResearchOrganization;
+   schema:name "Inria" ;
+  schema:mainEntityOfPage <https://inria.fr/> .
+
+
+
+#################################################################
+#    Concept of Affordance
+#################################################################
 
 :Affordance a skos:Concept ;
     rdfs:isDefinedBy :core ;
