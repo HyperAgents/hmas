@@ -13,6 +13,12 @@ source .venv/bin/activate
 python3 -m pip install -r .acimov/requirements.txt
 ```
 
+## Editable install of pyLODE fork for skos
+
+```
+python3 -m pip install -e ../pyLODE
+```
+
 ## Run the script
 
 Don't forget to activate the virtual environment for each session.

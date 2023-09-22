@@ -36,7 +36,8 @@
     dct:creator <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
-    vann:preferredNamespaceUri <> .
+    vann:preferredNamespaceUri <>  .
+
 
 #################################################################
 #    define external primitives to validate ontology
@@ -116,7 +117,7 @@ skos:note a owl:AnnotationProperty .
 <https://www.emse.fr/~boissier/> a schema:Person ;
   schema:name "Olivier Boissier" ;
   schema:email "olivier.boissier@emse.fr" ;
-  schema:affiliation <https://mines-stetienne.fr> .
+  schema:affiliation <https://www.mines-stetienne.fr/> .
 
 <https://orcid.org/0000-0002-4506-2745> a schema:Person ;
   schema:name "Luis Gustavo Nardin" ;
@@ -135,11 +136,13 @@ skos:note a owl:AnnotationProperty .
     dct:references _:chemeroTurvey2007 ;
     dct:references _:norman2013 .
 
-_:chemeroTurvey2007 dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;
+_:chemeroTurvey2007 a owl:NamedIndividual ;
+    dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;
     dct:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;
     rdfs:label "Chemero and Turvey, 2007"@en .
 
-_:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;
+_:norman2013 a owl:NamedIndividual ;
+    dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;
     dct:identifier <https://mitpress.mit.edu/9780262640374/> ;
     rdfs:label "Norman, 2013"@en .
 
