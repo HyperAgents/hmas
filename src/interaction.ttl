@@ -61,5 +61,5 @@
            rdfs:isDefinedBy :interaction ;
            rdfs:domain :Signifier ;
            rdfs:range sh:NodeShape ;
-           rdfs:comment "A relation between a signifier and a behavior specification it signifies."@en ;
+           rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution."@en ;
            rdfs:label "signifies"@en, "signifie"@fr .
