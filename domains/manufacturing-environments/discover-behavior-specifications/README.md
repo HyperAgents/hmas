@@ -10,7 +10,10 @@ An agent is situated in a manufacturing workspace that contains a robotic arm ar
   - a form describing an HTTP request,
   - a form describing a request based on the Constrained Application Protocol (CoAP).
 
-The agent discovers the signifier, that is exposed in the profile of the robotic arm artifact. Based on the signified information, the agent moves the gripper by providing an [`onto:GripperJoint`](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint) as input, and sends an HTTP request based on one of the forms.
+The agent discovers the signifier, that is exposed in the profile of the robotic arm artifact.
+Based on the signified information, that agent knows that interacting with the robotic arm artifact requires providing 
+an [`onto:GripperJoint`](https://ci.mines-stetienne.fr/kg/ontology#GripperJoint) as input, and sending either an HTTP or 
+a CoAP request based on the forms.
  
 ## Competency Questions
 
