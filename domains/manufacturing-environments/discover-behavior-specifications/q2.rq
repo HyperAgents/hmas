@@ -5,7 +5,7 @@ prefix sh: <http://www.w3.org/ns/shacl#>
 select ?inputSpec
 where {
     ex:moveGripperShape sh:property ?propertySpec .
-  	?propertySpec sh:path hmas:hasInput ;
-  	    sh:qualifiedValueShape ?inputSpec .
+    ?propertySpec sh:path hmas:hasInput ;
+                  sh:qualifiedValueShape ?inputSpec .
 }
 order by ?inputSpec
