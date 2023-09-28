@@ -49,7 +49,7 @@ Jane, an artificial agent, is deployed as a  _carrier_. Jane can communicate wit
 
 ## Recommendations
 
-* The **Membership Interaction** must not be used directly, a sub-property must be created to explicit the exact type of interaction being represented between memberships.
+* The **Membership Interaction** must not be used directly, a sub-property must be created to specify the exact type of interaction being represented between memberships.
 
 * The **Memberships Incompatibility** is represented as a SHACL shape instead of an RDF triple. For example, the SHACL shape constraining the same agent to be the director of two departments at the same time is
 
