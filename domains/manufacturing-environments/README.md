@@ -27,6 +27,8 @@ Containment relations between workspaces and the entities they contain allow age
 
 Agents, artifacts, documents, and other entities in a Hypermedia MAS are hosted on one or multiple platforms that provide various services to support the MAS. Hosting relations allow agents to discover hosting platforms together with any services they may provide. For example, a Hypermedia MAS for manufacturing may be implemented using a FIPA-compliant platform such as JADE. An agent in such a system is then hosted on an instance of a JADE platform, which provides an HTTP-based message transport service for interacting with the agents it hosts. A hosting relation can be used to advertise the hosting platform in the Resource Profile of an agent. Dereferencing the URI of the hosting platform would then retrieve a Resource profile of the platform, including any services the platform may provide. 
 
+
+
 ## Interaction Vocabulary
 The following features aim to enable autonomous agents to discover and interpret how to exploit affordances for interacting with artifacts and other agents in hypermedia environments. 
 
@@ -60,4 +62,4 @@ The discovery of agent abilities enables an agent to discover the qualities of o
 
 ### Feature: Discovery of Recommended Contexts (see scenario: [Discovery of Recommended Contexts](https://partage.imt.fr/index.php/f/544005326)) 
 
-The discovery of contexts recommended by signifiers enables an agent to discover what are the constraints to which the agent’s situation is recommended to conform for exploiting an affordance. For example, an agent in the industrial workshop can discover that for exploiting the affordance gripper-modifiable of a robotic arm the constraints are the following: The agent has the objective of picking an item and placing it in a target location, and the item’s current location and the target location are in the range of the robotic arm. 
+The discovery of contexts recommended by signifiers enables an agent to discover what are the constraints to which the agent’s situation is recommended to conform for exploiting an affordance. For example, an agent in the industrial workshop can discover that for exploiting the affordance gripper-modifiable of a robotic arm the constraints are the following: The agent has the objective of picking an item and placing it in a target location, and the item’s current location and the target location are in the range of the robotic arm.

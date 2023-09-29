@@ -22,6 +22,7 @@
     dct:creator <https://danaivach.inrupt.net/profile/card#me> ;
     dct:contributor <https://pod.inrupt.com/andreiciortea/profile/card#me> ;
     dct:contributor <https://pod.inrupt.com/smnmyr/profile/card#me> ;
+    dct:contributor <http://ns.inria.fr/fabien.gandon#me> ; 
     cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <> .

@@ -1,0 +1,15 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select ?role
+where {
+  ex:FL_Logistics hmas:providesRole ?role ;
+                  hmas:isStructuredBy ?group .
+  
+  ?membership hmas:isMembershipOf ex:Igor ;
+              hmas:isMembershipFor ?role ;
+              hmas:isMembershipIn ?group .
+}
+order by ?role
