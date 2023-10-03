@@ -7,13 +7,17 @@ from subprocess import Popen, PIPE, DEVNULL
 from time import sleep
 from os.path import exists
 from requests import get
+from typing import Union, List
 from constants import (
     AST_ERROR_FORMAT,
     CORESE_PYTHON_URL,
-    CORESE_JAR_NAME
+    CORESE_JAR_NAME,
+    GET_IMPORTS,
+    ONTOLOGY_SEPARATOR,
+    SRC_PATH
 )
 
-def printTitle(title):
+def print_title(title):
     title = "== " + title + " =="
     border = "=" * len(title)
     print("\n" * 2)
@@ -29,7 +33,7 @@ def printTitle(title):
 # From https://stackoverflow.com/questions/375427/a-non-blocking-read-on-a-subprocess-pipe-in-python
 
 if not exists(CORESE_JAR_NAME):
-    printTitle("Downloading Corese")
+    print_title("Downloading Corese")
     response = get(CORESE_PYTHON_URL)
     with open(CORESE_JAR_NAME, "wb") as jar:
         jar.write(response.content)
@@ -95,20 +99,30 @@ gateway = JavaGateway()
 register(gateway.shutdown)
 
 # Import of class
-OWLProfile = gateway.jvm.fr.inria.corese.core.logic.OWLProfile
+owl_profile = gateway.jvm.fr.inria.corese.core.logic.OWLProfile
 Graph = gateway.jvm.fr.inria.corese.core.Graph
 Load = gateway.jvm.fr.inria.corese.core.load.Load
 QueryProcess = gateway.jvm.fr.inria.corese.core.query.QueryProcess
+RuleEngine = gateway.jvm.fr.inria.corese.core.rule.RuleEngine
 ResultFormat = gateway.jvm.fr.inria.corese.core.print.ResultFormat
 NSManager = gateway.jvm.fr.inria.corese.sparql.triple.parser.NSManager
+property_manager = gateway.jvm.fr.inria.corese.core.util.Property
+DISABLE_OWL_AUTO_IMPORT = gateway.jvm.fr.inria.corese.core.util.Property.Value.DISABLE_OWL_AUTO_IMPORT
 TEXT_CSV = 14
 TEXT_TSV = 15
 TURTLE = 2
+OWL_RL = gateway.jvm.fr.inria.corese.core.rule.RuleEngine.OWL_RL
 
 # A java object resolving prefixes into URIs and the other way
 prefix_manager = NSManager.create()
 
-def load(path, extras=""):
+def load(
+        path: Union[str, List[str], Graph],
+        extras: str="",
+        import_from_src: bool=False,
+        graph=None,
+        already_imported: List[str]=[]
+    ):
     """Load a graph from a local file or a URL
 
     :param path: local path or a URL or a list of these
@@ -118,12 +132,16 @@ def load(path, extras=""):
     if isinstance(path, str):
         path = [path]
 
-    graph = Graph()
+    if graph is None:
+        graph = Graph()
 
     ld = Load.create(graph)
 
+    property_manager.set(DISABLE_OWL_AUTO_IMPORT, import_from_src)
+
     for file in path:
         if not exists(file):
+            print("file not found", file)
             continue
         ld.parse(file)
     
@@ -135,6 +153,24 @@ def load(path, extras=""):
             continue
         ld.loadString(extra, TURTLE)
 
+    if import_from_src:
+        imports = query_graph(graph, GET_IMPORTS)
+        imports = [
+            f"{SRC_PATH}{item.split(ONTOLOGY_SEPARATOR)[-1][:-1]}.ttl"
+            for item in imports
+        ]
+        imports = [item for item in imports if not item in already_imported]
+        if len(imports) == 0:
+            property_manager.set(DISABLE_OWL_AUTO_IMPORT, False)
+            return graph
+        graph = load(
+            imports,
+            import_from_src=True,
+            graph=graph,
+            already_imported=already_imported + imports
+        )
+
+    property_manager.set(DISABLE_OWL_AUTO_IMPORT, False)
     return graph
 
 def capture_syntax_errors():
@@ -158,7 +194,13 @@ def capture_syntax_errors():
     
     return "\n".join(final_report).strip()
 
-def safe_load(path, extras=""):
+def safe_load(
+        path: Union[str, List[str], Graph],
+        extras: str="",
+        import_from_src: bool=False,
+        graph: Graph=None,
+        already_imported: List[str]=[]
+    ):
     """Safe method to load a graph and eventually catch the error if there is one
 
     :param path: local path or a URL or a list of these
@@ -168,7 +210,13 @@ def safe_load(path, extras=""):
     syntax_errors = ""
     try:
         get_error_output()
-        graph = load(path, extras)
+        graph = load(
+            path,
+            extras=extras,
+            import_from_src=import_from_src,
+            graph=graph,
+            already_imported=already_imported
+        )
         syntax_errors = capture_syntax_errors()
 
         if len(syntax_errors) > 0:
@@ -207,3 +255,23 @@ def query_graph(graph, query):
     result = resultFormater.toString().split("\n")[1:-1]
 
     return result
+
+def check_OWL_constraints(graph):
+    try:
+        engine = RuleEngine.create(graph)
+        engine.setProfile(OWL_RL)
+        engine.processWithoutWorkflow()
+        engine.process()
+
+        # Retrieve and return the error list
+        error_list = engine.getErrorList()
+        return [str(error) for error in error_list]
+
+    except Exception as e:
+        # If the exception message contains 'EngineException', return the list of errors
+        if 'EngineException' in str(e):
+            error_list = engine.getErrorList()
+            return [str(error_list.get(i)) for i in range(error_list.size())]
+        else:
+            # If the exception is of a different type, return an error message
+            return [f"An error occurred while processing the graph: {e}"]

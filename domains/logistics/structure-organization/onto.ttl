@@ -12,7 +12,7 @@
     rdfs:comment "A Membership indicates the Role played by an Agent in a Group of an Organization." ;
     rdfs:label "membership"@en, "l'appartenance"@fr .
     
-:Group a owl:Class ;
+:Truc a :Artifact , :Agent ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Group structures an Organization."@en ;
     rdfs:label "group"@en, "groupe"@fr .
