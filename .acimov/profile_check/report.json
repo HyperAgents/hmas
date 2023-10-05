@@ -20,9 +20,7 @@
             "constraint_errors": [],
             "syntax_errors": [],
             "test_run": true,
-            "warnings": [
-                "Warning: Subject <https://purl.org/hmas/> not linked to a module by an rdfs:isDefinedBy property"
-            ]
+            "warnings": []
         },
         "../../src\\fipa.ttl": {
             "OWL_EL": {
@@ -53,8 +51,7 @@
                 "Warning: Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by an rdfs:isDefinedBy property",
                 "Warning: Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by an rdfs:isDefinedBy property",
                 "Warning: Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by an rdfs:isDefinedBy property",
-                "Warning: Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by an rdfs:isDefinedBy property",
-                "Warning: Subject <https://purl.org/hmas/> not linked to a module by an rdfs:isDefinedBy property"
+                "Warning: Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by an rdfs:isDefinedBy property"
             ]
         },
         "../../src\\interaction.ttl": {
@@ -77,9 +74,7 @@
             "constraint_errors": [],
             "syntax_errors": [],
             "test_run": true,
-            "warnings": [
-                "Warning: Subject <https://purl.org/hmas/> not linked to a module by an rdfs:isDefinedBy property"
-            ]
+            "warnings": []
         },
         "../../src\\meta.ttl": {
             "file": "../../src\\meta.ttl",
@@ -106,36 +101,153 @@
             "constraint_errors": [],
             "syntax_errors": [],
             "test_run": true,
-            "warnings": [
-                "Warning: Subject <https://purl.org/hmas/> not linked to a module by an rdfs:isDefinedBy property"
-            ]
+            "warnings": []
         }
     },
     "best_practices": {
-        "../../src\\core.ttl": {
+        "global": {
             "warnings": [
                 "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
-                "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>"
-            ]
-        },
-        "../../src\\fipa.ttl": {
-            "warnings": [
-                "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
-                "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>"
-            ]
-        },
-        "../../src\\interaction.ttl": {
-            "warnings": [
-                "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
+                "The following property has a domain out of the ontology: <https://purl.org/hmas/isHostedOn>",
+                "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>",
+                "The following property has a range out of the ontology: <https://purl.org/hmas/hosts>",
                 "The following property has a range out of the ontology: <https://purl.org/hmas/signifies>",
-                "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>"
+                "The following terms are too similar: core and Role",
+                "The following terms are too similar: isMembershipOf and isMembershipIn",
+                "The following terms are too similar: signifies and Signifier"
             ]
         },
-        "../../src\\regulation.ttl": {
-            "warnings": [
-                "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
-                "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>"
-            ]
+        "modelets": {
+            "../../domains\\logistics\\structure-organization\\onto.ttl": {
+                "merged": {
+                    "regulation": {
+                        "warnings": [
+                            "The following terms are too similar: core and Role",
+                            "The following terms are too similar: isMembershipOf and isMembershipIn"
+                        ]
+                    }
+                },
+                "standalone": {
+                    "warnings": [
+                        "The following property has a domain out of the ontology: <https://purl.org/hmas/structures>",
+                        "The following property has a domain out of the ontology: <https://purl.org/hmas/isStructuredBy>",
+                        "The following property has a domain out of the ontology: <https://purl.org/hmas/isSubGroupOf>",
+                        "The following property has a range out of the ontology: <https://purl.org/hmas/structures>",
+                        "The following property has a range out of the ontology: <https://purl.org/hmas/isStructuredBy>",
+                        "The following property has a range out of the ontology: <https://purl.org/hmas/isSubGroupOf>",
+                        "The following terms are too similar: isMembershipOf and isMembershipIn"
+                    ]
+                }
+            },
+            "../../domains\\manufacturing-environments\\discover-behavior-specifications\\onto.ttl": {
+                "merged": {
+                    "interaction": {
+                        "warnings": [
+                            "The following property has a range out of the ontology: <https://purl.org/hmas/signifies>",
+                            "The following terms are too similar: signifies and Signifier"
+                        ]
+                    }
+                },
+                "standalone": {
+                    "warnings": [
+                        "The following property has a domain out of the ontology: <https://purl.org/hmas/signifies>",
+                        "The following property has a range out of the ontology: <https://purl.org/hmas/signifies>"
+                    ]
+                }
+            },
+            "../../domains\\manufacturing-environments\\discover-core\\onto.ttl": {
+                "merged": {
+                    "core": {
+                        "warnings": [
+                            "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
+                            "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>"
+                        ]
+                    }
+                },
+                "standalone": {
+                    "warnings": []
+                }
+            },
+            "../../domains\\manufacturing-environments\\discover-organization\\onto.ttl": {
+                "merged": {
+                    "core": {
+                        "warnings": [
+                            "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
+                            "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>"
+                        ]
+                    }
+                },
+                "standalone": {
+                    "warnings": [
+                        "The following property has a domain out of the ontology: <https://purl.org/hmas/isMemberOf>",
+                        "The following property has a domain out of the ontology: <https://purl.org/hmas/isMaterialOf>"
+                    ]
+                }
+            },
+            "../../domains\\manufacturing-environments\\discover-platforms\\onto.ttl": {
+                "merged": {
+                    "core": {
+                        "warnings": [
+                            "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
+                            "The following property has a domain out of the ontology: <https://purl.org/hmas/isHostedOn>",
+                            "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>",
+                            "The following property has a range out of the ontology: <https://purl.org/hmas/hosts>"
+                        ]
+                    }
+                },
+                "standalone": {
+                    "warnings": [
+                        "The following property has a domain out of the ontology: <https://purl.org/hmas/isHostedOn>",
+                        "The following property has a range out of the ontology: <https://purl.org/hmas/hosts>"
+                    ]
+                }
+            },
+            "../../domains\\manufacturing-environments\\discover-signifiers\\onto.ttl": {
+                "merged": {
+                    "core": {
+                        "warnings": [
+                            "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
+                            "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>"
+                        ]
+                    }
+                },
+                "standalone": {
+                    "warnings": [
+                        "The following property has a domain out of the ontology: <https://purl.org/hmas/exposesSignifier>",
+                        "The following property has a range out of the ontology: <https://purl.org/hmas/isExposedIn>"
+                    ]
+                }
+            }
+        },
+        "modules": {
+            "../../src\\core.ttl": {
+                "warnings": [
+                    "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
+                    "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>"
+                ]
+            },
+            "../../src\\fipa.ttl": {
+                "warnings": [
+                    "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
+                    "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>"
+                ]
+            },
+            "../../src\\interaction.ttl": {
+                "warnings": [
+                    "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
+                    "The following property has a range out of the ontology: <https://purl.org/hmas/signifies>",
+                    "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>",
+                    "The following terms are too similar: signifies and Signifier"
+                ]
+            },
+            "../../src\\regulation.ttl": {
+                "warnings": [
+                    "The following property has a domain out of the ontology: <https://purl.org/hmas/isProfileOf>",
+                    "The following property has a range out of the ontology: <https://purl.org/hmas/isTransitivelyContainedIn>",
+                    "The following terms are too similar: core and Role",
+                    "The following terms are too similar: isMembershipOf and isMembershipIn"
+                ]
+            }
         }
     },
     "modelets": {
@@ -169,9 +281,7 @@
                     ],
                     "syntax_errors": [],
                     "test_run": false,
-                    "warnings": [
-                        "Warning: Subject <https://purl.org/hmas/> not linked to a module by an rdfs:isDefinedBy property"
-                    ]
+                    "warnings": []
                 }
             },
             "message": "",
@@ -226,9 +336,7 @@
                     "constraint_errors": [],
                     "syntax_errors": [],
                     "test_run": true,
-                    "warnings": [
-                        "Warning: Subject <https://purl.org/hmas/> not linked to a module by an rdfs:isDefinedBy property"
-                    ]
+                    "warnings": []
                 }
             },
             "message": "",
@@ -280,9 +388,7 @@
                     "constraint_errors": [],
                     "syntax_errors": [],
                     "test_run": true,
-                    "warnings": [
-                        "Warning: Subject <https://purl.org/hmas/> not linked to a module by an rdfs:isDefinedBy property"
-                    ]
+                    "warnings": []
                 }
             },
             "message": "",
@@ -334,9 +440,7 @@
                     "constraint_errors": [],
                     "syntax_errors": [],
                     "test_run": true,
-                    "warnings": [
-                        "Warning: Subject <https://purl.org/hmas/> not linked to a module by an rdfs:isDefinedBy property"
-                    ]
+                    "warnings": []
                 }
             },
             "message": "",
@@ -388,9 +492,7 @@
                     "constraint_errors": [],
                     "syntax_errors": [],
                     "test_run": true,
-                    "warnings": [
-                        "Warning: Subject <https://purl.org/hmas/> not linked to a module by an rdfs:isDefinedBy property"
-                    ]
+                    "warnings": []
                 }
             },
             "message": "",
@@ -442,9 +544,7 @@
                     "constraint_errors": [],
                     "syntax_errors": [],
                     "test_run": true,
-                    "warnings": [
-                        "Warning: Subject <https://purl.org/hmas/> not linked to a module by an rdfs:isDefinedBy property"
-                    ]
+                    "warnings": []
                 }
             },
             "message": "",

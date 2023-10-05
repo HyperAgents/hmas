@@ -16,8 +16,10 @@ from constants import (
     ONTOLOGY_SEPARATOR,
     DOMAIN_OUT_Of_VOCABULARY,
     RANGE_OUT_OF_VOCABULARY,
-    SRC_TTL_GLOB,
-    DOMAINS_TTL_GLOB
+    MODULES_TTL_GLOB_PATH,
+    MODELETS_TTL_GLOB_PATH,
+    GET_TERM_PAIRS,
+    TERM_DISTANCE_THRESHOLD
 )
 
 def group_terms_by_module(modelet):
@@ -96,6 +98,11 @@ def profile_check(ontology, extras=""):
     return report
 
 def health_check(graph):
+    """Proceed to make a profile check of a given graph while checking the termes not referencing a modelet
+
+    :param graph: The graph
+    :returns: An error report
+    """
     report = profile_check(graph)
     report["warnings"] = []
     
@@ -177,17 +184,50 @@ def modelets_tests(glob_path):
         if "standalone" in report[modelet] and report[modelet]["standalone"]["test_run"]
     ]
 
+def levenshtein(s1, s2):
+    """Returns the levenshtein distance between two trings
+    Algorithm borrowed from https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python
+
+    :param s1: The first string
+    :param s2: The second string
+    :returns: The levenshtein distance
+    """
+    if len(s1) < len(s2):
+        return levenshtein(s2, s1)
+
+    if len(s2) == 0:
+        return len(s1)
+
+    previous_row = range(len(s2) + 1)
+    for i, c1 in enumerate(s1):
+        current_row = [i + 1]
+        for j, c2 in enumerate(s2):
+            insertions = previous_row[j + 1] + 1 # j+1 instead of j since previous_row and current_row are one character longer
+            deletions = current_row[j] + 1       # than s2
+            substitutions = previous_row[j] + (c1 != c2)
+            current_row.append(min(insertions, deletions, substitutions))
+        previous_row = current_row
+    
+    return previous_row[-1]
+
 def best_practices_test(ontology):
-    graph = safe_load(ontology, import_from_src=True)
+    """Test the best practices mistakes that do not break the RDF syntax neither the OWL reasoning,
+    but that should still not happen
+
+    :param ontology: The ontology to test
+    :returns: An report dictionary
+    """
+    if isinstance(ontology, str):
+        ontology = safe_load(ontology, import_from_src=True)
 
     # This should not happen since it was checked before
-    if isinstance(graph, dict):
-        return graph
+    if isinstance(ontology, dict):
+        return ontology
     
     report = {"warnings": []}
     
     # Checking for domain property out of the vocabulary
-    domain_out_of_vocabulary = query_graph(graph, DOMAIN_OUT_Of_VOCABULARY)
+    domain_out_of_vocabulary = query_graph(ontology, DOMAIN_OUT_Of_VOCABULARY)
     domain_out_of_vocabulary = [
         f"The following property has a domain out of the ontology: {item}"
         for item in domain_out_of_vocabulary
@@ -195,23 +235,72 @@ def best_practices_test(ontology):
     report["warnings"] += domain_out_of_vocabulary
 
     # Checking for range property out of the vocabulary
-    range_out_of_vocabulary = query_graph(graph, RANGE_OUT_OF_VOCABULARY)
+    range_out_of_vocabulary = query_graph(ontology, RANGE_OUT_OF_VOCABULARY)
     range_out_of_vocabulary = [
         f"The following property has a range out of the ontology: {item}"
         for item in range_out_of_vocabulary
     ]
     report["warnings"] += range_out_of_vocabulary
 
+    # Checking for too close terms
+    term_pairs = query_graph(ontology, GET_TERM_PAIRS)
+    term_pairs = [
+        [item.strip()[1:-1] for item in line.split("\t")]
+        for line in term_pairs
+    ]
+    too_close_terms = [
+        f"The following terms are too similar: {line[0]} and {line[1]}"
+        for line in term_pairs
+        if levenshtein(line[0], line[1]) < TERM_DISTANCE_THRESHOLD
+    ]
+    report["warnings"] += too_close_terms
+
     return report
 
 def best_practices_tests(modules, modelets):
-    report = {}
+    """Launch a bunch of best pratices tests on modules and modelets
+
+    :param modules: The modules paths to test
+    :param modelets: The modelets paths to test
+    :returns: An report dictionary
+    """
+
+    report = {"modules": {}, "modelets": {}}
 
     # Best practices on modules
     for module in modules:
-        report[module] = best_practices_test(module)
+        report["modules"][module] = best_practices_test(module)
 
-    # TODO Best practices on modelets
+    # Best practices on modules
+    for modelet in modelets:
+        if "template" in modelet:
+            continue
+
+        graph = safe_load(modelet, import_from_src=True)
+
+        # This is not supposed to happen, we have filtered the cursed ones
+        if isinstance(graph, dict):
+            report["modelets"][modelet] = graph
+            continue 
+
+        # Tests on best practices on standalone modelets
+        report["modelets"][modelet] = {"merged": {}}
+        report["modelets"][modelet]["standalone"] = best_practices_test(graph)
+        
+        # Add each triple of the modelet to their related ontology, then proceed to best_practices_test
+        moduled_triples = group_terms_by_module(graph)
+
+        for module in moduled_triples.keys():         
+            merged_graph = safe_load(
+                f"{SRC_PATH}{module}.ttl",
+                extras=moduled_triples[module]
+            )
+            report["modelets"][modelet]["merged"][module] = best_practices_test(merged_graph)
+    
+    # Test all modules and modelets together
+    all_graphs = modules + modelets
+    global_graph = safe_load(all_graphs, import_from_src=True)
+    report["global"] = best_practices_test(global_graph)
 
     return report
 
@@ -219,13 +308,13 @@ def best_practices_tests(modules, modelets):
 # Test OWL_RL
 ###
 
-safe_modules = glob(SRC_TTL_GLOB)
+safe_modules = glob(MODULES_TTL_GLOB_PATH)
 print_title("Profile check")
 print_title("Checking existing modules")
 base_modules_report, safe_modules = modules_tests(safe_modules)
 
 print_title("Checking modelets")
-safe_modelets = glob(DOMAINS_TTL_GLOB)
+safe_modelets = glob(MODELETS_TTL_GLOB_PATH)
 modelets_report, safe_modelets = modelets_tests(safe_modelets)
 
 print_title("Checking best practices")
