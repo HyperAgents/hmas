@@ -717,8 +717,8 @@ ex:DeliveringServicesProcess a sh:NodeShape ;
 
 ## Activity Scheme Specifications
 ex:isPrecededBy rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
-ex:facilitates rdfs:subPropertyOf hmas:influencesActivityScheme .
-ex:biases rdfs:subPropertyOf hmas:influencesActivityScheme .
+ex:facilitates rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
+ex:biases rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
 
 ex:Hiring a sh:NodeShape ;
     rdfs:subClassOf hmas:ActivityScheme ;
