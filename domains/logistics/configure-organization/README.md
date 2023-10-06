@@ -9,14 +9,12 @@ In France, the activities of the FL Logistics are organized around three physica
 In each configuration, agents will undertake activities according to their *memberships to* that *configuration* and to the artefacts through their memberships as *facilities* in that *configuration*.
 
 Two configurations are considered:
-
 * *picking* configuration with a *collector* role and a *picking area* facility
 * *receiving* configuration with a *deliverer* role and an *receiving area* facility
 
 The Transport Zone doesn't have any configuration to further coordinate and regulate its activities.
 
 These configurations are used by the agents acting and facilities available in the *lyon depot*, *saint-etienne depot* workspaces as follows:
-
 * *lyon depot* with *picking* and *receiving* configurations
 * *saint-etienne depot* with the two same types of configurations: *picking* and *receiving*
 
@@ -37,7 +35,9 @@ Activities will take place according to the configurations that lead to picking,
 
 ## Glossary
 
-* **Configuration**: A Configuration denotes the distributed articulation of facilities (i.e., Artifacts) and roles (i.e., Agents) enacted from the Configuration definition. Configurations may have interaction relations between them constraining the way agents can access to them (e.g. compatibility, i.e. being part of both configurations, ...)
+![image](configure-organization.png)
+
+* **Configuration**: A Configuration denotes the distributed articulation of facilities (i.e., Artifacts) and roles (i.e., Agents) enacted from the Configuration definition. Configurations may have interaction relations between them constraining the way agents can access to them (e.g. compatibility, i.e. being part of both configurations, ...).
 * **Membership**: see [Structure the Social Context within an Organization](https://github.com/HyperAgents/hmas/blob/master/domains/logistics/structure-organization/README.md) scenario.
 * **Facility**: see [Create an Organization](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/domains/logistics/create-organization/README.md) scenario.
 * **Role**: see [Create an Organization](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/domains/logistics/create-organization/README.md) scenario.
