@@ -25,6 +25,8 @@ A new person has to be hired in the Commercial department for the Account Manage
 
 ## Glossary
 
+![image](coordinate-activities.png)
+
 * **Process Scheme**: A Process Scheme is an entity that represents a set of Activity Schemes intended to achieve some Organizational Goals.
 * **Activity Scheme**: An Activity Scheme is a planned activity.
 * **Root Activity Scheme**: A Root Activity Scheme (i.e., an Activity Scheme origin of an interdependent set of Activity Schemes) associated to a Process Scheme.
