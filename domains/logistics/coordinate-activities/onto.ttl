@@ -19,37 +19,19 @@
 
 :OrganizationalGoal a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "An Organizational Goal is a state of affairs."@en ;
+    rdfs:comment "An Organizational Goal is a pursued state of affairs."@en ;
     rdfs:label "organizational goal"@en, "but organisationnel"@fr .
 
 :ProcessScheme a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Process Scheme is an entity that represents a set of Activity Schemes intended by one or more Agents to achieve some Organizational Goals."@en ;
+    rdfs:comment "A Process Scheme is an entity that represents a set of Activity Schemes intended to achieve some Organizational Goals."@en ;
     rdfs:label "process scheme"@en, "schéma de processus"@fr .
     
 :ActivityScheme a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:subClassOf [
-        a owl:Restriction ;
-        owl:onProperty :hasRootActivityScheme ;
-        owl:maxCardinality 1 ;
-        ] ;
     rdfs:comment "An Activity Scheme is a planned activity."@en ;
-    rdfs:label "activity scheme"@en, "schéma d'activité"@fr .
-
-:RootActivityScheme a owl:Class ;
-    rdfs:isDefinedBy :regulation ;
-    owl:equivalentClass [
-        owl:intersectionOf (
-            :ActivityScheme
-            [   a owl:Restriction ;
-                owl:onProperty hmas:hasRootActivityScheme ;
-                owl:maxCardinality 0 ;
-                ]
-            )
-        ] ;
-    rdfs:comment "An Root Activity Scheme is the origin of an interdependent set of Activity Schemes." ;
-    rdfs:label "root activity scheme"@en, "schéma d'activité racine"@fr .
+    rdfs:label "activity scheme"@en, "schéma d'activité"@fr ;
+    skos:note "This ontology is agnosticw.r.t. the activity concept. An activity can be a simple action, a complex set of actions, or any other useful arrangement for the intended purpose. An activity can be represented using, for instance, the PROV Ontology."@en .
 
 #################################################################
 #    Properties
@@ -94,7 +76,7 @@
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :ProcessScheme ;
     rdfs:range :RootActivityScheme ;
-    rdfs:comment "A relation that refers to the Root Activity Scheme associated to a Process Scheme."@en ;
+    rdfs:comment "A relation that refers to the Root Activity Scheme (i.e., an Activity Scheme origin of an interdependent set of Activity Schemes) associated to a Process Scheme."@en ;
     rdfs:label "has root activity scheme"@en, "a un schéma d'activité racine"@fr .
     
 :proposesActivityScheme a owl:ObjectProperty ;
@@ -102,11 +84,7 @@
     rdfs:domain :Organization ;
     rdfs:range :ActivityScheme ;
     rdfs:comment "A relation that refers to an Activity Scheme that can be carried out within an Organization."@en ;
-    rdfs:label "proposes activity scheme"@en, "propose une schéma d'activité"@fr ;
-    owl:propertyChainAxiom ( :proposesActivityScheme :hasRootActivityScheme ) ;
-    owl:propertyChainAxiom ( :proposesActivityScheme
-        [ owl:inverseOf :hasRootActivityScheme ]
-        ) .
+    rdfs:label "proposes activity scheme"@en, "propose une schéma d'activité"@fr .
     
 :isCommittedToMission a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
@@ -119,7 +97,7 @@
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :ActivityScheme ;
     rdfs:range :ActivityScheme ;
-    rdfs:comment "A relation that refers to the dependence relationship between two Activity Schemes."@en ;
+    rdfs:comment "A relation that refers to a correlation/connection/correspondence between two Activity Schemes."@en ;
     rdfs:label "is dependent on activity scheme"@en, "dépend du schéma d'activité"@fr .
 
 :influencesActivityScheme a owl:ObjectProperty ;
