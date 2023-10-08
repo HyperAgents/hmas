@@ -12,15 +12,11 @@ Two configurations are considered:
 * *picking* configuration with a *collector* role and a *picking area* facility
 * *receiving* configuration with a *deliverer* role and an *receiving area* facility
 
-The Transport Zone doesn't have any configuration to further coordinate and regulate its activities.
-
-These configurations are used by the agents acting and facilities available in the *lyon depot*, *saint-etienne depot* workspaces as follows:
-* *lyon depot* with *picking* and *receiving* configurations
-* *saint-etienne depot* with the two same types of configurations: *picking* and *receiving*
+The agents acting in the *lyon depot*, *saint-etienne depot* workspaces have to consider both depots according to those two configurations. In the Transport Zone the agents don't have to consider any configuration to further coordinate and regulate their activities.
 
 The agents having a membership in the *transporter* group use these configurations in the *lyon depot* and *saint-etienne depot* to help their coordination: when getting a membership in the *delivering* (resp. *picking*) configuration through the *deliverer* role (resp. *collector* role).
 
-In the same approach, the *delivering machine* and *picking machine* artifacts materials of FL logistics organization, operating in these workspaces, will be accessed through dedicated facilities of these configurations, providing selected set of actions to the agents: the *delivering machine* artifact is considered as an *receiving* area facility in the *receiving* configuration; the *picking machine* artifact is considered as a *picking area* facility in the *picking* configuration.
+In the same approach, the *delivering machine* and *picking machine* artifacts materials of FL logistics organization, operating in these workspaces, will be accessed through dedicated facilities of these configurations, providing selected set of actions to the agents: the *delivering machine* artifact is considered as an *receiving* area facility in the *receiving* configuration; the *picking machine* artifact is considered as an *picking area* facility in the *picking* configuration.
 
 Activities will take place according to the configurations that lead to picking, unpicking and transporting actions with different artifacts. Goods are collected using different facilities and are delivered with other facilities according to the plan elaborated by the agent having a membership of planner in the corresponding group.
 
