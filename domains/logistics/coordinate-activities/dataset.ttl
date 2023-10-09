@@ -729,8 +729,8 @@ ex:DeliveringServicesProcess a sh:NodeShape ;
 
 ## Activity Scheme Specifications
 ex:isPrecededBy rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
-ex:facilitates rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
-ex:biases rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
+ex:isFacilitatedBy rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
+ex:isBiasedBy rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
 
 ex:Hiring a sh:NodeShape ;
     rdfs:subClassOf hmas:ActivityScheme ;
@@ -751,7 +751,7 @@ ex:SigningContract a sh:NodeShape ;
 ex:SelectingCandidate a sh:NodeShape ;
     rdfs:subClassOf hmas:ActivityScheme ;
     sh:and (
-        [
+        sh:property [
             sh:path ex:isPrecededBy ;
             sh:qualifiedValueShape [ sh:class ex:AssessingRecommendations ] ;
             sh:qualifiedMinCount 1 ;
@@ -763,32 +763,20 @@ ex:SelectingCandidate a sh:NodeShape ;
             sh:qualifiedMinCount 1 ;
             sh:qualifiedMaxCount 1 ;
             ]
-        ) .
-ex:AssessingRecommendations a sh:NodeShape ;
-    rdfs:subClassOf hmas:ActivityScheme ;
+        ) ;
     sh:property [
-        sh:path ex:isPrecededBy ;
-        sh:qualifiedValueShape [ sh:class ex:SelectingInterviewees ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path ex:facilitates ;
-        sh:qualifiedValueShape [ sh:class ex:InterviewingCandidates ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path ex:biases ;
-        sh:qualifiedValueShape [ sh:class ex:SelectingCandidate ] ;
+        sh:path ex:isBiasedBy ;
+        sh:qualifiedValueShape [ sh:class ex:AssessingRecommendations ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
+ex:AssessingRecommendations a sh:NodeShape ;
+    rdfs:subClassOf hmas:ActivityScheme .
 ex:InterviewingCandidates a sh:NodeShape ;
     rdfs:subClassOf hmas:ActivityScheme ;
     sh:property [
-        sh:path ex:isPrecededBy ;
-        sh:qualifiedValueShape [ sh:class ex:SelectingInterviewees ] ;
+        sh:path ex:isFacilitatedBy ;
+        sh:qualifiedValueShape [ sh:class ex:AssessingRecommendations ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
@@ -797,6 +785,20 @@ ex:SelectingInterviewees a sh:NodeShape ;
     sh:property [
         sh:path ex:isPrecededBy ;
         sh:qualifiedValueShape [ sh:class ex:AnnouncingJobPosition ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path [
+            sh:inversePath ex:isPrecededBy ] ;
+        sh:qualifiedValueShape [ sh:class ex:AssessingRecommendations ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path [
+            sh:inversePath ex:isPrecededBy ] ;
+        sh:qualifiedValueShape [ sh:class ex:InterviewingCandidates ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
@@ -896,7 +898,7 @@ ex:FL_DeliverGoods a ex:DeliverGoods .
 ex:FL_AccountManager_HR_Hiring a ex:HR_Hiring ;
     hmas:gathersOrganizationalGoal ex:FL_AccountManager_Hired, ex:FL_AccountManager_ContractSigned, ex:FL_AccountManager_JobPositionAnnounced .
 ex:FL_AccountManager_Dept_Hiring a ex:Dept_Hiring ;
-    hmas:gathersOrganizationalGoal ex:FL_AccountManager_CandidateSelected, ex:FL_AccountManager_RecommendationsAssessed, ex:FL_AccountManager_CandidatesInterviewed, ex:FL_AccountManager_IntervieweesSelected, ex:FL_AccountManager_JobPositionWrote .
+    hmas:gathersOrganizationalGoal ex:FL_AccountManager_CandidateSelected, ex:FL_AccountManager_RecommendationsAssessed, ex:FL_AccountManager_CandidatesInterviewed, ex:FL_AccountManager_InterviewsScheduled, ex:FL_AccountManager_InterviewsConducted, ex:FL_AccountManager_IntervieweesSelected, ex:FL_AccountManager_JobPositionWrote .
     
 ## Organizational Goals
 ex:FL_AccountManager_Hired a ex:Hired .
@@ -928,14 +930,14 @@ ex:FL_AccountManager_SigningContract a ex:SigningContract ;
     hmas:achievesOrganizationalGoal ex:FL_AccountManager_ContractSigned .
 ex:FL_AccountManager_SelectingCandidate a ex:SelectingCandidate ;
     ex:isPrecededBy ex:FL_AccountManager_AssessingRecommendations, ex:FL_AccountManager_InterviewingCandidates ;
+    ex:isBiasedBy ex:FL_AccountManager_AssessingRecommendations ;
     hmas:achievesOrganizationalGoal ex:FL_AccountManager_CandidateSelected .
 ex:FL_AccountManager_AssessingRecommendations a ex:AssessingRecommendations ;
     ex:isPrecededBy ex:FL_AccountManager_SelectingInterviewees ;
-    ex:facilitates ex:FL_AccountManager_InterviewingCandidates ;
-    ex:biases ex:FL_AccountManager_SelectingCandidate ;
     hmas:achievesOrganizationalGoal ex:FL_AccountManager_RecommendationsAssessed .
 ex:FL_AccountManager_InterviewingCandidates a ex:InterviewingCandidates ;
     ex:isPrecededBy ex:FL_AccountManager_SelectingInterviewees ;
+    ex:isFacilitatedBy ex:FL_AccountManager_AssessingRecommendations ;
     hmas:achievesOrganizationalGoal ex:FL_AccountManager_CandidatesInterviewed .
 ex:FL_AccountManager_SelectingInterviewees a ex:SelectingInterviewees ;
     ex:isPrecededBy ex:FL_AccountManager_AnnouncingJobPosition ;

@@ -14,20 +14,20 @@ A new person has to be hired in the Commercial department for the Account Manage
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------| 
-| q1 | What are the organizational goals and subgoals agent Y has to achieve when committed to the organization X?                   | What are the organizational goals and subgoals Kate has to achieve when committed to the FL Logistics organization? `ex:FL_AccountManager_CandidateSelected`, `ex:FL_AccountManager_RecommendationsAssessed`, `ex:FL_AccountManager_CandidatesInterviewed`, `ex:FL_AccountManager_InterviewsScheduled`, `ex:FL_AccountManager_InterviewsConducted`, `ex:FL_AccountManager_IntervieweesSelected`, `ex:FL_AccountManager_JobPositionWrote`                            |
-| q2 | What are the agent Y's activities in process Z when committed to the organization X and how they are dependent on each other? | What are Frank's activities in the process of hiring an Account Manager when committed to the FL Logistics organization and how they are dependent on each other? `ex:FL_AccountManager_AnnouncingJobPosition,ex:isPrecededBy,ex:FL_AccountManager_WritingJobPosition`, `ex:FL_AccountManager_SigningContract,ex:isPrecededBy,ex:FL_AccountManager_SelectingCandidate`, `ex:FL_AccountManager_Hiring,ex:isPrecededBy,ex:FL_AccountManager_Signingcontract`          |
-| q3 | What are all the agents committed to the activities of process Y in the organization X?                                       | What are all the agents committed to the activities of process of hiring an Account Manager in the FL Logistics organization? `ex:Frank`, `ex:Kate` |
+| q1 | What are the organizational goals and subgoals agent Y has to achieve when committed to the mission Z in the organization X? | What are the organizational goals and subgoals Kate has to achieve when committed to the department director mission in the FL Logistics organization? `ex:FL_AccountManager_CandidateSelected`, `ex:FL_AccountManager_CandidatesInterviewed`, `ex:FL_AccountManager_IntervieweesSelected`, `ex:FL_AccountManager_InterviewsConducted`, `ex:FL_AccountManager_InterviewsScheduled`, `ex:FL_AccountManager_JobPositionWrote`, `ex:FL_AccountManager_RecommendationsAssessed`       |
+| q2 | What are the activities in process Z proposed by the organization X and how these activities are dependent on each other?    | What are the activities in the Hiring process proposed by the FL Logistics organization and how these activities are dependent on each other? `ex:AnnouncingJobPosition,ex:isPrecededBy,ex:WritingJobPosition`, `ex:AssessingRecommendations,ex:isPrecededBy,ex:SelectingInterviewees`, `ex:Hiring,ex:isPrecededBy,ex:SigningContract`, `ex:InterviewingCandidates,ex:isPrecededBy,ex:SelectingInterviewees`, `ex:InterviewingCandidates,ex:isFacilitatedBy,ex:AssessingRecommendations`, `ex:SelectingCandidate,ex:isPrecededBy,ex:AssessingRecommendations`, `ex:SelectingCandidate,ex:isBiasedBy,ex:AssessingRecommendations`, `ex:SelectingInterviewees,ex:isPrecededBy,ex:AnnouncingJobPosition`, `ex:SigningContract,ex:isPrecededBy,ex:SelectingCandidate`, `ex:WritingJobPosition` |
+| q3 | What are the agents responsible for fulfilling the activities of process Y in the organization X?                            | What are the agents responsible for fulfilling the activities of the process of hiring an Account Manager in the FL Logistics organization? `ex:Frank`, `ex:Kate` |
 
 ## Glossary
 
 ![image](coordinate-activities.png)
 
-* **Process Scheme**: A Process Scheme is an entity that represents a connected set of Activity Schemes intended to achieve Organizational Goals.
-* **Activity Scheme**: An Activity Scheme is a planned activity.
-* **Root Activity Scheme**: A Root Activity Scheme is an Activity Scheme origin of a connected set of Activity Schemes and is associated to a Process Scheme.
+* **Process Scheme**: A Process Scheme is an entity that represents a set of connected Activity Schemes.
+* **Activity Scheme**: An Activity Scheme is a plan for an activity intended to achieve an Organizational Goal.
+* **Root Activity Scheme**: A Root Activity Scheme is an Activity Scheme origin of a set of connected Activity Schemes and is associated to a Process Scheme.
 * **Activity Scheme Dependence**: A relation that refers to the way in which two Activity Schemes are related to each other, and one is affected by the other.
 * **Organizational Goal**: An Organizational Goal is a pursued state of affairs.
-* **Sub-Organizational Goal Relationship**: A relation that refers to a hierarchical relationship between two Organizational Goals.
+* **Sub-Organizational Goal Relationship**: A relation that refers to a hierarchical relationship between two Organizational Goals. A Sub-Organizational Goal is an Organizational Goal that has to be achieved for the parent Organizational Goal to be achieved.
 * **Commitment**: A relation that refers to a Mission to which an Agent is committed.
 * **Mission**: see [Create an Organization](https://github.com/HyperAgents/hmas/blob/master/domains/logistics/create-organization/README.md) scenario.
 * **Organization**: see [Discover Organizations, their Members and Materials in Hypermedia Environments](https://github.com/HyperAgents/hmas/blob/master/domains/manufacturing-environments/discover-organization/README.md) scenario.
