@@ -1,0 +1,12 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select ?orgGoal
+where {
+  ex:Dept_Hiring sh:property [ sh:path hmas:gathersOrganizationalGoal ;
+                               sh:qualifiedValueShape [ sh:class ?orgGoal ]
+                               ] .
+}
+order by ?orgGoal

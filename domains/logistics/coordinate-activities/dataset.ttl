@@ -357,7 +357,7 @@ ex:Logistics a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
-        sh:qualifiedValueShape [ sh:class ex:JobPositionWrote ] ;
+        sh:qualifiedValueShape [ sh:class ex:JobPositionWritten ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
@@ -666,13 +666,25 @@ ex:Dept_Hiring a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:gathersOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:InterviewsScheduled ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:gathersOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:InterviewsConducted ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:gathersOrganizationalGoal ;
         sh:qualifiedValueShape [ sh:class ex:IntervieweesSelected ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:gathersOrganizationalGoal ;
-        sh:qualifiedValueShape [ sh:class ex:JobPositionWrote ] ;
+        sh:qualifiedValueShape [ sh:class ex:JobPositionWritten ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
@@ -708,7 +720,7 @@ ex:IntervieweesSelected a sh:NodeShape ;
     rdfs:subClassOf hmas:OrganizationalGoal .
 ex:JobPositionAnnounced a sh:NodeShape ;
     rdfs:subClassOf hmas:OrganizationalGoal .
-ex:JobPositionWrote a sh:NodeShape ;
+ex:JobPositionWritten a sh:NodeShape ;
     rdfs:subClassOf hmas:OrganizationalGoal .
 
 ## Process Scheme Specifications
@@ -898,7 +910,7 @@ ex:FL_DeliverGoods a ex:DeliverGoods .
 ex:FL_AccountManager_HR_Hiring a ex:HR_Hiring ;
     hmas:gathersOrganizationalGoal ex:FL_AccountManager_Hired, ex:FL_AccountManager_ContractSigned, ex:FL_AccountManager_JobPositionAnnounced .
 ex:FL_AccountManager_Dept_Hiring a ex:Dept_Hiring ;
-    hmas:gathersOrganizationalGoal ex:FL_AccountManager_CandidateSelected, ex:FL_AccountManager_RecommendationsAssessed, ex:FL_AccountManager_CandidatesInterviewed, ex:FL_AccountManager_InterviewsScheduled, ex:FL_AccountManager_InterviewsConducted, ex:FL_AccountManager_IntervieweesSelected, ex:FL_AccountManager_JobPositionWrote .
+    hmas:gathersOrganizationalGoal ex:FL_AccountManager_CandidateSelected, ex:FL_AccountManager_RecommendationsAssessed, ex:FL_AccountManager_CandidatesInterviewed, ex:FL_AccountManager_InterviewsScheduled, ex:FL_AccountManager_InterviewsConducted, ex:FL_AccountManager_IntervieweesSelected, ex:FL_AccountManager_JobPositionWritten .
     
 ## Organizational Goals
 ex:FL_AccountManager_Hired a ex:Hired .
@@ -912,7 +924,7 @@ ex:FL_AccountManager_InterviewsConducted a ex:InterviewsConducted ;
     hmas:isSubOrganizationalGoalOf ex:FL_AccountManager_CandidatesInterviewed .
 ex:FL_AccountManager_IntervieweesSelected a ex:IntervieweesSelected .
 ex:FL_AccountManager_JobPositionAnnounced a ex:JobPositionAnnounced .
-ex:FL_AccountManager_JobPositionWrote a ex:JobPositionWrote .
+ex:FL_AccountManager_JobPositionWritten a ex:JobPositionWritten .
 
 ## Process Schemes
 ex:FL_AccountManager_HiringProcess a ex:HiringProcess ;
@@ -946,7 +958,7 @@ ex:FL_AccountManager_AnnouncingJobPosition a ex:AnnouncingJobPosition ;
     ex:isPrecededBy ex:FL_AccountManager_WritingJobPosition ;
     hmas:achievesOrganizationalGoal ex:FL_AccountManager_JobPositionAnnounced .
 ex:FL_AccountManager_WritingJobPosition a ex:WritingJobPosition ;
-    hmas:achievesOrganizationalGoal ex:FL_AccountManager_JobPositionWrote .
+    hmas:achievesOrganizationalGoal ex:FL_AccountManager_JobPositionWritten .
 
 ## Facilities
 ex:FL_PickingArea a ex:PickingArea .
@@ -958,7 +970,7 @@ ex:FL_LogisticsProfile a hmas:ResourceProfile .
 ex:FL_Logistics a ex:Logistics ;
     hmas:hasResourceProfile ex:FL_LogisticsProfile ;
     hmas:hasOrganizationalValue ex:FL_Commitment, ex:FL_IntegrityRespect ;
-    hmas:hasOrganizationalGoal ex:FL_AccountManager_Hired, ex:FL_AccountManager_ContractSigned, ex:FL_AccountManager_CandidateSelected, ex:FL_AccountManager_RecommendationsAssessed, ex:FL_AccountManager_CandidatesInterviewed, ex:FL_AccountManager_InterviewsScheduled, ex:FL_AccountManager_InterviewsConducted, ex:FL_AccountManager_IntervieweesSelected, ex:FL_AccountManager_JobPositionAnnounced, ex:FL_AccountManager_JobPositionWrote ;
+    hmas:hasOrganizationalGoal ex:FL_AccountManager_Hired, ex:FL_AccountManager_ContractSigned, ex:FL_AccountManager_CandidateSelected, ex:FL_AccountManager_RecommendationsAssessed, ex:FL_AccountManager_CandidatesInterviewed, ex:FL_AccountManager_InterviewsScheduled, ex:FL_AccountManager_InterviewsConducted, ex:FL_AccountManager_IntervieweesSelected, ex:FL_AccountManager_JobPositionAnnounced, ex:FL_AccountManager_JobPositionWritten ;
     hmas:providesRole ex:FL_Director, ex:FL_HumanResourcesOfficer, ex:FL_FinanceOfficer, ex:FL_AccountManager, ex:FL_Planner, ex:FL_Carrier ;
     hmas:isStructuredBy ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment, ex:FL_HumanResourcesDepartment, ex:FL_FinanceDepartment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment ;
     hmas:proposesMission ex:FL_HumanResourcesManagement, ex:FL_FinancialManagement, ex:FL_CommercialManagement, ex:FL_PlanningManagement, ex:FL_CarryGoods, ex:FL_CollectGoods, ex:FL_DeliverGoods, ex:FL_AccountManager_HR_Hiring, ex:FL_AccountManager_Dept_Hiring ;
