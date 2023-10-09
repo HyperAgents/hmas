@@ -24,14 +24,14 @@
 
 :ProcessScheme a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Process Scheme is an entity that represents an interconnected set of Activity Schemes intended to achieve Organizational Goals."@en ;
+    rdfs:comment "A Process Scheme is an entity that represents a connected set of Activity Schemes intended to achieve Organizational Goals."@en ;
     rdfs:label "process scheme"@en, "schéma de processus"@fr .
     
 :ActivityScheme a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "An Activity Scheme is a planned activity."@en ;
     rdfs:label "activity scheme"@en, "schéma d'activité"@fr ;
-    skos:note "The activity concept can be the execution of a simple action, a complex set of actions, or any other useful arrangement for achieving organizational goals. An activity can be represented using, for instance, the PROV Ontology."@en .
+    skos:note "The concept of activity can be the execution of a simple action, a complex set of actions, or any other useful arrangement employed to achieving organizational goals. An activity can be represented using, for instance, the PROV Ontology."@en .
 
 #################################################################
 #    Properties
@@ -86,16 +86,16 @@
     rdfs:comment "A relation that refers to an Activity Scheme that can be carried out within an Organization."@en ;
     rdfs:label "proposes activity scheme"@en, "propose une schéma d'activité"@fr .
     
-:isCommittedToMission a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Agent ;
-    rdfs:range :Mission ;
-    rdfs:comment "A relation that refers to a Mission to which an Agent is committed."@en ;
-    rdfs:label "is committed to mission"@en, "est engagé à accomplir sa mission"@fr .
-    
 :isDependentOnActivityScheme a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :ActivityScheme ;
     rdfs:range :ActivityScheme ;
     rdfs:comment "A relation that refers to the way in which two Activity Schemes are related to each other, and one is affected by the other."@en ;
     rdfs:label "is dependent on activity scheme"@en, "dépend du schéma d'activité"@fr .
+
+:isCommittedToMission a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Agent ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a Mission to which an Agent is committed."@en ;
+    rdfs:label "is committed to mission"@en, "est engagé à accomplir sa mission"@fr .

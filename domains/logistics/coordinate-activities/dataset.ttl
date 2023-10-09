@@ -333,6 +333,18 @@ ex:Logistics a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:InterviewsScheduled ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:hasOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:InterviewsConducted ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:hasOrganizationalGoal ;
         sh:qualifiedValueShape [ sh:class ex:IntervieweesSelected ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
@@ -796,6 +808,9 @@ ex:AnnouncingJobPosition a sh:NodeShape ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
+
+ex:WritingJobPosition a sh:NodeShape ;
+    rdfs:subClassOf hmas:ActivityScheme .
 
 ## Facility Specifications
 ex:PickingArea a sh:NodeShape ;

@@ -1,8 +1,5 @@
-
 @base <https://purl.org/hmas/> .
 @prefix : <> .
-@prefix hmas: <https://purl.org/hmas/core#> .
-
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -11,10 +8,10 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix schema: <http://schema.org/>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 #################################################################
 #    Ontology Description
@@ -22,216 +19,215 @@
 
 :regulation rdf:type owl:Ontology ;
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
-    dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,
-    "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
+    dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en, "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
     dct:issued "2022-05-01"^^xsd:date ;
-    ## dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;
-    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:modified "2023-10-09"^^xsd:date ;
     owl:imports :core ;
+    dct:creator <https://orcid.org/0000-0002-4506-2745> ;
+    dct:contributor <https://orcid.org/0000-0002-2956-0533> ; 
+    dct:contributor <https://orcid.org/0000-0003-0821-6095>  ; 
+    dct:contributor <https://danaivach.inrupt.net/profile/card#me> ;
+    dct:contributor <http://ns.inria.fr/fabien.gandon#me> ;
+    dct:contributor <http://maxime-lefrancois.info/me#> ;
+    dct:contributor <https://orcid.org/0000-0003-4509-9537> ;
+    dct:contributor <https://orcid.org/0000-0002-3497-8758> ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <> .
-
-
-<https://inria.fr/>
-  schema:name "Inria" ;
-  schema:url <https://inria.fr/> .
-
-<https://www.mines-stetienne.fr/>
-  schema:name "MINES Saint-Étienne" ;
-  schema:url <https://mines-stetienne.fr> .
-
-<https://www.unisg.ch/en>
-  schema:name "University of St.Gallen" ;
-  schema:url <https://www.unisg.ch> .
-
-<https://orcid.org/0000-0002-4506-2745> a schema:Person ;
-  schema:name "Luis Gustavo Nardin" ;
-  schema:email "luisgustavo.nardin@emse.fr" ;
-  schema:url <http://gnardin.github.io/website/> ;
-  schema:identifier <https://orcid.org/0000-0002-4506-2745> ;
-  schema:affiliation <https://www.mines-stetienne.fr/> .
-
-<https://orcid.org/0000-0003-0821-6095> a schema:Person ;
-  schema:name "Chistopher Leturc" ;
-  schema:email "christopher.leturc@inria.fr" ;
-  schema:url <https://www.linkedin.com/in/christopher-leturc/> ;
-  schema:identifier <https://orcid.org/0000-0003-0821-6095> ;
-  schema:affiliation <https://inria.fr/> .
 
 #################################################################
 #    Classes
 #################################################################
-:RegulativeNorm rdf:type owl:Class ;
+
+:OrganizationalValue a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A specification of the standard behaviors one expects from others in an organization."@en ;
-    rdfs:label "Norm"@en .
-
-:PossibleWorld rdf:type owl:Class ;
+    rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an Organization."@en ;
+    rdfs:label "organizational value"@en, "valeur organisationnelle"@fr .
+        
+:Role a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A possible world is a ressource that describes a state of affair of the world."@en ;
-    rdfs:label "Normative Context"@en .
+    rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization."@en ;
+    rdfs:label "role"@en, "rôle"@fr .
 
-:NormativeContext rdf:subClassOf :PossibleWorld ;
+:Mission a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A context in which a norm is applicable."@en ;
-    rdfs:label "Normative Context"@en .
-
-:Obligation rdf:subClassOf :PossibleWorld ;
+    rdfs:comment "A Mission gathers what Agents have to achieve in an Organization."@en ;
+    rdfs:label "mission"@en, "mission"@fr .
+    
+:Facility a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A possible world that describes an obligation."@en ;
-    rdfs:label "Obligation"@en .
+    rdfs:comment "A Facility defines functions of materials (i.e., Artifacts) in an Organization."@en ;
+    rdfs:label "facility"@en, "facilité"@fr .
 
-:Permission rdf:subClassOf :PossibleWorld ;
+:Membership a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A possible world that describes a permission."@en ;
-    rdfs:label "Permission"@en .
-
-:Prohibition rdf:subClassOf :PossibleWorld ;
+    rdfs:comment "A Membership indicates the Role played by an Agent in a Group of an Organization." ;
+    rdfs:label "membership"@en, "l'appartenance"@fr .
+    
+:Group a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A possible world that describes a prohibition."@en ;
-    rdfs:label "Prohibition"@en .
+    rdfs:comment "A Group structures an Organization."@en ;
+    rdfs:label "group"@en, "groupe"@fr .
 
-#:WebOfAgents rdf:type owl:Class ;
-#  rdfs:comment "Web of Agents is a subset of the web." ;
-#  rdsf:label "WebOfAgents"@en .
-
-#:RegulatedWeb rdf:type owl:Class ;
-#  rdfs:comment "A Regulated Web is a subset of the Web of Agents arranged in one or several Situated Regulated Organization Enttities."@en ;
-#  rdfs:label "RegulatedWeb"@en .
-
-#:SituatedRegulatedOrganizationEntity rdf:type owl:Class ;
-#  rdfs:comment "An organization entity situated on agents and artifacts, and regulated by a normative system."@en ;
-#  rdfs:label "SituatedRegulatedOrganizationEntity"@en .
-
-#:InstitutionEntity rdf:type owl:Class ;
-#  rdfs:comment "An Institution entity situates artifacts (events, states) and agents (actions) in the regulations and organization of Situated Regulated Organization Entities."@en ;
-#  rdfs:label "InstitutionEntity"@en .
-
-#:TestRegulation a owl:Class ;
-#  rdfs:comment "testing the redirections"@en ;
-#  rdfs:isDefinedBy :regulation .
-
-
-:AuthorityRole rdf:subClassOf hmas:SocialRole ;
+:OrganizationalGoal a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "The authority who has a power to apply a norm and which is in charge of applying the norm. It may be an :Agent or an :Organization. "@en ;
-    rdfs:label "Authority"@en .
+    rdfs:comment "An Organizational Goal is a pursued state of affairs."@en ;
+    rdfs:label "organizational goal"@en, "but organisationnel"@fr .
+
+:ProcessScheme a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A Process Scheme is an entity that represents a connected set of Activity Schemes intended to achieve Organizational Goals."@en ;
+    rdfs:label "process scheme"@en, "schéma de processus"@fr .
+    
+:ActivityScheme a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "An Activity Scheme is a planned activity."@en ;
+    rdfs:label "activity scheme"@en, "schéma d'activité"@fr ;
+    skos:note "The concept of activity can be the execution of a simple action, a complex set of actions, or any other useful arrangement employed to achieving organizational goals. An activity can be represented using, for instance, the PROV Ontology."@en .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-:enforcesRegulativeNorm rdf:type owl:ObjectProperty ;
+:hasOrganizationalValue a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
-    rdfs:range :RegulativeNorm ;
-    rdfs:comment "An organization enforces a norm. "@en ;
-    rdfs:label "enforces the norm"@en .
-
-:definesRegulativeNorm rdf:type owl:ObjectProperty ;
+    rdfs:range :OrganizationalValue ;
+    rdfs:comment "A relation that refers to an Organization Value of an Organization."@en ;
+    rdfs:label "has organizational value"@en, "a une valeur organisationnelle"@fr .
+      
+:providesRole a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
-    rdfs:range :RegulativeNorm ;
-    rdfs:comment "An organization Specification defines a norm. "@en ;
-    rdfs:label "defines the norm"@en .
-
-:hasNormativeTarget rdf:type owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :RegulativeNorm ;
     rdfs:range :Role ;
-    rdfs:comment "An agent or a group of agents concerned by a norm." ;
-    rdfs:label "has normative target".
-
-:beInChargeOfEnforcingTheRegulativeNorm rdf:type owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :RegulativeNorm ;
-    rdfs:range :AuthorityRole;
-    rdfs:comment "It defines who is the authority in charge of applying the norm. "@en ;
-    rdfs:label "be in charge of enforcing the regulative norm"@en .
+    rdfs:comment "A relation that refers to a Role made available to Agents in the context of an Organization."@en ;
+    rdfs:label "provides role"@en, "fournit un rôle"@fr .
 
-
-:isPossiblyDescribedBy rdf:type owl:ObjectProperty ;
+:proposesMission a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Workspace ;
-    rdfs:range :PossibleWorld ;
-    rdfs:comment "A workspace state is associated with a set of possible worlds. "@en ;
-    rdfs:label "has a possible world"@en .
-
-:hasDeonticSpecification rdf:type owl:ObjectProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a Mission that can be executed in the context of an Organization."@en ;
+    rdfs:label "proposes mission"@en, "fournit une mission"@fr .
+    
+:proposesFacility a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :PossibleWorld ;
-    rdfs:range :RegulativeNorm ;
-    rdfs:comment "A possible world may have some deontic specifications. "@en ;
-    rdfs:label "has deontic specification"@en .
+    rdfs:domain :Organization ;
+    rdfs:range :Facility ;
+    rdfs:comment "A relation that refers to a Facility made available to Artifacts in the context of an Organization."@en ;
+    rdfs:label "proposes facility"@en, "fournit de facilité"@fr .
 
-:prohibits rdf:type owl:ObjectProperty ;
+:isMembershipOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :RegulativeNorm ;
-    rdfs:range :Prohibition ;
-    rdfs:comment "A prohibition is associated with a norm and describes a state of affairs that shouldn't be verified when a norm is applied. "@en ;
-    rdfs:label "prohibits"@en .
+    rdfs:domain :Membership ;
+    rdfs:range :Agent ;
+    rdfs:comment "A relation that refers to the Agent involved in a Membership."@en ;
+    rdfs:label "is membership of"@en, "est l'appartenance à"@fr .
 
-:permits rdf:type owl:ObjectProperty ;
+:isMembershipFor a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domains :RegulativeNorm ;
-    rdfs:range :Permission ;
-    rdfs:comment "A permission is associated with a norm and describes a state of affairs which is explicitly permitted when a norm is applied."@en ;
-    rdfs:label "allows"@en .
+    rdfs:domain :Membership ;
+    rdfs:range :Role ;
+    rdfs:comment "A relation that refers to the Role involved in a Membership."@en ;
+    rdfs:label "is membership for"@en, "est l'adhésion pour"@fr .
 
-:obliges rdf:type owl:ObjectProperty ;
+:isMembershipIn a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :RegulativeNorm ;
-    rdfs:range :Obligation ;
-    rdfs:comment "An obligation is associated with a norm and describes a state of affairs that must be maintained when a norm is applied."@en ;
-    rdfs:label "obliges"@en .
+    rdfs:domain :Membership ;
+    rdfs:range :Group ;
+    rdfs:comment "A relation that refers to the Group involved in a Membership."@en ;
+    rdfs:label "is membership in"@en, "est l'appartenance à"@fr .
 
-:hasDeonticSpecification rdf:type owl:ObjectProperty ;
+:hasMembershipRelationshipWith a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :PossibleWorld ;
-    rdfs:range :RegulativeNorm ;
-    rdfs:comment "A possible world may have some deontic specifications. "@en ;
-    rdfs:label "has deontic specification"@en .
+    rdfs:domain :Membership ;
+    rdfs:range :Membership ;
+    rdfs:comment "A relation that refers to the relationship between Agents member of two Memberships."@en ;
+    rdfs:label "has membership relationship with"@en, "a une relation d'affiliation avec"@fr .
 
-:hasNormativeContext rdf:type owl:ObjectProperty ;
+:structures a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :RegulativeNorm ;
-    rdfs:range :NormativeContext ;
-    rdfs:comment "A specification which defines when a norm is applicable. "@en ;
-    rdfs:label "has normative context"@en .
+    rdfs:domain :Group ;
+    rdfs:range :Organization ;
+    rdfs:inverseOf :isStructuredBy ;
+    rdfs:comment "A relation that refers to a Group that structures an Organization."@en ;
+    rdfs:label "structures"@en, "structure"@fr .
 
-#:includes a owl:ObjectProperty ;
-#            rdfs:domain :SituatedRegulatedOrganizationEntity ;
-#            rdfs:range :SituatedRegulatedOrganizationEntity ;
-#            rdfs:comment "A relation of containment of two Situation Regulated Organization Entities."@en ;
-#            rdfs:label "includes"@en .
+:isStructuredBy a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :Group ;
+    rdfs:inverseOf :structures ;
+    rdfs:comment "A relation that refers to an Organization that is structured by a Group."@en ;
+    rdfs:label "is structured by"@en, "est structuré par"@fr .
 
-# Are the Workspace or the Agents and Artifacts that situate a SROE?
-#:situates a owl:ObjectProperty ;
-#            owl:inverseOf :isSituatedIn ;
-#            rdfs:domain [
-#              core:Agent ;
-#              core:Artifact
-#            ] ;
-#            rdfs:range :SituatedRegulatedOrganizationEntity ;
-#            rdfs:comment "A relation that specifies that agents and artifacts are part and regulated by the Situated Regulated Organization Entity."@en ;
-#            rdfs:label "situates"@en .
+:isSubGroupOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Group ;
+    rdfs:range :Group ;
+    rdfs:comment "A relation that refers to a subgroup relationship between two Groups."@en ;
+    rdfs:label "is subgroup of"@en, "est un sous-groupe de"@fr .
 
-#:isSituatedIn a owl:ObjectProperty ;
-#                owl:inverseOf :situates ;
-#                rdfs:domain :SituatedRegulatedOrganizationEntity ;
-#                rdfs:range [
-#                  core:Agent ;
-#                  core:Artifact
-#                ] ;
-#                rdfs:comment "A relation that specifies that a Situated Regulated Organization Entity includes and regulates a set of agents and artifacts."@en ;
-#                rdfs:label "is situated in"@en .
+:hasOrganizationalGoal a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to an Organizational Goal of an Organization."@en ;
+    rdfs:label "has organizational goal"@en, "a un but organisationnel"@fr .
 
-# Unsure about the domain and range because we may not be dealing only with single resources, but with set of resources
-# Will we require regulations to be defined w.r.t. institutional facts only? If so, everything will have to be constituted as an Institutional Fact before they can be regulated.
-#:countAs a owl:ObjectProperty ;
-#           rdfs:domain rdfs:Resource ;
-#           rdfs:range rdfs:Resource ;
-#           rdfs:comment "Links resources to institutional facts."@en ;
-#           rdfs:label "count-as"@en .
+:isSubOrganizationalGoalOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :OrganizationalGoal ;
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to a hierarchical relationship between two Organizational Goals."@en ;
+    rdfs:label "is sub-organizational goal of"@en, "est le but sous-organisationnel de"@fr .
+    
+:gathersOrganizationalGoal a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Mission ;
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to a set of Organizational Goals in relation to a Mission."@en ;
+    rdfs:label "gathers organizational goal"@en, "collecter but organisationnel"@fr .
 
+:achievesOrganizationalGoal a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :ActivityScheme ;
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to an Organizational Goal coordinated by an Activity Scheme."@en ;
+    rdfs:label "achieves organizational goal"@en, "coordonner but organisationnel"@fr .
 
+:proposesProcessScheme a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :ProcessScheme ;
+    rdfs:comment "A relation that refers to a Process Scheme that can be carried out within an Organization."@en ;
+    rdfs:label "proposes activity scheme"@en, "propose une schéma d'activité"@fr .
+
+:hasRootActivityScheme a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :ProcessScheme ;
+    rdfs:range :RootActivityScheme ;
+    rdfs:comment "A relation that refers to the Root Activity Scheme (i.e., an Activity Scheme origin of an interconnected set of Activity Schemes) associated to a Process Scheme."@en ;
+    rdfs:label "has root activity scheme"@en, "a un schéma d'activité racine"@fr .
+    
+:proposesActivityScheme a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :ActivityScheme ;
+    rdfs:comment "A relation that refers to an Activity Scheme that can be carried out within an Organization."@en ;
+    rdfs:label "proposes activity scheme"@en, "propose une schéma d'activité"@fr .
+    
+:isDependentOnActivityScheme a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :ActivityScheme ;
+    rdfs:range :ActivityScheme ;
+    rdfs:comment "A relation that refers to the way in which two Activity Schemes are related to each other, and one is affected by the other."@en ;
+    rdfs:label "is dependent on activity scheme"@en, "dépend du schéma d'activité"@fr .
+
+:isCommittedToMission a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Agent ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a Mission to which an Agent is committed."@en ;
+    rdfs:label "is committed to mission"@en, "est engagé à accomplir sa mission"@fr .
