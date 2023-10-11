@@ -1,4 +1,5 @@
-import regex as re
+from regex import compile as regex_compile
+from subprocess import check_output
 
 ##############
 # Parameters #
@@ -14,6 +15,8 @@ DOMAINS_PATH = "../../domains/"
 CORESE_PYTHON_URL = "https://files.inria.fr/corese/distrib/corese-library-python-4.4.1.jar"
 # The desired levenshtein threshold to accept terms as different enough
 TERM_DISTANCE_THRESHOLD = 3
+# The EARL ontology prefix
+EARL_PREFIX="http://www.w3.org/ns/earl#"
 
 ############################################
 # Constants calculated from the parameters #
@@ -24,13 +27,53 @@ ONTOLOGY_SEPARATOR = ONTOLOGY_URL[-1]
 # The corese python executable name
 CORESE_JAR_NAME = CORESE_PYTHON_URL.split('/')[-1]
 
+# The reository URI
+REPO_URI = check_output(["git", "config", "--get", "remote.origin.url"])\
+        .decode('utf-8')\
+        .strip()
+
+# The current branch
+BRANCH = check_output(["git", "rev-parse", "--abbrev-ref", "HEAD"])\
+        .decode('utf-8')\
+        .strip()
+
+# The relative path from src to the profile_test folder
+PATH_TO_PROFILE_FOLDER = check_output(["git", "rev-parse", "--show-prefix"])\
+        .decode('utf-8')\
+        .strip()
+
+# The path to the profile check README.md
+PROFILE_CHECK_URI = f"{REPO_URI}tree/{BRANCH}/{PATH_TO_PROFILE_FOLDER}"
+  # TODO: Should be manual/precommit/actions compatible
+  # git config --get remote.origin.url for precommit/manual
+  # $GITHUB_SERVER_URL + '/' + $GITHUB_REPOSITORY for action
+
+DEV_USERNAME = check_output(["git", "config", "--global", "user.name"]).decode('utf-8').strip()
+DEV_ACCOUNT_URL = f"https://github.com/{DEV_USERNAME}"
+
 # Format of a syntax error in the console
-AST_ERROR_FORMAT = re.compile("ERROR fr\\.inria\\.corese\\.sparql\\.triple\\.parser\\.ASTQuery")
+AST_ERROR_FORMAT = regex_compile("ERROR fr\\.inria\\.corese\\.sparql\\.triple\\.parser\\.ASTQuery")
 
 # Glob path to modules
 MODULES_TTL_GLOB_PATH = f"{SRC_PATH}*.ttl"
 # Glob path to modelets
 MODELETS_TTL_GLOB_PATH = f"{DOMAINS_PATH}*/*/onto.ttl"
+
+# Origin URL
+ORIGIN_URL = check_output(
+  ["git", "config", "--get", "remote.origin.url"]
+).decode("utf-8").strip()
+
+# Base reporitory platform URL
+PLATFORM_URL = "/".join(ORIGIN_URL.split("/")[:-2])
+
+# URL prefix for the files in the current branch in src
+SRC_URL = f"{REPO_URI}blob/{BRANCH}/src/"
+DOMAINS_URL = SRC_URL.replace("src", "domains")
+
+DEV_PROFILE = f"{PLATFORM_URL}/{DEV_USERNAME}"
+
+EARL_URL = "https://www.w3.org/ns/earl#"
 
 # SparQL request listing all the ontology terms not linked to a moduled by a rdfs:isDefinedBy property
 NOT_REFERENCED = """
@@ -65,7 +108,7 @@ DOMAIN_OUT_Of_VOCABULARY = """
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-SELECT DISTINCT ?property WHERE {
+SELECT DISTINCT ?suffix ?domain WHERE {
   ?property rdf:type owl:ObjectProperty .
   ?property rdfs:domain ?domain .
    
@@ -74,6 +117,7 @@ SELECT DISTINCT ?property WHERE {
     FILTER(strstarts(str(?domain), "ONTOLOGY_URL"))
   }
   FILTER(strstarts(str(?property), "ONTOLOGY_URL"))
+  BIND (SUBSTR(str(?property), STRLEN("ONTOLOGY_URL") + 1) as ?suffix)
 }
 """.replace("ONTOLOGY_URL", ONTOLOGY_URL)
 

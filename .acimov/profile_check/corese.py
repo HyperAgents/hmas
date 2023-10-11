@@ -119,7 +119,7 @@ prefix_manager = NSManager.create()
 def load(
         path: Union[str, List[str], Graph],
         extras: str="",
-        import_from_src: bool=False,
+        import_from_src: bool=True,
         graph=None,
         already_imported: List[str]=[]
     ):
@@ -223,7 +223,7 @@ def safe_load(
                 return {
                     "file": path,
                     "test_run": False,
-                    "syntax_errors": syntax_errors
+                    "syntax_errors": [syntax_errors]
                 }
 
         return graph
@@ -232,7 +232,7 @@ def safe_load(
         return {
             "file": path,
             "test_run": False,
-            "syntax_errors": syntax_errors,
+            "syntax_errors": [syntax_errors],
             "message": str(e).strip()
         }
     

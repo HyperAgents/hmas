@@ -1,8 +1,8 @@
 rdflib==7.0.0
 markdown==3.4.4
 pyparsing==2.4.7
-mistune==2.0.2
+mistune==0.8.4 # Check what is added to 2+ versions
 dominate
 beautifulsoup4
-request
+requests
 #pylode@git+https://github.com/HyperAgents/pyLODE@skos_tags

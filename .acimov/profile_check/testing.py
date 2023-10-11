@@ -6,7 +6,6 @@ from corese import (
     safe_load,
     prefix_manager,
     owl_profile,
-    print_title,
     check_OWL_constraints
 )
 from constants import (
@@ -16,8 +15,6 @@ from constants import (
     ONTOLOGY_SEPARATOR,
     DOMAIN_OUT_Of_VOCABULARY,
     RANGE_OUT_OF_VOCABULARY,
-    MODULES_TTL_GLOB_PATH,
-    MODELETS_TTL_GLOB_PATH,
     GET_TERM_PAIRS,
     TERM_DISTANCE_THRESHOLD
 )
@@ -228,16 +225,18 @@ def best_practices_test(ontology):
     
     # Checking for domain property out of the vocabulary
     domain_out_of_vocabulary = query_graph(ontology, DOMAIN_OUT_Of_VOCABULARY)
+    domain_out_of_vocabulary = [line.split("\t") for line in domain_out_of_vocabulary]
     domain_out_of_vocabulary = [
-        f"The following property has a domain out of the ontology: {item}"
+        f"The property {item[0][1:-1]} has a domain out of the ontology: {item[1]}"
         for item in domain_out_of_vocabulary
     ]
     report["warnings"] += domain_out_of_vocabulary
 
     # Checking for range property out of the vocabulary
     range_out_of_vocabulary = query_graph(ontology, RANGE_OUT_OF_VOCABULARY)
+    range_out_of_vocabulary = [line.split("\t") for line in range_out_of_vocabulary]
     range_out_of_vocabulary = [
-        f"The following property has a range out of the ontology: {item}"
+        f"The property {item[0][1:-1]} has a range out of the ontology: {item[1]}"
         for item in range_out_of_vocabulary
     ]
     report["warnings"] += range_out_of_vocabulary
@@ -303,27 +302,3 @@ def best_practices_tests(modules, modelets):
     report["global"] = best_practices_test(global_graph)
 
     return report
-
-###
-# Test OWL_RL
-###
-
-safe_modules = glob(MODULES_TTL_GLOB_PATH)
-print_title("Profile check")
-print_title("Checking existing modules")
-base_modules_report, safe_modules = modules_tests(safe_modules)
-
-print_title("Checking modelets")
-safe_modelets = glob(MODELETS_TTL_GLOB_PATH)
-modelets_report, safe_modelets = modelets_tests(safe_modelets)
-
-print_title("Checking best practices")
-best_practices_reports = best_practices_tests(safe_modules, safe_modelets)
-report = {
-    "base_modules": base_modules_report,
-    "modelets": modelets_report, 
-    "best_practices": best_practices_reports
-}
-
-with open("report.json", 'w') as f:
-    f.write(dumps(report,sort_keys=True, indent=4))
