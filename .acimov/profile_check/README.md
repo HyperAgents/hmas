@@ -37,6 +37,10 @@ According to the way the test was called the result can then be formatted to ano
 
 A test meant to check wether the test subject is syntaxically correct or not.
 
+## OWL RL Constraint test
+
+A test meant to check if there is any OWL RL constraint violation (for example a subclass of 2 disjoint classes)
+
 ## Profile test
 
 A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.
@@ -57,6 +61,10 @@ The turtle file provided has a syntax error. The complementary information shoul
 ## Unresolved prefix 
 
 The turtle is using a prefix that is not defined. The complementary information should indicate which is the unresolved prefix.
+
+## OWL RL Contraint Violation
+
+The provided turtle file is valioating a OWL RL constraint. Check the complementary information to get the exact reson why.
 
 ## OWL profile error
 
