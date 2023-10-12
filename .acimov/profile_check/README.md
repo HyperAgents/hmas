@@ -47,7 +47,20 @@ A test meant to check whether the test subject is compatible with a profile or n
 
 ## Best practices test
 
-A test meant to check whether the test subject matches the Best Practices if the project or not.
+A test meant to check whether the test subject matches the Best Practices of the project or not.
+There are different test cases documented there.
+
+### Term referencing test
+
+A test case from the Best Practices tests checking if each term of the test subject is referneced to a module through a rdfs:isDefinedBy property.
+
+### Domain and range referencing test
+
+A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.
+
+### Terms differenciation test
+
+A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.
 
 # Errors
 
@@ -62,7 +75,7 @@ The turtle file provided has a syntax error. The complementary information shoul
 
 The turtle is using a prefix that is not defined. The complementary information should indicate which is the unresolved prefix.
 
-## OWL RL Contraint Violation
+## OWL RL Constraint Violation
 
 The provided turtle file is valioating a OWL RL constraint. Check the complementary information to get the exact reson why.
 
@@ -81,10 +94,6 @@ An owl:ObjectProperty has a rdfs:range defined out of the vocabulary. The comple
 ## Too close terms
 
 The Levenshtein distance between two terms are lower than the parameter set for the project (see [constants](./constants.py)). The complementary information should indicate the terms leading to this error.
-
-## OWL RL Constraint violation
-
-The ontology is violating OWL RL rules, making it inconsistent. The complementary information should provide the statement violating the rules and why it does.
 
 ## No reference module
 
