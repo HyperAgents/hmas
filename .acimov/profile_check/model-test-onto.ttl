@@ -1,0 +1,31 @@
+@prefix : <https://gitlab.com/acimov/acimov-methodology-template/blob/main/scripts/tests/model-test-onto.ttl> .
+@prefix earl: <https://www.w3.org/ns/earl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+###################
+# Test criterions #
+###################
+
+:syntax a earl:TestCriterion ;
+    dcterms:title "Syntax test"@en ;
+    dcterms:description "A test meant to check wether the test subject is syntaxically correct or not."@en .
+
+:owl-rl-constraint a earl:TestCriterion ;
+    dcterms:title "OWL RL Constraint test"@en ;
+    dcterms:description "A test meant to check wether the test subject is syntaxically correct or not."@en .
+
+:profile-compatibility a earl:TestCriterion ;
+    dcterms:title "Syntax test"@en ;
+    dcterms:description "A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why."@en .
+
+:term-referencing a earl:TestCriterion ;
+    dcterms:title "Term referencing test"@en ;
+    dcterms:description "A test case from the Best Practices tests checking if each term of the test subject is referneced to a module through a rdfs:isDefinedBy property."@en .
+
+:domain-and-range-referencing-test a earl:TestCriterion ;
+    dcterms:title "Domain and range referencing test"@en ;
+    dcterms:description "A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary."@en .
+
+:terms-differenciation-test a earl:TestCriterion ;
+    dcterms:title "Terms differenciation test"@en ;
+    dcterms:description "A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric."@en .
