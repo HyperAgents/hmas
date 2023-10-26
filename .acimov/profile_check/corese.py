@@ -5,16 +5,16 @@ from threading  import Thread
 from atexit import register
 from subprocess import Popen, PIPE, DEVNULL
 from time import sleep
-from os.path import exists
+from os.path import exists, sep
 from requests import get
 from typing import Union, List
 from constants import (
     AST_ERROR_FORMAT,
     CORESE_PYTHON_URL,
-    CORESE_JAR_NAME,
     GET_IMPORTS,
     ONTOLOGY_SEPARATOR,
-    SRC_PATH
+    CORESE_LOCAL_PATH,
+    PWD_TO_ROOT_FOLDER
 )
 
 def print_title(title):
@@ -32,10 +32,12 @@ def print_title(title):
 # Capturing the stderr in an OS-agnostic way
 # From https://stackoverflow.com/questions/375427/a-non-blocking-read-on-a-subprocess-pipe-in-python
 
-if not exists(CORESE_JAR_NAME):
+print_title("Preparing Corese")
+
+if not exists(CORESE_LOCAL_PATH):
     print_title("Downloading Corese")
     response = get(CORESE_PYTHON_URL)
-    with open(CORESE_JAR_NAME, "wb") as jar:
+    with open(CORESE_LOCAL_PATH, "wb") as jar:
         jar.write(response.content)
 
 def enqueue_output(out, queue):
@@ -84,7 +86,7 @@ def get_error_output():
 
 # Start java gateway
 java_process = Popen(
-    ['java', '-jar', '-Dfile.encoding=UTF-8', 'corese-library-python-4.4.1.jar'],
+    "java -jar -Dfile.encoding=UTF-8".split(" ") + [CORESE_LOCAL_PATH],
     stdout=PIPE,
     stderr=DEVNULL,
     close_fds=ON_POSIX
@@ -119,6 +121,7 @@ prefix_manager = NSManager.create()
 def load(
         path: Union[str, List[str], Graph],
         extras: str="",
+        disable_import: bool=False,
         import_from_src: bool=True,
         graph=None,
         already_imported: List[str]=[]
@@ -137,11 +140,11 @@ def load(
 
     ld = Load.create(graph)
 
-    property_manager.set(DISABLE_OWL_AUTO_IMPORT, import_from_src)
+    property_manager.set(DISABLE_OWL_AUTO_IMPORT, import_from_src or disable_import)
 
     for file in path:
         if not exists(file):
-            print("file not found", file)
+            print("File not found", file)
             continue
         ld.parse(file)
     
@@ -153,10 +156,10 @@ def load(
             continue
         ld.loadString(extra, TURTLE)
 
-    if import_from_src:
+    if import_from_src and not disable_import:
         imports = query_graph(graph, GET_IMPORTS)
         imports = [
-            f"{SRC_PATH}{item.split(ONTOLOGY_SEPARATOR)[-1][:-1]}.ttl"
+            f"{PWD_TO_ROOT_FOLDER}src{sep}{item.split(ONTOLOGY_SEPARATOR)[-1][:-1]}.ttl"
             for item in imports
         ]
         imports = [item for item in imports if not item in already_imported]
@@ -197,7 +200,8 @@ def capture_syntax_errors():
 def safe_load(
         path: Union[str, List[str], Graph],
         extras: str="",
-        import_from_src: bool=False,
+        import_from_src: bool=True,
+        disable_import: bool=False,
         graph: Graph=None,
         already_imported: List[str]=[]
     ):
@@ -214,26 +218,40 @@ def safe_load(
             path,
             extras=extras,
             import_from_src=import_from_src,
+            disable_import=disable_import,
             graph=graph,
             already_imported=already_imported
         )
-        syntax_errors = capture_syntax_errors()
+        syntax_errors = [
+            line.strip()
+            for line in capture_syntax_errors().split('\n')
+            if len(line.strip()) > 0
+        ]
 
         if len(syntax_errors) > 0:
                 return {
-                    "file": path,
-                    "test_run": False,
-                    "syntax_errors": [syntax_errors]
+                    "syntax-test": {
+                        "syntax-error": [
+                            {"message": line}
+                            for line in syntax_errors
+                        ]
+                    }
                 }
 
         return graph
 
     except Exception as e:
         return {
-            "file": path,
-            "test_run": False,
-            "syntax_errors": [syntax_errors],
-            "message": str(e).strip()
+            "syntax-test": {
+                "syntax-error": [
+                    {"message": message}
+                    for message in [
+                        syntax_errors,
+                        " ".join(str(e).strip().split("\n")[1].split(" ")[2:])
+                    ]
+                    if len(message) > 0
+                ]
+            }
         }
     
 def query_graph(graph, query):

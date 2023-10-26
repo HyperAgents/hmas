@@ -1,5 +1,8 @@
 from regex import compile as regex_compile
 from subprocess import check_output
+from rdflib import Namespace
+from os import getcwd
+from os.path import sep, relpath, abspath
 
 ##############
 # Parameters #
@@ -7,10 +10,6 @@ from subprocess import check_output
 
 # The ontology base URL
 ONTOLOGY_URL = "https://purl.org/hmas/"
-# The relative path to the src folder
-SRC_PATH = "../../src/"
-# The relative path to the domains folder
-DOMAINS_PATH = "../../domains/"
 # The URL of the Corese python library to fetch
 CORESE_PYTHON_URL = "https://files.inria.fr/corese/distrib/corese-library-python-4.4.1.jar"
 # The desired levenshtein threshold to accept terms as different enough
@@ -22,10 +21,19 @@ EARL_PREFIX="http://www.w3.org/ns/earl#"
 # Constants calculated from the parameters #
 ############################################
 
+ROOT_FOLDER = abspath(
+  f"{sep.join(abspath(__file__).split(sep)[:-1])}{sep}..{sep}.."
+)
+
+PWD_TO_ROOT_FOLDER = f"{relpath(ROOT_FOLDER, getcwd())}{sep}"
+PWD_TO_PROFILE_CHECK = f"{PWD_TO_ROOT_FOLDER}.acimov{sep}profile_check{sep}"
+
 # The character separating the ontology base URL from the suffix
 ONTOLOGY_SEPARATOR = ONTOLOGY_URL[-1]
 # The corese python executable name
 CORESE_JAR_NAME = CORESE_PYTHON_URL.split('/')[-1]
+
+CORESE_LOCAL_PATH = abspath(f"{PWD_TO_PROFILE_CHECK}{CORESE_JAR_NAME}")
 
 # The reository URI
 REPO_URI = check_output(["git", "config", "--get", "remote.origin.url"])\
@@ -44,20 +52,27 @@ PATH_TO_PROFILE_FOLDER = check_output(["git", "rev-parse", "--show-prefix"])\
 
 # The path to the profile check README.md
 PROFILE_CHECK_URI = f"{REPO_URI}tree/{BRANCH}/{PATH_TO_PROFILE_FOLDER}"
+# TODO remove this line after tests
+PROFILE_CHECK_URI = "https://github.com/HyperAgents/hmas/tree/test-workflow/.acimov/profile_check"
   # TODO: Should be manual/precommit/actions compatible
   # git config --get remote.origin.url for precommit/manual
   # $GITHUB_SERVER_URL + '/' + $GITHUB_REPOSITORY for action
+
+ACIMOV_MODEL_TEST_URI = f"{PROFILE_CHECK_URI}/model-test-onto.ttl"
+# TODO remove this second line after tests
+ACIMOV_MODEL_TEST_URI = "https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/profile_check/model-test-onto.ttl"
 
 DEV_USERNAME = check_output(["git", "config", "--global", "user.name"]).decode('utf-8').strip()
 DEV_ACCOUNT_URL = f"https://github.com/{DEV_USERNAME}"
 
 # Format of a syntax error in the console
 AST_ERROR_FORMAT = regex_compile("ERROR fr\\.inria\\.corese\\.sparql\\.triple\\.parser\\.ASTQuery")
+PROFILE_ERROR_FORMAT = regex_compile("^[0-9]+\\. [^\\n]+|$")
 
 # Glob path to modules
-MODULES_TTL_GLOB_PATH = f"{SRC_PATH}*.ttl"
+MODULES_TTL_GLOB_PATH = f"{PWD_TO_ROOT_FOLDER}src{sep}*.ttl"
 # Glob path to modelets
-MODELETS_TTL_GLOB_PATH = f"{DOMAINS_PATH}*/*/onto.ttl"
+MODELETS_TTL_GLOB_PATH = f"{PWD_TO_ROOT_FOLDER}domains{sep}*{sep}*{sep}onto.ttl"
 
 # Origin URL
 ORIGIN_URL = check_output(
@@ -69,11 +84,22 @@ PLATFORM_URL = "/".join(ORIGIN_URL.split("/")[:-2])
 
 # URL prefix for the files in the current branch in src
 SRC_URL = f"{REPO_URI}blob/{BRANCH}/src/"
+SRC_URL = "https://github.com/HyperAgents/hmas/tree/master/src/" # TODO remove this line after tests
 DOMAINS_URL = SRC_URL.replace("src", "domains")
 
 DEV_PROFILE = f"{PLATFORM_URL}/{DEV_USERNAME}"
+# TODO: remove this line after tests
+DEV_PROFILE = "https://github.com/NicoRobertIn"
 
 EARL_URL = "https://www.w3.org/ns/earl#"
+
+EARL_NAMESPACE = Namespace(EARL_URL)
+SRC_NAMESPACE = Namespace(SRC_URL)
+TEST_NAMESPACE = Namespace(PROFILE_CHECK_URI)
+ACIMOV_MODEL_NAMESPACE = Namespace(f"{ACIMOV_MODEL_TEST_URI}#")
+
+# The different levels of OWL profile decidability available un CORESE
+DECIDABILITY_RANGE = ["OWL_TC", "OWL_RL", "OWL_QL", "OWL_EL"]
 
 # SparQL request listing all the ontology terms not linked to a moduled by a rdfs:isDefinedBy property
 NOT_REFERENCED = """
@@ -109,14 +135,31 @@ DOMAIN_OUT_Of_VOCABULARY = """
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 SELECT DISTINCT ?suffix ?domain WHERE {
+  # Get all the properties with a defined domain
   ?property rdf:type owl:ObjectProperty .
   ?property rdfs:domain ?domain .
-   
-   FILTER NOT EXISTS {
+
+  # Get only the most specialized domains for each property
+  FILTER NOT EXISTS {
+    ?property rdfs:domain ?domain2 .
+    ?domain2 owl:subClassOf ?domain .
+  }
+
+  # Ignore the owl:Thing domains
+  FILTER NOT EXISTS {
+    FILTER (?domain = owl:Thing)
+  }
+  
+  # Ignore the domains in the ontology
+  FILTER NOT EXISTS {
     ?domain rdf:type ?o .
     FILTER(strstarts(str(?domain), "ONTOLOGY_URL"))
   }
+  
+  # Ignore the properties out of the ontology
   FILTER(strstarts(str(?property), "ONTOLOGY_URL"))
+
+  # Format the result
   BIND (SUBSTR(str(?property), STRLEN("ONTOLOGY_URL") + 1) as ?suffix)
 }
 """.replace("ONTOLOGY_URL", ONTOLOGY_URL)
@@ -223,3 +266,105 @@ SELECT ?suffix1 ?suffix2 ?distance WHERE {
       "TERM_DISTANCE_THRESHOLD",
       str(TERM_DISTANCE_THRESHOLD)
 ) + LEVENSHTEIN_FUNCTION
+
+BLOCKINGS_ERRORS = """
+select ?n ?c ?t ?d where {
+  ?a a earl:Assertion ;
+  earl:subject ?s ;
+  earl:test ?c ;
+  earl:result ?r .
+
+  ?s dcterms:title ?n .
+
+  ?r a earl:TestResult ;
+  earl:outcome ?o .
+
+  ?o a earl:Fail ;
+  dcterms:title ?t ;
+  dcterms:description ?d .
+}
+"""
+
+# TODO make a resource script providing the messages
+TEST_RESOURCES = {
+    "term-referencing-test": {
+        "title": "Term referencing test",
+        "description": "Test checking if each term is linked to a module through a rdfs:isDefineBy property",
+        "errors": {
+            "no-reference-module": {
+              "pass_title": "Any term is referenced",
+              "pass_description": "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property",
+              "fail_title": "Term not referenced to a module",
+              "is_blocking": False
+            }
+        }
+    },
+    "domain-and-range-referencing-test": {
+        "title": "Domain or range out of vocabulary",
+        "description": "Test checking if each range of domain of any property is defined within the ontology",
+        "errors": {
+            "domain-out-of-vocabulary": {
+              "pass_title": "Domains properly defined",
+              "pass_description": "Each domain of any property is defined in the ontology",
+              "fail_title": "Domain out of vocabulary",
+              "is_blocking": False
+            },
+            "range-out-of-vocabulary": {
+              "pass_title": "Ranges properly defined",
+              "pass_description": "Each range of any property is defined in the ontology",
+              "fail_title": "Range out of vocabulary",
+              "is_blocking": False
+            }
+        }
+    },
+    "terms-differenciation-test": {
+        "title": "Test of terms differenciation",
+        "description": "Test checking if each term of the subject have a Levenshtein distance high enough from each other",
+        "errors": {
+          "too-close-terms": {
+            "pass_title": "Terms differenciated enough",
+            "pass_description": "All the terms have a high enough Levenshtein distance from each other",
+            "fail_title": "Too close terms",
+            "is_blocking": False
+          }
+        }
+    },
+    "syntax-test": {
+        "title": "Syntax test",
+        "description": "A test meant to check wether the test subject is syntaxically correct or not.",
+        "errors": {
+            "syntax-error": {
+              "pass_title": "Correct syntax",
+              "pass_description": "Test subject has a correct syntax",
+              "fail_title": "Test subject has syntax errors",
+              "is_blocking": True
+            }
+        }
+    },
+    "owl-rl-constraint-test": {
+        "title": "OWL RL Constraint violation test",
+        "description": "A test meant to check if a OWL RL constraint is violated",
+        "errors": {
+            "owl-rl-constraint-violation": {
+              "pass_title": "OWL RL consistent",
+              "pass_description": "The provided graph doesn't violate any consistency rules",
+              "fail_title": "OWL RL Constraint violation",
+              "is_blocking": True
+            }
+        }
+    },
+    "profile-test": {
+      "title": "OWL Profile Compatibility Test",
+      "description": "Test for the compatibility of the subject for the OWL Profile",
+      "errors": {}
+    }
+}
+
+for profile in DECIDABILITY_RANGE:
+  parsed_name = profile.lower().replace('_', '-')
+  TEST_RESOURCES["profile-test"]["errors"][f"{parsed_name}-profile-error"] = {
+    "pass_title": f"{profile} Profile compatible",
+    "pass_description": f"The subject is totally included in the terms provided in the OWL profile {profile}",
+    "fail_title": f"{profile} Profile incompatible",
+    "is_blocking": False
+  }

@@ -1,9 +1,6 @@
-from os.path import sep
-
 # We don't need reasoning, profile checking etc
 from rdflib import (
     Graph,
-    Namespace,
     BNode,
     Literal,
     URIRef
@@ -21,11 +18,17 @@ from constants import (
     DEV_USERNAME,
     PROFILE_CHECK_URI,
     DEV_PROFILE,
-    SRC_URL,
+    DOMAINS_URL,
     PROFILE_CHECK_URI,
-    EARL_URL
+    EARL_NAMESPACE,
+    SRC_NAMESPACE,
+    TEST_NAMESPACE,
+    ACIMOV_MODEL_NAMESPACE,
+    TEST_RESOURCES,
+    BRANCH
 )
 
+# TODO a faire pour plus tard
 def parse_turtle_to_html(turtle):
     raise NotImplementedError()
 
@@ -33,23 +36,17 @@ def statement(self, subject, *po):
     for item in po:
         self.add((subject, item[0], item[1]))
 
-def parse_report_to_turtle(report) :
-    g = Graph()
-    g.statement = statement.__get__(g)
+def assertGroup(g, mode):
+    assertorId = f"{DEV_USERNAME}-{mode}"
+    title = f"{DEV_USERNAME} using {mode} script"
+    description = f"Represents the user @{DEV_USERNAME} launching the {mode} test script"
+    scriptURI = f"{PROFILE_CHECK_URI}manual-test"
     
-    EARL = Namespace(EARL_URL)
-    SRC = Namespace(SRC_URL)
-    TEST = Namespace(PROFILE_CHECK_URI)
-
-    g.bind("earl", EARL)
-    g.bind("src", SRC)
-    g.bind("profile-test", TEST)
-
     # Define the developper and the assertor
-    assert_group = BNode()
-    developper = BNode()
+    assert_group = BNode(assertorId)
+    developper = BNode(DEV_USERNAME)
 
-    # Define the 
+    # Define the developper
     g.statement(
         developper,
         (RDF.type, FOAF.Person),
@@ -59,104 +56,189 @@ def parse_report_to_turtle(report) :
     # Define the developper using the software
     g.statement(
         assert_group,
-        (RDF.type, FOAF.Group),
-        (
-            DCTERMS.title,
-            Literal(
-                f"{DEV_USERNAME} using Manual script",
-                lang="en")
-        ),
-        (
-            DCTERMS.description,
-            Literal(
-                f"Represents the user @{DEV_USERNAME} launching the manual test script",
-                lang="en"
-            )
-        ),
-        (EARL.mainAssertor, developper),
-        (FOAF.member, URIRef(f"{PROFILE_CHECK_URI}manual-test.py"))
+        (RDF.type, FOAF.OnlineAccount),
+        (DCTERMS.title, Literal(title, lang="en")),
+        (DCTERMS.description, Literal(description, lang="en")),
+        (EARL_NAMESPACE.mainAssertor, developper),
+        (FOAF.member, URIRef(scriptURI))
     )
 
-    # Reports on the base modules
-    base_modules = report["base_modules"]
+    return assert_group
 
-    for module in base_modules.keys():
-        # Define the test subject
-        test_subject = BNode()
-        g.statement(
-            test_subject,
-            (RDF.type, EARL.TestSubject),
-            (
-                DCTERMS.title,
-                Literal("An isolated module", lang="en")
-            ),
-            (DCTERMS.hasPart, SRC[module.split(sep)[-1]])
-        )
+def get_subject_id_part(fragment_list):
+    modules = [item for item in fragment_list if item.startswith("src/")]
+    modules = ['.'.join(item[4:].split('.')[:-1]) for item in modules]
+    modules.sort()
+    modelets = [item for item in fragment_list if item.startswith("domains/")]
+    modelets = ['-'.join(item.split('/')[1:-1]) for item in modelets]
+    modelets.sort()
 
-        # Define the test criterion
-        syntax_test = BNode()
-        g.statement(
-            syntax_test,
-            (RDF.type, EARL.TestSubject),
-            (DCTERMS.title, Literal("Syntax test", lang="en")),
-            (
-                DCTERMS.description,
-                Literal(
-                    "A test meant to check wether the test subject is syntaxically correct or not.",
-                    lang="en"
-                )
-            ),
-            (RDFS.seeAlso, TEST["syntax-test"])
-        )
+    return '-'.join(modules + modelets)
 
-        # Check of syntax errors
-        # Define the test result
-        syntax_result = BNode()
-        syntax_outcome = BNode()
-        g.statement(
-            syntax_result,
-            (RDF.type, EARL.TestResult),
-            (EARL.outcome, syntax_outcome)
-        )
+def get_subject_id(subject):
+    prefix = get_subject_id_part(subject["heart"])
+    suffix = "" if not "appendix" in subject else get_subject_id_part(subject["appendix"])
+    return prefix if len(suffix) == 0 else f"{prefix}-{suffix}"
 
-        if len(base_modules[module]["syntax_errors"]) == 0:
-            g.statement(
-                syntax_outcome,
-                (RDF.type, EARL.Pass),
+def testSubject(
+        g,
+        json_subject
+):
+    heart = json_subject['heart']
+    appendix = [] if not "appendix" in json_subject else json_subject["appendix"] 
+    subject_id = get_subject_id(json_subject)
+
+    heart_type = "Set of fragments " if len(heart) > 1 else \
+                "Standalone module " if heart[0].startswith("src/") else \
+                "Standalone modelet "
+    
+    title = f"{heart_type}{', '.join(heart)} from branch {BRANCH}"
+
+    if len(appendix) > 0:
+        title += f"with related terms from the fragments {', '.join(appendix)}"
+    
+    module_fragments = [item for item in heart + appendix if item.startswith('src/')]
+    module_fragments = [
+        SRC_NAMESPACE['.'.join(item.split('/')[-1].split('.')[:-1])]
+        for item in module_fragments
+    ]
+    
+    modelets_fragment = [item for item in heart + appendix if item.startswith('domains/')]
+    modelets_fragment = [
+        URIRef(DOMAINS_URL + item.split("/domains/")[-1])
+        for item in modelets_fragment
+    ]
+
+    test_subject = BNode(subject_id)
+    statements = [
+        (DCTERMS.hasPart, part)
+        for part in module_fragments + modelets_fragment
+    ]
+
+    statements = [
+        (RDF.type, EARL_NAMESPACE.TestSubject),
+        (DCTERMS.title, Literal(title, lang="en"))
+    ] + statements
+    g.statement(test_subject, *statements)
+
+    return test_subject
+
+def testCriterion(
+        g,
+        title,
+        description,
+        testURI
+):
+    test_criterion = BNode()
+    g.statement(
+        test_criterion,
+        (RDF.type, EARL_NAMESPACE.TestCriterion),
+        (DCTERMS.title, Literal(title, lang="en")),
+        (DCTERMS.description, Literal(description, lang="en")),
+        (RDFS.seeAlso, testURI)
+    )
+    return test_criterion
+
+def testResult(
+        g,
+        json_result,
+        test_resource
+    ):
+    rdf_result = BNode()
+    g.add((rdf_result, RDF.type, EARL_NAMESPACE.TestResult))    
+    errors_summaries = []
+
+    for error_id in json_result.keys():
+        error_list = json_result[error_id]
+
+        if len(error_list) == 0:
+            errors_summaries.append([
+                (RDF.type, EARL_NAMESPACE.Pass),
                 (
                     DCTERMS.title,
-                    Literal("Test subject has a correct syntax", lang="en")
+                    Literal(test_resource["errors"][error_id]["pass_title"], lang="en")
                 ),
                 (
                     DCTERMS.description,
-                    Literal("Test subject has no syntax error", lang="en")
+                    Literal(test_resource["errors"][error_id]["pass_description"], lang="en")
                 )
-            )
-        else:
-            g.statement(
-                syntax_outcome,
-                (RDF.type, EARL.Fail),
-                (
-                    DCTERMS.title,
-                    Literal("Test subject has an incorrect syntax", lang="en")
-                ),
-                (
-                    DCTERMS.description,
-                    Literal("\n".join(base_modules[module]["syntax_errors"]), lang="en")
-                ),
-                (RDFS.seeAlso, TEST["syntax-error"])
-            )
+            ])
         
-        # Define the assertion
-        assertion = BNode()
+        for error in error_list:
+            error_summary = [
+                (
+                    RDF.type,
+                    EARL_NAMESPACE.Fail if test_resource["errors"][error_id]["is_blocking"]
+                    else EARL_NAMESPACE.CannotTell
+                ),
+                (
+                    DCTERMS.title,
+                    Literal(test_resource["errors"][error_id]["fail_title"], lang="en")
+                ),
+                (
+                    DCTERMS.description,
+                    Literal(error["message"], lang="en")
+                )
+            ]
 
+#            if "pointer" in error:
+#                # Add the turtle code provided as a pointer to the error
+#                error_summary += [
+#                    () for pointer in error["pointer"]
+#                ]
+
+            errors_summaries.append(error_summary)
+    
+    for summary in errors_summaries:
+        test_outcome = BNode()
+        g.statement(test_outcome, *summary)
+        g.add((rdf_result, EARL_NAMESPACE.outcome, test_outcome))
+
+    return rdf_result
+
+def parse_subject_report(
+        subject_report,
+        assert_group,
+        test_subject,
+        g
+):
+    for test in subject_report.keys():
+        test_result = testResult(
+            g,
+            subject_report[test],
+            TEST_RESOURCES[test]
+        )
+        assertion = BNode()
         g.statement(
             assertion,
-            (RDF.type, EARL.Assertion),
-            (EARL.assertedBy, assert_group),
-            (EARL.subject, test_subject),
-            (EARL.test, syntax_test),
-            (EARL.result, syntax_result)
+            (RDF.type, EARL_NAMESPACE.Assertion),
+            (EARL_NAMESPACE.assertedBy, assert_group),
+            (EARL_NAMESPACE.subject, test_subject),
+            (EARL_NAMESPACE.test, ACIMOV_MODEL_NAMESPACE[test]),
+            (EARL_NAMESPACE.result, test_result)
+        )
+
+def parse_report_to_turtle(json_report) :
+    g = Graph()
+    g.statement = statement.__get__(g)
+
+    g.bind("earl", EARL_NAMESPACE)
+    g.bind("src", SRC_NAMESPACE)
+    g.bind("profile-test", TEST_NAMESPACE)
+    g.bind("acimov-model-test", ACIMOV_MODEL_NAMESPACE)
+
+    assert_group = assertGroup(g, "manual")
+
+    # Reports of each assertion
+    for json_assertion in json_report:
+        json_subject = json_assertion["subject"]
+        rdf_subject = testSubject(g, json_subject)
+
+        parse_subject_report(
+            json_assertion["report"],
+            assert_group,
+            rdf_subject,
+            g
         )
 
     return g.serialize(format="ttl")

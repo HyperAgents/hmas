@@ -281,7 +281,7 @@ _:norman2013 a owl:NamedIndividual ;
 
 :isTransitivelyContainedIn a owl:ObjectProperty, owl:TransitiveProperty ;
           rdfs:isDefinedBy :core ;
-          rdfs:range :Workspac ;
+          rdfs:range :Workspace ;
           owl:inverseOf :transitivelyContains ;
           rdfs:comment "A relation that refers to all workspaces in which a resource is contained. "@en ;
           rdfs:label "is transitively contained in"@en, "est transitivement contenu dans"@fr .
@@ -304,7 +304,7 @@ _:norman2013 a owl:NamedIndividual ;
 :isProfileOf a owl:ObjectProperty ;
           rdfs:isDefinedBy :core ;
           owl:inverseOf :hasProfile ;
-          rdfs:domain :ResourceProfil ;
+          rdfs:domain :ResourceProfile ;
           rdfs:comment "A relation that links a resource profile to the resource it is a profile of."@en ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13> ; 
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/26> ;
