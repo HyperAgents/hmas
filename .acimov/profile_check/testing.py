@@ -111,23 +111,28 @@ def profile_check(ontology, extras=""):
     report["owl-rl-constraint-test"]["owl-rl-constraint-violation"] = OWL_constraints_errors
     return report
 
-def fragment_check(fragment):
-    fragment_graph_no_import = safe_load(fragment, disable_import=True)
+def fragment_check(fragments, extras="", skip=[]):
+    fragment_graph_no_import = safe_load(fragments, extras, disable_import=True)
     no_import_load_error = isinstance(fragment_graph_no_import, dict)
 
     if no_import_load_error:
-        return fragment_graph_no_import, False, fragment_graph_no_import
+        return fragment_graph_no_import, False
     
-    fragment_graph_with_import = safe_load(fragment)
+    fragment_graph_with_import = safe_load(fragments, extras)
     with_import_load_error = isinstance(fragment_graph_with_import, dict)
 
     profile_test = profile_check(fragment_graph_no_import)
-    best_practices = best_practices_test(fragment_graph_with_import) if not with_import_load_error else fragment_graph_with_import
+
+    best_practices = best_practices_test(
+                        fragment_graph_with_import,
+                        fragment_graph_no_import,
+                        skip
+                    ) if not with_import_load_error else fragment_graph_with_import
 
     if with_import_load_error:
-            del profile_test["syntax-test"]
+        del profile_test["syntax-test"]
     
-    return {**profile_test, **best_practices}, True, fragment_graph_no_import
+    return {**profile_test, **best_practices}, True
 
 def modules_tests(glob_path):
     """Returns a report about of a profile check of a set of ontologies
@@ -144,7 +149,7 @@ def modules_tests(glob_path):
 
         subject = {"heart": [module_key]}
 
-        fragment_report, safe_alone, _ = fragment_check(module)
+        fragment_report, safe_alone = fragment_check(module)
 
         if safe_alone:
             safe_modules.append(module)
@@ -179,7 +184,10 @@ def modelets_tests(glob_path, skip_merge_test=False):
             "heart": [modelet_key]
         }
 
-        standalone_report, safe_alone, alone_no_import = fragment_check(modelet)
+        standalone_report, safe_alone = fragment_check(
+            modelet,
+            skip=["domain-and-range-referencing-test"]
+        )
 
         if safe_alone:
             safe_modelets.append(modelet)
@@ -193,23 +201,25 @@ def modelets_tests(glob_path, skip_merge_test=False):
             continue
         
         # Add each triple of the modelet to their related ontology, then proceed to profile checks
-        moduled_triples = group_terms_by_module(alone_no_import)
+        alone_no_owl = safe_load(
+            modelet,
+            # disable_import=True,
+            disable_owl=True
+        )
+        moduled_triples = group_terms_by_module(alone_no_owl)
 
         for module in moduled_triples.keys():         
             merged_subject = {
-                "heart": [modelet_key],
-                "appendix": [f"src/{module}.ttl"]
+                "heart": [f"src/{module}.ttl"],
+                "appendix": [modelet_key]
             }
-
-            merged_graph = safe_load(
-                f"{PWD_TO_ROOT_FOLDER}src{sep}{module}.ttl",
-                extras=moduled_triples[module],
-                disable_import=True
-            )
 
             report.append({
                 "subject": merged_subject,
-                "report": profile_check(merged_graph)
+                "report": fragment_check(
+                    merged_subject["heart"],
+                    moduled_triples[module]
+                )[0]
             })
 
     return report, safe_modelets
@@ -240,76 +250,75 @@ def levenshtein(s1, s2):
     
     return previous_row[-1]
 
-def best_practices_test(ontology):
+def best_practices_test(
+        fragment_wih_import,
+        fragment_no_import,
+        skip=[]):
     """Test the best practices mistakes that do not break the RDF syntax neither the OWL reasoning,
     but that should still not happen
 
     :param ontology: The ontology to test
     :returns: An report dictionary
     """
-    if isinstance(ontology, str):
-        ontology = safe_load(ontology, import_from_src=True)
-
-    # This should not happen since it was checked before
-    if isinstance(ontology, dict):
-        return ontology
     
-    report = {
-        "term-referencing-test": {},
-        "domain-and-range-referencing-test": {},
-        "terms-differenciation-test": {}
-    }
+    report = {}
 
     # Check for terms not linked to an ontology
-    unlinked_subjects = query_graph(ontology, NOT_REFERENCED)
-    unlinked_subjects = [
-        {
-            "message": f"Subject {item} not linked to a module by an rdfs:isDefinedBy property",
-            "pointer": [item]
-        }
-        for item in unlinked_subjects
-    ]
-    report["term-referencing-test"]["no-reference-module"] = unlinked_subjects
+    if not "term-referencing-test" in skip:
+        unlinked_subjects = query_graph(fragment_no_import, NOT_REFERENCED)
+        unlinked_subjects = [
+            {
+                "message": f"Subject {item} not linked to a module by a rdfs:isDefinedBy property",
+                "pointer": [item]
+            }
+            for item in unlinked_subjects
+        ]
+        report["term-referencing-test"] = {}
+        report["term-referencing-test"]["no-reference-module"] = unlinked_subjects
     
-    # Checking for domain property out of the vocabulary
-    domain_out_of_vocabulary = query_graph(ontology, DOMAIN_OUT_Of_VOCABULARY)
-    domain_out_of_vocabulary = [line.split("\t") for line in domain_out_of_vocabulary]
-    domain_out_of_vocabulary = [
-        {
-            "message": f"The property {item[0][1:-1]} has a domain out of the ontology: {item[1]}",
-            "pointer": [f"<{ONTOLOGY_URL}{item[0][1:-1]}>", item[1]]
-        }
-        for item in domain_out_of_vocabulary
-    ]
-    report["domain-and-range-referencing-test"]["domain-out-of-vocabulary"] = domain_out_of_vocabulary
+    if not "domain-and-range-referencing-test" in skip:
+        # Checking for domain property out of the vocabulary
+        domain_out_of_vocabulary = query_graph(fragment_wih_import, DOMAIN_OUT_Of_VOCABULARY)
+        domain_out_of_vocabulary = [line.split("\t") for line in domain_out_of_vocabulary]
+        domain_out_of_vocabulary = [
+            {
+                "message": f"The property {item[0][1:-1]} has a domain out of the ontology: {item[1]}",
+                "pointer": [f"<{ONTOLOGY_URL}{item[0][1:-1]}>", item[1]]
+            }
+            for item in domain_out_of_vocabulary
+        ]
 
-    # Checking for range property out of the vocabulary
-    range_out_of_vocabulary = query_graph(ontology, RANGE_OUT_OF_VOCABULARY)
-    range_out_of_vocabulary = [line.split("\t") for line in range_out_of_vocabulary]
-    range_out_of_vocabulary = [
-        {
-            "message": f"The property {item[0][1:-1]} has a range out of the ontology: {item[1]}",
-            "pointer": [f"<{ONTOLOGY_URL}{item[0][1:-1]}>", item[1]]
-        }
-        for item in range_out_of_vocabulary
-    ]
-    report["domain-and-range-referencing-test"]["range-out-of-vocabulary"] = range_out_of_vocabulary
+        # Checking for range property out of the vocabulary
+        range_out_of_vocabulary = query_graph(fragment_wih_import, RANGE_OUT_OF_VOCABULARY)
+        range_out_of_vocabulary = [line.split("\t") for line in range_out_of_vocabulary]
+        range_out_of_vocabulary = [
+            {
+                "message": f"The property {item[0][1:-1]} has a range out of the ontology: {item[1]}",
+                "pointer": [f"<{ONTOLOGY_URL}{item[0][1:-1]}>", item[1]]
+            }
+            for item in range_out_of_vocabulary
+        ]
+        report["domain-and-range-referencing-test"] = {}
+        report["domain-and-range-referencing-test"]["domain-out-of-vocabulary"] = domain_out_of_vocabulary
+        report["domain-and-range-referencing-test"]["range-out-of-vocabulary"] = range_out_of_vocabulary
 
     # Checking for too close terms
-    term_pairs = query_graph(ontology, GET_TERM_PAIRS)
-    term_pairs = [
-        [item.strip()[1:-1] for item in line.split("\t")]
-        for line in term_pairs
-    ]
-    too_close_terms = [
-        {
-            "message": f"The following terms are too similar: {line[0]} and {line[1]}",
-            "pointer": [f"<{ONTOLOGY_URL}{item}>" for item in line]
-        }
-        for line in term_pairs
-        if levenshtein(line[0], line[1]) < TERM_DISTANCE_THRESHOLD
-    ]
-    report["terms-differenciation-test"]["too-close-terms"] = too_close_terms
+    if not "terms-differenciation-test" in skip:
+        term_pairs = query_graph(fragment_no_import, GET_TERM_PAIRS)
+        term_pairs = [
+            [item.strip()[1:-1] for item in line.split("\t")]
+            for line in term_pairs
+        ]
+        too_close_terms = [
+            {
+                "message": f"The following terms are too similar: :{line[0]} and :{line[1]}",
+                "pointer": [f"<{ONTOLOGY_URL}{item}>" for item in line]
+            }
+            for line in term_pairs
+            if levenshtein(line[0], line[1]) < TERM_DISTANCE_THRESHOLD
+        ]
+        report["terms-differenciation-test"] = {}
+        report["terms-differenciation-test"]["too-close-terms"] = too_close_terms
 
     return report
 
@@ -323,7 +332,8 @@ def global_test(safe_graphs):
         safe_graph_keys.append(graph_key)
 
     subject = {
-        "heart": safe_graph_keys
+        "heart": safe_graph_keys,
+        "name": "all-fragments"
     }
     global_graph = safe_load(safe_graphs, import_from_src=True)
     global_report = profile_check(global_graph)

@@ -93,6 +93,7 @@ DEV_PROFILE = "https://github.com/NicoRobertIn"
 
 EARL_URL = "https://www.w3.org/ns/earl#"
 
+ONTOLOGY_NAMESPACE = Namespace(ONTOLOGY_URL)
 EARL_NAMESPACE = Namespace(EARL_URL)
 SRC_NAMESPACE = Namespace(SRC_URL)
 TEST_NAMESPACE = Namespace(PROFILE_CHECK_URI)
@@ -305,13 +306,13 @@ TEST_RESOURCES = {
         "errors": {
             "domain-out-of-vocabulary": {
               "pass_title": "Domains properly defined",
-              "pass_description": "Each domain of any property is defined in the ontology",
+              "pass_description": "Each rdfs:domain is defined in the fragment",
               "fail_title": "Domain out of vocabulary",
               "is_blocking": False
             },
             "range-out-of-vocabulary": {
               "pass_title": "Ranges properly defined",
-              "pass_description": "Each range of any property is defined in the ontology",
+              "pass_description": "Each rdfs:range is defined in the ontology",
               "fail_title": "Range out of vocabulary",
               "is_blocking": False
             }
@@ -323,7 +324,7 @@ TEST_RESOURCES = {
         "errors": {
           "too-close-terms": {
             "pass_title": "Terms differenciated enough",
-            "pass_description": "All the terms have a high enough Levenshtein distance from each other",
+            "pass_description": "All the terms have have a satisfying Levenshtein distance from each other term.",
             "fail_title": "Too close terms",
             "is_blocking": False
           }
@@ -347,7 +348,7 @@ TEST_RESOURCES = {
         "errors": {
             "owl-rl-constraint-violation": {
               "pass_title": "OWL RL consistent",
-              "pass_description": "The provided graph doesn't violate any consistency rules",
+              "pass_description": "The provided graph is consistent for any OWL RL constraint",
               "fail_title": "OWL RL Constraint violation",
               "is_blocking": True
             }
@@ -362,9 +363,10 @@ TEST_RESOURCES = {
 
 for profile in DECIDABILITY_RANGE:
   parsed_name = profile.lower().replace('_', '-')
+  spaced_name = profile.replace('_', ' ')
   TEST_RESOURCES["profile-test"]["errors"][f"{parsed_name}-profile-error"] = {
-    "pass_title": f"{profile} Profile compatible",
-    "pass_description": f"The subject is totally included in the terms provided in the OWL profile {profile}",
-    "fail_title": f"{profile} Profile incompatible",
+    "pass_title": f"{spaced_name} Profile compatible",
+    "pass_description": f"The subject is included in the {spaced_name} sublanguage",
+    "fail_title": f"{spaced_name} Profile incompatible",
     "is_blocking": False
   }

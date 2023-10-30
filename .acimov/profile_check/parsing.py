@@ -3,7 +3,8 @@ from rdflib import (
     Graph,
     BNode,
     Literal,
-    URIRef
+    URIRef,
+    Namespace
 )
 
 from rdflib.namespace import (
@@ -24,6 +25,7 @@ from constants import (
     SRC_NAMESPACE,
     TEST_NAMESPACE,
     ACIMOV_MODEL_NAMESPACE,
+    ONTOLOGY_NAMESPACE,
     TEST_RESOURCES,
     BRANCH
 )
@@ -73,12 +75,19 @@ def get_subject_id_part(fragment_list):
     modelets = ['-'.join(item.split('/')[1:-1]) for item in modelets]
     modelets.sort()
 
-    return '-'.join(modules + modelets)
+    subject_id_part = '-'.join(modules + modelets)
+    return subject_id_part
 
 def get_subject_id(subject):
-    prefix = get_subject_id_part(subject["heart"])
-    suffix = "" if not "appendix" in subject else get_subject_id_part(subject["appendix"])
-    return prefix if len(suffix) == 0 else f"{prefix}-{suffix}"
+    heart_id = get_subject_id_part(subject["heart"])
+    result = [heart_id]
+
+    if "appendix" in subject and len(subject["appendix"]):
+        appendix_id = get_subject_id_part(subject["appendix"])
+        result.append(appendix_id)
+
+    subject_id = "-".join(result)
+    return subject_id
 
 def testSubject(
         g,
@@ -86,16 +95,15 @@ def testSubject(
 ):
     heart = json_subject['heart']
     appendix = [] if not "appendix" in json_subject else json_subject["appendix"] 
-    subject_id = get_subject_id(json_subject)
+    subject_id = get_subject_id(json_subject) if not "name" in json_subject else json_subject["name"]
 
-    heart_type = "Set of fragments " if len(heart) > 1 else \
-                "Standalone module " if heart[0].startswith("src/") else \
-                "Standalone modelet "
+    heart_type = "Set of fragments" if len(heart) > 1 else \
+                f"{'Standalone' if len(appendix) == 0 else 'Merged'} {'module' if heart[0].startswith('src/') else 'modelet'}"
     
-    title = f"{heart_type}{', '.join(heart)} from branch {BRANCH}"
+    title = f"{heart_type} {', '.join(heart)} from branch {BRANCH}"
 
     if len(appendix) > 0:
-        title += f"with related terms from the fragments {', '.join(appendix)}"
+        title = f"{title} with related terms from the fragments {', '.join(appendix)}"
     
     module_fragments = [item for item in heart + appendix if item.startswith('src/')]
     module_fragments = [
@@ -105,7 +113,7 @@ def testSubject(
     
     modelets_fragment = [item for item in heart + appendix if item.startswith('domains/')]
     modelets_fragment = [
-        URIRef(DOMAINS_URL + item.split("/domains/")[-1])
+        URIRef(DOMAINS_URL + item.split("domains/")[-1])
         for item in modelets_fragment
     ]
 
@@ -180,12 +188,25 @@ def testResult(
                     Literal(error["message"], lang="en")
                 )
             ]
+            if "pointer" in error:
+                for pointer_string in error["pointer"]:
+                    statement_subject = pointer_string.split(" ")[0]
 
-#            if "pointer" in error:
-#                # Add the turtle code provided as a pointer to the error
-#                error_summary += [
-#                    () for pointer in error["pointer"]
-#                ]
+                    if statement_subject[0] == "<":
+                        pointer = URIRef(statement_subject[1:-1])
+                    elif statement_subject[0] != "[":
+                        normalizedUri = Namespace(
+                            [
+                                namespace for prefix, namespace in g.namespaces()
+                                if prefix == pointer_string.split(":")[0]
+                            ][0]
+                        )[pointer_string.split(":")[1]]
+                        pointer = URIRef(normalizedUri)
+                    else:
+                        pointer = Literal(pointer_string)
+
+                    # TODO deal with the anonymous statements a better way
+                    error_summary.append((RDFS.seeAlso, pointer))
 
             errors_summaries.append(error_summary)
     
@@ -223,6 +244,7 @@ def parse_report_to_turtle(json_report) :
     g.statement = statement.__get__(g)
 
     g.bind("earl", EARL_NAMESPACE)
+    g.bind("", ONTOLOGY_NAMESPACE)
     g.bind("src", SRC_NAMESPACE)
     g.bind("profile-test", TEST_NAMESPACE)
     g.bind("acimov-model-test", ACIMOV_MODEL_NAMESPACE)

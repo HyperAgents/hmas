@@ -114,6 +114,7 @@ TEXT_CSV = 14
 TEXT_TSV = 15
 TURTLE = 2
 OWL_RL = gateway.jvm.fr.inria.corese.core.rule.RuleEngine.OWL_RL
+RDFS = gateway.jvm.fr.inria.corese.core.rule.RuleEngine.RDFS_RL
 
 # A java object resolving prefixes into URIs and the other way
 prefix_manager = NSManager.create()
@@ -121,8 +122,9 @@ prefix_manager = NSManager.create()
 def load(
         path: Union[str, List[str], Graph],
         extras: str="",
-        disable_import: bool=False,
         import_from_src: bool=True,
+        disable_owl: bool=False,
+        disable_import: bool=False,
         graph=None,
         already_imported: List[str]=[]
     ):
@@ -138,9 +140,17 @@ def load(
     if graph is None:
         graph = Graph()
 
-    ld = Load.create(graph)
+    if disable_owl:
+        engine = RuleEngine.create(graph)
+        engine.setProfile(RDFS)
+        engine.processWithoutWorkflow()
+        engine.process()
+        engine.getErrorList()
 
-    property_manager.set(DISABLE_OWL_AUTO_IMPORT, import_from_src or disable_import)
+    disable_owl_import = import_from_src or disable_import or disable_owl
+    property_manager.set(DISABLE_OWL_AUTO_IMPORT, disable_owl_import)
+
+    ld = Load.create(graph)
 
     for file in path:
         if not exists(file):
@@ -156,7 +166,9 @@ def load(
             continue
         ld.loadString(extra, TURTLE)
 
-    if import_from_src and not disable_import:
+    should_import_from_src = import_from_src and not disable_import and not disable_owl
+
+    if should_import_from_src:
         imports = query_graph(graph, GET_IMPORTS)
         imports = [
             f"{PWD_TO_ROOT_FOLDER}src{sep}{item.split(ONTOLOGY_SEPARATOR)[-1][:-1]}.ttl"
@@ -202,6 +214,7 @@ def safe_load(
         extras: str="",
         import_from_src: bool=True,
         disable_import: bool=False,
+        disable_owl: bool=False,
         graph: Graph=None,
         already_imported: List[str]=[]
     ):
@@ -219,6 +232,7 @@ def safe_load(
             extras=extras,
             import_from_src=import_from_src,
             disable_import=disable_import,
+            disable_owl=disable_owl,
             graph=graph,
             already_imported=already_imported
         )
@@ -247,9 +261,8 @@ def safe_load(
                     {"message": message}
                     for message in [
                         syntax_errors,
-                        " ".join(str(e).strip().split("\n")[1].split(" ")[2:])
+                        " ".join(str(e).strip().split("\n")[1].split(" ")[2:]).strip()
                     ]
-                    if len(message) > 0
                 ]
             }
         }
