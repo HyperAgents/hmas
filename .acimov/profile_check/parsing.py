@@ -150,7 +150,8 @@ def testCriterion(
 def testResult(
         g,
         json_result,
-        test_resource
+        test_resource,
+        skip_pass=False
     ):
     rdf_result = BNode()
     g.add((rdf_result, RDF.type, EARL_NAMESPACE.TestResult))    
@@ -160,6 +161,8 @@ def testResult(
         error_list = json_result[error_id]
 
         if len(error_list) == 0:
+            if skip_pass:
+                continue
             errors_summaries.append([
                 (RDF.type, EARL_NAMESPACE.Pass),
                 (
@@ -177,7 +180,7 @@ def testResult(
                 (
                     RDF.type,
                     EARL_NAMESPACE.Fail if test_resource["errors"][error_id]["is_blocking"]
-                    else EARL_NAMESPACE.CannotTell
+                    else EARL_NAMESPACE.CantTell
                 ),
                 (
                     DCTERMS.title,
@@ -218,28 +221,42 @@ def testResult(
     return rdf_result
 
 def parse_subject_report(
+        json_subject,
         subject_report,
         assert_group,
-        test_subject,
-        g
+        g,
+        skip_pass=False
 ):
-    for test in subject_report.keys():
+    rdf_subject = None
+    
+    for criterion in subject_report.keys():
+        # Early stop on skip_pass if the criterion has no error
+        error_lists = subject_report[criterion].values()
+        error_list_lengths = [
+            len(error_list) for error_list in error_lists
+            if len(error_list) > 0
+        ]
+        if skip_pass and len(error_list_lengths) == 0:
+            continue
+
+        rdf_subject = rdf_subject if not rdf_subject is None else testSubject(g, json_subject)
         test_result = testResult(
             g,
-            subject_report[test],
-            TEST_RESOURCES[test]
+            subject_report[criterion],
+            TEST_RESOURCES[criterion],
+            skip_pass=skip_pass
         )
         assertion = BNode()
         g.statement(
             assertion,
             (RDF.type, EARL_NAMESPACE.Assertion),
             (EARL_NAMESPACE.assertedBy, assert_group),
-            (EARL_NAMESPACE.subject, test_subject),
-            (EARL_NAMESPACE.test, ACIMOV_MODEL_NAMESPACE[test]),
+            (EARL_NAMESPACE.subject, rdf_subject),
+            (EARL_NAMESPACE.test, ACIMOV_MODEL_NAMESPACE[criterion]),
             (EARL_NAMESPACE.result, test_result)
         )
 
-def parse_report_to_turtle(json_report) :
+def parse_report_to_turtle(json_report, skip_pass=False) :
     g = Graph()
     g.statement = statement.__get__(g)
 
@@ -253,14 +270,12 @@ def parse_report_to_turtle(json_report) :
 
     # Reports of each assertion
     for json_assertion in json_report:
-        json_subject = json_assertion["subject"]
-        rdf_subject = testSubject(g, json_subject)
-
         parse_subject_report(
+            json_assertion["subject"],
             json_assertion["report"],
             assert_group,
-            rdf_subject,
-            g
+            g,
+            skip_pass=skip_pass
         )
 
     return g.serialize(format="ttl")

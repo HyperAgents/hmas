@@ -22,6 +22,7 @@ from constants import (
     PWD_TO_ROOT_FOLDER
 )
 
+
 def group_terms_by_module(modelet):
     """Get all the triples that has a subject included in the ontology.
     Group all of these triples by module (using rdfs:isDefinedBy property)
@@ -116,23 +117,25 @@ def fragment_check(fragments, extras="", skip=[]):
     no_import_load_error = isinstance(fragment_graph_no_import, dict)
 
     if no_import_load_error:
-        return fragment_graph_no_import, False
+        return fragment_graph_no_import, True
     
     fragment_graph_with_import = safe_load(fragments, extras)
     with_import_load_error = isinstance(fragment_graph_with_import, dict)
 
+    # TODO implement the earl:NotTested for the tests that can not be run due to an unsafe import for instance
+
     profile_test = profile_check(fragment_graph_no_import)
 
-    best_practices = best_practices_test(
-                        fragment_graph_with_import,
-                        fragment_graph_no_import,
-                        skip
-                    ) if not with_import_load_error else fragment_graph_with_import
-
     if with_import_load_error:
-        del profile_test["syntax-test"]
+        return profile_test
+
+    best_practices = best_practices_test(
+        fragment_graph_with_import,
+        fragment_graph_no_import,
+        skip
+    )
     
-    return {**profile_test, **best_practices}, True
+    return {**profile_test, **best_practices}, False
 
 def modules_tests(glob_path):
     """Returns a report about of a profile check of a set of ontologies
@@ -142,24 +145,24 @@ def modules_tests(glob_path):
     """
     modules = glob(glob_path) if isinstance(glob_path, str) else glob_path
     report = []
-    safe_modules = []
+    unsafe_modules = []
 
     for module in modules:
         module_key = relpath(module, PWD_TO_ROOT_FOLDER).replace(sep, "/")
 
         subject = {"heart": [module_key]}
 
-        fragment_report, safe_alone = fragment_check(module)
+        fragment_report, load_error = fragment_check(module)
 
-        if safe_alone:
-            safe_modules.append(module)
+        if load_error:
+            unsafe_modules.append(module)
 
         report.append({
             "subject": subject,
             "report": fragment_report
         })
 
-    return report, safe_modules
+    return report, unsafe_modules
 
 def modelets_tests(glob_path, skip_merge_test=False):
     """Test of the modelets
@@ -172,7 +175,7 @@ def modelets_tests(glob_path, skip_merge_test=False):
 
     modelets = glob(glob_path) if isinstance(glob_path, str) else glob_path
     report = []
-    safe_modelets = []
+    unsafe_modelets = []
 
     for modelet in modelets:
         if "template" in modelet:
@@ -184,26 +187,26 @@ def modelets_tests(glob_path, skip_merge_test=False):
             "heart": [modelet_key]
         }
 
-        standalone_report, safe_alone = fragment_check(
+        standalone_report, load_error = fragment_check(
             modelet,
             skip=["domain-and-range-referencing-test"]
         )
-
-        if safe_alone:
-            safe_modelets.append(modelet)
 
         report.append({
             "subject": standalone_subject,
             "report": standalone_report
         })
 
-        if skip_merge_test or not safe_alone:
+        if load_error:
+            unsafe_modelets.append(modelet)
+            continue
+
+        if skip_merge_test:
             continue
         
         # Add each triple of the modelet to their related ontology, then proceed to profile checks
         alone_no_owl = safe_load(
             modelet,
-            # disable_import=True,
             disable_owl=True
         )
         moduled_triples = group_terms_by_module(alone_no_owl)
@@ -222,7 +225,7 @@ def modelets_tests(glob_path, skip_merge_test=False):
                 )[0]
             })
 
-    return report, safe_modelets
+    return report, unsafe_modelets
 
 def levenshtein(s1, s2):
     """Returns the levenshtein distance between two trings
@@ -322,23 +325,20 @@ def best_practices_test(
 
     return report
 
-def global_test(safe_graphs):
-    safe_graph_keys = []
-
-    for graph in safe_graphs:
-        graph_key = graph.replace(sep, "/")
-        parent_folder = "src" if "/src/" in graph_key else "domains"
-        graph_key = parent_folder + "/" + "/".join(graph_key.split(f"/{parent_folder}/")[1:])
-        safe_graph_keys.append(graph_key)
+def merged_fragment_set_test(fragments_to_merge, heart_name):
+    fragments_keys = [
+        relpath(fragment, PWD_TO_ROOT_FOLDER).replace(sep, "/")
+        for fragment in fragments_to_merge
+    ]
 
     subject = {
-        "heart": safe_graph_keys,
-        "name": "all-fragments"
+        "heart": fragments_keys,
+        "name": heart_name
     }
-    global_graph = safe_load(safe_graphs, import_from_src=True)
-    global_report = profile_check(global_graph)
+
+    merged_fragments_report, _ = fragment_check(fragments_to_merge)
 
     return [{
         "subject": subject,
-        "report": global_report
+        "report": merged_fragments_report
     }]

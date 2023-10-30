@@ -82,7 +82,7 @@ def get_error_output():
             current_line = current_line.decode('utf-8')
         total_output.append(current_line)
 
-    return "\n".join(total_output).strip()    
+    return "\n".join(total_output).strip()
 
 # Start java gateway
 java_process = Popen(
@@ -258,11 +258,12 @@ def safe_load(
         return {
             "syntax-test": {
                 "syntax-error": [
-                    {"message": message}
+                    { "message": message }
                     for message in [
                         syntax_errors,
                         " ".join(str(e).strip().split("\n")[1].split(" ")[2:]).strip()
                     ]
+                    if len(message) > 0
                 ]
             }
         }

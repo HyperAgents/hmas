@@ -302,17 +302,17 @@ TEST_RESOURCES = {
     },
     "domain-and-range-referencing-test": {
         "title": "Domain or range out of vocabulary",
-        "description": "Test checking if each range of domain of any property is defined within the ontology",
+        "description": "Test checking if each range of domain of any property is defined within the fragment",
         "errors": {
             "domain-out-of-vocabulary": {
               "pass_title": "Domains properly defined",
-              "pass_description": "Each rdfs:domain is defined in the fragment",
+              "pass_description": "Each rdfs:domain is defined within the fragment",
               "fail_title": "Domain out of vocabulary",
               "is_blocking": False
             },
             "range-out-of-vocabulary": {
               "pass_title": "Ranges properly defined",
-              "pass_description": "Each rdfs:range is defined in the ontology",
+              "pass_description": "Each rdfs:range is defined within the fragment",
               "fail_title": "Range out of vocabulary",
               "is_blocking": False
             }
@@ -362,9 +362,9 @@ TEST_RESOURCES = {
 }
 
 for profile in DECIDABILITY_RANGE:
-  parsed_name = profile.lower().replace('_', '-')
+  profile_id = profile.lower().replace('_', '-')
   spaced_name = profile.replace('_', ' ')
-  TEST_RESOURCES["profile-test"]["errors"][f"{parsed_name}-profile-error"] = {
+  TEST_RESOURCES["profile-test"]["errors"][f"{profile_id}-profile-error"] = {
     "pass_title": f"{spaced_name} Profile compatible",
     "pass_description": f"The subject is included in the {spaced_name} sublanguage",
     "fail_title": f"{spaced_name} Profile incompatible",

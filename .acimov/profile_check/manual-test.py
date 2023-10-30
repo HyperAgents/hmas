@@ -2,6 +2,7 @@ from json import dumps
 from glob import glob
 from datetime import datetime
 from os.path import sep
+from sys import argv
 
 from constants import (
     MODULES_TTL_GLOB_PATH,
@@ -15,7 +16,7 @@ from corese import print_title # TODO Need later for a utils.py?
 from testing import (
     modules_tests,
     modelets_tests,
-    global_test
+    merged_fragment_set_test,
 )
 
 from parsing import parse_report_to_turtle
@@ -23,32 +24,41 @@ from parsing import parse_report_to_turtle
 ###
 # Test OWL_RL
 ###
+_, *args = argv
 
-safe_modules = glob(MODULES_TTL_GLOB_PATH)
-print_title("Profile check")
 print_title("Checking existing modules")
-modules_report, safe_modules = modules_tests(safe_modules)
+modules = glob(MODULES_TTL_GLOB_PATH)
+modules_report, unsafe_modules = modules_tests(modules)
 
 print_title("Checking modelets")
-safe_modelets = glob(MODELETS_TTL_GLOB_PATH)
-modelets_report, safe_modelets = modelets_tests(safe_modelets)
+modelets = glob(MODELETS_TTL_GLOB_PATH)
+modelets_report, unsafe_modelets = modelets_tests(modelets)
 
-safe_graphs = safe_modules + safe_modelets
-print_title("Checking the all the modules and modelets together")
-global_report = global_test(safe_graphs)
+print_title("Checking the merge of safe modules")
+safe_modules = [
+    module for module in modules
+    if not module in unsafe_modules
+]
+safe_modules_report = merged_fragment_set_test(safe_modules, "all-modules")
 
+print_title("Checking the merge of safe fragments")
+fragments = modules + modelets
+unsafe_fragments = unsafe_modules + unsafe_modelets
 
-report = modules_report + modelets_report + global_report
+safe_fragment = [
+    fragment for fragment in fragments
+    if not fragment in unsafe_fragments
+]
+safe_fragments_report = merged_fragment_set_test(safe_fragment, "all-fragments")
 
+report = modules_report + modelets_report + safe_modules_report + safe_fragments_report
 now = '.'.join(datetime.now().isoformat().split('.')[:-1]).replace(':', '-')
-
 file_name = f"manual-{DEV_USERNAME}-{now}"
 
 with open(f"{PWD_TO_PROFILE_CHECK}{sep}output/{file_name}.json", 'w') as f:
     f.write(dumps(report, indent=4))
 
-
-turtle = parse_report_to_turtle(report)
+turtle = parse_report_to_turtle(report, skip_pass="--skip-pass" in args)
 
 with open(f"{PWD_TO_PROFILE_CHECK}{sep}output/{file_name}.ttl", "w") as f:
     f.write(turtle)
