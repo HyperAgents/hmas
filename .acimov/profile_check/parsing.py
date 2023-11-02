@@ -38,10 +38,10 @@ def statement(self, subject, *po):
     for item in po:
         self.add((subject, item[0], item[1]))
 
-def assertGroup(g, mode):
-    assertorId = f"{DEV_USERNAME}-{mode}"
-    title = f"{DEV_USERNAME} using {mode} script"
-    description = f"Represents the user @{DEV_USERNAME} launching the {mode} test script"
+def assertGroup(g, mode, dev=DEV_USERNAME):
+    assertorId = f"{dev}-{mode}"
+    title = f"{dev} using {mode} script"
+    description = f"Represents the user @{dev} launching the {mode} test script"
     scriptURI = f"{PROFILE_CHECK_URI}manual-test"
     
     # Define the developper and the assertor
@@ -195,7 +195,7 @@ def testResult(
                 for pointer_string in error["pointer"]:
                     if len(pointer_string) == 0:
                         continue
-                    
+
                     statement_subject = pointer_string.split(" ")[0]
 
                     if statement_subject[0] == "<":
@@ -259,7 +259,12 @@ def parse_subject_report(
             (EARL_NAMESPACE.result, test_result)
         )
 
-def parse_report_to_turtle(json_report, script_name, skip_pass=False) :
+def parse_report_to_turtle(
+        json_report,
+        script_name,
+        skip_pass=False,
+        dev=DEV_USERNAME) :
+    
     g = Graph()
     g.statement = statement.__get__(g)
 
@@ -269,7 +274,7 @@ def parse_report_to_turtle(json_report, script_name, skip_pass=False) :
     g.bind("profile-test", TEST_NAMESPACE)
     g.bind("acimov-model-test", ACIMOV_MODEL_NAMESPACE)
 
-    assert_group = assertGroup(g, script_name)
+    assert_group = assertGroup(g, script_name, dev=dev)
 
     # Reports of each assertion
     for json_assertion in json_report:

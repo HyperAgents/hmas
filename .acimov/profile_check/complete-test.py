@@ -30,9 +30,16 @@ _, *args = argv
 modes = [
     item.split('=')[1]
     for item in args
-    if item.startswith("--name=")
+    if item.startswith("--mode=")
 ]
 
+names = [
+    item.split('=')[1]
+    for item in args
+    if item.startswith("--dev=")
+]
+
+dev = names[0] if len(names) > 0 else DEV_USERNAME
 mode = modes[0] if len(modes) > 0 else "manual"
 
 print_title("Checking existing modules")
@@ -70,7 +77,7 @@ if mode == "manual":
             .isoformat()\
             .split(".")[:-1]
         ).replace(":", "-")
-    file_name = f"{mode}-{DEV_USERNAME}-{now}"
+    file_name = f"{mode}-{dev}-{now}"
 else:
     file_name = mode
 
@@ -83,7 +90,8 @@ with open(f"{PWD_TO_MODEL_OUTPUT_FOLDER}{file_name}.json", 'w') as f:
 turtle = parse_report_to_turtle(
     report,
     mode,
-    skip_pass="--skip-pass" in args
+    skip_pass="--skip-pass" in args,
+    dev=dev
 )
 
 with open(f"{PWD_TO_MODEL_OUTPUT_FOLDER}{file_name}.ttl", "w") as f:
