@@ -1,7 +1,7 @@
 from regex import compile as regex_compile
 from subprocess import check_output
 from rdflib import Namespace
-from os import getcwd
+from os import getcwd, environ
 from os.path import sep, relpath, abspath
 
 ##############
@@ -35,35 +35,45 @@ CORESE_JAR_NAME = CORESE_PYTHON_URL.split('/')[-1]
 
 CORESE_LOCAL_PATH = abspath(f"{PWD_TO_PROFILE_CHECK}{CORESE_JAR_NAME}")
 
+IS_GITHUB_ACTIONS = not environ.get("context.server_url") is None
+
 # The reository URI
-REPO_URI = check_output(["git", "config", "--get", "remote.origin.url"])\
-        .decode('utf-8')\
-        .strip()
+
+REPO_URI = check_output(
+  "git config --get remote.origin.url".split(" ")
+  )\
+  .decode('utf-8')\
+  .strip() if not IS_GITHUB_ACTIONS else \
+  f"{environ.get('context.server_url')}/{environ.get('context.repository')}"
+
+# Base reporitory platform URL
+PLATFORM_URL = "/".join(REPO_URI.split("/")[:-2])
 
 # The current branch
-BRANCH = check_output(["git", "rev-parse", "--abbrev-ref", "HEAD"])\
-        .decode('utf-8')\
-        .strip()
+BRANCH = check_output(
+  "git rev-parse --abbrev-ref HEAD".split(" ")
+  )\
+  .decode('utf-8')\
+  .strip() if not IS_GITHUB_ACTIONS else \
+  environ.get("context.branch")
 
-# The relative path from src to the profile_test folder
-PATH_TO_PROFILE_FOLDER = check_output(["git", "rev-parse", "--show-prefix"])\
-        .decode('utf-8')\
-        .strip()
+# The relative path from root to the profile_test folder
+PATH_TO_PROFILE_FOLDER = relpath(".", ROOT_FOLDER)
 
 # The path to the profile check README.md
 PROFILE_CHECK_URI = f"{REPO_URI}tree/{BRANCH}/{PATH_TO_PROFILE_FOLDER}"
-# TODO remove this line after tests
-PROFILE_CHECK_URI = "https://github.com/HyperAgents/hmas/tree/test-workflow/.acimov/profile_check"
   # TODO: Should be manual/precommit/actions compatible
   # git config --get remote.origin.url for precommit/manual
   # $GITHUB_SERVER_URL + '/' + $GITHUB_REPOSITORY for action
 
 ACIMOV_MODEL_TEST_URI = f"{PROFILE_CHECK_URI}/model-test-onto.ttl"
-# TODO remove this second line after tests
-ACIMOV_MODEL_TEST_URI = "https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/profile_check/model-test-onto.ttl"
 
-DEV_USERNAME = check_output(["git", "config", "--global", "user.name"]).decode('utf-8').strip()
-DEV_ACCOUNT_URL = f"https://github.com/{DEV_USERNAME}"
+DEV_USERNAME = check_output(
+  "git config --global user.name".split(" ")
+  )\
+  .decode('utf-8')\
+  .strip() if not IS_GITHUB_ACTIONS else \
+  environ.get("context.developper")
 
 # Format of a syntax error in the console
 AST_ERROR_FORMAT = regex_compile("ERROR fr\\.inria\\.corese\\.sparql\\.triple\\.parser\\.ASTQuery")
@@ -74,22 +84,11 @@ MODULES_TTL_GLOB_PATH = f"{PWD_TO_ROOT_FOLDER}src{sep}*.ttl"
 # Glob path to modelets
 MODELETS_TTL_GLOB_PATH = f"{PWD_TO_ROOT_FOLDER}domains{sep}*{sep}*{sep}onto.ttl"
 
-# Origin URL
-ORIGIN_URL = check_output(
-  ["git", "config", "--get", "remote.origin.url"]
-).decode("utf-8").strip()
-
-# Base reporitory platform URL
-PLATFORM_URL = "/".join(ORIGIN_URL.split("/")[:-2])
-
 # URL prefix for the files in the current branch in src
 SRC_URL = f"{REPO_URI}blob/{BRANCH}/src/"
-SRC_URL = "https://github.com/HyperAgents/hmas/tree/master/src/" # TODO remove this line after tests
 DOMAINS_URL = SRC_URL.replace("src", "domains")
 
 DEV_PROFILE = f"{PLATFORM_URL}/{DEV_USERNAME}"
-# TODO: remove this line after tests
-DEV_PROFILE = "https://github.com/NicoRobertIn"
 
 EARL_URL = "https://www.w3.org/ns/earl#"
 

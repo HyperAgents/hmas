@@ -256,7 +256,7 @@ def parse_subject_report(
             (EARL_NAMESPACE.result, test_result)
         )
 
-def parse_report_to_turtle(json_report, skip_pass=False) :
+def parse_report_to_turtle(json_report, script_name, skip_pass=False) :
     g = Graph()
     g.statement = statement.__get__(g)
 
@@ -266,7 +266,7 @@ def parse_report_to_turtle(json_report, skip_pass=False) :
     g.bind("profile-test", TEST_NAMESPACE)
     g.bind("acimov-model-test", ACIMOV_MODEL_NAMESPACE)
 
-    assert_group = assertGroup(g, "manual")
+    assert_group = assertGroup(g, script_name)
 
     # Reports of each assertion
     for json_assertion in json_report:

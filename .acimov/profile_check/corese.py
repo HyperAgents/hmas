@@ -1,5 +1,4 @@
 from queue import Queue, Empty
-from py4j.java_gateway import JavaGateway
 from sys import builtin_module_names
 from threading  import Thread
 from atexit import register
@@ -8,6 +7,13 @@ from time import sleep
 from os.path import exists, sep
 from requests import get
 from typing import Union, List
+from py4j.java_gateway import (
+    launch_gateway,
+    JavaGateway,
+    GatewayParameters,
+    CallbackServerParameters
+)
+
 from constants import (
     AST_ERROR_FORMAT,
     CORESE_PYTHON_URL,
@@ -85,20 +91,41 @@ def get_error_output():
     return "\n".join(total_output).strip()
 
 # Start java gateway
-java_process = Popen(
+graph_db_process = Popen(
     "java -jar -Dfile.encoding=UTF-8".split(" ") + [CORESE_LOCAL_PATH],
     stdout=PIPE,
     stderr=DEVNULL,
     close_fds=ON_POSIX
 )
-reader_thread = Thread(target=enqueue_output, args=(java_process.stdout, error_queue))
+reader_thread = Thread(target=enqueue_output, args=(graph_db_process.stdout, error_queue))
 reader_thread.daemon = True # thread dies with the program
 reader_thread.start()
 
 # Waiting for the java server to start up
 sleep(1)
-gateway = JavaGateway()
+gateway = JavaGateway(
+    # java process port set dynamically
+    # gateway_parameters=GatewayParameters(port=launch_gateway()),
+    # python call back port set dynamically
+    # callback_server_parameters=CallbackServerParameters(port=0),
+    # gateway to our instance of the graph DB
+    # java_process=graph_db_process
+)
 register(gateway.shutdown)
+
+# retrieve the port on which the python callback server was bound to.
+#python_port = gateway.get_callback_server().get_listening_port()
+
+# tell the Java side to connect to the python callback server with the new
+# python port. Note that we use the java_gateway_server attribute that
+# retrieves the GatewayServer instance.
+# gateway.java_gateway_server.resetCallbackClient(
+#    gateway\
+#        .java_gateway_server\
+#        .getCallbackClient()\
+#        .getAddress(),
+#    python_port
+#)
 
 # Import of class
 owl_profile = gateway.jvm.fr.inria.corese.core.logic.OWLProfile

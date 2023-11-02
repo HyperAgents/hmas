@@ -1,0 +1,40 @@
+name: fragments-check
+on:
+  push:
+    branches:
+    - test-workflow
+
+jobs:
+  fragments-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-deth: 0
+    - uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'
+        cache: 'pip'
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'oracle'
+        java-version: '17'
+    - name: Launch model tests
+      run: |
+        pip install -r .acimov/profile_check/requirements.txt
+        python .acimov/profile_check/complete-test.py --name=actions --skip-pass
+    - name: Commit the report
+      run: |
+        git config --global user.email "no-reply@github.com"
+        git config --global user.name "Github Actions"
+        git add .acimov/profile_check/output/actions.ttl -f
+        git commit -m "Provide automatic model test report"
+        git remote set-url origin https://x-access-token:${{ context.token }}@github.com/${{ context.repository }}
+        git push
+      env:
+        GITHUB_TOKEN: ${{ context.token }}
+        GITHUB_SERVER_URL: ${{ context.server_url }}
+        GITHUB_REPOSITORY: ${{ context.repository }}
+        GITHUB_REF_NAME: ${{ context.branch }}
+        GITHUB_ACTOR: ${{ context.developper }}
+    

@@ -25,7 +25,7 @@ def main(files: Sequence[str] | None = None):
         return 0
 
     report, _ = modules_tests(files)
-    turtle = parse_report_to_turtle(report)
+    turtle = parse_report_to_turtle(report, "pre-commit")
 
     graph = Graph()
     graph.bind("earl", EARL_NAMESPACE)

@@ -26,6 +26,14 @@ from parsing import parse_report_to_turtle
 ###
 _, *args = argv
 
+modes = [
+    item.split('=')[1]
+    for item in args
+    if item.startswith("--name=")
+]
+
+mode = modes[0] if len(modes) > 0 else "manual"
+
 print_title("Checking existing modules")
 modules = glob(MODULES_TTL_GLOB_PATH)
 modules_report, unsafe_modules = modules_tests(modules)
@@ -52,13 +60,27 @@ safe_fragment = [
 safe_fragments_report = merged_fragment_set_test(safe_fragment, "all-fragments")
 
 report = modules_report + modelets_report + safe_modules_report + safe_fragments_report
-now = '.'.join(datetime.now().isoformat().split('.')[:-1]).replace(':', '-')
-file_name = f"manual-{DEV_USERNAME}-{now}"
+
+file_name = ""
+if mode == "manual":
+    now = ".".join(
+            datetime\
+            .now()\
+            .isoformat()\
+            .split(".")[:-1]
+        ).replace(":", "-")
+    file_name = f"{mode}-{DEV_USERNAME}-{now}"
+else:
+    file_name = mode
 
 with open(f"{PWD_TO_PROFILE_CHECK}{sep}output/{file_name}.json", 'w') as f:
     f.write(dumps(report, indent=4))
 
-turtle = parse_report_to_turtle(report, skip_pass="--skip-pass" in args)
+turtle = parse_report_to_turtle(
+    report,
+    mode,
+    skip_pass="--skip-pass" in args
+)
 
 with open(f"{PWD_TO_PROFILE_CHECK}{sep}output/{file_name}.ttl", "w") as f:
     f.write(turtle)
