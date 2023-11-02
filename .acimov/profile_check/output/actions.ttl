@@ -12,15 +12,182 @@
 [] a earl:Assertion ;
     earl:assertedBy _:GithubActions-actions ;
     earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :FIPAAgentPlatform ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :MessageTransportService ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceName ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentIdentifierDescription ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :APService ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentPlatformDescription ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :IIOPMessageTransportService ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :HTTPMessageTransportService ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceType ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart src:fipa ;
+            dcterms:title "Standalone module src/fipa.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:term-referencing-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl> ;
+            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
+                    dcterms:title "Too close terms"@en ;
+                    rdfs:seeAlso :isMembershipIn,
+                        :isMembershipOf ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl>,
+                src:regulation ;
+            dcterms:title "Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl"@en ] ;
+    earl:test acimov-model-test:terms-differenciation-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl> ;
+            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:Fail ;
-                    dcterms:description "Undefined prefix: dcterms:source"@en ;
+                    dcterms:description "Undefined prefix: doco:Glossary"@en ;
                     dcterms:title "Test subject has syntax errors"@en ],
                 [ a earl:Fail ;
-                    dcterms:description "Undefined prefix: doco:Glossary"@en ;
+                    dcterms:description "Undefined prefix: dcterms:source"@en ;
                     dcterms:title "Test subject has syntax errors"@en ] ] ;
     earl:subject [ a earl:TestSubject ;
             dcterms:hasPart src:meta ;
             dcterms:title "Standalone module src/meta.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:syntax-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject _:all-modules ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :hosts ],
+                [ a earl:CantTell ;
+                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Domain out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :isHostedOn ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/Organization> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :Organization ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl> ;
+            dcterms:title "Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:term-referencing-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Fail ;
+                    dcterms:description "Encountered \"\\\"Associates exceptions to a context of application of a norm\\\"\" at line 82, column 30."@en ;
+                    dcterms:title "Test subject has syntax errors"@en ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl> ;
+            dcterms:title "Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow"@en ] ;
     earl:test acimov-model-test:syntax-test .
 
 [] a earl:Assertion ;
@@ -41,64 +208,35 @@
     earl:assertedBy _:GithubActions-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
+                    dcterms:description "The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :hosts ],
                 [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
+                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Domain out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :isHostedOn ],
                 [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl>,
-                src:core ;
-            dcterms:title "Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl"@en ] ;
-    earl:test acimov-model-test:profile-test .
+                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso sh:NodeShape,
+                        :signifies ] ] ;
+    earl:subject _:all-fragments ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
 
 [] a earl:Assertion ;
     earl:assertedBy _:GithubActions-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:profile-test .
+                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
+                    dcterms:title "Too close terms"@en ;
+                    rdfs:seeAlso :isMembershipIn,
+                        :isMembershipOf ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl> ;
+            dcterms:title "Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:terms-differenciation-test .
 
 [] a earl:Assertion ;
     earl:assertedBy _:GithubActions-actions ;
@@ -112,6 +250,19 @@
             dcterms:hasPart src:interaction ;
             dcterms:title "Standalone module src/interaction.ttl from branch test-workflow"@en ] ;
     earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
+                    dcterms:title "Too close terms"@en ;
+                    rdfs:seeAlso :isMembershipIn,
+                        :isMembershipOf ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart src:regulation ;
+            dcterms:title "Standalone module src/regulation.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:terms-differenciation-test .
 
 [] a earl:Assertion ;
     earl:assertedBy _:GithubActions-actions ;
@@ -138,110 +289,14 @@
     earl:assertedBy _:GithubActions-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/Organization> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :Organization ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl> ;
-            dcterms:title "Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:term-referencing-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CantTell ;
                     dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart src:core ;
-            dcterms:title "Standalone module src/core.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :HTTPMessageTransportService ],
+                    dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :MessageTransportService ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceType ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :IIOPMessageTransportService ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentIdentifierDescription ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceName ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :FIPAAgentPlatform ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :APService ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentPlatformDescription ] ] ;
-    earl:subject _:all-modules ;
-    earl:test acimov-model-test:term-referencing-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
-                    dcterms:title "Too close terms"@en ;
-                    rdfs:seeAlso :isMembershipIn,
-                        :isMembershipOf ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl> ;
-            dcterms:title "Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:terms-differenciation-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ],
@@ -249,80 +304,6 @@
                     dcterms:description "Statement not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject _:all-modules ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Domain out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :isHostedOn ],
-                [ a earl:CantTell ;
-                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso sh:NodeShape,
-                        :signifies ],
-                [ a earl:CantTell ;
-                    dcterms:description "The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :hosts ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
-                    dcterms:title "Too close terms"@en ;
-                    rdfs:seeAlso :isMembershipIn,
-                        :isMembershipOf ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl>,
-                src:regulation ;
-            dcterms:title "Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl"@en ] ;
-    earl:test acimov-model-test:terms-differenciation-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The following terms are too similar: :signifies and :Signifier"@en ;
-                    dcterms:title "Too close terms"@en ;
-                    rdfs:seeAlso :Signifier,
-                        :signifies ],
-                [ a earl:CantTell ;
-                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
-                    dcterms:title "Too close terms"@en ;
-                    rdfs:seeAlso :isMembershipIn,
-                        :isMembershipOf ],
-                [ a earl:CantTell ;
-                    dcterms:description "The following terms are too similar: :core and :Role"@en ;
-                    dcterms:title "Too close terms"@en ;
-                    rdfs:seeAlso :Role,
-                        :core ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:terms-differenciation-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CantTell ;
@@ -330,21 +311,6 @@
                     dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ] ] ;
     earl:subject [ a earl:TestSubject ;
             dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl>,
@@ -359,6 +325,9 @@
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
                     dcterms:description "Statement not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CantTell ;
@@ -366,35 +335,20 @@
                     dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
                     dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
     earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl>,
-                src:core ;
-            dcterms:title "Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl"@en ] ;
+            dcterms:hasPart src:core ;
+            dcterms:title "Standalone module src/core.ttl from branch test-workflow"@en ] ;
     earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:Fail ;
-                    dcterms:description "Encountered \"\\\"Associates exceptions to a context of application of a norm\\\"\" at line 82, column 30."@en ;
-                    dcterms:title "Test subject has syntax errors"@en ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl> ;
-            dcterms:title "Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:syntax-test .
 
 [] a earl:Assertion ;
     earl:assertedBy _:GithubActions-actions ;
@@ -411,138 +365,21 @@
     earl:assertedBy _:GithubActions-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
+                    dcterms:description "The following terms are too similar: :signifies and :Signifier"@en ;
+                    dcterms:title "Too close terms"@en ;
+                    rdfs:seeAlso :Signifier,
+                        :signifies ],
                 [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl> ;
-            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl> ;
-            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Domain out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :isHostedOn ],
+                    dcterms:description "The following terms are too similar: :core and :Role"@en ;
+                    dcterms:title "Too close terms"@en ;
+                    rdfs:seeAlso :Role,
+                        :core ],
                 [ a earl:CantTell ;
-                    dcterms:description "The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :hosts ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :MessageTransportService ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :FIPAAgentPlatform ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceType ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :APService ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :IIOPMessageTransportService ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceName ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :HTTPMessageTransportService ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentIdentifierDescription ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentPlatformDescription ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:term-referencing-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:GithubActions-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
                     dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
                     dcterms:title "Too close terms"@en ;
                     rdfs:seeAlso :isMembershipIn,
                         :isMembershipOf ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart src:regulation ;
-            dcterms:title "Standalone module src/regulation.ttl from branch test-workflow"@en ] ;
+    earl:subject _:all-fragments ;
     earl:test acimov-model-test:terms-differenciation-test .
 
 [] a earl:Assertion ;
@@ -553,7 +390,16 @@
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
@@ -565,11 +411,123 @@
                     dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl> ;
-            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow"@en ] ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject _:all-fragments ;
     earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl>,
+                src:core ;
+            dcterms:title "Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl"@en ] ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentPlatformDescription ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :APService ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceType ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :IIOPMessageTransportService ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :HTTPMessageTransportService ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :MessageTransportService ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :FIPAAgentPlatform ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceName ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentIdentifierDescription ] ] ;
+    earl:subject _:all-modules ;
+    earl:test acimov-model-test:term-referencing-test .
 
 [] a earl:Assertion ;
     earl:assertedBy _:GithubActions-actions ;
@@ -589,45 +547,87 @@
     earl:assertedBy _:GithubActions-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :HTTPMessageTransportService ],
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl>,
+                src:core ;
+            dcterms:title "Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl"@en ] ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :APService ],
+                    rdfs:seeAlso :hasServiceType ],
                 [ a earl:CantTell ;
                     dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
                     rdfs:seeAlso :AgentIdentifierDescription ],
                 [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :MessageTransportService ],
+                    rdfs:seeAlso :HTTPMessageTransportService ],
                 [ a earl:CantTell ;
                     dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
                     rdfs:seeAlso :AgentPlatformDescription ],
                 [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceType ],
-                [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceName ],
+                    rdfs:seeAlso :MessageTransportService ],
                 [ a earl:CantTell ;
                     dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
                     rdfs:seeAlso :FIPAAgentPlatform ],
                 [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :APService ],
+                [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceName ],
+                [ a earl:CantTell ;
                     dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
                     rdfs:seeAlso :IIOPMessageTransportService ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart src:fipa ;
-            dcterms:title "Standalone module src/fipa.ttl from branch test-workflow"@en ] ;
+    earl:subject _:all-fragments ;
     earl:test acimov-model-test:term-referencing-test .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:GithubActions-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl> ;
+            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:profile-test .
 
 _:GithubActions a foaf:Person ;
     schema:mainEntityOfPage <https://github.com/GithubActions> .
