@@ -68,12 +68,13 @@ PROFILE_CHECK_URI = f"{REPO_URI}tree/{BRANCH}/{PATH_TO_PROFILE_FOLDER}"
 
 ACIMOV_MODEL_TEST_URI = f"{PROFILE_CHECK_URI}/model-test-onto.ttl"
 
-DEV_USERNAME = check_output(
-  "git config --global user.name".split(" ")
-  )\
+DEV_USERNAME = ""
+try:
+  DEV_USERNAME = check_output("git config --global user.name".split(" "))\
   .decode('utf-8')\
-  .strip() if not IS_GITHUB_ACTIONS else \
-  environ.get("github.actor")
+  .strip()
+except:
+  DEV_USERNAME = "Github Actions"
 
 # Format of a syntax error in the console
 AST_ERROR_FORMAT = regex_compile("ERROR fr\\.inria\\.corese\\.sparql\\.triple\\.parser\\.ASTQuery")
