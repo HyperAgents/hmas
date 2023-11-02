@@ -193,6 +193,9 @@ def testResult(
             ]
             if "pointer" in error:
                 for pointer_string in error["pointer"]:
+                    if len(pointer_string) == 0:
+                        continue
+                    
                     statement_subject = pointer_string.split(" ")[0]
 
                     if statement_subject[0] == "<":
