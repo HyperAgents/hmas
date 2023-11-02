@@ -35,7 +35,7 @@ CORESE_JAR_NAME = CORESE_PYTHON_URL.split('/')[-1]
 
 CORESE_LOCAL_PATH = abspath(f"{PWD_TO_PROFILE_CHECK}{CORESE_JAR_NAME}")
 
-IS_GITHUB_ACTIONS = not environ.get("context.server_url") is None
+IS_GITHUB_ACTIONS = not environ.get("GITHUB_SERVER_URL") is None
 
 # The reository URI
 
@@ -44,7 +44,7 @@ REPO_URI = check_output(
   )\
   .decode('utf-8')\
   .strip() if not IS_GITHUB_ACTIONS else \
-  f"{environ.get('context.server_url')}/{environ.get('context.repository')}"
+  f"{environ.get('GITHUB_SERVER_URL')}/{environ.get('GITHUB_REPOSITORY')}"
 
 # Base reporitory platform URL
 PLATFORM_URL = "/".join(REPO_URI.split("/")[:-2])
@@ -55,7 +55,7 @@ BRANCH = check_output(
   )\
   .decode('utf-8')\
   .strip() if not IS_GITHUB_ACTIONS else \
-  environ.get("context.branch")
+  environ.get("GITHUB_REF_NAME")
 
 # The relative path from root to the profile_test folder
 PATH_TO_PROFILE_FOLDER = relpath(".", ROOT_FOLDER)
@@ -73,7 +73,7 @@ DEV_USERNAME = check_output(
   )\
   .decode('utf-8')\
   .strip() if not IS_GITHUB_ACTIONS else \
-  environ.get("context.developper")
+  environ.get("GITHUB_ACTOR")
 
 # Format of a syntax error in the console
 AST_ERROR_FORMAT = regex_compile("ERROR fr\\.inria\\.corese\\.sparql\\.triple\\.parser\\.ASTQuery")
