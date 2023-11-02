@@ -1,7 +1,7 @@
 from regex import compile as regex_compile
 from subprocess import check_output
 from rdflib import Namespace
-from os import getcwd, environ
+from os import getcwd
 from os.path import sep, relpath, abspath
 
 ##############
@@ -36,16 +36,13 @@ CORESE_JAR_NAME = CORESE_PYTHON_URL.split('/')[-1]
 
 CORESE_LOCAL_PATH = abspath(f"{PWD_TO_PROFILE_CHECK}{CORESE_JAR_NAME}")
 
-IS_GITHUB_ACTIONS = not environ.get("github.server_url") is None
-
 # The reository URI
 
 REPO_URI = check_output(
   "git config --get remote.origin.url".split(" ")
   )\
   .decode('utf-8')\
-  .strip() if not IS_GITHUB_ACTIONS else \
-  f"{environ.get('github.server_url')}/{environ.get('github.repository')}"
+  .strip()
 
 # Base reporitory platform URL
 PLATFORM_URL = "/".join(REPO_URI.split("/")[:-2])
@@ -55,8 +52,7 @@ BRANCH = check_output(
   "git rev-parse --abbrev-ref HEAD".split(" ")
   )\
   .decode('utf-8')\
-  .strip() if not IS_GITHUB_ACTIONS else \
-  environ.get("github.ref_name")
+  .strip()
 
 # The relative path from root to the profile_test folder
 PATH_TO_PROFILE_FOLDER = relpath(".", ROOT_FOLDER)
