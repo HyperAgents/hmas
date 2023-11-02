@@ -9,7 +9,6 @@ from constants import (
     MODULES_TTL_GLOB_PATH,
     MODELETS_TTL_GLOB_PATH,
     DEV_USERNAME,
-    PWD_TO_PROFILE_CHECK,
     PWD_TO_MODEL_OUTPUT_FOLDER
 )
 
@@ -74,6 +73,15 @@ if mode == "manual":
     file_name = f"{mode}-{DEV_USERNAME}-{now}"
 else:
     file_name = mode
+
+# TODO: remove this after Github Actions debugging
+from constants import REPO_URI, BRANCH, DEV_USERNAME
+print("REPO_URI", REPO_URI)
+print("BRANCH", BRANCH)
+print("DEV_USERNAME", DEV_USERNAME)
+print(" ")
+print(dumps(report, indent=4))
+print(" ")
 
 if not exists(PWD_TO_MODEL_OUTPUT_FOLDER):
     makedirs(PWD_TO_MODEL_OUTPUT_FOLDER)
