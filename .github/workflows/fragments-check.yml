@@ -29,6 +29,6 @@ jobs:
         git config --global user.name "Github Actions"
         git add .acimov/profile_check/output/actions.ttl -f
         git commit -m "Provide automatic model test report"
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.server_url }}
+        git remote set-url origin ${{ github.server_url }}
         git push
-    
+  
