@@ -1,2 +1,3 @@
 py4j
 rdflib
+regex
