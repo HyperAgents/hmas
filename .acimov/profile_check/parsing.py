@@ -1,4 +1,6 @@
 # We don't need reasoning, profile checking etc
+from datetime import datetime
+
 from rdflib import (
     Graph,
     BNode,
@@ -12,7 +14,8 @@ from rdflib.namespace import (
     RDFS,
     FOAF,
     DCTERMS,
-    SDO
+    SDO,
+    XSD
 )
 
 from constants import (
@@ -231,6 +234,7 @@ def parse_subject_report(
         skip_pass=False
 ):
     rdf_subject = None
+    now = datetime.now()
     
     for criterion in subject_report.keys():
         # Early stop on skip_pass if the criterion has no error
@@ -257,6 +261,7 @@ def parse_subject_report(
             (EARL_NAMESPACE.subject, rdf_subject),
             (EARL_NAMESPACE.test, ACIMOV_MODEL_NAMESPACE[criterion]),
             (EARL_NAMESPACE.result, test_result)
+            (DCTERMS.date, Literal(now, datatype=XSD.dateTime))
         )
 
 def parse_report_to_turtle(
