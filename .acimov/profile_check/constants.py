@@ -26,6 +26,7 @@ ROOT_FOLDER = abspath(
 )
 
 PWD_TO_ROOT_FOLDER = f"{relpath(ROOT_FOLDER, getcwd())}{sep}"
+PWD_TO_MODEL_OUTPUT_FOLDER = f"{PWD_TO_ROOT_FOLDER}.acimov{sep}profile_check{sep}output{sep}"
 PWD_TO_PROFILE_CHECK = f"{PWD_TO_ROOT_FOLDER}.acimov{sep}profile_check{sep}"
 
 # The character separating the ontology base URL from the suffix

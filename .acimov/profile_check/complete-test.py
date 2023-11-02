@@ -1,14 +1,16 @@
 from json import dumps
 from glob import glob
 from datetime import datetime
-from os.path import sep
+from os import makedirs
+from os.path import sep, exists
 from sys import argv
 
 from constants import (
     MODULES_TTL_GLOB_PATH,
     MODELETS_TTL_GLOB_PATH,
     DEV_USERNAME,
-    PWD_TO_PROFILE_CHECK
+    PWD_TO_PROFILE_CHECK,
+    PWD_TO_MODEL_OUTPUT_FOLDER
 )
 
 from corese import print_title # TODO Need later for a utils.py?
@@ -73,7 +75,10 @@ if mode == "manual":
 else:
     file_name = mode
 
-with open(f"{PWD_TO_PROFILE_CHECK}output/{file_name}.json", 'w') as f:
+if not exists(PWD_TO_MODEL_OUTPUT_FOLDER):
+    makedirs(PWD_TO_MODEL_OUTPUT_FOLDER)
+
+with open(f"{PWD_TO_MODEL_OUTPUT_FOLDER}{file_name}.json", 'w') as f:
     f.write(dumps(report, indent=4))
 
 turtle = parse_report_to_turtle(
@@ -82,5 +87,5 @@ turtle = parse_report_to_turtle(
     skip_pass="--skip-pass" in args
 )
 
-with open(f"{PWD_TO_PROFILE_CHECK}output/{file_name}.ttl", "w") as f:
+with open(f"{PWD_TO_MODEL_OUTPUT_FOLDER}{file_name}.ttl", "w") as f:
     f.write(turtle)
