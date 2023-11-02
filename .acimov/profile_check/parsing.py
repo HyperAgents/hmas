@@ -260,7 +260,7 @@ def parse_subject_report(
             (EARL_NAMESPACE.assertedBy, assert_group),
             (EARL_NAMESPACE.subject, rdf_subject),
             (EARL_NAMESPACE.test, ACIMOV_MODEL_NAMESPACE[criterion]),
-            (EARL_NAMESPACE.result, test_result)
+            (EARL_NAMESPACE.result, test_result),
             (DCTERMS.date, Literal(now, datatype=XSD.dateTime))
         )
 
