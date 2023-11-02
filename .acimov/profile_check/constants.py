@@ -75,7 +75,7 @@ try:
   .decode('utf-8')\
   .strip()
 except:
-  DEV_USERNAME = "Github Actions"
+  DEV_USERNAME = "GithubActions"
 
 # Format of a syntax error in the console
 AST_ERROR_FORMAT = regex_compile("ERROR fr\\.inria\\.corese\\.sparql\\.triple\\.parser\\.ASTQuery")
