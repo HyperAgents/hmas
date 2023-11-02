@@ -73,7 +73,7 @@ if mode == "manual":
 else:
     file_name = mode
 
-with open(f"{PWD_TO_PROFILE_CHECK}{sep}output/{file_name}.json", 'w') as f:
+with open(f"{PWD_TO_PROFILE_CHECK}output/{file_name}.json", 'w') as f:
     f.write(dumps(report, indent=4))
 
 turtle = parse_report_to_turtle(
@@ -82,5 +82,5 @@ turtle = parse_report_to_turtle(
     skip_pass="--skip-pass" in args
 )
 
-with open(f"{PWD_TO_PROFILE_CHECK}{sep}output/{file_name}.ttl", "w") as f:
+with open(f"{PWD_TO_PROFILE_CHECK}output/{file_name}.ttl", "w") as f:
     f.write(turtle)
