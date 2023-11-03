@@ -38,6 +38,5 @@
 :signifies a owl:ObjectProperty ;
            rdfs:isDefinedBy :interaction ;
            rdfs:domain :Signifier ;
-           rdfs:range sh:Shape ;
-           rdfs:comment "A relation between a signifier and a shape specifying a description of the expected behavior execution."@en ;
+           rdfs:comment "A relation between a signifier and the specification of a behavior execution. For instance, a SHACL shape can be used to specify an expected behavior execution."@en ;
            rdfs:label "signifies"@en, "signifie"@fr .
