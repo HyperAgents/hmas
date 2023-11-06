@@ -29,11 +29,16 @@ PROFILE_CHECK_URI = f"{REPO_URI}tree/{BRANCH}/{PATH_TO_PROFILE_FOLDER}"
   # git config --get remote.origin.url for precommit/manual
   # $GITHUB_SERVER_URL + '/' + $GITHUB_REPOSITORY for action
 
-DEV_USERNAME = check_output(
-  "git config --global user.name".split(" ")
-  )\
-  .decode('utf-8')\
-  .strip()
+DEV_USERNAME = "Unknown"
+try:
+  DEV_USERNAME = check_output(
+    "git config --global user.name".split(" ")
+    )\
+    .decode('utf-8')\
+    .strip()
+except:
+  pass
+
 
 ACIMOV_MODEL_TEST_URI = f"{PROFILE_CHECK_URI}/model-test-onto.ttl"
 # URL prefix for the files in the current branch in src

@@ -1,4 +1,4 @@
-name: fragments-check
+name: model-test
 on:
   push:
     branches:
