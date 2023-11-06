@@ -1,8 +1,7 @@
-from json import dumps
 from glob import glob
 from datetime import datetime
 from os import makedirs
-from os.path import sep, exists
+from os.path import exists
 from sys import argv
 
 from constants import (
@@ -49,6 +48,9 @@ names = [
     for item in args
     if item.startswith("--dev=")
 ]
+
+print(args)
+print(names)
 
 skip_pass = "--skip-pass" in args
 tested_only = "--tested-only" in args
