@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
-import precommit_imports
+import importing
 
 from typing import Sequence
 from sys import argv
 
 from testing import modules_tests
-from parsing import parse_report_to_turtle
+from exporting import parse_report_to_turtle
 from constants import EARL_NAMESPACE, BLOCKINGS_ERRORS
 from rdflib import Graph
 from rdflib.namespace import DCTERMS

@@ -1,10 +1,10 @@
 public
 .venv
-.acimov/profile_check/.vscode/launch.json
-.acimov/profile_check/__pycache__/constants.cpython-311.pyc
-.acimov/profile_check/__pycache__/corese.cpython-311.pyc
-.acimov/profile_check/corese-library-python-4.4.1.jar
-.acimov/profile_check/output/*
+.acimov/model-test/.vscode/launch.json
+.acimov/model-test/__pycache__/constants.cpython-311.pyc
+.acimov/model-test/__pycache__/corese.cpython-311.pyc
+.acimov/model-test/corese-library-python-4.4.1.jar
+.acimov/output/*
 .vscode
 .vscode/*
 *.pyc

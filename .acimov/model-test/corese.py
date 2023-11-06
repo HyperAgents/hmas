@@ -269,31 +269,19 @@ def safe_load(
             if len(line.strip()) > 0
         ]
 
-        if len(syntax_errors) > 0:
-                return {
-                    "syntax-test": {
-                        "syntax-error": [
-                            {"message": line}
-                            for line in syntax_errors
-                        ]
-                    }
-                }
-
-        return graph
-
+        if len(syntax_errors) == 0:
+            return graph
+        
+        return syntax_errors
+    
     except Exception as e:
-        return {
-            "syntax-test": {
-                "syntax-error": [
-                    { "message": message }
-                    for message in [
-                        syntax_errors,
-                        " ".join(str(e).strip().split("\n")[1].split(" ")[2:]).strip()
-                    ]
-                    if len(message) > 0
-                ]
-            }
-        }
+        return [
+            message for message in [
+                syntax_errors,
+                " ".join(str(e).strip().split("\n")[1].split(" ")[2:]).strip()
+            ]
+            if len(message) > 0
+        ]
     
 def query_graph(graph, query):
     """Query the given graph and return the result in TSV notation

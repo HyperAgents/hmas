@@ -20,7 +20,18 @@ from testing import (
     merged_fragment_set_test,
 )
 
-from parsing import parse_report_to_turtle
+from exporting import (
+    prepare_graph,
+    make_assertor
+)
+
+def datetime_id():
+    return ".".join(
+            datetime\
+            .now()\
+            .isoformat()\
+            .split(".")[:-1]
+        ).replace(":", "-")
 
 ###
 # Test OWL_RL
@@ -39,23 +50,29 @@ names = [
     if item.startswith("--dev=")
 ]
 
+skip_pass = "--skip-pass" in args
+tested_only = "--tested-only" in args
+
 dev = names[0] if len(names) > 0 else DEV_USERNAME
 mode = modes[0] if len(modes) > 0 else "manual"
 
+report = prepare_graph()
+test_assertor = make_assertor(report, mode, dev)
+
 print_title("Checking existing modules")
 modules = glob(MODULES_TTL_GLOB_PATH)
-modules_report, unsafe_modules = modules_tests(modules)
+unsafe_modules = modules_tests(modules, report, test_assertor, skip_pass=skip_pass, tested_only=tested_only)
 
 print_title("Checking modelets")
 modelets = glob(MODELETS_TTL_GLOB_PATH)
-modelets_report, unsafe_modelets = modelets_tests(modelets)
+unsafe_modelets = modelets_tests(modelets, report, test_assertor, skip_pass=skip_pass, tested_only=tested_only)
 
 print_title("Checking the merge of safe modules")
 safe_modules = [
     module for module in modules
     if not module in unsafe_modules
 ]
-safe_modules_report = merged_fragment_set_test(safe_modules, "all-modules")
+merged_fragment_set_test(report, test_assertor, safe_modules, "all-modules", skip_pass=skip_pass, tested_only=tested_only)
 
 print_title("Checking the merge of safe fragments")
 fragments = modules + modelets
@@ -65,34 +82,12 @@ safe_fragment = [
     fragment for fragment in fragments
     if not fragment in unsafe_fragments
 ]
-safe_fragments_report = merged_fragment_set_test(safe_fragment, "all-fragments")
+merged_fragment_set_test(report, test_assertor, safe_fragment, "all-fragments", skip_pass=skip_pass, tested_only=tested_only)
 
-report = modules_report + modelets_report + safe_modules_report + safe_fragments_report
-
-file_name = ""
-if mode == "manual":
-    now = ".".join(
-            datetime\
-            .now()\
-            .isoformat()\
-            .split(".")[:-1]
-        ).replace(":", "-")
-    file_name = f"{mode}-{dev}-{now}"
-else:
-    file_name = mode
+file_name = mode if not mode == "manual" else f"{mode}-{dev}-{datetime_id()}"
 
 if not exists(PWD_TO_MODEL_OUTPUT_FOLDER):
     makedirs(PWD_TO_MODEL_OUTPUT_FOLDER)
 
-with open(f"{PWD_TO_MODEL_OUTPUT_FOLDER}{file_name}.json", 'w') as f:
-    f.write(dumps(report, indent=4))
-
-turtle = parse_report_to_turtle(
-    report,
-    mode,
-    skip_pass="--skip-pass" in args,
-    dev=dev
-)
-
 with open(f"{PWD_TO_MODEL_OUTPUT_FOLDER}{file_name}.ttl", "w") as f:
-    f.write(turtle)
+    f.write(report.serialize(format="ttl"))

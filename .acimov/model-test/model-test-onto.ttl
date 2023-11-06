@@ -1,4 +1,4 @@
-@prefix : <https://gitlab.com/acimov/acimov-methodology-template/blob/main/scripts/tests/model-test-onto.ttl> .
+@prefix : <https://gitlab.com/acimov/acimov-methodology-template/blob/main/scripts/tests/model-test-onto.ttl#> .
 @prefix earl: <https://www.w3.org/ns/earl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
