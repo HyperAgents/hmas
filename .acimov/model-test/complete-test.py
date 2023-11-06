@@ -49,13 +49,13 @@ names = [
     if item.startswith("--dev=")
 ]
 
-print(args)
-print(names)
-
 skip_pass = "--skip-pass" in args
 tested_only = "--tested-only" in args
 
 dev = names[0] if len(names) > 0 else DEV_USERNAME
+
+print(names[0], len(names), DEV_USERNAME, dev)
+
 mode = modes[0] if len(modes) > 0 else "manual"
 
 report = prepare_graph()
