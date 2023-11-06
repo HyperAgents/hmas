@@ -11,7 +11,19 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Domain out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :isHostedOn ] ] ;
+    earl:subject _:all-fragments ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
             earl:outcome [ a earl:NotTested ;
@@ -21,7 +33,410 @@
     earl:test acimov-model-test:profile-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:owl-rl-constraint-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl> ;
+            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :hosts ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject needs to be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:terms-differenciation-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject needs to be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:terms-differenciation-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:owl-rl-constraint-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :FIPAAgentPlatform ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentPlatformDescription ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :IIOPMessageTransportService ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :HTTPMessageTransportService ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceType ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentIdentifierDescription ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceName ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :MessageTransportService ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :APService ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart src:fipa ;
+            dcterms:title "Standalone module src/fipa.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:term-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:Fail ;
+                    dcterms:description "Encountered \"\\\"Associates exceptions to a context of application of a norm\\\"\" at line 82, column 30."@en ;
+                    dcterms:title "Test subject has syntax errors"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:syntax-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl> ;
+            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
+    earl:subject _:all-modules ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Domain out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :isHostedOn ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso sh:NodeShape,
+                        :signifies ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart src:interaction ;
+            dcterms:title "Standalone module src/interaction.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject syntax must be correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:term-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
+    earl:subject _:all-fragments ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:Fail ;
+                    dcterms:description "Undefined prefix: dcterms:source"@en ;
+                    dcterms:title "Test subject has syntax errors"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:Fail ;
+                    dcterms:description "Undefined prefix: doco:Glossary"@en ;
+                    dcterms:title "Test subject has syntax errors"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:syntax-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
             earl:outcome [ a earl:NotTested ;
@@ -31,25 +446,12 @@
     earl:test acimov-model-test:term-referencing-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/Organization> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :Organization ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl> ;
-            dcterms:title "Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:term-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
@@ -64,49 +466,11 @@
                     dcterms:title "OWL QL Profile incompatible"@en ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject _:all-modules ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
@@ -123,176 +487,7 @@
     earl:test acimov-model-test:profile-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Domain out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :isHostedOn ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:owl-rl-constraint-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject needs to be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:terms-differenciation-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentPlatformDescription ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceName ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceType ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :APService ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :HTTPMessageTransportService ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :FIPAAgentPlatform ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :IIOPMessageTransportService ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentIdentifierDescription ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :MessageTransportService ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart src:fipa ;
-            dcterms:title "Standalone module src/fipa.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:term-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:Fail ;
-                    dcterms:description "Encountered \"\\\"Associates exceptions to a context of application of a norm\\\"\" at line 82, column 30."@en ;
-                    dcterms:title "Test subject has syntax errors"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:syntax-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
@@ -304,66 +499,7 @@
     earl:test acimov-model-test:domain-and-range-referencing-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl>,
-                src:core ;
-            dcterms:title "Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl"@en ] ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso sh:NodeShape,
-                        :signifies ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :hosts ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
@@ -376,63 +512,11 @@
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl> ;
-            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl> ;
-            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
@@ -442,12 +526,62 @@
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ] ] ;
     earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl> ;
+            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:profile-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
+    earl:subject [ a earl:TestSubject ;
             dcterms:hasPart src:core ;
             dcterms:title "Standalone module src/core.ttl from branch test-workflow"@en ] ;
     earl:test acimov-model-test:profile-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
             earl:outcome [ a earl:NotTested ;
@@ -457,44 +591,9 @@
     earl:test acimov-model-test:profile-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject needs to be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:terms-differenciation-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentPlatformDescription ] ],
-        [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
@@ -506,24 +605,14 @@
                     rdfs:seeAlso :HTTPMessageTransportService ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentPlatformDescription ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
                     dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
                     rdfs:seeAlso :hasServiceName ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :APService ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :FIPAAgentPlatform ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :IIOPMessageTransportService ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
@@ -531,58 +620,29 @@
                     rdfs:seeAlso :hasServiceType ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :APService ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
                     dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentIdentifierDescription ] ] ;
+                    rdfs:seeAlso :AgentIdentifierDescription ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :IIOPMessageTransportService ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :FIPAAgentPlatform ] ] ;
     earl:subject _:all-fragments ;
     earl:test acimov-model-test:term-referencing-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :hosts ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Domain out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :isHostedOn ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject syntax must be correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:term-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
@@ -597,7 +657,7 @@
     earl:test acimov-model-test:domain-and-range-referencing-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
             earl:outcome [ a earl:NotTested ;
@@ -607,23 +667,75 @@
     earl:test acimov-model-test:profile-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:Fail ;
-                    dcterms:description "Undefined prefix: dcterms:source"@en ;
-                    dcterms:title "Test subject has syntax errors"@en ] ],
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
         [ a earl:TestResult ;
-            earl:outcome [ a earl:Fail ;
-                    dcterms:description "Undefined prefix: doco:Glossary"@en ;
-                    dcterms:title "Test subject has syntax errors"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:syntax-test .
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl>,
+                src:core ;
+            dcterms:title "Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl"@en ] ;
+    earl:test acimov-model-test:profile-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceType ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentIdentifierDescription ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :HTTPMessageTransportService ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentPlatformDescription ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :IIOPMessageTransportService ] ],
+        [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
@@ -635,46 +747,64 @@
                     rdfs:seeAlso :MessageTransportService ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :IIOPMessageTransportService ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceName ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceType ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentPlatformDescription ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
                     dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
                     rdfs:seeAlso :APService ] ],
         [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
                     dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentIdentifierDescription ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :HTTPMessageTransportService ] ] ;
+                    rdfs:seeAlso :hasServiceName ] ] ;
     earl:subject _:all-modules ;
     earl:test acimov-model-test:term-referencing-test .
 
 [] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :hosts ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso sh:NodeShape,
+                        :signifies ] ] ;
+    earl:subject _:all-fragments ;
+    earl:test acimov-model-test:domain-and-range-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/Organization> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :Organization ] ] ;
+    earl:subject [ a earl:TestSubject ;
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl> ;
+            dcterms:title "Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow"@en ] ;
+    earl:test acimov-model-test:term-referencing-test .
+
+[] a earl:Assertion ;
+    dcterms:date "2023-11-06T17:49:08.272913"^^xsd:dateTime ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:outcome [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
+            earl:outcome [ a earl:CantTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ],
+        [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ] ],
@@ -687,52 +817,6 @@
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ] ],
         [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:owl-rl-constraint-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
             earl:outcome [ a earl:CantTell ;
                     dcterms:description "Statement not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ] ],
@@ -741,93 +825,9 @@
                     dcterms:description "Statement not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ] ] ;
     earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl> ;
-            dcterms:title "Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso sh:NodeShape,
-                        :signifies ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart src:interaction ;
-            dcterms:title "Standalone module src/interaction.ttl from branch test-workflow"@en ] ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:domain-and-range-referencing-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ],
-        [ a earl:TestResult ;
-            earl:outcome [ a earl:CantTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject [ a earl:TestSubject ;
-            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl>,
+            dcterms:hasPart <https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl>,
                 src:core ;
-            dcterms:title "Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl"@en ] ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:profile-test .
-
-[] a earl:Assertion ;
-    dcterms:date "2023-11-06T17:47:48.099902"^^xsd:dateTime ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:outcome [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
+            dcterms:title "Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl"@en ] ;
     earl:test acimov-model-test:profile-test .
 
 [] a earl:TestSubject ;
