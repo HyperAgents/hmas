@@ -21,13 +21,13 @@ jobs:
         java-version: '17'
     - name: Launch model tests
       run: |
-        pip install -r .acimov/profile_check/requirements.txt
-        python .acimov/profile_check/complete-test.py --mode=actions --skip-pass --dev=${{ github.actor }}
+        pip install -r .acimov/model-test/requirements.txt
+        python .acimov/model-test/complete-test.py --mode=actions --skip-pass --dev=${{ github.actor }}
     - name: Commit the report
       run: |
         git config --global user.email "no-reply@github.com"
         git config --global user.name "Github Actions"
-        git add .acimov/profile_check/output/actions.ttl -f
+        git add .acimov/model-test/output/actions.ttl -f
         git commit -m "Provide automatic model test report"
         git remote set-url origin ${{ github.server_url }}/${{ github.repository }}
         git push
