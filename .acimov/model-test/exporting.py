@@ -58,7 +58,7 @@ def make_assertor(report, script_name, dev=DEV_USERNAME):
     
     # Define the developper and the assertor
     assert_group = BNode(assertorId)
-    developper = BNode(DEV_USERNAME)
+    developper = BNode(dev)
 
     # Define the developper
     report.statement(
