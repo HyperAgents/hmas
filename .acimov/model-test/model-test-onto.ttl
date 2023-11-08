@@ -29,3 +29,7 @@
 :terms-differenciation-test a earl:TestCriterion ;
     dcterms:title "Terms differenciation test"@en ;
     dcterms:description "A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric."@en .
+
+:labeled-terms-test a earl:TestCriterion ;
+    dcterms:title "Term labeling test"@en ;
+    dcterms:description "A test case from the Best Practices tests checking if all the terms of the subject have a rdfs:label property pointing to a literal in English"@en .

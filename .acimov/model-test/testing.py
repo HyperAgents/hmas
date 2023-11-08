@@ -21,7 +21,8 @@ from constants import (
     ONTOLOGY_URL,
     PWD_TO_ROOT_FOLDER,
     CRITERIONS_NEEDING_SYNTAX,
-    BEST_PRACTICES_TESTS
+    BEST_PRACTICES_TESTS,
+    NOT_LABELED
 )
 
 from exporting import (
@@ -440,6 +441,21 @@ def best_practices_test(
             "too-close-terms",
             [f"The following terms are too similar: :{line[0]} and :{line[1]}" for line in term_pairs],
             [[f"<{ONTOLOGY_URL}{item}>" for item in line] for line in term_pairs],
+            skip_pass=skip_pass
+        )
+    
+    if not "labeled-terms-test" in skip:
+        not_labeled_terms = query_graph(fragment_no_import, NOT_LABELED)
+        not_labeled_pointers = [[f"<{ONTOLOGY_URL}{line.strip()[1:-1]}>"] for line in not_labeled_terms if len(line.strip()) > 0]
+        not_labeled_messages = [f"The term :{pointer[0].split(ONTOLOGY_SEPARATOR)[-1][:-1]} has no rdfs:label to define it in natural language" for pointer in not_labeled_pointers]
+        make_assertion(
+            report,
+            assertor,
+            subject,
+            "labeled-terms-test",
+            "not-labeled-term",
+            not_labeled_messages,
+            pointers=not_labeled_pointers,
             skip_pass=skip_pass
         )
 

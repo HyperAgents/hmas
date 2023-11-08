@@ -143,6 +143,31 @@
             }
         }
     },
+    "labeled-terms-test": {
+        "title": "Term labeling test",
+        "description": "Test checking if all the terms defined in the subject have at least a rdfs:label pointing to a literal in English",
+        "errors": {
+            "not-labeled-term": {
+                "blocking": false,
+                "Pass": {
+                    "title": "All terms labeled",
+                    "description": "All the terms defined in the subject have a rdfs:label in English"
+                },
+                "NotTested": {
+                    "title": "The test could not be run",
+                    "description": "The subject and its recursive imports must be syntaxically correct"
+                },
+                "CantTell": {
+                    "title": "Terms not labeled",
+                    "description": "Some terms do not have a rdfs:label property pointing to a literal written in English"
+                },
+                "Fail": {
+                    "title": "Terms not labeled",
+                    "description": "Some terms do not have a rdfs:label property pointing to a literal written in English"
+                }
+            }
+        }
+    },
     "profile-test": {
         "title": "OWL Profile Compatibility Test",
         "description": "Test for the compatibility of the subject for the OWL Profile",

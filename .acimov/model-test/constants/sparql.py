@@ -182,3 +182,16 @@ select ?n ?c ?t ?d where {
   dcterms:description ?d .
 }
 """
+
+NOT_LABELED = """
+select distinct ?suffix where {
+  ?term ?p [] .
+  FILTER(strstarts(str(?term), "ONTOLOGY_URL"))
+  FILTER NOT EXISTS {
+    ?term rdfs:label ?label .
+    FILTER(lang(?label) = "en")
+  }
+  BIND(substr(str(?term), strlen("ONTOLOGY_URL") + 1) AS ?suffix)
+  FILTER(strlen(?suffix) > 0)
+}
+""".replace("ONTOLOGY_URL", ONTOLOGY_URL)
