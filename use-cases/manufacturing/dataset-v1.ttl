@@ -467,33 +467,70 @@ _:Ra2DeletableOperator a _:ActionExecutionShape ;
         ]
     ] .
 
+###################
+# Truck Endpoints #
+###################
+
+_:TruckReadableBattery a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:value [
+            a _:GetForm ;
+            hctl:hasTarget <http://192.168.1.26/properties/pmu>
+        ]
+    ] .
+
+_:TruckReadableAccelerometer a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:value [
+            a _:GetForm ;
+            hctl:hasTarget <http://192.168.1.29/properties/imu>
+        ]
+    ] .
+
+_:TruckSettableWheels a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:value [
+            a _:PostForm ;
+            hctl:hasTarget <http://192.168.1.29/actions/wheelControl>
+        ]
+    ]
+
 ###############################
 # Artifacts Resource Profiles #
 ###############################
 
 ra1: a hmas:ResourceProfile ;
     hmas:isProfileOf ra1:artifact ;
-    hmas:exposesSignifier   [ hmas:signifies _:Ra1ReadableOperator] ,
-                            [ hmas:signifies _:Ra1ReadablePosition] ,
-                            [ hmas:signifies _:Ra1ReadableTarget] ,
-                            [ hmas:signifies _:Ra1ReadableGripper] ,
-                            [ hmas:signifies _:Ra1InitializableArm] ,
-                            [ hmas:signifies _:Ra1SettableOperator] ,
-                            [ hmas:signifies _:Ra1SettableTarget] ,
-                            [ hmas:signifies _:Ra1SettableGripper] ,
-                            [ hmas:signifies _:Ra1DeletableOperator] .
+    hmas:exposesSignifier   [ hmas:signifies _:Ra1ReadableOperator ] ,
+                            [ hmas:signifies _:Ra1ReadablePosition ] ,
+                            [ hmas:signifies _:Ra1ReadableTarget ] ,
+                            [ hmas:signifies _:Ra1ReadableGripper ] ,
+                            [ hmas:signifies _:Ra1InitializableArm ] ,
+                            [ hmas:signifies _:Ra1SettableOperator ] ,
+                            [ hmas:signifies _:Ra1SettableTarget ] ,
+                            [ hmas:signifies _:Ra1SettableGripper ] ,
+                            [ hmas:signifies _:Ra1DeletableOperator ] .
 
 ra2: a hmas:ResourceProfile ;
     hmas:isProfileOf ra2:artifact ;
-    hmas:exposesSignifier   [ hmas:signifies _:Ra2ReadableOperator] ,
-                            [ hmas:signifies _:Ra2ReadablePosition] ,
-                            [ hmas:signifies _:Ra2ReadableTarget] ,
-                            [ hmas:signifies _:Ra2ReadableGripper] ,
-                            [ hmas:signifies _:Ra2InitializableArm] ,
-                            [ hmas:signifies _:Ra2SettableOperator] ,
-                            [ hmas:signifies _:Ra2SettableTarget] ,
-                            [ hmas:signifies _:Ra2SettableGripper] ,
-                            [ hmas:signifies _:Ra2DeletableOperator] .
+    hmas:exposesSignifier   [ hmas:signifies _:Ra2ReadableOperator ] ,
+                            [ hmas:signifies _:Ra2ReadablePosition ] ,
+                            [ hmas:signifies _:Ra2ReadableTarget ] ,
+                            [ hmas:signifies _:Ra2ReadableGripper ] ,
+                            [ hmas:signifies _:Ra2InitializableArm ] ,
+                            [ hmas:signifies _:Ra2SettableOperator ] ,
+                            [ hmas:signifies _:Ra2SettableTarget ] ,
+                            [ hmas:signifies _:Ra2SettableGripper ] ,
+                            [ hmas:signifies _:Ra2DeletableOperator ] .
+
+truck: a hmas:ResourceProfile ;
+    hmas:isProfileOf truck:artifact ;
+    hmas:exposesSignifier   [ hmas:signifies _:TruckReadableBattery ] ,
+                            [ hmas:signifies _:TruckReadableAccelerometer ] ,
+                            [ hmas:signifies _:TruckSettableWheels ] .
 
 ##############
 # Workspaces #
