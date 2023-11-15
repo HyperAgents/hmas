@@ -311,16 +311,7 @@ _:Ra1ReadableGripper a _:ActionExecutionShape ;
         ]
     ] .
 
-_:Ra1SettableGripper a _:ActionExecutionShape ;
-    sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:GetForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/gripper>
-        ]
-    ] .
-
-_:Ra1IntitializableArm a _:ActionExecutionShape ;
+_:Ra1InitializableArm a _:ActionExecutionShape ;
     sh:property [
         a _:UrlConstraint ;
         sh:hasValue [
@@ -418,15 +409,6 @@ _:Ra2ReadableGripper a _:ActionExecutionShape ;
         ]
     ] .
 
-_:Ra2SettableGripper a _:ActionExecutionShape ;
-    sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:GetForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/gripper>
-        ]
-    ] .
-
 _:Ra2InitializableArm a _:ActionExecutionShape ;
     sh:property [
         a _:UrlConstraint ;
@@ -491,29 +473,27 @@ _:Ra2DeletableOperator a _:ActionExecutionShape ;
 
 ra1: a hmas:ResourceProfile ;
     hmas:isProfileOf ra1:artifact ;
-    hmas:exposesSignifier   _:Ra1ReadableOperator ,
-                            _:Ra1ReadablePosition ,
-                            _:Ra1ReadableTarget ,
-                            _:Ra1ReadableGripper ,
-                            _:Ra1SettableGripper,
-                            _:Ra1IntitializableArm ,
-                            _:Ra1SettableOperator ,
-                            _:Ra1SettableTarget ,
-                            _:Ra1SettableGripper,
-                            _:Ra1DeletableOperator .
+    hmas:exposesSignifier   [ hmas:Signifies _:Ra1ReadableOperator] ,
+                            [ hmas:Signifies _:Ra1ReadablePosition] ,
+                            [ hmas:Signifies _:Ra1ReadableTarget] ,
+                            [ hmas:Signifies _:Ra1ReadableGripper] ,
+                            [ hmas:Signifies _:Ra1InitializableArm] ,
+                            [ hmas:Signifies _:Ra1SettableOperator] ,
+                            [ hmas:Signifies _:Ra1SettableTarget] ,
+                            [ hmas:Signifies _:Ra1SettableGripper] ,
+                            [ hmas:Signifies _:Ra1DeletableOperator] .
 
 ra2: a hmas:ResourceProfile ;
     hmas:isProfileOf ra2:artifact ;
-    hmas:exposesSignifier   _:Ra2ReadableOperator ,
-                            _:Ra2ReadablePosition ,
-                            _:Ra2ReadableTarget ,
-                            _:Ra2ReadableGripper ,
-                            _:Ra2SettableGripper ,
-                            _:Ra2InitializableArm ,
-                            _:Ra2SettableOperator ,
-                            _:Ra2SettableTarget ,
-                            _:Ra2SettableGripper ,
-                            _:Ra2DeletableOperator .
+    hmas:exposesSignifier   [ hmas:Signifies _:Ra2ReadableOperator] ,
+                            [ hmas:Signifies _:Ra2ReadablePosition] ,
+                            [ hmas:Signifies _:Ra2ReadableTarget] ,
+                            [ hmas:Signifies _:Ra2ReadableGripper] ,
+                            [ hmas:Signifies _:Ra2InitializableArm] ,
+                            [ hmas:Signifies _:Ra2SettableOperator] ,
+                            [ hmas:Signifies _:Ra2SettableTarget] ,
+                            [ hmas:Signifies _:Ra2SettableGripper] ,
+                            [ hmas:Signifies _:Ra2DeletableOperator] .
 
 ##############
 # Workspaces #
