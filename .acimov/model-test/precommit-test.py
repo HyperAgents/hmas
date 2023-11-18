@@ -6,8 +6,8 @@ from typing import Sequence
 from sys import argv
 
 from testing import modules_tests
-from exporting import parse_report_to_turtle
-from constants import EARL_NAMESPACE, BLOCKINGS_ERRORS
+from exporting import prepare_graph, make_assertor
+from constants import EARL_NAMESPACE, BLOCKINGS_ERRORS, DEV_USERNAME
 from rdflib import Graph
 from rdflib.namespace import DCTERMS
 from pre_commit import output
@@ -23,16 +23,13 @@ def main(files: Sequence[str] | None = None):
 
     if files is None:
         return 0
+    
+    report = prepare_graph()
+    test_assertor = make_assertor(report, "pre-commit", DEV_USERNAME)
 
-    report, _ = modules_tests(files)
-    turtle = parse_report_to_turtle(report, "pre-commit")
+    report = modules_tests(files, report, test_assertor, skip_pass=True, tested_only=True)
 
-    graph = Graph()
-    graph.bind("earl", EARL_NAMESPACE)
-    graph.bind("dcterms", DCTERMS)
-    graph.parse(data=turtle, format="ttl")
-
-    blocking_errors_iterator = graph.query(BLOCKINGS_ERRORS)
+    blocking_errors_iterator = report.query(BLOCKINGS_ERRORS)
     blocking_errors = [item for item in blocking_errors_iterator]
 
     if len(blocking_errors) == 0:

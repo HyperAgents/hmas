@@ -5,7 +5,7 @@
 # The ontology base URL
 ONTOLOGY_URL = "https://purl.org/hmas/"
 # The URL of the Corese python library to fetch
-CORESE_PYTHON_URL = "https://files.inria.fr/corese/distrib/corese-library-python-4.4.1.jar"
+CORESE_PYTHON_URL = "https://files.inria.fr/corese/distrib/beta/corese-python-4.4.1-beta.jar"
 # The desired levenshtein threshold to accept terms as different enough
 TERM_DISTANCE_THRESHOLD = 3
 # The EARL ontology prefix

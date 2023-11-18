@@ -10,7 +10,9 @@ from .sparql import *
 
 from .rdflib_info import *
 
-__all__ = ["parameters", "paths", "corese_info", "git_info", "sparql", "rdflib_info"]
+from .markdown import *
+
+__all__ = ["parameters", "paths", "corese_info", "git_info", "sparql", "rdflib_info", "markdown"]
 
 from .parameters import ONTOLOGY_URL, BLOCKING_ERRORS
 from .paths import PWD_TO_MODEL_TEST
@@ -30,10 +32,10 @@ for criterion in TEST_RESOURCES.keys():
 
 CRITERIONS_NEEDING_SYNTAX = [
   criterion for criterion in TEST_RESOURCES.keys()
-  if not criterion == "syntax-test"
+  if not criterion == "syntax"
 ]
 
 BEST_PRACTICES_TESTS = [
   criterion for criterion in CRITERIONS_NEEDING_SYNTAX
-  if not criterion in ["syntax-test", "owl-rl-constraint-test", "profile-test"]
+  if not criterion in ["syntax", "owl-rl-constraint", "profile"]
 ]

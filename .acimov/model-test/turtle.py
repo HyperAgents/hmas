@@ -32,8 +32,6 @@ from constants import (
     BRANCH
 )
 
-now = datetime.now()
-
 def statement(self, subject, *po):
     for item in po:
         self.add((subject, item[0], item[1]))
@@ -50,11 +48,10 @@ def prepare_graph():
 
     return graph
 
-def make_assertor(report, script_name, dev=DEV_USERNAME):
-    assertorId = f"{dev}-{script_name}"
-    title = f"{dev} using {script_name} script"
-    description = f"Represents the user @{dev} launching the {script_name} test script"
-    scriptURI = f"{PROFILE_CHECK_URI}manual-test"
+def make_assertor(report, mode, script_uri, dev=DEV_USERNAME):
+    assertorId = f"{dev}-{mode}"
+    title = f"{dev} using {mode} script"
+    description = f"Test triggered by @{dev} by a {mode} trigger"
     
     # Define the developper and the assertor
     assert_group = BNode(assertorId)
@@ -74,7 +71,8 @@ def make_assertor(report, script_name, dev=DEV_USERNAME):
         (DCTERMS.title, Literal(title, lang="en")),
         (DCTERMS.description, Literal(description, lang="en")),
         (EARL_NAMESPACE.mainAssertor, developper),
-        (FOAF.member, URIRef(scriptURI))
+        (FOAF.member, URIRef(script_uri)),
+        (DCTERMS.date, Literal(datetime.now(), datatype=XSD.dateTime))
     )
 
     return assert_group
@@ -104,7 +102,8 @@ def make_subject(
         report,
         heart,
         appendix=[],
-        name=""
+        name="",
+        custom_title=""
 ):
     subject_id = make_subject_id(heart, appendix=appendix) if name == "" else name
 
@@ -115,6 +114,8 @@ def make_subject(
 
     if len(appendix) > 0:
         title = f"{title} with related terms from the fragments {', '.join(appendix)}"
+
+    title = title if len(custom_title) == 0 else custom_title
     
     module_fragments = [item for item in heart + appendix if item.startswith('src/')]
     module_fragments = [
@@ -128,7 +129,7 @@ def make_subject(
         for item in modelets_fragment
     ]
 
-    test_subject = BNode(subject_id)
+    test_subject = BNode(subject_id, subject_id)
     statements = [
         (DCTERMS.hasPart, part)
         for part in module_fragments + modelets_fragment
@@ -136,7 +137,8 @@ def make_subject(
 
     statements = [
         (RDF.type, EARL_NAMESPACE.TestSubject),
-        (DCTERMS.title, Literal(title, lang="en"))
+        (DCTERMS.title, Literal(title, lang="en")),
+        (DCTERMS.identifier, Literal(subject_id))
     ] + statements
     report.statement(test_subject, *statements)
 
@@ -144,10 +146,11 @@ def make_subject(
 
 def make_pointer(report, pointer_string):
     statement_subject = pointer_string.split(" ")[0]
+    is_statement = " " in pointer_string
 
-    if statement_subject[0] == "<":
+    if statement_subject[0] == "<" and not is_statement:
         pointer = URIRef(statement_subject[1:-1])
-    elif statement_subject[0] != "[":
+    elif statement_subject[0] != "[" and not is_statement:
         normalizedUri = Namespace(
             [
                 namespace for prefix, namespace in report.namespaces()
@@ -160,7 +163,7 @@ def make_pointer(report, pointer_string):
     
     return pointer
 
-def make_result(
+def make_outcome(
     report,
     criterion,
     error,
@@ -182,17 +185,9 @@ def make_result(
     outcome = BNode()
     report.statement(outcome, *outcome_statement)
 
-    result_statement = [
-        (RDF.type, EARL_NAMESPACE.TestResult),
-        (EARL_NAMESPACE.outcome, outcome)
-    ]
+    return outcome
 
-    result = BNode()
-    report.statement(result, *result_statement)
-
-    return result
-
-def make_results(
+def make_outcomes(
     report,
     criterion,
     error,
@@ -209,7 +204,7 @@ def make_results(
         if skip_pass:
             return []
         outcomes = [
-            make_result(
+            make_outcome(
                 report,
                 criterion,
                 error,
@@ -219,11 +214,11 @@ def make_results(
         ]
     else:
         outcomes = [
-            make_result(
+            make_outcome(
                 report,
                 criterion,
                 error,
-                "Fail" if outcome_ressources["blocking"] else "CantTell",
+                "Fail" if outcome_ressources["blocking"] else "CannotTell",
                 messages[i],
                 pointers[i] if i < len(pointers) else []
             )
@@ -231,6 +226,21 @@ def make_results(
         ]
 
     return outcomes
+
+def make_result(report, outcomes, skip_pass=False, not_tested=False):
+    result_statement = [
+        (RDF.type, EARL_NAMESPACE.TestResult)
+    ] + [
+        (EARL_NAMESPACE.outcome, outcome)
+        for outcome in outcomes
+        if not (make_outcome_type(report, outcome) == "Pass" and skip_pass) and
+           not (make_outcome_type(report, outcome) == "NotTested" and not_tested)
+    ]
+
+    result = BNode()
+    report.statement(result, *result_statement)
+
+    return result
 
 def make_outcome_type(report, result):
     outcome = report.value(result, EARL_NAMESPACE.outcome)
@@ -243,27 +253,17 @@ def assemble_assertion(
     assertor,
     subject,
     criterion,
-    outcomes,
+    result,
     skip_pass=False,
     tested_only=False
 ):
-    outcomes = [
-        (EARL_NAMESPACE.outcome, outcome)
-        for outcome in outcomes
-        if not (make_outcome_type(report, outcome) == "Pass" and skip_pass) and \
-           not (make_outcome_type(report, outcome) == "NotTested" and tested_only)
-    ]
-
-    if len(outcomes) == 0:
-        return
-
     statement = [
         (RDF.type, EARL_NAMESPACE.Assertion),
         (EARL_NAMESPACE.assertedBy, assertor),
         (EARL_NAMESPACE.subject, subject),
         (EARL_NAMESPACE.test, ACIMOV_MODEL_NAMESPACE[criterion]),
-        (DCTERMS.date, Literal(now, datatype=XSD.dateTime))
-    ] + outcomes
+        (EARL_NAMESPACE.result, result),
+    ]
 
     assertion = BNode()
     report.statement(assertion, *statement)
@@ -284,13 +284,15 @@ def make_assertion(
         assertor,
         subject,
         criterion,
-        make_results(
-            report,
-            criterion,
-            error,
-            messages,
-            pointers,
-            skip_pass=skip_pass
+        make_result(report,
+            make_outcomes(
+                report,
+                criterion,
+                error,
+                messages,
+                pointers,
+                skip_pass=skip_pass
+            )
         ),
         skip_pass=skip_pass,
         tested_only=tested_only
@@ -314,12 +316,17 @@ def make_not_tested(
             assertor,
             subject,
             criterion,
-            [
-                make_result(
-                    report,
-                    criterion,
-                    outcome,
-                    "NotTested"
-                )
-            ]
+            make_result(
+                report,
+                [
+                    make_outcome(
+                        report,
+                        criterion,
+                        outcome,
+                        "NotTested"
+                    )
+                ],
+                not_tested=tested_only
+            )
+            
         )

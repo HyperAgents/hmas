@@ -1,4 +1,5 @@
 from .parameters import ONTOLOGY_URL, TERM_DISTANCE_THRESHOLD
+from .rdflib_info import ACIMOV_MODEL_TEST_URI
 
 # SparQL request listing all the ontology terms not linked to a moduled by a rdfs:isDefinedBy property
 NOT_REFERENCED = """
@@ -144,6 +145,8 @@ SELECT DISTINCT ?suffix1 ?suffix2 WHERE {
   FILTER(str(?s1) > str(?s2))
   BIND (SUBSTR(str(?s1), STRLEN("ONTOLOGY_URL") + 1) as ?suffix1)
   BIND (SUBSTR(str(?s2), STRLEN("ONTOLOGY_URL") + 1) as ?suffix2)
+  FILTER(strlen(?suffix1) > 0)
+  FILTER(strlen(?suffix2) > 0)
 } ORDER BY ?suffix1
 """.replace("ONTOLOGY_URL", ONTOLOGY_URL)
 
@@ -165,7 +168,20 @@ SELECT ?suffix1 ?suffix2 ?distance WHERE {
       str(TERM_DISTANCE_THRESHOLD)
 ) + LEVENSHTEIN_FUNCTION
 
-BLOCKINGS_ERRORS = """
+NOT_LABELED = """
+select distinct ?suffix where {
+  ?term ?p [] .
+  FILTER(strstarts(str(?term), "ONTOLOGY_URL"))
+  FILTER NOT EXISTS {
+    ?term rdfs:label ?label .
+    FILTER(lang(?label) = "en")
+  }
+  BIND(substr(str(?term), strlen("ONTOLOGY_URL") + 1) AS ?suffix)
+  FILTER(strlen(?suffix) > 0)
+}
+""".replace("ONTOLOGY_URL", ONTOLOGY_URL)
+
+FAIL_ASSERTIONS = """
 select ?n ?c ?t ?d where {
   ?a a earl:Assertion ;
   earl:subject ?s ;
@@ -183,15 +199,63 @@ select ?n ?c ?t ?d where {
 }
 """
 
-NOT_LABELED = """
-select distinct ?suffix where {
-  ?term ?p [] .
-  FILTER(strstarts(str(?term), "ONTOLOGY_URL"))
-  FILTER NOT EXISTS {
-    ?term rdfs:label ?label .
-    FILTER(lang(?label) = "en")
-  }
-  BIND(substr(str(?term), strlen("ONTOLOGY_URL") + 1) AS ?suffix)
-  FILTER(strlen(?suffix) > 0)
+GET_DETAILED_ASSERTIONS = """
+SELECT ?assertion ?subject ?result ?outcome ?outcomeType ?subjectId ?subjectTitle ?criterionId ?outcomeTitle ?outcomeDescription WHERE {
+  ?assertion a earl:Assertion ;
+  earl:result ?result ;
+  earl:subject ?subject ;
+  earl:test ?criterionId .
+
+  ?subject dcterms:identifier ?subjectId ;
+    dcterms:title ?subjectTitle .
+
+  ?result earl:outcome ?outcome .
+  
+  ?outcome a ?outcomeType ;
+    dcterms:title ?outcomeTitle ;
+    dcterms:description ?outcomeDescription .
+} ORDER BY DESC(?subjectId) ?criterionId
+"""
+
+SEVERITY_RANGE = [
+  ("Fail", ":x:", "red"),
+  ("CannotTell", ":warning:", "orange"),
+  ("NotTested", ":grey_question:", "grey"),
+  ("Pass", ":white_check_mark:", "green")
+]
+
+GET_ASSERTION_PARTS = """
+SELECT DISTINCT ?subjectId ?part WHERE {
+  { GET_DETAILED_ASSERTIONS }
+  ?subject dcterms:hasPart ?part .
 }
-""".replace("ONTOLOGY_URL", ONTOLOGY_URL)
+""".replace("GET_DETAILED_ASSERTIONS", GET_DETAILED_ASSERTIONS)
+
+GET_ASSERTION_POINTERS = """
+SELECT DISTINCT ?outcome ?pointer WHERE {
+  { GET_DETAILED_ASSERTIONS }
+  ?outcome rdfs:seeAlso ?pointer .
+}
+""".replace("GET_DETAILED_ASSERTIONS", GET_DETAILED_ASSERTIONS)
+
+GET_ASSERTOR_DETAILS = """
+SELECT ?title ?description ?date ?script ?page WHERE {
+  ?account a foaf:OnlineAccount ;
+  dcterms:title ?title ;
+  dcterms:description ?description ;
+  dcterms:date ?date ;
+  foaf:member ?script ;
+  earl:mainAssertor _:assertor .
+
+  _:assertor schema:mainEntityOfPage ?page .
+} LIMIT 1
+"""
+
+GET_CRITERION_DATA = """
+SELECT ?identifier ?title ?description ?description {
+  _:x a earl:TestCriterion ;
+    dcterms:identifier ?identifier ;
+    dcterms:title ?title ;
+    dcterms:description ?description .
+}
+"""

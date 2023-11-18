@@ -1,5 +1,5 @@
 {
-    "term-referencing-test": {
+    "term-referencing": {
         "title": "Term referencing test",
         "description": "Test checking if each term is linked to a module through a rdfs:isDefineBy property",
         "errors": {
@@ -13,7 +13,7 @@
                     "title": "The test could not be run",
                     "description": "The subject syntax must be correct"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "Term not referenced to a module",
                     "description": "A term of the fragment is not linked to a module by a rdfs:isDefinedBy property"
                 },
@@ -24,7 +24,7 @@
             }
         }
     },
-    "domain-and-range-referencing-test": {
+    "domain-and-range-referencing": {
         "title": "Domain or range out of vocabulary",
         "description": "Test checking if each range of domain of any property is defined within the fragment",
         "errors": {
@@ -38,7 +38,7 @@
                     "title": "The test could not be run",
                     "description": "The syntax of the subject and any of its imports must be syntaxically correct"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "Domain out of vocabulary",
                     "description": "A property defined in the fragment has a rdfs:domain defined out of the vocabulary"
                 },
@@ -57,7 +57,7 @@
                     "title": "The test could not be run",
                     "description": "The syntax of the subject and any of its imports must be syntaxically correct"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "Range out of vocabulary",
                     "description": "A property defined in the fragment has a rdfs:range defined out of the vocabulary"
                 },
@@ -68,7 +68,7 @@
             }
         }
     },
-    "terms-differenciation-test": {
+    "terms-differenciation": {
         "title": "Test of terms differenciation",
         "description": "Test checking if each term of the subject have a Levenshtein distance high enough from each other",
         "errors": {
@@ -82,7 +82,7 @@
                     "title": "The test could not be run",
                     "description": "The subject needs to be syntaxically correct"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "Too close terms",
                     "description": "Two terms defined in the fragment have a Levenshtein distance too low"
                 },
@@ -93,7 +93,7 @@
             }
         }
     },
-    "syntax-test": {
+    "syntax": {
         "title": "Syntax test",
         "description": "A test meant to check wether the test subject is syntaxically correct or not.",
         "errors": {
@@ -107,7 +107,7 @@
                     "title": "The test could not be run",
                     "description": "The file needs to be found"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "Test subject has syntax errors",
                     "description": "The subject has turtle syntax errors"
                 },
@@ -118,7 +118,7 @@
             }
         }
     },
-    "owl-rl-constraint-test": {
+    "owl-rl-constraint": {
         "title": "OWL RL Constraint violation test",
         "description": "A test meant to check if a OWL RL constraint is violated",
         "errors": {
@@ -132,7 +132,7 @@
                     "title": "The test could not be run",
                     "description": "The subject and its recursive imports must be syntaxically correct"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "OWL RL Constraint violation",
                     "description": "The fragment violates at least one OWL violation"
                 },
@@ -143,7 +143,7 @@
             }
         }
     },
-    "labeled-terms-test": {
+    "labeled-terms": {
         "title": "Term labeling test",
         "description": "Test checking if all the terms defined in the subject have at least a rdfs:label pointing to a literal in English",
         "errors": {
@@ -157,7 +157,7 @@
                     "title": "The test could not be run",
                     "description": "The subject and its recursive imports must be syntaxically correct"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "Terms not labeled",
                     "description": "Some terms do not have a rdfs:label property pointing to a literal written in English"
                 },
@@ -168,7 +168,7 @@
             }
         }
     },
-    "profile-test": {
+    "profile-compatibility": {
         "title": "OWL Profile Compatibility Test",
         "description": "Test for the compatibility of the subject for the OWL Profile",
         "errors": {
@@ -182,7 +182,7 @@
                     "title": "The test could not be run",
                     "description": "The subject must be syntaxically correct"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "OWL TC Profile incompatible",
                     "description": "The subject is not included in the OWL TC sublanguage"
                 },
@@ -201,7 +201,7 @@
                     "title": "The test could not be run",
                     "description": "The subject must be syntaxically correct"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "OWL RL Profile incompatible",
                     "description": "The subject is not included in the OWL RL sublanguage"
                 },
@@ -220,7 +220,7 @@
                     "title": "The test could not be run",
                     "description": "The subject must be syntaxically correct"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "OWL QL Profile incompatible",
                     "description": "The subject is not included in the OWL QL sublanguage"
                 },
@@ -239,7 +239,7 @@
                     "title": "The test could not be run",
                     "description": "The subject must be syntaxically correct"
                 },
-                "CantTell": {
+                "CannotTell": {
                     "title": "OWL EL Profile incompatible",
                     "description": "The subject is not included in the OWL EL sublanguage"
                 },

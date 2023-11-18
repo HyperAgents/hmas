@@ -1,0 +1,11 @@
+import regex as re
+
+ERROR_TABLE_HEADER = [
+    "|*Jump*|*Number*|*Outcome type*|*Subject*|*Criterion*|*Title*|*Link*|",
+    "|------|--------|--------------|---------|-----------|-------|------|"
+]
+
+COLOR_BOX_TEMPLATE = "EMOJI*TEXT*"
+
+MODULE_URL_FORMAT = re.compile('src/[^/]+$')
+MODELET_URL_FORMAT = re.compile('domains/[^/]+/[^/]+/onto\.ttl')

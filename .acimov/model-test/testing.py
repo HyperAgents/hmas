@@ -25,12 +25,13 @@ from constants import (
     NOT_LABELED
 )
 
-from exporting import (
+from turtle import (
     make_subject,
     make_not_tested,
-    make_results,
+    make_outcomes,
     make_assertion,
-    assemble_assertion
+    assemble_assertion,
+    make_result
 )
 
 
@@ -91,7 +92,7 @@ def profile_check(
         assertor,
         subject,
         skip_pass=False,
-        tested_only=False
+        not_tested=False
     ):
     """Returns a report about whether an ontology is compatible with each profile and if not, why
 
@@ -108,13 +109,14 @@ def profile_check(
     for decidability_level in DECIDABILITY_RANGE:
         # Keeping 2 arrays containing almost the same thing was not necessary, so getattr
         profile = getattr(owl_profile, decidability_level)
-        is_compatible, raw_message = engine.process(profile), engine.getMessage()
+        engine.process(profile)
+        raw_message = engine.getMessage()
         engine.setMessage("")
         error_id = f"{decidability_level.lower().replace('_', '-')}-profile-error"
         messages, pointers = profile_errors(raw_message)
-        results += make_results(
+        results += make_outcomes(
             report,
-            "profile-test",
+            "profile-compatibility",
             error_id,
             messages,
             pointers=pointers,
@@ -125,10 +127,15 @@ def profile_check(
         report,
         assertor,
         subject,
-        "profile-test",
-        results,
+        "profile-compatibility",
+        make_result(
+            report,
+            results,
+            skip_pass=skip_pass,
+            not_tested=not_tested,
+        ),
         skip_pass=skip_pass,
-        tested_only=tested_only
+        tested_only=not_tested
     )
 
     # Check for respect for OWL constraints
@@ -136,11 +143,11 @@ def profile_check(
         report,
         assertor,
         subject,
-        "owl-rl-constraint-test",
+        "owl-rl-constraint",
         "owl-rl-constraint-violation",
         check_OWL_constraints(fragment),
         skip_pass=skip_pass,
-        tested_only=tested_only
+        tested_only=not_tested
     )
 
 def fragment_check(
@@ -166,7 +173,7 @@ def fragment_check(
             report,
             assertor,
             subject,
-            "syntax-test",
+            "syntax",
             "syntax-error",
             fragment_no_import,
             skip_pass=skip_pass,
@@ -192,7 +199,7 @@ def fragment_check(
         assertor,
         subject,
         skip_pass=skip_pass,
-        tested_only=tested_only
+        not_tested=tested_only
     )
 
     if with_import_load_error:
@@ -281,7 +288,7 @@ def modelets_tests(
             report,
             assertor,
             standalone_subject,
-            skip=["domain-and-range-referencing-test"],
+            skip=["domain-and-range-referencing"],
             skip_pass=skip_pass,
             tested_only=tested_only
         )
@@ -362,7 +369,7 @@ def best_practices_test(
     """
 
     # Check for terms not linked to an ontology
-    if not "term-referencing-test" in skip:
+    if not "term-referencing" in skip:
         unlinked_subjects = query_graph(fragment_no_import, NOT_REFERENCED)
         unlinked_subjects_pointers = [[pointer] for pointer in unlinked_subjects]
         unlinked_subject_messages = [
@@ -373,14 +380,14 @@ def best_practices_test(
             report,
             assertor,
             subject,
-            "term-referencing-test",
+            "term-referencing",
             "no-reference-module",
             unlinked_subject_messages,
             unlinked_subjects_pointers,
             skip_pass=skip_pass
         )
     
-    if not "domain-and-range-referencing-test" in skip:
+    if not "domain-and-range-referencing" in skip:
         # Checking for domain property out of the vocabulary
         dov = query_graph(fragment_wih_import, DOMAIN_OUT_Of_VOCABULARY)
         dov = [line.split("\t") for line in dov]
@@ -396,7 +403,7 @@ def best_practices_test(
             report,
             assertor,
             subject,
-            "domain-and-range-referencing-test",
+            "domain-and-range-referencing",
             "domain-out-of-vocabulary",
             dov_messages,
             dov_pointers,
@@ -418,7 +425,7 @@ def best_practices_test(
             report,
             assertor,
             subject,
-            "domain-and-range-referencing-test",
+            "domain-and-range-referencing",
             "range-out-of-vocabulary",
             rov_messages,
             rov_pointers,
@@ -426,25 +433,23 @@ def best_practices_test(
         )
 
     # Checking for too close terms
-    if not "terms-differenciation-test" in skip:
+    if not "terms-differenciation" in skip:
         term_pairs = query_graph(fragment_no_import, GET_TERM_PAIRS)
-        term_pairs = [
-            [item.strip()[1:-1] for item in line.split("\t")]
-            for line in term_pairs
-            if levenshtein(line[0], line[1]) > TERM_DISTANCE_THRESHOLD
-        ]
+        term_pairs = [[item.strip()[1:-1] for item in line.split("\t")] for line in term_pairs]
+        term_pairs = [pair for pair in term_pairs if levenshtein(*pair) < TERM_DISTANCE_THRESHOLD]
+
         make_assertion(
             report,
             assertor,
             subject,
-            "terms-differenciation-test",
+            "terms-differenciation",
             "too-close-terms",
             [f"The following terms are too similar: :{line[0]} and :{line[1]}" for line in term_pairs],
             [[f"<{ONTOLOGY_URL}{item}>" for item in line] for line in term_pairs],
             skip_pass=skip_pass
         )
     
-    if not "labeled-terms-test" in skip:
+    if not "labeled-terms" in skip:
         not_labeled_terms = query_graph(fragment_no_import, NOT_LABELED)
         not_labeled_pointers = [[f"<{ONTOLOGY_URL}{line.strip()[1:-1]}>"] for line in not_labeled_terms if len(line.strip()) > 0]
         not_labeled_messages = [f"The term :{pointer[0].split(ONTOLOGY_SEPARATOR)[-1][:-1]} has no rdfs:label to define it in natural language" for pointer in not_labeled_pointers]
@@ -452,7 +457,7 @@ def best_practices_test(
             report,
             assertor,
             subject,
-            "labeled-terms-test",
+            "labeled-terms",
             "not-labeled-term",
             not_labeled_messages,
             pointers=not_labeled_pointers,
@@ -465,14 +470,15 @@ def merged_fragment_set_test(
         fragments_to_merge,
         heart_name,
         skip_pass=False,
-        tested_only=False
+        tested_only=False,
+        custom_title=""
     ):
     fragments_keys = [
         relpath(fragment, PWD_TO_ROOT_FOLDER).replace(sep, "/")
         for fragment in fragments_to_merge
     ]
 
-    subject = make_subject(report, fragments_keys, name=heart_name)
+    subject = make_subject(report, fragments_keys, name=heart_name, custom_title=custom_title)
     fragment_check(
         fragments_to_merge,
         report,

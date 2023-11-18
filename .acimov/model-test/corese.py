@@ -91,8 +91,9 @@ def get_error_output():
     return "\n".join(total_output).strip()
 
 # Start java gateway
+graph_db_port = launch_gateway()
 graph_db_process = Popen(
-    "java -jar -Dfile.encoding=UTF-8".split(" ") + [CORESE_LOCAL_PATH],
+    f"java -jar -Dfile.encoding=UTF-8 -p {str(graph_db_port)}".split(" ") + [CORESE_LOCAL_PATH],
     stdout=PIPE,
     stderr=DEVNULL,
     close_fds=ON_POSIX
@@ -109,7 +110,7 @@ gateway = JavaGateway(
     # python call back port set dynamically
     # callback_server_parameters=CallbackServerParameters(port=0),
     # gateway to our instance of the graph DB
-    # java_process=graph_db_process
+    java_process=graph_db_process
 )
 register(gateway.shutdown)
 
@@ -124,7 +125,7 @@ register(gateway.shutdown)
 #        .java_gateway_server\
 #        .getCallbackClient()\
 #        .getAddress(),
-#    python_port
+#    graph_db_port
 #)
 
 # Import of class

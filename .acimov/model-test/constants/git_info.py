@@ -1,5 +1,5 @@
 from subprocess import check_output
-from os.path import relpath
+from os.path import relpath, sep
 
 from .paths import ROOT_FOLDER
 
@@ -11,7 +11,7 @@ REPO_URI = check_output(
   .strip()
 
 # Base reporitory platform URL
-PLATFORM_URL = "/".join(REPO_URI.split("/")[:-2])
+PLATFORM_URL = "/".join(REPO_URI.split("/")[:-3])
 
 # The current branch
 BRANCH = check_output(
@@ -23,8 +23,10 @@ BRANCH = check_output(
 # The relative path from root to the profile_test folder
 PATH_TO_PROFILE_FOLDER = relpath(".", ROOT_FOLDER)
 
+IS_PROFILE_FOLDER_PWD = PATH_TO_PROFILE_FOLDER == "." or PATH_TO_PROFILE_FOLDER == f".{sep}"
+
 # The path to the profile check README.md
-PROFILE_CHECK_URI = f"{REPO_URI}tree/{BRANCH}/{PATH_TO_PROFILE_FOLDER}"
+PROFILE_CHECK_URI = f"{REPO_URI}blob/{BRANCH}/{'' if IS_PROFILE_FOLDER_PWD else PATH_TO_PROFILE_FOLDER}"
   # TODO: Should be manual/precommit/actions compatible
   # git config --get remote.origin.url for precommit/manual
   # $GITHUB_SERVER_URL + '/' + $GITHUB_REPOSITORY for action
@@ -40,7 +42,7 @@ except:
   pass
 
 
-ACIMOV_MODEL_TEST_URI = f"{PROFILE_CHECK_URI}/model-test-onto.ttl"
+ACIMOV_MODEL_TEST_URI = f"{PROFILE_CHECK_URI}.acimov/model-test/model-test-onto.ttl"
 # URL prefix for the files in the current branch in src
 SRC_URL = f"{REPO_URI}blob/{BRANCH}/src/"
 DOMAINS_URL = SRC_URL.replace("src", "domains")
