@@ -49,24 +49,16 @@ modes = [
     if item.startswith("--mode=")
 ]
 
-names = [
-    item.split('=')[1]
-    for item in args
-    if item.startswith("--dev=")
-]
-
 skip_pass = "--skip-pass" in args
 tested_only = "--tested-only" in args
 
-dev = names[0] if len(names) > 0 else DEV_USERNAME
 mode = modes[0] if len(modes) > 0 else "manual"
 
 report = prepare_graph()
 test_assertor = make_assertor(
     report,
     mode,
-    f"{PROFILE_CHECK_URI}.acimov/model-test/complete-test.py",
-    dev=dev
+    f"{PROFILE_CHECK_URI}.acimov/model-test/complete-test.py"
 )
 
 print_title("Checking existing modules")
@@ -110,7 +102,7 @@ merged_fragment_set_test(
     custom_title=f"All the fragments from branch {BRANCH} that are syntaxically correct as well as their recursive imports"  
 )
 
-file_name = mode if not mode == "manual" else f"{mode}-{dev}-{datetime_id()}"
+file_name = mode if not mode == "manual" else f"{mode}-{DEV_USERNAME}-{datetime_id()}"
 file_base = f"{PWD_TO_MODEL_OUTPUT_FOLDER}{file_name}"
 
 print_title("Exporting results")

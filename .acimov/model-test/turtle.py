@@ -48,14 +48,14 @@ def prepare_graph():
 
     return graph
 
-def make_assertor(report, mode, script_uri, dev=DEV_USERNAME):
-    assertorId = f"{dev}-{mode}"
-    title = f"{dev} using {mode} script"
-    description = f"Test triggered by @{dev} by a {mode} trigger"
+def make_assertor(report, mode, script_uri):
+    assertorId = f"{DEV_USERNAME}-{mode}"
+    title = f"{DEV_USERNAME} using {mode} script"
+    description = f"Test triggered by @{DEV_USERNAME} by a {mode} trigger"
     
     # Define the developper and the assertor
     assert_group = BNode(assertorId)
-    developper = BNode(dev)
+    developper = BNode(DEV_USERNAME)
 
     # Define the developper
     report.statement(
