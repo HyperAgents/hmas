@@ -20,7 +20,7 @@ if REPO_URI.endswith("/"):
 PLATFORM_URL = "/".join(REPO_URI.split("/")[:-2])
 
 # The current branch
-arg_branch = [item.splt("=")[1] for item in argv if item.startswith("--BRANCH=")]
+arg_branch = [item.split("=")[1] for item in argv if item.startswith("--BRANCH=")]
 BRANCH = arg_branch[0] if len(arg_branch) > 0 else check_output(
   "git rev-parse --abbrev-ref HEAD".split(" ")
 )\
