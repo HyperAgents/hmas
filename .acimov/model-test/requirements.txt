@@ -3,3 +3,4 @@ rdflib
 regex
 requests
 markdown
+dateutil
