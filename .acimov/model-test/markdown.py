@@ -1,5 +1,5 @@
 from rdflib import Graph, Literal
-from dateutil import parser
+from datetime import datetime
 from constants import (
     SEVERITY_RANGE,
     COLOR_BOX_TEMPLATE,
@@ -79,7 +79,7 @@ def make_assertor_chapter(report):
 
     title, description, date, script, page = assertor_info
 
-    date = parser.parse(str(date)).strftime("%Y-%m-%d %H:%M:%S")
+    date = datetime.fromisoformat(str(date)).strftime("%Y-%m-%d %H:%M:%S")
     dev = page.split('/')[-1]
 
     description = description.replace(f"@{dev}", f"[@{dev}]({page})")
