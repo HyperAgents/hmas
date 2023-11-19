@@ -208,7 +208,7 @@ def make_pointer(report, subject, pointer_string):
         )[pointer_string.split(":")[1]]
         pointer = URIRef(normalizedUri)
     else:
-        pointer = Literal(pointer_string.replace("<", "&#60;").replace(">", "&#62;"))
+        pointer = Literal(pointer_string.replace("<", "&#60;")) #.replace(">", "&#62;")
     
     return pointer
 
