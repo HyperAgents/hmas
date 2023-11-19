@@ -6,7 +6,8 @@ from corese import (
     safe_load,
     prefix_manager,
     owl_profile,
-    check_OWL_constraints
+    check_OWL_constraints,
+    profile_errors
 )
 from constants import (
     GET_BY_MODULE,
@@ -71,21 +72,6 @@ def group_terms_by_module(modelet):
 
     return grouped_triples
 
-def profile_errors(raw_message):
-    lines =  raw_message.split('\n')
-    matches = [PROFILE_ERROR_FORMAT.match(item) for item in lines]
-    matches = [i for i in range(len(matches)) if not matches[i] is None]
-
-    messages = [lines[i] for i in matches]
-    messages = ["".join(line.split('.')[1:]).strip() for line in messages]
-
-    intervals = [range(matches[i] + 1, matches[i + 1]) for i in range(len(matches))[:-1]]
-    intervals = intervals + [range(matches[-1] + 1, len(lines))]
-    statements = [" ".join([lines[i] for i in item]).strip() for item in intervals]
-
-    return [message for message in messages if len(message) > 0], \
-           [[statements[i]] for i in range(len(messages)) if len(messages[i]) > 0]
-
 def profile_check(
         fragment,
         report,
@@ -109,11 +95,13 @@ def profile_check(
     for decidability_level in DECIDABILITY_RANGE:
         # Keeping 2 arrays containing almost the same thing was not necessary, so getattr
         profile = getattr(owl_profile, decidability_level)
-        engine.process(profile)
+        compatible = engine.process(profile)
         raw_message = engine.getMessage()
         engine.setMessage("")
         error_id = f"{decidability_level.lower().replace('_', '-')}-profile-error"
-        messages, pointers = profile_errors(raw_message)
+        messages, pointers = [], []
+        if not compatible:
+            messages, pointers = profile_errors(raw_message)
         results += make_outcomes(
             report,
             "profile-compatibility",

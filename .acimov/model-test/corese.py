@@ -7,12 +7,7 @@ from time import sleep
 from os.path import exists, sep
 from requests import get
 from typing import Union, List
-from py4j.java_gateway import (
-    launch_gateway,
-    JavaGateway,
-    GatewayParameters,
-    CallbackServerParameters
-)
+from py4j.java_gateway import launch_gateway, JavaGateway
 
 from constants import (
     AST_ERROR_FORMAT,
@@ -323,3 +318,36 @@ def check_OWL_constraints(graph):
         else:
             # If the exception is of a different type, return an error message
             return [f"An error occurred while processing the graph: {e}"]
+
+def profile_errors(raw_message):
+    descriptions = []
+    pointers = []
+
+    lines = [
+        line.strip()
+        for line in raw_message.split("\n")
+        if len(line.strip()) > 0
+    ]
+
+    descriptions.append(lines[1].split(".")[1].strip())
+    
+    current_statement = ""
+
+    for i in range(2, len(lines)):
+        # Check if current statement is correct
+        try:
+            if len(current_statement) == 0 or current_statement.strip().endswith(";"):
+                raise Exception()
+            load([], extras=current_statement, disable_owl=True)
+            pointers.append(current_statement.strip())
+            descriptions.append(lines[i].split(".")[-1].strip())
+            current_statement = ""
+        except:
+            current_statement += f"\n{lines[i]}"
+            continue
+    
+    pointers.append(current_statement.strip())
+
+    pointers = [[pointer] for pointer in pointers]
+
+    return descriptions, pointers
