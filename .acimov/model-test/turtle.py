@@ -182,7 +182,7 @@ def extract_statement(report, subject, pointer):
     statement.bind("", ONTOLOGY_NAMESPACE)
     
     statement = statement.serialize(format="ttl", encoding="utf-8").decode(encoding="utf-8")
-    statement = [line.strip() for line in statement.split("\n") if len(line.strip()) > 0]
+    statement = [line.strip().replace("<", "&#60;") for line in statement.split("\n") if len(line.strip()) > 0]
     
     for i in range(len(statement)):
         if not statement[i].startswith("@"):
