@@ -201,9 +201,15 @@ def extract_statement(report, subject, pointer):
                             else f'"{str(triples)}"'
     else:
         for triple in triples:
-            statement.add(triple)
-        
-        # statement.bind("", ONTOLOGY_NAMESPACE)
+            targetTriple = triple
+            if isinstance(triple[2], Literal):
+                literal = triple[2]
+                ltype = literal.datatype
+                if len(literal) > 65:
+                    separator = "..." if ltype is None or ltype == XSD.string else ""
+                    newLiteral = Literal(f"{literal[:80]}{separator}", lang=literal.language, datatype=ltype)
+                    targetTriple = (targetTriple[0], targetTriple[1], newLiteral)
+            statement.add(targetTriple)
         
         statement = statement.serialize(format="ttl", encoding="utf-8").decode(encoding="utf-8")
 
