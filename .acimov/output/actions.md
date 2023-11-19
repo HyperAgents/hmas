@@ -11,9 +11,9 @@ Here is some context about under which context this test was made
 |Assertor|[NicoRobertIn](https://github.com/NicoRobertIn)|
 |----|-----|
 |Title|NicoRobertIn using actions script|
-|Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by a actions trigger|
+|Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py)
-|Date|2023-11-19 02:39:22|
+|Date|2023-11-19 15:48:28|
 
 ***
 
@@ -27,7 +27,7 @@ Here is the human readable preview for the model test report
 
 :x:3 [Fail](#fail-assertions), :warning:145 [CannotTell](#cannottell-assertions), :grey_question:20 [NotTested](#nottested-assertions), :white_check_mark:135 [Pass](#pass-assertions)
 
-<div  style="border-radius: 12px; height: 25px; overflow: hidden"><img src="https://placehold.co/15x15/red/red.png" width="0%" height="25px" style="border-radius: 12px 0px 0px 12px"/><img src="https://placehold.co/15x15/orange/orange.png" width="47%" height="25px" /><img src="https://placehold.co/15x15/grey/grey.png" width="6%" height="25px" /><img src="https://placehold.co/15x15/green/green.png" width="47%" height="25px" style="border-radius: 0px 12px 12px 0px"/></div>
+<div  style="border-radius: 12px; height: 25px; overflow: hidden"><img src="https://placehold.co/15x15/red/red.png" width="1%" height="25px" style="border-radius: 12px 0px 0px 12px"/><img src="https://placehold.co/15x15/orange/orange.png" width="47%" height="25px" style=""/><img src="https://placehold.co/15x15/grey/grey.png" width="6%" height="25px" style=""/><img src="https://placehold.co/15x15/green/green.png" width="46%" height="25px" style="border-radius: 0px 12px 12px 0px"/></div>
 
 ## Fail assertions
 
@@ -383,7 +383,7 @@ New :x:Fail assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[syntax](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#syntax)|
@@ -407,7 +407,7 @@ New :x:Fail assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[syntax](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#syntax)|
@@ -431,7 +431,7 @@ New :x:Fail assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[syntax](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#syntax)|
@@ -457,7 +457,7 @@ New :warning:CannotTell assertion
 |Name|regulation-logistics-structure-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -470,7 +470,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :regulation has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/regulation|
+|Pointer|<pre lang='rdf'>:regulation a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-3497-8758>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://orcid.org/0000-0003-4509-9537> ;<br>dct:creator <https://orcid.org/0000-0002-4506-2745> ;<br>dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems.",<br>"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias." ;<br>dct:issued "2022-05-01" ;<br>dct:title "Hypermedia MAS Regulation Ontology",<br>"Ontologie de Régulation des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 2
@@ -482,7 +482,7 @@ New :warning:CannotTell assertion
 |Name|regulation-logistics-structure-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -495,8 +495,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :isMembershipOf and :isMembershipIn|
-|Pointer|https://purl.org/hmas/isMembershipOf|
-|Pointer|https://purl.org/hmas/isMembershipIn|
+|Pointer|<pre lang='rdf'>:isMembershipOf a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership of" ;<br>rdfs:comment "A relation that refers to the Agent involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation ;<br>rdfs:range :Agent .<br/></pre>|
+|Pointer|<pre lang='rdf'>:isMembershipIn a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership in" ;<br>rdfs:comment "A relation that refers to the Group involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation ;<br>rdfs:range :Group .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 3
@@ -508,7 +508,7 @@ New :warning:CannotTell assertion
 |Name|regulation-logistics-create-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -521,7 +521,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :regulation has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/regulation|
+|Pointer|<pre lang='rdf'>:regulation a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-3497-8758>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://orcid.org/0000-0003-4509-9537> ;<br>dct:creator <https://orcid.org/0000-0002-4506-2745> ;<br>dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems.",<br>"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias." ;<br>dct:issued "2022-05-01" ;<br>dct:title "Hypermedia MAS Regulation Ontology",<br>"Ontologie de Régulation des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 4
@@ -533,7 +533,7 @@ New :warning:CannotTell assertion
 |Name|regulation-logistics-create-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -546,8 +546,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :isMembershipOf and :isMembershipIn|
-|Pointer|https://purl.org/hmas/isMembershipOf|
-|Pointer|https://purl.org/hmas/isMembershipIn|
+|Pointer|<pre lang='rdf'>:isMembershipOf a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership of" ;<br>rdfs:comment "A relation that refers to the Agent involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation ;<br>rdfs:range :Agent .<br/></pre>|
+|Pointer|<pre lang='rdf'>:isMembershipIn a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership in" ;<br>rdfs:comment "A relation that refers to the Group involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation ;<br>rdfs:range :Group .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 5
@@ -559,7 +559,7 @@ New :warning:CannotTell assertion
 |Name|regulation|
 |----|----|
 |Title|Standalone module src/regulation.ttl from branch test-workflow|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -572,7 +572,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :regulation has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/regulation|
+|Pointer|<pre lang='rdf'>:regulation a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-3497-8758>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://orcid.org/0000-0003-4509-9537> ;<br>dct:creator <https://orcid.org/0000-0002-4506-2745> ;<br>dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems.",<br>"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias." ;<br>dct:issued "2022-05-01" ;<br>dct:title "Hypermedia MAS Regulation Ontology",<br>"Ontologie de Régulation des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 6
@@ -584,7 +584,7 @@ New :warning:CannotTell assertion
 |Name|regulation|
 |----|----|
 |Title|Standalone module src/regulation.ttl from branch test-workflow|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -597,8 +597,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :isMembershipOf and :isMembershipIn|
-|Pointer|https://purl.org/hmas/isMembershipOf|
-|Pointer|https://purl.org/hmas/isMembershipIn|
+|Pointer|<pre lang='rdf'>:isMembershipOf a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership of" ;<br>rdfs:comment "A relation that refers to the Agent involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation ;<br>rdfs:range :Agent .<br/></pre>|
+|Pointer|<pre lang='rdf'>:isMembershipIn a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership in" ;<br>rdfs:comment "A relation that refers to the Group involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation ;<br>rdfs:range :Group .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 7
@@ -610,7 +610,7 @@ New :warning:CannotTell assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -623,7 +623,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/Affordance|
+|Pointer|<pre lang='rdf'>:Affordance a skos:Concept ;<br>dct:references "n113830aac2444895aae819dd0a1b7e72b1",<br>"n113830aac2444895aae819dd0a1b7e72b2" ;<br>rdfs:isDefinedBy :core ;<br>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment." ;<br>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents." ;<br>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]." ;<br>skos:prefLabel "affordance" ;<br>skos:related :Signifier .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 8
@@ -635,7 +635,7 @@ New :warning:CannotTell assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -660,7 +660,7 @@ New :warning:CannotTell assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -685,7 +685,7 @@ New :warning:CannotTell assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -698,7 +698,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 11
@@ -710,7 +710,7 @@ New :warning:CannotTell assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -735,7 +735,7 @@ New :warning:CannotTell assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -760,7 +760,7 @@ New :warning:CannotTell assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -773,7 +773,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 14
@@ -785,7 +785,7 @@ New :warning:CannotTell assertion
 |Name|manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -798,7 +798,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/hosts> a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br> rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;<br> rdfs:domain <https://purl.org/hmas/HypermediaMASPlatform> ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "hosts"@en ;<br> rdfs:range <https://purl.org/hmas/Hostable> ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/49><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/hosts&#62; a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719&#62; ;<br> rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;<br> rdfs:domain &#60;https://purl.org/hmas/HypermediaMASPlatform&#62; ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "hosts"@en ;<br> rdfs:range &#60;https://purl.org/hmas/Hostable&#62; ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18&#62; ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/49&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 15
@@ -810,7 +810,7 @@ New :warning:CannotTell assertion
 |Name|manufacturing-environments-discover-core|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -823,7 +823,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;<br> rdfs:domain <https://purl.org/hmas/Workspace> ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "transitivelyContains"@en ;<br> owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/transitivelyContains&#62; a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;<br> rdfs:domain &#60;https://purl.org/hmas/Workspace&#62; ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "transitivelyContains"@en ;<br> owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 16
@@ -835,7 +835,7 @@ New :warning:CannotTell assertion
 |Name|manufacturing-environments-discover-core|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -848,7 +848,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "has profile"@en ;<br> rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br> owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/hasProfile&#62; a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "has profile"@en ;<br> rdfs:range &#60;https://purl.org/hmas/ResourceProfile&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isProfileOf&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 17
@@ -860,7 +860,7 @@ New :warning:CannotTell assertion
 |Name|logistics-structure-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -873,8 +873,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :isMembershipOf and :isMembershipIn|
-|Pointer|https://purl.org/hmas/isMembershipOf|
-|Pointer|https://purl.org/hmas/isMembershipIn|
+|Pointer|<pre lang='rdf'>:isMembershipOf a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership of" ;<br>rdfs:comment "A relation that refers to the Agent involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation .<br/></pre>|
+|Pointer|<pre lang='rdf'>:isMembershipIn a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership in" ;<br>rdfs:comment "A relation that refers to the Group involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 18
@@ -886,7 +886,7 @@ New :warning:CannotTell assertion
 |Name|logistics-create-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -899,7 +899,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :OrganizationModel has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/OrganizationModel|
+|Pointer|<pre lang='rdf'>:OrganizationModel a skos:Concept ;<br>skos:definition "An Organization Model is the combination of Roles, Missions, and Facilities in a consistent way used to enact one or multiple Organizations." ;<br>skos:editorialNote "The Organization Model is represented as SHACL Shapes." ;<br>skos:prefLabel "organization model" ;<br>skos:related :Organization .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 19
@@ -911,7 +911,7 @@ New :warning:CannotTell assertion
 |Name|logistics-create-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -924,7 +924,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Organization has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/Organization|
+|Pointer|<pre lang='rdf'>[]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 20
@@ -936,7 +936,7 @@ New :warning:CannotTell assertion
 |Name|logistics-create-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -949,7 +949,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/Organization> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/Organization|
+|Pointer|<pre lang='rdf'>[]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 21
@@ -961,7 +961,7 @@ New :warning:CannotTell assertion
 |Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -974,7 +974,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property signifies has a range out of the ontology: sh:NodeShape|
-|Pointer|https://purl.org/hmas/signifies|
+|Pointer|<pre lang='rdf'>:signifies a owl:ObjectProperty ;<br>rdfs:label "signifie",<br>"signifies" ;<br>rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution." ;<br>rdfs:domain :Signifier ;<br>rdfs:isDefinedBy :interaction ;<br>rdfs:range sh:NodeShape .<br/></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
 ***
@@ -987,7 +987,7 @@ New :warning:CannotTell assertion
 |Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -1000,7 +1000,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :interaction has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/interaction|
+|Pointer|<pre lang='rdf'>:interaction a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://ns.inria.fr/fabien.gandon#me>,<br><https://pod.inrupt.com/andreiciortea/profile/card#me>,<br><https://pod.inrupt.com/smnmyr/profile/card#me> ;<br>dct:creator <https://danaivach.inrupt.net/profile/card#me> ;<br>dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems.",<br>"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias." ;<br>dct:issued "2023-01-13" ;<br>dct:title "Hypermedia MAS Interaction Ontology",<br>"Ontologie d'Interaction des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 23
@@ -1012,7 +1012,7 @@ New :warning:CannotTell assertion
 |Name|interaction|
 |----|----|
 |Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -1025,7 +1025,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property signifies has a range out of the ontology: sh:NodeShape|
-|Pointer|https://purl.org/hmas/signifies|
+|Pointer|<pre lang='rdf'>:signifies a owl:ObjectProperty ;<br>rdfs:label "signifie",<br>"signifies" ;<br>rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution." ;<br>rdfs:domain :Signifier ;<br>rdfs:isDefinedBy :interaction ;<br>rdfs:range sh:NodeShape .<br/></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
 ***
@@ -1038,7 +1038,7 @@ New :warning:CannotTell assertion
 |Name|interaction|
 |----|----|
 |Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -1051,7 +1051,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :interaction has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/interaction|
+|Pointer|<pre lang='rdf'>:interaction a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://ns.inria.fr/fabien.gandon#me>,<br><https://pod.inrupt.com/andreiciortea/profile/card#me>,<br><https://pod.inrupt.com/smnmyr/profile/card#me> ;<br>dct:creator <https://danaivach.inrupt.net/profile/card#me> ;<br>dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems.",<br>"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias." ;<br>dct:issued "2023-01-13" ;<br>dct:title "Hypermedia MAS Interaction Ontology",<br>"Ontologie d'Interaction des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 25
@@ -1063,7 +1063,7 @@ New :warning:CannotTell assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -1076,7 +1076,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :fipa has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/fipa|
+|Pointer|<pre lang='rdf'>:fipa a owl:Ontology ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 26
@@ -1088,7 +1088,7 @@ New :warning:CannotTell assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -1101,7 +1101,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/hasServiceName|
+|Pointer|<pre lang='rdf'>:hasServiceName a owl:ObjectProperty ;<br>rdfs:label "has Service Name" ;<br>rdfs:domain :APService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 27
@@ -1113,7 +1113,7 @@ New :warning:CannotTell assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -1126,7 +1126,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/APService|
+|Pointer|<pre lang='rdf'>:APService a owl:Class ;<br>rdfs:label "Agent Platform Service" ;<br>rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)." .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 28
@@ -1138,7 +1138,7 @@ New :warning:CannotTell assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -1151,7 +1151,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/hasServiceType|
+|Pointer|<pre lang='rdf'>:hasServiceType a owl:ObjectProperty ;<br>rdfs:label "has Service Type" ;<br>rdfs:domain :APService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 29
@@ -1163,7 +1163,7 @@ New :warning:CannotTell assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -1176,7 +1176,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/AgentIdentifierDescription|
+|Pointer|<pre lang='rdf'>:AgentIdentifierDescription a owl:Class ;<br>rdfs:label "Agent Identifier Description" ;<br>rdfs:comment "A resource profile that describes an agent using the Agent Identifier Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)." ;<br>rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#ResourceProfile> .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 30
@@ -1188,7 +1188,7 @@ New :warning:CannotTell assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -1201,7 +1201,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/AgentPlatformDescription|
+|Pointer|<pre lang='rdf'>:AgentPlatformDescription a owl:Class ;<br>rdfs:label "Agent Platform Description" ;<br>rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)." ;<br>rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#ResourceProfile> .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 31
@@ -1213,7 +1213,7 @@ New :warning:CannotTell assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -1226,7 +1226,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/FIPAAgentPlatform|
+|Pointer|<pre lang='rdf'>:FIPAAgentPlatform a owl:Class ;<br>rdfs:label "FIPA Agent Platform" ;<br>rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)." ;<br>rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#Platform> .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 32
@@ -1238,7 +1238,7 @@ New :warning:CannotTell assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -1251,7 +1251,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/HTTPMessageTransportService|
+|Pointer|<pre lang='rdf'>:HTTPMessageTransportService a owl:Class ;<br>rdfs:label "HTTP Message Transport Service" ;<br>rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for HTTP Specification (http://fipa.org/specs/fipa00084/SC00084F.html)." ;<br>rdfs:subClassOf :MessageTransportService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 33
@@ -1263,7 +1263,7 @@ New :warning:CannotTell assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -1276,7 +1276,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/MessageTransportService|
+|Pointer|<pre lang='rdf'>:MessageTransportService a owl:Class ;<br>rdfs:label "Message Transport Service" ;<br>rdfs:comment "A service for transporting messages among agents that conforms to the FIPA Message Transport Service Specification (http://fipa.org/specs/fipa00067/SC00067F.html)." ;<br>rdfs:subClassOf :APService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 34
@@ -1288,7 +1288,7 @@ New :warning:CannotTell assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -1301,7 +1301,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/IIOPMessageTransportService|
+|Pointer|<pre lang='rdf'>:IIOPMessageTransportService a owl:Class ;<br>rdfs:label "IIOP Message Transport Service" ;<br>rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for IIOP Specification (http://fipa.org/specs/fipa00075/SC00075G.html)." ;<br>rdfs:subClassOf :MessageTransportService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 35
@@ -1313,7 +1313,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -1326,7 +1326,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/core|
+|Pointer|<pre lang='rdf'>:core a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><http://w3id.org/people/az/me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://id.inrupt.com/smnmyr>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-4506-2745>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://www.vcharpenay.link/#me> ;<br>dct:creator <https://id.inrupt.com/andreiciortea> ;<br>dct:description "An ontology to describe Hypermedia Multi-Agent Systems.",<br>"Une ontologie pour la description de systèmes multi-agents hypermédias." ;<br>dct:issued "2021-11-21" ;<br>dct:title "Hypermedia MAS Core Ontology",<br>"Ontologie Centrale des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 36
@@ -1338,7 +1338,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -1351,7 +1351,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/Affordance|
+|Pointer|<pre lang='rdf'>:Affordance a skos:Concept ;<br>dct:references "n000ec22c8c83418aab5d856a8bc37f59b1",<br>"n000ec22c8c83418aab5d856a8bc37f59b2",<br>"n6a61ea272ea54952805e2cf98c9443b1b1",<br>"n6a61ea272ea54952805e2cf98c9443b1b2" ;<br>rdfs:isDefinedBy :core ;<br>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment." ;<br>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents." ;<br>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]." ;<br>skos:prefLabel "affordance" ;<br>skos:related :Signifier .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 37
@@ -1363,7 +1363,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1376,7 +1376,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 38
@@ -1388,7 +1388,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1401,7 +1401,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 39
@@ -1413,7 +1413,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1426,7 +1426,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> dc:references kg:Noneb20280 ;<br> dc:references kg:Noneb20281 ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> dc:references kg:Noneb20280 ;<br> dc:references kg:Noneb20281 ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 40
@@ -1438,7 +1438,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1451,7 +1451,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:domain <https://purl.org/hmas/Workspace> ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br> owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/transitivelyContains&#62; a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719&#62; ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:domain &#60;https://purl.org/hmas/Workspace&#62; ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18&#62; ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 41
@@ -1463,7 +1463,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1476,7 +1476,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 42
@@ -1488,7 +1488,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1501,7 +1501,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 43
@@ -1513,7 +1513,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1526,7 +1526,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> dc:references kg:Noneb20280 ;<br> dc:references kg:Noneb20281 ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> dc:references kg:Noneb20280 ;<br> dc:references kg:Noneb20281 ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 44
@@ -1538,7 +1538,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1551,7 +1551,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br> owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/hasProfile&#62; a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:range &#60;https://purl.org/hmas/ResourceProfile&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isProfileOf&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 45
@@ -1563,7 +1563,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -1576,8 +1576,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Domain out of vocabulary|
 |Description|The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>|
-|Pointer|https://purl.org/hmas/isHostedOn|
-|Pointer|https://purl.org/hmas/Hostable|
+|Pointer|<pre lang='rdf'>:isHostedOn a owl:AsymmetricProperty,<br>owl:ObjectProperty ;<br>rdfs:label "est hébergé sur",<br>"is hosted on" ;<br>rdfs:comment "A relation that refers to the platform that hosts an information resource or a process.",<br>"A relations that refers to the platform that hosts the resource. " ;<br>rdfs:domain :Hostable ;<br>rdfs:isDefinedBy :core ;<br>rdfs:range :HypermediaMASPlatform ;<br>owl:inverseOf :hosts .<br/></pre>|
+|Pointer|<pre lang='rdf'>[]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 46
@@ -1589,7 +1589,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -1602,8 +1602,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>|
-|Pointer|https://purl.org/hmas/hosts|
-|Pointer|https://purl.org/hmas/Hostable|
+|Pointer|<pre lang='rdf'>:hosts a owl:AsymmetricProperty,<br>owl:ObjectProperty ;<br>rdfs:label "hosts",<br>"héberge" ;<br>dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br>rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform." ;<br>rdfs:domain :HypermediaMASPlatform ;<br>rdfs:isDefinedBy :core ;<br>rdfs:range :Hostable ;<br>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18>,<br><https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .<br/></pre>|
+|Pointer|<pre lang='rdf'>[]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 47
@@ -1615,7 +1615,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -1628,7 +1628,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/core|
+|Pointer|<pre lang='rdf'>:core a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><http://w3id.org/people/az/me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://id.inrupt.com/smnmyr>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-4506-2745>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://www.vcharpenay.link/#me> ;<br>dct:creator <https://id.inrupt.com/andreiciortea> ;<br>dct:description "An ontology to describe Hypermedia Multi-Agent Systems.",<br>"Une ontologie pour la description de systèmes multi-agents hypermédias." ;<br>dct:issued "2021-11-21" ;<br>dct:title "Hypermedia MAS Core Ontology",<br>"Ontologie Centrale des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 48
@@ -1640,7 +1640,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -1653,7 +1653,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/Affordance|
+|Pointer|<pre lang='rdf'>:Affordance a skos:Concept ;<br>dct:references "nd7ae6a06a6794eabbe2fd51ec4a82a71b1",<br>"nd7ae6a06a6794eabbe2fd51ec4a82a71b2" ;<br>rdfs:isDefinedBy :core ;<br>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment." ;<br>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents." ;<br>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]." ;<br>skos:prefLabel "affordance" ;<br>skos:related :Signifier .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 49
@@ -1665,7 +1665,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1678,7 +1678,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 50
@@ -1690,7 +1690,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1703,7 +1703,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 51
@@ -1715,7 +1715,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1728,7 +1728,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 52
@@ -1740,7 +1740,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1753,7 +1753,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:domain <https://purl.org/hmas/Workspace> ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br> owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/transitivelyContains&#62; a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719&#62; ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:domain &#60;https://purl.org/hmas/Workspace&#62; ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18&#62; ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 53
@@ -1765,7 +1765,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1778,7 +1778,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 54
@@ -1790,7 +1790,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1803,7 +1803,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 55
@@ -1815,7 +1815,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1828,7 +1828,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 56
@@ -1840,7 +1840,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1853,7 +1853,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br> owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/hasProfile&#62; a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:range &#60;https://purl.org/hmas/ResourceProfile&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isProfileOf&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 57
@@ -1865,7 +1865,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -1878,7 +1878,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/core|
+|Pointer|<pre lang='rdf'>:core a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><http://w3id.org/people/az/me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://id.inrupt.com/smnmyr>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-4506-2745>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://www.vcharpenay.link/#me> ;<br>dct:creator <https://id.inrupt.com/andreiciortea> ;<br>dct:description "An ontology to describe Hypermedia Multi-Agent Systems.",<br>"Une ontologie pour la description de systèmes multi-agents hypermédias." ;<br>dct:issued "2021-11-21" ;<br>dct:title "Hypermedia MAS Core Ontology",<br>"Ontologie Centrale des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 58
@@ -1890,7 +1890,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -1903,7 +1903,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/Affordance|
+|Pointer|<pre lang='rdf'>:Affordance a skos:Concept ;<br>dct:references "nb7e6ca6a970448ef9e95cfddedbad8f4b1",<br>"nb7e6ca6a970448ef9e95cfddedbad8f4b2" ;<br>rdfs:isDefinedBy :core ;<br>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment." ;<br>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents." ;<br>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]." ;<br>skos:prefLabel "affordance" ;<br>skos:related :Signifier .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 59
@@ -1915,7 +1915,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1928,7 +1928,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 60
@@ -1940,7 +1940,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1953,7 +1953,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 61
@@ -1965,7 +1965,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -1978,7 +1978,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 62
@@ -1990,7 +1990,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2003,7 +2003,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:domain <https://purl.org/hmas/Workspace> ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br> owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/transitivelyContains&#62; a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719&#62; ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:domain &#60;https://purl.org/hmas/Workspace&#62; ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18&#62; ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 63
@@ -2015,7 +2015,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2028,7 +2028,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 64
@@ -2040,7 +2040,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2053,7 +2053,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 65
@@ -2065,7 +2065,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2078,7 +2078,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 66
@@ -2090,7 +2090,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2103,7 +2103,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br> owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/hasProfile&#62; a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:range &#60;https://purl.org/hmas/ResourceProfile&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isProfileOf&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 67
@@ -2115,7 +2115,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -2128,7 +2128,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/core|
+|Pointer|<pre lang='rdf'>:core a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><http://w3id.org/people/az/me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://id.inrupt.com/smnmyr>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-4506-2745>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://www.vcharpenay.link/#me> ;<br>dct:creator <https://id.inrupt.com/andreiciortea> ;<br>dct:description "An ontology to describe Hypermedia Multi-Agent Systems.",<br>"Une ontologie pour la description de systèmes multi-agents hypermédias." ;<br>dct:issued "2021-11-21" ;<br>dct:title "Hypermedia MAS Core Ontology",<br>"Ontologie Centrale des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 68
@@ -2140,7 +2140,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -2153,7 +2153,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/Affordance|
+|Pointer|<pre lang='rdf'>:Affordance a skos:Concept ;<br>dct:references "n82661149743448218d2f17078e3329b6b1",<br>"n82661149743448218d2f17078e3329b6b2" ;<br>rdfs:isDefinedBy :core ;<br>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment." ;<br>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents." ;<br>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]." ;<br>skos:prefLabel "affordance" ;<br>skos:related :Signifier .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 69
@@ -2165,7 +2165,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2178,7 +2178,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 70
@@ -2190,7 +2190,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2203,7 +2203,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 71
@@ -2215,7 +2215,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2228,7 +2228,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 72
@@ -2240,7 +2240,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2253,7 +2253,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;<br> rdfs:domain <https://purl.org/hmas/Workspace> ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:label "transitivelyContains"@en ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br> owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/transitivelyContains&#62; a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719&#62; ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;<br> rdfs:domain &#60;https://purl.org/hmas/Workspace&#62; ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:label "transitivelyContains"@en ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18&#62; ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 73
@@ -2265,7 +2265,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2278,7 +2278,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 74
@@ -2290,7 +2290,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2303,7 +2303,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 75
@@ -2315,7 +2315,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2328,7 +2328,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 76
@@ -2340,7 +2340,7 @@ New :warning:CannotTell assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2353,7 +2353,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:label "has profile"@en ;<br> rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br> owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/hasProfile&#62; a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:label "has profile"@en ;<br> rdfs:range &#60;https://purl.org/hmas/ResourceProfile&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isProfileOf&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 77
@@ -2365,7 +2365,7 @@ New :warning:CannotTell assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -2378,7 +2378,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/core|
+|Pointer|<pre lang='rdf'>:core a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><http://w3id.org/people/az/me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://id.inrupt.com/smnmyr>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-4506-2745>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://www.vcharpenay.link/#me> ;<br>dct:creator <https://id.inrupt.com/andreiciortea> ;<br>dct:description "An ontology to describe Hypermedia Multi-Agent Systems.",<br>"Une ontologie pour la description de systèmes multi-agents hypermédias." ;<br>dct:issued "2021-11-21" ;<br>dct:title "Hypermedia MAS Core Ontology",<br>"Ontologie Centrale des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 78
@@ -2390,7 +2390,7 @@ New :warning:CannotTell assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -2403,7 +2403,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/Affordance|
+|Pointer|<pre lang='rdf'>:Affordance a skos:Concept ;<br>dct:references "nf26386d0ed944e1fa923a2b8bd495570b1",<br>"nf26386d0ed944e1fa923a2b8bd495570b2" ;<br>rdfs:isDefinedBy :core ;<br>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment." ;<br>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents." ;<br>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]." ;<br>skos:prefLabel "affordance" ;<br>skos:related :Signifier .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 79
@@ -2415,7 +2415,7 @@ New :warning:CannotTell assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2428,7 +2428,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 80
@@ -2440,7 +2440,7 @@ New :warning:CannotTell assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2453,7 +2453,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 81
@@ -2465,7 +2465,7 @@ New :warning:CannotTell assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2478,7 +2478,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 82
@@ -2490,7 +2490,7 @@ New :warning:CannotTell assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2503,7 +2503,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:domain <https://purl.org/hmas/Workspace> ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br> owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/transitivelyContains&#62; a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719&#62; ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:domain &#60;https://purl.org/hmas/Workspace&#62; ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18&#62; ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 83
@@ -2515,7 +2515,7 @@ New :warning:CannotTell assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2528,7 +2528,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 84
@@ -2540,7 +2540,7 @@ New :warning:CannotTell assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2553,7 +2553,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 85
@@ -2565,7 +2565,7 @@ New :warning:CannotTell assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2578,7 +2578,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 86
@@ -2590,7 +2590,7 @@ New :warning:CannotTell assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2603,7 +2603,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br> owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/hasProfile&#62; a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:range &#60;https://purl.org/hmas/ResourceProfile&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isProfileOf&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 87
@@ -2615,7 +2615,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -2628,7 +2628,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property signifies has a range out of the ontology: sh:NodeShape|
-|Pointer|https://purl.org/hmas/signifies|
+|Pointer|<pre lang='rdf'>:signifies a owl:ObjectProperty ;<br>rdfs:label "signifie",<br>"signifies" ;<br>rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution." ;<br>rdfs:domain :Signifier ;<br>rdfs:isDefinedBy :interaction ;<br>rdfs:range sh:NodeShape .<br/></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
 ***
@@ -2641,7 +2641,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -2654,7 +2654,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :interaction has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/interaction|
+|Pointer|<pre lang='rdf'>:interaction a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://ns.inria.fr/fabien.gandon#me>,<br><https://pod.inrupt.com/andreiciortea/profile/card#me>,<br><https://pod.inrupt.com/smnmyr/profile/card#me> ;<br>dct:creator <https://danaivach.inrupt.net/profile/card#me> ;<br>dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems.",<br>"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias." ;<br>dct:issued "2023-01-13" ;<br>dct:title "Hypermedia MAS Interaction Ontology",<br>"Ontologie d'Interaction des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 89
@@ -2666,7 +2666,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -2679,7 +2679,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/core|
+|Pointer|<pre lang='rdf'>:core a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><http://w3id.org/people/az/me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://id.inrupt.com/smnmyr>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-4506-2745>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://www.vcharpenay.link/#me> ;<br>dct:creator <https://id.inrupt.com/andreiciortea> ;<br>dct:description "An ontology to describe Hypermedia Multi-Agent Systems.",<br>"Une ontologie pour la description de systèmes multi-agents hypermédias." ;<br>dct:issued "2021-11-21" ;<br>dct:title "Hypermedia MAS Core Ontology",<br>"Ontologie Centrale des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 90
@@ -2691,7 +2691,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -2704,7 +2704,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :regulation has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/regulation|
+|Pointer|<pre lang='rdf'>:regulation a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-3497-8758>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://orcid.org/0000-0003-4509-9537> ;<br>dct:creator <https://orcid.org/0000-0002-4506-2745> ;<br>dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems.",<br>"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias." ;<br>dct:issued "2022-05-01" ;<br>dct:title "Hypermedia MAS Regulation Ontology",<br>"Ontologie de Régulation des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 91
@@ -2716,7 +2716,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -2729,7 +2729,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/Affordance|
+|Pointer|<pre lang='rdf'>:Affordance a skos:Concept ;<br>dct:references "n63f08e11f7df4ba9a0a432dbb697e38cb1",<br>"n63f08e11f7df4ba9a0a432dbb697e38cb2" ;<br>rdfs:isDefinedBy :core ;<br>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment." ;<br>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents." ;<br>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]." ;<br>skos:prefLabel "affordance" ;<br>skos:related :Signifier .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 92
@@ -2741,7 +2741,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -2754,7 +2754,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :fipa has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/fipa|
+|Pointer|<pre lang='rdf'>:fipa a owl:Ontology ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 93
@@ -2766,7 +2766,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2779,7 +2779,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 94
@@ -2791,7 +2791,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2804,7 +2804,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 95
@@ -2816,7 +2816,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2829,7 +2829,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 96
@@ -2841,7 +2841,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2854,7 +2854,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:domain <https://purl.org/hmas/Workspace> ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br> owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/transitivelyContains&#62; a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719&#62; ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:domain &#60;https://purl.org/hmas/Workspace&#62; ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18&#62; ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 97
@@ -2866,7 +2866,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2879,7 +2879,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 98
@@ -2891,7 +2891,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2904,7 +2904,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 99
@@ -2916,7 +2916,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2929,7 +2929,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 100
@@ -2941,7 +2941,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -2954,7 +2954,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br> owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/hasProfile&#62; a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:range &#60;https://purl.org/hmas/ResourceProfile&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isProfileOf&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 101
@@ -2966,7 +2966,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -2979,7 +2979,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/hasServiceName|
+|Pointer|<pre lang='rdf'>:hasServiceName a owl:ObjectProperty ;<br>rdfs:label "has Service Name" ;<br>rdfs:domain :APService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 102
@@ -2991,7 +2991,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3004,7 +3004,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/APService|
+|Pointer|<pre lang='rdf'>:APService a owl:Class ;<br>rdfs:label "Agent Platform Service" ;<br>rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)." .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 103
@@ -3016,7 +3016,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3029,7 +3029,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/hasServiceType|
+|Pointer|<pre lang='rdf'>:hasServiceType a owl:ObjectProperty ;<br>rdfs:label "has Service Type" ;<br>rdfs:domain :APService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 104
@@ -3041,7 +3041,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3054,7 +3054,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/AgentIdentifierDescription|
+|Pointer|<pre lang='rdf'>:AgentIdentifierDescription a owl:Class ;<br>rdfs:label "Agent Identifier Description" ;<br>rdfs:comment "A resource profile that describes an agent using the Agent Identifier Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)." ;<br>rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#ResourceProfile> .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 105
@@ -3066,7 +3066,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3079,7 +3079,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/AgentPlatformDescription|
+|Pointer|<pre lang='rdf'>:AgentPlatformDescription a owl:Class ;<br>rdfs:label "Agent Platform Description" ;<br>rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)." ;<br>rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#ResourceProfile> .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 106
@@ -3091,7 +3091,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3104,7 +3104,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/FIPAAgentPlatform|
+|Pointer|<pre lang='rdf'>:FIPAAgentPlatform a owl:Class ;<br>rdfs:label "FIPA Agent Platform" ;<br>rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)." ;<br>rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#Platform> .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 107
@@ -3116,7 +3116,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3129,7 +3129,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/HTTPMessageTransportService|
+|Pointer|<pre lang='rdf'>:HTTPMessageTransportService a owl:Class ;<br>rdfs:label "HTTP Message Transport Service" ;<br>rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for HTTP Specification (http://fipa.org/specs/fipa00084/SC00084F.html)." ;<br>rdfs:subClassOf :MessageTransportService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 108
@@ -3141,7 +3141,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3154,7 +3154,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/MessageTransportService|
+|Pointer|<pre lang='rdf'>:MessageTransportService a owl:Class ;<br>rdfs:label "Message Transport Service" ;<br>rdfs:comment "A service for transporting messages among agents that conforms to the FIPA Message Transport Service Specification (http://fipa.org/specs/fipa00067/SC00067F.html)." ;<br>rdfs:subClassOf :APService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 109
@@ -3166,7 +3166,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3179,7 +3179,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/IIOPMessageTransportService|
+|Pointer|<pre lang='rdf'>:IIOPMessageTransportService a owl:Class ;<br>rdfs:label "IIOP Message Transport Service" ;<br>rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for IIOP Specification (http://fipa.org/specs/fipa00075/SC00075G.html)." ;<br>rdfs:subClassOf :MessageTransportService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 110
@@ -3191,7 +3191,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -3204,8 +3204,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :core and :Role|
-|Pointer|https://purl.org/hmas/core|
-|Pointer|https://purl.org/hmas/Role|
+|Pointer|<pre lang='rdf'>:core a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><http://w3id.org/people/az/me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://id.inrupt.com/smnmyr>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-4506-2745>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://www.vcharpenay.link/#me> ;<br>dct:creator <https://id.inrupt.com/andreiciortea> ;<br>dct:description "An ontology to describe Hypermedia Multi-Agent Systems.",<br>"Une ontologie pour la description de systèmes multi-agents hypermédias." ;<br>dct:issued "2021-11-21" ;<br>dct:title "Hypermedia MAS Core Ontology",<br>"Ontologie Centrale des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : .<br/></pre>|
+|Pointer|<pre lang='rdf'>:Role a owl:Class ;<br>rdfs:label "role",<br>"rôle" ;<br>rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization." ;<br>rdfs:isDefinedBy :regulation .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 111
@@ -3217,7 +3217,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -3230,8 +3230,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :isMembershipOf and :isMembershipIn|
-|Pointer|https://purl.org/hmas/isMembershipOf|
-|Pointer|https://purl.org/hmas/isMembershipIn|
+|Pointer|<pre lang='rdf'>:isMembershipOf a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership of" ;<br>rdfs:comment "A relation that refers to the Agent involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation ;<br>rdfs:range :Agent .<br/></pre>|
+|Pointer|<pre lang='rdf'>:isMembershipIn a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership in" ;<br>rdfs:comment "A relation that refers to the Group involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation ;<br>rdfs:range :Group .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 112
@@ -3243,7 +3243,7 @@ New :warning:CannotTell assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -3256,8 +3256,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :signifies and :Signifier|
-|Pointer|https://purl.org/hmas/signifies|
-|Pointer|https://purl.org/hmas/Signifier|
+|Pointer|<pre lang='rdf'>:signifies a owl:ObjectProperty ;<br>rdfs:label "signifie",<br>"signifies" ;<br>rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution." ;<br>rdfs:domain :Signifier ;<br>rdfs:isDefinedBy :interaction ;<br>rdfs:range sh:NodeShape .<br/></pre>|
+|Pointer|<pre lang='rdf'>:Signifier a owl:Class ;<br>rdfs:label "Signifiant",<br>"Signifier" ;<br>rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility." ;<br>rdfs:isDefinedBy :core ;<br>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491>,<br><https://github.com/HyperAgents/ns.hyperagents.org/issues/41> ;<br>skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies." ;<br>skos:related :Affordance .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 113
@@ -3269,7 +3269,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -3282,8 +3282,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Domain out of vocabulary|
 |Description|The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>|
-|Pointer|https://purl.org/hmas/isHostedOn|
-|Pointer|https://purl.org/hmas/Hostable|
+|Pointer|<pre lang='rdf'>:isHostedOn a owl:AsymmetricProperty,<br>owl:ObjectProperty ;<br>rdfs:label "est hébergé sur",<br>"is hosted on" ;<br>rdfs:comment "A relation that refers to the platform that hosts an information resource or a process.",<br>"A relations that refers to the platform that hosts the resource. " ;<br>rdfs:domain :Hostable ;<br>rdfs:isDefinedBy :core ;<br>rdfs:range :HypermediaMASPlatform ;<br>owl:inverseOf :hosts .<br/></pre>|
+|Pointer|<pre lang='rdf'>[]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 114
@@ -3295,7 +3295,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -3308,7 +3308,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property signifies has a range out of the ontology: sh:NodeShape|
-|Pointer|https://purl.org/hmas/signifies|
+|Pointer|<pre lang='rdf'>:signifies a owl:ObjectProperty ;<br>rdfs:label "signifie",<br>"signifies" ;<br>rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution." ;<br>rdfs:domain :Signifier ;<br>rdfs:isDefinedBy :interaction ;<br>rdfs:range sh:NodeShape .<br/></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
 ***
@@ -3321,7 +3321,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -3334,8 +3334,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>|
-|Pointer|https://purl.org/hmas/hosts|
-|Pointer|https://purl.org/hmas/Hostable|
+|Pointer|<pre lang='rdf'>:hosts a owl:AsymmetricProperty,<br>owl:ObjectProperty ;<br>rdfs:label "hosts",<br>"héberge" ;<br>dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br>rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform." ;<br>rdfs:domain :HypermediaMASPlatform ;<br>rdfs:isDefinedBy :core ;<br>rdfs:range :Hostable ;<br>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18>,<br><https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .<br/></pre>|
+|Pointer|<pre lang='rdf'>[]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 116
@@ -3347,7 +3347,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -3360,7 +3360,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :interaction has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/interaction|
+|Pointer|<pre lang='rdf'>:interaction a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://ns.inria.fr/fabien.gandon#me>,<br><https://pod.inrupt.com/andreiciortea/profile/card#me>,<br><https://pod.inrupt.com/smnmyr/profile/card#me> ;<br>dct:creator <https://danaivach.inrupt.net/profile/card#me> ;<br>dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems.",<br>"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias." ;<br>dct:issued "2023-01-13" ;<br>dct:title "Hypermedia MAS Interaction Ontology",<br>"Ontologie d'Interaction des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 117
@@ -3372,7 +3372,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -3385,7 +3385,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/core|
+|Pointer|<pre lang='rdf'>:core a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><http://w3id.org/people/az/me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://id.inrupt.com/smnmyr>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-4506-2745>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://www.vcharpenay.link/#me> ;<br>dct:creator <https://id.inrupt.com/andreiciortea> ;<br>dct:description "An ontology to describe Hypermedia Multi-Agent Systems.",<br>"Une ontologie pour la description de systèmes multi-agents hypermédias." ;<br>dct:issued "2021-11-21" ;<br>dct:title "Hypermedia MAS Core Ontology",<br>"Ontologie Centrale des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 118
@@ -3397,7 +3397,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -3410,7 +3410,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :regulation has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/regulation|
+|Pointer|<pre lang='rdf'>:regulation a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-3497-8758>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://orcid.org/0000-0003-4509-9537> ;<br>dct:creator <https://orcid.org/0000-0002-4506-2745> ;<br>dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems.",<br>"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias." ;<br>dct:issued "2022-05-01" ;<br>dct:title "Hypermedia MAS Regulation Ontology",<br>"Ontologie de Régulation des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 119
@@ -3422,7 +3422,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -3435,7 +3435,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/Affordance|
+|Pointer|<pre lang='rdf'>:Affordance a skos:Concept ;<br>dct:references "n17475bb47f44458480b568e1a287e23cb1",<br>"n17475bb47f44458480b568e1a287e23cb2",<br>"ne65a47583cd94e55b26714453f18b637b1",<br>"ne65a47583cd94e55b26714453f18b637b2" ;<br>rdfs:isDefinedBy :core ;<br>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment." ;<br>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents." ;<br>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]." ;<br>skos:prefLabel "affordance" ;<br>skos:related :Signifier .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 120
@@ -3447,7 +3447,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -3460,7 +3460,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :fipa has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/fipa|
+|Pointer|<pre lang='rdf'>:fipa a owl:Ontology ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : ;<br>owl:imports :core .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 121
@@ -3472,7 +3472,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -3485,7 +3485,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :OrganizationModel has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/OrganizationModel|
+|Pointer|<pre lang='rdf'>:OrganizationModel a skos:Concept ;<br>skos:definition "An Organization Model is the combination of Roles, Missions, and Facilities in a consistent way used to enact one or multiple Organizations." ;<br>skos:editorialNote "The Organization Model is represented as SHACL Shapes." ;<br>skos:prefLabel "organization model" ;<br>skos:related :Organization .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 122
@@ -3497,7 +3497,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3510,7 +3510,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 123
@@ -3522,7 +3522,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3535,7 +3535,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 124
@@ -3547,7 +3547,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3572,7 +3572,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3597,7 +3597,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3610,7 +3610,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 127
@@ -3622,7 +3622,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3635,7 +3635,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;<br> rdfs:domain <https://purl.org/hmas/Workspace> ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:label "transitivelyContains"@en ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br> rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br> owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/transitivelyContains&#62; a owl:ObjectProperty ;<br> a owl:TransitiveProperty ;<br> dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719&#62; ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br> rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;<br> rdfs:domain &#60;https://purl.org/hmas/Workspace&#62; ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "contient transitivement"@fr ;<br> rdfs:label "transitively contains"@en ;<br> rdfs:label "transitivelyContains"@en ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18&#62; ;<br> rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 128
@@ -3647,7 +3647,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3660,7 +3660,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 129
@@ -3672,7 +3672,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3685,7 +3685,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 130
@@ -3697,7 +3697,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3722,7 +3722,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3747,7 +3747,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3760,7 +3760,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br> rdfs:label "Norman, 2013"@en] ;<br> dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related <https://purl.org/hmas/Signifier><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/Affordance&#62; a skos:Concept ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23&#62; ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [a owl:NamedIndividual ;<br> dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> dc:identifier &#60;https://mitpress.mit.edu/9780262640374/&#62; ;<br> rdfs:label "Norman, 2013"@en] ;<br> dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br> rdfs:label "Chemero and Turvey, 2007"@en] ;<br> dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br> rdfs:label "Norman, 2013"@en] ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br> skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br> skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br> skos:prefLabel "affordance"@en ;<br> skos:related &#60;https://purl.org/hmas/Signifier&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 133
@@ -3772,7 +3772,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -3785,7 +3785,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
-|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:label "has profile"@en ;<br> rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br> owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
+|Pointer|<pre lang='rdf'>&#60;https://purl.org/hmas/hasProfile&#62; a owl:AsymmetricProperty ;<br> a owl:ObjectProperty ;<br> rdfs:comment "A relation that links a resource to its profile."@en ;<br> rdfs:isDefinedBy &#60;https://purl.org/hmas/core&#62; ;<br> rdfs:label "a pour profil"@fr ;<br> rdfs:label "has for profile"@en ;<br> rdfs:label "has profile"@en ;<br> rdfs:range &#60;https://purl.org/hmas/ResourceProfile&#62; ;<br> owl:inverseOf &#60;https://purl.org/hmas/isProfileOf&#62;<br/></pre>|
 
 ***
 ### CannotTell Assertion number 134
@@ -3797,7 +3797,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3810,7 +3810,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/hasServiceName|
+|Pointer|<pre lang='rdf'>:hasServiceName a owl:ObjectProperty ;<br>rdfs:label "has Service Name" ;<br>rdfs:domain :APService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 135
@@ -3822,7 +3822,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3835,7 +3835,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/APService|
+|Pointer|<pre lang='rdf'>:APService a owl:Class ;<br>rdfs:label "Agent Platform Service" ;<br>rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)." .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 136
@@ -3847,7 +3847,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3860,7 +3860,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/hasServiceType|
+|Pointer|<pre lang='rdf'>:hasServiceType a owl:ObjectProperty ;<br>rdfs:label "has Service Type" ;<br>rdfs:domain :APService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 137
@@ -3872,7 +3872,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3885,7 +3885,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/AgentIdentifierDescription|
+|Pointer|<pre lang='rdf'>:AgentIdentifierDescription a owl:Class ;<br>rdfs:label "Agent Identifier Description" ;<br>rdfs:comment "A resource profile that describes an agent using the Agent Identifier Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)." ;<br>rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#ResourceProfile> .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 138
@@ -3897,7 +3897,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3910,7 +3910,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/AgentPlatformDescription|
+|Pointer|<pre lang='rdf'>:AgentPlatformDescription a owl:Class ;<br>rdfs:label "Agent Platform Description" ;<br>rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)." ;<br>rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#ResourceProfile> .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 139
@@ -3922,7 +3922,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3935,7 +3935,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/FIPAAgentPlatform|
+|Pointer|<pre lang='rdf'>:FIPAAgentPlatform a owl:Class ;<br>rdfs:label "FIPA Agent Platform" ;<br>rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)." ;<br>rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#Platform> .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 140
@@ -3947,7 +3947,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3960,7 +3960,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/HTTPMessageTransportService|
+|Pointer|<pre lang='rdf'>:HTTPMessageTransportService a owl:Class ;<br>rdfs:label "HTTP Message Transport Service" ;<br>rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for HTTP Specification (http://fipa.org/specs/fipa00084/SC00084F.html)." ;<br>rdfs:subClassOf :MessageTransportService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 141
@@ -3972,7 +3972,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -3985,7 +3985,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/MessageTransportService|
+|Pointer|<pre lang='rdf'>:MessageTransportService a owl:Class ;<br>rdfs:label "Message Transport Service" ;<br>rdfs:comment "A service for transporting messages among agents that conforms to the FIPA Message Transport Service Specification (http://fipa.org/specs/fipa00067/SC00067F.html)." ;<br>rdfs:subClassOf :APService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 142
@@ -3997,7 +3997,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -4010,7 +4010,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/IIOPMessageTransportService|
+|Pointer|<pre lang='rdf'>:IIOPMessageTransportService a owl:Class ;<br>rdfs:label "IIOP Message Transport Service" ;<br>rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for IIOP Specification (http://fipa.org/specs/fipa00075/SC00075G.html)." ;<br>rdfs:subClassOf :MessageTransportService .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 143
@@ -4022,7 +4022,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -4035,8 +4035,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :core and :Role|
-|Pointer|https://purl.org/hmas/core|
-|Pointer|https://purl.org/hmas/Role|
+|Pointer|<pre lang='rdf'>:core a owl:Ontology ;<br>cc:license <https://creativecommons.org/licenses/by/4.0/> ;<br>dct:contributor <http://maxime-lefrancois.info/me#>,<br><http://ns.inria.fr/fabien.gandon#me>,<br><http://w3id.org/people/az/me>,<br><https://danaivach.inrupt.net/profile/card#me>,<br><https://id.inrupt.com/smnmyr>,<br><https://orcid.org/0000-0002-2956-0533>,<br><https://orcid.org/0000-0002-4506-2745>,<br><https://orcid.org/0000-0003-0821-6095>,<br><https://www.vcharpenay.link/#me> ;<br>dct:creator <https://id.inrupt.com/andreiciortea> ;<br>dct:description "An ontology to describe Hypermedia Multi-Agent Systems.",<br>"Une ontologie pour la description de systèmes multi-agents hypermédias." ;<br>dct:issued "2021-11-21" ;<br>dct:title "Hypermedia MAS Core Ontology",<br>"Ontologie Centrale des SMA Hypermédias" ;<br>vann:preferredNamespacePrefix "hmas" ;<br>vann:preferredNamespaceUri : .<br/></pre>|
+|Pointer|<pre lang='rdf'>:Role a owl:Class ;<br>rdfs:label "role",<br>"rôle" ;<br>rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization." ;<br>rdfs:isDefinedBy :regulation .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 144
@@ -4048,7 +4048,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -4061,8 +4061,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :isMembershipOf and :isMembershipIn|
-|Pointer|https://purl.org/hmas/isMembershipOf|
-|Pointer|https://purl.org/hmas/isMembershipIn|
+|Pointer|<pre lang='rdf'>:isMembershipOf a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership of" ;<br>rdfs:comment "A relation that refers to the Agent involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation ;<br>rdfs:range :Agent .<br/></pre>|
+|Pointer|<pre lang='rdf'>:isMembershipIn a owl:ObjectProperty ;<br>rdfs:label "est l'appartenance à",<br>"is membership in" ;<br>rdfs:comment "A relation that refers to the Group involved in a Membership." ;<br>rdfs:domain :Membership ;<br>rdfs:isDefinedBy :regulation ;<br>rdfs:range :Group .<br/></pre>|
 
 ***
 ### CannotTell Assertion number 145
@@ -4074,7 +4074,7 @@ New :warning:CannotTell assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -4087,8 +4087,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :signifies and :Signifier|
-|Pointer|https://purl.org/hmas/signifies|
-|Pointer|https://purl.org/hmas/Signifier|
+|Pointer|<pre lang='rdf'>:signifies a owl:ObjectProperty ;<br>rdfs:label "signifie",<br>"signifies" ;<br>rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution." ;<br>rdfs:domain :Signifier ;<br>rdfs:isDefinedBy :interaction ;<br>rdfs:range sh:NodeShape .<br/></pre>|
+|Pointer|<pre lang='rdf'>:Signifier a owl:Class ;<br>rdfs:label "Signifiant",<br>"Signifier" ;<br>rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility." ;<br>rdfs:isDefinedBy :core ;<br>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491>,<br><https://github.com/HyperAgents/ns.hyperagents.org/issues/41> ;<br>rdfs:subClassOf :Hostable ;<br>skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies." ;<br>skos:related :Affordance,<br>:Signifier .<br/></pre>|
 
 ***
 ## :grey_question:NotTested Assertion Details
@@ -4102,7 +4102,7 @@ New :grey_question:NotTested assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -4126,7 +4126,7 @@ New :grey_question:NotTested assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -4150,7 +4150,7 @@ New :grey_question:NotTested assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -4174,7 +4174,7 @@ New :grey_question:NotTested assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -4198,7 +4198,7 @@ New :grey_question:NotTested assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4222,7 +4222,7 @@ New :grey_question:NotTested assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4246,7 +4246,7 @@ New :grey_question:NotTested assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4270,7 +4270,7 @@ New :grey_question:NotTested assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4294,7 +4294,7 @@ New :grey_question:NotTested assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -4318,7 +4318,7 @@ New :grey_question:NotTested assertion
 |Name|meta|
 |----|----|
 |Title|Standalone module src/meta.ttl from branch test-workflow|
-|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/meta.ttl)|
+|Composition|- [Module meta.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/meta.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -4342,7 +4342,7 @@ New :grey_question:NotTested assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -4366,7 +4366,7 @@ New :grey_question:NotTested assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -4390,7 +4390,7 @@ New :grey_question:NotTested assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -4414,7 +4414,7 @@ New :grey_question:NotTested assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -4438,7 +4438,7 @@ New :grey_question:NotTested assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4462,7 +4462,7 @@ New :grey_question:NotTested assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4486,7 +4486,7 @@ New :grey_question:NotTested assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4510,7 +4510,7 @@ New :grey_question:NotTested assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4534,7 +4534,7 @@ New :grey_question:NotTested assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -4558,7 +4558,7 @@ New :grey_question:NotTested assertion
 |Name|manufacturing-environments-safety-rules|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/safety-rules/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/safety-rules/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/safety-rules/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -4584,7 +4584,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-structure-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -4608,7 +4608,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-structure-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -4632,7 +4632,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-structure-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -4656,7 +4656,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-structure-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4680,7 +4680,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-structure-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4704,7 +4704,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-structure-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4728,7 +4728,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-structure-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4752,7 +4752,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-structure-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -4776,7 +4776,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-create-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -4800,7 +4800,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-create-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -4824,7 +4824,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-create-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -4848,7 +4848,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-create-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4872,7 +4872,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-create-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4896,7 +4896,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-create-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4920,7 +4920,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-create-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -4944,7 +4944,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation-logistics-create-organization|
 |----|----|
 |Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -4968,7 +4968,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation|
 |----|----|
 |Title|Standalone module src/regulation.ttl from branch test-workflow|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -4992,7 +4992,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation|
 |----|----|
 |Title|Standalone module src/regulation.ttl from branch test-workflow|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -5016,7 +5016,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation|
 |----|----|
 |Title|Standalone module src/regulation.ttl from branch test-workflow|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -5040,7 +5040,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation|
 |----|----|
 |Title|Standalone module src/regulation.ttl from branch test-workflow|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5064,7 +5064,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation|
 |----|----|
 |Title|Standalone module src/regulation.ttl from branch test-workflow|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5088,7 +5088,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation|
 |----|----|
 |Title|Standalone module src/regulation.ttl from branch test-workflow|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5112,7 +5112,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation|
 |----|----|
 |Title|Standalone module src/regulation.ttl from branch test-workflow|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5136,7 +5136,7 @@ New :white_check_mark:Pass assertion
 |Name|regulation|
 |----|----|
 |Title|Standalone module src/regulation.ttl from branch test-workflow|
-|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -5160,7 +5160,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -5184,7 +5184,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5208,7 +5208,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5232,7 +5232,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -5256,7 +5256,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -5280,7 +5280,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -5304,7 +5304,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -5328,7 +5328,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5352,7 +5352,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5376,7 +5376,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5400,7 +5400,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -5424,7 +5424,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -5448,7 +5448,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-organization|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -5472,7 +5472,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-organization|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -5496,7 +5496,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-organization|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5520,7 +5520,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-organization|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5544,7 +5544,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-organization|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5568,7 +5568,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-organization|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5592,7 +5592,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-organization|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -5616,7 +5616,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-organization|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -5640,7 +5640,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-core|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -5664,7 +5664,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-core|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -5688,7 +5688,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-core|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5712,7 +5712,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-core|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5736,7 +5736,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-core|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -5760,7 +5760,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-core|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -5784,7 +5784,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -5808,7 +5808,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -5832,7 +5832,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5856,7 +5856,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5880,7 +5880,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5904,7 +5904,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -5928,7 +5928,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -5952,7 +5952,7 @@ New :white_check_mark:Pass assertion
 |Name|manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
-|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -5976,7 +5976,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-structure-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -6000,7 +6000,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-structure-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -6024,7 +6024,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-structure-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6048,7 +6048,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-structure-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6072,7 +6072,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-structure-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6096,7 +6096,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-structure-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6120,7 +6120,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-structure-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -6144,7 +6144,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-create-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -6168,7 +6168,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-create-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6192,7 +6192,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-create-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6216,7 +6216,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-create-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6240,7 +6240,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-create-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6264,7 +6264,7 @@ New :white_check_mark:Pass assertion
 |Name|logistics-create-organization|
 |----|----|
 |Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -6288,7 +6288,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -6312,7 +6312,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -6336,7 +6336,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6360,7 +6360,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6384,7 +6384,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6408,7 +6408,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6432,7 +6432,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -6456,7 +6456,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
 |Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -6480,7 +6480,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction|
 |----|----|
 |Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -6504,7 +6504,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction|
 |----|----|
 |Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -6528,7 +6528,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction|
 |----|----|
 |Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6552,7 +6552,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction|
 |----|----|
 |Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6576,7 +6576,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction|
 |----|----|
 |Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6600,7 +6600,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction|
 |----|----|
 |Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6624,7 +6624,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction|
 |----|----|
 |Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -6648,7 +6648,7 @@ New :white_check_mark:Pass assertion
 |Name|interaction|
 |----|----|
 |Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -6672,7 +6672,7 @@ New :white_check_mark:Pass assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -6696,7 +6696,7 @@ New :white_check_mark:Pass assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -6720,7 +6720,7 @@ New :white_check_mark:Pass assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -6744,7 +6744,7 @@ New :white_check_mark:Pass assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6768,7 +6768,7 @@ New :white_check_mark:Pass assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6792,7 +6792,7 @@ New :white_check_mark:Pass assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6816,7 +6816,7 @@ New :white_check_mark:Pass assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6840,7 +6840,7 @@ New :white_check_mark:Pass assertion
 |Name|fipa|
 |----|----|
 |Title|Standalone module src/fipa.ttl from branch test-workflow|
-|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -6864,7 +6864,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -6888,7 +6888,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -6912,7 +6912,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -6936,7 +6936,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6960,7 +6960,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -6984,7 +6984,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -7008,7 +7008,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-signifiers|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -7032,7 +7032,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -7056,7 +7056,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7080,7 +7080,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7104,7 +7104,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -7128,7 +7128,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-platforms|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -7152,7 +7152,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -7176,7 +7176,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -7200,7 +7200,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -7224,7 +7224,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7248,7 +7248,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7272,7 +7272,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -7296,7 +7296,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-organization|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -7320,7 +7320,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -7344,7 +7344,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -7368,7 +7368,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -7392,7 +7392,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7416,7 +7416,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7440,7 +7440,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -7464,7 +7464,7 @@ New :white_check_mark:Pass assertion
 |Name|core-manufacturing-environments-discover-core|
 |----|----|
 |Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -7488,7 +7488,7 @@ New :white_check_mark:Pass assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -7512,7 +7512,7 @@ New :white_check_mark:Pass assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -7536,7 +7536,7 @@ New :white_check_mark:Pass assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -7560,7 +7560,7 @@ New :white_check_mark:Pass assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7584,7 +7584,7 @@ New :white_check_mark:Pass assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7608,7 +7608,7 @@ New :white_check_mark:Pass assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
@@ -7632,7 +7632,7 @@ New :white_check_mark:Pass assertion
 |Name|core|
 |----|----|
 |Title|Standalone module src/core.ttl from branch test-workflow|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)|
 
 #### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
@@ -7656,7 +7656,7 @@ New :white_check_mark:Pass assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -7680,7 +7680,7 @@ New :white_check_mark:Pass assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -7704,7 +7704,7 @@ New :white_check_mark:Pass assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7728,7 +7728,7 @@ New :white_check_mark:Pass assertion
 |Name|all-modules|
 |----|----|
 |Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7752,7 +7752,7 @@ New :white_check_mark:Pass assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
@@ -7776,7 +7776,7 @@ New :white_check_mark:Pass assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
@@ -7800,7 +7800,7 @@ New :white_check_mark:Pass assertion
 |Name|all-fragments|
 |----|----|
 |Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
