@@ -104,6 +104,7 @@ def profile_check(
             messages, pointers = profile_errors(raw_message)
         results += make_outcomes(
             report,
+            subject,
             "profile-compatibility",
             error_id,
             messages,

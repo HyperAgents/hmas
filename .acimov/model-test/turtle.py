@@ -19,17 +19,18 @@ from rdflib.namespace import (
 
 from constants import (
     DEV_USERNAME,
-    PROFILE_CHECK_URI,
     DEV_PROFILE,
     DOMAINS_URL,
-    PROFILE_CHECK_URI,
     EARL_NAMESPACE,
     SRC_NAMESPACE,
     TEST_NAMESPACE,
     ACIMOV_MODEL_NAMESPACE,
     ONTOLOGY_NAMESPACE,
     TEST_RESOURCES,
-    BRANCH
+    BRANCH,
+    MODULE_URL_FORMAT,
+    MODELET_URL_FORMAT,
+    PWD_TO_ROOT_FOLDER
 )
 
 def statement(self, subject, *po):
@@ -51,7 +52,7 @@ def prepare_graph():
 def make_assertor(report, mode, script_uri):
     assertorId = f"{DEV_USERNAME}-{mode}"
     title = f"{DEV_USERNAME} using {mode} script"
-    description = f"Test triggered by @{DEV_USERNAME} by a {mode} trigger"
+    description = f"Test triggered by @{DEV_USERNAME} by {mode} trigger"
     
     # Define the developper and the assertor
     assert_group = BNode(assertorId)
@@ -144,12 +145,56 @@ def make_subject(
 
     return test_subject
 
-def make_pointer(report, pointer_string):
+def short_subject_part(part):
+    module_search = MODULE_URL_FORMAT.findall(part)
+    if len(module_search) > 0:
+        return f"{PWD_TO_ROOT_FOLDER}{module_search[0]}.ttl"
+    
+    modelet_search = MODELET_URL_FORMAT.findall(part)
+    if len(modelet_search) > 0:
+        return f"{PWD_TO_ROOT_FOLDER}{modelet_search[0]}"
+    
+    return part
+
+def extract_statement(report, subject, pointer):
+    isolated_graph = Graph()
+
+    for part in report.objects(subject, DCTERMS.hasPart):
+        part_path = short_subject_part(str(part))
+        isolated_graph.parse(part_path)
+        
+    isolated = isolated_graph.query(f"SELECT ?p ?o WHERE {{{pointer} ?p ?o}}")
+    isolated = [line for line in isolated]
+    isolated = [[f"<{str(item)}>" if isinstance(item, URIRef) else f'"{str(item)}"' for item in line] for line in isolated]
+    isolated = [f"{pointer} {line[0]} {line[1]} ." for line in isolated]
+    isolated = "\n".join(isolated)
+    
+    statement = Graph()
+
+    for prefix, namespace in isolated_graph.namespaces():
+        statement.bind(prefix, namespace)
+
+    statement.parse(data=isolated, format="ttl")
+    statement.bind("", ONTOLOGY_NAMESPACE)
+    
+    statement = statement.serialize(format="ttl", encoding="utf-8").decode(encoding="utf-8")
+    statement = [line.strip() for line in statement.split("\n") if len(line.strip()) > 0]
+    
+    for i in range(len(statement)):
+        if not statement[i].startswith("@"):
+            statement = "\n".join(statement[i:])
+            break
+    
+    return statement
+
+def make_pointer(report, subject, pointer_string):
     statement_subject = pointer_string.split(" ")[0]
     is_statement = " " in pointer_string
 
-    if statement_subject[0] == "<" and not is_statement:
-        pointer = URIRef(statement_subject[1:-1])
+    if statement_subject[0] == "<" and not is_statement and \
+        pointer_string[1:].startswith(str(ONTOLOGY_NAMESPACE)):
+        
+        pointer = Literal(extract_statement(report, subject, statement_subject))
     elif statement_subject[0] != "[" and not is_statement:
         normalizedUri = Namespace(
             [
@@ -159,12 +204,13 @@ def make_pointer(report, pointer_string):
         )[pointer_string.split(":")[1]]
         pointer = URIRef(normalizedUri)
     else:
-        pointer = Literal(pointer_string)
+        pointer = Literal(pointer_string.replace("<", "&#60;").replace(">", "&#62;"))
     
     return pointer
 
 def make_outcome(
     report,
+    subject,
     criterion,
     error,
     outcome_type,
@@ -174,7 +220,7 @@ def make_outcome(
     outcome_ressources = TEST_RESOURCES[criterion]["errors"][error][outcome_type]
     outcome_title = outcome_ressources["title"]
     outcome_description = description if len(description) > 0 else outcome_ressources["description"]
-    parsed_pointers = [make_pointer(report, pointer) for pointer in pointers if len(pointer) > 0]
+    parsed_pointers = [make_pointer(report, subject, pointer) for pointer in pointers if len(pointer) > 0]
     outcome_statement = [
         (RDF.type, EARL_NAMESPACE[outcome_type]),
         (DCTERMS.title, Literal(outcome_title, lang="en")),
@@ -189,6 +235,7 @@ def make_outcome(
 
 def make_outcomes(
     report,
+    subject,
     criterion,
     error,
     messages,
@@ -206,6 +253,7 @@ def make_outcomes(
         outcomes = [
             make_outcome(
                 report,
+                subject,
                 criterion,
                 error,
                 "Pass",
@@ -216,6 +264,7 @@ def make_outcomes(
         outcomes = [
             make_outcome(
                 report,
+                subject,
                 criterion,
                 error,
                 "Fail" if outcome_ressources["blocking"] else "CannotTell",
@@ -287,6 +336,7 @@ def make_assertion(
         make_result(report,
             make_outcomes(
                 report,
+                subject,
                 criterion,
                 error,
                 messages,
@@ -321,6 +371,7 @@ def make_not_tested(
                 [
                     make_outcome(
                         report,
+                        None,
                         criterion,
                         outcome,
                         "NotTested"

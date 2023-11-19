@@ -3,6 +3,7 @@ from datetime import datetime
 from os import makedirs
 from os.path import exists
 from sys import argv
+from codecs import open as copen
 
 from constants import (
     MODULES_TTL_GLOB_PATH,
@@ -113,5 +114,5 @@ if not exists(PWD_TO_MODEL_OUTPUT_FOLDER):
 with open(f"{file_base}.ttl", "w") as f:
     f.write(report.serialize(format="ttl"))
 
-with open(f"{file_base}.md", "w") as f:
+with copen(f"{file_base}.md", "w", "utf-8") as f:
     f.write(make_turtle_page(report, file_name))

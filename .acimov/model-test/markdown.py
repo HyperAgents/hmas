@@ -249,18 +249,18 @@ def make_summary_chapter(assertions):
     assertions_stats = [len(assertions[key]) for key, _, _ in SEVERITY_RANGE]
     nb_assertions = sum(assertions_stats)
 
-    severity_rates = [int(nb/nb_assertions * 100) for nb in assertions_stats]
+    severity_rates = [max(1, int(nb/nb_assertions * 100)) for nb in assertions_stats]
     severity_rates[-1] = 100 - sum(severity_rates[:-1])
 
     bar = '<div  style="border-radius: 12px; height: 25px; overflow: hidden">'
     for i in range(len(SEVERITY_RANGE)):
         color = SEVERITY_RANGE[i][2]
-        radius = ''
+        style = f""
         if i == 0:
-            radius = 'style="border-radius: 12px 0px 0px 12px"'
+            style += f'border-radius: 12px 0px 0px 12px'
         if i == len(SEVERITY_RANGE) - 1:
-            radius = 'style="border-radius: 0px 12px 12px 0px"'
-        bar += f'<img src="https://placehold.co/15x15/{color}/{color}.png" width="{severity_rates[i]}%" height="25px" {radius}/>'
+            style += 'border-radius: 0px 12px 12px 0px'
+        bar += f'<img src="https://placehold.co/15x15/{color}/{color}.png" width="{severity_rates[i]}%" height="25px" style="{style}"/>'
     bar +='</div>'
 
     result = [
