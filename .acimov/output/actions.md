@@ -13,7 +13,7 @@ Here is some context about under which context this test was made
 |Title|NicoRobertIn using actions script|
 |Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py)
-|Date|2023-11-19 19:12:35|
+|Date|2023-11-19 19:40:34|
 
 ***
 
@@ -470,7 +470,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :regulation has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems...."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
 ### CannotTell Assertion number 2
@@ -521,7 +521,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :regulation has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems...."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
 ### CannotTell Assertion number 4
@@ -572,7 +572,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :regulation has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems...."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
 ### CannotTell Assertion number 6
@@ -623,7 +623,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological p..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. ..."@en ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, ..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### CannotTell Assertion number 8
@@ -899,7 +899,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :OrganizationModel has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:OrganizationModel a skos:Concept ;&#10;skos:definition "An Organization Model is the combination of Roles, Missions, and Facilities in a consistent way used to enact one or multiple Organizations."@en ;&#10;skos:editorialNote "The Organization Model is represented as SHACL Shapes."@en ;&#10;skos:prefLabel "organization model"@en ;&#10;skos:related :Organization .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:OrganizationModel a skos:Concept ;&#10;skos:definition "An Organization Model is the combination of Roles, Missions, and Facilities in a..."@en ;&#10;skos:editorialNote "The Organization Model is represented as SHACL Shapes."@en ;&#10;skos:prefLabel "organization model"@en ;&#10;skos:related :Organization .</code></pre>|
 
 ***
 ### CannotTell Assertion number 19
@@ -974,7 +974,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property signifies has a range out of the ontology: sh:NodeShape|
-|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the ..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
 ***
@@ -1000,7 +1000,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :interaction has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems...."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédia..."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
 ### CannotTell Assertion number 23
@@ -1025,7 +1025,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property signifies has a range out of the ontology: sh:NodeShape|
-|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the ..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
 ***
@@ -1051,7 +1051,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :interaction has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems...."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédia..."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
 ### CannotTell Assertion number 25
@@ -1126,7 +1126,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)."@en .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the FIPA Abstract Archi..."@en .</code></pre>|
 
 ***
 ### CannotTell Assertion number 28
@@ -1176,7 +1176,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent Identifier Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent Identifier Descriptio..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 30
@@ -1201,7 +1201,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform ..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 31
@@ -1226,7 +1226,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http:/..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 32
@@ -1251,7 +1251,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for HTTP Specification (http://fipa.org/specs/fipa00084/SC00084F.html)."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message ..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
 ### CannotTell Assertion number 33
@@ -1276,7 +1276,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that conforms to the FIPA Message Transport Service Specification (http://fipa.org/specs/fipa00067/SC00067F.html)."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that conforms to the FIPA Messa..."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
 
 ***
 ### CannotTell Assertion number 34
@@ -1301,7 +1301,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for IIOP Specification (http://fipa.org/specs/fipa00075/SC00075G.html)."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message ..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
 ### CannotTell Assertion number 35
@@ -1326,7 +1326,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
 ### CannotTell Assertion number 36
@@ -1351,7 +1351,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological p..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. ..."@en ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological p..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. ..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, ..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### CannotTell Assertion number 37
@@ -1576,7 +1576,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Domain out of vocabulary|
 |Description|The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>|
-|Pointer|<pre lang="Turtle"><code>:isHostedOn a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "is hosted on"@en,&#10;"est hébergé sur"@fr ;&#10;rdfs:comment "A relation that refers to the platform that hosts an information resource or a process."@en,&#10;"A relations that refers to the platform that hosts the resource. "@en ;&#10;rdfs:domain :Hostable ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :HypermediaMASPlatform ;&#10;owl:inverseOf :hosts .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:isHostedOn a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "is hosted on"@en,&#10;"est hébergé sur"@fr ;&#10;rdfs:comment "A relation that refers to the platform that hosts an information resource or a p..."@en,&#10;"A relations that refers to the platform that hosts the resource. "@en ;&#10;rdfs:domain :Hostable ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :HypermediaMASPlatform ;&#10;owl:inverseOf :hosts .</code></pre>|
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Hostable></code></pre>|
 
 ***
@@ -1602,7 +1602,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>|
-|Pointer|<pre lang="Turtle"><code>:hosts a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "hosts"@en,&#10;"héberge"@fr ;&#10;dct:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;&#10;rdfs:domain :HypermediaMASPlatform ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :Hostable ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:hosts a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "hosts"@en,&#10;"héberge"@fr ;&#10;dct:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) tha..."@en ;&#10;rdfs:domain :HypermediaMASPlatform ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :Hostable ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .</code></pre>|
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Hostable></code></pre>|
 
 ***
@@ -1628,7 +1628,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
 ### CannotTell Assertion number 48
@@ -1653,7 +1653,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological p..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. ..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, ..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### CannotTell Assertion number 49
@@ -1878,7 +1878,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
 ### CannotTell Assertion number 58
@@ -1903,7 +1903,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological p..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. ..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, ..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### CannotTell Assertion number 59
@@ -2128,7 +2128,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
 ### CannotTell Assertion number 68
@@ -2153,7 +2153,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological p..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. ..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, ..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### CannotTell Assertion number 69
@@ -2378,7 +2378,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
 ### CannotTell Assertion number 78
@@ -2403,7 +2403,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological p..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. ..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, ..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### CannotTell Assertion number 79
@@ -2628,7 +2628,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property signifies has a range out of the ontology: sh:NodeShape|
-|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the ..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
 ***
@@ -2654,7 +2654,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
 ### CannotTell Assertion number 89
@@ -2679,7 +2679,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :interaction has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems...."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédia..."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
 ### CannotTell Assertion number 90
@@ -2704,7 +2704,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :regulation has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems...."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
 ### CannotTell Assertion number 91
@@ -2729,7 +2729,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological p..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. ..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, ..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### CannotTell Assertion number 92
@@ -3004,7 +3004,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)."@en .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the FIPA Abstract Archi..."@en .</code></pre>|
 
 ***
 ### CannotTell Assertion number 103
@@ -3054,7 +3054,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent Identifier Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent Identifier Descriptio..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 105
@@ -3079,7 +3079,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform ..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 106
@@ -3104,7 +3104,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http:/..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 107
@@ -3129,7 +3129,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for HTTP Specification (http://fipa.org/specs/fipa00084/SC00084F.html)."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message ..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
 ### CannotTell Assertion number 108
@@ -3154,7 +3154,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that conforms to the FIPA Message Transport Service Specification (http://fipa.org/specs/fipa00067/SC00067F.html)."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that conforms to the FIPA Messa..."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
 
 ***
 ### CannotTell Assertion number 109
@@ -3179,7 +3179,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for IIOP Specification (http://fipa.org/specs/fipa00075/SC00075G.html)."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message ..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
 ### CannotTell Assertion number 110
@@ -3204,8 +3204,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :core and :Role|
-|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
-|Pointer|<pre lang="Turtle"><code>:Role a owl:Class ;&#10;rdfs:label "role"@en,&#10;"rôle"@fr ;&#10;rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization."@en ;&#10;rdfs:isDefinedBy :regulation .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Role a owl:Class ;&#10;rdfs:label "role"@en,&#10;"rôle"@fr ;&#10;rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization...."@en ;&#10;rdfs:isDefinedBy :regulation .</code></pre>|
 
 ***
 ### CannotTell Assertion number 111
@@ -3256,8 +3256,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :signifies and :Signifier|
-|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
-|Pointer|<pre lang="Turtle"><code>:Signifier a owl:Class ;&#10;rdfs:label "Signifier"@en,&#10;"Signifiant"@fr ;&#10;rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility."@en ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/41> ;&#10;skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies."@en ;&#10;skos:related :Affordance .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the ..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Signifier a owl:Class ;&#10;rdfs:label "Signifier"@en,&#10;"Signifiant"@fr ;&#10;rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to revea..."@en ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/41> ;&#10;skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies...."@en ;&#10;skos:related :Affordance .</code></pre>|
 
 ***
 ### CannotTell Assertion number 113
@@ -3282,7 +3282,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Domain out of vocabulary|
 |Description|The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>|
-|Pointer|<pre lang="Turtle"><code>:isHostedOn a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "is hosted on"@en,&#10;"est hébergé sur"@fr ;&#10;rdfs:comment "A relation that refers to the platform that hosts an information resource or a process."@en,&#10;"A relations that refers to the platform that hosts the resource. "@en ;&#10;rdfs:domain :Hostable ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :HypermediaMASPlatform ;&#10;owl:inverseOf :hosts .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:isHostedOn a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "is hosted on"@en,&#10;"est hébergé sur"@fr ;&#10;rdfs:comment "A relation that refers to the platform that hosts an information resource or a p..."@en,&#10;"A relations that refers to the platform that hosts the resource. "@en ;&#10;rdfs:domain :Hostable ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :HypermediaMASPlatform ;&#10;owl:inverseOf :hosts .</code></pre>|
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Hostable></code></pre>|
 
 ***
@@ -3308,7 +3308,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>|
-|Pointer|<pre lang="Turtle"><code>:hosts a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "hosts"@en,&#10;"héberge"@fr ;&#10;dct:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;&#10;rdfs:domain :HypermediaMASPlatform ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :Hostable ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:hosts a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "hosts"@en,&#10;"héberge"@fr ;&#10;dct:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) tha..."@en ;&#10;rdfs:domain :HypermediaMASPlatform ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :Hostable ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .</code></pre>|
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Hostable></code></pre>|
 
 ***
@@ -3334,7 +3334,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Range out of vocabulary|
 |Description|The property signifies has a range out of the ontology: sh:NodeShape|
-|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the ..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
 ***
@@ -3360,7 +3360,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :core has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
 ### CannotTell Assertion number 117
@@ -3385,7 +3385,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :interaction has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agent Systems...."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes multi-agents hypermédia..."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
 ### CannotTell Assertion number 118
@@ -3410,7 +3410,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :regulation has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems...."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
 ### CannotTell Assertion number 119
@@ -3435,7 +3435,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological p..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. ..."@en ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological p..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. ..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an ability of an agent and..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for representing interaction..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, ..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### CannotTell Assertion number 120
@@ -3485,7 +3485,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :OrganizationModel has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:OrganizationModel a skos:Concept ;&#10;skos:definition "An Organization Model is the combination of Roles, Missions, and Facilities in a consistent way used to enact one or multiple Organizations."@en ;&#10;skos:editorialNote "The Organization Model is represented as SHACL Shapes."@en ;&#10;skos:prefLabel "organization model"@en ;&#10;skos:related :Organization .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:OrganizationModel a skos:Concept ;&#10;skos:definition "An Organization Model is the combination of Roles, Missions, and Facilities in a..."@en ;&#10;skos:editorialNote "The Organization Model is represented as SHACL Shapes."@en ;&#10;skos:prefLabel "organization model"@en ;&#10;skos:related :Organization .</code></pre>|
 
 ***
 ### CannotTell Assertion number 122
@@ -3835,7 +3835,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)."@en .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the FIPA Abstract Archi..."@en .</code></pre>|
 
 ***
 ### CannotTell Assertion number 136
@@ -3885,7 +3885,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent Identifier Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent Identifier Descriptio..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 138
@@ -3910,7 +3910,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform ..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 139
@@ -3935,7 +3935,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http:/..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 140
@@ -3960,7 +3960,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for HTTP Specification (http://fipa.org/specs/fipa00084/SC00084F.html)."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message ..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
 ### CannotTell Assertion number 141
@@ -3985,7 +3985,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that conforms to the FIPA Message Transport Service Specification (http://fipa.org/specs/fipa00067/SC00067F.html)."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that conforms to the FIPA Messa..."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
 
 ***
 ### CannotTell Assertion number 142
@@ -4010,7 +4010,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message Transport Protocol for IIOP Specification (http://fipa.org/specs/fipa00075/SC00075G.html)."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the FIPA Agent Message ..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
 ### CannotTell Assertion number 143
@@ -4035,8 +4035,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :core and :Role|
-|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
-|Pointer|<pre lang="Turtle"><code>:Role a owl:Class ;&#10;rdfs:label "role"@en,&#10;"rôle"@fr ;&#10;rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization."@en ;&#10;rdfs:isDefinedBy :regulation .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents hypermédias...."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Role a owl:Class ;&#10;rdfs:label "role"@en,&#10;"rôle"@fr ;&#10;rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization...."@en ;&#10;rdfs:isDefinedBy :regulation .</code></pre>|
 
 ***
 ### CannotTell Assertion number 144
@@ -4087,8 +4087,8 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Too close terms|
 |Description|The following terms are too similar: :signifies and :Signifier|
-|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
-|Pointer|<pre lang="Turtle"><code>:Signifier a owl:Class ;&#10;rdfs:label "Signifier"@en,&#10;"Signifiant"@fr ;&#10;rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility."@en ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/41> ;&#10;rdfs:subClassOf :Hostable ;&#10;skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies."@en ;&#10;skos:related :Affordance,&#10;:Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a description of the ..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Signifier a owl:Class ;&#10;rdfs:label "Signifier"@en,&#10;"Signifiant"@fr ;&#10;rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to revea..."@en ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/41> ;&#10;rdfs:subClassOf :Hostable ;&#10;skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies...."@en ;&#10;skos:related :Affordance,&#10;:Signifier .</code></pre>|
 
 ***
 ## :grey_question:NotTested Assertion Details
