@@ -22,7 +22,7 @@ jobs:
     - name: Launch model tests
       run: |
         pip install -r .acimov/model-test/requirements.txt
-        python .acimov/model-test/complete-test.py --mode=actions --skip-pass --DEV_USERNAME=${{ github.actor }} --REPO_URI=${{ github.server_url }}/${{ github.repository }} --BRANCH=${{ github.ref_name }}
+        python .acimov/model-test/complete-test.py --mode=actions --DEV_USERNAME=${{ github.actor }} --REPO_URI=${{ github.server_url }}/${{ github.repository }} --BRANCH=${{ github.ref_name }}
     - name: Commit the report
       run: |
         git config --global user.email "no-reply@github.com"
