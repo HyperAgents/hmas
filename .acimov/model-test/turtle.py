@@ -30,7 +30,8 @@ from constants import (
     BRANCH,
     MODULE_URL_FORMAT,
     MODELET_URL_FORMAT,
-    PWD_TO_ROOT_FOLDER
+    PWD_TO_ROOT_FOLDER,
+    LITERAL_CUTTING_LENGTH
 )
 
 def statement(self, subject, *po):
@@ -205,9 +206,9 @@ def extract_statement(report, subject, pointer):
             if isinstance(triple[2], Literal):
                 literal = triple[2]
                 ltype = literal.datatype
-                if len(literal) > 50:
+                if len(literal) > LITERAL_CUTTING_LENGTH:
                     separator = "..." if ltype is None or ltype == XSD.string else ""
-                    newLiteral = Literal(f"{literal[:80]}{separator}", lang=literal.language, datatype=ltype)
+                    newLiteral = Literal(f"{literal[:LITERAL_CUTTING_LENGTH]}{separator}", lang=literal.language, datatype=ltype)
                     targetTriple = (targetTriple[0], targetTriple[1], newLiteral)
             statement.add(targetTriple)
         
