@@ -164,8 +164,8 @@ def make_details_table(
     ]
 
     for rdfPointer in pointersDict.get(outcome, []):
-        mdPointer = str(rdfPointer).replace("\n", "<br>")
-        beforePointer = '<pre lang="rdf" overflow-wrap="break-word">' if isinstance(rdfPointer, Literal) else ""
+        mdPointer = str(rdfPointer).replace("\n", "&#10;")
+        beforePointer = '<pre lang="Turtle">' if isinstance(rdfPointer, Literal) else ""
         afterPointer = "<br/></pre>" if isinstance(rdfPointer, Literal) else ""
         chapter.append(f"|Pointer|{beforePointer}{mdPointer}{afterPointer}|")
 
