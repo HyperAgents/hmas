@@ -156,6 +156,31 @@ def short_subject_part(part):
     
     return part
 
+def extractTriples(isolated_graph, searched_entity):
+    predicates_objects = [line for line in isolated_graph.predicate_objects(subject=searched_entity)]
+
+    if len(predicates_objects) == 0:
+        return searched_entity
+    
+    all_triples = [(searched_entity, line[0], line[1]) for line in predicates_objects]
+
+    blank_nodes = [
+        node
+        for line in predicates_objects
+        for node in line
+        if isinstance(node, BNode)
+    ]
+
+    new_triples = [
+        triple for triple_group in [
+            extractTriples(isolated_graph, node)
+            for node in blank_nodes
+        ]
+        for triple in triple_group
+    ]
+
+    return all_triples + new_triples
+
 def extract_statement(report, subject, pointer):
     isolated_graph = Graph()
 
@@ -163,27 +188,31 @@ def extract_statement(report, subject, pointer):
         part_path = short_subject_part(str(part))
         isolated_graph.parse(part_path)
         
-    isolated = isolated_graph.query(f"SELECT ?p ?o WHERE {{{pointer} ?p ?o}}")
-    isolated = [line for line in isolated]
-
-    if len(isolated) == 0:
-        return URIRef(pointer[1:-1])
-    
-    isolated = [[f"<{str(item)}>" if isinstance(item, URIRef) else f'"{str(item)}"' for item in line] for line in isolated]
-    isolated = [f"{pointer} {line[0]} {line[1]} ." for line in isolated]
-    isolated = "\n".join(isolated)
+    triples = extractTriples(isolated_graph, pointer)
     
     statement = Graph()
 
     for prefix, namespace in isolated_graph.namespaces():
         statement.bind(prefix, namespace)
 
-    statement.parse(data=isolated, format="ttl")
-    statement.bind("", ONTOLOGY_NAMESPACE)
-    
-    statement = statement.serialize(format="ttl", encoding="utf-8").decode(encoding="utf-8")
-    statement = [line.strip().replace("<", "&#60;") for line in statement.split("\n") if len(line.strip()) > 0]
-    
+    if not isinstance(triples, list):
+        statement = f"<{str(triples)}>" if isinstance(triples, URIRef) else \
+                        "[]" if isinstance(triples, BNode) \
+                            else f'"{str(triples)}"'
+    else:
+        for triple in triples:
+            statement.add(triple)
+        
+        # statement.bind("", ONTOLOGY_NAMESPACE)
+        
+        statement = statement.serialize(format="ttl", encoding="utf-8").decode(encoding="utf-8")
+
+    statement = [
+        line.strip().replace("<", "&#60;")
+        for line in statement.split("\n")
+        if len(line.strip()) > 0
+    ]
+        
     for i in range(len(statement)):
         if not statement[i].startswith("@"):
             statement = "\n".join(statement[i:])
@@ -198,7 +227,7 @@ def make_pointer(report, subject, pointer_string):
     if statement_subject[0] == "<" and not is_statement and \
         pointer_string[1:].startswith(str(ONTOLOGY_NAMESPACE)):
         
-        pointer = extract_statement(report, subject, statement_subject)
+        pointer = extract_statement(report, subject, URIRef(statement_subject[1:-1]))
     elif statement_subject[0] != "[" and not is_statement:
         normalizedUri = Namespace(
             [
