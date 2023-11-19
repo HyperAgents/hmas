@@ -12,6 +12,202 @@
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject syntax must be correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:logistics-structure-organization ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:regulation-logistics-create-organization ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL EL sublanguage"@en ;
+                    dcterms:title "OWL EL Profile compatible"@en ] ] ;
+    earl:subject _:regulation ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL EL sublanguage"@en ;
+                    dcterms:title "OWL EL Profile compatible"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:interaction ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The term :Organization has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :Organization ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :OrganizationModel has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :OrganizationModel ] ] ;
+    earl:subject _:logistics-create-organization ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms defined in the subject have a rdfs:label in English"@en ;
+                    dcterms:title "All terms labeled"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso sh:NodeShape,
+                        :signifies ] ] ;
+    earl:subject _:interaction ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CannotTell ;
                     dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
                     dcterms:title "Too close terms"@en ;
@@ -24,143 +220,29 @@
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso sh:NodeShape,
-                        :signifies ] ] ;
-    earl:subject _:interaction ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :Affordance ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :core ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-organization ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation-logistics-structure-organization ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :core ],
-                [ a earl:CannotTell ;
                     dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
                     dcterms:title "Terms not labeled"@en ;
                     rdfs:seeAlso :Affordance ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-signifiers ;
+    earl:subject _:manufacturing-environments-discover-signifiers ;
     earl:test acimov-model-test:labeled-terms .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject syntax must be correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:range is defined within the fragment"@en ;
+                    dcterms:title "Ranges properly defined"@en ] ] ;
+    earl:subject _:regulation-logistics-create-organization ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-platforms ;
     earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :interaction has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :interaction ] ] ;
-    earl:subject _:interaction ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation ;
-    earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -169,327 +251,123 @@
                     dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
                     dcterms:title "The test could not be run"@en ] ] ;
     earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :core ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :Affordance ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-organization ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:fipa ;
     earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation-logistics-create-organization ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:logistics-structure-organization ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ] ] ;
     earl:subject _:manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-organization ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Domain out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :isHostedOn ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-organization ;
     earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :OrganizationModel has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :OrganizationModel ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :Organization has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :Organization ] ] ;
-    earl:subject _:logistics-create-organization ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/Organization> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :Organization ] ] ;
-    earl:subject _:logistics-create-organization ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :regulation has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :regulation ] ] ;
-    earl:subject _:regulation-logistics-structure-organization ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-signifiers ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:fipa ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-signifiers ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:logistics-structure-organization ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
-                    dcterms:title "Too close terms"@en ;
-                    rdfs:seeAlso :isMembershipIn,
-                        :isMembershipOf ],
-                [ a earl:CannotTell ;
                     dcterms:description "The following terms are too similar: :core and :Role"@en ;
                     dcterms:title "Too close terms"@en ;
                     rdfs:seeAlso :Role,
                         :core ],
                 [ a earl:CannotTell ;
+                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
+                    dcterms:title "Too close terms"@en ;
+                    rdfs:seeAlso :isMembershipIn,
+                        :isMembershipOf ],
+                [ a earl:CannotTell ;
                     dcterms:description "The following terms are too similar: :signifies and :Signifier"@en ;
                     dcterms:title "Too close terms"@en ;
                     rdfs:seeAlso :Signifier,
                         :signifies ] ] ;
-    earl:subject _:all-fragments ;
+    earl:subject _:all-modules ;
     earl:test acimov-model-test:terms-differenciation .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-signifiers ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-signifiers ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
+    earl:subject _:fipa ;
     earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
     earl:subject _:regulation-logistics-create-organization ;
     earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-organization ;
-    earl:test acimov-model-test:terms-differenciation .
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :core ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :Affordance ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-platforms ;
     earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:range is defined within the fragment"@en ;
+                    dcterms:title "Ranges properly defined"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:logistics-structure-organization ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:regulation ;
+    earl:test acimov-model-test:term-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -498,23 +376,26 @@
                     dcterms:description "The term :regulation has no rdfs:label to define it in natural language"@en ;
                     dcterms:title "Terms not labeled"@en ;
                     rdfs:seeAlso :regulation ] ] ;
-    earl:subject _:regulation-logistics-create-organization ;
+    earl:subject _:regulation-logistics-structure-organization ;
     earl:test acimov-model-test:labeled-terms .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:owl-rl-constraint .
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:terms-differenciation .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
     earl:subject _:interaction ;
-    earl:test acimov-model-test:profile-compatibility .
+    earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -523,92 +404,22 @@
                     dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
                     dcterms:title "Range out of vocabulary"@en ;
                     rdfs:seeAlso sh:NodeShape,
-                        :signifies ] ] ;
-    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
+                        :signifies ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :hosts ] ] ;
+    earl:subject _:all-fragments ;
     earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-organization ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-organization ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentPlatformDescription ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :MessageTransportService ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :IIOPMessageTransportService ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :FIPAAgentPlatform ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :APService ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :HTTPMessageTransportService ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentIdentifierDescription ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceType ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceName ] ] ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:range is defined within the fragment"@en ;
+                    dcterms:title "Ranges properly defined"@en ] ] ;
     earl:subject _:fipa ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject needs to be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject syntax must be correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:logistics-create-organization ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:all-modules ;
     earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
@@ -619,21 +430,6 @@
                     dcterms:title "Test subject has syntax errors"@en ] ] ;
     earl:subject _:manufacturing-environments-safety-rules ;
     earl:test acimov-model-test:syntax .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject needs to be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation ;
-    earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -653,61 +449,90 @@
                     dcterms:title "Too close terms"@en ;
                     rdfs:seeAlso :Role,
                         :core ] ] ;
-    earl:subject _:all-modules ;
+    earl:subject _:all-fragments ;
     earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:fipa ;
-    earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Domain out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :isHostedOn ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-organization ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation-logistics-structure-organization ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:logistics-create-organization ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
     earl:subject _:interaction ;
     earl:test acimov-model-test:term-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-organization ;
-    earl:test acimov-model-test:domain-and-range-referencing .
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject syntax must be correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject needs to be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/Organization> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :Organization ] ] ;
+    earl:subject _:logistics-create-organization ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ] ] ;
+    earl:subject _:core ;
+    earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -720,67 +545,73 @@
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The term :regulation has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :regulation ] ] ;
     earl:subject _:regulation-logistics-create-organization ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:fipa ;
     earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentPlatformDescription ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceType ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :APService ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :IIOPMessageTransportService ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceName ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :HTTPMessageTransportService ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :FIPAAgentPlatform ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentIdentifierDescription ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :MessageTransportService ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
-                    dcterms:title "Too close terms"@en ;
-                    rdfs:seeAlso :isMembershipIn,
-                        :isMembershipOf ] ] ;
-    earl:subject _:regulation ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-platforms ;
     earl:test acimov-model-test:terms-differenciation .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso sh:NodeShape,
+                        :signifies ] ] ;
+    earl:subject _:all-modules ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :core ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :interaction has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :interaction ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :fipa has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :fipa ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :regulation has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :regulation ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :Affordance ] ] ;
+    earl:subject _:all-modules ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
@@ -788,7 +619,19 @@
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ],
@@ -797,99 +640,64 @@
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
     earl:subject _:core-manufacturing-environments-discover-core ;
     earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-signifiers ;
-    earl:test acimov-model-test:term-referencing .
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
-                    dcterms:title "Too close terms"@en ;
-                    rdfs:seeAlso :isMembershipIn,
-                        :isMembershipOf ] ] ;
-    earl:subject _:logistics-structure-organization ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms defined in the subject have a rdfs:label in English"@en ;
+                    dcterms:title "All terms labeled"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-core ;
     earl:test acimov-model-test:labeled-terms .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation-logistics-create-organization ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
     earl:subject _:fipa ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-platforms ;
     earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:core ;
+    earl:test acimov-model-test:term-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
+                    dcterms:description "The term :fipa has no rdfs:label to define it in natural language"@en ;
                     dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :Affordance ] ] ;
-    earl:subject _:manufacturing-environments-discover-signifiers ;
+                    rdfs:seeAlso :fipa ] ] ;
+    earl:subject _:fipa ;
     earl:test acimov-model-test:labeled-terms .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-signifiers ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:profile-compatibility .
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:core ;
+    earl:test acimov-model-test:terms-differenciation .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -902,110 +710,19 @@
                     dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
                     dcterms:title "Terms not labeled"@en ;
                     rdfs:seeAlso :core ] ] ;
-    earl:subject _:core ;
+    earl:subject _:core-manufacturing-environments-discover-organization ;
     earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-signifiers ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation-logistics-structure-organization ;
-    earl:test acimov-model-test:term-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-signifiers ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Domain out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :isHostedOn ] ] ;
     earl:subject _:core-manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :interaction has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :interaction ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :Affordance ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :regulation has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :regulation ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :core ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :fipa has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :fipa ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :OrganizationModel has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :OrganizationModel ] ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:labeled-terms .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:logistics-structure-organization ;
-    earl:test acimov-model-test:labeled-terms .
+    earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -1013,44 +730,91 @@
             earl:outcome [ a earl:NotTested ;
                     dcterms:description "The subject must be syntaxically correct"@en ;
                     dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:subject _:meta ;
     earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-organization ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:interaction ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL EL sublanguage"@en ;
+                    dcterms:title "OWL EL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ] ] ;
     earl:subject _:fipa ;
     earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :core ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :Affordance ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentPlatformDescription ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :APService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentIdentifierDescription ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :HTTPMessageTransportService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :IIOPMessageTransportService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :FIPAAgentPlatform ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceName ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :MessageTransportService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceType ] ] ;
+    earl:subject _:fipa ;
+    earl:test acimov-model-test:term-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -1060,26 +824,63 @@
                     dcterms:title "Too close terms"@en ;
                     rdfs:seeAlso :isMembershipIn,
                         :isMembershipOf ] ] ;
-    earl:subject _:regulation-logistics-create-organization ;
+    earl:subject _:logistics-structure-organization ;
     earl:test acimov-model-test:terms-differenciation .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation-logistics-create-organization ;
-    earl:test acimov-model-test:profile-compatibility .
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:range is defined within the fragment"@en ;
+                    dcterms:title "Ranges properly defined"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-signifiers ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The term :regulation has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :regulation ] ] ;
     earl:subject _:regulation ;
-    earl:test acimov-model-test:term-referencing .
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -1090,132 +891,80 @@
                 [ a earl:CannotTell ;
                     dcterms:description "Statement not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject _:all-modules ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso :Hostable,
-                        :hosts ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso sh:NodeShape,
-                        :signifies ] ] ;
     earl:subject _:all-fragments ;
-    earl:test acimov-model-test:domain-and-range-referencing .
+    earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :FIPAAgentPlatform ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :HTTPMessageTransportService ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentPlatformDescription ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :MessageTransportService ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceName ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :AgentIdentifierDescription ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :IIOPMessageTransportService ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :hasServiceType ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
-                    dcterms:title "Term not referenced to a module"@en ;
-                    rdfs:seeAlso :APService ] ] ;
-    earl:subject _:all-modules ;
-    earl:test acimov-model-test:term-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:domain-and-range-referencing .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
     earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation-logistics-structure-organization ;
-    earl:test acimov-model-test:domain-and-range-referencing .
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:interaction ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -1231,110 +980,56 @@
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :core ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :Affordance ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:labeled-terms .
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:range is defined within the fragment"@en ;
+                    dcterms:title "Ranges properly defined"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-platforms ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:interaction ;
-    earl:test acimov-model-test:terms-differenciation .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :fipa has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :fipa ] ] ;
-    earl:subject _:fipa ;
-    earl:test acimov-model-test:labeled-terms .
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:logistics-create-organization ;
+    earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:description "The subject needs to be syntaxically correct"@en ;
                     dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:meta ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:all-modules ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:owl-rl-constraint .
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:terms-differenciation .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
-                    dcterms:title "Range out of vocabulary"@en ;
-                    rdfs:seeAlso sh:NodeShape,
-                        :signifies ] ] ;
-    earl:subject _:all-modules ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-core ;
     earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:all-fragments ;
-    earl:test acimov-model-test:owl-rl-constraint .
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:terms-differenciation .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :interaction has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :interaction ] ] ;
-    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:labeled-terms .
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:term-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -1350,56 +1045,17 @@
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-organization ;
-    earl:test acimov-model-test:owl-rl-constraint .
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms defined in the subject have a rdfs:label in English"@en ;
+                    dcterms:title "All terms labeled"@en ] ] ;
+    earl:subject _:logistics-structure-organization ;
+    earl:test acimov-model-test:labeled-terms .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Statement not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
-    earl:subject _:core ;
-    earl:test acimov-model-test:profile-compatibility .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:CannotTell ;
-                    dcterms:description "The term :fipa has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :fipa ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :regulation has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :regulation ],
-                [ a earl:CannotTell ;
-                    dcterms:description "The term :interaction has no rdfs:label to define it in natural language"@en ;
-                    dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :interaction ],
-                [ a earl:CannotTell ;
                     dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
                     dcterms:title "Terms not labeled"@en ;
                     rdfs:seeAlso :Affordance ],
@@ -1407,38 +1063,190 @@
                     dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
                     dcterms:title "Terms not labeled"@en ;
                     rdfs:seeAlso :core ] ] ;
-    earl:subject _:all-modules ;
+    earl:subject _:core-manufacturing-environments-discover-core ;
     earl:test acimov-model-test:labeled-terms .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL EL sublanguage"@en ;
+                    dcterms:title "OWL EL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ] ] ;
+    earl:subject _:regulation-logistics-structure-organization ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
+                    dcterms:title "Too close terms"@en ;
+                    rdfs:seeAlso :isMembershipIn,
+                        :isMembershipOf ] ] ;
+    earl:subject _:regulation-logistics-create-organization ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:range is defined within the fragment"@en ;
+                    dcterms:title "Ranges properly defined"@en ] ] ;
+    earl:subject _:regulation-logistics-structure-organization ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
                     dcterms:description "Statement not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
+                    dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL QL Profile incompatible"@en ],
+                    dcterms:title "OWL EL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Statement not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
-                    dcterms:title "OWL EL Profile incompatible"@en ],
-                [ a earl:CannotTell ;
-                    dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
                 [ a earl:CannotTell ;
                     dcterms:description "Anonymous individuals are not supported"@en ;
                     dcterms:title "OWL QL Profile incompatible"@en ] ] ;
-    earl:subject _:core-manufacturing-environments-discover-organization ;
+    earl:subject _:all-modules ;
     earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
+    earl:subject _:regulation-logistics-structure-organization ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:regulation-logistics-structure-organization ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
+    earl:subject _:regulation ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Statement not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
+    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:domain-and-range-referencing .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -1451,33 +1259,460 @@
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:regulation-logistics-structure-organization ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
+    earl:subject _:core ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:regulation-logistics-create-organization ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceType ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :APService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentIdentifierDescription ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :IIOPMessageTransportService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :HTTPMessageTransportService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :FIPAAgentPlatform ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceName ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :MessageTransportService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentPlatformDescription ] ] ;
+    earl:subject _:all-modules ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The property signifies has a range out of the ontology: sh:NodeShape"@en ;
+                    dcterms:title "Range out of vocabulary"@en ;
+                    rdfs:seeAlso sh:NodeShape,
+                        :signifies ] ] ;
+    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms defined in the subject have a rdfs:label in English"@en ;
+                    dcterms:title "All terms labeled"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL EL sublanguage"@en ;
+                    dcterms:title "OWL EL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ] ] ;
+    earl:subject _:interaction ;
     earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL EL sublanguage"@en ;
+                    dcterms:title "OWL EL Profile compatible"@en ] ] ;
+    earl:subject _:logistics-create-organization ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:range is defined within the fragment"@en ;
+                    dcterms:title "Ranges properly defined"@en ] ] ;
+    earl:subject _:regulation ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:all-modules ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:core ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL EL sublanguage"@en ;
+                    dcterms:title "OWL EL Profile compatible"@en ] ] ;
+    earl:subject _:regulation-logistics-create-organization ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL EL sublanguage"@en ;
+                    dcterms:title "OWL EL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ] ] ;
+    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceName ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :HTTPMessageTransportService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :FIPAAgentPlatform ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :MessageTransportService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :hasServiceType ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :IIOPMessageTransportService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :APService ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentIdentifierDescription ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Term not referenced to a module"@en ;
+                    rdfs:seeAlso :AgentPlatformDescription ] ] ;
+    earl:subject _:all-fragments ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:regulation-logistics-structure-organization ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>"@en ;
+                    dcterms:title "Domain out of vocabulary"@en ;
+                    rdfs:seeAlso :Hostable,
+                        :isHostedOn ] ] ;
+    earl:subject _:all-fragments ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The syntax of the subject and any of its imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:regulation ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
+    earl:subject _:core-manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL EL sublanguage"@en ;
+                    dcterms:title "OWL EL Profile compatible"@en ] ] ;
     earl:subject _:logistics-structure-organization ;
     earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:core-manufacturing-environments-discover-signifiers ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
     earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms have have a satisfying Levenshtein distance from each other term."@en ;
+                    dcterms:title "Terms differenciated enough"@en ] ] ;
     earl:subject _:logistics-create-organization ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:all-fragments ;
     earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
-    earl:subject _:interaction ;
-    earl:test acimov-model-test:domain-and-range-referencing .
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "All the terms defined in the subject have a rdfs:label in English"@en ;
+                    dcterms:title "All terms labeled"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:profile-compatibility .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -1485,15 +1720,185 @@
             earl:outcome [ a earl:CannotTell ;
                     dcterms:description "The term :regulation has no rdfs:label to define it in natural language"@en ;
                     dcterms:title "Terms not labeled"@en ;
-                    rdfs:seeAlso :regulation ] ] ;
-    earl:subject _:regulation ;
+                    rdfs:seeAlso :regulation ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :Affordance ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :OrganizationModel has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :OrganizationModel ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :interaction has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :interaction ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :fipa has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :fipa ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :core ] ] ;
+    earl:subject _:all-fragments ;
     earl:test acimov-model-test:labeled-terms .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ] ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The term :Affordance has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :Affordance ],
+                [ a earl:CannotTell ;
+                    dcterms:description "The term :core has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :core ] ] ;
+    earl:subject _:core ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The term :interaction has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :interaction ] ] ;
+    earl:subject _:interaction ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL EL Profile incompatible"@en ],
+                [ a earl:CannotTell ;
+                    dcterms:description "Anonymous individuals are not supported"@en ;
+                    dcterms:title "OWL QL Profile incompatible"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:range is defined within the fragment"@en ;
+                    dcterms:title "Ranges properly defined"@en ] ] ;
+    earl:subject _:core ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The term :interaction has no rdfs:label to define it in natural language"@en ;
+                    dcterms:title "Terms not labeled"@en ;
+                    rdfs:seeAlso :interaction ] ] ;
+    earl:subject _:interaction-manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:labeled-terms .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL TC sublanguage"@en ;
+                    dcterms:title "OWL TC Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL EL sublanguage"@en ;
+                    dcterms:title "OWL EL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL RL sublanguage"@en ;
+                    dcterms:title "OWL RL Profile compatible"@en ],
+                [ a earl:Pass ;
+                    dcterms:description "The subject is included in the OWL QL sublanguage"@en ;
+                    dcterms:title "OWL QL Profile compatible"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:profile-compatibility .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
     earl:subject _:core-manufacturing-environments-discover-platforms ;
     earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each term of the test subject is linked to a module by a rdfs:isDefinedBy property"@en ;
+                    dcterms:title "Any term is referenced"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:term-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Each rdfs:domain is defined within the fragment"@en ;
+                    dcterms:title "Domains properly defined"@en ] ] ;
+    earl:subject _:all-modules ;
+    earl:test acimov-model-test:domain-and-range-referencing .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:CannotTell ;
+                    dcterms:description "The following terms are too similar: :isMembershipOf and :isMembershipIn"@en ;
+                    dcterms:title "Too close terms"@en ;
+                    rdfs:seeAlso :isMembershipIn,
+                        :isMembershipOf ] ] ;
+    earl:subject _:regulation ;
+    earl:test acimov-model-test:terms-differenciation .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:meta ;
+    earl:test acimov-model-test:profile-compatibility .
 
 _:NicoRobertIn a foaf:Person ;
     schema:mainEntityOfPage <https://github.com/NicoRobertIn> .
@@ -1630,7 +2035,7 @@ _:meta a earl:TestSubject ;
     dcterms:title "Standalone module src/meta.ttl from branch test-workflow"@en .
 
 _:NicoRobertIn-actions a foaf:OnlineAccount ;
-    dcterms:date "2023-11-19T00:02:17.258811"^^xsd:dateTime ;
+    dcterms:date "2023-11-19T00:04:32.727080"^^xsd:dateTime ;
     dcterms:description "Test triggered by @NicoRobertIn by a actions trigger"@en ;
     dcterms:title "NicoRobertIn using actions script"@en ;
     foaf:member <https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py> ;

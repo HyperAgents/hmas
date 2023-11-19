@@ -13,7 +13,7 @@ Here is some context about under which context this test was made
 |Title|NicoRobertIn using actions script|
 |Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by a actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py)
-|Date|2023-11-19 00:02:17|
+|Date|2023-11-19 00:04:32|
 
 ***
 
@@ -23,11 +23,11 @@ Here is some context about under which context this test was made
 
 Here is the human readable preview for the model test report
 
-168 Assertions
+303 Assertions
 
-:x:3 [Fail](#fail-assertions), :warning:145 [CannotTell](#cannottell-assertions), :grey_question:20 [NotTested](#nottested-assertions), :white_check_mark:0 [Pass](#pass-assertions)
+:x:3 [Fail](#fail-assertions), :warning:145 [CannotTell](#cannottell-assertions), :grey_question:20 [NotTested](#nottested-assertions), :white_check_mark:135 [Pass](#pass-assertions)
 
-<div  style="border-radius: 12px; height: 25px; overflow: hidden"><img src="https://placehold.co/15x15/red/red.png" width="1%" height="25px" style="border-radius: 12px 0px 0px 12px"/><img src="https://placehold.co/15x15/orange/orange.png" width="86%" height="25px" /><img src="https://placehold.co/15x15/grey/grey.png" width="11%" height="25px" /><img src="https://placehold.co/15x15/green/green.png" width="2%" height="25px" style="border-radius: 0px 12px 12px 0px"/></div>
+<div  style="border-radius: 12px; height: 25px; overflow: hidden"><img src="https://placehold.co/15x15/red/red.png" width="0%" height="25px" style="border-radius: 12px 0px 0px 12px"/><img src="https://placehold.co/15x15/orange/orange.png" width="47%" height="25px" /><img src="https://placehold.co/15x15/grey/grey.png" width="6%" height="25px" /><img src="https://placehold.co/15x15/green/green.png" width="47%" height="25px" style="border-radius: 0px 12px 12px 0px"/></div>
 
 ## Fail assertions
 
@@ -225,10 +225,145 @@ Here is the human readable preview for the model test report
 
 [Jump to chapter start](#model-test-report-review)
 
-0 Pass assertions
+135 Pass assertions
 
 |*Jump*|*Number*|*Outcome type*|*Subject*|*Criterion*|*Title*|*Link*|
 |------|--------|--------------|---------|-----------|-------|------|
+|[Table top](#pass-assertions)|1/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-1)|
+|[Table top](#pass-assertions)|2/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-2)|
+|[Table top](#pass-assertions)|3/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-3)|
+|[Table top](#pass-assertions)|4/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-4)|
+|[Table top](#pass-assertions)|5/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-5)|
+|[Table top](#pass-assertions)|6/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-6)|
+|[Table top](#pass-assertions)|7/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-7)|
+|[Table top](#pass-assertions)|8/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-8)|
+|[Table top](#pass-assertions)|9/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-9)|
+|[Table top](#pass-assertions)|10/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-10)|
+|[Table top](#pass-assertions)|11/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-11)|
+|[Table top](#pass-assertions)|12/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-12)|
+|[Table top](#pass-assertions)|13/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-13)|
+|[Table top](#pass-assertions)|14/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-14)|
+|[Table top](#pass-assertions)|15/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-15)|
+|[Table top](#pass-assertions)|16/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-16)|
+|[Table top](#pass-assertions)|17/135|:white_check_mark:*Pass*|`regulation`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-17)|
+|[Table top](#pass-assertions)|18/135|:white_check_mark:*Pass*|`regulation`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-18)|
+|[Table top](#pass-assertions)|19/135|:white_check_mark:*Pass*|`regulation`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-19)|
+|[Table top](#pass-assertions)|20/135|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-20)|
+|[Table top](#pass-assertions)|21/135|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-21)|
+|[Table top](#pass-assertions)|22/135|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-22)|
+|[Table top](#pass-assertions)|23/135|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-23)|
+|[Table top](#pass-assertions)|24/135|:white_check_mark:*Pass*|`regulation`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-24)|
+|[Table top](#pass-assertions)|25/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-25)|
+|[Table top](#pass-assertions)|26/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-26)|
+|[Table top](#pass-assertions)|27/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-27)|
+|[Table top](#pass-assertions)|28/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-28)|
+|[Table top](#pass-assertions)|29/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-29)|
+|[Table top](#pass-assertions)|30/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-30)|
+|[Table top](#pass-assertions)|31/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-31)|
+|[Table top](#pass-assertions)|32/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-32)|
+|[Table top](#pass-assertions)|33/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-33)|
+|[Table top](#pass-assertions)|34/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-34)|
+|[Table top](#pass-assertions)|35/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-35)|
+|[Table top](#pass-assertions)|36/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-36)|
+|[Table top](#pass-assertions)|37/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-37)|
+|[Table top](#pass-assertions)|38/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-38)|
+|[Table top](#pass-assertions)|39/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-39)|
+|[Table top](#pass-assertions)|40/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-40)|
+|[Table top](#pass-assertions)|41/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-41)|
+|[Table top](#pass-assertions)|42/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-42)|
+|[Table top](#pass-assertions)|43/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-43)|
+|[Table top](#pass-assertions)|44/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-44)|
+|[Table top](#pass-assertions)|45/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-45)|
+|[Table top](#pass-assertions)|46/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-46)|
+|[Table top](#pass-assertions)|47/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-47)|
+|[Table top](#pass-assertions)|48/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-48)|
+|[Table top](#pass-assertions)|49/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-49)|
+|[Table top](#pass-assertions)|50/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-50)|
+|[Table top](#pass-assertions)|51/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-51)|
+|[Table top](#pass-assertions)|52/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-52)|
+|[Table top](#pass-assertions)|53/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-53)|
+|[Table top](#pass-assertions)|54/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-54)|
+|[Table top](#pass-assertions)|55/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-55)|
+|[Table top](#pass-assertions)|56/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-56)|
+|[Table top](#pass-assertions)|57/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-57)|
+|[Table top](#pass-assertions)|58/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-58)|
+|[Table top](#pass-assertions)|59/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-59)|
+|[Table top](#pass-assertions)|60/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-60)|
+|[Table top](#pass-assertions)|61/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-61)|
+|[Table top](#pass-assertions)|62/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-62)|
+|[Table top](#pass-assertions)|63/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-63)|
+|[Table top](#pass-assertions)|64/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-64)|
+|[Table top](#pass-assertions)|65/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-65)|
+|[Table top](#pass-assertions)|66/135|:white_check_mark:*Pass*|`logistics-create-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-66)|
+|[Table top](#pass-assertions)|67/135|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-67)|
+|[Table top](#pass-assertions)|68/135|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-68)|
+|[Table top](#pass-assertions)|69/135|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-69)|
+|[Table top](#pass-assertions)|70/135|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-70)|
+|[Table top](#pass-assertions)|71/135|:white_check_mark:*Pass*|`logistics-create-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-71)|
+|[Table top](#pass-assertions)|72/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-72)|
+|[Table top](#pass-assertions)|73/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-73)|
+|[Table top](#pass-assertions)|74/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-74)|
+|[Table top](#pass-assertions)|75/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-75)|
+|[Table top](#pass-assertions)|76/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-76)|
+|[Table top](#pass-assertions)|77/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-77)|
+|[Table top](#pass-assertions)|78/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-78)|
+|[Table top](#pass-assertions)|79/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-79)|
+|[Table top](#pass-assertions)|80/135|:white_check_mark:*Pass*|`interaction`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-80)|
+|[Table top](#pass-assertions)|81/135|:white_check_mark:*Pass*|`interaction`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-81)|
+|[Table top](#pass-assertions)|82/135|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-82)|
+|[Table top](#pass-assertions)|83/135|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-83)|
+|[Table top](#pass-assertions)|84/135|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-84)|
+|[Table top](#pass-assertions)|85/135|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-85)|
+|[Table top](#pass-assertions)|86/135|:white_check_mark:*Pass*|`interaction`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-86)|
+|[Table top](#pass-assertions)|87/135|:white_check_mark:*Pass*|`interaction`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-87)|
+|[Table top](#pass-assertions)|88/135|:white_check_mark:*Pass*|`fipa`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-88)|
+|[Table top](#pass-assertions)|89/135|:white_check_mark:*Pass*|`fipa`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-89)|
+|[Table top](#pass-assertions)|90/135|:white_check_mark:*Pass*|`fipa`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-90)|
+|[Table top](#pass-assertions)|91/135|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-91)|
+|[Table top](#pass-assertions)|92/135|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-92)|
+|[Table top](#pass-assertions)|93/135|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-93)|
+|[Table top](#pass-assertions)|94/135|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-94)|
+|[Table top](#pass-assertions)|95/135|:white_check_mark:*Pass*|`fipa`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-95)|
+|[Table top](#pass-assertions)|96/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-96)|
+|[Table top](#pass-assertions)|97/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-97)|
+|[Table top](#pass-assertions)|98/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-98)|
+|[Table top](#pass-assertions)|99/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-99)|
+|[Table top](#pass-assertions)|100/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-100)|
+|[Table top](#pass-assertions)|101/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-101)|
+|[Table top](#pass-assertions)|102/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-102)|
+|[Table top](#pass-assertions)|103/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-103)|
+|[Table top](#pass-assertions)|104/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-104)|
+|[Table top](#pass-assertions)|105/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-105)|
+|[Table top](#pass-assertions)|106/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-106)|
+|[Table top](#pass-assertions)|107/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-107)|
+|[Table top](#pass-assertions)|108/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-108)|
+|[Table top](#pass-assertions)|109/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-109)|
+|[Table top](#pass-assertions)|110/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-110)|
+|[Table top](#pass-assertions)|111/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-111)|
+|[Table top](#pass-assertions)|112/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-112)|
+|[Table top](#pass-assertions)|113/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-113)|
+|[Table top](#pass-assertions)|114/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-114)|
+|[Table top](#pass-assertions)|115/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-115)|
+|[Table top](#pass-assertions)|116/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-116)|
+|[Table top](#pass-assertions)|117/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-117)|
+|[Table top](#pass-assertions)|118/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-118)|
+|[Table top](#pass-assertions)|119/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-119)|
+|[Table top](#pass-assertions)|120/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-120)|
+|[Table top](#pass-assertions)|121/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-121)|
+|[Table top](#pass-assertions)|122/135|:white_check_mark:*Pass*|`core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-122)|
+|[Table top](#pass-assertions)|123/135|:white_check_mark:*Pass*|`core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-123)|
+|[Table top](#pass-assertions)|124/135|:white_check_mark:*Pass*|`core`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-124)|
+|[Table top](#pass-assertions)|125/135|:white_check_mark:*Pass*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-125)|
+|[Table top](#pass-assertions)|126/135|:white_check_mark:*Pass*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-126)|
+|[Table top](#pass-assertions)|127/135|:white_check_mark:*Pass*|`core`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-127)|
+|[Table top](#pass-assertions)|128/135|:white_check_mark:*Pass*|`core`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-128)|
+|[Table top](#pass-assertions)|129/135|:white_check_mark:*Pass*|`all-modules`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-129)|
+|[Table top](#pass-assertions)|130/135|:white_check_mark:*Pass*|`all-modules`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-130)|
+|[Table top](#pass-assertions)|131/135|:white_check_mark:*Pass*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-131)|
+|[Table top](#pass-assertions)|132/135|:white_check_mark:*Pass*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-132)|
+|[Table top](#pass-assertions)|133/135|:white_check_mark:*Pass*|`all-fragments`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-133)|
+|[Table top](#pass-assertions)|134/135|:white_check_mark:*Pass*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-134)|
+|[Table top](#pass-assertions)|135/135|:white_check_mark:*Pass*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-135)|
 
 ***
 
@@ -4367,5 +4502,3247 @@ New :grey_question:NotTested assertion
 |----|----|
 |Title|The test could not be run|
 |Description|The subject needs to be syntaxically correct|
+
+***
+## :white_check_mark:Pass Assertion Details
+
+### Pass Assertion number 1
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-structure-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 2
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-structure-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Ranges properly defined|
+|Description|Each rdfs:range is defined within the fragment|
+
+***
+### Pass Assertion number 3
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-structure-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 4
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-structure-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 5
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-structure-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 6
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-structure-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 7
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-structure-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL EL Profile compatible|
+|Description|The subject is included in the OWL EL sublanguage|
+
+***
+### Pass Assertion number 8
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-structure-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/structure-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 9
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-create-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 10
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-create-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Ranges properly defined|
+|Description|Each rdfs:range is defined within the fragment|
+
+***
+### Pass Assertion number 11
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-create-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 12
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-create-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 13
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-create-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 14
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-create-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 15
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-create-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL EL Profile compatible|
+|Description|The subject is included in the OWL EL sublanguage|
+
+***
+### Pass Assertion number 16
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation-logistics-create-organization|
+|----|----|
+|Title|Merged module src/regulation.ttl from branch test-workflow with related terms from the fragments domains/logistics/create-organization/onto.ttl|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 17
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation|
+|----|----|
+|Title|Standalone module src/regulation.ttl from branch test-workflow|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 18
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation|
+|----|----|
+|Title|Standalone module src/regulation.ttl from branch test-workflow|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Ranges properly defined|
+|Description|Each rdfs:range is defined within the fragment|
+
+***
+### Pass Assertion number 19
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation|
+|----|----|
+|Title|Standalone module src/regulation.ttl from branch test-workflow|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 20
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation|
+|----|----|
+|Title|Standalone module src/regulation.ttl from branch test-workflow|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 21
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation|
+|----|----|
+|Title|Standalone module src/regulation.ttl from branch test-workflow|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 22
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation|
+|----|----|
+|Title|Standalone module src/regulation.ttl from branch test-workflow|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 23
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation|
+|----|----|
+|Title|Standalone module src/regulation.ttl from branch test-workflow|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL EL Profile compatible|
+|Description|The subject is included in the OWL EL sublanguage|
+
+***
+### Pass Assertion number 24
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|regulation|
+|----|----|
+|Title|Standalone module src/regulation.ttl from branch test-workflow|
+|Composition|- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 25
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 26
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 27
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 28
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 29
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-signifiers/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 30
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
+|----|----|
+|Title|Term labeling test|
+|Description|A test case from the Best Practices tests checking if all the terms of the subject have a rdfs:label property pointing to a literal in English|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|All terms labeled|
+|Description|All the terms defined in the subject have a rdfs:label in English|
+
+***
+### Pass Assertion number 31
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 32
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 33
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 34
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 35
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 36
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-platforms/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 37
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-organization|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
+|----|----|
+|Title|Term labeling test|
+|Description|A test case from the Best Practices tests checking if all the terms of the subject have a rdfs:label property pointing to a literal in English|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|All terms labeled|
+|Description|All the terms defined in the subject have a rdfs:label in English|
+
+***
+### Pass Assertion number 38
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-organization|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 39
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-organization|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 40
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-organization|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 41
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-organization|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 42
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-organization|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL EL Profile compatible|
+|Description|The subject is included in the OWL EL sublanguage|
+
+***
+### Pass Assertion number 43
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-organization|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 44
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-organization|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 45
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-core|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
+|----|----|
+|Title|Term labeling test|
+|Description|A test case from the Best Practices tests checking if all the terms of the subject have a rdfs:label property pointing to a literal in English|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|All terms labeled|
+|Description|All the terms defined in the subject have a rdfs:label in English|
+
+***
+### Pass Assertion number 46
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-core|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 47
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-core|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 48
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-core|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 49
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-core|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 50
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-core|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-core/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 51
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
+|----|----|
+|Title|Term labeling test|
+|Description|A test case from the Best Practices tests checking if all the terms of the subject have a rdfs:label property pointing to a literal in English|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|All terms labeled|
+|Description|All the terms defined in the subject have a rdfs:label in English|
+
+***
+### Pass Assertion number 52
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 53
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 54
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 55
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 56
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL EL Profile compatible|
+|Description|The subject is included in the OWL EL sublanguage|
+
+***
+### Pass Assertion number 57
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 58
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Standalone modelet domains/manufacturing-environments/discover-behavior-specifications/onto.ttl from branch test-workflow|
+|Composition|- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 59
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-structure-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
+|----|----|
+|Title|Term labeling test|
+|Description|A test case from the Best Practices tests checking if all the terms of the subject have a rdfs:label property pointing to a literal in English|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|All terms labeled|
+|Description|All the terms defined in the subject have a rdfs:label in English|
+
+***
+### Pass Assertion number 60
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-structure-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 61
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-structure-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 62
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-structure-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 63
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-structure-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 64
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-structure-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL EL Profile compatible|
+|Description|The subject is included in the OWL EL sublanguage|
+
+***
+### Pass Assertion number 65
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-structure-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/structure-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 66
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-create-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 67
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-create-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 68
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-create-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 69
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-create-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 70
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-create-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL EL Profile compatible|
+|Description|The subject is included in the OWL EL sublanguage|
+
+***
+### Pass Assertion number 71
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-create-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 72
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 73
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 74
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 75
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 76
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 77
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL EL Profile compatible|
+|Description|The subject is included in the OWL EL sublanguage|
+
+***
+### Pass Assertion number 78
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 79
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 80
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction|
+|----|----|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 81
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction|
+|----|----|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 82
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction|
+|----|----|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 83
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction|
+|----|----|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 84
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction|
+|----|----|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 85
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction|
+|----|----|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL EL Profile compatible|
+|Description|The subject is included in the OWL EL sublanguage|
+
+***
+### Pass Assertion number 86
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction|
+|----|----|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 87
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction|
+|----|----|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 88
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|fipa|
+|----|----|
+|Title|Standalone module src/fipa.ttl from branch test-workflow|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 89
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|fipa|
+|----|----|
+|Title|Standalone module src/fipa.ttl from branch test-workflow|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Ranges properly defined|
+|Description|Each rdfs:range is defined within the fragment|
+
+***
+### Pass Assertion number 90
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|fipa|
+|----|----|
+|Title|Standalone module src/fipa.ttl from branch test-workflow|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 91
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|fipa|
+|----|----|
+|Title|Standalone module src/fipa.ttl from branch test-workflow|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 92
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|fipa|
+|----|----|
+|Title|Standalone module src/fipa.ttl from branch test-workflow|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 93
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|fipa|
+|----|----|
+|Title|Standalone module src/fipa.ttl from branch test-workflow|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 94
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|fipa|
+|----|----|
+|Title|Standalone module src/fipa.ttl from branch test-workflow|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL EL Profile compatible|
+|Description|The subject is included in the OWL EL sublanguage|
+
+***
+### Pass Assertion number 95
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|fipa|
+|----|----|
+|Title|Standalone module src/fipa.ttl from branch test-workflow|
+|Composition|- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 96
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 97
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Ranges properly defined|
+|Description|Each rdfs:range is defined within the fragment|
+
+***
+### Pass Assertion number 98
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 99
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 100
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 101
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 102
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 103
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 104
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 105
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 106
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 107
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 108
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 109
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Ranges properly defined|
+|Description|Each rdfs:range is defined within the fragment|
+
+***
+### Pass Assertion number 110
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 111
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 112
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 113
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 114
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 115
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 116
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Ranges properly defined|
+|Description|Each rdfs:range is defined within the fragment|
+
+***
+### Pass Assertion number 117
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 118
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 119
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 120
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 121
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 122
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core|
+|----|----|
+|Title|Standalone module src/core.ttl from branch test-workflow|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 123
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core|
+|----|----|
+|Title|Standalone module src/core.ttl from branch test-workflow|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Ranges properly defined|
+|Description|Each rdfs:range is defined within the fragment|
+
+***
+### Pass Assertion number 124
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core|
+|----|----|
+|Title|Standalone module src/core.ttl from branch test-workflow|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 125
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core|
+|----|----|
+|Title|Standalone module src/core.ttl from branch test-workflow|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 126
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core|
+|----|----|
+|Title|Standalone module src/core.ttl from branch test-workflow|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 127
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core|
+|----|----|
+|Title|Standalone module src/core.ttl from branch test-workflow|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+
+#### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 128
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core|
+|----|----|
+|Title|Standalone module src/core.ttl from branch test-workflow|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)|
+
+#### Criterion detail
+|Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
+|----|----|
+|Title|Terms differenciation test|
+|Description|A test case from the Best Practices tests checking if all the terms are different enough from each other according to the Levenshtein distance metric.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Terms differenciated enough|
+|Description|All the terms have have a satisfying Levenshtein distance from each other term.|
+
+***
+### Pass Assertion number 129
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|all-modules|
+|----|----|
+|Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 130
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|all-modules|
+|----|----|
+|Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 131
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|all-modules|
+|----|----|
+|Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 132
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|all-modules|
+|----|----|
+|Title|All the modules from branch test-workflow that are syntaxically correct as well as their recursive imports|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
+
+***
+### Pass Assertion number 133
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|all-fragments|
+|----|----|
+|Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|
+|----|----|
+|Title|OWL RL Constraint test|
+|Description|A test meant to check wether the test subject is syntaxically correct or not.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL consistent|
+|Description|The provided graph is consistent for any OWL RL constraint|
+
+***
+### Pass Assertion number 134
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|all-fragments|
+|----|----|
+|Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 135
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|all-fragments|
+|----|----|
+|Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/interaction.ttl)<br/>- [Module core.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/core.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/src/regulation.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/logistics/create-organization/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmasblob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
 
 ***
