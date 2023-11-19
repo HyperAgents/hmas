@@ -13,7 +13,7 @@ Here is some context about under which context this test was made
 |Title|NicoRobertIn using actions script|
 |Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by a actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py)
-|Date|2023-11-19 00:04:32|
+|Date|2023-11-19 02:27:31|
 
 ***
 
@@ -648,6 +648,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 9
@@ -672,6 +673,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 10
@@ -696,6 +698,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 11
@@ -720,6 +723,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 12
@@ -744,6 +748,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 13
@@ -768,6 +773,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 14
@@ -792,6 +798,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/hosts> a owl:AsymmetricProperty ;<br/>a owl:ObjectProperty ;<br/>dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br/>rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;<br/>rdfs:domain <https://purl.org/hmas/HypermediaMASPlatform> ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "hosts"@en ;<br/>rdfs:range <https://purl.org/hmas/Hostable> ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/49><br/></pre>|
 
 ***
 ### CannotTell Assertion number 15
@@ -816,6 +823,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br/>a owl:TransitiveProperty ;<br/>rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;<br/>rdfs:domain <https://purl.org/hmas/Workspace> ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "transitivelyContains"@en ;<br/>owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
 
 ***
 ### CannotTell Assertion number 16
@@ -840,6 +848,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br/>a owl:ObjectProperty ;<br/>rdfs:comment "A relation that links a resource to its profile."@en ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "has profile"@en ;<br/>rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br/>owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
 
 ***
 ### CannotTell Assertion number 17
@@ -1367,6 +1376,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 38
@@ -1391,6 +1401,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 39
@@ -1415,6 +1426,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>dc:references kg:Noneb20280 ;<br/>dc:references kg:Noneb20281 ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 40
@@ -1439,6 +1451,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br/>a owl:TransitiveProperty ;<br/>dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br/>rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br/>rdfs:domain <https://purl.org/hmas/Workspace> ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "contient transitivement"@fr ;<br/>rdfs:label "transitively contains"@en ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br/>owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
 
 ***
 ### CannotTell Assertion number 41
@@ -1463,6 +1476,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 42
@@ -1487,6 +1501,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 43
@@ -1511,6 +1526,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>dc:references kg:Noneb20280 ;<br/>dc:references kg:Noneb20281 ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 44
@@ -1535,6 +1551,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br/>a owl:ObjectProperty ;<br/>rdfs:comment "A relation that links a resource to its profile."@en ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "a pour profil"@fr ;<br/>rdfs:label "has for profile"@en ;<br/>rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br/>owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
 
 ***
 ### CannotTell Assertion number 45
@@ -1661,6 +1678,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 50
@@ -1685,6 +1703,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 51
@@ -1709,6 +1728,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 52
@@ -1733,6 +1753,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br/>a owl:TransitiveProperty ;<br/>dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br/>rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br/>rdfs:domain <https://purl.org/hmas/Workspace> ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "contient transitivement"@fr ;<br/>rdfs:label "transitively contains"@en ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br/>owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
 
 ***
 ### CannotTell Assertion number 53
@@ -1757,6 +1778,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 54
@@ -1781,6 +1803,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 55
@@ -1805,6 +1828,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 56
@@ -1829,6 +1853,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br/>a owl:ObjectProperty ;<br/>rdfs:comment "A relation that links a resource to its profile."@en ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "a pour profil"@fr ;<br/>rdfs:label "has for profile"@en ;<br/>rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br/>owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
 
 ***
 ### CannotTell Assertion number 57
@@ -1903,6 +1928,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 60
@@ -1927,6 +1953,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 61
@@ -1951,6 +1978,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 62
@@ -1975,6 +2003,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br/>a owl:TransitiveProperty ;<br/>dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br/>rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br/>rdfs:domain <https://purl.org/hmas/Workspace> ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "contient transitivement"@fr ;<br/>rdfs:label "transitively contains"@en ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br/>owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
 
 ***
 ### CannotTell Assertion number 63
@@ -1999,6 +2028,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 64
@@ -2023,6 +2053,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 65
@@ -2047,6 +2078,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 66
@@ -2071,6 +2103,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br/>a owl:ObjectProperty ;<br/>rdfs:comment "A relation that links a resource to its profile."@en ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "a pour profil"@fr ;<br/>rdfs:label "has for profile"@en ;<br/>rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br/>owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
 
 ***
 ### CannotTell Assertion number 67
@@ -2145,6 +2178,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 70
@@ -2169,6 +2203,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 71
@@ -2193,6 +2228,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 72
@@ -2217,6 +2253,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br/>a owl:TransitiveProperty ;<br/>dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br/>rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br/>rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;<br/>rdfs:domain <https://purl.org/hmas/Workspace> ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "contient transitivement"@fr ;<br/>rdfs:label "transitively contains"@en ;<br/>rdfs:label "transitivelyContains"@en ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br/>owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
 
 ***
 ### CannotTell Assertion number 73
@@ -2241,6 +2278,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 74
@@ -2265,6 +2303,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 75
@@ -2289,6 +2328,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 76
@@ -2313,6 +2353,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br/>a owl:ObjectProperty ;<br/>rdfs:comment "A relation that links a resource to its profile."@en ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "a pour profil"@fr ;<br/>rdfs:label "has for profile"@en ;<br/>rdfs:label "has profile"@en ;<br/>rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br/>owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
 
 ***
 ### CannotTell Assertion number 77
@@ -2387,6 +2428,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 80
@@ -2411,6 +2453,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 81
@@ -2435,6 +2478,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 82
@@ -2459,6 +2503,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br/>a owl:TransitiveProperty ;<br/>dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br/>rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br/>rdfs:domain <https://purl.org/hmas/Workspace> ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "contient transitivement"@fr ;<br/>rdfs:label "transitively contains"@en ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br/>owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
 
 ***
 ### CannotTell Assertion number 83
@@ -2483,6 +2528,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 84
@@ -2507,6 +2553,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 85
@@ -2531,6 +2578,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 86
@@ -2555,6 +2603,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br/>a owl:ObjectProperty ;<br/>rdfs:comment "A relation that links a resource to its profile."@en ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "a pour profil"@fr ;<br/>rdfs:label "has for profile"@en ;<br/>rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br/>owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
 
 ***
 ### CannotTell Assertion number 87
@@ -2730,6 +2779,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 94
@@ -2754,6 +2804,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 95
@@ -2778,6 +2829,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 96
@@ -2802,6 +2854,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br/>a owl:TransitiveProperty ;<br/>dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br/>rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br/>rdfs:domain <https://purl.org/hmas/Workspace> ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "contient transitivement"@fr ;<br/>rdfs:label "transitively contains"@en ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br/>owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
 
 ***
 ### CannotTell Assertion number 97
@@ -2826,6 +2879,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 98
@@ -2850,6 +2904,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 99
@@ -2874,6 +2929,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 100
@@ -2898,6 +2954,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br/>a owl:ObjectProperty ;<br/>rdfs:comment "A relation that links a resource to its profile."@en ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "a pour profil"@fr ;<br/>rdfs:label "has for profile"@en ;<br/>rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br/>owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
 
 ***
 ### CannotTell Assertion number 101
@@ -3453,6 +3510,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 123
@@ -3477,6 +3535,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 124
@@ -3501,6 +3560,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 125
@@ -3525,6 +3585,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 126
@@ -3549,6 +3610,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 127
@@ -3573,6 +3635,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty ;<br/>a owl:TransitiveProperty ;<br/>dc:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;<br/>rdfs:comment "Links all the resources that are logically contained in a workspaces, directly or indirectly by transitivity."@en ;<br/>rdfs:comment "Links all the resources that are logically contained in a workspaces."@en ;<br/>rdfs:domain <https://purl.org/hmas/Workspace> ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "contient transitivement"@fr ;<br/>rdfs:label "transitively contains"@en ;<br/>rdfs:label "transitivelyContains"@en ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;<br/>rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;<br/>owl:inverseOf <https://purl.org/hmas/isTransitivelyContainedIn><br/></pre>|
 
 ***
 ### CannotTell Assertion number 128
@@ -3597,6 +3660,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 129
@@ -3621,6 +3685,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 130
@@ -3645,6 +3710,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>rdfs:label "Chemero and Turvey, 2007"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 131
@@ -3669,6 +3735,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'>[dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>rdfs:label "Norman, 2013"@en]<br/></pre>|
 
 ***
 ### CannotTell Assertion number 132
@@ -3693,6 +3760,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/Affordance> a skos:Concept ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>dc:identifier <https://doi.org/10.1162/biot.2007.2.1.23> ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [a owl:NamedIndividual ;<br/>dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>dc:identifier <https://mitpress.mit.edu/9780262640374/> ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>dc:references [dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;<br/>rdfs:label "Chemero and Turvey, 2007"@en] ;<br/>dc:references [dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;<br/>rdfs:label "Norman, 2013"@en] ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;<br/>skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;<br/>skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;<br/>skos:prefLabel "affordance"@en ;<br/>skos:related <https://purl.org/hmas/Signifier><br/></pre>|
 
 ***
 ### CannotTell Assertion number 133
@@ -3717,6 +3785,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Statement not supported|
+|Pointer|<pre lang='rdf'><https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty ;<br/>a owl:ObjectProperty ;<br/>rdfs:comment "A relation that links a resource to its profile."@en ;<br/>rdfs:isDefinedBy <https://purl.org/hmas/core> ;<br/>rdfs:label "a pour profil"@fr ;<br/>rdfs:label "has for profile"@en ;<br/>rdfs:label "has profile"@en ;<br/>rdfs:range <https://purl.org/hmas/ResourceProfile> ;<br/>owl:inverseOf <https://purl.org/hmas/isProfileOf><br/></pre>|
 
 ***
 ### CannotTell Assertion number 134
