@@ -185,7 +185,7 @@ def extract_statement(report, subject, pointer):
             statement = "\n".join(statement[i:])
             break
     
-    return statement
+    return statement if not statement == "[]" else pointer
 
 def make_pointer(report, subject, pointer_string):
     statement_subject = pointer_string.split(" ")[0]
