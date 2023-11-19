@@ -343,7 +343,7 @@ def profile_errors(raw_message):
             descriptions.append(lines[i].split(".")[-1].strip())
             current_statement = ""
         except:
-            current_statement += f"\n{lines[i]}"
+            current_statement += f"\n {lines[i]}"
             continue
     
     pointers.append(current_statement.strip())
