@@ -205,7 +205,7 @@ def extract_statement(report, subject, pointer):
             if isinstance(triple[2], Literal):
                 literal = triple[2]
                 ltype = literal.datatype
-                if len(literal) > 65:
+                if len(literal) > 50:
                     separator = "..." if ltype is None or ltype == XSD.string else ""
                     newLiteral = Literal(f"{literal[:80]}{separator}", lang=literal.language, datatype=ltype)
                     targetTriple = (targetTriple[0], targetTriple[1], newLiteral)
