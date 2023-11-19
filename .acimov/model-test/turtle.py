@@ -165,6 +165,10 @@ def extract_statement(report, subject, pointer):
         
     isolated = isolated_graph.query(f"SELECT ?p ?o WHERE {{{pointer} ?p ?o}}")
     isolated = [line for line in isolated]
+
+    if len(isolated) == 0:
+        return URIRef(pointer[1:-1])
+    
     isolated = [[f"<{str(item)}>" if isinstance(item, URIRef) else f'"{str(item)}"' for item in line] for line in isolated]
     isolated = [f"{pointer} {line[0]} {line[1]} ." for line in isolated]
     isolated = "\n".join(isolated)
@@ -185,7 +189,7 @@ def extract_statement(report, subject, pointer):
             statement = "\n".join(statement[i:])
             break
     
-    return statement if not statement == "[]" else pointer
+    return Literal(statement)
 
 def make_pointer(report, subject, pointer_string):
     statement_subject = pointer_string.split(" ")[0]
@@ -194,7 +198,7 @@ def make_pointer(report, subject, pointer_string):
     if statement_subject[0] == "<" and not is_statement and \
         pointer_string[1:].startswith(str(ONTOLOGY_NAMESPACE)):
         
-        pointer = Literal(extract_statement(report, subject, statement_subject))
+        pointer = extract_statement(report, subject, statement_subject)
     elif statement_subject[0] != "[" and not is_statement:
         normalizedUri = Namespace(
             [
