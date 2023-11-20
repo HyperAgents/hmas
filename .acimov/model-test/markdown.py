@@ -140,7 +140,7 @@ def make_details_table(
     chapter += [
         f"### {severity} Assertion number {assertion_counter}",
         "",
-        f"[Jump to {severity} assertions summary](#{severity.lower()}-assertions)",
+        f"[Jump to summary definition](#summary-{severity}-{str(assertion_counter)})",
         "",
         f"New {emoji}{severity} assertion"
         "",
@@ -177,8 +177,8 @@ def make_details_chapter(criterions, assertions, partsDict, pointersDict):
         "",
         "# Assertion Details",
         "",
-        "[Jump to the previous chapter](#model-test-report-review)"
-        "",
+        "[Jump to the previous chapter](#model-test-report-review)",
+        ""
         "In this chapter we will go further into each assertion",
         ""
     ]
@@ -231,7 +231,7 @@ def make_summary_chapter(assertions):
             "|".join([
                 '',
                 f"[Table top]({id})",
-                f"{str(i+1)}/{str(table_length)}",
+                f'<div id="summary-{severity}-{str(i + 1)}">{str(i+1)}/{str(table_length)}</div>',
                 COLOR_BOX_TEMPLATE
                     .replace('EMOJI', emoji)
                     .replace('TEXT', severity),
