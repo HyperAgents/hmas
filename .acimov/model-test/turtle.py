@@ -188,12 +188,7 @@ def load_subject(report, subject):
 
     for part in report.objects(subject, DCTERMS.hasPart):
         part_path = short_subject_part(str(part))
-        try:
-            isolated_graph.parse(part_path)
-        except Exception as e:
-            print(part_path)
-            raise e
-    
+        isolated_graph.parse(part_path)
     return isolated_graph
 
 def extract_prefixes(graph):
