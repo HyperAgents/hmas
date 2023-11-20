@@ -13,7 +13,7 @@ Here is some context about under which context this test was made
 |Title|NicoRobertIn using actions script|
 |Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py)
-|Date|2023-11-20 14:06:03|
+|Date|2023-11-20 14:18:39|
 
 ***
 
@@ -23,9 +23,9 @@ Here is some context about under which context this test was made
 
 Here is the human readable preview for the model test report
 
-303 Assertions
+302 Assertions
 
-:x:3 [Fail](#fail-assertions), :warning:145 [CannotTell](#cannottell-assertions), :grey_question:20 [NotTested](#nottested-assertions), :white_check_mark:135 [Pass](#pass-assertions)
+:x:3 [Fail](#fail-assertions), :warning:143 [CannotTell](#cannottell-assertions), :grey_question:20 [NotTested](#nottested-assertions), :white_check_mark:136 [Pass](#pass-assertions)
 
 <div  style="border-radius: 12px; height: 25px; overflow: hidden"><img src="https://placehold.co/15x15/red/red.png" width="1%" height="25px" style="border-radius: 12px 0px 0px 12px"/><img src="https://placehold.co/15x15/orange/orange.png" width="47%" height="25px" style=""/><img src="https://placehold.co/15x15/grey/grey.png" width="6%" height="25px" style=""/><img src="https://placehold.co/15x15/green/green.png" width="46%" height="25px" style="border-radius: 0px 12px 12px 0px"/></div>
 
@@ -44,155 +44,153 @@ Here is the human readable preview for the model test report
 
 [Jump to chapter start](#model-test-report-review)
 
-145 CannotTell assertions
+143 CannotTell assertions
 
 |*Jump*|*Number*|*Outcome type*|*Subject*|*Criterion*|*Title*|*Link*|
 |------|--------|--------------|---------|-----------|-------|------|
-|[Table top](#cannottell-assertions)|1/145|:warning:*CannotTell*|`regulation-logistics-structure-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-1)|
-|[Table top](#cannottell-assertions)|2/145|:warning:*CannotTell*|`regulation-logistics-structure-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-2)|
-|[Table top](#cannottell-assertions)|3/145|:warning:*CannotTell*|`regulation-logistics-create-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-3)|
-|[Table top](#cannottell-assertions)|4/145|:warning:*CannotTell*|`regulation-logistics-create-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-4)|
-|[Table top](#cannottell-assertions)|5/145|:warning:*CannotTell*|`regulation`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-5)|
-|[Table top](#cannottell-assertions)|6/145|:warning:*CannotTell*|`regulation`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-6)|
-|[Table top](#cannottell-assertions)|7/145|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-7)|
-|[Table top](#cannottell-assertions)|8/145|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-8)|
-|[Table top](#cannottell-assertions)|9/145|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-9)|
-|[Table top](#cannottell-assertions)|10/145|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-10)|
-|[Table top](#cannottell-assertions)|11/145|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-11)|
-|[Table top](#cannottell-assertions)|12/145|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-12)|
-|[Table top](#cannottell-assertions)|13/145|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-13)|
-|[Table top](#cannottell-assertions)|14/145|:warning:*CannotTell*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-14)|
-|[Table top](#cannottell-assertions)|15/145|:warning:*CannotTell*|`manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-15)|
-|[Table top](#cannottell-assertions)|16/145|:warning:*CannotTell*|`manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-16)|
-|[Table top](#cannottell-assertions)|17/145|:warning:*CannotTell*|`logistics-structure-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-17)|
-|[Table top](#cannottell-assertions)|18/145|:warning:*CannotTell*|`logistics-create-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-18)|
-|[Table top](#cannottell-assertions)|19/145|:warning:*CannotTell*|`logistics-create-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-19)|
-|[Table top](#cannottell-assertions)|20/145|:warning:*CannotTell*|`logistics-create-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-20)|
-|[Table top](#cannottell-assertions)|21/145|:warning:*CannotTell*|`interaction-manufacturing-environments-discover-behavior-specifications`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-21)|
-|[Table top](#cannottell-assertions)|22/145|:warning:*CannotTell*|`interaction-manufacturing-environments-discover-behavior-specifications`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-22)|
-|[Table top](#cannottell-assertions)|23/145|:warning:*CannotTell*|`interaction`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-23)|
-|[Table top](#cannottell-assertions)|24/145|:warning:*CannotTell*|`interaction`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-24)|
-|[Table top](#cannottell-assertions)|25/145|:warning:*CannotTell*|`fipa`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-25)|
-|[Table top](#cannottell-assertions)|26/145|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-26)|
-|[Table top](#cannottell-assertions)|27/145|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-27)|
-|[Table top](#cannottell-assertions)|28/145|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-28)|
-|[Table top](#cannottell-assertions)|29/145|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-29)|
-|[Table top](#cannottell-assertions)|30/145|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-30)|
-|[Table top](#cannottell-assertions)|31/145|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-31)|
-|[Table top](#cannottell-assertions)|32/145|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-32)|
-|[Table top](#cannottell-assertions)|33/145|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-33)|
-|[Table top](#cannottell-assertions)|34/145|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-34)|
-|[Table top](#cannottell-assertions)|35/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-35)|
-|[Table top](#cannottell-assertions)|36/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-36)|
-|[Table top](#cannottell-assertions)|37/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-37)|
-|[Table top](#cannottell-assertions)|38/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-38)|
-|[Table top](#cannottell-assertions)|39/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-39)|
-|[Table top](#cannottell-assertions)|40/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-40)|
-|[Table top](#cannottell-assertions)|41/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-41)|
-|[Table top](#cannottell-assertions)|42/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-42)|
-|[Table top](#cannottell-assertions)|43/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-43)|
-|[Table top](#cannottell-assertions)|44/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-44)|
-|[Table top](#cannottell-assertions)|45/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domain out of vocabulary|[Jump](#cannottell-assertion-number-45)|
-|[Table top](#cannottell-assertions)|46/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-46)|
-|[Table top](#cannottell-assertions)|47/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-47)|
-|[Table top](#cannottell-assertions)|48/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-48)|
-|[Table top](#cannottell-assertions)|49/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-49)|
-|[Table top](#cannottell-assertions)|50/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-50)|
-|[Table top](#cannottell-assertions)|51/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-51)|
-|[Table top](#cannottell-assertions)|52/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-52)|
-|[Table top](#cannottell-assertions)|53/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-53)|
-|[Table top](#cannottell-assertions)|54/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-54)|
-|[Table top](#cannottell-assertions)|55/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-55)|
-|[Table top](#cannottell-assertions)|56/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-56)|
-|[Table top](#cannottell-assertions)|57/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-57)|
-|[Table top](#cannottell-assertions)|58/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-58)|
-|[Table top](#cannottell-assertions)|59/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-59)|
-|[Table top](#cannottell-assertions)|60/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-60)|
-|[Table top](#cannottell-assertions)|61/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-61)|
-|[Table top](#cannottell-assertions)|62/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-62)|
-|[Table top](#cannottell-assertions)|63/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-63)|
-|[Table top](#cannottell-assertions)|64/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-64)|
-|[Table top](#cannottell-assertions)|65/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-65)|
-|[Table top](#cannottell-assertions)|66/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-66)|
-|[Table top](#cannottell-assertions)|67/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-67)|
-|[Table top](#cannottell-assertions)|68/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-68)|
-|[Table top](#cannottell-assertions)|69/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-69)|
-|[Table top](#cannottell-assertions)|70/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-70)|
-|[Table top](#cannottell-assertions)|71/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-71)|
-|[Table top](#cannottell-assertions)|72/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-72)|
-|[Table top](#cannottell-assertions)|73/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-73)|
-|[Table top](#cannottell-assertions)|74/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-74)|
-|[Table top](#cannottell-assertions)|75/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-75)|
-|[Table top](#cannottell-assertions)|76/145|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-76)|
-|[Table top](#cannottell-assertions)|77/145|:warning:*CannotTell*|`core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-77)|
-|[Table top](#cannottell-assertions)|78/145|:warning:*CannotTell*|`core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-78)|
-|[Table top](#cannottell-assertions)|79/145|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-79)|
-|[Table top](#cannottell-assertions)|80/145|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-80)|
-|[Table top](#cannottell-assertions)|81/145|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-81)|
-|[Table top](#cannottell-assertions)|82/145|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-82)|
-|[Table top](#cannottell-assertions)|83/145|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-83)|
-|[Table top](#cannottell-assertions)|84/145|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-84)|
-|[Table top](#cannottell-assertions)|85/145|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-85)|
-|[Table top](#cannottell-assertions)|86/145|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-86)|
-|[Table top](#cannottell-assertions)|87/145|:warning:*CannotTell*|`all-modules`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-87)|
-|[Table top](#cannottell-assertions)|88/145|:warning:*CannotTell*|`all-modules`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-88)|
-|[Table top](#cannottell-assertions)|89/145|:warning:*CannotTell*|`all-modules`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-89)|
-|[Table top](#cannottell-assertions)|90/145|:warning:*CannotTell*|`all-modules`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-90)|
-|[Table top](#cannottell-assertions)|91/145|:warning:*CannotTell*|`all-modules`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-91)|
-|[Table top](#cannottell-assertions)|92/145|:warning:*CannotTell*|`all-modules`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-92)|
-|[Table top](#cannottell-assertions)|93/145|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-93)|
-|[Table top](#cannottell-assertions)|94/145|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-94)|
-|[Table top](#cannottell-assertions)|95/145|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-95)|
-|[Table top](#cannottell-assertions)|96/145|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-96)|
-|[Table top](#cannottell-assertions)|97/145|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-97)|
-|[Table top](#cannottell-assertions)|98/145|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-98)|
-|[Table top](#cannottell-assertions)|99/145|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-99)|
-|[Table top](#cannottell-assertions)|100/145|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-100)|
-|[Table top](#cannottell-assertions)|101/145|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-101)|
-|[Table top](#cannottell-assertions)|102/145|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-102)|
-|[Table top](#cannottell-assertions)|103/145|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-103)|
-|[Table top](#cannottell-assertions)|104/145|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-104)|
-|[Table top](#cannottell-assertions)|105/145|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-105)|
-|[Table top](#cannottell-assertions)|106/145|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-106)|
-|[Table top](#cannottell-assertions)|107/145|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-107)|
-|[Table top](#cannottell-assertions)|108/145|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-108)|
-|[Table top](#cannottell-assertions)|109/145|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-109)|
-|[Table top](#cannottell-assertions)|110/145|:warning:*CannotTell*|`all-modules`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-110)|
-|[Table top](#cannottell-assertions)|111/145|:warning:*CannotTell*|`all-modules`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-111)|
-|[Table top](#cannottell-assertions)|112/145|:warning:*CannotTell*|`all-modules`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-112)|
-|[Table top](#cannottell-assertions)|113/145|:warning:*CannotTell*|`all-fragments`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domain out of vocabulary|[Jump](#cannottell-assertion-number-113)|
-|[Table top](#cannottell-assertions)|114/145|:warning:*CannotTell*|`all-fragments`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-114)|
-|[Table top](#cannottell-assertions)|115/145|:warning:*CannotTell*|`all-fragments`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-115)|
-|[Table top](#cannottell-assertions)|116/145|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-116)|
-|[Table top](#cannottell-assertions)|117/145|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-117)|
-|[Table top](#cannottell-assertions)|118/145|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-118)|
-|[Table top](#cannottell-assertions)|119/145|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-119)|
-|[Table top](#cannottell-assertions)|120/145|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-120)|
-|[Table top](#cannottell-assertions)|121/145|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-121)|
-|[Table top](#cannottell-assertions)|122/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-122)|
-|[Table top](#cannottell-assertions)|123/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-123)|
-|[Table top](#cannottell-assertions)|124/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-124)|
-|[Table top](#cannottell-assertions)|125/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-125)|
-|[Table top](#cannottell-assertions)|126/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-126)|
-|[Table top](#cannottell-assertions)|127/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-127)|
-|[Table top](#cannottell-assertions)|128/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-128)|
-|[Table top](#cannottell-assertions)|129/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-129)|
-|[Table top](#cannottell-assertions)|130/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-130)|
-|[Table top](#cannottell-assertions)|131/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-131)|
-|[Table top](#cannottell-assertions)|132/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-132)|
-|[Table top](#cannottell-assertions)|133/145|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-133)|
-|[Table top](#cannottell-assertions)|134/145|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-134)|
-|[Table top](#cannottell-assertions)|135/145|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-135)|
-|[Table top](#cannottell-assertions)|136/145|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-136)|
-|[Table top](#cannottell-assertions)|137/145|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-137)|
-|[Table top](#cannottell-assertions)|138/145|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-138)|
-|[Table top](#cannottell-assertions)|139/145|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-139)|
-|[Table top](#cannottell-assertions)|140/145|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-140)|
-|[Table top](#cannottell-assertions)|141/145|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-141)|
-|[Table top](#cannottell-assertions)|142/145|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-142)|
-|[Table top](#cannottell-assertions)|143/145|:warning:*CannotTell*|`all-fragments`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-143)|
-|[Table top](#cannottell-assertions)|144/145|:warning:*CannotTell*|`all-fragments`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-144)|
-|[Table top](#cannottell-assertions)|145/145|:warning:*CannotTell*|`all-fragments`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-145)|
+|[Table top](#cannottell-assertions)|1/143|:warning:*CannotTell*|`regulation-logistics-structure-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-1)|
+|[Table top](#cannottell-assertions)|2/143|:warning:*CannotTell*|`regulation-logistics-structure-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-2)|
+|[Table top](#cannottell-assertions)|3/143|:warning:*CannotTell*|`regulation-logistics-create-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-3)|
+|[Table top](#cannottell-assertions)|4/143|:warning:*CannotTell*|`regulation-logistics-create-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-4)|
+|[Table top](#cannottell-assertions)|5/143|:warning:*CannotTell*|`regulation`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-5)|
+|[Table top](#cannottell-assertions)|6/143|:warning:*CannotTell*|`regulation`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-6)|
+|[Table top](#cannottell-assertions)|7/143|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-7)|
+|[Table top](#cannottell-assertions)|8/143|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-8)|
+|[Table top](#cannottell-assertions)|9/143|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-9)|
+|[Table top](#cannottell-assertions)|10/143|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-10)|
+|[Table top](#cannottell-assertions)|11/143|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-11)|
+|[Table top](#cannottell-assertions)|12/143|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-12)|
+|[Table top](#cannottell-assertions)|13/143|:warning:*CannotTell*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-13)|
+|[Table top](#cannottell-assertions)|14/143|:warning:*CannotTell*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-14)|
+|[Table top](#cannottell-assertions)|15/143|:warning:*CannotTell*|`manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-15)|
+|[Table top](#cannottell-assertions)|16/143|:warning:*CannotTell*|`manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-16)|
+|[Table top](#cannottell-assertions)|17/143|:warning:*CannotTell*|`logistics-structure-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-17)|
+|[Table top](#cannottell-assertions)|18/143|:warning:*CannotTell*|`logistics-create-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-18)|
+|[Table top](#cannottell-assertions)|19/143|:warning:*CannotTell*|`interaction-manufacturing-environments-discover-behavior-specifications`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-19)|
+|[Table top](#cannottell-assertions)|20/143|:warning:*CannotTell*|`interaction-manufacturing-environments-discover-behavior-specifications`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-20)|
+|[Table top](#cannottell-assertions)|21/143|:warning:*CannotTell*|`interaction`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-21)|
+|[Table top](#cannottell-assertions)|22/143|:warning:*CannotTell*|`interaction`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-22)|
+|[Table top](#cannottell-assertions)|23/143|:warning:*CannotTell*|`fipa`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-23)|
+|[Table top](#cannottell-assertions)|24/143|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-24)|
+|[Table top](#cannottell-assertions)|25/143|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-25)|
+|[Table top](#cannottell-assertions)|26/143|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-26)|
+|[Table top](#cannottell-assertions)|27/143|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-27)|
+|[Table top](#cannottell-assertions)|28/143|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-28)|
+|[Table top](#cannottell-assertions)|29/143|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-29)|
+|[Table top](#cannottell-assertions)|30/143|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-30)|
+|[Table top](#cannottell-assertions)|31/143|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-31)|
+|[Table top](#cannottell-assertions)|32/143|:warning:*CannotTell*|`fipa`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-32)|
+|[Table top](#cannottell-assertions)|33/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-33)|
+|[Table top](#cannottell-assertions)|34/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-34)|
+|[Table top](#cannottell-assertions)|35/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-35)|
+|[Table top](#cannottell-assertions)|36/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-36)|
+|[Table top](#cannottell-assertions)|37/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-37)|
+|[Table top](#cannottell-assertions)|38/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-38)|
+|[Table top](#cannottell-assertions)|39/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-39)|
+|[Table top](#cannottell-assertions)|40/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-40)|
+|[Table top](#cannottell-assertions)|41/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-41)|
+|[Table top](#cannottell-assertions)|42/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-42)|
+|[Table top](#cannottell-assertions)|43/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domain out of vocabulary|[Jump](#cannottell-assertion-number-43)|
+|[Table top](#cannottell-assertions)|44/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-44)|
+|[Table top](#cannottell-assertions)|45/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-45)|
+|[Table top](#cannottell-assertions)|46/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-46)|
+|[Table top](#cannottell-assertions)|47/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-47)|
+|[Table top](#cannottell-assertions)|48/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-48)|
+|[Table top](#cannottell-assertions)|49/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-49)|
+|[Table top](#cannottell-assertions)|50/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-50)|
+|[Table top](#cannottell-assertions)|51/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-51)|
+|[Table top](#cannottell-assertions)|52/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-52)|
+|[Table top](#cannottell-assertions)|53/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-53)|
+|[Table top](#cannottell-assertions)|54/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-54)|
+|[Table top](#cannottell-assertions)|55/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-55)|
+|[Table top](#cannottell-assertions)|56/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-56)|
+|[Table top](#cannottell-assertions)|57/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-57)|
+|[Table top](#cannottell-assertions)|58/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-58)|
+|[Table top](#cannottell-assertions)|59/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-59)|
+|[Table top](#cannottell-assertions)|60/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-60)|
+|[Table top](#cannottell-assertions)|61/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-61)|
+|[Table top](#cannottell-assertions)|62/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-62)|
+|[Table top](#cannottell-assertions)|63/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-63)|
+|[Table top](#cannottell-assertions)|64/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-64)|
+|[Table top](#cannottell-assertions)|65/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-65)|
+|[Table top](#cannottell-assertions)|66/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-66)|
+|[Table top](#cannottell-assertions)|67/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-67)|
+|[Table top](#cannottell-assertions)|68/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-68)|
+|[Table top](#cannottell-assertions)|69/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-69)|
+|[Table top](#cannottell-assertions)|70/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-70)|
+|[Table top](#cannottell-assertions)|71/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-71)|
+|[Table top](#cannottell-assertions)|72/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-72)|
+|[Table top](#cannottell-assertions)|73/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-73)|
+|[Table top](#cannottell-assertions)|74/143|:warning:*CannotTell*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-74)|
+|[Table top](#cannottell-assertions)|75/143|:warning:*CannotTell*|`core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-75)|
+|[Table top](#cannottell-assertions)|76/143|:warning:*CannotTell*|`core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-76)|
+|[Table top](#cannottell-assertions)|77/143|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-77)|
+|[Table top](#cannottell-assertions)|78/143|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-78)|
+|[Table top](#cannottell-assertions)|79/143|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-79)|
+|[Table top](#cannottell-assertions)|80/143|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-80)|
+|[Table top](#cannottell-assertions)|81/143|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-81)|
+|[Table top](#cannottell-assertions)|82/143|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-82)|
+|[Table top](#cannottell-assertions)|83/143|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-83)|
+|[Table top](#cannottell-assertions)|84/143|:warning:*CannotTell*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-84)|
+|[Table top](#cannottell-assertions)|85/143|:warning:*CannotTell*|`all-modules`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-85)|
+|[Table top](#cannottell-assertions)|86/143|:warning:*CannotTell*|`all-modules`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-86)|
+|[Table top](#cannottell-assertions)|87/143|:warning:*CannotTell*|`all-modules`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-87)|
+|[Table top](#cannottell-assertions)|88/143|:warning:*CannotTell*|`all-modules`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-88)|
+|[Table top](#cannottell-assertions)|89/143|:warning:*CannotTell*|`all-modules`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-89)|
+|[Table top](#cannottell-assertions)|90/143|:warning:*CannotTell*|`all-modules`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-90)|
+|[Table top](#cannottell-assertions)|91/143|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-91)|
+|[Table top](#cannottell-assertions)|92/143|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-92)|
+|[Table top](#cannottell-assertions)|93/143|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-93)|
+|[Table top](#cannottell-assertions)|94/143|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-94)|
+|[Table top](#cannottell-assertions)|95/143|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-95)|
+|[Table top](#cannottell-assertions)|96/143|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-96)|
+|[Table top](#cannottell-assertions)|97/143|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-97)|
+|[Table top](#cannottell-assertions)|98/143|:warning:*CannotTell*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-98)|
+|[Table top](#cannottell-assertions)|99/143|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-99)|
+|[Table top](#cannottell-assertions)|100/143|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-100)|
+|[Table top](#cannottell-assertions)|101/143|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-101)|
+|[Table top](#cannottell-assertions)|102/143|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-102)|
+|[Table top](#cannottell-assertions)|103/143|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-103)|
+|[Table top](#cannottell-assertions)|104/143|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-104)|
+|[Table top](#cannottell-assertions)|105/143|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-105)|
+|[Table top](#cannottell-assertions)|106/143|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-106)|
+|[Table top](#cannottell-assertions)|107/143|:warning:*CannotTell*|`all-modules`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-107)|
+|[Table top](#cannottell-assertions)|108/143|:warning:*CannotTell*|`all-modules`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-108)|
+|[Table top](#cannottell-assertions)|109/143|:warning:*CannotTell*|`all-modules`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-109)|
+|[Table top](#cannottell-assertions)|110/143|:warning:*CannotTell*|`all-modules`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-110)|
+|[Table top](#cannottell-assertions)|111/143|:warning:*CannotTell*|`all-fragments`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domain out of vocabulary|[Jump](#cannottell-assertion-number-111)|
+|[Table top](#cannottell-assertions)|112/143|:warning:*CannotTell*|`all-fragments`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-112)|
+|[Table top](#cannottell-assertions)|113/143|:warning:*CannotTell*|`all-fragments`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Range out of vocabulary|[Jump](#cannottell-assertion-number-113)|
+|[Table top](#cannottell-assertions)|114/143|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-114)|
+|[Table top](#cannottell-assertions)|115/143|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-115)|
+|[Table top](#cannottell-assertions)|116/143|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-116)|
+|[Table top](#cannottell-assertions)|117/143|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-117)|
+|[Table top](#cannottell-assertions)|118/143|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-118)|
+|[Table top](#cannottell-assertions)|119/143|:warning:*CannotTell*|`all-fragments`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-119)|
+|[Table top](#cannottell-assertions)|120/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-120)|
+|[Table top](#cannottell-assertions)|121/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-121)|
+|[Table top](#cannottell-assertions)|122/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-122)|
+|[Table top](#cannottell-assertions)|123/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-123)|
+|[Table top](#cannottell-assertions)|124/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-124)|
+|[Table top](#cannottell-assertions)|125/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile incompatible|[Jump](#cannottell-assertion-number-125)|
+|[Table top](#cannottell-assertions)|126/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-126)|
+|[Table top](#cannottell-assertions)|127/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-127)|
+|[Table top](#cannottell-assertions)|128/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-128)|
+|[Table top](#cannottell-assertions)|129/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-129)|
+|[Table top](#cannottell-assertions)|130/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-130)|
+|[Table top](#cannottell-assertions)|131/143|:warning:*CannotTell*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile incompatible|[Jump](#cannottell-assertion-number-131)|
+|[Table top](#cannottell-assertions)|132/143|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-132)|
+|[Table top](#cannottell-assertions)|133/143|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-133)|
+|[Table top](#cannottell-assertions)|134/143|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-134)|
+|[Table top](#cannottell-assertions)|135/143|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-135)|
+|[Table top](#cannottell-assertions)|136/143|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-136)|
+|[Table top](#cannottell-assertions)|137/143|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-137)|
+|[Table top](#cannottell-assertions)|138/143|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-138)|
+|[Table top](#cannottell-assertions)|139/143|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-139)|
+|[Table top](#cannottell-assertions)|140/143|:warning:*CannotTell*|`all-fragments`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Term not referenced to a module|[Jump](#cannottell-assertion-number-140)|
+|[Table top](#cannottell-assertions)|141/143|:warning:*CannotTell*|`all-fragments`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-141)|
+|[Table top](#cannottell-assertions)|142/143|:warning:*CannotTell*|`all-fragments`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-142)|
+|[Table top](#cannottell-assertions)|143/143|:warning:*CannotTell*|`all-fragments`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-143)|
 ## NotTested assertions
 
 [Jump to chapter start](#model-test-report-review)
@@ -225,145 +223,146 @@ Here is the human readable preview for the model test report
 
 [Jump to chapter start](#model-test-report-review)
 
-135 Pass assertions
+136 Pass assertions
 
 |*Jump*|*Number*|*Outcome type*|*Subject*|*Criterion*|*Title*|*Link*|
 |------|--------|--------------|---------|-----------|-------|------|
-|[Table top](#pass-assertions)|1/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-1)|
-|[Table top](#pass-assertions)|2/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-2)|
-|[Table top](#pass-assertions)|3/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-3)|
-|[Table top](#pass-assertions)|4/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-4)|
-|[Table top](#pass-assertions)|5/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-5)|
-|[Table top](#pass-assertions)|6/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-6)|
-|[Table top](#pass-assertions)|7/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-7)|
-|[Table top](#pass-assertions)|8/135|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-8)|
-|[Table top](#pass-assertions)|9/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-9)|
-|[Table top](#pass-assertions)|10/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-10)|
-|[Table top](#pass-assertions)|11/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-11)|
-|[Table top](#pass-assertions)|12/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-12)|
-|[Table top](#pass-assertions)|13/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-13)|
-|[Table top](#pass-assertions)|14/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-14)|
-|[Table top](#pass-assertions)|15/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-15)|
-|[Table top](#pass-assertions)|16/135|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-16)|
-|[Table top](#pass-assertions)|17/135|:white_check_mark:*Pass*|`regulation`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-17)|
-|[Table top](#pass-assertions)|18/135|:white_check_mark:*Pass*|`regulation`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-18)|
-|[Table top](#pass-assertions)|19/135|:white_check_mark:*Pass*|`regulation`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-19)|
-|[Table top](#pass-assertions)|20/135|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-20)|
-|[Table top](#pass-assertions)|21/135|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-21)|
-|[Table top](#pass-assertions)|22/135|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-22)|
-|[Table top](#pass-assertions)|23/135|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-23)|
-|[Table top](#pass-assertions)|24/135|:white_check_mark:*Pass*|`regulation`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-24)|
-|[Table top](#pass-assertions)|25/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-25)|
-|[Table top](#pass-assertions)|26/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-26)|
-|[Table top](#pass-assertions)|27/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-27)|
-|[Table top](#pass-assertions)|28/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-28)|
-|[Table top](#pass-assertions)|29/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-29)|
-|[Table top](#pass-assertions)|30/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-30)|
-|[Table top](#pass-assertions)|31/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-31)|
-|[Table top](#pass-assertions)|32/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-32)|
-|[Table top](#pass-assertions)|33/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-33)|
-|[Table top](#pass-assertions)|34/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-34)|
-|[Table top](#pass-assertions)|35/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-35)|
-|[Table top](#pass-assertions)|36/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-36)|
-|[Table top](#pass-assertions)|37/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-37)|
-|[Table top](#pass-assertions)|38/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-38)|
-|[Table top](#pass-assertions)|39/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-39)|
-|[Table top](#pass-assertions)|40/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-40)|
-|[Table top](#pass-assertions)|41/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-41)|
-|[Table top](#pass-assertions)|42/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-42)|
-|[Table top](#pass-assertions)|43/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-43)|
-|[Table top](#pass-assertions)|44/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-44)|
-|[Table top](#pass-assertions)|45/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-45)|
-|[Table top](#pass-assertions)|46/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-46)|
-|[Table top](#pass-assertions)|47/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-47)|
-|[Table top](#pass-assertions)|48/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-48)|
-|[Table top](#pass-assertions)|49/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-49)|
-|[Table top](#pass-assertions)|50/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-50)|
-|[Table top](#pass-assertions)|51/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-51)|
-|[Table top](#pass-assertions)|52/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-52)|
-|[Table top](#pass-assertions)|53/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-53)|
-|[Table top](#pass-assertions)|54/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-54)|
-|[Table top](#pass-assertions)|55/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-55)|
-|[Table top](#pass-assertions)|56/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-56)|
-|[Table top](#pass-assertions)|57/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-57)|
-|[Table top](#pass-assertions)|58/135|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-58)|
-|[Table top](#pass-assertions)|59/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-59)|
-|[Table top](#pass-assertions)|60/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-60)|
-|[Table top](#pass-assertions)|61/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-61)|
-|[Table top](#pass-assertions)|62/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-62)|
-|[Table top](#pass-assertions)|63/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-63)|
-|[Table top](#pass-assertions)|64/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-64)|
-|[Table top](#pass-assertions)|65/135|:white_check_mark:*Pass*|`logistics-structure-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-65)|
-|[Table top](#pass-assertions)|66/135|:white_check_mark:*Pass*|`logistics-create-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-66)|
-|[Table top](#pass-assertions)|67/135|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-67)|
-|[Table top](#pass-assertions)|68/135|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-68)|
-|[Table top](#pass-assertions)|69/135|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-69)|
-|[Table top](#pass-assertions)|70/135|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-70)|
-|[Table top](#pass-assertions)|71/135|:white_check_mark:*Pass*|`logistics-create-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-71)|
-|[Table top](#pass-assertions)|72/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-72)|
-|[Table top](#pass-assertions)|73/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-73)|
-|[Table top](#pass-assertions)|74/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-74)|
-|[Table top](#pass-assertions)|75/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-75)|
-|[Table top](#pass-assertions)|76/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-76)|
-|[Table top](#pass-assertions)|77/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-77)|
-|[Table top](#pass-assertions)|78/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-78)|
-|[Table top](#pass-assertions)|79/135|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-79)|
-|[Table top](#pass-assertions)|80/135|:white_check_mark:*Pass*|`interaction`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-80)|
-|[Table top](#pass-assertions)|81/135|:white_check_mark:*Pass*|`interaction`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-81)|
-|[Table top](#pass-assertions)|82/135|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-82)|
-|[Table top](#pass-assertions)|83/135|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-83)|
-|[Table top](#pass-assertions)|84/135|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-84)|
-|[Table top](#pass-assertions)|85/135|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-85)|
-|[Table top](#pass-assertions)|86/135|:white_check_mark:*Pass*|`interaction`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-86)|
-|[Table top](#pass-assertions)|87/135|:white_check_mark:*Pass*|`interaction`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-87)|
-|[Table top](#pass-assertions)|88/135|:white_check_mark:*Pass*|`fipa`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-88)|
-|[Table top](#pass-assertions)|89/135|:white_check_mark:*Pass*|`fipa`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-89)|
-|[Table top](#pass-assertions)|90/135|:white_check_mark:*Pass*|`fipa`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-90)|
-|[Table top](#pass-assertions)|91/135|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-91)|
-|[Table top](#pass-assertions)|92/135|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-92)|
-|[Table top](#pass-assertions)|93/135|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-93)|
-|[Table top](#pass-assertions)|94/135|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-94)|
-|[Table top](#pass-assertions)|95/135|:white_check_mark:*Pass*|`fipa`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-95)|
-|[Table top](#pass-assertions)|96/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-96)|
-|[Table top](#pass-assertions)|97/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-97)|
-|[Table top](#pass-assertions)|98/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-98)|
-|[Table top](#pass-assertions)|99/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-99)|
-|[Table top](#pass-assertions)|100/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-100)|
-|[Table top](#pass-assertions)|101/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-101)|
-|[Table top](#pass-assertions)|102/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-102)|
-|[Table top](#pass-assertions)|103/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-103)|
-|[Table top](#pass-assertions)|104/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-104)|
-|[Table top](#pass-assertions)|105/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-105)|
-|[Table top](#pass-assertions)|106/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-106)|
-|[Table top](#pass-assertions)|107/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-107)|
-|[Table top](#pass-assertions)|108/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-108)|
-|[Table top](#pass-assertions)|109/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-109)|
-|[Table top](#pass-assertions)|110/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-110)|
-|[Table top](#pass-assertions)|111/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-111)|
-|[Table top](#pass-assertions)|112/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-112)|
-|[Table top](#pass-assertions)|113/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-113)|
-|[Table top](#pass-assertions)|114/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-114)|
-|[Table top](#pass-assertions)|115/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-115)|
-|[Table top](#pass-assertions)|116/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-116)|
-|[Table top](#pass-assertions)|117/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-117)|
-|[Table top](#pass-assertions)|118/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-118)|
-|[Table top](#pass-assertions)|119/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-119)|
-|[Table top](#pass-assertions)|120/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-120)|
-|[Table top](#pass-assertions)|121/135|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-121)|
-|[Table top](#pass-assertions)|122/135|:white_check_mark:*Pass*|`core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-122)|
-|[Table top](#pass-assertions)|123/135|:white_check_mark:*Pass*|`core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-123)|
-|[Table top](#pass-assertions)|124/135|:white_check_mark:*Pass*|`core`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-124)|
-|[Table top](#pass-assertions)|125/135|:white_check_mark:*Pass*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-125)|
-|[Table top](#pass-assertions)|126/135|:white_check_mark:*Pass*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-126)|
-|[Table top](#pass-assertions)|127/135|:white_check_mark:*Pass*|`core`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-127)|
-|[Table top](#pass-assertions)|128/135|:white_check_mark:*Pass*|`core`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-128)|
-|[Table top](#pass-assertions)|129/135|:white_check_mark:*Pass*|`all-modules`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-129)|
-|[Table top](#pass-assertions)|130/135|:white_check_mark:*Pass*|`all-modules`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-130)|
-|[Table top](#pass-assertions)|131/135|:white_check_mark:*Pass*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-131)|
-|[Table top](#pass-assertions)|132/135|:white_check_mark:*Pass*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-132)|
-|[Table top](#pass-assertions)|133/135|:white_check_mark:*Pass*|`all-fragments`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-133)|
-|[Table top](#pass-assertions)|134/135|:white_check_mark:*Pass*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-134)|
-|[Table top](#pass-assertions)|135/135|:white_check_mark:*Pass*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-135)|
+|[Table top](#pass-assertions)|1/136|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-1)|
+|[Table top](#pass-assertions)|2/136|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-2)|
+|[Table top](#pass-assertions)|3/136|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-3)|
+|[Table top](#pass-assertions)|4/136|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-4)|
+|[Table top](#pass-assertions)|5/136|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-5)|
+|[Table top](#pass-assertions)|6/136|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-6)|
+|[Table top](#pass-assertions)|7/136|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-7)|
+|[Table top](#pass-assertions)|8/136|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-8)|
+|[Table top](#pass-assertions)|9/136|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-9)|
+|[Table top](#pass-assertions)|10/136|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-10)|
+|[Table top](#pass-assertions)|11/136|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-11)|
+|[Table top](#pass-assertions)|12/136|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-12)|
+|[Table top](#pass-assertions)|13/136|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-13)|
+|[Table top](#pass-assertions)|14/136|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-14)|
+|[Table top](#pass-assertions)|15/136|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-15)|
+|[Table top](#pass-assertions)|16/136|:white_check_mark:*Pass*|`regulation-logistics-create-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-16)|
+|[Table top](#pass-assertions)|17/136|:white_check_mark:*Pass*|`regulation`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-17)|
+|[Table top](#pass-assertions)|18/136|:white_check_mark:*Pass*|`regulation`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-18)|
+|[Table top](#pass-assertions)|19/136|:white_check_mark:*Pass*|`regulation`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-19)|
+|[Table top](#pass-assertions)|20/136|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-20)|
+|[Table top](#pass-assertions)|21/136|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-21)|
+|[Table top](#pass-assertions)|22/136|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-22)|
+|[Table top](#pass-assertions)|23/136|:white_check_mark:*Pass*|`regulation`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-23)|
+|[Table top](#pass-assertions)|24/136|:white_check_mark:*Pass*|`regulation`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-24)|
+|[Table top](#pass-assertions)|25/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-25)|
+|[Table top](#pass-assertions)|26/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-26)|
+|[Table top](#pass-assertions)|27/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-27)|
+|[Table top](#pass-assertions)|28/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-28)|
+|[Table top](#pass-assertions)|29/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-signifiers`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-29)|
+|[Table top](#pass-assertions)|30/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-30)|
+|[Table top](#pass-assertions)|31/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-31)|
+|[Table top](#pass-assertions)|32/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-32)|
+|[Table top](#pass-assertions)|33/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-33)|
+|[Table top](#pass-assertions)|34/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-34)|
+|[Table top](#pass-assertions)|35/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-35)|
+|[Table top](#pass-assertions)|36/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-platforms`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-36)|
+|[Table top](#pass-assertions)|37/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-37)|
+|[Table top](#pass-assertions)|38/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-38)|
+|[Table top](#pass-assertions)|39/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-39)|
+|[Table top](#pass-assertions)|40/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-40)|
+|[Table top](#pass-assertions)|41/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-41)|
+|[Table top](#pass-assertions)|42/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-42)|
+|[Table top](#pass-assertions)|43/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-43)|
+|[Table top](#pass-assertions)|44/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-44)|
+|[Table top](#pass-assertions)|45/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-45)|
+|[Table top](#pass-assertions)|46/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-46)|
+|[Table top](#pass-assertions)|47/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-47)|
+|[Table top](#pass-assertions)|48/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-48)|
+|[Table top](#pass-assertions)|49/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-49)|
+|[Table top](#pass-assertions)|50/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-core`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-50)|
+|[Table top](#pass-assertions)|51/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-51)|
+|[Table top](#pass-assertions)|52/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-52)|
+|[Table top](#pass-assertions)|53/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-53)|
+|[Table top](#pass-assertions)|54/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-54)|
+|[Table top](#pass-assertions)|55/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-55)|
+|[Table top](#pass-assertions)|56/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-56)|
+|[Table top](#pass-assertions)|57/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-57)|
+|[Table top](#pass-assertions)|58/136|:white_check_mark:*Pass*|`manufacturing-environments-discover-behavior-specifications`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-58)|
+|[Table top](#pass-assertions)|59/136|:white_check_mark:*Pass*|`logistics-structure-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|All terms labeled|[Jump](#pass-assertion-number-59)|
+|[Table top](#pass-assertions)|60/136|:white_check_mark:*Pass*|`logistics-structure-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-60)|
+|[Table top](#pass-assertions)|61/136|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-61)|
+|[Table top](#pass-assertions)|62/136|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-62)|
+|[Table top](#pass-assertions)|63/136|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-63)|
+|[Table top](#pass-assertions)|64/136|:white_check_mark:*Pass*|`logistics-structure-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-64)|
+|[Table top](#pass-assertions)|65/136|:white_check_mark:*Pass*|`logistics-structure-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-65)|
+|[Table top](#pass-assertions)|66/136|:white_check_mark:*Pass*|`logistics-create-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-66)|
+|[Table top](#pass-assertions)|67/136|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-67)|
+|[Table top](#pass-assertions)|68/136|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-68)|
+|[Table top](#pass-assertions)|69/136|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-69)|
+|[Table top](#pass-assertions)|70/136|:white_check_mark:*Pass*|`logistics-create-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-70)|
+|[Table top](#pass-assertions)|71/136|:white_check_mark:*Pass*|`logistics-create-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-71)|
+|[Table top](#pass-assertions)|72/136|:white_check_mark:*Pass*|`logistics-create-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-72)|
+|[Table top](#pass-assertions)|73/136|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-73)|
+|[Table top](#pass-assertions)|74/136|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-74)|
+|[Table top](#pass-assertions)|75/136|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-75)|
+|[Table top](#pass-assertions)|76/136|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-76)|
+|[Table top](#pass-assertions)|77/136|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-77)|
+|[Table top](#pass-assertions)|78/136|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-78)|
+|[Table top](#pass-assertions)|79/136|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-79)|
+|[Table top](#pass-assertions)|80/136|:white_check_mark:*Pass*|`interaction-manufacturing-environments-discover-behavior-specifications`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-80)|
+|[Table top](#pass-assertions)|81/136|:white_check_mark:*Pass*|`interaction`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-81)|
+|[Table top](#pass-assertions)|82/136|:white_check_mark:*Pass*|`interaction`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-82)|
+|[Table top](#pass-assertions)|83/136|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-83)|
+|[Table top](#pass-assertions)|84/136|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-84)|
+|[Table top](#pass-assertions)|85/136|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-85)|
+|[Table top](#pass-assertions)|86/136|:white_check_mark:*Pass*|`interaction`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-86)|
+|[Table top](#pass-assertions)|87/136|:white_check_mark:*Pass*|`interaction`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-87)|
+|[Table top](#pass-assertions)|88/136|:white_check_mark:*Pass*|`interaction`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-88)|
+|[Table top](#pass-assertions)|89/136|:white_check_mark:*Pass*|`fipa`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-89)|
+|[Table top](#pass-assertions)|90/136|:white_check_mark:*Pass*|`fipa`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-90)|
+|[Table top](#pass-assertions)|91/136|:white_check_mark:*Pass*|`fipa`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-91)|
+|[Table top](#pass-assertions)|92/136|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-92)|
+|[Table top](#pass-assertions)|93/136|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-93)|
+|[Table top](#pass-assertions)|94/136|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL QL Profile compatible|[Jump](#pass-assertion-number-94)|
+|[Table top](#pass-assertions)|95/136|:white_check_mark:*Pass*|`fipa`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL EL Profile compatible|[Jump](#pass-assertion-number-95)|
+|[Table top](#pass-assertions)|96/136|:white_check_mark:*Pass*|`fipa`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-96)|
+|[Table top](#pass-assertions)|97/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-97)|
+|[Table top](#pass-assertions)|98/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-98)|
+|[Table top](#pass-assertions)|99/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-99)|
+|[Table top](#pass-assertions)|100/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-100)|
+|[Table top](#pass-assertions)|101/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-101)|
+|[Table top](#pass-assertions)|102/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-102)|
+|[Table top](#pass-assertions)|103/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-signifiers`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-103)|
+|[Table top](#pass-assertions)|104/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-104)|
+|[Table top](#pass-assertions)|105/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-105)|
+|[Table top](#pass-assertions)|106/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-106)|
+|[Table top](#pass-assertions)|107/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-107)|
+|[Table top](#pass-assertions)|108/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-platforms`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-108)|
+|[Table top](#pass-assertions)|109/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-109)|
+|[Table top](#pass-assertions)|110/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-110)|
+|[Table top](#pass-assertions)|111/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-111)|
+|[Table top](#pass-assertions)|112/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-112)|
+|[Table top](#pass-assertions)|113/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-113)|
+|[Table top](#pass-assertions)|114/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-114)|
+|[Table top](#pass-assertions)|115/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-115)|
+|[Table top](#pass-assertions)|116/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-116)|
+|[Table top](#pass-assertions)|117/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-117)|
+|[Table top](#pass-assertions)|118/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-118)|
+|[Table top](#pass-assertions)|119/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-119)|
+|[Table top](#pass-assertions)|120/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-120)|
+|[Table top](#pass-assertions)|121/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-121)|
+|[Table top](#pass-assertions)|122/136|:white_check_mark:*Pass*|`core-manufacturing-environments-discover-core`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-122)|
+|[Table top](#pass-assertions)|123/136|:white_check_mark:*Pass*|`core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-123)|
+|[Table top](#pass-assertions)|124/136|:white_check_mark:*Pass*|`core`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-124)|
+|[Table top](#pass-assertions)|125/136|:white_check_mark:*Pass*|`core`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-125)|
+|[Table top](#pass-assertions)|126/136|:white_check_mark:*Pass*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-126)|
+|[Table top](#pass-assertions)|127/136|:white_check_mark:*Pass*|`core`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-127)|
+|[Table top](#pass-assertions)|128/136|:white_check_mark:*Pass*|`core`|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|Any term is referenced|[Jump](#pass-assertion-number-128)|
+|[Table top](#pass-assertions)|129/136|:white_check_mark:*Pass*|`core`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Terms differenciated enough|[Jump](#pass-assertion-number-129)|
+|[Table top](#pass-assertions)|130/136|:white_check_mark:*Pass*|`all-modules`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-130)|
+|[Table top](#pass-assertions)|131/136|:white_check_mark:*Pass*|`all-modules`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-131)|
+|[Table top](#pass-assertions)|132/136|:white_check_mark:*Pass*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-132)|
+|[Table top](#pass-assertions)|133/136|:white_check_mark:*Pass*|`all-modules`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-133)|
+|[Table top](#pass-assertions)|134/136|:white_check_mark:*Pass*|`all-fragments`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-134)|
+|[Table top](#pass-assertions)|135/136|:white_check_mark:*Pass*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL TC Profile compatible|[Jump](#pass-assertion-number-135)|
+|[Table top](#pass-assertions)|136/136|:white_check_mark:*Pass*|`all-fragments`|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|OWL RL Profile compatible|[Jump](#pass-assertion-number-136)|
 
 ***
 
@@ -908,10 +907,36 @@ New :warning:CannotTell assertion
 
 New :warning:CannotTell assertion
 #### Subject detail
-|Name|logistics-create-organization|
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
 |----|----|
-|Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|Range out of vocabulary|
+|Description|The property :signifies has a range out of the ontology: sh:NodeShape|
+|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
+|Pointer|http://www.w3.org/ns/shacl#NodeShape|
+
+***
+### CannotTell Assertion number 20
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -923,33 +948,8 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Terms not labeled|
-|Description|The term :Organization has no rdfs:label to define it in natural language|
-|Pointer|https://purl.org/hmas/Organization|
-
-***
-### CannotTell Assertion number 20
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|logistics-create-organization|
-|----|----|
-|Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
-|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
-|----|----|
-|Title|Term referencing test|
-|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|Term not referenced to a module|
-|Description|Subject :Organization not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|https://purl.org/hmas/Organization|
+|Description|The term :interaction has no rdfs:label to define it in natural language|
+|Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agen..."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes mul..."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
 ### CannotTell Assertion number 21
@@ -958,10 +958,10 @@ New :warning:CannotTell assertion
 
 New :warning:CannotTell assertion
 #### Subject detail
-|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|Name|interaction|
 |----|----|
-|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
@@ -984,10 +984,10 @@ New :warning:CannotTell assertion
 
 New :warning:CannotTell assertion
 #### Subject detail
-|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|Name|interaction|
 |----|----|
-|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
 
 #### Criterion detail
 |Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
@@ -1004,57 +1004,6 @@ New :warning:CannotTell assertion
 
 ***
 ### CannotTell Assertion number 23
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|interaction|
-|----|----|
-|Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
-
-#### Criterion detail
-|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
-|----|----|
-|Title|Domain and range referencing test|
-|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|Range out of vocabulary|
-|Description|The property :signifies has a range out of the ontology: sh:NodeShape|
-|Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
-|Pointer|http://www.w3.org/ns/shacl#NodeShape|
-
-***
-### CannotTell Assertion number 24
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|interaction|
-|----|----|
-|Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
-
-#### Criterion detail
-|Identifier|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|
-|----|----|
-|Title|Term labeling test|
-|Description|A test case from the Best Practices tests checking if all the terms of the subject have a rdfs:label property pointing to a literal in English|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|Terms not labeled|
-|Description|The term :interaction has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agen..."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes mul..."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
-
-***
-### CannotTell Assertion number 25
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1079,7 +1028,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:fipa a owl:Ontology ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
-### CannotTell Assertion number 26
+### CannotTell Assertion number 24
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1104,7 +1053,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:hasServiceName a owl:ObjectProperty ;&#10;rdfs:label "has Service Name"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
-### CannotTell Assertion number 27
+### CannotTell Assertion number 25
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1129,7 +1078,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the..."@en .</code></pre>|
 
 ***
-### CannotTell Assertion number 28
+### CannotTell Assertion number 26
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1154,7 +1103,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:hasServiceType a owl:ObjectProperty ;&#10;rdfs:label "has Service Type"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
-### CannotTell Assertion number 29
+### CannotTell Assertion number 27
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1179,7 +1128,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent I..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
-### CannotTell Assertion number 30
+### CannotTell Assertion number 28
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1204,7 +1153,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
-### CannotTell Assertion number 31
+### CannotTell Assertion number 29
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1229,7 +1178,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture S..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
 
 ***
-### CannotTell Assertion number 32
+### CannotTell Assertion number 30
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1254,7 +1203,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
-### CannotTell Assertion number 33
+### CannotTell Assertion number 31
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1279,7 +1228,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that confor..."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
 
 ***
-### CannotTell Assertion number 34
+### CannotTell Assertion number 32
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1304,7 +1253,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
-### CannotTell Assertion number 35
+### CannotTell Assertion number 33
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1329,7 +1278,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents h..."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
-### CannotTell Assertion number 36
+### CannotTell Assertion number 34
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1351,7 +1300,57 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ],&#10;[ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+
+***
+### CannotTell Assertion number 35
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|OWL QL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
+
+***
+### CannotTell Assertion number 36
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|OWL QL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 37
@@ -1376,60 +1375,10 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ], &#10; &#60;https://www.example.org/Noneb17624>, &#10; &#60;https://www.example.org/Noneb17625> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 38
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-signifiers|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|OWL QL Profile incompatible|
-|Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
-
-***
-### CannotTell Assertion number 39
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-signifiers|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|OWL QL Profile incompatible|
-|Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ], &#10; &#60;https://www.example.org/Noneb17589>, &#10; &#60;https://www.example.org/Noneb17590> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
-
-***
-### CannotTell Assertion number 40
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1454,7 +1403,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty,&#10;owl:TransitiveProperty ;&#10;rdfs:label "transitively contains"@en,&#10;"contient transitivement"@fr ;&#10;dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "Links all the resources that are logically contained in a wo..."@en ;&#10;rdfs:domain &#60;https://purl.org/hmas/Workspace> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn> .</code></pre>|
 
 ***
-### CannotTell Assertion number 41
+### CannotTell Assertion number 39
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1479,7 +1428,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
 
 ***
-### CannotTell Assertion number 42
+### CannotTell Assertion number 40
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1504,7 +1453,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
-### CannotTell Assertion number 43
+### CannotTell Assertion number 41
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1526,10 +1475,10 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ], &#10; &#60;https://www.example.org/Noneb17589>, &#10; &#60;https://www.example.org/Noneb17590> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ], &#10; &#60;https://www.example.org/Noneb17624>, &#10; &#60;https://www.example.org/Noneb17625> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 44
+### CannotTell Assertion number 42
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1554,7 +1503,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "has for profile"@en,&#10;"a pour profil"@fr ;&#10;rdfs:comment "A relation that links a resource to its profile."@en ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:range &#60;https://purl.org/hmas/ResourceProfile> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isProfileOf> .</code></pre>|
 
 ***
-### CannotTell Assertion number 45
+### CannotTell Assertion number 43
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1580,7 +1529,7 @@ New :warning:CannotTell assertion
 |Pointer|https://purl.org/hmas/Hostable|
 
 ***
-### CannotTell Assertion number 46
+### CannotTell Assertion number 44
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1606,7 +1555,7 @@ New :warning:CannotTell assertion
 |Pointer|https://purl.org/hmas/Hostable|
 
 ***
-### CannotTell Assertion number 47
+### CannotTell Assertion number 45
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1631,7 +1580,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents h..."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
-### CannotTell Assertion number 48
+### CannotTell Assertion number 46
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1654,6 +1603,56 @@ New :warning:CannotTell assertion
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
 |Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+
+***
+### CannotTell Assertion number 47
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|OWL QL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
+
+***
+### CannotTell Assertion number 48
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|OWL QL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 49
@@ -1678,7 +1677,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 50
@@ -1702,8 +1701,8 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|OWL QL Profile incompatible|
-|Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
+|Description|Statement not supported|
+|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty,&#10;owl:TransitiveProperty ;&#10;rdfs:label "transitively contains"@en,&#10;"contient transitivement"@fr ;&#10;dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "Links all the resources that are logically contained in a wo..."@en ;&#10;rdfs:domain &#60;https://purl.org/hmas/Workspace> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 51
@@ -1726,9 +1725,9 @@ New :warning:CannotTell assertion
 #### Outcome Detail
 |Type|:warning:CannotTell|
 |----|----|
-|Title|OWL QL Profile incompatible|
+|Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 52
@@ -1751,9 +1750,9 @@ New :warning:CannotTell assertion
 #### Outcome Detail
 |Type|:warning:CannotTell|
 |----|----|
-|Title|OWL QL Profile incompatible|
-|Description|Statement not supported|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty,&#10;owl:TransitiveProperty ;&#10;rdfs:label "transitively contains"@en,&#10;"contient transitivement"@fr ;&#10;dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "Links all the resources that are logically contained in a wo..."@en ;&#10;rdfs:domain &#60;https://purl.org/hmas/Workspace> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn> .</code></pre>|
+|Title|OWL EL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 53
@@ -1778,60 +1777,10 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
-
-***
-### CannotTell Assertion number 54
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-platforms|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|OWL EL Profile incompatible|
-|Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
-
-***
-### CannotTell Assertion number 55
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-platforms|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|OWL EL Profile incompatible|
-|Description|Anonymous individuals are not supported|
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 56
+### CannotTell Assertion number 54
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1856,7 +1805,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "has for profile"@en,&#10;"a pour profil"@fr ;&#10;rdfs:comment "A relation that links a resource to its profile."@en ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:range &#60;https://purl.org/hmas/ResourceProfile> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isProfileOf> .</code></pre>|
 
 ***
-### CannotTell Assertion number 57
+### CannotTell Assertion number 55
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1881,7 +1830,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents h..."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
-### CannotTell Assertion number 58
+### CannotTell Assertion number 56
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -1904,6 +1853,56 @@ New :warning:CannotTell assertion
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
 |Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+
+***
+### CannotTell Assertion number 57
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|OWL QL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
+
+***
+### CannotTell Assertion number 58
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|OWL QL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 59
@@ -1928,7 +1927,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 60
@@ -1952,8 +1951,8 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|OWL QL Profile incompatible|
-|Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
+|Description|Statement not supported|
+|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty,&#10;owl:TransitiveProperty ;&#10;rdfs:label "transitively contains"@en,&#10;"contient transitivement"@fr ;&#10;dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "Links all the resources that are logically contained in a wo..."@en ;&#10;rdfs:domain &#60;https://purl.org/hmas/Workspace> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 61
@@ -1976,9 +1975,9 @@ New :warning:CannotTell assertion
 #### Outcome Detail
 |Type|:warning:CannotTell|
 |----|----|
-|Title|OWL QL Profile incompatible|
+|Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 62
@@ -2001,9 +2000,9 @@ New :warning:CannotTell assertion
 #### Outcome Detail
 |Type|:warning:CannotTell|
 |----|----|
-|Title|OWL QL Profile incompatible|
-|Description|Statement not supported|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty,&#10;owl:TransitiveProperty ;&#10;rdfs:label "transitively contains"@en,&#10;"contient transitivement"@fr ;&#10;dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "Links all the resources that are logically contained in a wo..."@en ;&#10;rdfs:domain &#60;https://purl.org/hmas/Workspace> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn> .</code></pre>|
+|Title|OWL EL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 63
@@ -2028,60 +2027,10 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL EL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
-
-***
-### CannotTell Assertion number 64
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-organization|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|OWL EL Profile incompatible|
-|Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
-
-***
-### CannotTell Assertion number 65
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-organization|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|OWL EL Profile incompatible|
-|Description|Anonymous individuals are not supported|
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 66
+### CannotTell Assertion number 64
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2106,7 +2055,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "has for profile"@en,&#10;"a pour profil"@fr ;&#10;rdfs:comment "A relation that links a resource to its profile."@en ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:range &#60;https://purl.org/hmas/ResourceProfile> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isProfileOf> .</code></pre>|
 
 ***
-### CannotTell Assertion number 67
+### CannotTell Assertion number 65
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2131,7 +2080,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents h..."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
-### CannotTell Assertion number 68
+### CannotTell Assertion number 66
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2154,6 +2103,56 @@ New :warning:CannotTell assertion
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
 |Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+
+***
+### CannotTell Assertion number 67
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|OWL QL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
+
+***
+### CannotTell Assertion number 68
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|OWL QL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
 ### CannotTell Assertion number 69
@@ -2178,60 +2177,10 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
-
-***
-### CannotTell Assertion number 70
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-core|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|OWL QL Profile incompatible|
-|Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
-
-***
-### CannotTell Assertion number 71
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-core|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|OWL QL Profile incompatible|
-|Description|Anonymous individuals are not supported|
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 72
+### CannotTell Assertion number 70
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2256,7 +2205,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty,&#10;owl:TransitiveProperty ;&#10;rdfs:label "transitively contains"@en,&#10;"transitivelyContains"@en,&#10;"contient transitivement"@fr ;&#10;dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "Links all the resources that are logically contained in a wo..."@en ;&#10;rdfs:domain &#60;https://purl.org/hmas/Workspace> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn> .</code></pre>|
 
 ***
-### CannotTell Assertion number 73
+### CannotTell Assertion number 71
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2281,7 +2230,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
 
 ***
-### CannotTell Assertion number 74
+### CannotTell Assertion number 72
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2306,7 +2255,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
-### CannotTell Assertion number 75
+### CannotTell Assertion number 73
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2331,7 +2280,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 76
+### CannotTell Assertion number 74
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2356,7 +2305,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "has for profile"@en,&#10;"has profile"@en,&#10;"a pour profil"@fr ;&#10;rdfs:comment "A relation that links a resource to its profile."@en ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:range &#60;https://purl.org/hmas/ResourceProfile> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isProfileOf> .</code></pre>|
 
 ***
-### CannotTell Assertion number 77
+### CannotTell Assertion number 75
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2381,7 +2330,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents h..."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
-### CannotTell Assertion number 78
+### CannotTell Assertion number 76
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2406,7 +2355,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
-### CannotTell Assertion number 79
+### CannotTell Assertion number 77
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2431,7 +2380,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
 
 ***
-### CannotTell Assertion number 80
+### CannotTell Assertion number 78
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2456,7 +2405,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
-### CannotTell Assertion number 81
+### CannotTell Assertion number 79
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2481,7 +2430,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 82
+### CannotTell Assertion number 80
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2506,7 +2455,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty,&#10;owl:TransitiveProperty ;&#10;rdfs:label "transitively contains"@en,&#10;"contient transitivement"@fr ;&#10;dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "Links all the resources that are logically contained in a wo..."@en ;&#10;rdfs:domain &#60;https://purl.org/hmas/Workspace> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn> .</code></pre>|
 
 ***
-### CannotTell Assertion number 83
+### CannotTell Assertion number 81
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2531,7 +2480,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
 
 ***
-### CannotTell Assertion number 84
+### CannotTell Assertion number 82
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2556,7 +2505,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
-### CannotTell Assertion number 85
+### CannotTell Assertion number 83
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2581,7 +2530,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 86
+### CannotTell Assertion number 84
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2606,7 +2555,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "has for profile"@en,&#10;"a pour profil"@fr ;&#10;rdfs:comment "A relation that links a resource to its profile."@en ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:range &#60;https://purl.org/hmas/ResourceProfile> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isProfileOf> .</code></pre>|
 
 ***
-### CannotTell Assertion number 87
+### CannotTell Assertion number 85
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2632,7 +2581,7 @@ New :warning:CannotTell assertion
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
 ***
-### CannotTell Assertion number 88
+### CannotTell Assertion number 86
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2657,7 +2606,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents h..."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
-### CannotTell Assertion number 89
+### CannotTell Assertion number 87
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2682,7 +2631,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agen..."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes mul..."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
-### CannotTell Assertion number 90
+### CannotTell Assertion number 88
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2707,7 +2656,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-A..."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-ag..."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
-### CannotTell Assertion number 91
+### CannotTell Assertion number 89
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2732,7 +2681,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
-### CannotTell Assertion number 92
+### CannotTell Assertion number 90
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2757,7 +2706,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:fipa a owl:Ontology ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
-### CannotTell Assertion number 93
+### CannotTell Assertion number 91
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2782,7 +2731,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
 
 ***
-### CannotTell Assertion number 94
+### CannotTell Assertion number 92
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2807,7 +2756,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
-### CannotTell Assertion number 95
+### CannotTell Assertion number 93
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2832,7 +2781,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 96
+### CannotTell Assertion number 94
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2857,7 +2806,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty,&#10;owl:TransitiveProperty ;&#10;rdfs:label "transitively contains"@en,&#10;"contient transitivement"@fr ;&#10;dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "Links all the resources that are logically contained in a wo..."@en ;&#10;rdfs:domain &#60;https://purl.org/hmas/Workspace> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn> .</code></pre>|
 
 ***
-### CannotTell Assertion number 97
+### CannotTell Assertion number 95
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2882,7 +2831,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
 
 ***
-### CannotTell Assertion number 98
+### CannotTell Assertion number 96
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2907,7 +2856,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
-### CannotTell Assertion number 99
+### CannotTell Assertion number 97
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2932,7 +2881,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 100
+### CannotTell Assertion number 98
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2957,7 +2906,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "has for profile"@en,&#10;"a pour profil"@fr ;&#10;rdfs:comment "A relation that links a resource to its profile."@en ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:range &#60;https://purl.org/hmas/ResourceProfile> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isProfileOf> .</code></pre>|
 
 ***
-### CannotTell Assertion number 101
+### CannotTell Assertion number 99
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -2982,7 +2931,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:hasServiceName a owl:ObjectProperty ;&#10;rdfs:label "has Service Name"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
-### CannotTell Assertion number 102
+### CannotTell Assertion number 100
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3007,7 +2956,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the..."@en .</code></pre>|
 
 ***
-### CannotTell Assertion number 103
+### CannotTell Assertion number 101
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3032,7 +2981,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:hasServiceType a owl:ObjectProperty ;&#10;rdfs:label "has Service Type"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
-### CannotTell Assertion number 104
+### CannotTell Assertion number 102
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3057,7 +3006,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent I..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
-### CannotTell Assertion number 105
+### CannotTell Assertion number 103
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3082,7 +3031,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
-### CannotTell Assertion number 106
+### CannotTell Assertion number 104
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3107,7 +3056,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture S..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
 
 ***
-### CannotTell Assertion number 107
+### CannotTell Assertion number 105
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3132,7 +3081,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
-### CannotTell Assertion number 108
+### CannotTell Assertion number 106
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3157,7 +3106,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that confor..."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
 
 ***
-### CannotTell Assertion number 109
+### CannotTell Assertion number 107
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3182,7 +3131,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
-### CannotTell Assertion number 110
+### CannotTell Assertion number 108
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3208,7 +3157,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:Role a owl:Class ;&#10;rdfs:label "role"@en,&#10;"rôle"@fr ;&#10;rdfs:comment "A Role defines positions of members (i.e., Agents) in an Org..."@en ;&#10;rdfs:isDefinedBy :regulation .</code></pre>|
 
 ***
-### CannotTell Assertion number 111
+### CannotTell Assertion number 109
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3234,7 +3183,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:isMembershipIn a owl:ObjectProperty ;&#10;rdfs:label "is membership in"@en,&#10;"est l'appartenance à"@fr ;&#10;rdfs:comment "A relation that refers to the Group involved in a Membership..."@en ;&#10;rdfs:domain :Membership ;&#10;rdfs:isDefinedBy :regulation ;&#10;rdfs:range :Group .</code></pre>|
 
 ***
-### CannotTell Assertion number 112
+### CannotTell Assertion number 110
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3260,7 +3209,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:Signifier a owl:Class ;&#10;rdfs:label "Signifier"@en,&#10;"Signifiant"@fr ;&#10;rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully ..."@en ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/41> ;&#10;skos:note ":Signifier works as a bridge between the Core and the Intera..."@en ;&#10;skos:related :Affordance .</code></pre>|
 
 ***
-### CannotTell Assertion number 113
+### CannotTell Assertion number 111
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3286,7 +3235,7 @@ New :warning:CannotTell assertion
 |Pointer|https://purl.org/hmas/Hostable|
 
 ***
-### CannotTell Assertion number 114
+### CannotTell Assertion number 112
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3312,7 +3261,7 @@ New :warning:CannotTell assertion
 |Pointer|https://purl.org/hmas/Hostable|
 
 ***
-### CannotTell Assertion number 115
+### CannotTell Assertion number 113
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3338,7 +3287,7 @@ New :warning:CannotTell assertion
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
 ***
-### CannotTell Assertion number 116
+### CannotTell Assertion number 114
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3363,7 +3312,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:core a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;http://w3id.org/people/az/me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://id.inrupt.com/smnmyr>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-4506-2745>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://www.vcharpenay.link/#me> ;&#10;dct:creator &#60;https://id.inrupt.com/andreiciortea> ;&#10;dct:description "An ontology to describe Hypermedia Multi-Agent Systems."@en,&#10;"Une ontologie pour la description de systèmes multi-agents h..."@fr ;&#10;dct:issued "2021-11-21"^^xsd:date ;&#10;dct:title "Hypermedia MAS Core Ontology"@en,&#10;"Ontologie Centrale des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : .</code></pre>|
 
 ***
-### CannotTell Assertion number 117
+### CannotTell Assertion number 115
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3388,7 +3337,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:interaction a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://pod.inrupt.com/andreiciortea/profile/card#me>, &#10; &#60;https://pod.inrupt.com/smnmyr/profile/card#me> ;&#10;dct:creator &#60;https://danaivach.inrupt.net/profile/card#me> ;&#10;dct:description "An ontology to describe interaction in Hypermedia Multi-Agen..."@en,&#10;"L'ontologie pour décrire l'interaction dans les systèmes mul..."@fr ;&#10;dct:issued "2023-01-13"^^xsd:date ;&#10;dct:title "Hypermedia MAS Interaction Ontology"@en,&#10;"Ontologie d'Interaction des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
-### CannotTell Assertion number 118
+### CannotTell Assertion number 116
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3413,7 +3362,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:regulation a owl:Ontology ;&#10;cc:license &#60;https://creativecommons.org/licenses/by/4.0/> ;&#10;dct:contributor &#60;http://maxime-lefrancois.info/me#>, &#10; &#60;http://ns.inria.fr/fabien.gandon#me>, &#10; &#60;https://danaivach.inrupt.net/profile/card#me>, &#10; &#60;https://orcid.org/0000-0002-2956-0533>, &#10; &#60;https://orcid.org/0000-0002-3497-8758>, &#10; &#60;https://orcid.org/0000-0003-0821-6095>, &#10; &#60;https://orcid.org/0000-0003-4509-9537> ;&#10;dct:creator &#60;https://orcid.org/0000-0002-4506-2745> ;&#10;dct:description "An ontology to describe the regulation of Hypermedia Multi-A..."@en,&#10;"L'ontologie pour décrire la régulation des systèmes multi-ag..."@fr ;&#10;dct:issued "2022-05-01"^^xsd:date ;&#10;dct:title "Hypermedia MAS Regulation Ontology"@en,&#10;"Ontologie de Régulation des SMA Hypermédias"@fr ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
-### CannotTell Assertion number 119
+### CannotTell Assertion number 117
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3435,10 +3384,10 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ],&#10;[ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
-### CannotTell Assertion number 120
+### CannotTell Assertion number 118
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3463,7 +3412,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:fipa a owl:Ontology ;&#10;vann:preferredNamespacePrefix "hmas" ;&#10;vann:preferredNamespaceUri : ;&#10;owl:imports :core .</code></pre>|
 
 ***
-### CannotTell Assertion number 121
+### CannotTell Assertion number 119
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3488,7 +3437,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:OrganizationModel a skos:Concept ;&#10;skos:definition "An Organization Model is the combination of Roles, Missions,..."@en ;&#10;skos:editorialNote "The Organization Model is represented as SHACL Shapes."@en ;&#10;skos:prefLabel "organization model"@en ;&#10;skos:related :Organization .</code></pre>|
 
 ***
-### CannotTell Assertion number 122
+### CannotTell Assertion number 120
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3511,6 +3460,56 @@ New :warning:CannotTell assertion
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
+
+***
+### CannotTell Assertion number 121
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|all-fragments|
+|----|----|
+|Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|OWL QL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
+
+***
+### CannotTell Assertion number 122
+
+[Jump to CannotTell assertions summary](#cannottell-assertions)
+
+New :warning:CannotTell assertion
+#### Subject detail
+|Name|all-fragments|
+|----|----|
+|Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:warning:CannotTell|
+|----|----|
+|Title|OWL QL Profile incompatible|
+|Description|Anonymous individuals are not supported|
+|Pointer|<pre lang="Turtle"><code>[] rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en .</code></pre>|
 
 ***
 ### CannotTell Assertion number 123
@@ -3535,7 +3534,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>[] rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en .</code></pre>|
 
 ***
 ### CannotTell Assertion number 124
@@ -3560,60 +3559,10 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|OWL QL Profile incompatible|
 |Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en .</code></pre>|
-
-***
-### CannotTell Assertion number 125
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|all-fragments|
-|----|----|
-|Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|OWL QL Profile incompatible|
-|Description|Anonymous individuals are not supported|
-|Pointer|<pre lang="Turtle"><code>[] rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en .</code></pre>|
-
-***
-### CannotTell Assertion number 126
-
-[Jump to CannotTell assertions summary](#cannottell-assertions)
-
-New :warning:CannotTell assertion
-#### Subject detail
-|Name|all-fragments|
-|----|----|
-|Title|All the fragments from branch test-workflow that are syntaxically correct as well as their recursive imports|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Module fipa.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/fipa.ttl)<br/>- [Module regulation.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/regulation.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)<br/>- [Modelet domain-template/scenario-template/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/domain-template/scenario-template/onto.ttl)<br/>- [Modelet logistics/structure-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/structure-organization/onto.ttl)<br/>- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:warning:CannotTell|
-|----|----|
-|Title|OWL QL Profile incompatible|
-|Description|Anonymous individuals are not supported|
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ],&#10;[ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 127
+### CannotTell Assertion number 125
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3638,7 +3587,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/transitivelyContains> a owl:ObjectProperty,&#10;owl:TransitiveProperty ;&#10;rdfs:label "transitively contains"@en,&#10;"transitivelyContains"@en,&#10;"contient transitivement"@fr ;&#10;dc:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "Links all the resources that are logically contained in a wo..."@en ;&#10;rdfs:domain &#60;https://purl.org/hmas/Workspace> ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/39> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isTransitivelyContainedIn> .</code></pre>|
 
 ***
-### CannotTell Assertion number 128
+### CannotTell Assertion number 126
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3663,7 +3612,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> .</code></pre>|
 
 ***
-### CannotTell Assertion number 129
+### CannotTell Assertion number 127
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3688,7 +3637,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> .</code></pre>|
 
 ***
-### CannotTell Assertion number 130
+### CannotTell Assertion number 128
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3713,7 +3662,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en .</code></pre>|
 
 ***
-### CannotTell Assertion number 131
+### CannotTell Assertion number 129
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3738,7 +3687,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>[] rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en .</code></pre>|
 
 ***
-### CannotTell Assertion number 132
+### CannotTell Assertion number 130
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3763,7 +3712,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Affordance> a skos:Concept ;&#10;dc:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dc:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dc:identifier &#60;https://mitpress.mit.edu/9780262640374/> ],&#10;[ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dc:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dc:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ] ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related &#60;https://purl.org/hmas/Signifier> .</code></pre>|
 
 ***
-### CannotTell Assertion number 133
+### CannotTell Assertion number 131
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3788,7 +3737,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/hasProfile> a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "has for profile"@en,&#10;"has profile"@en,&#10;"a pour profil"@fr ;&#10;rdfs:comment "A relation that links a resource to its profile."@en ;&#10;rdfs:isDefinedBy &#60;https://purl.org/hmas/core> ;&#10;rdfs:range &#60;https://purl.org/hmas/ResourceProfile> ;&#10;owl:inverseOf &#60;https://purl.org/hmas/isProfileOf> .</code></pre>|
 
 ***
-### CannotTell Assertion number 134
+### CannotTell Assertion number 132
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3813,7 +3762,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:hasServiceName a owl:ObjectProperty ;&#10;rdfs:label "has Service Name"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
-### CannotTell Assertion number 135
+### CannotTell Assertion number 133
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3838,7 +3787,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the..."@en .</code></pre>|
 
 ***
-### CannotTell Assertion number 136
+### CannotTell Assertion number 134
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3863,7 +3812,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:hasServiceType a owl:ObjectProperty ;&#10;rdfs:label "has Service Type"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
-### CannotTell Assertion number 137
+### CannotTell Assertion number 135
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3888,7 +3837,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent I..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
-### CannotTell Assertion number 138
+### CannotTell Assertion number 136
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3913,7 +3862,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
-### CannotTell Assertion number 139
+### CannotTell Assertion number 137
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3938,7 +3887,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture S..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
 
 ***
-### CannotTell Assertion number 140
+### CannotTell Assertion number 138
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3963,7 +3912,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
-### CannotTell Assertion number 141
+### CannotTell Assertion number 139
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -3988,7 +3937,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that confor..."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
 
 ***
-### CannotTell Assertion number 142
+### CannotTell Assertion number 140
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -4013,7 +3962,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
-### CannotTell Assertion number 143
+### CannotTell Assertion number 141
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -4039,7 +3988,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:Role a owl:Class ;&#10;rdfs:label "role"@en,&#10;"rôle"@fr ;&#10;rdfs:comment "A Role defines positions of members (i.e., Agents) in an Org..."@en ;&#10;rdfs:isDefinedBy :regulation .</code></pre>|
 
 ***
-### CannotTell Assertion number 144
+### CannotTell Assertion number 142
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -4065,7 +4014,7 @@ New :warning:CannotTell assertion
 |Pointer|<pre lang="Turtle"><code>:isMembershipIn a owl:ObjectProperty ;&#10;rdfs:label "is membership in"@en,&#10;"est l'appartenance à"@fr ;&#10;rdfs:comment "A relation that refers to the Group involved in a Membership..."@en ;&#10;rdfs:domain :Membership ;&#10;rdfs:isDefinedBy :regulation ;&#10;rdfs:range :Group .</code></pre>|
 
 ***
-### CannotTell Assertion number 145
+### CannotTell Assertion number 143
 
 [Jump to CannotTell assertions summary](#cannottell-assertions)
 
@@ -6267,6 +6216,30 @@ New :white_check_mark:Pass assertion
 |Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
 
 #### Criterion detail
+|Identifier|[term-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#term-referencing)|
+|----|----|
+|Title|Term referencing test|
+|Description|A test case from the Best Practices tests checking if each term of the test subject is referenced to a module through a rdfs:isDefinedBy property.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
+|Title|Any term is referenced|
+|Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
+
+***
+### Pass Assertion number 72
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|logistics-create-organization|
+|----|----|
+|Title|Standalone modelet domains/logistics/create-organization/onto.ttl from branch test-workflow|
+|Composition|- [Modelet logistics/create-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/logistics/create-organization/onto.ttl)|
+
+#### Criterion detail
 |Identifier|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|
 |----|----|
 |Title|Terms differenciation test|
@@ -6279,7 +6252,7 @@ New :white_check_mark:Pass assertion
 |Description|All the terms have have a satisfying Levenshtein distance from each other term.|
 
 ***
-### Pass Assertion number 72
+### Pass Assertion number 73
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6303,7 +6276,7 @@ New :white_check_mark:Pass assertion
 |Description|Each rdfs:domain is defined within the fragment|
 
 ***
-### Pass Assertion number 73
+### Pass Assertion number 74
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6325,30 +6298,6 @@ New :white_check_mark:Pass assertion
 |----|----|
 |Title|OWL RL consistent|
 |Description|The provided graph is consistent for any OWL RL constraint|
-
-***
-### Pass Assertion number 74
-
-[Jump to Pass assertions summary](#pass-assertions)
-
-New :white_check_mark:Pass assertion
-#### Subject detail
-|Name|interaction-manufacturing-environments-discover-behavior-specifications|
-|----|----|
-|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:white_check_mark:Pass|
-|----|----|
-|Title|OWL TC Profile compatible|
-|Description|The subject is included in the OWL TC sublanguage|
 
 ***
 ### Pass Assertion number 75
@@ -6371,8 +6320,8 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
-|Title|OWL RL Profile compatible|
-|Description|The subject is included in the OWL RL sublanguage|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
 
 ***
 ### Pass Assertion number 76
@@ -6395,8 +6344,8 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
-|Title|OWL QL Profile compatible|
-|Description|The subject is included in the OWL QL sublanguage|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
 
 ***
 ### Pass Assertion number 77
@@ -6419,11 +6368,35 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 78
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction-manufacturing-environments-discover-behavior-specifications|
+|----|----|
+|Title|Merged module src/interaction.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-behavior-specifications/onto.ttl|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)<br/>- [Modelet manufacturing-environments/discover-behavior-specifications/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-behavior-specifications/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
 |Title|OWL EL Profile compatible|
 |Description|The subject is included in the OWL EL sublanguage|
 
 ***
-### Pass Assertion number 78
+### Pass Assertion number 79
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6447,7 +6420,7 @@ New :white_check_mark:Pass assertion
 |Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
 
 ***
-### Pass Assertion number 79
+### Pass Assertion number 80
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6471,7 +6444,7 @@ New :white_check_mark:Pass assertion
 |Description|All the terms have have a satisfying Levenshtein distance from each other term.|
 
 ***
-### Pass Assertion number 80
+### Pass Assertion number 81
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6495,7 +6468,7 @@ New :white_check_mark:Pass assertion
 |Description|Each rdfs:domain is defined within the fragment|
 
 ***
-### Pass Assertion number 81
+### Pass Assertion number 82
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6517,30 +6490,6 @@ New :white_check_mark:Pass assertion
 |----|----|
 |Title|OWL RL consistent|
 |Description|The provided graph is consistent for any OWL RL constraint|
-
-***
-### Pass Assertion number 82
-
-[Jump to Pass assertions summary](#pass-assertions)
-
-New :white_check_mark:Pass assertion
-#### Subject detail
-|Name|interaction|
-|----|----|
-|Title|Standalone module src/interaction.ttl from branch test-workflow|
-|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:white_check_mark:Pass|
-|----|----|
-|Title|OWL TC Profile compatible|
-|Description|The subject is included in the OWL TC sublanguage|
 
 ***
 ### Pass Assertion number 83
@@ -6563,8 +6512,8 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
-|Title|OWL RL Profile compatible|
-|Description|The subject is included in the OWL RL sublanguage|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
 
 ***
 ### Pass Assertion number 84
@@ -6587,8 +6536,8 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
-|Title|OWL QL Profile compatible|
-|Description|The subject is included in the OWL QL sublanguage|
+|Title|OWL RL Profile compatible|
+|Description|The subject is included in the OWL RL sublanguage|
 
 ***
 ### Pass Assertion number 85
@@ -6611,11 +6560,35 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
+|Title|OWL QL Profile compatible|
+|Description|The subject is included in the OWL QL sublanguage|
+
+***
+### Pass Assertion number 86
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|interaction|
+|----|----|
+|Title|Standalone module src/interaction.ttl from branch test-workflow|
+|Composition|- [Module interaction.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/interaction.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
 |Title|OWL EL Profile compatible|
 |Description|The subject is included in the OWL EL sublanguage|
 
 ***
-### Pass Assertion number 86
+### Pass Assertion number 87
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6639,7 +6612,7 @@ New :white_check_mark:Pass assertion
 |Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
 
 ***
-### Pass Assertion number 87
+### Pass Assertion number 88
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6663,7 +6636,7 @@ New :white_check_mark:Pass assertion
 |Description|All the terms have have a satisfying Levenshtein distance from each other term.|
 
 ***
-### Pass Assertion number 88
+### Pass Assertion number 89
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6687,7 +6660,7 @@ New :white_check_mark:Pass assertion
 |Description|Each rdfs:domain is defined within the fragment|
 
 ***
-### Pass Assertion number 89
+### Pass Assertion number 90
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6711,7 +6684,7 @@ New :white_check_mark:Pass assertion
 |Description|Each rdfs:range is defined within the fragment|
 
 ***
-### Pass Assertion number 90
+### Pass Assertion number 91
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6735,7 +6708,7 @@ New :white_check_mark:Pass assertion
 |Description|The provided graph is consistent for any OWL RL constraint|
 
 ***
-### Pass Assertion number 91
+### Pass Assertion number 92
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6759,7 +6732,7 @@ New :white_check_mark:Pass assertion
 |Description|The subject is included in the OWL TC sublanguage|
 
 ***
-### Pass Assertion number 92
+### Pass Assertion number 93
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6783,7 +6756,7 @@ New :white_check_mark:Pass assertion
 |Description|The subject is included in the OWL RL sublanguage|
 
 ***
-### Pass Assertion number 93
+### Pass Assertion number 94
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6807,7 +6780,7 @@ New :white_check_mark:Pass assertion
 |Description|The subject is included in the OWL QL sublanguage|
 
 ***
-### Pass Assertion number 94
+### Pass Assertion number 95
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6831,7 +6804,7 @@ New :white_check_mark:Pass assertion
 |Description|The subject is included in the OWL EL sublanguage|
 
 ***
-### Pass Assertion number 95
+### Pass Assertion number 96
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6855,7 +6828,7 @@ New :white_check_mark:Pass assertion
 |Description|All the terms have have a satisfying Levenshtein distance from each other term.|
 
 ***
-### Pass Assertion number 96
+### Pass Assertion number 97
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6879,7 +6852,7 @@ New :white_check_mark:Pass assertion
 |Description|Each rdfs:domain is defined within the fragment|
 
 ***
-### Pass Assertion number 97
+### Pass Assertion number 98
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6903,7 +6876,7 @@ New :white_check_mark:Pass assertion
 |Description|Each rdfs:range is defined within the fragment|
 
 ***
-### Pass Assertion number 98
+### Pass Assertion number 99
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6925,30 +6898,6 @@ New :white_check_mark:Pass assertion
 |----|----|
 |Title|OWL RL consistent|
 |Description|The provided graph is consistent for any OWL RL constraint|
-
-***
-### Pass Assertion number 99
-
-[Jump to Pass assertions summary](#pass-assertions)
-
-New :white_check_mark:Pass assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-signifiers|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:white_check_mark:Pass|
-|----|----|
-|Title|OWL TC Profile compatible|
-|Description|The subject is included in the OWL TC sublanguage|
 
 ***
 ### Pass Assertion number 100
@@ -6971,11 +6920,35 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 101
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-signifiers|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-signifiers/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-signifiers/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-signifiers/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
 |Title|OWL RL Profile compatible|
 |Description|The subject is included in the OWL RL sublanguage|
 
 ***
-### Pass Assertion number 101
+### Pass Assertion number 102
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -6999,7 +6972,7 @@ New :white_check_mark:Pass assertion
 |Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
 
 ***
-### Pass Assertion number 102
+### Pass Assertion number 103
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7023,7 +6996,7 @@ New :white_check_mark:Pass assertion
 |Description|All the terms have have a satisfying Levenshtein distance from each other term.|
 
 ***
-### Pass Assertion number 103
+### Pass Assertion number 104
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7045,30 +7018,6 @@ New :white_check_mark:Pass assertion
 |----|----|
 |Title|OWL RL consistent|
 |Description|The provided graph is consistent for any OWL RL constraint|
-
-***
-### Pass Assertion number 104
-
-[Jump to Pass assertions summary](#pass-assertions)
-
-New :white_check_mark:Pass assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-platforms|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:white_check_mark:Pass|
-|----|----|
-|Title|OWL TC Profile compatible|
-|Description|The subject is included in the OWL TC sublanguage|
 
 ***
 ### Pass Assertion number 105
@@ -7091,11 +7040,35 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 106
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-platforms|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-platforms/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-platforms/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-platforms/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
 |Title|OWL RL Profile compatible|
 |Description|The subject is included in the OWL RL sublanguage|
 
 ***
-### Pass Assertion number 106
+### Pass Assertion number 107
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7119,7 +7092,7 @@ New :white_check_mark:Pass assertion
 |Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
 
 ***
-### Pass Assertion number 107
+### Pass Assertion number 108
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7141,30 +7114,6 @@ New :white_check_mark:Pass assertion
 |----|----|
 |Title|Terms differenciated enough|
 |Description|All the terms have have a satisfying Levenshtein distance from each other term.|
-
-***
-### Pass Assertion number 108
-
-[Jump to Pass assertions summary](#pass-assertions)
-
-New :white_check_mark:Pass assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-organization|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
-|----|----|
-|Title|Domain and range referencing test|
-|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
-
-#### Outcome Detail
-|Type|:white_check_mark:Pass|
-|----|----|
-|Title|Domains properly defined|
-|Description|Each rdfs:domain is defined within the fragment|
 
 ***
 ### Pass Assertion number 109
@@ -7187,11 +7136,35 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 110
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
 |Title|Ranges properly defined|
 |Description|Each rdfs:range is defined within the fragment|
 
 ***
-### Pass Assertion number 110
+### Pass Assertion number 111
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7213,30 +7186,6 @@ New :white_check_mark:Pass assertion
 |----|----|
 |Title|OWL RL consistent|
 |Description|The provided graph is consistent for any OWL RL constraint|
-
-***
-### Pass Assertion number 111
-
-[Jump to Pass assertions summary](#pass-assertions)
-
-New :white_check_mark:Pass assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-organization|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:white_check_mark:Pass|
-|----|----|
-|Title|OWL TC Profile compatible|
-|Description|The subject is included in the OWL TC sublanguage|
 
 ***
 ### Pass Assertion number 112
@@ -7259,11 +7208,35 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 113
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-organization|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-organization/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-organization/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-organization/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
 |Title|OWL RL Profile compatible|
 |Description|The subject is included in the OWL RL sublanguage|
 
 ***
-### Pass Assertion number 113
+### Pass Assertion number 114
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7287,7 +7260,7 @@ New :white_check_mark:Pass assertion
 |Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
 
 ***
-### Pass Assertion number 114
+### Pass Assertion number 115
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7309,30 +7282,6 @@ New :white_check_mark:Pass assertion
 |----|----|
 |Title|Terms differenciated enough|
 |Description|All the terms have have a satisfying Levenshtein distance from each other term.|
-
-***
-### Pass Assertion number 115
-
-[Jump to Pass assertions summary](#pass-assertions)
-
-New :white_check_mark:Pass assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-core|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
-|----|----|
-|Title|Domain and range referencing test|
-|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
-
-#### Outcome Detail
-|Type|:white_check_mark:Pass|
-|----|----|
-|Title|Domains properly defined|
-|Description|Each rdfs:domain is defined within the fragment|
 
 ***
 ### Pass Assertion number 116
@@ -7355,11 +7304,35 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
+|Title|Domains properly defined|
+|Description|Each rdfs:domain is defined within the fragment|
+
+***
+### Pass Assertion number 117
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|
+|----|----|
+|Title|Domain and range referencing test|
+|Description|A test case from the Best Practices tests checking if all the ranges and domains from the test subject point to terms that are defined in the vocabulary.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
 |Title|Ranges properly defined|
 |Description|Each rdfs:range is defined within the fragment|
 
 ***
-### Pass Assertion number 117
+### Pass Assertion number 118
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7381,30 +7354,6 @@ New :white_check_mark:Pass assertion
 |----|----|
 |Title|OWL RL consistent|
 |Description|The provided graph is consistent for any OWL RL constraint|
-
-***
-### Pass Assertion number 118
-
-[Jump to Pass assertions summary](#pass-assertions)
-
-New :white_check_mark:Pass assertion
-#### Subject detail
-|Name|core-manufacturing-environments-discover-core|
-|----|----|
-|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
-|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
-
-#### Criterion detail
-|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
-|----|----|
-|Title|Profile compatibility test|
-|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
-
-#### Outcome Detail
-|Type|:white_check_mark:Pass|
-|----|----|
-|Title|OWL TC Profile compatible|
-|Description|The subject is included in the OWL TC sublanguage|
 
 ***
 ### Pass Assertion number 119
@@ -7427,11 +7376,35 @@ New :white_check_mark:Pass assertion
 #### Outcome Detail
 |Type|:white_check_mark:Pass|
 |----|----|
+|Title|OWL TC Profile compatible|
+|Description|The subject is included in the OWL TC sublanguage|
+
+***
+### Pass Assertion number 120
+
+[Jump to Pass assertions summary](#pass-assertions)
+
+New :white_check_mark:Pass assertion
+#### Subject detail
+|Name|core-manufacturing-environments-discover-core|
+|----|----|
+|Title|Merged module src/core.ttl from branch test-workflow with related terms from the fragments domains/manufacturing-environments/discover-core/onto.ttl|
+|Composition|- [Module core.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/src/core.ttl)<br/>- [Modelet manufacturing-environments/discover-core/onto.ttl](https://github.com/HyperAgents/hmas/blob/test-workflow/domains/manufacturing-environments/discover-core/onto.ttl)|
+
+#### Criterion detail
+|Identifier|[profile-compatibility](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#profile-compatibility)|
+|----|----|
+|Title|Profile compatibility test|
+|Description|A test meant to check whether the test subject is compatible with a profile or not, and if it is not, why.|
+
+#### Outcome Detail
+|Type|:white_check_mark:Pass|
+|----|----|
 |Title|OWL RL Profile compatible|
 |Description|The subject is included in the OWL RL sublanguage|
 
 ***
-### Pass Assertion number 120
+### Pass Assertion number 121
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7455,7 +7428,7 @@ New :white_check_mark:Pass assertion
 |Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
 
 ***
-### Pass Assertion number 121
+### Pass Assertion number 122
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7479,7 +7452,7 @@ New :white_check_mark:Pass assertion
 |Description|All the terms have have a satisfying Levenshtein distance from each other term.|
 
 ***
-### Pass Assertion number 122
+### Pass Assertion number 123
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7503,7 +7476,7 @@ New :white_check_mark:Pass assertion
 |Description|Each rdfs:domain is defined within the fragment|
 
 ***
-### Pass Assertion number 123
+### Pass Assertion number 124
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7527,7 +7500,7 @@ New :white_check_mark:Pass assertion
 |Description|Each rdfs:range is defined within the fragment|
 
 ***
-### Pass Assertion number 124
+### Pass Assertion number 125
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7551,7 +7524,7 @@ New :white_check_mark:Pass assertion
 |Description|The provided graph is consistent for any OWL RL constraint|
 
 ***
-### Pass Assertion number 125
+### Pass Assertion number 126
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7575,7 +7548,7 @@ New :white_check_mark:Pass assertion
 |Description|The subject is included in the OWL TC sublanguage|
 
 ***
-### Pass Assertion number 126
+### Pass Assertion number 127
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7599,7 +7572,7 @@ New :white_check_mark:Pass assertion
 |Description|The subject is included in the OWL RL sublanguage|
 
 ***
-### Pass Assertion number 127
+### Pass Assertion number 128
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7623,7 +7596,7 @@ New :white_check_mark:Pass assertion
 |Description|Each term of the test subject is linked to a module by a rdfs:isDefinedBy property|
 
 ***
-### Pass Assertion number 128
+### Pass Assertion number 129
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7647,7 +7620,7 @@ New :white_check_mark:Pass assertion
 |Description|All the terms have have a satisfying Levenshtein distance from each other term.|
 
 ***
-### Pass Assertion number 129
+### Pass Assertion number 130
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7671,7 +7644,7 @@ New :white_check_mark:Pass assertion
 |Description|Each rdfs:domain is defined within the fragment|
 
 ***
-### Pass Assertion number 130
+### Pass Assertion number 131
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7695,7 +7668,7 @@ New :white_check_mark:Pass assertion
 |Description|The provided graph is consistent for any OWL RL constraint|
 
 ***
-### Pass Assertion number 131
+### Pass Assertion number 132
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7719,7 +7692,7 @@ New :white_check_mark:Pass assertion
 |Description|The subject is included in the OWL TC sublanguage|
 
 ***
-### Pass Assertion number 132
+### Pass Assertion number 133
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7743,7 +7716,7 @@ New :white_check_mark:Pass assertion
 |Description|The subject is included in the OWL RL sublanguage|
 
 ***
-### Pass Assertion number 133
+### Pass Assertion number 134
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7767,7 +7740,7 @@ New :white_check_mark:Pass assertion
 |Description|The provided graph is consistent for any OWL RL constraint|
 
 ***
-### Pass Assertion number 134
+### Pass Assertion number 135
 
 [Jump to Pass assertions summary](#pass-assertions)
 
@@ -7791,7 +7764,7 @@ New :white_check_mark:Pass assertion
 |Description|The subject is included in the OWL TC sublanguage|
 
 ***
-### Pass Assertion number 135
+### Pass Assertion number 136
 
 [Jump to Pass assertions summary](#pass-assertions)
 
