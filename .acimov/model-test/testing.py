@@ -362,7 +362,7 @@ def best_practices_test(
         unlinked_subjects = query_graph(fragment_no_import, NOT_REFERENCED)
         unlinked_subjects_pointers = [[pointer] for pointer in unlinked_subjects]
         unlinked_subject_messages = [
-            f"Subject {item} not linked to a module by a rdfs:isDefinedBy property"
+            f"Subject :{item[len(ONTOLOGY_URL)+1:-1]} not linked to a module by a rdfs:isDefinedBy property"
             for item in unlinked_subjects
         ]
         make_assertion(
@@ -381,7 +381,7 @@ def best_practices_test(
         dov = query_graph(fragment_wih_import, DOMAIN_OUT_Of_VOCABULARY)
         dov = [line.split("\t") for line in dov]
         dov_messages = [
-            f"The property {item[0][1:-1]} has a domain out of the ontology: {item[1]}"
+            f"The property :{item[0][1:-1]} has a domain out of the ontology: {item[1]}"
             for item in dov
         ]
         dov_pointers = [
@@ -403,7 +403,7 @@ def best_practices_test(
         rov = query_graph(fragment_wih_import, RANGE_OUT_OF_VOCABULARY)
         rov = [line.split("\t") for line in rov]
         rov_messages = [
-            f"The property {item[0][1:-1]} has a range out of the ontology: {item[1]}"
+            f"The property :{item[0][1:-1]} has a range out of the ontology: {item[1]}"
             for item in rov
         ]
         rov_pointers = [
