@@ -13,7 +13,7 @@ Here is some context about under which context this test was made
 |Title|NicoRobertIn using actions script|
 |Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py)
-|Date|2023-11-20 13:05:01|
+|Date|2023-11-20 13:28:01|
 
 ***
 
@@ -924,7 +924,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Organization has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Organization></code></pre>|
+|Pointer|https://purl.org/hmas/Organization|
 
 ***
 ### CannotTell Assertion number 20
@@ -949,7 +949,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Term not referenced to a module|
 |Description|Subject <https://purl.org/hmas/Organization> not linked to a module by a rdfs:isDefinedBy property|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Organization></code></pre>|
+|Pointer|https://purl.org/hmas/Organization|
 
 ***
 ### CannotTell Assertion number 21
@@ -1577,7 +1577,7 @@ New :warning:CannotTell assertion
 |Title|Domain out of vocabulary|
 |Description|The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>|
 |Pointer|<pre lang="Turtle"><code>:isHostedOn a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "is hosted on"@en,&#10;"est hébergé sur"@fr ;&#10;rdfs:comment "A relation that refers to the platform that hosts an informa..."@en,&#10;"A relations that refers to the platform that hosts the resou..."@en ;&#10;rdfs:domain :Hostable ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :HypermediaMASPlatform ;&#10;owl:inverseOf :hosts .</code></pre>|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Hostable></code></pre>|
+|Pointer|https://purl.org/hmas/Hostable|
 
 ***
 ### CannotTell Assertion number 46
@@ -1603,7 +1603,7 @@ New :warning:CannotTell assertion
 |Title|Range out of vocabulary|
 |Description|The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>|
 |Pointer|<pre lang="Turtle"><code>:hosts a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "hosts"@en,&#10;"héberge"@fr ;&#10;dct:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "A relation that refers to an information resource or a proce..."@en ;&#10;rdfs:domain :HypermediaMASPlatform ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :Hostable ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .</code></pre>|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Hostable></code></pre>|
+|Pointer|https://purl.org/hmas/Hostable|
 
 ***
 ### CannotTell Assertion number 47
@@ -3283,7 +3283,7 @@ New :warning:CannotTell assertion
 |Title|Domain out of vocabulary|
 |Description|The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>|
 |Pointer|<pre lang="Turtle"><code>:isHostedOn a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "is hosted on"@en,&#10;"est hébergé sur"@fr ;&#10;rdfs:comment "A relation that refers to the platform that hosts an informa..."@en,&#10;"A relations that refers to the platform that hosts the resou..."@en ;&#10;rdfs:domain :Hostable ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :HypermediaMASPlatform ;&#10;owl:inverseOf :hosts .</code></pre>|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Hostable></code></pre>|
+|Pointer|https://purl.org/hmas/Hostable|
 
 ***
 ### CannotTell Assertion number 114
@@ -3309,7 +3309,7 @@ New :warning:CannotTell assertion
 |Title|Range out of vocabulary|
 |Description|The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>|
 |Pointer|<pre lang="Turtle"><code>:hosts a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "hosts"@en,&#10;"héberge"@fr ;&#10;dct:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "A relation that refers to an information resource or a proce..."@en ;&#10;rdfs:domain :HypermediaMASPlatform ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :Hostable ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .</code></pre>|
-|Pointer|<pre lang="Turtle"><code>&#60;https://purl.org/hmas/Hostable></code></pre>|
+|Pointer|https://purl.org/hmas/Hostable|
 
 ***
 ### CannotTell Assertion number 115
@@ -3435,7 +3435,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ],&#10;[ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### CannotTell Assertion number 120
