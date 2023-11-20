@@ -274,6 +274,9 @@ def extract_statement(report, subject, pointer):
     isolated_graph = load_subject(report, subject)
 
     triples = extractTriples(isolated_graph, pointer)
+
+    if isinstance(triples, URIRef):
+        return triples
     
     statement = empty_graph_same_prefixes(isolated_graph)
 
