@@ -277,6 +277,14 @@ def make_summary_chapter(assertions):
         "",
         bar,
         "",
+        "<br/>",
+        "",
+        "According to the [EARL](https://www.w3.org/TR/EARL10-Schema/) vocabulary, each feedback means:",
+        "* :x: Fail: The subject failed the test. ",
+        "* :warning: CannotTell: It is unclear if the subject passed or failed the test. This happens when an automated test requires human judgement to make a definite decision.",
+        "* :grey_question: NotTested:  The test has not been carried out. Here this is because a previous test that was mandatory to be passed did not end up as Pass.",
+        "* :white_check_mark: Pass: The subject passed the test.",
+        ""
         ] + table_lines + ["", "***"]
     return result
 
