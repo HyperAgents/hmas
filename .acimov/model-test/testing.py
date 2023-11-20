@@ -201,6 +201,8 @@ def fragment_check(
                 tested_only=tested_only
             )
         return True
+    
+    fragment_no_owl = safe_load(fragments, extras, disable_owl=True)
 
     best_practices_test(
         report,
@@ -208,6 +210,7 @@ def fragment_check(
         subject,
         fragment_with_import,
         fragment_no_import,
+        fragment_no_owl,
         skip,
         skip_pass=skip_pass
     )
@@ -347,6 +350,7 @@ def best_practices_test(
         subject,
         fragment_wih_import,
         fragment_no_import,
+        fragment_no_owl,
         skip=[],
         skip_pass=False
     ):
@@ -359,7 +363,7 @@ def best_practices_test(
 
     # Check for terms not linked to an ontology
     if not "term-referencing" in skip:
-        unlinked_subjects = query_graph(fragment_no_import, NOT_REFERENCED)
+        unlinked_subjects = query_graph(fragment_no_owl, NOT_REFERENCED)
         unlinked_subjects_pointers = [[pointer] for pointer in unlinked_subjects]
         unlinked_subject_messages = [
             f"Subject :{item[len(ONTOLOGY_URL)+1:-1]} not linked to a module by a rdfs:isDefinedBy property"
@@ -439,7 +443,7 @@ def best_practices_test(
         )
     
     if not "labeled-terms" in skip:
-        not_labeled_terms = query_graph(fragment_no_import, NOT_LABELED)
+        not_labeled_terms = query_graph(fragment_no_owl, NOT_LABELED)
         not_labeled_pointers = [[f"<{ONTOLOGY_URL}{line.strip()[1:-1]}>"] for line in not_labeled_terms if len(line.strip()) > 0]
         not_labeled_messages = [f"The term :{pointer[0].split(ONTOLOGY_SEPARATOR)[-1][:-1]} has no rdfs:label to define it in natural language" for pointer in not_labeled_pointers]
         make_assertion(
