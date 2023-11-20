@@ -13,7 +13,7 @@ Here is some context about under which context this test was made
 |Title|NicoRobertIn using actions script|
 |Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py)
-|Date|2023-11-20 13:28:01|
+|Date|2023-11-20 14:06:03|
 
 ***
 
@@ -948,7 +948,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/Organization> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :Organization not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|https://purl.org/hmas/Organization|
 
 ***
@@ -973,7 +973,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Range out of vocabulary|
-|Description|The property signifies has a range out of the ontology: sh:NodeShape|
+|Description|The property :signifies has a range out of the ontology: sh:NodeShape|
 |Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
@@ -1024,7 +1024,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Range out of vocabulary|
-|Description|The property signifies has a range out of the ontology: sh:NodeShape|
+|Description|The property :signifies has a range out of the ontology: sh:NodeShape|
 |Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
@@ -1100,7 +1100,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :hasServiceName not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:hasServiceName a owl:ObjectProperty ;&#10;rdfs:label "has Service Name"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
@@ -1125,7 +1125,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :APService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the..."@en .</code></pre>|
 
 ***
@@ -1150,7 +1150,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :hasServiceType not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:hasServiceType a owl:ObjectProperty ;&#10;rdfs:label "has Service Type"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
@@ -1175,7 +1175,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :AgentIdentifierDescription not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent I..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
@@ -1200,7 +1200,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :AgentPlatformDescription not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
@@ -1225,7 +1225,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :FIPAAgentPlatform not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture S..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
 
 ***
@@ -1250,7 +1250,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :HTTPMessageTransportService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
@@ -1275,7 +1275,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :MessageTransportService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that confor..."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
 
 ***
@@ -1300,7 +1300,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :IIOPMessageTransportService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
@@ -1575,7 +1575,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Domain out of vocabulary|
-|Description|The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>|
+|Description|The property :isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>|
 |Pointer|<pre lang="Turtle"><code>:isHostedOn a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "is hosted on"@en,&#10;"est hébergé sur"@fr ;&#10;rdfs:comment "A relation that refers to the platform that hosts an informa..."@en,&#10;"A relations that refers to the platform that hosts the resou..."@en ;&#10;rdfs:domain :Hostable ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :HypermediaMASPlatform ;&#10;owl:inverseOf :hosts .</code></pre>|
 |Pointer|https://purl.org/hmas/Hostable|
 
@@ -1601,7 +1601,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Range out of vocabulary|
-|Description|The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>|
+|Description|The property :hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>|
 |Pointer|<pre lang="Turtle"><code>:hosts a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "hosts"@en,&#10;"héberge"@fr ;&#10;dct:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "A relation that refers to an information resource or a proce..."@en ;&#10;rdfs:domain :HypermediaMASPlatform ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :Hostable ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .</code></pre>|
 |Pointer|https://purl.org/hmas/Hostable|
 
@@ -2627,7 +2627,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Range out of vocabulary|
-|Description|The property signifies has a range out of the ontology: sh:NodeShape|
+|Description|The property :signifies has a range out of the ontology: sh:NodeShape|
 |Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
@@ -2978,7 +2978,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :hasServiceName not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:hasServiceName a owl:ObjectProperty ;&#10;rdfs:label "has Service Name"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
@@ -3003,7 +3003,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :APService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the..."@en .</code></pre>|
 
 ***
@@ -3028,7 +3028,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :hasServiceType not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:hasServiceType a owl:ObjectProperty ;&#10;rdfs:label "has Service Type"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
@@ -3053,7 +3053,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :AgentIdentifierDescription not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent I..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
@@ -3078,7 +3078,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :AgentPlatformDescription not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
@@ -3103,7 +3103,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :FIPAAgentPlatform not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture S..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
 
 ***
@@ -3128,7 +3128,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :HTTPMessageTransportService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
@@ -3153,7 +3153,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :MessageTransportService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that confor..."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
 
 ***
@@ -3178,7 +3178,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :IIOPMessageTransportService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
@@ -3281,7 +3281,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Domain out of vocabulary|
-|Description|The property isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>|
+|Description|The property :isHostedOn has a domain out of the ontology: <https://purl.org/hmas/Hostable>|
 |Pointer|<pre lang="Turtle"><code>:isHostedOn a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "is hosted on"@en,&#10;"est hébergé sur"@fr ;&#10;rdfs:comment "A relation that refers to the platform that hosts an informa..."@en,&#10;"A relations that refers to the platform that hosts the resou..."@en ;&#10;rdfs:domain :Hostable ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :HypermediaMASPlatform ;&#10;owl:inverseOf :hosts .</code></pre>|
 |Pointer|https://purl.org/hmas/Hostable|
 
@@ -3307,7 +3307,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Range out of vocabulary|
-|Description|The property hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>|
+|Description|The property :hosts has a range out of the ontology: <https://purl.org/hmas/Hostable>|
 |Pointer|<pre lang="Turtle"><code>:hosts a owl:AsymmetricProperty,&#10;owl:ObjectProperty ;&#10;rdfs:label "hosts"@en,&#10;"héberge"@fr ;&#10;dct:source &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;&#10;rdfs:comment "A relation that refers to an information resource or a proce..."@en ;&#10;rdfs:domain :HypermediaMASPlatform ;&#10;rdfs:isDefinedBy :core ;&#10;rdfs:range :Hostable ;&#10;rdfs:seeAlso &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/18>, &#10; &#60;https://github.com/HyperAgents/ns.hyperagents.org/issues/49> .</code></pre>|
 |Pointer|https://purl.org/hmas/Hostable|
 
@@ -3333,7 +3333,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Range out of vocabulary|
-|Description|The property signifies has a range out of the ontology: sh:NodeShape|
+|Description|The property :signifies has a range out of the ontology: sh:NodeShape|
 |Pointer|<pre lang="Turtle"><code>:signifies a owl:ObjectProperty ;&#10;rdfs:label "signifies"@en,&#10;"signifie"@fr ;&#10;rdfs:comment "A relation between a signifier and a node shape specifying a..."@en ;&#10;rdfs:domain :Signifier ;&#10;rdfs:isDefinedBy :interaction ;&#10;rdfs:range sh:NodeShape .</code></pre>|
 |Pointer|http://www.w3.org/ns/shacl#NodeShape|
 
@@ -3435,7 +3435,7 @@ New :warning:CannotTell assertion
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ],&#10;[ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### CannotTell Assertion number 120
@@ -3809,7 +3809,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/hasServiceName> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :hasServiceName not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:hasServiceName a owl:ObjectProperty ;&#10;rdfs:label "has Service Name"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
@@ -3834,7 +3834,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/APService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :APService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:APService a owl:Class ;&#10;rdfs:label "Agent Platform Service"@en ;&#10;rdfs:comment "A service exposed by a FIPA Agent Platform as defined by the..."@en .</code></pre>|
 
 ***
@@ -3859,7 +3859,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/hasServiceType> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :hasServiceType not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:hasServiceType a owl:ObjectProperty ;&#10;rdfs:label "has Service Type"@en ;&#10;rdfs:domain :APService .</code></pre>|
 
 ***
@@ -3884,7 +3884,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/AgentIdentifierDescription> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :AgentIdentifierDescription not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:AgentIdentifierDescription a owl:Class ;&#10;rdfs:label "Agent Identifier Description"@en ;&#10;rdfs:comment "A resource profile that describes an agent using the Agent I..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
@@ -3909,7 +3909,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/AgentPlatformDescription> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :AgentPlatformDescription not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:AgentPlatformDescription a owl:Class ;&#10;rdfs:label "Agent Platform Description"@en ;&#10;rdfs:comment "A resource profile that descripe a FIPA Agent Platform using..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#ResourceProfile> .</code></pre>|
 
 ***
@@ -3934,7 +3934,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/FIPAAgentPlatform> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :FIPAAgentPlatform not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:FIPAAgentPlatform a owl:Class ;&#10;rdfs:label "FIPA Agent Platform"@en ;&#10;rdfs:comment "A platform that conforms to the FIPA Abstract Architecture S..."@en ;&#10;rdfs:subClassOf &#60;https://ci.mines-stetienne.fr/hmas#Platform> .</code></pre>|
 
 ***
@@ -3959,7 +3959,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/HTTPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :HTTPMessageTransportService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:HTTPMessageTransportService a owl:Class ;&#10;rdfs:label "HTTP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
@@ -3984,7 +3984,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/MessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :MessageTransportService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:MessageTransportService a owl:Class ;&#10;rdfs:label "Message Transport Service"@en ;&#10;rdfs:comment "A service for transporting messages among agents that confor..."@en ;&#10;rdfs:subClassOf :APService .</code></pre>|
 
 ***
@@ -4009,7 +4009,7 @@ New :warning:CannotTell assertion
 |Type|:warning:CannotTell|
 |----|----|
 |Title|Term not referenced to a module|
-|Description|Subject <https://purl.org/hmas/IIOPMessageTransportService> not linked to a module by a rdfs:isDefinedBy property|
+|Description|Subject :IIOPMessageTransportService not linked to a module by a rdfs:isDefinedBy property|
 |Pointer|<pre lang="Turtle"><code>:IIOPMessageTransportService a owl:Class ;&#10;rdfs:label "IIOP Message Transport Service"@en ;&#10;rdfs:comment "An HTTP-based message transport service that confirms to the..."@en ;&#10;rdfs:subClassOf :MessageTransportService .</code></pre>|
 
 ***
