@@ -31,7 +31,8 @@ from constants import (
     MODULE_URL_FORMAT,
     MODELET_URL_FORMAT,
     PWD_TO_ROOT_FOLDER,
-    LITERAL_CUTTING_LENGTH
+    LITERAL_CUTTING_LENGTH,
+    PREFIX_ERROR
 )
 
 def statement(self, subject, *po):
@@ -182,38 +183,47 @@ def extractTriples(isolated_graph, searched_entity):
 
     return all_triples + new_triples
 
-def extract_statement(report, subject, pointer):
+def load_subject(report, subject):
     isolated_graph = Graph()
 
     for part in report.objects(subject, DCTERMS.hasPart):
         part_path = short_subject_part(str(part))
         isolated_graph.parse(part_path)
-        
-    triples = extractTriples(isolated_graph, pointer)
     
-    statement = Graph()
+    return isolated_graph
 
-    for prefix, namespace in isolated_graph.namespaces():
-        statement.bind(prefix, namespace)
+def extract_prefixes(graph):
+    return [
+        (prefix, namespace)
+        for prefix, namespace
+        in graph.namespaces()
+    ]
 
-    if not isinstance(triples, list):
-        statement = f"<{str(triples)}>" if isinstance(triples, URIRef) else \
-                        "[]" if isinstance(triples, BNode) \
-                            else f'"{str(triples)}"'
-    else:
-        for triple in triples:
+def empty_graph_same_prefixes(graphPrefixed):
+    graph = Graph()
+
+    for prefix, namespace in extract_prefixes(graphPrefixed):
+        graph.bind(prefix, namespace)
+
+    return graph
+
+def shorten_literals(triples):
+    parsed_triples = []
+    for triple in triples:
             targetTriple = triple
             if isinstance(triple[2], Literal):
-                literal = triple[2]
-                ltype = literal.datatype
-                if len(literal) > LITERAL_CUTTING_LENGTH:
-                    separator = "..." if ltype is None or ltype == XSD.string else ""
-                    newLiteral = Literal(f"{literal[:LITERAL_CUTTING_LENGTH]}{separator}", lang=literal.language, datatype=ltype)
+                if len(triple[2]) > LITERAL_CUTTING_LENGTH:
+                    separator = "..." if triple[2].datatype is None or triple[2].datatype == XSD.string else ""
+                    newLiteral = Literal(
+                        f"{triple[2][:LITERAL_CUTTING_LENGTH]}{separator}",
+                        lang=triple[2].language,
+                        datatype=triple[2].datatype
+                    )
                     targetTriple = (targetTriple[0], targetTriple[1], newLiteral)
-            statement.add(targetTriple)
-        
-        statement = statement.serialize(format="ttl", encoding="utf-8").decode(encoding="utf-8")
+            parsed_triples.append(targetTriple)
+    return parsed_triples
 
+def parse_statement_for_html(statement):
     statement = [
         line.strip().replace("<", "&#60;")
         for line in statement.split("\n")
@@ -224,6 +234,61 @@ def extract_statement(report, subject, pointer):
         if not statement[i].startswith("@"):
             statement = "\n".join(statement[i:])
             break
+    
+    return statement
+
+def parse_statement_into_graph(prefixes, raw_statement):
+    try:
+        rdf = "\n".join([
+            f"@prefix {line[0]}: <{line[1]}> ."
+            for line in prefixes
+        ]) + "\n" + raw_statement + " ."
+        isolated_graph = Graph()
+        isolated_graph.parse(data=rdf, format="ttl")
+        return isolated_graph
+    except Exception as e:
+        prefix_error = str(e)
+        prefix_error = prefix_error.split("\n")[1]
+        prefix_error = PREFIX_ERROR.findall(prefix_error)
+        if len(prefix_error) == 0:
+            raise Exception("The statement should not contain prefix errors")
+        prefix_error = prefix_error[0].split('"')[1][:-1]
+        prefixes.append((prefix_error, "https://www.example.org/"))
+        return parse_statement_into_graph(prefixes, raw_statement)
+
+
+def parse_statement(report, subject, raw_statement):
+    subject_loaded = load_subject(report, subject)
+    prefixes = extract_prefixes(subject_loaded)
+    isolad_graph = parse_statement_into_graph(prefixes, raw_statement)
+    triples = [triple for triple in isolad_graph.triples((None, None, None))]
+    triples = shorten_literals(triples)
+    statement_graph = Graph()
+    for triple in triples:
+        statement_graph.add(triple)
+    statement = statement_graph.serialize(format="ttl")
+    return parse_statement_for_html(statement)
+        
+
+def extract_statement(report, subject, pointer):
+    isolated_graph = load_subject(report, subject)
+
+    triples = extractTriples(isolated_graph, pointer)
+    
+    statement = empty_graph_same_prefixes(isolated_graph)
+
+    if not isinstance(triples, list):
+        statement = f"<{str(triples)}>" if isinstance(triples, URIRef) else \
+                        "[]" if isinstance(triples, BNode) \
+                            else f'"{str(triples)}"'
+    else:
+        triples = shorten_literals(triples)
+        for triple in triples:
+            statement.add(triple)
+        
+        statement = statement.serialize(format="ttl", encoding="utf-8").decode(encoding="utf-8")
+
+    statement = parse_statement_for_html(statement)
     
     return Literal(statement)
 
@@ -244,7 +309,7 @@ def make_pointer(report, subject, pointer_string):
         )[pointer_string.split(":")[1]]
         pointer = URIRef(normalizedUri)
     else:
-        pointer = Literal(pointer_string.replace("<", "&#60;")) #.replace(">", "&#62;")
+        pointer = Literal(parse_statement(report, subject, pointer_string))
     
     return pointer
 
