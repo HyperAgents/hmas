@@ -142,7 +142,7 @@ def make_details_table(
         "",
         f"[Jump to summary definition](#summary-{severity}-{str(assertion_counter)})",
         "",
-        f"New {emoji}{severity} assertion"
+        f"{emoji}{severity} assertion"
         "",
         "#### Subject detail",
         f"|Name|{subjectId}|",
@@ -172,121 +172,144 @@ def make_details_table(
     chapter.append("")
     chapter.append("***")
 
-def make_details_chapter(criterions, assertions, partsDict, pointersDict):
-    chapter = [
+def make_severity_detail(assertions, criterions, severity, emoji, partsDict, pointersDict):
+    result = []
+    severity_assertions = assertions[severity]
+
+    if len(severity_assertions) == 0:
+        return []
+
+    result += [
+        f"## {severity} Assertion Details",
         "",
-        "# Assertion Details",
+        f"This subchapter gives more details to the {emoji}{severity} assertions",
         "",
-        "[Jump to the previous chapter](#model-test-report-review)",
-        ""
-        "In this chapter we will go further into each assertion",
-        ""
     ]
 
-    for severity, emoji, _ in SEVERITY_RANGE:
-        severity_assertions = assertions[severity]
+    for i, assertionInfo in enumerate(severity_assertions):
+        make_details_table(
+            result,
+            assertionInfo,
+            partsDict,
+            pointersDict,
+            severity,
+            i + 1,
+            emoji,
+            criterions
+        )
+    return result
 
-        if len(severity_assertions) == 0:
-            continue
-
-        chapter.append(f"## {emoji}{severity} Assertion Details")
-        chapter.append("")
-
-        for i, assertionInfo in enumerate(severity_assertions):
-            make_details_table(
-                chapter,
-                assertionInfo,
-                partsDict,
-                pointersDict,
-                severity,
-                i + 1,
-                emoji,
-                criterions
-            )
+def make_severity_summary(assertions, severity, emoji):
+    severity_assertions = assertions[severity]
+    table_length = len(severity_assertions)
+    title = f"## {severity} Assertions Summary"
+    id = title_to_id(title)
     
-    return chapter
+    summary = [
+        title,
+        "",
+        f"[Jump to statistic summary](#statistic-summary)"
+        "",
+        "",
+        f"{emoji}{str(len(severity_assertions))} {severity} assertions",
+        ""
+    ] + ERROR_TABLE_HEADER + [
+        "|".join([
+            '',
+            f"[Table top]({id})",
+            f'<div id="summary-{severity}-{str(i + 1)}">{str(i+1)}/{str(table_length)}</div>',
+            COLOR_BOX_TEMPLATE
+                .replace('EMOJI', emoji)
+                .replace('TEXT', severity),
+            f"`{str(subjectId)}`",
+            f"[{criterionId.split('#')[-1]}]({criterionId})",
+            str(errorTitle),
+            f"[Jump](#{severity.lower()}-assertion-number-{str(i+1)})",
+            ''
+        ])
+        for i, (_, _, _, _, _, subjectId, _, criterionId, errorTitle, _) in enumerate(severity_assertions)
+    ] + ["", "***", ""]
+    
+    return summary
 
-def make_summary_chapter(assertions):
-    chapter_title = "# Model test report review"
+def make_severity_chapter(assertions, partsDict, pointersDict, criterions, severity, emoji):
+    result = []
+    assertion_number = len(assertions[severity])
+    result += [
+        "",
+        f"# {severity} Assertions",
+        "",
+        f"Here is the chapter related to the {severity} assertion",
+        "",
+        f"{emoji}{assertion_number} {severity} assertions",
+        "",
+        "<details>",
+        f"<summary>Fold/Unfold the {assertion_number} summary and details</summary>",
+        ""
+    ] + make_severity_summary(
+        assertions,
+        severity,
+        emoji
+    ) + make_severity_detail(
+        assertions,
+        criterions,
+        severity,
+        emoji,
+        partsDict,
+        pointersDict
+    ) + [
+        "",
+        "</details>",
+        "",
+        "***",
+        ""
+    ]
+    return result
 
-    table_lines = []
-    count_line = []
-
-    for severity, emoji, _ in SEVERITY_RANGE:
-
-        severity_assertions = assertions[severity]
-        table_length = len(severity_assertions)
-        title = f"## {severity} assertions"
-        id = title_to_id(title)
-
-        severity_lines = [
-            title,
-            "",
-            f"[Jump to chapter start](#model-test-report-review)"
-            "",
-            "",
-            f"{str(len(severity_assertions))} {severity} assertions",
-            ""
-            ] + ERROR_TABLE_HEADER + [
-            "|".join([
-                '',
-                f"[Table top]({id})",
-                f'<div id="summary-{severity}-{str(i + 1)}">{str(i+1)}/{str(table_length)}</div>',
-                COLOR_BOX_TEMPLATE
-                    .replace('EMOJI', emoji)
-                    .replace('TEXT', severity),
-                f"`{str(subjectId)}`",
-                f"[{criterionId.split('#')[-1]}]({criterionId})",
-                str(errorTitle),
-                f"[Jump](#{severity.lower()}-assertion-number-{str(i+1)})",
-                ''
-            ])
-            for i, (_, _, _, _, _, subjectId, _, criterionId, errorTitle, _) in enumerate(severity_assertions)
-        ]
-        table_lines += severity_lines
-        count_line.append(f"{emoji}{str(table_length)} [{severity}]({id})")
-
+def make_stat_chapter(assertions):
     assertions_stats = [len(assertions[key]) for key, _, _ in SEVERITY_RANGE]
     nb_assertions = sum(assertions_stats)
 
-    severity_rates = [max(1, int(nb/nb_assertions * 100)) for nb in assertions_stats]
-    severity_rates[-1] = 100 - sum(severity_rates[:-1])
+    rates = []
+    for nb in assertions_stats:
+        rate = nb/nb_assertions * 100
+        rate = int(max(1, rate)) if rate > 0 else 0
+        rates.append(rate)
+
+    rates[-1] = 100 - sum(rates[:-1])
 
     bar = '<div  style="border-radius: 12px; height: 25px; overflow: hidden">'
+    count_line = []
     for i in range(len(SEVERITY_RANGE)):
+        count_line.append(f"{SEVERITY_RANGE[i][1]}{str(assertions_stats[i])} {SEVERITY_RANGE[i][0]}")
         color = SEVERITY_RANGE[i][2]
-        style = f""
-        if i == 0:
-            style += f'border-radius: 12px 0px 0px 12px'
-        if i == len(SEVERITY_RANGE) - 1:
-            style += 'border-radius: 0px 12px 12px 0px'
-        bar += f'<img src="https://placehold.co/15x15/{color}/{color}.png" width="{severity_rates[i]}%" height="25px" style="{style}"/>'
+        bar += f'<img src="https://placehold.co/15x15/{color}/{color}.png" width="{rates[i]}%" height="25px"/>'
     bar +='</div>'
+    count_line = ", ".join(count_line)
 
-    result = [
-        chapter_title,
+    return [
         "",
-        "[Jump to the next chapter](#assertion-details)",
+        "# Statistic summary",
         "",
-        "Here is the human readable preview for the model test report",
+        "Here is a short overview for this test report",
         "",
-        f"{str(nb_assertions)} Assertions"
+        f"{str(nb_assertions)} Assertions",
         "",
-        "",
-        ", ".join(count_line),
+        count_line,
         "",
         bar,
         "",
         "<br/>",
         "",
-        "According to the [EARL](https://www.w3.org/TR/EARL10-Schema/) vocabulary, each feedback means:",
+        "According to the [EARL](https://www.w3.org/TR/EARL10-Schema/) vocabulary, each outcome type means:",
         "* :x: Fail: The subject failed the test. ",
         "* :warning: CannotTell: It is unclear if the subject passed or failed the test. This happens when an automated test requires human judgement to make a definite decision.",
         "* :grey_question: NotTested:  The test has not been carried out. Here this is because a previous test that was mandatory to be passed did not end up as Pass.",
         "* :white_check_mark: Pass: The subject passed the test.",
+        "",
+        "***",
         ""
-        ] + table_lines + ["", "***"]
-    return result
+    ]
 
 def make_turtle_page(report, file_name) -> str:
 
@@ -304,8 +327,17 @@ def make_turtle_page(report, file_name) -> str:
         ""
     ]
     md += make_assertor_chapter(report)
-    md += make_summary_chapter(assertions)
-    md += make_details_chapter(criterions, assertions, partsDict, pointersDict)
+    md += make_stat_chapter(assertions)
+    
+    for severity, emoji, _ in SEVERITY_RANGE:
+        md += make_severity_chapter(
+            assertions,
+            partsDict,
+            pointersDict,
+            criterions,
+            severity,
+            emoji
+        )
 
     md = "\n".join(md)
     return md
