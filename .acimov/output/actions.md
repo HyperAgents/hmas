@@ -13,7 +13,7 @@ Here is some context about under which context this test was made
 |Title|NicoRobertIn using actions script|
 |Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py)
-|Date|2023-11-20 22:36:06|
+|Date|2023-11-21 17:36:11|
 
 ***
 
@@ -26,7 +26,7 @@ Here is a short overview for this test report
 
 :x:3 Fail, :warning:143 CannotTell, :grey_question:20 NotTested, :white_check_mark:136 Pass
 
-<div  style="border-radius: 12px; height: 25px; overflow: hidden"><img src="https://placehold.co/15x15/red/red.png" width="1%" height="25px"/><img src="https://placehold.co/15x15/orange/orange.png" width="47%" height="25px"/><img src="https://placehold.co/15x15/grey/grey.png" width="6%" height="25px"/><img src="https://placehold.co/15x15/green/green.png" width="46%" height="25px"/></div>
+<table cellspacing="0" cellpadding="0"><tr><td bgcolor="red" width="1%" height="25px"> </td><td bgcolor="orange" width="47%" height="25px"> </td><td bgcolor="grey" width="6%" height="25px"> </td><td bgcolor="green" width="46%" height="25px"> </td></tr></table>
 
 <br/>
 
