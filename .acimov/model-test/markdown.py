@@ -278,13 +278,13 @@ def make_stat_chapter(assertions):
 
     rates[-1] = 100 - sum(rates[:-1])
 
-    bar = '<table cellspacing="0" cellpadding="0"><tr>'
+    bar = '<div  style="border-radius: 12px; height: 25px; overflow: hidden">'
     count_line = []
     for i in range(len(SEVERITY_RANGE)):
         count_line.append(f"{SEVERITY_RANGE[i][1]}{str(assertions_stats[i])} {SEVERITY_RANGE[i][0]}")
         color = SEVERITY_RANGE[i][2]
-        bar += f'<td bgcolor="{color}" width="{rates[i]}%" height="25px"> </td>'
-    bar +='</tr></table>'
+        bar += f'<img src="../assets/{color}.png" width="{rates[i]}%" height="25px"/>'
+    bar +='</div>'
     count_line = ", ".join(count_line)
 
     return [
