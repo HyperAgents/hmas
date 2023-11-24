@@ -317,6 +317,7 @@ _:norman2013 a owl:NamedIndividual ;
 
 :hosts a owl:ObjectProperty, owl:AsymmetricProperty ;
           rdfs:isDefinedBy :core ;
+          owl:inverseOf :isHostedOn ;
           rdfs:domain :HypermediaMASPlatform ;
           rdfs:comment "A relation that refers to an information resource or a process that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
           rdfs:label "hosts"@en, "héberge"@fr ;
@@ -362,6 +363,10 @@ _:norman2013 a owl:NamedIndividual ;
           rdfs:range :Organization ;
           rdfs:comment "A relation between an Artifact and an Organization it belongs to."@en ;
           rdfs:label "is material of"@en .
+
+
+
+
 
 #### 
 # Notions of HOME saved for later
