@@ -228,7 +228,7 @@ _:norman2013 a owl:NamedIndividual ;
 :ResourceProfile a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
-        skos:example "e.g., a Thing Description document, a Hydra document, an Socio-Technical Network platform description, a fipa:AgentDescription"@en ;
+        skos:example "e.g., a Thing Description document, a Hydra document, an Socio-Technical Network platform description, an agent description based on the FIPA standard"@en ;
         rdfs:label "Resource Profile"@en, "Profil de Ressource"@fr .
 
 :Signifier rdf:type owl:Class ;
