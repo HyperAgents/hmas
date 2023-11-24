@@ -320,7 +320,7 @@ _:norman2013 a owl:NamedIndividual ;
 :hosts a owl:ObjectProperty, owl:AsymmetricProperty ;
           rdfs:isDefinedBy :core ;
           rdfs:domain :HypermediaMASPlatform ;
-          rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
+          rdfs:comment "A relation that refers to an information resource or a process that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
           rdfs:label "hosts"@en, "héberge"@fr ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
@@ -330,7 +330,7 @@ _:norman2013 a owl:NamedIndividual ;
           rdfs:isDefinedBy :core ;
           owl:inverseOf :hosts ;
           rdfs:range :HypermediaMASPlatform ;
-          rdfs:comment "A relations that refers to the platform that hosts the resource. "@en ;
+          rdfs:comment "A relation that refers to the platform that hosts the information resource or process."@en ;
           rdfs:label "is hosted on"@en, "est hébergé sur"@fr .
 
 :isExposedIn a owl:ObjectProperty ;
