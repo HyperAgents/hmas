@@ -6,16 +6,16 @@ The new FL Logistics enterprise has different main organizational goals that can
 
 The **hiring process**, for instance, has a set of interdependent activities, i.e., **hiring**, the root activity, depends on the completion of the **signing contract** activity, that depends on the completion of the **selecting candidate** activity, that depends on the completion of the **assessing recommendations** and **interviewing candidates** activities, that depend on the completion of the **selecting interviewees** activity, that depends on the completion of the **announcing job position**, that finally depends on the completion of the **writing job position description**. The **assessing recommendations** activity facilitates the **interviewing candidates** activity and biases the **selecting candidate** activity.
 
-Each activity is associated to an organizational goal, i.e., **hired**, **contract signed**, **candidate selected**, **recommendations assessed**, **candidates interviewed**, **interviewees selected**, **job position announced**, and **job position description wrote**. The organizational goal **candidates interviewed** has two sub-goals, **interviews scheduled** and **interviews conducted**. The organizational goals **hired**, **contract signed**, and **job position announced** are missions of the human resources, while the organizational goals **candidate selected**, **recommendations assessed**, **candidates interviewed**, **interviewees selected**, and **job position description wrote** are missions of the department director.
+Each activity is associated to an organizational goal, i.e., **hired**, **contract signed**, **candidate selected**, **recommendations assessed**, **candidates interviewed**, **interviewees selected**, **job position announced**, and **job position description written**. The organizational goal **candidates interviewed** has two sub-goals, **interviews scheduled** and **interviews conducted**. The organizational goals **hired**, **contract signed**, and **job position announced** are the responsibilities of the human resources, while the organizational goals **candidate selected**, **recommendations assessed**, **candidates interviewed**, **interviewees selected**, and **job position description written** are responsibilities of the department director.
 
-A new person has to be hired in the Commercial department for the Account Manager job position. Frank, the Human Resources Officer, commits to the organizational goals under the human resources missions, while Kate, the Director of the Operations Department, commits to the organizational goals under the department director missions.
+A new person has to be hired in the Commercial department for the Account Manager job position. Frank, the Human Resources Officer, commits to the organizational goals under the human resources responsibilities, while Kate, the Director of the Operations Department, commits to the organizational goals under the department director responsibilities.
 
 ## Competency questions
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------| 
 | q1 | What are the organizational goals and subgoals agent Y has to achieve when committed to the mission Z in the organization X? | What are the organizational goals and subgoals Kate has to achieve when committed to the department director mission in the FL Logistics organization? `ex:CandidateSelected`, `ex:CandidatesInterviewed`, `ex:IntervieweesSelected`, `ex:InterviewsConducted`, `ex:InterviewsScheduled`, `ex:JobPositionWritten`, `ex:RecommendationsAssessed`                                                       |
-| q2 | What are the activities in process Z proposed by the organization X and how these activities are dependent on each other?    | What are the activities in the Hiring process proposed by the FL Logistics organization and how these activities are dependent on each other? `ex:AnnouncingJobPosition,ex:isPrecededBy,ex:WritingJobPosition`, `ex:AssessingRecommendations,ex:isPrecededBy,ex:SelectingInterviewees`, `ex:Hiring,ex:isPrecededBy,ex:SigningContract`, `ex:InterviewingCandidates,ex:isPrecededBy,ex:SelectingInterviewees`, `ex:InterviewingCandidates,ex:isFacilitatedBy,ex:AssessingRecommendations`, `ex:SelectingCandidate,ex:isPrecededBy,ex:AssessingRecommendations`, `ex:SelectingCandidate,ex:isBiasedBy,ex:AssessingRecommendations`, `ex:SelectingInterviewees,ex:isPrecededBy,ex:AnnouncingJobPosition`, `ex:SigningContract,ex:isPrecededBy,ex:SelectingCandidate`, `ex:WritingJobPosition`        |
+| q2 | What are the activities in process Z proposed by the organization X and how these activities are dependent on each other?    | What are the activities in the Account Manager Hiring process proposed by the FL Logistics organization and how these activities are dependent on each other? `ex:FL_AccountManager_AnnouncingJobPosition,ex:isPrecededBy,ex:FL_AccountManager_WritingJobPosition`, `ex:FL_AccountManager_AssessingRecommendations,ex:isPrecededBy,ex:FL_AccountManager_SelectingInterviewees`, `ex:FL_AccountManager_Hiring,ex:isPrecededBy,ex:FL_AccountManager_SigningContract`, `ex:FL_AccountManager_InterviewingCandidates,ex:isPrecededBy,ex:FL_AccountManager_SelectingInterviewees`, `ex:FL_AccountManager_InterviewingCandidates,ex:isFacilitatedBy,ex:FL_AccountManager_AssessingRecommendations`, `ex:FL_AccountManager_SelectingCandidate,ex:isPrecededBy,ex:FL_AccountManager_AssessingRecommendations`, `ex:FL_AccountManager_SelectingCandidate,ex:isBiasedBy,ex:FL_AccountManager_AssessingRecommendations`, `ex:FL_AccountManager_SelectingInterviewees,ex:isPrecededBy,ex:FL_AccountManager_AnnouncingJobPosition`, `ex:FL_AccountManager_SigningContract,ex:isPrecededBy,ex:FL_AccountManager_SelectingCandidate`, `ex:FL_AccountManager_WritingJobPosition`                              |
 | q3 | What are the agents responsible for fulfilling the activities of process Y in the organization X?                            | What are the agents responsible for fulfilling the activities of the process of hiring an Account Manager in the FL Logistics organization? `ex:Frank`, `ex:Kate` |
 
 ## Glossary
@@ -23,18 +23,29 @@ A new person has to be hired in the Commercial department for the Account Manage
 ![image](coordinate-activities.png)
 
 * **Process Scheme**: A Process Scheme is an entity that represents a set of connected Activity Schemes.
-* **Activity Scheme**: An Activity Scheme is a plan for an activity intended to achieve an Organizational Goal.
+* **Activity Scheme**: An Activity Scheme is a plan for an activity intended to achieve Organizational Goals.
 * **Root Activity Scheme**: A Root Activity Scheme is an Activity Scheme origin of a set of connected Activity Schemes and is associated to a Process Scheme.
 * **Activity Scheme Dependence**: A relation that refers to the way in which two Activity Schemes are related to each other, and one is affected by the other.
 * **Organizational Goal**: An Organizational Goal is a pursued state of affairs.
 * **Sub-Organizational Goal Relationship**: A relation that refers to a hierarchical relationship between two Organizational Goals. A Sub-Organizational Goal is an Organizational Goal that has to be achieved for the parent Organizational Goal to be achieved.
-* **Commitment**: A relation that refers to a Mission to which an Agent is committed.
-* **Mission**: see [Create an Organization](https://github.com/HyperAgents/hmas/blob/master/domains/logistics/create-organization/README.md) scenario.
+* **Mission**: A Mission gathers the Organizational Goals that Agents have to achieve in the context of a Process Scheme.
+* **Mission Commitment**: A relation that refers to a Mission to which an Agent is committed.
+* **Mission Relationship**: A relation that refers to the relationship between two Missions, e.g., _complementary missions_.
+* **Mission Incompatibility**: A relation that imposes a constraint in which the same Agent cannot be part of two missions simultaneously.
+* **Mission Constraint**: A constrained imposed on a Mission to limit the number of Agents committing to it.
 * **Organization**: see [Discover Organizations, their Members and Materials in Hypermedia Environments](https://github.com/HyperAgents/hmas/blob/master/domains/manufacturing-environments/discover-organization/README.md) scenario.
 * **Agent**: see [Discover Organizations, their Members and Materials in Hypermedia Environments](https://github.com/HyperAgents/hmas/blob/master/domains/manufacturing-environments/discover-organization/README.md) scenario.
 
 ## Recommendations
 
-* The concept of activity can be the execution of a simple action, a complex set of actions, or any other useful arrangement employed to achieving organizational goals. An activity can be represented using, for instance, the PROV Ontology.
+* The concept of activity can be the execution of a simple action, a complex set of actions, or any other useful arrangement employed to achieve the Organizational Goals. An activity can be represented using, for instance, the [PROV Ontology](https://www.w3.org/TR/prov-o/).
 
 * The **Activity Scheme Dependence** should not be used directly, a sub-property must be created to specify the exact type of dependence between two activity schemes. Examples of dependencies can be temporal dependencies like the [Allen's interval relations](https://doi.org/10.1145/182.358434), spatial dependencies, or other dependencies of influence like _facilitates_ (i.e., an Activity Scheme eases another), _informs_ (i.e., an Activity Scheme advises another), or _prioritizes_ (i.e., an Activity Scheme increases the importance of another).
+
+The **Mission Relationship** must not be used directly, a sub-property must be created to specify the exact type of relation being represented between missions.
+
+The **Mission Incompatibility** and **Mission Constraint** are represented as a SHACL shape instead of an RDF triple. For example, the SHACL shape constraining the number of Agents that can commit to the Mission is
+
+```
+TDB
+```
