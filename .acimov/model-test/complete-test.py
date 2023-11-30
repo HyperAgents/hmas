@@ -5,6 +5,7 @@ from os.path import exists
 from sys import argv
 from codecs import open as copen
 
+
 from constants import (
     MODULES_TTL_GLOB_PATH,
     MODELETS_TTL_GLOB_PATH,
