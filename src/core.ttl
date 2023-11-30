@@ -209,18 +209,18 @@ _:norman2013 a owl:NamedIndividual ;
 :Agent a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "An entity that is capable of autonomous behavior."@en ;
-        rdfs:label "Agent"@en, "Agent"@fr .
+        rdfs:label "agent"@en, "agent"@fr .
 
 :Artifact a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A resource that can be dynamically constructed, shared, and used by agents to support their activities. In a Hypermedia MAS, an artifact exposes and can be accessed through a hypermedia interface (in addition to other possible interfaces, such as a physical interface)."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/38> ;
-        rdfs:label "Artifact"@en, "Artéfact"@fr .
+        rdfs:label "artifact"@en, "artéfact"@fr .
 
 :HypermediaMASPlatform a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A Hypermedia MAS (HMAS) platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organizations, etc."@en ;
-        rdfs:label "HMAS Platform"@en, "Platforme SMAH"@fr ;
+        rdfs:label "HMAS platform"@en, "platforme SMAH"@fr ;
         skos:example "Examples of hmas:HypermediaMASPlatform include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/20> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> .
@@ -229,12 +229,12 @@ _:norman2013 a owl:NamedIndividual ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
         skos:example "e.g., a Thing Description document, a Hydra document, an Socio-Technical Network platform description, an agent description based on the FIPA standard"@en ;
-        rdfs:label "Resource Profile"@en, "Profil de Ressource"@fr .
+        rdfs:label "resource profile"@en, "profil de ressource"@fr .
 
 :Signifier rdf:type owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility."@en ;
-        rdfs:label "Signifier"@en, "Signifiant"@fr  ;
+        rdfs:label "signifier"@en, "signifiant"@fr  ;
         skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies."@en ;
         skos:related :Affordance ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491> ;
@@ -243,7 +243,7 @@ _:norman2013 a owl:NamedIndividual ;
 :Workspace a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A logical container for any resource in general and in particular for agents, artifacts or other workspaces. Workspaces can be created or deleted by agents on a needed basis. All agent interactions happen in the context of a workspace whether or not the worspace was explicitly reified. A workspace can be, for instance, implemented on top of an LDP (Linked Data Platform) indirect container."@en ;
-        rdfs:label "Workspace"@en, "Espace de Travail"@fr ;
+        rdfs:label "workspace"@en, "espace de travail"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/24> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/36> ;
