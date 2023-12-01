@@ -42,6 +42,10 @@ The file [current ontology](https://github.com/HyperAgents/ns.hyperagents.org/bl
 
 If you want to contribute, please follow the [contributing file](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/CONTRIBUTING.md).
 
+### Participate to the community group
+
+blabla
+
 ## About this repository
 
 This git repository contains the methodology and results of the ontology modelling activity of the [HyperAgent project](https://www.hyperagents.org/).
@@ -105,10 +109,6 @@ For each application domain (bklabla/blabla), the domain folder contains the mot
 
 The `.acimov` folder contains necessary [**scripts**](./.acimov/README.md) for automating ontology building: automatic integration, testing, documentation publishing,....
 
-
-### Participate to the community group
-
-blabla
 
 ## Licence
 
