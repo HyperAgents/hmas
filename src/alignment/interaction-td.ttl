@@ -1,4 +1,22 @@
-td:InteractionAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
-td:PropertyAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
-td:ActionAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
-td:EventAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
+hmas:tf
+  rdf:type owl:Ontology ;
+  dcterms:creator ;
+  dcterms:rights  ;
+  dcterms:license ;
+  dcterms:created  ;
+  dcterms:modified  ;
+  rdfs:comment ;
+  rdfs:label  ;
+  rdfs:seeAlso ;
+  owl:imports <https://www.w3.org/2019/wot/td> ;
+  owl:imports hmas:interaction .
+
+
+td:InteractionAffordance 
+  rdfs:comment "Using a TD Interaction Affordance results in an action execution."@en ;
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
+
+# not needed because of they are subclasses of TD Interaction Affordance
+#td:PropertyAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
+#td:ActionAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
+#td:EventAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
