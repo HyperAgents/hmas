@@ -1,15 +1,31 @@
-hmas:tf
-  rdf:type owl:Ontology ;
-  dcterms:creator ;
-  dcterms:rights  ;
-  dcterms:license ;
-  dcterms:created  ;
-  dcterms:modified  ;
-  rdfs:comment ;
-  rdfs:label  ;
-  rdfs:seeAlso ;
+@base <https://purl.org/hmas/> .
+@prefix : <> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dct: <http://purl.org/dc/terms/>.
+
+
+#################################################################
+#    Ontology alignement between the Interaction Module and
+#    Web of Things - Thing Description ontology
+#################################################################
+
+:interaction-td a owl:Ontology ;
+  dct:title "Alignement Interaction-TD"@en, "Alignement Interaction-TD"@fr ;
+  dct:description  "Ontology alignement between the HMAS Interaction Module and the Web of Things - Thing Description ontology."@en,
+                 "Alignement des ontologies HMAS Interaction et Thing Description de Web of Things."@fr ;
+  dct:issued "2023-12-01"^^xsd:date ;
+  cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  vann:preferredNamespacePrefix "int_td" ;
+  vann:preferredNamespaceUri <:interaction-td>  .
+  rdfs:seeAlso :interaction ;
   owl:imports <https://www.w3.org/2019/wot/td> ;
-  owl:imports hmas:interaction .
+  owl:imports :interaction .
 
 
 td:InteractionAffordance 
