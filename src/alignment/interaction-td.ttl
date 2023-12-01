@@ -22,7 +22,7 @@
   dct:issued "2023-12-01"^^xsd:date ;
   cc:license <https://creativecommons.org/licenses/by/4.0/> ;
   vann:preferredNamespacePrefix "int_td" ;
-  vann:preferredNamespaceUri <:interaction-td>  .
+  vann:preferredNamespaceUri :interaction-td  .
   rdfs:seeAlso :interaction ;
   owl:imports <https://www.w3.org/2019/wot/td> ;
   owl:imports :interaction .
