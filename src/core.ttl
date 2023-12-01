@@ -7,8 +7,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix voaf: <http://purl.org/vocommons/voaf#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <http://schema.org/>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
@@ -211,18 +209,18 @@ _:norman2013 a owl:NamedIndividual ;
 :Agent a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "An entity that is capable of autonomous behavior."@en ;
-        rdfs:label "Agent"@en, "Agent"@fr .
+        rdfs:label "agent"@en, "agent"@fr .
 
 :Artifact a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A resource that can be dynamically constructed, shared, and used by agents to support their activities. In a Hypermedia MAS, an artifact exposes and can be accessed through a hypermedia interface (in addition to other possible interfaces, such as a physical interface)."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/38> ;
-        rdfs:label "Artifact"@en, "Artéfact"@fr .
+        rdfs:label "artifact"@en, "artéfact"@fr .
 
 :HypermediaMASPlatform a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A Hypermedia MAS (HMAS) platform is a system providing a collection of features to support Hypermedia MAS. Common features include support for communication and interaction, runtime environments for agents, artifacts, or organizations, etc."@en ;
-        rdfs:label "HMAS Platform"@en, "Platforme SMAH"@fr ;
+        rdfs:label "HMAS platform"@en, "platforme SMAH"@fr ;
         skos:example "Examples of hmas:HypermediaMASPlatform include Twitter, Facebook, a JADE node/delpoyment, or a JaCaMo node/delpoyment — all of which provide features that could support Hypermedia MAS & hybrid communities."@en ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/20> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> .
@@ -230,13 +228,13 @@ _:norman2013 a owl:NamedIndividual ;
 :ResourceProfile a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "Structured data describing a resource through general metadata, domain- and application-specific metadata, and signifiers."@en ;
-        skos:example "e.g., a Thing Description document, a Hydra document, an Socio-Technical Network platform description, a fipa:AgentDescription"@en ;
-        rdfs:label "Resource Profile"@en, "Profil de Ressource"@fr .
+        skos:example "e.g., a Thing Description document, a Hydra document, an Socio-Technical Network platform description, an agent description based on the FIPA standard"@en ;
+        rdfs:label "resource profile"@en, "profil de ressource"@fr .
 
 :Signifier rdf:type owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility."@en ;
-        rdfs:label "Signifier"@en, "Signifiant"@fr  ;
+        rdfs:label "signifier"@en, "signifiant"@fr  ;
         skos:note ":Signifier works as a bridge between the Core and the Interaction Vocabularies."@en ;
         skos:related :Affordance ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1028904491> ;
@@ -245,7 +243,7 @@ _:norman2013 a owl:NamedIndividual ;
 :Workspace a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "A logical container for any resource in general and in particular for agents, artifacts or other workspaces. Workspaces can be created or deleted by agents on a needed basis. All agent interactions happen in the context of a workspace whether or not the worspace was explicitly reified. A workspace can be, for instance, implemented on top of an LDP (Linked Data Platform) indirect container."@en ;
-        rdfs:label "Workspace"@en, "Espace de Travail"@fr ;
+        rdfs:label "workspace"@en, "espace de travail"@fr ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/24> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/32> ;
         rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/36> ;
@@ -319,8 +317,9 @@ _:norman2013 a owl:NamedIndividual ;
 
 :hosts a owl:ObjectProperty, owl:AsymmetricProperty ;
           rdfs:isDefinedBy :core ;
+          owl:inverseOf :isHostedOn ;
           rdfs:domain :HypermediaMASPlatform ;
-          rdfs:comment "A relation that refers to an information resource or a process (e.g., agent) that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
+          rdfs:comment "A relation that refers to an information resource or a process that is hosted on a platform. A hosting relation might have further implications, e.g. the usage of the hosted resource (or the usage of platform resources by the hosted resource) could be subject to terms of service or data licensing policies specific to the hosting platform."@en ;
           rdfs:label "hosts"@en, "héberge"@fr ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/8#issuecomment-1025991719> ;
           rdfs:seeAlso <https://github.com/HyperAgents/ns.hyperagents.org/issues/18> ;
@@ -330,7 +329,7 @@ _:norman2013 a owl:NamedIndividual ;
           rdfs:isDefinedBy :core ;
           owl:inverseOf :hosts ;
           rdfs:range :HypermediaMASPlatform ;
-          rdfs:comment "A relations that refers to the platform that hosts the resource. "@en ;
+          rdfs:comment "A relation that refers to the platform that hosts the information resource or process."@en ;
           rdfs:label "is hosted on"@en, "est hébergé sur"@fr .
 
 :isExposedIn a owl:ObjectProperty ;
@@ -364,6 +363,10 @@ _:norman2013 a owl:NamedIndividual ;
           rdfs:range :Organization ;
           rdfs:comment "A relation between an Artifact and an Organization it belongs to."@en ;
           rdfs:label "is material of"@en .
+
+
+
+
 
 #### 
 # Notions of HOME saved for later

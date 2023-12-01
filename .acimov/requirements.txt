@@ -1,7 +1,7 @@
 rdflib==7.0.0
 markdown==3.4.4
 pyparsing==2.4.7
-mistune==0.8.4 # Check what is added to 2+ versions
+mistune==2.0.3
 dominate
 beautifulsoup4
 requests

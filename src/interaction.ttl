@@ -42,11 +42,6 @@
                    rdfs:comment "A course of action performed by an agent upon exploiting a behavior possibility."@en ;
                    rdfs:label "behavior execution"@en, "exécution du comportement"@fr .
 
-:Input a owl:Class ;
-       rdfs:isDefinedBy :interaction ;
-       rdfs:comment "An input of an action, for example, in the representation of an action execution."@en ;
-       rdfs:label "input"@en, "entrée"@fr .
-
 #################################################################
 #    Object Properties
 #################################################################
@@ -54,13 +49,11 @@
 :hasInput a owl:ObjectProperty ;
               rdfs:isDefinedBy :interaction ;
               rdfs:domain :ActionExecution ;
-              rdfs:range :Input ;
               rdfs:comment "A relation between an action execution and the input that it has."@en ;
               rdfs:label "has input"@en, "a une entrée"@fr .
 
 :signifies a owl:ObjectProperty ;
            rdfs:isDefinedBy :interaction ;
            rdfs:domain :Signifier ;
-           rdfs:range sh:NodeShape ;
-           rdfs:comment "A relation between a signifier and a node shape specifying a description of the expected behavior execution."@en ;
+           rdfs:comment "A relation between a signifier and the specification of a behavior execution. For instance, a SHACL shape can be used to specify an expected behavior execution."@en ;
            rdfs:label "signifies"@en, "signifie"@fr .
