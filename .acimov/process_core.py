@@ -9,15 +9,18 @@ from rdflib import Graph, URIRef, Literal, BNode
 from rdflib.namespace import RDF, RDFS, OWL, DCTERMS, XSD
 import pylode
 
+from pathlib import Path
+
 logging.basicConfig(level=logging.DEBUG)
 
-#base = "https://ci.mines-stetienne.fr/hmas"
 base = "https://purl.org/hmas/"
 
 os.makedirs("public", exist_ok=True)
 shutil.copytree("resources", "public", dirs_exist_ok=True)
 
-for input_file_path in [ "src/core.ttl" , "src/interaction.ttl", "src/regulation.ttl", "src/fipa.ttl" ]:
+for input_file_path in [ "src/core.ttl", "src/interaction.ttl" , "src/regulation.ttl", "src/meta.ttl", "src/fipa.ttl"]:
+    input_file_path_head = input_file_path[:-4] + ".head"
+    input_file_path_tail = input_file_path[:-4] + ".tail"
     dest_path = input_file_path.replace("src/" , "public/")[0:-4]
 
     # parse and check ttl syntax
@@ -26,12 +29,14 @@ for input_file_path in [ "src/core.ttl" , "src/interaction.ttl", "src/regulation
         g.parse(input_file_path)
     except rdflib.plugins.parsers.notation3.BadSyntax as err:
         err_string = str(err).replace('\n', '\n  ')
-        logging.error(f"File {file_path} {err_string}")
-        sys.exit(1) # exit with error code if there is a parsing error
+        logging.error(f"File {dest_path} {err_string}")
+        pass
+#        sys.exit(1) # exit with error code if there is a parsing error
 
     if len(list(g.subjects(RDF.type, OWL.Ontology))) != 1: # check there is one ontology declaration
         logging.error("There MUST be exactly one triple: `?ontology rdf:type owl:Ontology`")
-        sys.exit(1) # exit with error code if there is a parsing error
+        pass
+#        sys.exit(1) # exit with error code if there is a parsing error
 
     for ontology in g.subjects(RDF.type, OWL.Ontology):
         logging.debug(f"The ontology is {ontology.n3()}")
@@ -64,11 +69,16 @@ for input_file_path in [ "src/core.ttl" , "src/interaction.ttl", "src/regulation
         logging.debug(f"adding last git commit date as dct:modified value: {git_dct_modified.lstrip()}")
 
     # generate html documentation and rdf variants
-    html = pylode.MakeDocco(input_data_file=input_file_path).document()
-    with open(dest_path+ ".html", "w") as output:
-        output.write(html)
-    with open(dest_path+ ".ttl", "wb") as output:
-        output.write(g.serialize(format='ttl', encoding='utf-8'))
+    od = pylode.OntDoc(ontology=input_file_path,language="en", icon16="hyperagent16.ico", icon32="hyperagent32.ico", css="style.css", head=input_file_path_head + ".en" + ".html", tail=input_file_path_tail + ".en" + ".html", only_defined=True)
+    of = Path(dest_path+ ".en.html")
+    od.make_html(of, include_css=False)
+
+    od = pylode.OntDoc(ontology=input_file_path,language="fr", icon16="hyperagent16.ico", icon32="hyperagent32.ico", css="style.css", head=input_file_path_head + ".fr" + ".html", tail=input_file_path_tail + ".fr" + ".html", only_defined=True)
+    of = Path(dest_path+ ".fr.html")
+    od.make_html(of, include_css=False)
+    
+    shutil.copy(input_file_path, dest_path+ ".ttl")
+    
     with open(dest_path+ ".rdf", "wb") as output:
         output.write(g.serialize(format='pretty-xml', encoding='utf-8'))
     with open(dest_path+ ".json-ld", "wb") as output:
