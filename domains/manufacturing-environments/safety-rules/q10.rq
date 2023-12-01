@@ -1,0 +1,31 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix hmas: <https://purl.org/hmas/>
+
+ask {
+  bind (ex:i3sLabWorkspace as ?workspace ) 
+  bind (ex:i3sLab as ?organization)
+  ?norm a hmas:RegulativeNorm .
+  ?workspace a hmas:Workspace .
+  ?worldWithNorms a hmas:PossibleWorld .
+  ?organization a hmas:Organization .
+  ?organization :enforcesRegulativeNorm ?norm .
+  ?norm :hasNormativeContext ?context .
+  ?workspace :isPossiblyDescribedBy ?worldWithNorms .
+  ?worldWithNorms :hasDeonticSpecification ?norm .
+  ?workspace :isPossiblyDescribedBy ?context .
+}
+
+SELECT ?norm
+WHERE {
+  ?norm a hmas:RegulativeNorm .
+  ?workspace a hmas:Workspace .
+  ?worldWithNorms a hmas:PossibleWorld .
+  ?organization a hmas:Organization .
+  ?organization :enforcesRegulativeNorm ?norm .
+  ?norm :hasNormativeContext ?context .
+  ?workspace :isPossiblyDescribedBy ?worldWithNorms .
+  ?worldWithNorms :hasDeonticSpecification ?norm .
+  ?workspace :isPossiblyDescribedBy ?context .
+  FILTER(?workspace = :i3SWorkspace && ?organization = :i3SLab)
+}

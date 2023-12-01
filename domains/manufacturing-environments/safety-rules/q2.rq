@@ -1,0 +1,23 @@
+
+prefix ex: <http://example.org/>
+prefix : <> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix hmas: <https://purl.org/hmas/>
+
+ask {
+    
+    ?i rdf:type hmas:RegulativeNorm .
+    
+    {
+        SELECT ?i WHERE {
+            bind (ex:i3sLab as ?org)
+            ?org a hmas:Organization .
+            ?org hmas:definesRegulativeNorm ?i .
+        } 
+    }
+}
+
+
+
+
+

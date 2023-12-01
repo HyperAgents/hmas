@@ -1,0 +1,24 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix hmas: <https://purl.org/hmas/>
+
+
+#| q12 | What are the set of possible worlds that describe the state of affairs of a workspace ?                  | `ex:safetyRule` a `:RegulativeNorm`                  |
+
+ask {
+  bind (ex:i3sLabWorkspace as ?workspace ) 
+  ?workspace a hmas:Workspace .
+  ?workspace hmas:isPossiblyDescribedBy ?world .
+  ?workspace a hmas:Workspace .
+  ?world a hmas:PossibleWorld .
+}
+
+
+SELECT ?norm
+WHERE {
+  ?norm a hmas:RegulativeNorm .
+  ?workspace hmas:isPossiblyDescribedBy ?world .
+  ?workspace a hmas:Workspace .
+  ?world a hmas:PossibleWorld .
+  FILTER(ex:i3sLabWorkspace as ?workspace)
+}

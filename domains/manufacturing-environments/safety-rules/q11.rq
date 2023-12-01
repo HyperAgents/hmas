@@ -1,0 +1,31 @@
+
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix hmas: <https://purl.org/hmas/>
+
+ask {
+  bind (ex:i3sLabWorkspace as ?workspace ) 
+  bind (ex:i3sLab as ?organization)
+  bind (ex:safetyRule as ?norm)
+  ?norm a hmas:RegulativeNorm .
+  ?workspace a hmas:Workspace .
+  ?organization a hmas:Organization .
+  ?organization hmas:enforcesRegulativeNorm ?norm .
+  ?norm hmas:beInChargeOfEnforcingTheRegulativeNorm ?role.
+  ?agent hmas:hasRole ?role .
+  ?agent a hmas:Agent .
+}
+
+
+SELECT ?agent
+WHERE {
+  ?norm a hmas:RegulativeNorm .
+  ?workspace a hmas:Workspace .
+  ?worldWithNorms a hmas:PossibleWorld .
+  ?organization a hmas:Organization .
+  ?organization hmas:enforcesRegulativeNorm ?norm .
+  ?norm hmas:beInChargeOfEnforcingTheRegulativeNorm ?role.
+  ?agent hmas:hasRole ?role .
+  ?agent a hmas:Agent .
+  FILTER(?workspace = ex:i3sLabWorkspace &&  ?norm = ex:safetyRule && ?organization = ex:i3sLab)
+}

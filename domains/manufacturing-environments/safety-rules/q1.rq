@@ -1,0 +1,21 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix hmas: <https://purl.org/hmas/>
+
+ask {
+    bind (ex:safetyRule as ?i)
+    ?i rdf:type hmas:RegulativeNorm .
+}
+
+# example of how to get a dynamic list of values to test : 
+ask {
+    ?i rdf:type hmas:RegulativeNorm .
+    
+    {
+        SELECT ?i WHERE {
+            ?i rdf:type hmas:RegulativeNorm .
+        } 
+    }
+}
+
+
