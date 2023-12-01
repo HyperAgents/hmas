@@ -1,0 +1,27 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?org
+where {
+  ex:SL_Logistics a ?orgModel .
+
+  ?a ( hmas:isMemberOf | hmas:isMaterialOf ) ex:SL_Logistics .
+  
+  ?org a ?orgModel .
+  
+  ?orgModel rdfs:subClassOf hmas:Organization .
+  { ?orgModel a sh:NodeShape . }
+  union
+  { ?orgShape a sh:NodeShape ;
+              sh:targetClass ?orgModel .
+  }
+
+  ?x ( hmas:isMemberOf | hmas:isMaterialOf ) ?org .
+
+  ?workspace hmas:contains ?a, ?x .
+
+  filter(?org != ex:SL_Logistics)
+}
+order by ?org

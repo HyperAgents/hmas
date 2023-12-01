@@ -1,0 +1,12 @@
+prefix hmas: <https://purl.org/hmas/>
+prefix ex: <http://example.org/>
+prefix sh: <http://www.w3.org/ns/shacl#> 
+
+select ?actionExecutionSpec
+where {
+    ex:gripperMovable a hmas:Signifier ;
+        hmas:signifies ?actionExecutionSpec .
+    ?actionExecutionSpec a sh:NodeShape ;
+        sh:class hmas:ActionExecution .
+}
+order by ?actionExecutionSpec

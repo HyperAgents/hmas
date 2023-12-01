@@ -1,0 +1,13 @@
+prefix hmas: <https://purl.org/hmas/>
+prefix ex: <http://example.org/>
+prefix sh: <http://www.w3.org/ns/shacl#> 
+
+select ?inputProperty
+where {
+    ex:moveGripperShape sh:property ?propertySpec .
+    ?propertySpec sh:path hmas:hasInput ;
+                  sh:qualifiedValueShape ?inputSpec .
+    ?inputSpec sh:property ?inputPropertySpec .
+    ?inputPropertySpec sh:path ?inputProperty .
+}
+order by ?inputProperty

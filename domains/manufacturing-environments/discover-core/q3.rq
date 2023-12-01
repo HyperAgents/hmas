@@ -1,0 +1,10 @@
+prefix hmas: <https://purl.org/hmas/>
+prefix ex: <http://example.org/>
+
+ask {
+    bind (ex:factory as ?factory)
+
+    ex:groundFloor hmas:isContainedIn ?factory .
+    
+    ?factory a hmas:Workspace .
+}

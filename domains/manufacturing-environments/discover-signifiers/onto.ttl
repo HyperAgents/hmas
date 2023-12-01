@@ -1,0 +1,53 @@
+@base <https://purl.org/hmas/> .
+@prefix : <> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+:Affordance a skos:Concept ;
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "affordance"@en ;
+    skos:definition "A behavior possibility that is a relationship between an ability of an agent and a situation that includes agents and features of the environment."@en ;
+    skos:historyNote "The definition of the concept follows affordance theorists [Chemero and Turvey, 2007]."@en ;
+    skos:editorialNote "The concept has been considered as a candidate term for representing interaction cues and metadata in the Hypermedia MAS Core Ontology. The term :Signifier is selected instead for the following reasons: 1) Affordances emerge upon the presence of individual agents in the appropriate situation, while signifiers are defined with respect to agent types to preserve the evolvability and reusability of interaction cues without requiring prior knowledge about individual agents; 2) Affordances are defined in [Chemero and Turvey, 2007] for studying interactions of animals, while signifiers are defined here for supporting interactions of autonomous agents, which exhibit more heterogeneous abilities than animals — including agents whose cognitive abilities exclusively rely on computational processes such as reasoning over representations. Here, the concept is provided to support the discussion, management, and modelling of signifiers, which reveal information about affordances [Norman, 2013]. For example, the association between the two terms enables examining the dynamic exposure of signifiers based on the run-time availability of agent abilities and situations, or the modelling of signifiers that reveal information about affordances for both artificial and human agents."@en ;
+    skos:related :Signifier ;
+    dct:references _:chemeroTurvey2007 ;
+    dct:references _:norman2013 .
+
+_:chemeroTurvey2007 dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, and the ecological perspective on perception-action. Biological Theory, 2(1), 23-36."@en ;
+    rdfs:label "Chemero and Turvey, 2007"@en .
+
+_:norman2013 dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised and expanded edition. Basic books."@en ;
+    rdfs:label "Norman, 2013"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+:Signifier a owl:Class ;
+         rdfs:isDefinedBy :core ;
+         rdfs:label "Signifier"@en, "Signifiant"@fr  ;
+         rdfs:comment "A perceivable sign/cue that can be interpreted meaningfully by an agent to reveal information about a behavior possibility."@en ;
+         skos:related :Signifier ;
+         rdfs:subClassOf :Hostable .
+
+#################################################################
+#    Properties
+#################################################################
+
+:isExposedIn a owl:ObjectProperty ;
+            rdfs:isDefinedBy :core ;
+            rdfs:label "is exposed in"@en ;
+            owl:inverseOf :exposesSignifier ;
+            rdfs:comment "A relation between a signifier and a resource profile it is exposed in."@en ;
+            rdfs:domain :Signifier ;
+            rdfs:range :ResourceProfile .
+
+:exposesSignifier a owl:ObjectProperty ;
+          rdfs:isDefinedBy :core ;
+          rdfs:domain :ResourceProfile ;
+          rdfs:range :Signifier ;
+          owl:inverseOf :isExposedIn ;
+          rdfs:comment "A relation between a resource profile and a signifier it exposes."@en ; 
+          rdfs:label "exposes signifier"@en, "expose le signifiant"@fr .

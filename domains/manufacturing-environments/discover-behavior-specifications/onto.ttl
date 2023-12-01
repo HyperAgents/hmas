@@ -1,0 +1,36 @@
+@base <https://purl.org/hmas/> .
+@prefix : <> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+#    Classes
+#################################################################
+
+:ActionExecution a owl:Class ;
+                 rdfs:isDefinedBy :interaction ;
+                 rdfs:subClassOf :BehaviorExecution ;
+                 rdfs:comment "A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request."@en ;
+                 rdfs:label "action execution"@en,  "exécution de l'action"@fr .
+
+:BehaviorExecution a owl:Class ;
+                   rdfs:isDefinedBy :interaction ;
+                   rdfs:comment "A course of action performed by an agent upon exploiting a behavior possibility."@en ;
+                   rdfs:label "behavior execution"@en, "exécution du comportement"@fr .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:hasInput a owl:ObjectProperty ;
+              rdfs:isDefinedBy :interaction ;
+              rdfs:domain :ActionExecution ;
+              rdfs:comment "A relation between an action execution and the input that it has."@en ;
+              rdfs:label "has input"@en, "a une entrée"@fr .
+
+:signifies a owl:ObjectProperty ;
+           rdfs:isDefinedBy :interaction ;
+           rdfs:domain :Signifier ;
+           rdfs:comment "A relation between a signifier and the specification of a behavior execution. For instance, a SHACL shape can be used to specify an expected behavior execution."@en ;
+           rdfs:label "signifies"@en, "signifie"@fr .
