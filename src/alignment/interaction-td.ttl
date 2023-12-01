@@ -7,8 +7,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix td: <https://www.w3.org/2019/wot/td#>.
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 
 #################################################################
 #    Ontology alignement between the Interaction Module and
@@ -30,9 +31,9 @@
 
 td:InteractionAffordance 
   rdfs:comment "Using a TD Interaction Affordance results in an action execution."@en ;
-  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
+  rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue :ActionExecution ] .
 
 # not needed because of they are subclasses of TD Interaction Affordance
-#td:PropertyAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
-#td:ActionAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
-#td:EventAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
+#td:PropertyAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue :ActionExecution ] .
+#td:ActionAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue :ActionExecution ] .
+#td:EventAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue :ActionExecution ] .
