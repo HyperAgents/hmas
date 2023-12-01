@@ -1,0 +1,22 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?agent
+where {
+  ex:FL_Logistics hmas:providesRole ?role ;
+                  hmas:isStructuredBy ?group .
+  
+  ?membership a ?membershipModel ;
+              hmas:isMembershipOf ex:Jane ;
+              hmas:isMembershipFor ?role ;
+              hmas:isMembershipIn ?group .
+
+  ?relationship rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
+
+  ?membership ?relationship ?otherMembership .
+
+  ?otherMembership hmas:isMembershipOf ?agent .
+}
+order by ?agent

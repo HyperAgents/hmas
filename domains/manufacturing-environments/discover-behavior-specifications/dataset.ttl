@@ -1,0 +1,56 @@
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix onto: <https://ci.mines-stetienne.fr/kg/ontology#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix pto:   <http://www.productontology.org/id/> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xs: <https://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/> .
+
+ex:ur5Profile a hmas:ResourceProfile;
+    hmas:isProfileOf ex:ur5;
+    hmas:exposesSignifier ex:gripperMovable .
+
+ex:ur5 a hmas:Artifact, pto:Robotic_arm ;
+    hmas:isContainedIn ex:manufacturingWksp .
+
+ex:manufacturingWksp a hmas:Workspace .
+
+ex:gripperMovable a hmas:Signifier ;
+    hmas:signifies ex:moveGripperShape .
+
+ex:moveGripperShape a sh:NodeShape;
+	sh:class hmas:ActionExecution ;
+ 	sh:property [
+		sh:path prov:used ;
+        sh:minCount 1;
+        sh:maxCount 1 ;
+    	sh:or (
+			[ sh:hasValue ex:httpForm ]
+			[ sh:hasValue ex:coapForm ]
+	    ) ;
+  	] ;
+	sh:property [
+		sh:path hmas:hasInput;
+    	sh:qualifiedValueShape ex:gripperJointShape ;
+    	sh:qualifiedMinCount 1 ;
+    	sh:qualifiedMaxCount 1
+  	] .
+
+ex:gripperJointShape a sh:NodeShape ;
+	sh:class onto:GripperJoint ;
+	sh:property [
+		sh:path ex:hasGripperValue ;
+        sh:minCount 1;
+        sh:maxCount 1 ;
+        sh:datatype xs:integer
+    ] .
+
+ex:httpForm a hctl:Form;
+    htv:methodName "PUT";
+    hctl:hasTarget <https://api.interactions.ics.unisg.ch/leubot1/v1.3.4/gripper>.
+
+ex:coapForm a hctl:Form;
+    htv:methodName "PUT";
+    hctl:hasTarget <coaps://api.interactions.ics.unisg.ch/leubot1/v1.3.4/gripper>.
