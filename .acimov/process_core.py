@@ -13,7 +13,6 @@ from pathlib import Path
 
 logging.basicConfig(level=logging.DEBUG)
 
-#base = "https://ci.mines-stetienne.fr/hmas"
 base = "https://purl.org/hmas/"
 
 os.makedirs("public", exist_ok=True)
@@ -70,11 +69,11 @@ for input_file_path in [ "src/core.ttl", "src/interaction.ttl" , "src/regulation
         logging.debug(f"adding last git commit date as dct:modified value: {git_dct_modified.lstrip()}")
 
     # generate html documentation and rdf variants
-    od = pylode.OntDoc(ontology=input_file_path,language="en", icon16="hyperagent16.ico", icon32="hyperagent32.ico", css="style.css", head=input_file_path_head + ".en" + ".html", tail=input_file_path_tail + ".en" + ".html")
+    od = pylode.OntDoc(ontology=input_file_path,language="en", icon16="hyperagent16.ico", icon32="hyperagent32.ico", css="style.css", head=input_file_path_head + ".en" + ".html", tail=input_file_path_tail + ".en" + ".html", only_defined=True)
     of = Path(dest_path+ ".en.html")
     od.make_html(of, include_css=False)
 
-    od = pylode.OntDoc(ontology=input_file_path,language="fr", icon16="hyperagent16.ico", icon32="hyperagent32.ico", css="style.css", head=input_file_path_head + ".fr" + ".html", tail=input_file_path_tail + ".fr" + ".html")
+    od = pylode.OntDoc(ontology=input_file_path,language="fr", icon16="hyperagent16.ico", icon32="hyperagent32.ico", css="style.css", head=input_file_path_head + ".fr" + ".html", tail=input_file_path_tail + ".fr" + ".html", only_defined=True)
     of = Path(dest_path+ ".fr.html")
     od.make_html(of, include_css=False)
     

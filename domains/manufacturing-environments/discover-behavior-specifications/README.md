@@ -32,7 +32,7 @@ a CoAP request based on the forms.
 - **Action Execution**: A behavior execution that is the execution of exactly one context-free action, e.g. of a context-free HTTP request.
 - **Input**: An input of an action, for example, in the representation of an action execution.
 - **Form**: A hypermedia control that describes how to execute an action as defined here, for example, an [`hctl:Form`](https://www.w3.org/2019/wot/hypermedia#Form).
-- **Signification of Behavior**: The act of revealing information about how to exploit a behavior possibility.
+- **Signification of Behavior**: The act of revealing information about how to exploit a behavior possibility, for example, in the form of a [`sh:Shape`](http://www.w3.org/ns/shacl#Shape).
 - **Signifier**: see [Discovery of Signifiers](../discover-signifiers/README.md).
 - **Signifier Exposure**: see [Discovery of Signifiers](../discover-signifiers/README.md).
 - **Situatedness**: see [Discovery of Signifiers](../discover-signifiers/README.md).
@@ -45,6 +45,7 @@ a CoAP request based on the forms.
 
 ## Recommendations
 - A signifier can signify a behavior specification for revealing information about how to exploit the relevant behavior possibility.
+- This scenario focuses on signifying a specification of a behavior execution in the form of a SHACL Shape ([`sh:Shape`](http://www.w3.org/ns/shacl#Shape)). However, alternative methods can be used for specifying a behavior, for example, in the form of a W3C Web of Things Interaction Affordance ([`td:InteractionAffordance`](https://www.w3.org/2019/wot/td#InteractionAffordance)). 
 - This scenario focuses on signifying a specification of a behavior execution that is the execution of exactly one action. However, a signifier may concern a behavior execution that is more generic than a single action execution, for example, in the case of a behavior that is executed through the execution of multiple actions. In the latter case, implementation details (e.g. an [`hctl:Form`](https://www.w3.org/2019/wot/hypermedia#Form)) will be directly associated to the specifications of the individual action executions rather than the overall behavior execution specification. This differentiation between behavior execution and action execution serves the following purposes:
   -	Enabling the action-oriented design of hypermedia by keeping the implementation details attached to a specified action execution, considering that this is a simple design style, and a style easily relatable to how signifiers are used on the Web.
   - Preserving the freedom of designers to create signifiers that concern the executution of behaviors with higher-level semantics on top of actions. 
