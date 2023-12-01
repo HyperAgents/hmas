@@ -1,1 +1,4 @@
-
+td:InteractionAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
+td:PropertyAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
+td:ActionAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
+td:EventAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue hmas:ActionExecution ] .
