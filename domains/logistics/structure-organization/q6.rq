@@ -1,0 +1,22 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select ?incompatibilityConstraint
+where {  
+  ex:FL_Logistics a ?orgModel .
+
+  ?orgModel rdfs:subClassOf hmas:Organization .
+
+  { ?orgModel a sh:NodeShape .
+    bind (?orgModel as ?orgShape) }
+  union
+  { ?orgShape a sh:NodeShape ;
+              sh:targetClass ?orgModel . }
+
+  ?orgShape (sh:property/sh:node)+ ?incompatibilityConstraint .
+
+  ?incompatibilityConstraint sh:targetClass hmas:Agent .
+}
+order by ?incompatibilityConstraint

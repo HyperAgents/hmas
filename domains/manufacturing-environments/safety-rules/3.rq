@@ -1,0 +1,6 @@
+PREFIX : <#>
+
+SELECT ?norm
+WHERE {
+  ?norm :hasRespectStatus false .
+}

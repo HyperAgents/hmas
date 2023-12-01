@@ -1,0 +1,29 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?role ?group ?membershipModel
+where {
+  ex:FL_Logistics hmas:providesRole ?role ;
+                  hmas:isStructuredBy ?group .
+
+  ?role a ?roleModel .
+
+  ?group a ?groupModel .
+
+  ?membershipModel rdfs:subClassOf hmas:Membership ;
+                   sh:property [
+                     sh:path hmas:isMembershipFor ;
+                     sh:qualifiedValueShape [ sh:class ?roleModel ] ;
+                     ] ;
+                   sh:property [
+                     sh:path hmas:isMembershipIn ;
+                     sh:qualifiedValueShape [ sh:class ?groupModel ] ;
+                     ] .
+
+  FILTER NOT EXISTS {
+    ?membership a ?membershipModel .
+  }
+}
+order by ?role

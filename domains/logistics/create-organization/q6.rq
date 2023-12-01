@@ -1,0 +1,59 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?key ?val {
+    { 
+        ex:SL_Logistics a ?orgShape .
+        ?orgShape a sh:NodeShape ;
+	          rdfs:subClassOf hmas:Organization .
+    }
+    union
+    {
+	ex:SL_Logistics a ?orgModel .
+        ?orgShape a sh:NodeShape ;
+		  sh:targetClass ?orgModel ; 
+		  rdfs:subClassOf hmas:Organization
+    }
+    {
+	?orgShape sh:property [
+		      sh:path hmas:hasOrganizationalValue ;
+		      sh:qualifiedValueShape [
+		          sh:class ?val
+		          ]
+	              ] .
+        bind ("orgValue" as ?key)
+    }
+    union
+    {
+	?orgShape sh:property [
+		      sh:path hmas:providesRole ;
+		      sh:qualifiedValueShape [
+		          sh:class ?val
+		          ]
+		      ] .
+        bind ("role" as ?key)
+    }
+    union
+    {
+	?orgShape sh:property [
+		      sh:path hmas:proposesMission ;
+		      sh:qualifiedValueShape [
+		          sh:class ?val
+		      ]
+		  ] .
+        bind ("mission" as ?key)
+    }
+    union
+    {
+	?orgShape sh:property [
+		      sh:path hmas:proposesFacility ;
+		      sh:qualifiedValueShape [
+		          sh:class ?val
+		      ]
+		  ] .
+        bind ("facility" as ?key)
+    }
+}
+order by ?key

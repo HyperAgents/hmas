@@ -1,0 +1,23 @@
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix fipa: <https://purl.org/fipa#> .
+@prefix ex: <http://example.org/> .
+
+ex:agentStGallen a hmas:Agent ;
+    hmas:isHostedOn ex:platformStGallen .
+
+ex:platformStGallen a hmas:HypermediaMASPlatform .
+
+ex:agentSaintEtienne a hmas:Agent ;
+    hmas:hasProfile ex:agentSaintEtienneProfile ;
+    hmas:isHostedOn ex:platformSaintEtienne .
+
+ex:agentSaintEtienneProfile a hmas:ResourceProfile ;
+    hmas:isProfileOf ex:agentSaintEtienne .
+
+ex:platformSaintEtienne a hmas:HypermediaMASPlatform, fipa:FIPAAgentPlatform ;
+    hmas:hasResourceProfile ex:platformSaintEtienneProfile .
+
+ex:platformSaintEtienneProfile a hmas:ResourceProfile ;
+    hmas:exposesSignifier ex:signifier .
+
+ex:signifier a hmas:Signifier .
