@@ -72,6 +72,6 @@
 :proposesFacility a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
-    rdsf:range :Facility ;
+    rdfs:range :Facility ;
     rdfs:comment "A relation that refers to a Facility made available to Artifacts in the context of an Organization."@en ;
     rdfs:label "proposes facility"@en, "fournit de facilité"@fr .

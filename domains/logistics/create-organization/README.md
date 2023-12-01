@@ -3,7 +3,7 @@
 ## Description
 John has experience working in a successful specialized industrial logistics enterprise, the SL Logistics. He sees a business opportunity in providing the same logistics services and wants to create his own enterprise, the FL Logistics. Because of his own experience and the success of the SL Logistics, John intends to use the SL Logistics organization model as reference to organize the FL Logistics.
 
-The FL Logistics enterprise is represented as an organization in the hypermedia environment. Its resource profile is contained in a workspace.
+The FL Logistics enterprise is represented as an organization in the hypermedia environment.
 
 John, however, is unsure whether the SL Logistics' organization model is adequate in his case. Thus, he conducts a comparative analysis between the SL Logistics organization model with other existing organizations with similar organization model as well as with theoretical organization models. He concludes that the SL Logistics' organization model is adequate to create the FL Logistics organization.
 
