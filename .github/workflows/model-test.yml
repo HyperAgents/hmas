@@ -29,3 +29,11 @@ jobs:
       with:
         name: model-test-report
         path: .acimov/output/actions.md
+    - name: Commit the report
+      run: |
+        git config --global user.email "no-reply@github.com"
+        git config --global user.name "Github Actions"
+        git add .acimov/output/actions.ttl .acimov/output/actions.md -f
+        git commit -m "Provide automatic model test report [skip actions]"
+        git remote set-url origin ${{ github.server_url }}/${{ github.repository }}
+        git push
