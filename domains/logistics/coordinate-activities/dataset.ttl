@@ -763,29 +763,19 @@ ex:HR_Hiring a sh:NodeShape ;
         ] ;
     sh:property [
         sh:path hmas:isMissionFor ;
-        sh:minCount 3 ;
         sh:maxCount 3 ;
         ] ;
     sh:property [
         sh:path hmas:isMissionFor ;
-        sh:qualifiedValueShape [ sh:class ex:Hired ] ;
-        sh:qualifiedValueShapesDisjoint true ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:hasValue ex:hired ;
         ] ;
     sh:property [
         sh:path hmas:isMissionFor ;
-        sh:qualifiedValueShape [ sh:class ex:ContractSigned ] ;
-        sh:qualifiedValueShapesDisjoint true ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:hasValue ex:contractSigned ;
         ] ;
     sh:property [
         sh:path hmas:isMissionFor ;
-        sh:qualifiedValueShape [ sh:class ex:JobPositionAnnounced ] ;
-        sh:qualifiedValueShapesDisjoint true ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:hasValue ex:jobPositionAnnounced ;
         ] .
 ex:Dept_Hiring a sh:NodeShape ;
     rdfs:subClassOf hmas:Mission ;

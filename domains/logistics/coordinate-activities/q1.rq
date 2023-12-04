@@ -3,10 +3,12 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
-select ?orgGoal
+select ?missionGoal
 where {
-  ex:Dept_Hiring sh:property [ sh:path hmas:gathersOrganizationalGoal ;
-                               sh:qualifiedValueShape [ sh:class ?orgGoal ]
-                               ] .
+  ex:Dept_Hiring sh:property [ sh:path hmas:isMissionFor ;
+                               sh:hasValue ?orgGoal ;
+                             ] .
+
+  ?orgGoal hmas:hasSubOrganizationalGoal* ?missionGoal .
 }
-order by ?orgGoal
+order by ?missionGoal

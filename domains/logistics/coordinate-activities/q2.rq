@@ -1,0 +1,23 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?activity ?dependence ?activityOther
+where {
+  ex:FL_Logistics hmas:proposesActivityScheme ?activity .
+
+  ex:FL_AccountManager_HiringProcess hmas:hasRootActivityScheme ?rootActivity .
+
+  ?rootActivity ex:isPrecededBy* ?activity .
+
+  ?activity ex:isPrecededBy ?activityOther .
+
+  ?dependence rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
+
+  # How can I recursevily identify all acticities to which the Root Activity Scheme is dependent to (transitive)?
+
+  # How can I identify which are the other activities to which this activity depends on?
+  
+}
+order by ?activity
