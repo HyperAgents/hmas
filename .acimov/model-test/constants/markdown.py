@@ -1,8 +1,8 @@
 import regex as re
 
 ERROR_TABLE_HEADER = [
-    "|*Jump*|*Number*|*Outcome type*|*Subject*|*Criterion*|*Title*|*Link*|",
-    "|------|--------|--------------|---------|-----------|-------|------|"
+    "|*Jump*|*Number*|*Status*|*Subject*|*Criterion*|*Title*|*Link*|",
+    "|------|--------|--------|---------|-----------|-------|------|"
 ]
 
 COLOR_BOX_TEMPLATE = "EMOJI*TEXT*"
