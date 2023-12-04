@@ -328,8 +328,9 @@ def make_outcome(
     outcome_title = outcome_ressources["title"]
     outcome_description = description if len(description) > 0 else outcome_ressources["description"]
     parsed_pointers = [make_pointer(report, subject, pointer) for pointer in pointers if len(pointer) > 0]
+    outcome_type_namespace = TEST_NAMESPACE if outcome_type.endswith("Fail") else EARL_NAMESPACE
     outcome_statement = [
-        (RDF.type, EARL_NAMESPACE[outcome_type]),
+        (RDF.type, outcome_type_namespace[outcome_type]),
         (DCTERMS.title, Literal(outcome_title, lang="en")),
         (DCTERMS.description, Literal(outcome_description, lang="en"))
     ]
@@ -374,7 +375,7 @@ def make_outcomes(
                 subject,
                 criterion,
                 error,
-                "Fail" if outcome_ressources["blocking"] else "CannotTell",
+                "MajorFail" if outcome_ressources["blocking"] else "MinorFail",
                 messages[i],
                 pointers[i] if i < len(pointers) else []
             )

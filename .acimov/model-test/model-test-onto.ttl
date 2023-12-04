@@ -1,4 +1,6 @@
 @prefix : <https://gitlab.com/acimov/acimov-methodology-template/blob/main/scripts/tests/model-test-onto.ttl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix earl: <https://www.w3.org/ns/earl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
@@ -40,3 +42,19 @@
     dcterms:identifier "labeled-terms" ;
     dcterms:title "Term labeling test"@en ;
     dcterms:description "A test case from the Best Practices tests checking if all the terms of the subject have a rdfs:label property pointing to a literal in English"@en .
+
+earl:Fail owl:equivalentClass [
+        a owl:Class ;
+        owl:unionOf (:MajorFail :MinorFail)
+    ] .
+
+:MajorFail rdfs:subClassOf earl:Fail ;
+    rdfs:label "Major fail"@en ;
+    rdfs:comment "The class of the fails that cannot be ignored."@en .
+
+:MinorFail rdfs:subClassOf earl:Fail ;
+    rdfs:label "Minor fail"@en ;
+    rdfs:comment "The class of the fails that can be ignored."@en .
+
+[ a owl:AllDisjointClasses ;
+    owl:members (:MajorFail :MinorFail) ] . 

@@ -218,9 +218,10 @@ SELECT ?assertion ?subject ?result ?outcome ?outcomeType ?subjectId ?subjectTitl
 """
 
 SEVERITY_RANGE = [
-  ("Fail", ":x:", "red"),
-  ("CannotTell", ":warning:", "orange"),
-  ("NotTested", ":grey_question:", "grey"),
+  ("MajorFail", ":boom:", "red"),
+  ("MinorFail", ":exclamation:", "orange"),
+  ("CannotTell", ":warning:", "grey"),
+  ("NotTested", ":grey_question:", "white"),
   ("Pass", ":white_check_mark:", "green")
 ]
 

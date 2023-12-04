@@ -323,6 +323,8 @@ def make_turtle_page(report, file_name) -> str:
         "",
         "This file is an export of the RDF test report made out of [EARL vocabulary](https://www.w3.org/TR/EARL10/)",
         "",
+        "This test is powered by Corese, check the [website](https://project.inria.fr/corese/) and the [repository](https://github.com/Wimmics/corese)",
+        "",
         f"The original test report is available in turtle syntax [here](./{file_name}.ttl).",
         ""
     ]

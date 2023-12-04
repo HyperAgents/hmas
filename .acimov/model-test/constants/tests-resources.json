@@ -17,7 +17,11 @@
                     "title": "Term not referenced to a module",
                     "description": "A term of the fragment is not linked to a module by a rdfs:isDefinedBy property"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "Term not referenced to a module",
+                    "description": "A term of the fragment is not linked to a module by a rdfs:isDefinedBy property"
+                },
+                "MinorFail": {
                     "title": "Term not referenced to a module",
                     "description": "A term of the fragment is not linked to a module by a rdfs:isDefinedBy property"
                 }
@@ -42,7 +46,11 @@
                     "title": "Domain out of vocabulary",
                     "description": "A property defined in the fragment has a rdfs:domain defined out of the vocabulary"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "Domain out of vocabulary",
+                    "description": "A property defined in the fragment has a rdfs:domain defined out of the vocabulary"
+                },
+                "MinorFail": {
                     "title": "Domain out of vocabulary",
                     "description": "A property defined in the fragment has a rdfs:domain defined out of the vocabulary"
                 }
@@ -61,7 +69,11 @@
                     "title": "Range out of vocabulary",
                     "description": "A property defined in the fragment has a rdfs:range defined out of the vocabulary"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "Range out of vocabulary",
+                    "description": "A property defined in the fragment has a rdfs:range defined out of the vocabulary"
+                },
+                "MinorFail": {
                     "title": "Range out of vocabulary",
                     "description": "A property defined in the fragment has a rdfs:range defined out of the vocabulary"
                 }
@@ -86,7 +98,11 @@
                     "title": "Too close terms",
                     "description": "Two terms defined in the fragment have a Levenshtein distance too low"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "Too close terms",
+                    "description": "Two terms defined in the fragment have a Levenshtein distance too low"
+                },
+                "MinorFail": {
                     "title": "Too close terms",
                     "description": "Two terms defined in the fragment have a Levenshtein distance too low"
                 }
@@ -111,7 +127,11 @@
                     "title": "Test subject has syntax errors",
                     "description": "The subject has turtle syntax errors"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "Test subject has syntax errors",
+                    "description": "The subject has turtle syntax errors"
+                },
+                "MinorFail": {
                     "title": "Test subject has syntax errors",
                     "description": "The subject has turtle syntax errors"
                 }
@@ -136,7 +156,11 @@
                     "title": "OWL RL Constraint violation",
                     "description": "The fragment violates at least one OWL violation"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "OWL RL Constraint violation",
+                    "description": "The fragment violates at least one OWL violation"
+                },
+                "MinorFail": {
                     "title": "OWL RL Constraint violation",
                     "description": "The fragment violates at least one OWL violation"
                 }
@@ -161,7 +185,11 @@
                     "title": "Terms not labeled",
                     "description": "Some terms do not have a rdfs:label property pointing to a literal written in English"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "Terms not labeled",
+                    "description": "Some terms do not have a rdfs:label property pointing to a literal written in English"
+                },
+                "MinorFail": {
                     "title": "Terms not labeled",
                     "description": "Some terms do not have a rdfs:label property pointing to a literal written in English"
                 }
@@ -186,7 +214,11 @@
                     "title": "OWL TC Profile incompatible",
                     "description": "The subject is not included in the OWL TC sublanguage"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "OWL TC Profile incompatible",
+                    "description": "The subject is not included in the OWL TC sublanguage"
+                },
+                "MinorFail": {
                     "title": "OWL TC Profile incompatible",
                     "description": "The subject is not included in the OWL TC sublanguage"
                 }
@@ -205,7 +237,11 @@
                     "title": "OWL RL Profile incompatible",
                     "description": "The subject is not included in the OWL RL sublanguage"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "OWL RL Profile incompatible",
+                    "description": "The subject is not included in the OWL RL sublanguage"
+                },
+                "MinorFail": {
                     "title": "OWL RL Profile incompatible",
                     "description": "The subject is not included in the OWL RL sublanguage"
                 }
@@ -224,7 +260,11 @@
                     "title": "OWL QL Profile incompatible",
                     "description": "The subject is not included in the OWL QL sublanguage"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "OWL QL Profile incompatible",
+                    "description": "The subject is not included in the OWL QL sublanguage"
+                },
+                "MinorFail": {
                     "title": "OWL QL Profile incompatible",
                     "description": "The subject is not included in the OWL QL sublanguage"
                 }
@@ -243,7 +283,11 @@
                     "title": "OWL EL Profile incompatible",
                     "description": "The subject is not included in the OWL EL sublanguage"
                 },
-                "Fail": {
+                "MajorFail": {
+                    "title": "OWL EL Profile incompatible",
+                    "description": "The subject is not included in the OWL EL sublanguage"
+                },
+                "MinorFail": {
                     "title": "OWL EL Profile incompatible",
                     "description": "The subject is not included in the OWL EL sublanguage"
                 }
