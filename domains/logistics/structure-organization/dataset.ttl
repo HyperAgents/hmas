@@ -515,13 +515,13 @@ ex:FL_Planner_Planning ex:canCommunicateWith ex:FL_Carrier_Shipping .
 ex:FL_Carrier_Shipping ex:canCommunicateWith ex:FL_Planner_Planning .
     
 ## Organizational Goals
-ex:SL_HumanResourcesManaged a ex:HumanResourcesManaged .
-ex:SL_FinancialManaged a ex:FinancialManaged .
-ex:SL_CommercialManaged a ex:CommercialManaged .
-ex:SL_PlanningManaged a ex:PlanningManaged .
-ex:SL_CarriedGoods a ex:CarriedGoods .
-ex:SL_CollectedGoods a ex:CollectedGoods .
-ex:SL_DeliveredGoods a ex:DeliveredGoods .
+ex:FL_HumanResourcesManaged a ex:HumanResourcesManaged .
+ex:FL_FinancialManaged a ex:FinancialManaged .
+ex:FL_CommercialManaged a ex:CommercialManaged .
+ex:FL_PlanningManaged a ex:PlanningManaged .
+ex:FL_CarriedGoods a ex:CarriedGoods .
+ex:FL_CollectedGoods a ex:CollectedGoods .
+ex:FL_DeliveredGoods a ex:DeliveredGoods .
 
 ## Facilities
 ex:FL_PickingArea a ex:PickingArea .
@@ -535,5 +535,5 @@ ex:FL_Logistics a ex:Logistics ;
     hmas:hasOrganizationalValue ex:Commitment, ex:IntegrityRespect ;
     hmas:providesRole ex:Director, ex:HumanResourcesOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Carrier ;
     hmas:isStructuredBy ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment, ex:FL_HumanResourcesDepartment, ex:FL_FinanceDepartment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment ;
-    hmas:hasOrganizationalGoal ex:SL_HumanResourcesManaged, ex:SL_FinancialManaged, ex:SL_CommercialManaged, ex:SL_PlanningManaged, ex:SL_CarriedGoods, ex:SL_CollectedGoods, ex:SL_DeliveredGoods ;
+    hmas:hasOrganizationalGoal ex:FL_HumanResourcesManaged, ex:FL_FinancialManaged, ex:FL_CommercialManaged, ex:FL_PlanningManaged, ex:FL_CarriedGoods, ex:FL_CollectedGoods, ex:FL_DeliveredGoods ;
     hmas:proposesFacility ex:FL_PickingArea, ex:FL_ReceivingArea .
