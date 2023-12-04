@@ -253,7 +253,7 @@ _:norman2013 a owl:NamedIndividual ;
 :Organization a owl:Class ;
         rdfs:isDefinedBy :core ;
         rdfs:comment "An Organization is an entity situated on Agents and Artifacts, and regulated by a regulation system."@en ;
-        rdfs:label "organization"@en, "organisation"@en-GB, "organization"@en-us, "organisation"@fr .
+        rdfs:label "organization"@en, "organisation"@fr .
 
 ### Top ontology constraints for coherent modeling 
 
