@@ -218,7 +218,7 @@ ex:SL_Logistics a ex:Logistics ;
     hmas:hasProfile ex:SL_LogisticsProfile ;
     hmas:hasOrganizationalValue ex:Commitment, ex:IntegrityRespect ;
     hmas:providesRole ex:HumanResourcesOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Carrier, ex:Collector, ex:Deliverer ;
-    hmas:OrganizationalGoal ex:SL_HumanResourcesManaged, ex:SL_FinancialManaged, ex:SL_CommercialManaged, ex:SL_PlanningManaged, ex:SL_CarriedGoods, ex:SL_CollectedGoods, ex:SL_DeliveredGoods ;
+    hmas:hasOrganizationalGoal ex:SL_HumanResourcesManaged, ex:SL_FinancialManaged, ex:SL_CommercialManaged, ex:SL_PlanningManaged, ex:SL_CarriedGoods, ex:SL_CollectedGoods, ex:SL_DeliveredGoods ;
     hmas:proposesFacility ex:SL_PickingArea, ex:SL_ReceivingArea .
 
 ex:GL_LogisticsProfile a hmas:ResourceProfile .
