@@ -56,97 +56,87 @@ ex:Logistics a sh:NodeShape ;
     rdfs:subClassOf hmas:Organization ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
-        sh:qualifiedValueShape [ sh:class ex:Commitment ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:maxCount 2 ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
-        sh:qualifiedValueShape [ sh:class ex:IntegrityRespect ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:hasValue ex:Commitment ;
+        ] ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:hasValue ex:IntegrityRespect ;
+        ] ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:maxCount 7 ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
-        sh:qualifiedValueShape [ sh:class ex:HumanResourcesOfficer ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:hasValue ex:HumanResourcesOfficer ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
-        sh:qualifiedValueShape [ sh:class ex:FinanceOfficer ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:hasValue ex:FinanceOfficer ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
-        sh:qualifiedValueShape [ sh:class ex:AccountManager ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:hasValue ex:AccountManager ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
-        sh:qualifiedValueShape [ sh:class ex:Planner ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:hasValue ex:Planner ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
-        sh:qualifiedValueShape [ sh:class ex:Carrier ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:hasValue ex:Carrier ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
-        sh:qualifiedValueShape [ sh:class ex:Collector ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;        
+        sh:hasValue ex:Collector ;
         ] ;
     sh:property [
         sh:path hmas:providesRole ;
-        sh:qualifiedValueShape [ sh:class ex:Deliverer ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;        
+        sh:hasValue ex:Deliverer ;
         ] ;
     sh:property [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:HumanResourcesManagement ] ;
+        sh:path hmas:hasOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:HumanResourcesManaged ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:FinancialManagement ] ;
+        sh:path hmas:hasOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:FinancialManaged ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:CommercialManagement ] ;
+        sh:path hmas:hasOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:CommercialManaged ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:PlanningManagement ] ;
+        sh:path hmas:hasOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:PlanningManaged ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:CarryGoods ] ;
+        sh:path hmas:hasOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:CarriedGoods ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:CollectGoods ] ;
+        sh:path hmas:hasOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:CollectedGoods ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:DeliverGoods ] ;
+        sh:path hmas:hasOrganizationalGoal ;
+        sh:qualifiedValueShape [ sh:class ex:DeliveredGoods ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
@@ -166,48 +156,21 @@ ex:Logistics a sh:NodeShape ;
 ex:Manufacturing a sh:NodeShape ;
     rdfs:subClassOf hmas:Organization .
 
-## Organizational Values
-ex:Commitment a sh:NodeShape ;
-    rdfs:subClassOf hmas:OrganizationalValue ;
-    rdfs:comment "Do everything you can to keep the organization commitment to the customers."@en ;
-    rdfs:label "commitment"@en, "engagement"@fr .
-
-ex:IntegrityRespect a sh:NodeShape ;
-    rdfs:subClassOf hmas:OrganizationalValue ;
-    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
-    rdfs:label "integrity and respect"@en, "intégrité et respect"@fr .
-    
-## Roles
-ex:HumanResourcesOfficer a sh:NodeShape ;
-    rdfs:subClassOf hmas:Role .
-ex:FinanceOfficer a sh:NodeShape ;
-    rdfs:subClassOf hmas:Role .
-ex:AccountManager a sh:NodeShape ;
-    rdfs:subClassOf hmas:Role .
-ex:Planner a sh:NodeShape ;
-    rdfs:subClassOf hmas:Role .
-ex:Carrier a sh:NodeShape ;
-    rdfs:subClassOf hmas:Role .
-ex:Collector a sh:NodeShape ;
-    rdfs:subClassOf hmas:Role .
-ex:Deliverer a sh:NodeShape ;
-    rdfs:subClassOf hmas:Role .
-
-## Missions
-ex:HumanResourcesManagement a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
-ex:FinancialManagement a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
-ex:CommercialManagement a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
-ex:PlanningManagement a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
-ex:CarryGoods a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
-ex:CollectGoods a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
-ex:DeliverGoods a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
+## Organizational Goals
+ex:HumanResourcesManaged a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalGoal .
+ex:FinancialManaged a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalGoal .
+ex:CommercialManaged a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalGoal .
+ex:PlanningManaged a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalGoal .
+ex:CarriedGoods a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalGoal .
+ex:CollectedGoods a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalGoal .
+ex:DeliveredGoods a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalGoal .
 
 ## Facilities
 ex:PickingArea a sh:NodeShape ;
@@ -218,26 +181,31 @@ ex:ReceivingArea a sh:NodeShape ;
 # INSTANTIATION
 
 ## Organizational Values
-ex:SL_Commitment a ex:Commitment .
-ex:SL_IntegrityRespect a ex:IntegrityRespect .
+ex:Commitment a hmas:OrganizationalValue ;
+    rdfs:comment "Do everything you can to keep the organization commitment to the customers."@en ;
+    rdfs:label "commitment"@en, "engagement"@fr .
 
+ex:IntegrityRespect a hmas:OrganizationalValue ;
+    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
+    rdfs:label "integrity and respect"@en, "intégrité et respect"@fr .
+    
 ## Roles
-ex:SL_HumanResourcesOfficer a ex:HumanResourcesOfficer .
-ex:SL_FinanceOfficer a ex:FinanceOfficer .
-ex:SL_AccountManager a ex:AccountManager .
-ex:SL_Planner a ex:Planner .
-ex:SL_Carrier a ex:Carrier .
-ex:SL_Collector a ex:Collector .
-ex:SL_Deliverer a ex:Deliverer .
+ex:HumanResourcesOfficer a hmas:Role .
+ex:FinanceOfficer a hmas:Role .
+ex:AccountManager a hmas:Role .
+ex:Planner a hmas:Role .
+ex:Carrier a hmas:Role .
+ex:Collector a hmas:Role .
+ex:Deliverer a hmas:Role .
 
-## Missions
-ex:SL_HumanResourcesManagement a ex:HumanResourcesManagement .
-ex:SL_FinancialManagement a ex:FinancialManagement .
-ex:SL_CommercialManagement a ex:CommercialManagement .
-ex:SL_PlanningManagement a ex:PlanningManagement .
-ex:SL_CarryGoods a ex:CarryGoods .
-ex:SL_CollectGoods a ex:CollectGoods .
-ex:SL_DeliverGoods a ex:DeliverGoods .
+## Organizational Goals
+ex:SL_HumanResourcesManaged a ex:HumanResourcesManaged .
+ex:SL_FinancialManaged a ex:FinancialManaged .
+ex:SL_CommercialManaged a ex:CommercialManaged .
+ex:SL_PlanningManaged a ex:PlanningManaged .
+ex:SL_CarriedGoods a ex:CarriedGoods .
+ex:SL_CollectedGoods a ex:CollectedGoods .
+ex:SL_DeliveredGoods a ex:DeliveredGoods .
 
 ## Facility
 ex:SL_PickingArea a ex:PickingArea .
@@ -248,9 +216,9 @@ ex:SL_LogisticsProfile a hmas:ResourceProfile .
 
 ex:SL_Logistics a ex:Logistics ;
     hmas:hasProfile ex:SL_LogisticsProfile ;
-    hmas:hasOrganizationalValue ex:SL_Commitment, ex:SL_IntegrityRespect ;
-    hmas:providesRole ex:SL_HumanResourcesOfficer, ex:SL_FinanceOfficer, ex:SL_AccountManager, ex:SL_Planner, ex:SL_Carrier, ex:SL_Collector, ex:SL_Deliverer ;
-    hmas:proposesMission ex:SL_HumanResourcesManagement, ex:SL_FinancialManagement, ex:SL_CommercialManagement, ex:SL_PlanningManagement, ex:SL_CarryGoods, ex:SL_CollectGoods, ex:SL_DeliverGoods ;
+    hmas:hasOrganizationalValue ex:Commitment, ex:IntegrityRespect ;
+    hmas:providesRole ex:HumanResourcesOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Carrier, ex:Collector, ex:Deliverer ;
+    hmas:OrganizationalGoal ex:SL_HumanResourcesManaged, ex:SL_FinancialManaged, ex:SL_CommercialManaged, ex:SL_PlanningManaged, ex:SL_CarriedGoods, ex:SL_CollectedGoods, ex:SL_DeliveredGoods ;
     hmas:proposesFacility ex:SL_PickingArea, ex:SL_ReceivingArea .
 
 ex:GL_LogisticsProfile a hmas:ResourceProfile .
