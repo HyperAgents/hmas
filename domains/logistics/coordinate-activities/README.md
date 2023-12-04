@@ -26,7 +26,7 @@ A new person has to be hired in the Commercial department for the Account Manage
 * **Activity Scheme**: An Activity Scheme is a plan for an activity intended to achieve Organizational Goals.
 * **Root Activity Scheme**: A Root Activity Scheme is an Activity Scheme origin of a set of connected Activity Schemes and is associated to a Process Scheme.
 * **Activity Scheme Dependence**: A relation that refers to the way in which two Activity Schemes are related to each other, and one is affected by the other.
-* **Organizational Goal**: An Organizational Goal is a pursued state of affairs.
+* **Organizational Goal**: see [Create an Organization](https://github.com/HyperAgents/hmas/blob/master/domains/logistics/create-organization/README.md).
 * **Sub-Organizational Goal Relationship**: A relation that refers to a hierarchical relationship between two Organizational Goals. A Sub-Organizational Goal is an Organizational Goal that has to be achieved for the parent Organizational Goal to be achieved.
 * **Mission**: A Mission gathers the Organizational Goals that Agents have to achieve in the context of a Process Scheme.
 * **Mission Commitment**: A relation that refers to a Mission to which an Agent is committed.

@@ -36,28 +36,38 @@
     vann:preferredNamespaceUri <> .
 
 #################################################################
+#    Concepts
+#################################################################
+
+:OrganizationModel a skos:Concept ;
+    skos:prefLabel "organization model"@en ;
+    skos:definition "An Organization Model is the combination of Roles, Missions, and Facilities in a consistent way used to enact one or multiple Organizations."@en ;
+    skos:editorialNote "The Organization Model is represented as SHACL Shapes."@en ;
+    skos:related :Organization .
+
+#################################################################
 #    Classes
 #################################################################
 
-:OrganizationalValue a owl:Class ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an Organization."@en ;
-    rdfs:label "organizational value"@en, "valeur organisationnelle"@fr .
-        
 :Role a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization."@en ;
     rdfs:label "role"@en, "rôle"@fr .
 
-:Mission a owl:Class ;
+:OrganizationalGoal a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Mission gathers what Agents have to achieve in an Organization."@en ;
-    rdfs:label "mission"@en, "mission"@fr .
+    rdfs:comment "An Organizational Goal is a pursued state of affairs."@en ;
+    rdfs:label "organizational goal"@en, "but organisationnel"@fr .
     
 :Facility a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Facility defines functions of materials (i.e., Artifacts) in an Organization."@en ;
     rdfs:label "facility"@en, "facilité"@fr .
+
+:OrganizationalValue a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an Organization."@en ;
+    rdfs:label "organizational value"@en, "valeur organisationnelle"@fr .
 
 :Membership a owl:Class ;
     rdfs:isDefinedBy :regulation ;
@@ -69,11 +79,6 @@
     rdfs:comment "A Group structures an Organization."@en ;
     rdfs:label "group"@en, "groupe"@fr .
 
-:OrganizationalGoal a owl:Class ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:comment "An Organizational Goal is a pursued state of affairs."@en ;
-    rdfs:label "organizational goal"@en, "but organisationnel"@fr .
-
 :ProcessScheme a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Process Scheme is an entity that represents a set of connected Activity Schemes."@en ;
@@ -83,19 +88,17 @@
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "An Activity Scheme is a plan for an activity intended to achieve an Organizational Goal."@en ;
     rdfs:label "activity scheme"@en, "schéma d'activité"@fr ;
-    skos:note "The concept of activity can be the execution of a simple action, a complex set of actions, or any other useful arrangement employed to achieving organizational goals. An activity can be represented using, for instance, the PROV Ontology."@en .
+    skos:note "The concept of activity can be the execution of a simple action, a complex set of actions, or any other useful arrangement employed to achieving organizational goals. An activity can be represented using, for instance, the PROV Ontology (https://www.w3.org/TR/prov-o/)."@en .
+
+:Mission a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A Mission gathers the Organizational Goals that Agents have to achieve in the context of a Process Scheme."@en ;
+    rdfs:label "mission"@en, "mission"@fr .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-:hasOrganizationalValue a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Organization ;
-    rdfs:range :OrganizationalValue ;
-    rdfs:comment "A relation that refers to an Organization Value of an Organization."@en ;
-    rdfs:label "has organizational value"@en, "a une valeur organisationnelle"@fr .
-      
 :providesRole a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
@@ -104,12 +107,12 @@
     rdfs:comment "A relation that refers to a Role made available to Agents in the context of an Organization."@en ;
     rdfs:label "provides role"@en, "fournit un rôle"@fr .
 
-:proposesMission a owl:ObjectProperty ;
+:hasOrganizationalGoal a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
-    rdfs:range :Mission ;
-    rdfs:comment "A relation that refers to a Mission that can be executed in the context of an Organization."@en ;
-    rdfs:label "proposes mission"@en, "fournit une mission"@fr .
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to an Organizational Goal of an Organization."@en ;
+    rdfs:label "has organizational goal"@en, "a un but organisationnel"@fr .
     
 :proposesFacility a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
@@ -117,6 +120,13 @@
     rdfs:range :Facility ;
     rdfs:comment "A relation that refers to a Facility made available to Artifacts in the context of an Organization."@en ;
     rdfs:label "proposes facility"@en, "fournit de facilité"@fr .
+
+:hasOrganizationalValue a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :OrganizationalValue ;
+    rdfs:comment "A relation that refers to an Organization Value of an Organization."@en ;
+    rdfs:label "has organizational value"@en, "a une valeur organisationnelle"@fr .
 
 :isMembershipOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
@@ -169,13 +179,34 @@
     rdfs:comment "A relation that refers to a subgroup relationship between two Groups."@en ;
     rdfs:label "is subgroup of"@en, "est un sous-groupe de"@fr .
 
-:hasOrganizationalGoal a owl:ObjectProperty ;
+:isMissionOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Organization ;
-    rdfs:range :OrganizationalGoal ;
-    rdfs:comment "A relation that refers to an Organizational Goal of an Organization."@en ;
-    rdfs:label "has organizational goal"@en, "a un but organisationnel"@fr .
+    rdfs:domain :Mission ;
+    rdfs:range :Agent ;
+    rdfs:comment "A relation that refers to an Agent involved in a Mission."@en ;
+    rdfs:label "is mission of"@en, "est la mission de"@fr .
 
+:isMissionFor a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Mission ;
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to an Organizational Goal involved in a Mission."@en ;
+    rdfs:label "is mission for"@en, "est la mission pour"@fr .
+
+:isMissionIn a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Mission ;
+    rdfs:range :ProcessScheme ;
+    rdfs:comment "A relation that refers to a Process Scheme involved in a Mission."@en ;
+    rdfs:label "is mission in"@en, "est la mission en"@fr .
+
+:hasMissionRelationshipWith a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Mission ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to the relationship between two Missions, e.g., complementary missions."@en ;
+    rdfs:label "has mission relationship with"@en, "a une relation de mission avec"@fr .
+    
 :isSubOrganizationalGoalOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :OrganizationalGoal ;
@@ -183,13 +214,6 @@
     rdfs:comment "A relation that refers to a hierarchical relationship between two Organizational Goals. A Sub-Organizational Goal is an Organizational Goal that has to be achieved for the parent Organizational Goal to be achieved."@en ;
     rdfs:label "is sub-organizational goal of"@en, "est le but sous-organisationnel de"@fr .
     
-:gathersOrganizationalGoal a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Mission ;
-    rdfs:range :OrganizationalGoal ;
-    rdfs:comment "A relation that refers to a set of Organizational Goals in relation to a Mission."@en ;
-    rdfs:label "gathers organizational goal"@en, "collecter but organisationnel"@fr .
-
 :achievesOrganizationalGoal a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :ActivityScheme ;
@@ -224,10 +248,3 @@
     rdfs:range :ActivityScheme ;
     rdfs:comment "A relation that refers to the way in which two Activity Schemes are related to each other, and one is affected by the other."@en ;
     rdfs:label "is dependent on activity scheme"@en, "dépend du schéma d'activité"@fr .
-
-:isCommittedToMission a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Agent ;
-    rdfs:range :Mission ;
-    rdfs:comment "A relation that refers to a Mission to which an Agent is committed."@en ;
-    rdfs:label "is committed to mission"@en, "est engagé à accomplir sa mission"@fr .

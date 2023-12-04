@@ -17,11 +17,6 @@
 #    Classes
 #################################################################
 
-:OrganizationalGoal a owl:Class ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:comment "An Organizational Goal is a pursued state of affairs."@en ;
-    rdfs:label "organizational goal"@en, "but organisationnel"@fr .
-
 :ProcessScheme a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Process Scheme is an entity that represents a set of connected Activity Schemes."@en ;
@@ -70,13 +65,6 @@
     rdfs:comment "A relation that refers to the relationship between two Missions, e.g., complementary missions."@en ;
     rdfs:label "has mission relationship with"@en, "a une relation de mission avec"@fr .
     
-:hasOrganizationalGoal a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Organization ;
-    rdfs:range :OrganizationalGoal ;
-    rdfs:comment "A relation that refers to an Organizational Goal of an Organization."@en ;
-    rdfs:label "has organizational goal"@en, "a un but organisationnel"@fr .
-
 :isSubOrganizationalGoalOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :OrganizationalGoal ;
