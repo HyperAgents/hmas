@@ -13,7 +13,7 @@ Here is some context about under which context this test was made
 |Title|NicoRobertIn using actions script|
 |Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py)
-|Date|2023-12-04 14:22:00|
+|Date|2023-12-04 16:24:16|
 
 ***
 
@@ -54,8 +54,8 @@ Here is the chapter related to the Fail assertion
 
 :x:3 Fail assertions
 
-|*Jump*|*Number*|*Outcome type*|*Subject*|*Criterion*|*Title*|*Link*|
-|------|--------|--------------|---------|-----------|-------|------|
+|*Jump*|*Number*|*Status*|*Subject*|*Criterion*|*Title*|*Link*|
+|------|--------|--------|---------|-----------|-------|------|
 |[Table top](#fail-assertions-summary)|<div id="summary-Fail-1">1/3</div>|:x:*Fail*|`meta`|[syntax](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#syntax)|Test subject has syntax errors|[Jump](#fail-assertion-number-1)|
 |[Table top](#fail-assertions-summary)|<div id="summary-Fail-2">2/3</div>|:x:*Fail*|`meta`|[syntax](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#syntax)|Test subject has syntax errors|[Jump](#fail-assertion-number-2)|
 |[Table top](#fail-assertions-summary)|<div id="summary-Fail-3">3/3</div>|:x:*Fail*|`manufacturing-environments-safety-rules`|[syntax](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#syntax)|Test subject has syntax errors|[Jump](#fail-assertion-number-3)|
@@ -159,8 +159,8 @@ Here is the chapter related to the CannotTell assertion
 
 :warning:139 CannotTell assertions
 
-|*Jump*|*Number*|*Outcome type*|*Subject*|*Criterion*|*Title*|*Link*|
-|------|--------|--------------|---------|-----------|-------|------|
+|*Jump*|*Number*|*Status*|*Subject*|*Criterion*|*Title*|*Link*|
+|------|--------|--------|---------|-----------|-------|------|
 |[Table top](#cannottell-assertions-summary)|<div id="summary-CannotTell-1">1/139</div>|:warning:*CannotTell*|`regulation-logistics-structure-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-1)|
 |[Table top](#cannottell-assertions-summary)|<div id="summary-CannotTell-2">2/139</div>|:warning:*CannotTell*|`regulation-logistics-structure-organization`|[terms-differenciation](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#terms-differenciation)|Too close terms|[Jump](#cannottell-assertion-number-2)|
 |[Table top](#cannottell-assertions-summary)|<div id="summary-CannotTell-3">3/139</div>|:warning:*CannotTell*|`regulation-logistics-create-organization`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|Terms not labeled|[Jump](#cannottell-assertion-number-3)|
@@ -3817,8 +3817,8 @@ Here is the chapter related to the NotTested assertion
 
 :grey_question:20 NotTested assertions
 
-|*Jump*|*Number*|*Outcome type*|*Subject*|*Criterion*|*Title*|*Link*|
-|------|--------|--------------|---------|-----------|-------|------|
+|*Jump*|*Number*|*Status*|*Subject*|*Criterion*|*Title*|*Link*|
+|------|--------|--------|---------|-----------|-------|------|
 |[Table top](#nottested-assertions-summary)|<div id="summary-NotTested-1">1/20</div>|:grey_question:*NotTested*|`meta`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|The test could not be run|[Jump](#nottested-assertion-number-1)|
 |[Table top](#nottested-assertions-summary)|<div id="summary-NotTested-2">2/20</div>|:grey_question:*NotTested*|`meta`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|The test could not be run|[Jump](#nottested-assertion-number-2)|
 |[Table top](#nottested-assertions-summary)|<div id="summary-NotTested-3">3/20</div>|:grey_question:*NotTested*|`meta`|[labeled-terms](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#labeled-terms)|The test could not be run|[Jump](#nottested-assertion-number-3)|
@@ -4347,8 +4347,8 @@ Here is the chapter related to the Pass assertion
 
 :white_check_mark:139 Pass assertions
 
-|*Jump*|*Number*|*Outcome type*|*Subject*|*Criterion*|*Title*|*Link*|
-|------|--------|--------------|---------|-----------|-------|------|
+|*Jump*|*Number*|*Status*|*Subject*|*Criterion*|*Title*|*Link*|
+|------|--------|--------|---------|-----------|-------|------|
 |[Table top](#pass-assertions-summary)|<div id="summary-Pass-1">1/139</div>|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Domains properly defined|[Jump](#pass-assertion-number-1)|
 |[Table top](#pass-assertions-summary)|<div id="summary-Pass-2">2/139</div>|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[domain-and-range-referencing](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#domain-and-range-referencing)|Ranges properly defined|[Jump](#pass-assertion-number-2)|
 |[Table top](#pass-assertions-summary)|<div id="summary-Pass-3">3/139</div>|:white_check_mark:*Pass*|`regulation-logistics-structure-organization`|[owl-rl-constraint](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/model-test-onto.ttl#owl-rl-constraint)|OWL RL consistent|[Jump](#pass-assertion-number-3)|
