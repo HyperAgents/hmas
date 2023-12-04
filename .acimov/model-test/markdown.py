@@ -332,6 +332,8 @@ def make_turtle_page(report, file_name) -> str:
     md += make_stat_chapter(assertions)
     
     for severity, emoji, _ in SEVERITY_RANGE:
+        if len(assertions[severity]) == 0:
+            continue
         md += make_severity_chapter(
             assertions,
             partsDict,

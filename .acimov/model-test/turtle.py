@@ -328,7 +328,7 @@ def make_outcome(
     outcome_title = outcome_ressources["title"]
     outcome_description = description if len(description) > 0 else outcome_ressources["description"]
     parsed_pointers = [make_pointer(report, subject, pointer) for pointer in pointers if len(pointer) > 0]
-    outcome_type_namespace = TEST_NAMESPACE if outcome_type.endswith("Fail") else EARL_NAMESPACE
+    outcome_type_namespace = ACIMOV_MODEL_NAMESPACE if outcome_type.endswith("Fail") else EARL_NAMESPACE
     outcome_statement = [
         (RDF.type, outcome_type_namespace[outcome_type]),
         (DCTERMS.title, Literal(outcome_title, lang="en")),
