@@ -344,4 +344,18 @@ def make_turtle_page(report, file_name) -> str:
         )
 
     md = "\n".join(md)
-    return md
+
+    badges = [
+        ("Pass", len(assertions["Pass"]), "green"),
+        ("Not tested", len(assertions["NotTested"]), "white"),
+        ("Cannot tell", len(assertions["CannotTell"]), "gray"),
+        ("Minor fail", len(assertions["MinorFail"]), "orange"),
+        ("Major fail", len(assertions["MajorFail"]), "red")
+    ]
+    badges = [
+        f'<img src="https://img.shields.io/badge/{badge[0]}-{badge[1]}-{badge[2]}"/>'
+        for badge in badges
+        if badge[1] > 0
+    ]
+    badges = f'<p align="center">{"".join(badges)}</p>'
+    return md, badges

@@ -11,6 +11,7 @@ from constants import (
     MODELETS_TTL_GLOB_PATH,
     DEV_USERNAME,
     PWD_TO_MODEL_OUTPUT_FOLDER,
+    PWD_TO_ROOT_FOLDER,
     PROFILE_CHECK_URI,
     BRANCH
 )
@@ -109,6 +110,17 @@ file_base = f"{PWD_TO_MODEL_OUTPUT_FOLDER}{file_name}"
 
 print_title("Exporting results")
 
+markdown, badges = make_turtle_page(report, file_name)
+
+readme = None
+with open(f"{PWD_TO_ROOT_FOLDER}README.md", "r") as readmefile:
+    readme = readmefile.readlines()
+
+if readme[0].strip().startswith("#"):
+    readme = [badges, ""] + readme
+else:
+    readme[0] = badges
+
 if not exists(PWD_TO_MODEL_OUTPUT_FOLDER):
     makedirs(PWD_TO_MODEL_OUTPUT_FOLDER)
 
@@ -116,4 +128,7 @@ with open(f"{file_base}.ttl", "w") as f:
     f.write(report.serialize(format="ttl"))
 
 with copen(f"{file_base}.md", "w", "utf-8") as f:
-    f.write(make_turtle_page(report, file_name))
+    f.write(markdown)
+
+with open(f"{PWD_TO_ROOT_FOLDER}README.md", "w") as readmefile:
+    readmefile.write("\n".join(readme))
