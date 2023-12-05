@@ -1,6 +1,23 @@
 <p align="center"><img src="https://img.shields.io/badge/Pass-139-green"/><img src="https://img.shields.io/badge/Not tested-20-white"/><img src="https://img.shields.io/badge/Minor fail-139-orange"/><img src="https://img.shields.io/badge/Major fail-3-red"/></p>
 
+
 # Hyperagent ontology git space
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32,7 +49,39 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1) aligned with the Web architecture to inherit the properties of the Web as a world-wide, open, and long-lived system ; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -64,6 +113,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Our systems use semantic hypermedia to enable uniform interaction among heterogeneous entities in MAS: people, artificial agents, devices, digital serivces, knowledge repositories, etc. We refer to this new class of Web-based MAS as Hypermedia MAS.
 
 
@@ -72,7 +137,39 @@ Our systems use semantic hypermedia to enable uniform interaction among heteroge
 
 
 
+
+
+
+
+
+
+
+
 To undertake this investigation, HyperAgents brings together internationally recognized researchers actively contributing to research on autonomous agents and MAS, the Web architecture and the Web of Things, Semantic Web and Linked Data, and to the standardization of the Web.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -120,7 +217,47 @@ To undertake this investigation, HyperAgents brings together internationally rec
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## I - General information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -144,7 +281,31 @@ This git repository contains the methodology and results of the ontology modelli
 
 
 
+
+
+
+
+
+
+
+
 The root of the repository contains three introductory files respectively describing the code of conduct, the process for contributing and the method followed for designing this ontology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -176,7 +337,39 @@ The root of the repository contains three introductory files respectively descri
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 1) How to use the ontology
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -200,6 +393,14 @@ The file [current ontology](https://github.com/HyperAgents/ns.hyperagents.org/bl
 
 
 
+
+
+
+
+
+
+
+
 * the different features of the project
 
 
@@ -208,7 +409,39 @@ The file [current ontology](https://github.com/HyperAgents/ns.hyperagents.org/bl
 
 
 
+
+
+
+
+
+
+
+
 * how to use in practice the ontology
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -248,7 +481,47 @@ The file [current ontology](https://github.com/HyperAgents/ns.hyperagents.org/bl
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 If you want to contribute, please follow the [contributing file](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/CONTRIBUTING.md).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -304,6 +577,38 @@ If you want to contribute, please follow the [contributing file](https://github.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 List of the latest versions : 
 
 
@@ -312,7 +617,39 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
 * V1 - (15/04/22) - [Core ontology](https://github.com/HyperAgents/ns.hyperagents.org/milestone/1?closed=1) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -360,7 +697,47 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * [Fabien Gandon](http://fabien.info/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -384,6 +761,14 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
   
 
 
@@ -392,7 +777,47 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
   affiliation : [INRIA](https://inria.fr/) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -440,6 +865,22 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   email : christopher.leturc@inria.fr
 
 
@@ -448,7 +889,23 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
   
+
+
+
+
+
+
+
+
 
 
 
@@ -480,7 +937,39 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * [Maxime Lefrançois](http://maxime-lefrancois.info/me#) 
+
+
+
+
+
+
+
+
 
 
 
@@ -496,7 +985,23 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
   email : maxime.lefrancois@emse.fr 
+
+
+
+
+
+
+
+
 
 
 
@@ -512,7 +1017,39 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
   affiliation : [EMSE](https://www.mines-stetienne.fr/) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -552,7 +1089,31 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   email : andrei.ciortea@unisg.ch 
+
+
+
+
+
+
+
+
 
 
 
@@ -568,7 +1129,39 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
   affiliation : [UNISG](https://www.unisg.ch/en)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -608,6 +1201,22 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   email : "olivier.boissier@emse.fr" 
 
 
@@ -616,7 +1225,23 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
   
+
+
+
+
+
+
+
+
 
 
 
@@ -632,7 +1257,31 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -664,7 +1313,31 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   email : danai.vachtsevanou@unisg.ch 
+
+
+
+
+
+
+
+
 
 
 
@@ -680,7 +1353,31 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
   affiliation : [UNISG](https://www.unisg.ch/en) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -712,7 +1409,31 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   email : "gnardin@emse.fr" 
+
+
+
+
+
+
+
+
 
 
 
@@ -728,7 +1449,31 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
   affiliation : [EMSE](https://mines-stetienne.fr) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -768,7 +1513,47 @@ List of the latest versions :
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Acknowledgments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -808,7 +1593,47 @@ We thank INRIA/UNISG/EMSE for supporting and hosting this project.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Ideas for the README
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -840,6 +1665,22 @@ Section :  Getting started ?
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Subsection: Prerequisites ?
 
 
@@ -856,7 +1697,39 @@ Subsection: Prerequisites ?
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Subsection : Installing the project and dependencies ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -904,7 +1777,63 @@ Subsection : Running the project ?
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## References
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
