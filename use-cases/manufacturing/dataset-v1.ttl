@@ -52,6 +52,10 @@ truck:artifact a hmas:Artifact ;
 # Signifier base materials #
 ############################
 
+# This part is here to provide templates for endpoint specification
+# This is meant to be under the hood
+# Later in the endpoint specifications we will see what kind of equivalences it makes
+
 _:AuthorizationFormRequired a sh:PropertyShape ;
     sh:path (
         htv:headers
@@ -423,6 +427,7 @@ _:Ra1SettableOperator a _:ActionExecutionShape ;
         sh:qualifiedValueShape _:JsonSetOperatorBody
     ] .
 
+# The statement here is fully implemented with the statement that follows this comment
 #_:Ra1SettableTarget a sh:NodeShape ;
 #    sh:class hmas:ActionExecution ;
 #    sh:property [
