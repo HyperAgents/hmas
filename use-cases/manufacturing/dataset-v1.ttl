@@ -22,6 +22,7 @@
 # Other prefixes
 @prefix hmas: <https://purl.org/hmas/> .
 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema> .
@@ -51,6 +52,39 @@ truck:artifact a hmas:Artifact ;
 # Signifier base materials #
 ############################
 
+_:AuthorizationFormRequired a sh:PropertyShape ;
+    sh:path (
+        htv:headers
+        [ sh:zeroOrMorePath rdf:rest ]
+        rdf:first
+    ) ;
+    sh:minQualifiedShape 1 ;
+    sh:maxQualifiedShape 1 ;
+    sh:qualifiedValueShape [
+        a sh:NodeShape ;
+        sh:class htv:MessageHeader ;
+        sh:property [
+            a sh:PropertyShape ;
+            sh:path htv:fieldName ;
+            sh:hasValue "Authorization" ;
+            sh:minCount 1 ;
+            sh:maxCount 1
+        ] , [
+            a sh:PropertyShape ;
+            sh:path htv:fieldValue ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:datatype xsd:string ;
+        ]
+    ] .
+
+_:Authorization a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty sh:property ;
+        owl:hasValue _:AuthorizationFormRequired
+    ] .
+
 # An action execution with a sh:class set on hmas:ActionExecution
 _:ActionExecutionShape a owl:Class ;
     owl:equivalentClass [
@@ -65,88 +99,100 @@ _:ActionExecutionShape a owl:Class ;
         )
     ] .
 
-# A hctl:Form with a hctl:forContentType set on "application/json"
-_:ApplicationJsonForm a owl:Class ;
+_:RequiredValueShape a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:minQualifiedShape ;
+                owl:hasValue 1 
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:maxQualifiedShape ;
+                owl:hasValue 1 
+            ]
+            sh:PropertyShape
+        )
+    ] .
+
+_:RequiredPropertyShape a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:equivalentClass (
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:minCount ;
+                owl:hasValue 1
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:maxCount ;
+                owl:hasValue 1
+            ]
+            sh:PropertyShape
+        )
+    ] .
+
+_:EndpointSpecification a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:path ;
+                owl:hasValue prov:used
+            ]
+            _:RequiredValueShape
+        )
+    ] .
+
+_:TargetUrl a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:path ;
+                owl:hasValue hctl:hasTarget
+            ]
+            _:RequiredPropertyShape
+        )
+    ] .
+
+_:FormSpecification a owl:Class ;
     owl:equivalentClass [
         a owl:Class ;
         owl:intersectionOf (
             [
                 a owl:Restriction ;
-                owl:onProperty hctl:forContentType ;
-                owl:hasValue "application/json"
+                owl:onProperty sh:class ;
+                owl:hasValue hctl:Form
             ]
-            hctl:Form
+            sh:NodeShape
         )
     ] .
 
-# An _:ApplicationJsonForm with a htv:methodName set to "GET"
-_:GetForm a owl:Class ;
+_:AcceptJsonProperty a sh:PropertyShape ;
+    sh:path hctl:forContentType ;
+    sh:hasValue "application/json" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+
+_:AcceptJson a owl:Class ;
     owl:equivalentClass [
-        a owl:Class ;
-        owl:intersectionOf (
-            [
-                a owl:Restriction ;
-                owl:onProperty htv:methodName ;
-                owl:hasValue "GET"
-            ]
-            _:ApplicationJsonForm
-        )
+        a owl:Restriction ;
+        owl:onProperty sh:property ;
+        owl:hasValue _:AcceptJsonProperty
     ] .
 
-# An _:ApplicationJsonForm with a htv:methodName set to "PUT"
-_:PutForm a owl:Class ;
-    owl:equivalentClass [
-        a owl:Class ;
-        owl:intersectionOf (
-            [
-                a owl:Restriction ;
-                owl:onProperty htv:methodName ;
-                owl:hasValue "PUT"
-            ]
-            _:ApplicationJsonForm
-        )
-    ] .
-
-# An _:ApplicationJsonForm with a htv:methodName set to "POST"
-_:PostForm a owl:Class ;
-    owl:equivalentClass [
-        a owl:Class ;
-        owl:intersectionOf (
-            [
-                a owl:Restriction ;
-                owl:onProperty htv:methodName ;
-                owl:hasValue "POST"
-            ]
-            _:ApplicationJsonForm
-        )
-    ] .
-
-# An _:ApplicationJsonForm with a htv:methodName set to "DELETE"
-_:DeleteForm a owl:Class ;
-    owl:equivalentClass [
-        a owl:Class ;
-        owl:intersectionOf (
-            [
-                a owl:Restriction ;
-                owl:onProperty htv:methodName ;
-                owl:hasValue "DELETE"
-            ]
-            _:ApplicationJsonForm
-        )
-    ] .
-
-# A UrlConstraint is a sh:PropertyShape with:
-#   - a sh:path set to prov:used
-#   - a sh:minCount set to 1
-#   - a sh:maxCount set to 1
-_:UrlConstraint a owl:Class ;
+_:MethodField a owl:Class ;
     owl:equivalentClass [
         a owl:Class ;
         owl:intersectionOf (
             [
                 a owl:Restriction ;
                 owl:onProperty sh:path ;
-                owl:hasValue prov:used
+                owl:hasValue hctl:methodName
             ]
             [
                 a owl:Restriction ;
@@ -162,11 +208,51 @@ _:UrlConstraint a owl:Class ;
         )
     ] .
 
+_:GetMethodField a _:MethodField ;
+    sh:hasValue "GET" .
+
+_:PutMethodField a _:MethodField ;
+    sh:hasValue "PUT" .
+
+_:PostMethodField a _:MethodField ;
+    sh:hasValue "POST" .
+
+_:DeleteMethodField a _:MethodField ;
+    sh:hasValue "DELETE" .
+
+_:GetMethod a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty sh:property ;
+        owl:hasValue _:GetMethodField
+    ] .
+
+_:PutMethod a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty sh:property ;
+        owl:hasValue _:PutMethodField
+    ] .
+
+_:PostMethod a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty sh:property ;
+        owl:hasValue _:PostMethodField
+    ] .
+
+_:DeleteMethod a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty sh:property ;
+        owl:hasValue _:DeleteMethodField
+    ] .
+
 # A JsonBodyShape is a sh:PropertyShape with:
 #   - a sh:path set to hmas:hasInput
 #   - a sh:qualifiedMinCount set to 1
 #   - a sh:qualifiedMaxCount set to 1
-_:JsonBodyShape a owl:Class ;
+_:BodySpecification a owl:Class ;
     owl:equivalentClass [
         a owl:Class ;
         owl:intersectionOf (
@@ -175,20 +261,9 @@ _:JsonBodyShape a owl:Class ;
                 owl:onProperty sh:path ;
                 owl:hasValue hmas:hasInput
             ]
-            [
-                a owl:Restriction ;
-                owl:onProperty sh:qualifiedMinCount ;
-                owl:hasValue 1
-            ]
-            [
-                a owl:Restriction ;
-                owl:onProperty sh:qualifiedMaxCount ;
-                owl:hasValue 1
-            ]
-            sh:PropertyShape
+            _:RequiredValueShape
         )
     ] .
-
 ####################
 # JSON Body shapes #
 ####################
@@ -274,82 +349,158 @@ _:JsonSetPositionBody a sh:NodeShape ;
 ######################################
 # Robotic Arm 1 Endpoints Definition #
 ######################################
-        
+# An _:ApplicationJsonForm with a htv:methodName set to "GET"
+
 _:Ra1ReadableOperator a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:GetForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/operator>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/operator>
+            ]
         ]
     ] .
 
 _:Ra1ReadablePosition a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:GetForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/tcp>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/tcp>
+            ]
         ]
     ] .
 
 _:Ra1ReadableTarget a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:GetForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/tcp/target>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/tcp/target>
+            ]
         ]
     ] .
 
 _:Ra1ReadableGripper a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:GetForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/gripper>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/gripper>
+            ]
         ]
     ] .
 
 _:Ra1InitializableArm a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:PutForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/initialize>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/initialize>
         ]
     ] .
 
 _:Ra1SettableOperator a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:PostForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/operator>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:PostMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/operator>
+            ]
         ]
     ] , [
-        a _:JsonBodyShape ;
+        a _:BodySpecification ;
         sh:qualifiedValueShape _:JsonSetOperatorBody
     ] .
 
+#_:Ra1SettableTarget a sh:NodeShape ;
+#    sh:class hmas:ActionExecution ;
+#    sh:property [
+#        sh:path prov:used ;
+#        sh:minQualifiedShape 1 ;
+#        sh:maxQualifiedShape 1 ;
+#        sh:qualifiedValueShape [
+#            sh:class hctl:Form ;
+#            sh:property [
+#                sh:path hctl:forContentType ;
+#                sh:minCount 1 ;
+#                sh:maxCount 1 ;
+#                sh:hasValue "application/json"
+#            ], [
+#                sh:path htv:methodName ;
+#                sh:minCount 1 ;
+#                sh:maxCount 1 ;
+#                sh:hasValue "PUT"
+#            ], [
+#                sh:path hctl:hasTarget ;
+#                sh:minCount 1 ;
+#                sh:maxCount 1 ;
+#                sh:hasValue  <https://api.interactions.ics.unisg.ch/cherrybot1/tcp/target>
+#            ],
+#            [
+#                sh:path (
+#                    htv:headers
+#                    [sh:zeroOrMorePath rdf:rest]
+#                    rdf:first
+#                ) ;
+#                sh:minQualifiedShape 1;
+#                sh:maxQualifiedShape 1;
+#                sh:qualifiedValueShape [
+#                    sh:class htv:messageHeader ;
+#                    sh:property [
+#                        sh:path http:fieldName ;
+#                        sh:minCount 1 ;
+#                        sh:maxCount 1 ;
+#                        sh:hasValue "Authorization"
+#                    ] , [
+#                        sh:path http:fieldValue ;
+#                        sh:minCount 1 ;
+#                        sh:maxCount 1
+#                    ]
+#                ]
+#            ]
+#        ]
+#    ] , [
+#        sh:path hmas:hasInput ;
+#        sh:minQualifiedShape 1 ;
+#        sh:maxQualifiedShape 1 ;
+#        sh:qualifiedValueShape _:JsonSetPositionBody
+#    ] .
+
 _:Ra1SettableTarget a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:PutForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/tcp/target>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/tcp/target>
+            ]
         ]
     ] , [
-        a _:JsonBodyShape ;
+        a _:BodySpecification ;
         sh:qualifiedValueShape _:JsonSetPositionBody
     ] .
 
 _:Ra1SettableGripper a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:PutForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/gripper>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/gripper>
+            ]
         ]
     ] , [
         sh:path hmas:hasInput ;
@@ -362,10 +513,10 @@ _:Ra1SettableGripper a _:ActionExecutionShape ;
 
 _:Ra1DeletableOperator a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:value [
-            a _:DeleteForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/operator/%7Btoken%7D>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:DeleteMethod, _:AcceptJson, _:Authorization ;
+            sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/operator/%7Btoken%7D>
         ]
     ] .
 
@@ -375,79 +526,100 @@ _:Ra1DeletableOperator a _:ActionExecutionShape ;
         
 _:Ra2ReadableOperator a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:GetForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/operator>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/operator>
+            ]
         ]
     ] .
 
 _:Ra2ReadablePosition a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:GetForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/tcp>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/tcp>
+            ]
         ]
     ] .
 
 _:Ra2ReadableTarget a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:GetForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/tcp/target>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/tcp/target>
+            ]
         ]
     ] .
 
 _:Ra2ReadableGripper a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:GetForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/gripper>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/gripper>
+            ]
         ]
     ] .
 
 _:Ra2InitializableArm a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:PutForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/initialize>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/initialize>
         ]
     ] .
 
 _:Ra2SettableOperator a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:PostForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/operator>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:PostMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/operator>
+            ]
         ]
     ] , [
-        a _:JsonBodyShape ;
+        a _:BodySpecification ;
         sh:qualifiedValueShape _:JsonSetOperatorBody
     ] .
 
 _:Ra2SettableTarget a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:PutForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/tcp/target>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/tcp/target>
+            ]
         ]
     ] , [
-        a _:JsonBodyShape ;
+        a _:BodySpecification ;
         sh:qualifiedValueShape _:JsonSetPositionBody
     ] .
 
 _:Ra2SettableGripper a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:hasValue [
-            a _:PutForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/gripper>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/gripper>
+            ]
         ]
     ] , [
         sh:path hmas:hasInput ;
@@ -460,10 +632,13 @@ _:Ra2SettableGripper a _:ActionExecutionShape ;
 
 _:Ra2DeletableOperator a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:value [
-            a _:DeleteForm ;
-            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/operator/%7Btoken%7D>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:DeleteMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/operator/%7Btoken%7D>
+            ]
         ]
     ] .
 
@@ -473,30 +648,37 @@ _:Ra2DeletableOperator a _:ActionExecutionShape ;
 
 _:TruckReadableBattery a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:value [
-            a _:GetForm ;
-            hctl:hasTarget <http://192.168.1.26/properties/pmu>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                a _:TargetUrl ;
+                sh:hasValue <http://192.168.1.26/properties/pmu>
+            ]
         ]
     ] .
 
 _:TruckReadableAccelerometer a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:value [
-            a _:GetForm ;
-            hctl:hasTarget <http://192.168.1.29/properties/imu>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                sh:hasValue <http://192.168.1.29/properties/imu>
+            ]
         ]
     ] .
 
 _:TruckSettableWheels a _:ActionExecutionShape ;
     sh:property [
-        a _:UrlConstraint ;
-        sh:value [
-            a _:PostForm ;
-            hctl:hasTarget <http://192.168.1.29/actions/wheelControl>
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:PostMethod, _:AcceptJson, _:Authorization ;
+            sh:property [
+                sh:hasValue <http://192.168.1.29/actions/wheelControl>
+            ]
         ]
-    ]
+    ] .
 
 ###############################
 # Artifacts Resource Profiles #
