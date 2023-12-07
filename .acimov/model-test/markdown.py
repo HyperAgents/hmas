@@ -1,5 +1,8 @@
 from rdflib import Graph, Literal
 from datetime import datetime
+from sys import argv
+
+from corese import smartPrint
 from constants import (
     SEVERITY_RANGE,
     COLOR_BOX_TEMPLATE,
@@ -345,17 +348,15 @@ def make_turtle_page(report, file_name) -> str:
 
     md = "\n".join(md)
 
-    badges = [
-        ("Pass", len(assertions["Pass"]), "green"),
-        ("Not tested", len(assertions["NotTested"]), "white"),
-        ("Cannot tell", len(assertions["CannotTell"]), "gray"),
-        ("Minor fail", len(assertions["MinorFail"]), "orange"),
-        ("Major fail", len(assertions["MajorFail"]), "red")
+    badgesData = [
+        f"Pass\t\t: {len(assertions['Pass'])}",
+        f"NotTested\t: {len(assertions['NotTested'])}",
+        f"CannotTell\t: {len(assertions['CannotTell'])}",
+        f"MinorFail\t: {len(assertions['MinorFail'])}",
+        f"MajorFail\t: {len(assertions['MajorFail'])}"
     ]
-    badges = [
-        f'<img src="https://img.shields.io/badge/{badge[0]}-{badge[1]}-{badge[2]}"/>'
-        for badge in badges
-        if badge[1] > 0
-    ]
-    badges = f'<p align="center">{"".join(badges)}</p>'
-    return md, badges
+    if "--is-action" in argv:
+        for badgeData in badgesData:
+            print(badgeData)
+
+    return md

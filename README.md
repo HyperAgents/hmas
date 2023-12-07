@@ -1,5 +1,4 @@
-<p align="center"><img src="https://img.shields.io/badge/Pass-139-green"/><img src="https://img.shields.io/badge/Not tested-20-white"/><img src="https://img.shields.io/badge/Minor fail-139-orange"/><img src="https://img.shields.io/badge/Major fail-3-red"/></p>
-
+[![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/e682150dd35dd8af6ac7cd1e283e31d6/raw/hmas__heads_main.json)]
 
 # Hyperagent ontology git space
 

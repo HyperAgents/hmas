@@ -8,6 +8,7 @@ from os.path import exists, sep
 from requests import get
 from typing import Union, List
 from py4j.java_gateway import launch_gateway, JavaGateway
+from sys import argv
 
 from constants import (
     AST_ERROR_FORMAT,
@@ -19,12 +20,20 @@ from constants import (
 )
 
 def print_title(title):
+    if "--is-action" in argv:
+        return
     title = "== " + title + " =="
     border = "=" * len(title)
     print("\n" * 2)
     print(border)
     print(title)
     print(border)
+
+def smartPrint(message):
+    if "--is-action" in argv:
+        return
+    print(message)
+
 
 #####################################################
 # Start the java server & capture the stderr output #
@@ -177,7 +186,7 @@ def load(
 
     for file in path:
         if not exists(file):
-            print("File not found", file)
+            smartPrint("File not found", file)
             continue
         ld.parse(file)
     

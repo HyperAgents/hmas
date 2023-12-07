@@ -23,7 +23,22 @@ jobs:
     - name: Launch model tests
       run: |
         pip install -r .acimov/model-test/requirements.txt
-        python .acimov/model-test/complete-test.py --mode=actions --DEV_USERNAME=${{ github.actor }} --REPO_URI=${{ github.server_url }}/${{ github.repository }} --BRANCH=${{ github.ref_name }}
+        SUMMARY="$(python .acimov/model-test/complete-test.py --mode=actions --DEV_USERNAME=${{ github.actor }} --REPO_URI=${{ github.server_url }}/${{ github.repository }} --BRANCH=${{ github.ref_name }} --is-action)"
+
+        TOKENS=($SUMMARY)
+        echo "PASS=$(echo ${TOKENS[0]})" >> $GITHUB_ENV
+        echo "NOTTESTED=$(echo ${TOKENS[1]})" >> $GITHUB_ENV
+        echo "CANNOTTELL=$(echo ${TOKENS[2]})" >> $GITHUB_ENV
+        echo "MINORFAIL=$(echo ${TOKENS[3]})" >> $GITHUB_ENV
+        echo "MAJORFAIL=$(echo ${TOKENS[4]})" >> $GITHUB_ENV
+
+        REF=${{ github.ref }}
+        echo "github.ref: $REF"
+        IFS='/' read -ra PATHS <<< "$REF"
+        BRANCH_NAME="${PATHS[1]}_${PATHS[2]}"
+        echo $BRANCH_NAME
+        echo "BRANCH=$(echo ${BRANCH_NAME})" >> $GITHUB_ENV
+
     - name: Archive model test results
       uses: actions/upload-artifact@v3
       with:
@@ -37,3 +52,12 @@ jobs:
         git commit -m "Provide automatic model test report [skip actions]"
         git remote set-url origin ${{ github.server_url }}/${{ github.repository }}
         git push
+    - name: Create the Pass Badge
+      uses: schneegans/dynamic-badges-action@v1.0.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: e682150dd35dd8af6ac7cd1e283e31d6
+        filename: $(echo ${{ github.repository }} | cut -d'/' -f2')__${{ env.BRANCH }}.json
+        label: Test Coverage
+        message: ${{ env.PASS }}
+        color: green
