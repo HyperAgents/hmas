@@ -279,7 +279,7 @@ ex:Director_Administrative_Membership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
-        sh:qualifiedValueShape [ sh:class ex:Agent ] ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] ;
