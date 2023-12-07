@@ -1,4 +1,4 @@
-[![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/e682150dd35dd8af6ac7cd1e283e31d6/raw/hmas__heads_main.json)]
+[![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/f982a0a6644109c7b77f22f24352f1a6/raw/hmas__heads_main.json)]
 
 # Hyperagent ontology git space
 
