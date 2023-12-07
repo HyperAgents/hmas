@@ -57,6 +57,42 @@ jobs:
       uses: schneegans/dynamic-badges-action@v1.7.0
       with:
         auth: ${{ secrets.GIST_SECRET }}
+        gistID: ecc76114da46334e44dc7c93634eecdb
+        filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
+        label: Pass
+        message: ${{ env.PASS }}
+        color: Green
+    - name: Create the NotTested Badge
+      uses: schneegans/dynamic-badges-action@v1.7.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: 49b9c637b24deb44e9a1d229af74cdc8
+        filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
+        label: NotTested
+        message: ${{ env.NOTTESTED }}
+        color: White
+    - name: Create the CannotTell Badge
+      uses: schneegans/dynamic-badges-action@v1.7.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: 75a02c6b20baf6cd4bc6ec4c2148fb21
+        filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
+        label: CannotTell
+        message: ${{ env.CANNOTTELL }}
+        color: yellow
+    - name: Create the MinorFail Badge
+      uses: schneegans/dynamic-badges-action@v1.7.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: 9a8586dfcd702f1511d18b5f81fd1594
+        filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
+        label: MinorFail
+        message: ${{ env.MINORFAIL }}
+        color: orange
+    - name: Create the MajorFail Badge
+      uses: schneegans/dynamic-badges-action@v1.7.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
         gistID: a242e427a25c90887a3213049eb60af7
         filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
         label: MajorFail
