@@ -26,11 +26,11 @@ jobs:
         SUMMARY="$(python .acimov/model-test/complete-test.py --mode=actions --DEV_USERNAME=${{ github.actor }} --REPO_URI=${{ github.server_url }}/${{ github.repository }} --BRANCH=${{ github.ref_name }} --is-action)"
 
         TOKENS=($SUMMARY)
-        echo "PASS=$(echo ${TOKENS[0]})" >> $GITHUB_ENV
-        echo "NOTTESTED=$(echo ${TOKENS[1]})" >> $GITHUB_ENV
-        echo "CANNOTTELL=$(echo ${TOKENS[2]})" >> $GITHUB_ENV
-        echo "MINORFAIL=$(echo ${TOKENS[3]})" >> $GITHUB_ENV
-        echo "MAJORFAIL=$(echo ${TOKENS[4]})" >> $GITHUB_ENV
+        echo "PASS=$(echo ${TOKENS[2]})" >> $GITHUB_ENV
+        echo "NOTTESTED=$(echo ${TOKENS[5]})" >> $GITHUB_ENV
+        echo "CANNOTTELL=$(echo ${TOKENS[8]})" >> $GITHUB_ENV
+        echo "MINORFAIL=$(echo ${TOKENS[11]})" >> $GITHUB_ENV
+        echo "MAJORFAIL=$(echo ${TOKENS[14]})" >> $GITHUB_ENV
 
         REF=${{ github.ref }}
         echo "github.ref: $REF"
