@@ -53,11 +53,11 @@ jobs:
         git remote set-url origin ${{ github.server_url }}/${{ github.repository }}
         git push
     - name: Create the Pass Badge
-      uses: schneegans/dynamic-badges-action@v1.0.0
+      uses: schneegans/dynamic-badges-action@v1.7.0
       with:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: a242e427a25c90887a3213049eb60af7
-        filename: $(echo ${{ github.repository }} | cut -d'/' -f2')__${{ env.BRANCH }}.json
+        filename: hmas__${{ env.BRANCH }}.json
         label: MajorFail
         message: ${{ env.MAJORFAIL }}
         color: red
