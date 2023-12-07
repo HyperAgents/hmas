@@ -38,7 +38,7 @@ jobs:
         BRANCH_NAME="${PATHS[1]}_${PATHS[2]}"
         echo $BRANCH_NAME
         echo "BRANCH=$(echo ${BRANCH_NAME})" >> $GITHUB_ENV
-        echo "REPO=$(echo ${{ github.repository }} | cut -d'/' -f2')" >> $GITHUB_ENV
+        echo "REPO=$(echo ${{ github.repository }} | cut -d'/' -f2)" >> $GITHUB_ENV
 
     - name: Archive model test results
       uses: actions/upload-artifact@v3
