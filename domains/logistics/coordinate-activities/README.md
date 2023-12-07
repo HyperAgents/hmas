@@ -26,7 +26,7 @@ A new person has to be hired in the Commercial department for the Account Manage
 * **Activity Scheme**: An Activity Scheme is a plan for an activity intended to achieve Organizational Goals.
 * **Root Activity Scheme**: A Root Activity Scheme is an Activity Scheme origin of a set of connected Activity Schemes and is associated to a Process Scheme.
 * **Activity Scheme Dependence**: A relation that refers to the way in which two Activity Schemes are related to each other, and one is affected by the other.
-* **Organizational Goal**: see [Create an Organization](https://github.com/HyperAgents/hmas/blob/master/domains/logistics/create-organization/README.md).
+* **Organizational Goal**: see [Create an Organization](https://github.com/HyperAgents/hmas/blob/master/domains/logistics/create-organization/README.md) scenario.
 * **Sub-Organizational Goal Relationship**: A relation that refers to a hierarchical relationship between two Organizational Goals. A Sub-Organizational Goal is an Organizational Goal that has to be achieved for the parent Organizational Goal to be achieved.
 * **Mission**: A Mission gathers the Organizational Goals that Agents have to achieve in the context of a Process Scheme.
 * **Mission Commitment**: A relation that refers to a Mission to which an Agent is committed.
@@ -42,10 +42,26 @@ A new person has to be hired in the Commercial department for the Account Manage
 
 * The **Activity Scheme Dependence** should not be used directly, a sub-property must be created to specify the exact type of dependence between two activity schemes. Examples of dependencies can be temporal dependencies like the [Allen's interval relations](https://doi.org/10.1145/182.358434), spatial dependencies, or other dependencies of influence like _facilitates_ (i.e., an Activity Scheme eases another), _informs_ (i.e., an Activity Scheme advises another), or _prioritizes_ (i.e., an Activity Scheme increases the importance of another).
 
+* There are different ways of implementing the mechanisms to indicate that an **Organizational Goal** has been achieved: (1) associate a specific Signifier to the Organizational Goal meaning that when the behavior associated to that Signifier is performed, the Organizational Goal is achieved, (2) define generic Organizational Goals and generic Signifiers allowing Agents to identify the association between them and the Organizational Goal achievement.
+
 * The **Mission Relationship** must not be used directly, a sub-property must be created to specify the exact type of relation being represented between missions.
 
 * The **Mission Incompatibility** and **Mission Constraint** are represented as a SHACL shape instead of an RDF triple. For example, the SHACL shape constraining the number of Agents that can commit to the Mission is
 
 ```
-TDB
+ex:MissionCardinalityShape a sh:NodeShape ;
+    sh:targetClass hmas:Mission ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The number of agents member of a mission cannot be greater than 1." ;
+        sh:prefixes ex:, hmas:, rdfs: ;
+        sh:select """
+			      SELECT (?agent as $this) (COUNT(?s) as ?c)
+            WHERE {
+              ?m a ?missionModel ;
+                ?s hmas:isMissionOf ?agent .
+            }
+            HAVING (COUNT(?s) > 1)
+			    """ ;
+        ] .
 ```

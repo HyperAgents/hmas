@@ -42,63 +42,63 @@
     rdfs:domain :Mission ;
     rdfs:range :Agent ;
     rdfs:comment "A relation that refers to an Agent involved in a Mission."@en ;
-    rdfs:label "is mission of"@en, "est la mission de"@fr .
+    rdfs:label "is a mission of"@en, "est une mission de"@fr .
 
 :isMissionFor a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Mission ;
     rdfs:range :OrganizationalGoal ;
     rdfs:comment "A relation that refers to an Organizational Goal involved in a Mission."@en ;
-    rdfs:label "is mission for"@en, "est la mission pour"@fr .
+    rdfs:label "is a mission for"@en, "est une mission pour"@fr .
 
 :isMissionIn a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Mission ;
     rdfs:range :ProcessScheme ;
     rdfs:comment "A relation that refers to a Process Scheme involved in a Mission."@en ;
-    rdfs:label "is mission in"@en, "est la mission en"@fr .
+    rdfs:label "is a mission in"@en, "est une mission en"@fr .
 
 :hasMissionRelationshipWith a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Mission ;
     rdfs:range :Mission ;
     rdfs:comment "A relation that refers to the relationship between two Missions, e.g., complementary missions."@en ;
-    rdfs:label "has mission relationship with"@en, "a une relation de mission avec"@fr .
+    rdfs:label "has a mission relationship with"@en, "a une relation de mission avec"@fr .
     
 :isSubOrganizationalGoalOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :OrganizationalGoal ;
     rdfs:range :OrganizationalGoal ;
     rdfs:comment "A relation that refers to a hierarchical relationship between two Organizational Goals. A Sub-Organizational Goal is an Organizational Goal that has to be achieved for the parent Organizational Goal to be achieved."@en ;
-    rdfs:label "is sub-organizational goal of"@en, "est le but sous-organisationnel de"@fr .
+    rdfs:label "is a sub-organizational goal of"@en, "est un but sous-organisationnel de"@fr .
     
 :achievesOrganizationalGoal a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :ActivityScheme ;
     rdfs:range :OrganizationalGoal ;
     rdfs:comment "A relation that refers to an Organizational Goal coordinated by an Activity Scheme."@en ;
-    rdfs:label "achieves organizational goal"@en, "coordonner but organisationnel"@fr .
+    rdfs:label "achieves an organizational goal"@en, "coordonner une but organisationnel"@fr .
 
 :proposesProcessScheme a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
     rdfs:range :ProcessScheme ;
     rdfs:comment "A relation that refers to a Process Scheme that can be carried out within an Organization."@en ;
-    rdfs:label "proposes activity scheme"@en, "propose une schéma d'activité"@fr .
+    rdfs:label "proposes activity scheme"@en, "propose schéma d'activité"@fr .
 
 :hasRootActivityScheme a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :ProcessScheme ;
     rdfs:range :RootActivityScheme ;
     rdfs:comment "A relation that refers to the Root Activity Scheme (i.e., an Activity Scheme origin of a set of connected Activity Schemes) associated to a Process Scheme."@en ;
-    rdfs:label "has root activity scheme"@en, "a un schéma d'activité racine"@fr .
+    rdfs:label "has root activity scheme"@en, "a schéma d'activité racine"@fr .
     
 :proposesActivityScheme a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
     rdfs:range :ActivityScheme ;
     rdfs:comment "A relation that refers to an Activity Scheme that can be carried out within an Organization."@en ;
-    rdfs:label "proposes activity scheme"@en, "propose une schéma d'activité"@fr .
+    rdfs:label "proposes an activity scheme"@en, "propose une schéma d'activité"@fr .
     
 :isDependentOnActivityScheme a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
