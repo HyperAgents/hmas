@@ -1,5 +1,7 @@
 ![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/ecc76114da46334e44dc7c93634eecdb/raw/hmas__heads_test-workflow.json)![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/49b9c637b24deb44e9a1d229af74cdc8/raw/hmas__heads_test-workflow.json)![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/75a02c6b20baf6cd4bc6ec4c2148fb21/raw/hmas__heads_test-workflow.json)![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/9a8586dfcd702f1511d18b5f81fd1594/raw/hmas__heads_test-workflow.json)![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/a242e427a25c90887a3213049eb60af7/raw/hmas__heads_test-workflow.json)
 
+![OWL EL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/d841536a179eda023f7f7632ac8bf097/raw/hmas__heads_test-workflow.json)![OWL QL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/f71c4cfd7771cad2396dce2bd05342f4/raw/hmas__heads_test-workflow.json)![OWL RL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/d0b6815d22e3ab9bec11be83f725c9f9/raw/hmas__heads_test-workflow.json)
+
 # Hyperagent ontology git space
 
 

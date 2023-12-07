@@ -32,6 +32,13 @@ jobs:
         echo "MINORFAIL=$(echo ${TOKENS[11]})" >> $GITHUB_ENV
         echo "MAJORFAIL=$(echo ${TOKENS[14]})" >> $GITHUB_ENV
 
+        echo "EL_LABEL=$(echo ${TOKENS[17]})" >> $GITHUB_ENV
+        echo "EL_COLOR=$(echo ${TOKENS[20]})" >> $GITHUB_ENV
+        echo "QL_LABEL=$(echo ${TOKENS[23]})" >> $GITHUB_ENV
+        echo "QL_COLOR=$(echo ${TOKENS[26]})" >> $GITHUB_ENV
+        echo "RL_LABEL=$(echo ${TOKENS[29]})" >> $GITHUB_ENV
+        echo "RL_COLOR=$(echo ${TOKENS[32]})" >> $GITHUB_ENV
+
         REF=${{ github.ref }}
         echo "github.ref: $REF"
         IFS='/' read -ra PATHS <<< "$REF"
@@ -98,3 +105,30 @@ jobs:
         label: MajorFail
         message: ${{ env.MAJORFAIL }}
         color: red
+    - name: Create the OWL_EL Badge
+      uses: schneegans/dynamic-badges-action@v1.7.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: d841536a179eda023f7f7632ac8bf097
+        filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
+        label: OWL RL
+        message: ${{ env.EL_LABEL }}
+        color: ${{ env.EL_COLOR }}
+    - name: Create the OWL_QL Badge
+      uses: schneegans/dynamic-badges-action@v1.7.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: f71c4cfd7771cad2396dce2bd05342f4
+        filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
+        label: OWL RL
+        message: ${{ env.QL_LABEL }}
+        color: ${{ env.QL_COLOR }}
+    - name: Create the OWL_RL Badge
+      uses: schneegans/dynamic-badges-action@v1.7.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: d0b6815d22e3ab9bec11be83f725c9f9
+        filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
+        label: OWL RL
+        message: ${{ env.RL_LABEL }}
+        color: ${{ env.RL_COLOR }}

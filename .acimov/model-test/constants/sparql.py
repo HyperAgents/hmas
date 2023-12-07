@@ -260,3 +260,21 @@ SELECT ?identifier ?title ?description ?description {
     dcterms:description ?description .
 }
 """
+
+IS_OWL_EL_COMPATIBLE = """
+ask {
+  ?assertion a earl:Assertion ;
+  earl:subject ?subject ;
+  earl:result ?result .
+  
+  ?result earl:outcome ?outcome .
+  ?outcome dcterms:title ?title .
+  ?outcome a earl:Pass .
+  ?subject dcterms:identifier "all-modules" .
+  
+  FILTER(contains(?title, "OWL EL"))
+}
+"""
+
+IS_OWL_QL_COMPATIBLE = IS_OWL_EL_COMPATIBLE.replace("OWL EL", "OWL QL")
+IS_OWL_RL_COMPATIBLE = IS_OWL_EL_COMPATIBLE.replace("OWL EL", "OWL RL")
