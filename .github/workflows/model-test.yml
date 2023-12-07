@@ -38,6 +38,7 @@ jobs:
         BRANCH_NAME="${PATHS[1]}_${PATHS[2]}"
         echo $BRANCH_NAME
         echo "BRANCH=$(echo ${BRANCH_NAME})" >> $GITHUB_ENV
+        echo "REPO=$(echo ${{ github.repository }} | cut -d'/' -f2')" >> $GITHUB_ENV
 
     - name: Archive model test results
       uses: actions/upload-artifact@v3
@@ -57,7 +58,7 @@ jobs:
       with:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: a242e427a25c90887a3213049eb60af7
-        filename: hmas__${{ env.BRANCH }}.json
+        filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
         label: MajorFail
         message: ${{ env.MAJORFAIL }}
         color: red
