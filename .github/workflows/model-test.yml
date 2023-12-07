@@ -111,7 +111,7 @@ jobs:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: d841536a179eda023f7f7632ac8bf097
         filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
-        label: OWL RL
+        label: OWL EL
         message: ${{ env.EL_LABEL }}
         color: ${{ env.EL_COLOR }}
     - name: Create the OWL_QL Badge
@@ -120,7 +120,7 @@ jobs:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: f71c4cfd7771cad2396dce2bd05342f4
         filename: ${{ env.REPO }}__${{ env.BRANCH }}.json
-        label: OWL RL
+        label: OWL QL
         message: ${{ env.QL_LABEL }}
         color: ${{ env.QL_COLOR }}
     - name: Create the OWL_RL Badge
