@@ -47,7 +47,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: model-test-report
-        path: .acimov/output/actions.md
+        path: .acimov/output/model-test-actions.md
     - name: Commit the report
       run: |
         git config --global user.email "no-reply@github.com"
