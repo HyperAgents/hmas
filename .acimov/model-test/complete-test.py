@@ -11,7 +11,6 @@ from constants import (
     MODELETS_TTL_GLOB_PATH,
     DEV_USERNAME,
     PWD_TO_MODEL_OUTPUT_FOLDER,
-    PWD_TO_ROOT_FOLDER,
     PROFILE_CHECK_URI,
     BRANCH
 )
@@ -106,7 +105,7 @@ merged_fragment_set_test(
 )
 
 file_name = mode if not mode == "manual" else f"{mode}-{DEV_USERNAME}-{datetime_id()}"
-file_base = f"{PWD_TO_MODEL_OUTPUT_FOLDER}{file_name}"
+file_base = f"{PWD_TO_MODEL_OUTPUT_FOLDER}model-test-{file_name}"
 
 print_title("Exporting results")
 
