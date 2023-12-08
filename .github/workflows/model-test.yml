@@ -1,9 +1,5 @@
 name: model-test
-on:
-  push:
-    branches:
-    - test-workflow
-
+on: push
 
 jobs:
   model-test:
