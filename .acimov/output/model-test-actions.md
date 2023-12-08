@@ -15,7 +15,7 @@ Here is some context about under which context this test was made
 |Title|NicoRobertIn using actions script|
 |Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/test-workflow/.acimov/model-test/complete-test.py)
-|Date|2023-12-08 16:52:52|
+|Date|2023-12-08 16:54:59|
 
 ***
 
@@ -1110,7 +1110,7 @@ This subchapter gives more details to the :exclamation:MinorFail assertions
 |----|----|
 |Title|Terms not labeled|
 |Description|The term :Affordance has no rdfs:label to define it in natural language|
-|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
+|Pointer|<pre lang="Turtle"><code>:Affordance a skos:Concept ;&#10;dct:references [ a owl:NamedIndividual ;&#10;rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ;&#10;dct:identifier &#60;https://doi.org/10.1162/biot.2007.2.1.23> ],&#10;[ a owl:NamedIndividual ;&#10;rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ;&#10;dct:identifier &#60;https://mitpress.mit.edu/9780262640374/> ],&#10;[ rdfs:label "Chemero and Turvey, 2007"@en ;&#10;dct:bibliographicCitation "Chemero, A., & Turvey, M. T. (2007). Complexity, hypersets, ..."@en ],&#10;[ rdfs:label "Norman, 2013"@en ;&#10;dct:bibliographicCitation "Norman, D. (2013). The design of everyday things: Revised an..."@en ] ;&#10;rdfs:isDefinedBy :core ;&#10;skos:definition "A behavior possibility that is a relationship between an abi..."@en ;&#10;skos:editorialNote "The concept has been considered as a candidate term for repr..."@en ;&#10;skos:historyNote "The definition of the concept follows affordance theorists [..."@en ;&#10;skos:prefLabel "affordance"@en ;&#10;skos:related :Signifier .</code></pre>|
 
 ***
 ### MinorFail Assertion number 33
