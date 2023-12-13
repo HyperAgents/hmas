@@ -3,13 +3,13 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
-select ?mission
+select ?orgGoal
 where {
   ex:SL_Logistics a ?orgModel .
   ?orgModel rdfs:subClassOf hmas:Organization ;
             sh:property [
-              sh:path  hmas:proposesMission ;
-              sh:qualifiedValueShape [ sh:class ?missionModel ] ;
+              sh:path  hmas:hasOrganizationalGoal ;
+              sh:qualifiedValueShape [ sh:class ?orgGoalModel ] ;
             ] .
   { ?orgModel a sh:NodeShape . }
   union
@@ -17,13 +17,13 @@ where {
               sh:targetClass ?orgModel .
   }
 
-  ?missionModel rdfs:subClassOf hmas:Mission .
-  { ?missionModel a sh:NodeShape . }
+  ?orgGoalModel rdfs:subClassOf hmas:OrganizationalGoal .
+  { ?orgGoalModel a sh:NodeShape . }
   union
-  { ?missionShape a sh:NodeShape ;
-                  sh:targetClass ?missionModel .
+  { ?orgGoalShape a sh:NodeShape ;
+                  sh:targetClass ?orgGoalModel .
   }
   
-  ?mission a ?missionModel
+  ?orgGoal a ?orgGoalModel
 }
-order by ?mission
+order by ?orgGoal
