@@ -42,8 +42,8 @@ The FL Logistics also mirrors the functions of the spacial layout by defining a 
 
 ![image](create-organization.png)
 
-* **Organization Model**: An Organization Model is the combination of Roles, Missions, and Facilities in a consistent way used to enact one or multiple Organizations.
-* **Organizational Value**: An Organizational Value is a belief about a socially or personally desirable end state or action that is explicitly or implicitly shared by members of an organization.
+* **Organization Model**: An Organization Model is the combination of Roles, Organizational Goals, and Facilities in a consistent way used to enact one or multiple Organizations.
+* **Organizational Value**: An Organizational Value is a belief about a socially or personally desirable end state or action that is explicitly or implicitly shared by members of an Organization.
 * **Role**: A Role defines positions of members (i.e., Agents) in an Organization.
 * **Organizational Goal**: An Organizational Goal is a pursued state of affairs.
 * **Facility**: A Facility defines functions of materials (i.e., Artifacts) in an Organization.
@@ -54,4 +54,4 @@ The FL Logistics also mirrors the functions of the spacial layout by defining a 
 
 ## Recommendations
 
-None
+* **Organizational Goal**s are strategic objectives that tehe **Organization** management establishes to outline expected outcomes and guide members' efforts. **Organizational Goal**s should be as specific as possible to the **Organization**, thus a `hmas:OrganizationalGoal` subclass should be created for each instace of the **Organization Model**.
