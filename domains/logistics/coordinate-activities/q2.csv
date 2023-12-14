@@ -1,0 +1,9 @@
+activity,dependence,activityOther
+http://example.org/FL_AccountManager_AnnouncingJobPosition,http://example.org/isPrecededBy,http://example.org/FL_AccountManager_WritingJobPosition
+http://example.org/FL_AccountManager_Hiring,http://example.org/isPrecededBy,http://example.org/FL_AccountManager_SigningContract
+http://example.org/FL_AccountManager_InterviewingCandidates,http://example.org/isFacilitatedBy,http://example.org/FL_AccountManager_AssessingRecommendations
+http://example.org/FL_AccountManager_SelectingCandidate,http://example.org/isBiasedBy,http://example.org/FL_AccountManager_AssessingRecommendations
+http://example.org/FL_AccountManager_SelectingCandidate,http://example.org/isPrecededBy,http://example.org/FL_AccountManager_AssessingRecommendations
+http://example.org/FL_AccountManager_SelectingCandidate,http://example.org/isPrecededBy,http://example.org/FL_AccountManager_InterviewingCandidates
+http://example.org/FL_AccountManager_SelectingInterviewees,http://example.org/isPrecededBy,http://example.org/FL_AccountManager_AnnouncingJobPosition
+http://example.org/FL_AccountManager_SigningContract,http://example.org/isPrecededBy,http://example.org/FL_AccountManager_SelectingCandidate
