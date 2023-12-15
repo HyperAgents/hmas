@@ -960,11 +960,11 @@ ex:FL_AccountManager_JobPositionWritten a ex:JobPositionWritten .
 ## Missions
 ex:FL_AccountManager_HR_Hiring a ex:HR_Hiring ;
     hmas:isMissionOf ex:Frank ;
-    hmas:isMissionIn ex:FL_AccountManager_Hiring ;
+    hmas:isMissionIn ex:FL_AccountManager_HiringProcess ;
     hmas:isMissionFor ex:FL_AccountManager_Hired, ex:FL_AccountManager_ContractSigned, ex:FL_AccountManager_JobPositionAnnounced .
 ex:FL_AccountManager_Dept_Hiring a ex:Dept_Hiring ;
     hmas:isMissionOf ex:Kate ;
-    hmas:isMissionIn ex:FL_AccountManager_Hiring ;
+    hmas:isMissionIn ex:FL_AccountManager_HiringProcess ;
     hmas:isMissionFor ex:FL_AccountManager_CandidateSelected, ex:FL_AccountManager_RecommendationsAssessed, ex:FL_AccountManager_CandidatesInterviewed, ex:FL_AccountManager_InterviewsScheduled, ex:FL_AccountManager_InterviewsConducted, ex:FL_AccountManager_IntervieweesSelected, ex:FL_AccountManager_JobPositionWritten .
 
 ex:FL_AccountManager_Dept_Hiring ex:complements ex:FL_AccountManager_HR_Hiring .
