@@ -1,0 +1,14 @@
+name: init-branch
+on: create
+
+jobs:
+  model-test:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Wimmics/olivaw/init-branch@v0.0.1
+      with:
+        repository: ${{ github.repository }}
+        ref: ${{ github.ref }}
+        gist-secret: ${{ secrets.GIST_SECRET }}
