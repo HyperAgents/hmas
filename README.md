@@ -1,15 +1,13 @@
-![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_olivaw_PASS.json)
-![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_olivaw_NOTTESTED.json)
-![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_olivaw_CANNOTTELL.json)
-![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_olivaw_MINORFAIL.json)
-![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_olivaw_MAJORFAIL.json)
+![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_PASS.json)
+![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_NOTTESTED.json)
+![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_CANNOTTELL.json)
+![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_MINORFAIL.json)
+![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_MAJORFAIL.json)
  
-![OWL EL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_olivaw_EL.json)
-![OWL QL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_olivaw_QL.json)
-![OWL RL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_olivaw_RL.json)
- 
-![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/ecc76114da46334e44dc7c93634eecdb/raw/hmas__heads_test-workflow.json)![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/49b9c637b24deb44e9a1d229af74cdc8/raw/hmas__heads_test-workflow.json)![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/75a02c6b20baf6cd4bc6ec4c2148fb21/raw/hmas__heads_test-workflow.json)![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/9a8586dfcd702f1511d18b5f81fd1594/raw/hmas__heads_test-workflow.json)![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/a242e427a25c90887a3213049eb60af7/raw/hmas__heads_test-workflow.json)
-![OWL EL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/d841536a179eda023f7f7632ac8bf097/raw/hmas__heads_test-workflow.json)![OWL QL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/f71c4cfd7771cad2396dce2bd05342f4/raw/hmas__heads_test-workflow.json)![OWL RL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/d0b6815d22e3ab9bec11be83f725c9f9/raw/hmas__heads_test-workflow.json)
+![OWL EL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_EL.json)
+![OWL QL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QL.json)
+![OWL RL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_RL.json)
+
 # Hyperagent ontology git space
 [HyperAgents](https://www.hyperagents.org/) is an ANR/SNF project working towards the deployment of world-wide hybrid communities of people and artificial agents on the Web. For this purpose, we are defining a new class of multi-agent systems (MAS) that are: 
 1) aligned with the Web architecture to inherit the properties of the Web as a world-wide, open, and long-lived system ; 
