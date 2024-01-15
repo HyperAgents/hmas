@@ -1,0 +1,660 @@
+@base <https://ns.inria.fr/hmas/> .
+
+# Artifacts
+@prefix ra1: <workspaces/cup-production-site/artifacts/robotic-arm-1#> .
+@prefix ra2: <workspaces/cup-production-site/artifacts/robotic-arm-2#> .
+@prefix truck: <workspaces/cup-production-site/artifacts/truck#> .
+
+# Workspaces
+@prefix cpr: <workspaces/cup-production-site#> .
+
+# Agents
+@prefix ag-b: <workspaces/cup-production-site/agents/agent-b#> .
+@prefix ag-c: <workspaces/cup-production-site/agents/agent-c#> .
+@prefix ag-d: <workspaces/cup-production-site/agents/agent-d#> .
+
+# Organizations
+#   Nothing to see there... for now
+
+# Platforms
+@prefix plat: <#platform> .
+
+# Other prefixes
+@prefix hmas: <https://purl.org/hmas/> .
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+
+@prefix cherrybot: <https://interactions.ics.unisg.ch/cherrybot#> .
+
+
+#############
+# Artifacts #
+#############
+
+ra1:artifact a hmas:Artifact ;
+    hmas:isHostedOn plat:platform .
+
+ra2:artifact a hmas:Artifact ;
+    hmas:isHostedOn plat:platform .
+
+truck:artifact a hmas:Artifact ;
+    hmas:isHostedOn plat:platform .
+
+############################
+# Signifier base materials #
+############################
+
+#_:MyForm
+#    htv:headers (
+#        [
+#            a htv:messageHeader ;
+#            http:fieldName "Authorization" ;
+#            http:fieldValue  "blablabla"
+#        ]
+#    ) .
+
+#_:Ra1SettableTarget a sh:NodeShape ;
+#    sh:class hmas:ActionExecution ;
+#    sh:property [
+#        sh:path prov:used ;
+#        sh:minCount 1 ;
+#        sh:maxCount 1 ;
+#        sh:hasValue [
+#            a hctl:Form ;
+#            hctl:forContentType "application/json";
+#            htv:methodName "POST" ;
+#            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/tcp/target>
+#        ]
+#    ], [
+#       sh:path (
+#           prov:used
+#           htv:headers
+#           [sh:zeroOrMorePath rdf:rest]
+#           rdf:first
+#       ) ;
+#       sh:minQualifiedShape 1;
+#       sh:maxQualifiedShape 1;
+#       sh:qualifiedValueShape [
+#           sh:class htv:messageHeader ;
+#           sh:property [
+#               sh:path http:fieldName ;
+#               sh:hasValue "Authorization"
+#           ] , [
+#               sh:path http:fieldValue ;
+#               sh:minCount 1 ;
+#               sh:maxCount 1
+#           ]
+#       ];
+#    ], [
+#       sh:path hmas:hasInput ;
+#       sh:qualifiedMinCount 1 ;
+#       sh:qualifiedMaxCount 1 ;
+#       sh:qualifiedValueShape _:JsonSetPositionBody
+#    ] ;
+#    sh:sparql [
+#        a sh:SPARQLConstraint ;
+#        sh:select """
+#        SELECT $this WHERE { $this htv:headers ?list . ?list rdf:rest*/rdf:first ?header . ?header htv:fieldName "Authorization" }
+#        """
+#    ].
+
+ex:canBeFriendwithShape a sh:NodeShape ;
+    sh:targetNode hmas:Membership ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Both memberships must be related to the same group." ;
+        sh:prefixes ex:, hmas:, rdfs: ;
+        sh:select """ SELECT $this (ex:canBeFriendWith AS ?path)
+                 WHERE {
+                 ?m1 ex:canBeFriendWith ?m2 .
+                 MINUS {
+                    ?m1 hmas:isMembershipIn ?group1 .
+                    ?m2 hmas:isMembershipIn ?group1 .
+                       }
+                 } """ ;
+            ] .
+
+[
+    a sh:NodeShape ;
+    sh:class rdf:List ;
+]
+
+_:SecuredForm a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:sparql ;
+                owl:hasValue [
+                    a sh:SPARQLConstraint ;
+                    
+                ]
+            ]
+            owl:Class
+        )
+    ]
+
+
+# An action execution with a sh:class set on hmas:ActionExecution
+_:ActionExecutionShape a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:class ;
+                owl:hasValue hmas:ActionExecution
+            ]
+            sh:NodeShape
+        )
+    ] .
+
+# A hctl:Form with a hctl:forContentType set on "application/json"
+_:ApplicationJsonForm a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty hctl:forContentType ;
+                owl:hasValue "application/json"
+            ]
+            hctl:Form
+        )
+    ] .
+
+# An _:ApplicationJsonForm with a htv:methodName set to "GET"
+_:GetForm a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty htv:methodName ;
+                owl:hasValue "GET"
+            ]
+            _:ApplicationJsonForm
+        )
+    ] .
+
+# An _:ApplicationJsonForm with a htv:methodName set to "PUT"
+_:PutForm a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty htv:methodName ;
+                owl:hasValue "PUT"
+            ]
+            _:ApplicationJsonForm
+        )
+    ] .
+
+# An _:ApplicationJsonForm with a htv:methodName set to "POST"
+_:PostForm a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty htv:methodName ;
+                owl:hasValue "POST"
+            ]
+            _:ApplicationJsonForm
+        )
+    ] .
+
+# An _:ApplicationJsonForm with a htv:methodName set to "DELETE"
+_:DeleteForm a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty htv:methodName ;
+                owl:hasValue "DELETE"
+            ]
+            _:ApplicationJsonForm
+        )
+    ] .
+
+# A UrlConstraint is a sh:PropertyShape with:
+#   - a sh:path set to prov:used
+#   - a sh:minCount set to 1
+#   - a sh:maxCount set to 1
+_:UrlConstraint a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:path ;
+                owl:hasValue prov:used
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:minCount ;
+                owl:hasValue 1
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:maxCount ;
+                owl:hasValue 1
+            ]
+            sh:PropertyShape
+        )
+    ] .
+
+# A JsonBodyShape is a sh:PropertyShape with:
+#   - a sh:path set to hmas:hasInput
+#   - a sh:qualifiedMinCount set to 1
+#   - a sh:qualifiedMaxCount set to 1
+_:JsonBodyShape a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:path ;
+                owl:hasValue hmas:hasInput
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:qualifiedMinCount ;
+                owl:hasValue 1
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:qualifiedMaxCount ;
+                owl:hasValue 1
+            ]
+            sh:PropertyShape
+        )
+    ] .
+
+####################
+# JSON Body shapes #
+####################
+
+_:JsonSetOperatorBody a sh:NodeShape ;
+    sh:class cherrybot:OperatorSchema ;
+    sh:property [
+        sh:path foaf:name ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] , [
+        sh:path foaf:mbox ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] .
+
+_:JsonRotationElement a sh:NodeShape ;
+    sh:class cherrybot:CoordinatesSchema ;
+    sh:property [
+        sh:path cherrybot:xCoordinate ;
+        sh:minExclusive -7.2E2 ;
+        sh:maxExclusive 7.2E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] , [
+        sh:path cherrybot:yCoordinate ;
+        sh:minExclusive -7.2E2 ;
+        sh:maxExclusive 7.2E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] , [
+        sh:path cherrybot:zCoordinate ;
+        sh:minExclusive -7.2E2 ;
+        sh:maxExclusive 7.2E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] .
+
+_:JsonTranslationElement a sh:NodeShape ;
+    sh:class cherrybot:RotationSchema ;
+    sh:property [
+        sh:path cherrybot:roll ;
+        sh:minExclusive -1.8E2 ;
+        sh:maxExclusive 1.8E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] , [
+        sh:path cherrybot:pitch ;
+        sh:minExclusive -1.8E2 ;
+        sh:maxExclusive 1.8E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] , [
+        sh:path cherrybot:yaw ;
+        sh:minExclusive -1.8E2 ;
+        sh:maxExclusive 1.8E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] .
+
+_:JsonSetPositionBody a sh:NodeShape ;
+    sh:class cherrybot:TcpMovementSchema ;
+    sh:property [
+        sh:path cherrybot:coordinate ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape _:JsonTranslationElement
+    ] , [
+        sh:path cherrybot:rotation ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape _:JsonRotationElement
+    ] .
+
+######################################
+# Robotic Arm 1 Endpoints Definition #
+######################################
+        
+_:Ra1ReadableOperator a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:GetForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/operator>
+        ]
+    ] .
+
+_:Ra1ReadablePosition a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:GetForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/tcp>
+        ]
+    ] .
+
+_:Ra1ReadableTarget a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:GetForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/tcp/target>
+        ]
+    ] .
+
+_:Ra1ReadableGripper a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:GetForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/gripper>
+        ]
+    ] .
+
+_:Ra1InitializableArm a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:PutForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/initialize>
+        ]
+    ] .
+
+_:Ra1SettableOperator a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:PostForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/operator>
+        ]
+    ] , [
+        a _:JsonBodyShape ;
+        sh:qualifiedValueShape _:JsonSetOperatorBody
+    ] .
+
+_:Ra1SettableTarget a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:PutForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/tcp/target>
+        ]
+    ] , [
+        a _:JsonBodyShape ;
+        sh:qualifiedValueShape _:JsonSetPositionBody
+    ] .
+
+_:Ra1SettableGripper a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:PutForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/gripper>
+        ]
+    ] , [
+        sh:path hmas:hasInput ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minExclusive 0 ;
+        sh:maxExclusive 800
+    ] .
+
+_:Ra1DeletableOperator a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:value [
+            a _:DeleteForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot1/operator/%7Btoken%7D>
+        ]
+    ] .
+
+######################################
+# Robotic Arm 2 Endpoints Definition #
+######################################
+        
+_:Ra2ReadableOperator a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:GetForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/operator>
+        ]
+    ] .
+
+_:Ra2ReadablePosition a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:GetForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/tcp>
+        ]
+    ] .
+
+_:Ra2ReadableTarget a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:GetForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/tcp/target>
+        ]
+    ] .
+
+_:Ra2ReadableGripper a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:GetForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/gripper>
+        ]
+    ] .
+
+_:Ra2InitializableArm a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:PutForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/initialize>
+        ]
+    ] .
+
+_:Ra2SettableOperator a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:PostForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/operator>
+        ]
+    ] , [
+        a _:JsonBodyShape ;
+        sh:qualifiedValueShape _:JsonSetOperatorBody
+    ] .
+
+_:Ra2SettableTarget a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:PutForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/tcp/target>
+        ]
+    ] , [
+        a _:JsonBodyShape ;
+        sh:qualifiedValueShape _:JsonSetPositionBody
+    ] .
+
+_:Ra2SettableGripper a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:hasValue [
+            a _:PutForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/gripper>
+        ]
+    ] , [
+        sh:path hmas:hasInput ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minExclusive 0 ;
+        sh:maxExclusive 800
+    ] .
+
+_:Ra2DeletableOperator a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:value [
+            a _:DeleteForm ;
+            hctl:hasTarget <https://api.interactions.ics.unisg.ch/cherrybot2/operator/%7Btoken%7D>
+        ]
+    ] .
+
+###################
+# Truck Endpoints #
+###################
+
+_:TruckReadableBattery a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:value [
+            a _:GetForm ;
+            hctl:hasTarget <http://192.168.1.26/properties/pmu>
+        ]
+    ] .
+
+_:TruckReadableAccelerometer a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:value [
+            a _:GetForm ;
+            hctl:hasTarget <http://192.168.1.29/properties/imu>
+        ]
+    ] .
+
+_:TruckSettableWheels a _:ActionExecutionShape ;
+    sh:property [
+        a _:UrlConstraint ;
+        sh:value [
+            a _:PostForm ;
+            hctl:hasTarget <http://192.168.1.29/actions/wheelControl>
+        ]
+    ]
+
+###############################
+# Artifacts Resource Profiles #
+###############################
+
+ra1: a hmas:ResourceProfile ;
+    hmas:isProfileOf ra1:artifact ;
+    hmas:exposesSignifier   [ hmas:signifies _:Ra1ReadableOperator ] ,
+                            [ hmas:signifies _:Ra1ReadablePosition ] ,
+                            [ hmas:signifies _:Ra1ReadableTarget ] ,
+                            [ hmas:signifies _:Ra1ReadableGripper ] ,
+                            [ hmas:signifies _:Ra1InitializableArm ] ,
+                            [ hmas:signifies _:Ra1SettableOperator ] ,
+                            [ hmas:signifies _:Ra1SettableTarget ] ,
+                            [ hmas:signifies _:Ra1SettableGripper ] ,
+                            [ hmas:signifies _:Ra1DeletableOperator ] .
+
+ra2: a hmas:ResourceProfile ;
+    hmas:isProfileOf ra2:artifact ;
+    hmas:exposesSignifier   [ hmas:signifies _:Ra2ReadableOperator ] ,
+                            [ hmas:signifies _:Ra2ReadablePosition ] ,
+                            [ hmas:signifies _:Ra2ReadableTarget ] ,
+                            [ hmas:signifies _:Ra2ReadableGripper ] ,
+                            [ hmas:signifies _:Ra2InitializableArm ] ,
+                            [ hmas:signifies _:Ra2SettableOperator ] ,
+                            [ hmas:signifies _:Ra2SettableTarget ] ,
+                            [ hmas:signifies _:Ra2SettableGripper ] ,
+                            [ hmas:signifies _:Ra2DeletableOperator ] .
+
+truck: a hmas:ResourceProfile ;
+    hmas:isProfileOf truck:artifact ;
+    hmas:exposesSignifier   [ hmas:signifies _:TruckReadableBattery ] ,
+                            [ hmas:signifies _:TruckReadableAccelerometer ] ,
+                            [ hmas:signifies _:TruckSettableWheels ] .
+
+##############
+# Workspaces #
+##############
+
+cpr:workspace a hmas:Workspace ;
+    hmas:isHostedOn plat:platform ;
+    cpr:hasProfile cpr: ;
+    hmas:contains ra1:artifact, ra2:artifact, truck:artifact .
+
+##########
+# Agents #
+##########
+
+ag-b:agent a hmas:Agent ;
+    hmas:isHostedOn plat:platform ;
+    hmas:hasProfile ag-b: ;
+    hmas:isContainedIn cpr:Workspace .
+
+ag-c:agent a hmas:Agent ;
+    hmas:isHostedOn plat:platform ;
+    hmas:hasProfile ag-c: ;
+    hmas:isContainedIn cpr:Workspace .
+
+ag-d:agent a hmas:Agent ;
+    hmas:isHostedOn plat:platform ;
+    hmas:hasProfile ag-d: ;
+    hmas:isContainedIn cpr:Workspace .
+
+############
+# Platform #
+############
+
+plat: a hmas:Platform ;
+    hmas:hasProfile <> .
