@@ -9,10 +9,46 @@
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
                     dcterms:description "Test subject has a correct syntax"@en ;
                     dcterms:title "Correct syntax"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-core ;
+    earl:subject _:manufacturing ;
     earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:logistics-structure-organization ;
+    earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -29,7 +65,7 @@
             earl:outcome [ a earl:Pass ;
                     dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
                     dcterms:title "OWL RL consistent"@en ] ] ;
-    earl:subject _:manufacturing ;
+    earl:subject _:logistics-create-organization ;
     earl:test acimov-model-test:owl-rl-constraint .
 
 [] a earl:Assertion ;
@@ -38,7 +74,7 @@
             earl:outcome [ a earl:Pass ;
                     dcterms:description "Test subject has a correct syntax"@en ;
                     dcterms:title "Correct syntax"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-platforms ;
+    earl:subject _:manufacturing-environments-discover-signifiers ;
     earl:test acimov-model-test:syntax .
 
 [] a earl:Assertion ;
@@ -54,9 +90,27 @@
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:domain-template-scenario-template ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
                     dcterms:description "Test subject has a correct syntax"@en ;
                     dcterms:title "Correct syntax"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-organization ;
+    earl:subject _:logistics-structure-organization ;
     earl:test acimov-model-test:syntax .
 
 [] a earl:Assertion ;
@@ -65,7 +119,7 @@
             earl:outcome [ a earl:Pass ;
                     dcterms:description "Test subject has a correct syntax"@en ;
                     dcterms:title "Correct syntax"@en ] ] ;
-    earl:subject _:manufacturing ;
+    earl:subject _:domain-template-scenario-template ;
     earl:test acimov-model-test:syntax .
 
 [] a earl:Assertion ;
@@ -74,8 +128,35 @@
             earl:outcome [ a earl:Pass ;
                     dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
                     dcterms:title "OWL RL consistent"@en ] ] ;
-    earl:subject _:logistics-create-organization ;
+    earl:subject _:manufacturing-environments-discover-signifiers ;
     earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:syntax .
 
 [] a earl:Assertion ;
     earl:assertedBy _:NicoRobertIn-actions ;
@@ -92,24 +173,6 @@
             earl:outcome [ a earl:Pass ;
                     dcterms:description "Test subject has a correct syntax"@en ;
                     dcterms:title "Correct syntax"@en ] ] ;
-    earl:subject _:logistics-structure-organization ;
-    earl:test acimov-model-test:syntax .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:Pass ;
-                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
-                    dcterms:title "OWL RL consistent"@en ] ] ;
-    earl:subject _:domain-template-scenario-template ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:Pass ;
-                    dcterms:description "Test subject has a correct syntax"@en ;
-                    dcterms:title "Correct syntax"@en ] ] ;
     earl:subject _:logistics-create-organization ;
     earl:test acimov-model-test:syntax .
 
@@ -117,73 +180,10 @@
     earl:assertedBy _:NicoRobertIn-actions ;
     earl:result [ a earl:TestResult ;
             earl:outcome [ a earl:Pass ;
-                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
-                    dcterms:title "OWL RL consistent"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:Pass ;
-                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
-                    dcterms:title "OWL RL consistent"@en ] ] ;
-    earl:subject _:logistics-structure-organization ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:Pass ;
                     dcterms:description "Test subject has a correct syntax"@en ;
                     dcterms:title "Correct syntax"@en ] ] ;
-    earl:subject _:domain-template-scenario-template ;
+    earl:subject _:manufacturing-environments-discover-platforms ;
     earl:test acimov-model-test:syntax .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:Pass ;
-                    dcterms:description "Test subject has a correct syntax"@en ;
-                    dcterms:title "Correct syntax"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
-    earl:test acimov-model-test:syntax .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:NotTested ;
-                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
-                    dcterms:title "The test could not be run"@en ] ] ;
-    earl:subject _:manufacturing-environments-safety-rules ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:Pass ;
-                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
-                    dcterms:title "OWL RL consistent"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-signifiers ;
-    earl:test acimov-model-test:owl-rl-constraint .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:Pass ;
-                    dcterms:description "Test subject has a correct syntax"@en ;
-                    dcterms:title "Correct syntax"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-signifiers ;
-    earl:test acimov-model-test:syntax .
-
-[] a earl:Assertion ;
-    earl:assertedBy _:NicoRobertIn-actions ;
-    earl:result [ a earl:TestResult ;
-            earl:outcome [ a earl:Pass ;
-                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
-                    dcterms:title "OWL RL consistent"@en ] ] ;
-    earl:subject _:manufacturing-environments-discover-core ;
-    earl:test acimov-model-test:owl-rl-constraint .
 
 _:NicoRobertIn a foaf:Person ;
     schema:mainEntityOfPage <https://github.com/NicoRobertIn> .
@@ -239,7 +239,7 @@ _:manufacturing-environments-safety-rules a earl:TestSubject ;
     dcterms:title "Standalone dataset domains/manufacturing-environments/safety-rules/dataset.ttl from branch refs/heads/olivaw"@en .
 
 _:NicoRobertIn-actions a foaf:OnlineAccount ;
-    dcterms:date "2024-01-15T10:15:24.433927"^^xsd:dateTime ;
+    dcterms:date "2024-01-15T10:28:26.339569"^^xsd:dateTime ;
     dcterms:description "Test triggered by @NicoRobertIn by actions trigger"@en ;
     dcterms:title "NicoRobertIn using actions script"@en ;
     foaf:member <https://github.com/Wimmics/olivaw/blob/main/olivaw/test/data/suite.py> ;
