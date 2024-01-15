@@ -655,7 +655,7 @@ _:TruckReadableBattery a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            a _:GetMethod, _:AcceptJson ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <http://192.168.1.26/properties/pmu>
@@ -667,7 +667,7 @@ _:TruckReadableAccelerometer a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            a _:GetMethod, _:AcceptJson ;
             sh:property [
                 sh:hasValue <http://192.168.1.29/properties/imu>
             ]
@@ -678,7 +678,7 @@ _:TruckSettableWheels a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PostMethod, _:AcceptJson, _:Authorization ;
+            a _:PostMethod, _:AcceptJson ;
             sh:property [
                 sh:hasValue <http://192.168.1.29/actions/wheelControl>
             ]
