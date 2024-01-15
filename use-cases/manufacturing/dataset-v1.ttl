@@ -269,6 +269,20 @@ _:BodySpecification a owl:Class ;
             _:RequiredValueShape
         )
     ] .
+
+_:OutputBodySpecification a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (
+            [
+                a owl:Restriction ;
+                owl:onProperty sh:path ;
+                owl:hasValue hmas:hasOutput
+            ]
+            _:RequiredValueShape
+        )
+    ] .
+
 ####################
 # JSON Body shapes #
 ####################
@@ -375,6 +389,9 @@ _:JsonControlWheelBody a sh:NodeShape ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer 
     ] .
+
+_:JsonAgentBodyProfileBody a sh:NodeShape ;
+    sh:class hmas:ResourceProfile .
 
 ######################################
 # Robotic Arm 1 Endpoints Definition #
@@ -714,6 +731,24 @@ _:TruckSettableWheels a _:ActionExecutionShape ;
         sh:qualifiedValueShape _:JsonControlWheelBody
     ] .
 
+#######################
+# Workspace Endpoints #
+#######################
+
+_:WorkspaceJoinable a _:ActionExecutionShape ;
+    sh:property [
+        a _:EndpointSpecification ;
+        sh:qualifiedValueShape [
+            a _:PostMethod, _:AcceptJson ;
+            sh:property [
+                sh:hasValue <workspaces/cup-production-site>
+            ]
+        ]
+    ] , [
+        a _:OutputBodySpecification ;
+        sh:qualifiedValueShape _:JsonAgentBodyProfileBody
+    ] .
+
 ###############################
 # Artifacts Resource Profiles #
 ###############################
@@ -756,6 +791,14 @@ cpr:workspace a hmas:Workspace ;
     hmas:isHostedOn plat:platform ;
     cpr:hasProfile cpr: ;
     hmas:contains ra1:artifact, ra2:artifact, truck:artifact .
+
+################################
+# Workspaces Resource Profiles #
+################################
+
+cpr: a hmas:ResourceProfile ; 
+    hmas:isProfileOf cpr:workspace ;
+    hmas:exposesSignifier   [ hmas:signifies _:WorkspaceJoinable ] .
 
 ##########
 # Agents #
