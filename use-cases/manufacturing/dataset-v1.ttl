@@ -190,6 +190,20 @@ _:AcceptJson a owl:Class ;
         owl:hasValue _:AcceptJsonProperty
     ] .
 
+_:AcceptTurtleProperty a sh:PropertyShape ;
+    sh:path hctl:forContentType ;
+    sh:hasValue "text/turtle" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+
+_:AcceptTurtle a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty sh:property ;
+        owl:hasValue _:AcceptTurtleProperty
+    ] .
+
 _:MethodField a owl:Class ;
     owl:equivalentClass [
         a owl:Class ;
@@ -390,7 +404,7 @@ _:JsonControlWheelBody a sh:NodeShape ;
         sh:datatype xsd:integer 
     ] .
 
-_:JsonAgentBodyProfileBody a sh:NodeShape ;
+_:AgentBodyProfileBody a sh:NodeShape ;
     sh:class hmas:ResourceProfile .
 
 ######################################
@@ -739,14 +753,14 @@ _:WorkspaceJoinable a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PostMethod, _:AcceptJson ;
+            a _:PostMethod, _:AcceptTurtle ;
             sh:property [
                 sh:hasValue <workspaces/cup-production-site>
             ]
         ]
     ] , [
         a _:OutputBodySpecification ;
-        sh:qualifiedValueShape _:JsonAgentBodyProfileBody
+        sh:qualifiedValueShape _:AgentBodyProfileBody
     ] .
 
 ###############################
