@@ -1,0 +1,76 @@
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix fipa: <http://ns.hyperagents.org/fipa#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#>.
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/> .
+
+ex:agentProfile a fipa:AgentDescription ; 
+  hmas:isProfileOf ex:agent ;
+  hmas:exposesSignifier ex:requestable .
+
+ex:requestable a hmas:Signifier ;
+      hmas:signifies  ex:requestShape .
+
+ex:requestShape a sh:NodeShape ;
+	sh:class hmas:ActionExecution, fipa:Request ; 
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property [
+                sh:path hctl:forSubprotocol ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "fipa.mts.mtp.http.std" # (FIPA Agent Message Transport Protocol for HTTP Specification)
+            ], [
+                sh:path htv:methodName ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "POST"
+            ], [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue  <http://eduroamverw-130-82-25-24.unisg.ch:7778/acc>   
+            ]
+        ]
+    ], [ 
+      sh:path hmas:hasInput ;
+      sh:qualifiedValueShape ex:messageShape ;
+      sh:qualifiedMinCount 1 ;
+      sh:qualifiedMaxCount 1
+    ], [ 
+      sh:path hmas:isExecutedIn ;
+      sh:qualifiedValueShape ex:requestInteractionShape ;
+      sh:qualifiedMinCount 0 ;
+      sh:qualifiedMaxCount 1
+    ] .
+
+ex:messageShape a sh:NodeShape;
+  sh:class fipa:Message ;
+  sh:property [
+    sh:path fipa:hasReceiver ;
+    sh:hasValue ex:agent ;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasSender ;
+    sh:class hmas:Agent;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasPerformative ;
+    sh:hasValue fipa:request;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] .
+
+ex:requestInteractionShape a sh:NodeShape, fipa:RequestInteractionProtocolSpecification ;
+	sh:class hmas:BehaviorExecution . 
