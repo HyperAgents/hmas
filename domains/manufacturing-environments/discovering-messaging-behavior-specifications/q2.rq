@@ -1,0 +1,8 @@
+prefix hmas: <https://purl.org/hmas/>
+prefix ex: <http://example.org/>
+
+select ?actionExecutionSpec
+where {
+    ex:requestable hmas:signifies ?actionExecutionSpec .
+}
+order by ?actionExecutionSpec

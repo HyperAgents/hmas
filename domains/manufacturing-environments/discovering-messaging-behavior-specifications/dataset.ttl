@@ -1,9 +1,10 @@
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix fipa: <http://ns.hyperagents.org/fipa#> .
-@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#>.
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix htv: <http://www.w3.org/2011/http#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -14,7 +15,7 @@ ex:manufacturingWorkspace a hmas:Workspace ;
 
 #### Agent A's profile (the agent can request actions to be performed) ####
 
-ex:agentAProfile a fipa:AgentDescription ; 
+ex:agentAProfile a fipa:AgentDescription ;
   hmas:isProfileOf ex:agentA ;
   hmas:exposesSignifier ex:aggreable, ex:refusable .
 
@@ -28,7 +29,7 @@ ex:refusable a hmas:Signifier ;
 
 #### Endpoint for sending messages to Agent A ####
 ex:agentAMessageEndpointShape a sh:NodeShape ;
-	sh:class hmas:ActionExecution ; 
+	sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
         sh:minQualifiedShape 1 ;
@@ -49,44 +50,112 @@ ex:agentAMessageEndpointShape a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue  <http://eduroamverw-130-82-25-24.unisg.ch:7779/acc>   
+                sh:hasValue  <http://eduroamverw-130-82-25-24.unisg.ch:7779/acc>
             ]
         ]
     ].
 
 #### Send Agreement Action Specification ####
 ex:agreeShape a ex:agentAMessageEndpointShape ;
-	sh:class hmas:ActionExecution ; 
-    sh:property [ 
+	sh:class hmas:ActionExecution, dul:Action ;
+    sh:property [
       sh:path hmas:hasInput ;
       sh:qualifiedValueShape ex:agreeMessageShape ;
       sh:qualifiedMinCount 1 ;
       sh:qualifiedMaxCount 1
-    ], [ 
-      sh:path hmas:isExecutedIn ;
-      sh:qualifiedValueShape ex:requestInteractionShape ;
+    ], [
+      sh:path dul:isActionIncludedIn ;
+      sh:qualifiedValueShape [ sh:class fipa:RequestInteractionProtocolEnactment, dul:PlanExecution ] ;
       sh:qualifiedMinCount 0 ;
       sh:qualifiedMaxCount 1
     ] .
 
 #### Send Refusal Action Specification ####
 ex:refuseShape a ex:agentAMessageEndpointShape ;
-	sh:class hmas:ActionExecution ; 
-    sh:property [ 
+	sh:class hmas:ActionExecution, dul:Action ;
+    sh:property [
       sh:path hmas:hasInput ;
       sh:qualifiedValueShape ex:refuseMessageShape ;
       sh:qualifiedMinCount 1 ;
       sh:qualifiedMaxCount 1
-    ], [ 
-      sh:path hmas:isExecutedIn ;
-      sh:qualifiedValueShape ex:requestInteractionShape ;
+    ], [
+      sh:path dul:isActionIncludedIn ;
+      sh:qualifiedValueShape [ sh:class fipa:RequestInteractionProtocolEnactment, dul:PlanExecution ] ;
       sh:qualifiedMinCount 0 ;
       sh:qualifiedMaxCount 1
     ] .
 
+#### Agree Message Specification ####
+ex:agreeMessageShape a fipa:ACLMessageStructure ;
+  sh:class fipa:ACLMessage ;
+  sh:property [
+    sh:path fipa:hasReceiver ; # specifies itself as the receiver
+    sh:hasValue ex:agentA ;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasSender ; # specifies that the sender should be an agent
+    sh:class hmas:Agent;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:agree
+    sh:hasValue fipa:agree;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasContent ; # specifies that the content should be an action execution specification
+    sh:minQualifiedShape 1 ;
+    sh:maxQualifiedShape 1 ;
+    sh:qualifiedValueShape [ sh:class hmas:ActionExecution ]
+  ] ;
+  sh:property [
+    sh:path fipa:hasLanguage ;
+    sh:hasValue fipa:FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] .
+
+#### Refuse Message Specification ####
+ex:refuseMessageShape a fipa:ACLMessageStructure ;
+  sh:class fipa:ACLMessage ;
+  sh:property [
+    sh:path fipa:hasReceiver ; # specifies itself as the receiver
+    sh:hasValue ex:agentA ;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasSender ; # specifies that the sender should be an agent
+    sh:class hmas:Agent;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:refuse
+    sh:hasValue fipa:refuse;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasContent ; # specifies that the content should be an action execution specification
+    sh:minQualifiedShape 1 ;
+    sh:maxQualifiedShape 1 ;
+    sh:qualifiedValueShape [ sh:class hmas:ActionExecution ]
+  ] ;
+  sh:property [
+    sh:path fipa:hasLanguage ;
+    sh:hasValue fipa:FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] .
+
 #### Agent B's profile (the agent can perform actions upon requests) ####
 
-ex:agentBProfile a fipa:AgentDescription ; 
+ex:agentBProfile a fipa:AgentDescription ;
   hmas:isProfileOf ex:agentB ;
   hmas:exposesSignifier ex:requestable .
 
@@ -97,7 +166,7 @@ ex:requestable a hmas:Signifier ;
 
 #### Send Request Action Specification ####
 ex:requestShape a sh:NodeShape ;
-	sh:class hmas:ActionExecution ; 
+	sh:class hmas:ActionExecution, dul:Action ;
     sh:property [
         sh:path prov:used ;
         sh:minQualifiedShape 1 ;
@@ -118,23 +187,24 @@ ex:requestShape a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue  <http://eduroamverw-130-82-25-24.unisg.ch:7778/acc>   
+                sh:hasValue  <http://eduroamverw-130-82-25-24.unisg.ch:7778/acc>
             ]
         ]
-    ], [ 
+    ], [
       sh:path hmas:hasInput ;
       sh:qualifiedValueShape ex:requestMessageShape ;
       sh:qualifiedMinCount 1 ;
       sh:qualifiedMaxCount 1
-    ], [ 
-      sh:path hmas:isExecutedIn ;
-      sh:qualifiedValueShape [ sh:class fipa:RequestInteractionProtocol ] ;
+    ], [
+      sh:path dul:isActionIncludedIn ;
+      sh:qualifiedValueShape [ sh:class fipa:RequestInteractionProtocolEnactment, dul:PlanExecution ] ;
       sh:qualifiedMinCount 0 ;
       sh:qualifiedMaxCount 1
     ] .
 
-#### Request Message Specification 
+#### Request Message Specification
 ex:requestMessageShape a fipa:ACLMessageStructure ;
+  sh:class fipa:ACLMessage ;
   sh:property [
     sh:path fipa:hasReceiver ; # specifies itself as the receiver
     sh:hasValue ex:agentB ;
@@ -142,7 +212,7 @@ ex:requestMessageShape a fipa:ACLMessageStructure ;
     sh:maxCount 1;
   ] ;
   sh:property [
-    sh:path fipa:hasSender ; # specifies that the sender should be an agent 
+    sh:path fipa:hasSender ; # specifies that the sender should be an agent
     sh:class hmas:Agent;
     sh:minCount 1;
     sh:maxCount 1;
@@ -161,146 +231,7 @@ ex:requestMessageShape a fipa:ACLMessageStructure ;
   ] ;
   sh:property [
     sh:path fipa:hasLanguage ;
-    sh:hasValue "fipa-sl" ; # specifies that the content should be expressed in the FIPA SL Content Language
+    sh:hasValue fipa:FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
     sh:minCount 1;
     sh:maxCount 1;
   ] .
-
-fipa:RequestInteractionProtocol a hmas:BehaviorExecution . 
-
-ex:requestShape a sh:NodeShape ;
-	sh:class hmas:ActionExecution ; 
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property [
-                sh:path hctl:forSubprotocol ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "fipa.mts.mtp.http.std" # identifier of the FIPA Agent Message Transport Protocol for HTTP Specification
-            ], [
-                sh:path htv:methodName ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "POST"
-            ], [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue  <http://eduroamverw-130-82-25-24.unisg.ch:7778/acc>   
-            ]
-        ]
-    ], [ 
-      sh:path hmas:hasInput ;
-      sh:qualifiedValueShape ex:requestMessageShape ;
-      sh:qualifiedMinCount 1 ;
-      sh:qualifiedMaxCount 1
-    ], [ 
-      sh:path hmas:isExecutedIn ;
-      sh:qualifiedValueShape ex:requestInteractionShape ;
-      sh:qualifiedMinCount 0 ;
-      sh:qualifiedMaxCount 1
-    ] .
-
-
-
-
-#####################################################################
-
-# The following definitions should be moved to the FIPA ontology available here: https://github.com/HyperAgents/hmas/blob/main/src/fipa.ttl
-fipa:CommunicativeAct rdf:type owl:Class ;
-  rdfs:comment "A communicative act defined in the FIPA Communicative Act Library."@en ;
-  rdfs:label "FIPA Communicative act"@en .
-
-fipa:ACLMessage rdf:type owl:Class ;
-  rdfs:comment "A message that adheres to the FIPA ACL Message Structure Specification."@en ;
-  rdfs:label "FIPA ACL Message"@en .
-
-fipa:request a fipa:CommunicativeAct ;
-  rdfs:comment "A communicative act with which the sender requests the receiver to perform some action. ."@en ;
-  rdfs:lable "request"@en .
-
-fipa:ACLMessageStructure a sh:NodeShape ;
-  sh:targetClass fipa:ACLMessage ;
-  sh:property [
-    sh:path fipa:hasPerformative ;
-    sh:minCount 1;
-    sh:maxCount 1;
-  ] .
-
-# The performative is not necessarily defined in the FIPA Communicative Act Library
-fipa:hasPerformative rdf:type owl:ObjectProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:comment "A relation between a FIPA ACL message and the type of the communicative act of the ACL message."@en ;
-  rdfs:label "has performative"@en .
-
-fipa:hasReceiver rdf:type owl:ObjectProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:range hmas:Agent ;
-  rdfs:comment "A relation between a FIPA ACL message and agents that are the intended recipients of the message."@en ;
-  rdfs:label "has receiver"@en .
-
-fipa:hasSender rdf:type owl:ObjectProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:range hmas:Agent ;
-  rdfs:comment "A relation between a FIPA ACL message and the agent that is the sender of the message, that is, the name (identifier) of the agent of the communicative act."@en ;
-  rdfs:label "has sender"@en .
-
-fipa:isReplyTo rdf:type owl:ObjectProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:range hmas:Agent ;
-  rdfs:comment "A relation between a FIPA ACL message and the agent to which subsequent messages in this conversation thread are to be directed, instead of to the agent named in the sender parameter."@en ;
-  rdfs:label "is reply to"@en .
-
-fipa:hasContent rdf:type owl:DataProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:comment "A relation between a FIPA ACL message and the content of the message; equivalently denotes the object of the action. The meaning of the content of any ACL message is intended to be interpreted by the receiver of the message. This is particularly relevant for instance when referring to referential expressions, whose interpretation might be different for the sender and the receiver.Denotes the language in which the content parameter is expressed."@en ;
-  rdfs:label "has content"@en .
-
-fipa:hasLanguage rdf:type owl:DataProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:comment "A relation between a FIPA ACL message and the language in which the message content parameter is expressed."@en ;
-  rdfs:label "has language"@en .
-
-fipa:hasEncoding rdf:type owl:DataProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:comment "A relation between a FIPA ACL message and the specific encoding of the message content language expression."@en ;
-  rdfs:label "has encoding"@en .
-
-fipa:hasOntology rdf:type owl:ObjectProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:comment "A relation between a FIPA ACL message and the ontology(s) used to give a meaning to the symbols in the message content expression.."@en ;
-  rdfs:label "has ontology"@en .
-
-fipa:hasProtocol rdf:type owl:ObjectProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:comment "A relation between a FIPA ACL message and the interaction protocol that the sending agent is employing with this ACL message."@en ;
-  rdfs:label "has protocol"@en .
-
-# Is using the word "id" confusing?
-fipa:hasConversationId rdf:type owl:ObjectProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:range hmas:BehaviorExecution ;
-  rdfs:comment "A relation between a FIPA ACL message and an expression (a conversation identifier) which is used to identify the ongoing sequence of communicative acts that together form a conversation."@en ;
-  rdfs:label "has conversation ID"@en .
-
-fipa:replyWith rdf:type owl:ObjectProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:comment "A relation between a FIPA ACL message and an expression that will be used by the responding agent to identify this message."@en ;
-  rdfs:label "reply with"@en .
-
-fipa:isInReplyTo rdf:type owl:ObjectProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:comment "A relation between a FIPA ACL message and an expression that references an earlier action to which this message is a reply."@en ;
-  rdfs:label "is in reply to"@en .
-
-fipa:replyBy rdf:type owl:ObjectProperty ;
-  rdfs:domain fipa:ACLMessage ;
-  rdfs:comment "A relation between a FIPA ACL message and a time and/or date expression which indicates the latest time by which the sending agent would like to receive a reply."@en ;
-  rdfs:label "reply by"@en .
-
-# Can I move the FIPA-related definitions to the FIPA ontology available in https://github.com/HyperAgents/hmas/blob/main/src/fipa.ttl?
-# Are the definitions of the FIPA terms correct in terms of property domains/ranges, and in terms of OWL types (ObjectProperty, DataProperty, etc.)?

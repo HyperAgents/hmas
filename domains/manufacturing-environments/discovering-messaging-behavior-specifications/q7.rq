@@ -1,0 +1,13 @@
+prefix hmas: <https://purl.org/hmas/>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>
+prefix ex: <http://example.org/>
+
+select ?behavior
+where {
+    ex:requestShape sh:property ?propertySpec .
+    ?propertySpec sh:path dul:isActionIncludedIn ;
+                  sh:qualifiedValueShape ?behaviorSpec .
+    ?behaviorSpec sh:class ?behavior .
+}
+order by ?behavior

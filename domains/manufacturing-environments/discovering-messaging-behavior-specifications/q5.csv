@@ -1,0 +1,6 @@
+inputProperty
+http://ns.hyperagents.org/fipa#hasContent
+http://ns.hyperagents.org/fipa#hasLanguage
+http://ns.hyperagents.org/fipa#hasPerformative
+http://ns.hyperagents.org/fipa#hasReceiver
+http://ns.hyperagents.org/fipa#hasSender
