@@ -9,7 +9,7 @@ where {
     ?signifier hmas:signifies ?actionExecutionSpec .
     ?actionExecutionSpec sh:property [
         sh:path hmas:hasInput ;
-        sh:qualifiedValueShape [ sh:targetClass fipa:ACLMessage ]
+        sh:qualifiedValueShape [ sh:class fipa:ACLMessage ]
     ] .
 }
 order by ?signifier

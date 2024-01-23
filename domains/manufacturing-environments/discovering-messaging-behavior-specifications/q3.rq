@@ -4,7 +4,7 @@ prefix ex: <http://example.org/>
 
 select ?inputSpec
 where {
-    ex:requestShape sh:property ?propertySpec .
+    ex:requestActionSpecification sh:property ?propertySpec .
     ?propertySpec sh:path hmas:hasInput ;
                   sh:qualifiedValueShape ?inputSpec .
 }

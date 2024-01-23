@@ -22,10 +22,10 @@ ex:agentAProfile a fipa:AgentDescription ;
 ex:agentA a hmas:Agent .
 
 ex:aggreable a hmas:Signifier ;
-      hmas:signifies  ex:agreeShape .
+      hmas:signifies  ex:agreeActionSpecification .
 
 ex:refusable a hmas:Signifier ;
-      hmas:signifies  ex:refuseShape .
+      hmas:signifies  ex:refuseActionSpecification .
 
 #### Endpoint for sending messages to Agent A ####
 ex:agentAMessageEndpointShape a sh:NodeShape ;
@@ -56,11 +56,11 @@ ex:agentAMessageEndpointShape a sh:NodeShape ;
     ].
 
 #### Send Agreement Action Specification ####
-ex:agreeShape a ex:agentAMessageEndpointShape ;
+ex:agreeActionSpecification a ex:agentAMessageEndpointShape ;
 	sh:class hmas:ActionExecution, dul:Action ;
     sh:property [
       sh:path hmas:hasInput ;
-      sh:qualifiedValueShape ex:agreeMessageShape ;
+      sh:qualifiedValueShape ex:agreeMessageSpecification ;
       sh:qualifiedMinCount 1 ;
       sh:qualifiedMaxCount 1
     ], [
@@ -71,11 +71,11 @@ ex:agreeShape a ex:agentAMessageEndpointShape ;
     ] .
 
 #### Send Refusal Action Specification ####
-ex:refuseShape a ex:agentAMessageEndpointShape ;
+ex:refuseActionSpecification a ex:agentAMessageEndpointShape ;
 	sh:class hmas:ActionExecution, dul:Action ;
     sh:property [
       sh:path hmas:hasInput ;
-      sh:qualifiedValueShape ex:refuseMessageShape ;
+      sh:qualifiedValueShape ex:refuseMessageSpecification ;
       sh:qualifiedMinCount 1 ;
       sh:qualifiedMaxCount 1
     ], [
@@ -86,7 +86,7 @@ ex:refuseShape a ex:agentAMessageEndpointShape ;
     ] .
 
 #### Agree Message Specification ####
-ex:agreeMessageShape a fipa:ACLMessageStructure ;
+ex:agreeMessageSpecification a fipa:ACLMessageStructure ;
   sh:class fipa:ACLMessage ;
   sh:property [
     sh:path fipa:hasReceiver ; # specifies itself as the receiver
@@ -120,7 +120,7 @@ ex:agreeMessageShape a fipa:ACLMessageStructure ;
   ] .
 
 #### Refuse Message Specification ####
-ex:refuseMessageShape a fipa:ACLMessageStructure ;
+ex:refuseMessageSpecification a fipa:ACLMessageStructure ;
   sh:class fipa:ACLMessage ;
   sh:property [
     sh:path fipa:hasReceiver ; # specifies itself as the receiver
@@ -162,10 +162,10 @@ ex:agentBProfile a fipa:AgentDescription ;
 ex:agentB a hmas:Agent .
 
 ex:requestable a hmas:Signifier ;
-      hmas:signifies  ex:requestShape .
+      hmas:signifies  ex:requestActionSpecification .
 
 #### Send Request Action Specification ####
-ex:requestShape a sh:NodeShape ;
+ex:requestActionSpecification a sh:NodeShape ;
 	sh:class hmas:ActionExecution, dul:Action ;
     sh:property [
         sh:path prov:used ;
@@ -192,7 +192,7 @@ ex:requestShape a sh:NodeShape ;
         ]
     ], [
       sh:path hmas:hasInput ;
-      sh:qualifiedValueShape ex:requestMessageShape ;
+      sh:qualifiedValueShape ex:requestMessageSpecification ;
       sh:qualifiedMinCount 1 ;
       sh:qualifiedMaxCount 1
     ], [
@@ -203,7 +203,7 @@ ex:requestShape a sh:NodeShape ;
     ] .
 
 #### Request Message Specification
-ex:requestMessageShape a fipa:ACLMessageStructure ;
+ex:requestMessageSpecification a fipa:ACLMessageStructure ;
   sh:class fipa:ACLMessage ;
   sh:property [
     sh:path fipa:hasReceiver ; # specifies itself as the receiver
