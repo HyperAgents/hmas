@@ -31,6 +31,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix htv: <http://www.w3.org/2011/http#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
 
 @prefix cherrybot: <https://interactions.ics.unisg.ch/cherrybot#> .
 @prefix traffic: <http://www.sensormeasurement.appspot.com/ont/transport/traffic#> .
@@ -176,6 +177,32 @@ _:FormSpecification a owl:Class ;
         )
     ] .
 
+_:TDReadProperty a owl:Class ;
+    sh:path hctl:hasOperationType ;
+    sh:hasValue td:readProperty ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+_:ReadProperty a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty sh:property ;
+        owl:hasValue _:TDReadProperty
+    ] .
+
+_:TDInvokeAction a owl:Class ;
+    sh:path hctl:hasOperationType ;
+    sh:hasValue td:invokeAction ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+_:InvokeAction a owl:Class ;
+    owl:equivalentClass [
+        a owl:Restriction ;
+        owl:onProperty sh:property ;
+        owl:hasValue _:TDInvokeAction
+    ] .
+
 _:AcceptJsonProperty a sh:PropertyShape ;
     sh:path hctl:forContentType ;
     sh:hasValue "application/json" ;
@@ -271,7 +298,7 @@ _:DeleteMethod a owl:Class ;
 #   - a sh:path set to hmas:hasInput
 #   - a sh:qualifiedMinCount set to 1
 #   - a sh:qualifiedMaxCount set to 1
-_:BodySpecification a owl:Class ;
+_:InputBodySpecification a owl:Class ;
     owl:equivalentClass [
         a owl:Class ;
         owl:intersectionOf (
@@ -301,7 +328,26 @@ _:OutputBodySpecification a owl:Class ;
 # JSON Body shapes #
 ####################
 
-_:JsonSetOperatorBody a sh:NodeShape ;
+_:JsonGetOperatorOutputBody a sh:NodeShape ;
+    sh:class cherrybot:OperatorWithTokenSchema ;
+    sh:property [
+        sh:path foaf:Name;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] , [
+        sh:path foaf:mbox ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] , [
+        sh:path cherrybot:operatorToken ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] .
+
+_:JsonSetOperatorInputBody a sh:NodeShape ;
     sh:class cherrybot:OperatorSchema ;
     sh:property [
         sh:path foaf:name ;
@@ -365,7 +411,21 @@ _:JsonTranslationElement a sh:NodeShape ;
         sh:datatype xsd:float 
     ] .
 
-_:JsonSetPositionBody a sh:NodeShape ;
+_:JsonGetPositionOutputBody a sh:NodeShape ;
+    sh:class cherrybot:TcpTargetSchema ;
+    sh:property [
+        sh:path cherrybot:coordinate ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape _:JsonTranslationElement
+    ] , [
+        sh:path cherrybot:rotation ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape _:JsonRotationElement
+    ] .
+
+_:JsonSetPositionInputBody a sh:NodeShape ;
     sh:class cherrybot:TcpMovementSchema ;
     sh:property [
         sh:path cherrybot:coordinate ;
@@ -416,55 +476,71 @@ _:Ra1ReadableOperator a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            a _:GetMethod, _:ReadProperty, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/operator>
             ]
         ]
+    ], [
+        a _:OutputBodySpecification ;
+        sh:qualifiedValueShape _:JsonGetOperatorOutputBody
     ] .
 
 _:Ra1ReadablePosition a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            a _:GetMethod, _:ReadProperty, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/tcp>
             ]
         ]
+    ] , [
+        a _:OutputBodySpecification ;
+        sh:qualifiedValueShape _:JsonGetPositionOutputBody
     ] .
 
 _:Ra1ReadableTarget a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            a _:GetMethod, _:ReadProperty, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/tcp/target>
             ]
         ]
-    ] .
+    ] , [
+        _:OutputBodySpecification ;
+        sh:qualifiedValueShape _:JsonGetPositionOutputBody
+    ].
 
 _:Ra1ReadableGripper a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            a _:GetMethod, _:ReadProperty, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/gripper>
             ]
         ]
+    ] , [
+        sh:path hmas:hasOutput ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minExclusive 0 ;
+        sh:maxExclusive 800 ;
+        sh:datatype xsd:integer
     ] .
 
 _:Ra1InitializableArm a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            a _:PutMethod, _:InvokeAction, _:AcceptJson, _:Authorization ;
             sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/initialize>
         ]
     ] .
@@ -473,15 +549,15 @@ _:Ra1SettableOperator a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PostMethod, _:AcceptJson, _:Authorization ;
+            a _:PostMethod, _:InvokeAction, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/operator>
             ]
         ]
     ] , [
-        a _:BodySpecification ;
-        sh:qualifiedValueShape _:JsonSetOperatorBody
+        a _:InputBodySpecification ;
+        sh:qualifiedValueShape _:JsonSetOperatorInputBody
     ] .
 
 # The statement here is fully implemented with the statement that follows this comment
@@ -503,6 +579,11 @@ _:Ra1SettableOperator a _:ActionExecutionShape ;
 #                sh:minCount 1 ;
 #                sh:maxCount 1 ;
 #                sh:hasValue "PUT"
+#            ], [
+#               sh:path hctl:hasOperationType ;
+#               sh:minCount 1 ;
+#               sh:maxCount 1 ;
+#               sh:hasValue td:invokeAction
 #            ], [
 #                sh:path hctl:hasTarget ;
 #                sh:minCount 1 ;
@@ -536,29 +617,29 @@ _:Ra1SettableOperator a _:ActionExecutionShape ;
 #        sh:path hmas:hasInput ;
 #        sh:minQualifiedShape 1 ;
 #        sh:maxQualifiedShape 1 ;
-#        sh:qualifiedValueShape _:JsonSetPositionBody
+#        sh:qualifiedValueShape _:JsonSetPositionInputBody
 #    ] .
 
 _:Ra1SettableTarget a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            a _:PutMethod, _:InvokeAction, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/tcp/target>
             ]
         ]
     ] , [
-        a _:BodySpecification ;
-        sh:qualifiedValueShape _:JsonSetPositionBody
+        a _:InputBodySpecification ;
+        sh:qualifiedValueShape _:JsonSetPositionInputBody
     ] .
 
 _:Ra1SettableGripper a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            a _:PutMethod, _:InvokeAction, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/gripper>
@@ -577,7 +658,7 @@ _:Ra1DeletableOperator a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:DeleteMethod, _:AcceptJson, _:Authorization ;
+            a _:DeleteMethod, _:InvokeAction, _:AcceptJson, _:Authorization ;
             sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1/operator/%7Btoken%7D>
         ]
     ] .
@@ -590,55 +671,71 @@ _:Ra2ReadableOperator a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            a _:GetMethod, _:ReadProperty, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/operator>
             ]
         ]
+    ] , [
+        a _:OutputBodySpecification ;
+        sh:qualifiedValueShape _:JsonGetOperatorOutputBody
     ] .
 
 _:Ra2ReadablePosition a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            a _:GetMethod, _:ReadProperty, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/tcp>
             ]
         ]
+    ] , [
+        a _:OutputBodySpecification ;
+        sh:qualifiedValueShape _:JsonGetPositionOutputBody
     ] .
 
 _:Ra2ReadableTarget a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            a _:GetMethod, _:ReadProperty, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/tcp/target>
             ]
         ]
-    ] .
+    ] , [
+        a _:OutputBodySpecification ;
+        sh:qualifiedValueShape _:JsonGetPositionOutputBody
+    ].
 
 _:Ra2ReadableGripper a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson, _:Authorization ;
+            a _:GetMethod, _:ReadProperty, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/gripper>
             ]
         ]
+    ] , [
+        sh:path hmas:hasOutput ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minExclusive 0 ;
+        sh:maxExclusive 800 ;
+        sh:datatype xsd:integer
     ] .
 
 _:Ra2InitializableArm a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            a _:PutMethod, _:InvokeAction, _:AcceptJson, _:Authorization ;
             sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/initialize>
         ]
     ] .
@@ -647,37 +744,37 @@ _:Ra2SettableOperator a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PostMethod, _:AcceptJson, _:Authorization ;
+            a _:PostMethod, _:InvokeAction, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/operator>
             ]
         ]
     ] , [
-        a _:BodySpecification ;
-        sh:qualifiedValueShape _:JsonSetOperatorBody
+        a _:InputBodySpecification ;
+        sh:qualifiedValueShape _:JsonSetOperatorInputBody
     ] .
 
 _:Ra2SettableTarget a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            a _:PutMethod, _:InvokeAction, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/tcp/target>
             ]
         ]
     ] , [
-        a _:BodySpecification ;
-        sh:qualifiedValueShape _:JsonSetPositionBody
+        a _:InputBodySpecification ;
+        sh:qualifiedValueShape _:JsonSetPositionInputBody
     ] .
 
 _:Ra2SettableGripper a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PutMethod, _:AcceptJson, _:Authorization ;
+            a _:PutMethod, _:InvokeAction, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/gripper>
@@ -696,7 +793,7 @@ _:Ra2DeletableOperator a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:DeleteMethod, _:AcceptJson, _:Authorization ;
+            a _:DeleteMethod, _:InvokeAction, _:AcceptJson, _:Authorization ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2/operator/%7Btoken%7D>
@@ -712,7 +809,7 @@ _:TruckReadableBattery a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson ;
+            a _:GetMethod, _:ReadProperty, _:AcceptJson ;
             sh:property [
                 a _:TargetUrl ;
                 sh:hasValue <http://10.2.2.183/properties/batteryvoltage>
@@ -724,7 +821,7 @@ _:TruckReadableAccelerometer a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:GetMethod, _:AcceptJson ;
+            a _:GetMethod, _:ReadProperty, _:AcceptJson ;
             sh:property [
                 sh:hasValue <http://10.2.2.183/properties/motorcurrent>
             ]
@@ -735,13 +832,13 @@ _:TruckSettableWheels a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PostMethod, _:AcceptJson ;
+            a _:PostMethod, _:InvokeAction, _:AcceptJson ;
             sh:property [
                 sh:hasValue <http://10.2.2.183/actions/wheelControl>
             ]
         ]
     ] , [
-        a _:BodySpecification ;
+        a _:InputBodySpecification ;
         sh:qualifiedValueShape _:JsonControlWheelBody
     ] .
 
@@ -753,7 +850,7 @@ _:WorkspaceJoinable a _:ActionExecutionShape ;
     sh:property [
         a _:EndpointSpecification ;
         sh:qualifiedValueShape [
-            a _:PostMethod, _:AcceptTurtle ;
+            a _:PostMethod, _:InvokeAction, _:AcceptTurtle ;
             sh:property [
                 sh:hasValue <workspaces/cup-production-site>
             ]
