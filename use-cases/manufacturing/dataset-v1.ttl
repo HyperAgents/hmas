@@ -513,7 +513,7 @@ _:Ra1ReadableTarget a _:ActionExecutionShape ;
             ]
         ]
     ] , [
-        _:OutputBodySpecification ;
+        a _:OutputBodySpecification ;
         sh:qualifiedValueShape _:JsonGetPositionOutputBody
     ].
 
