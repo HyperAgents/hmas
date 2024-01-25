@@ -33,8 +33,8 @@ Agent B receives the message, and by interpreting the sender of the message, it 
 
 ## Glossary
 - **Message**: The individual unit of communication between two or more agents.
-- **Subrotocol**: An extension mechanism to a transport protocol [1], such as the [FIPA Agent Message Transport Protocol for HTTP](http://www.fipa.org/specs/fipa00084/XC00084C.html), that can be, for example, specified as part of the hypermedia control (e.g. an [hctl:Form](https://www.w3.org/2019/wot/hypermedia#Form)) describing how to execute an action.
-- **Agent Interaction Protocol**: A specification of interaction between two or more autonomous agents that serves as a standard of correctness for agent behavior in a multi-agent system [2].
+- **Subrotocol**: An extension mechanism to a transport protocol [Matsukura et al., 2023], such as the [FIPA Agent Message Transport Protocol for HTTP](http://www.fipa.org/specs/fipa00084/XC00084C.html), that can be, for example, specified as part of the hypermedia control (e.g. an [hctl:Form](https://www.w3.org/2019/wot/hypermedia#Form)) describing how to execute an action.
+- **Agent Interaction Protocol**: A specification of interaction between two or more autonomous agents that serves as a standard of correctness for agent behavior in a multi-agent system [Baldoni et al., 2018].
 - **Action Execution as part of a Behavior Execution**: An action exection that takes place upon the execution of a (more complex) behavior, for example, as part of the execution of a plan, or of the enactment of an agent interaction protocol.
 - **Behavior Execution**: see [Discovery of Behavior Specifications](../discover-behavior-specifications/README.md).
 - **Action Execution**: see [Discovery of Behavior Specifications](../discover-behavior-specifications/README.md).
@@ -49,3 +49,8 @@ Agent B receives the message, and by interpreting the sender of the message, it 
 - **Artifact**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
 - **Agent**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
 - **Resource Profile**: see [Discovery of Workspaces, Agents, and Artifacts in Hypermedia Environments](../discover-core/README.md).
+
+[Matsukura et al., 2023] Matsukura, R., & McCool, M., & Lagally, M., & Toumura, K. (2023). Web of Things (WoT) Architecture 1.1. W3C Recommendation (W3C). Available online: https://www.w3.org/TR/wot-architecture11/. 
+
+[Baldoni et al., 2018] Baldoni, M., Baroglio, C., Amit, K. C., & Günay, A. (2018). Interaction Protocols. Handbook of Normative Multiagent Systems. 
+
