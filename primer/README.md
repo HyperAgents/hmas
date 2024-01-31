@@ -1,10 +1,10 @@
-# HMAS Model Primer
+# hMAS Ontology Primer
 
 # Abstract
 
-This document is an introduction to the HMAS ontology, which proposes a vocabulary to describe a multi-agents system evolving in a environment that can be not embodied, namely the web. This ontology aims to fit the different approaches of the multi-agent programming as well as the existing standards of the modern web and the web of things.
+This document is an introduction to the hMAS ontology, which defines a vocabulary for describing Hypermedia Multi-Agent Systems (hMAS). This ontology aims to align with the latest W3C recommendations and, at the same time, fit the different approaches for engineering multi-agent systems — so that it can serve as a conceptual "narrow waist" for Web-based MAS.
 
-This documents provides an overview of the key concepts of the vocabulary as well as some examples that can be reused for implementation.
+This documents provides an overview of the key concepts of the hMAS ontology as well as examples for their usage and implementation.
 
 # Table of contents
 
