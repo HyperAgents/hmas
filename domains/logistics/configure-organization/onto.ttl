@@ -1,0 +1,81 @@
+@base <https://purl.org/hmas/> .
+@prefix : <> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+#################################################################
+#    Classes
+#################################################################
+
+:Usage a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A Usage is a state of affairs in which an Agent uses Artifacts' Facilities in a Setting."@en ;
+    rdfs:label "usage"@en, "usage"@fr .
+    
+:Setting a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A Setting is the context in which a Usage is set."@en ;
+    rdfs:label "setting"@en, "contexte d'usage"@fr ;
+    
+#################################################################
+#    Properties
+#################################################################
+
+:isUsageBy a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Usage ;
+    rdfs:range :Agent ;
+    rdfs:comment "A relation that refers to an Agent involved in a Usage."@en ;
+    rdfs:label "is a usage by"@en, "est un usage par"@fr .
+
+:isUsageOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Usage ;
+    rdfs:range :Artifact ;
+    rdfs:comment "A relation that refers to an Artifact involved in a Usage."@en ;
+    rdfs:label "is a usage of"@en, "est un usage de"@fr .
+
+:isUsageIn a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Usage ;
+    rdfs:range :Setting ;
+    rdfs:comment "A relation that refers to a Setting involved in a Usage."@en ;
+    rdfs:label "is a usage in"@en, "est un usage en"@fr .
+
+:hasUsageRelationshipWith a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Usage ;
+    rdfs:range :Usage ;
+    rdfs:comment "A relation that refers to the relationship between two Usages."@en ;
+    rdfs:label "has a usage relationship with"@en, "a une relation d'usage avec"@fr .
+
+:hasFacility a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Artifact ;
+    rdfs:range :Facility ;
+    rdfs:comment "A relation that refers to a Facility of an Artifact."@en ;
+    rdfs:label "has a facility"@en, "a une facilité"@fr .
+
+:isSettingOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Setting ;
+    rdfs:range :Organization ;
+    rdfs:comment "A relation that refers to a Setting of an Organization."@en ;
+    rdfs:label "is a setting of"@en, "est un contexte d'usage de"@fr .
+
+:proposesSetting a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :Setting ;
+    rdfs:comment "A relation that refers to a Setting that can be used in the context of an Organization."@en ;
+    rdfs:label "proposes a setting"@en, "fourni un contexte d'usage"@fr .
