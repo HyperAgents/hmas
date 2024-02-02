@@ -1,3 +1,4 @@
 public
 .venv
 *.jar
+.acimov/output/*
