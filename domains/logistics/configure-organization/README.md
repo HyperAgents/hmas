@@ -18,10 +18,10 @@ Leo adopts both the Collector and Deliverer role in the Shipping Department at t
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the artifacts that an agent of the organization X can have in setting Y? | What are the artifacts that an agent of the FL Logistics can have in the _receiving_ setting? `ex:Forklift_1`, `ex:Forklift_2` |
-| q2 | What are the settings that set the organization X?                                | What are the settings that set the FL Logistics? `ex:FL_Lyon_ReceivingSetting`, `ex:FL_StEtienne_ReceivingSetting`, `ex:FL_Lyon_PickingSetting`, `ex:FL_StEtienne_PickingSetting`                          |
-| q3 | What are the facilities that the artifact X have?                                 | What are the facilities that Forklift 1 have? `ex:LiftUp`, `ex:LiftDown`, `ex:Move`                                            |
-| q4 | What are the agents currently in the setting Y?                                   | What are the agents currently in the _picking_ setting? `ex:Nancy`, `ex:Leo`                                                   |
+| q1 | What are the artifacts that an agent of the organization X can have in setting Y? | What are the artifacts that an agent of the FL Logistics can have in the _receiving_ setting? `ex:Barcode_Reader_1`, `ex:Barcode_Reader_2`, `ex:Forklift_1`, `ex:Forklift_2`      |
+| q2 | What are the settings that set the organization X?                                | What are the settings that set the FL Logistics? `ex:FL_Lyon_PickingSetting`, `ex:FL_Lyon_ReceivingSetting`, `ex:FL_StEtienne_PickingSetting`, `ex:FL_StEtienne_ReceivingSetting` |
+| q3 | What are the facilities that the artifact X have?                                 | What are the facilities that Forklift 1 have? `ex:LiftDown`, `ex:LiftUp`, `ex:Move`                   |
+| q4 | What are the agents currently in the setting Y?                                   | What are the agents currently in the _picking_ setting? `ex:Leo`, `ex:Nancy`                          |
 
 ## Glossary
 
@@ -45,14 +45,14 @@ ex:UsageCardinalityShape a sh:NodeShape ;
     sh:targetClass hmas:Usage ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "The number of agents participating in a usage cannot be greater than 1." ;
+        sh:message "The number of agents participating in a usage cannot begreater than 1." ;
         sh:prefixes ex:, hmas:, rdfs: ;
         sh:select """
 			      SELECT (?agent as $this) (COUNT(?s) as ?c)
             WHERE {
-              ?u a ?usageModel ;
-                ?s hmas:isUsageBy ?agent .
+              ?s hmas:isUsageBy ?agent .
             }
+            GROUP BY ?agent
             HAVING (COUNT(?s) > 1)
 			    """ ;
         ] .

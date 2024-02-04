@@ -1,0 +1,12 @@
+prefix ex: <http://example.org/>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?agent
+where {
+  ?setting a ex:PickingSetting .
+  
+  ?usage a ?usageModel ;
+         hmas:isUsageBy ?agent ;
+         hmas:isUsageIn ?setting .
+}
+order by ?agent

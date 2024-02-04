@@ -1219,19 +1219,19 @@ ex:PrintLabel a hmas:Facility ;
 ## Usages
 ex:FL_Lyon_Collecting_Usage a ex:Collecting_Usage ;
     hmas:isUsageBy ex:Marie ;
-    hmas:isUsageIn ex:ReceivingSetting ;
+    hmas:isUsageIn ex:FL_Lyon_ReceivingSetting ;
     hmas:isUsageOf ex:Forklift_1, ex:Barcode_Reader_1 .
 ex:FL_StEtienne_Collecting_Usage a ex:Collecting_Usage ;
     hmas:isUsageBy ex:Leo ;
-    hmas:isUsageIn ex:ReceivingSetting ;
+    hmas:isUsageIn ex:FL_StEtienne_ReceivingSetting ;
     hmas:isUsageOf ex:Forklift_2, ex:Barcode_Reader_2 .
 ex:FL_Lyon_Delivering_Usage a ex:Delivering_Usage ;
     hmas:isUsageBy ex:Nancy ;
-    hmas:isUsageIn ex:PickingSetting ;
+    hmas:isUsageIn ex:FL_Lyon_PickingSetting ;
     hmas:isUsageOf ex:Forklift_3, ex:Label_Printer_1 .
 ex:FL_StEtienne_Delivering_Usage a ex:Delivering_Usage ;
     hmas:isUsageBy ex:Leo ;
-    hmas:isUsageIn ex:PickingSetting ;
+    hmas:isUsageIn ex:FL_StEtienne_PickingSetting ;
     hmas:isUsageOf ex:Forklift_4, ex:Label_Printer_2 .
 
 ex:FL_StEtienne_Collecting_Usage ex:compatibleUsage ex:FL_StEtienne_Delivering_Usage .
