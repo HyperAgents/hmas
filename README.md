@@ -130,7 +130,7 @@
 
 
 
-Our systems use semantic hypermedia to enable uniform interaction among heterogeneous entities in MAS: people, artificial agents, devices, digital serivces, knowledge repositories, etc. We refer to this new class of Web-based MAS as Hypermedia MAS.
+Our systems use semantic hypermedia to enable uniform interaction among heterogeneous entities in MAS: people, artificial agents, devices, digital services, knowledge repositories, etc. We refer to this new class of Web-based MAS as Hypermedia MAS.
 
 
 
