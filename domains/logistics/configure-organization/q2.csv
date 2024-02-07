@@ -1,5 +1,3 @@
 setting
-http://example.org/FL_Lyon_PickingSetting
-http://example.org/FL_Lyon_ReceivingSetting
-http://example.org/FL_StEtienne_PickingSetting
-http://example.org/FL_StEtienne_ReceivingSetting
+http://example.org/PickingSetting
+http://example.org/ReceivingSetting

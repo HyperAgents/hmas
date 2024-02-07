@@ -36,46 +36,46 @@
     rdfs:domain :Usage ;
     rdfs:range :Agent ;
     rdfs:comment "A relation that refers to an Agent involved in a Usage."@en ;
-    rdfs:label "is a usage by"@en, "est un usage par"@fr .
+    rdfs:label "is usage by"@en, "est un usage par"@fr .
 
 :isUsageOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Usage ;
     rdfs:range :Artifact ;
     rdfs:comment "A relation that refers to an Artifact involved in a Usage."@en ;
-    rdfs:label "is a usage of"@en, "est un usage de"@fr .
+    rdfs:label "is usage of"@en, "est un usage de"@fr .
 
 :isUsageIn a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Usage ;
     rdfs:range :Setting ;
     rdfs:comment "A relation that refers to a Setting involved in a Usage."@en ;
-    rdfs:label "is a usage in"@en, "est un usage en"@fr .
+    rdfs:label "is usage in"@en, "est un usage dans"@fr .
 
 :hasUsageRelationshipWith a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Usage ;
     rdfs:range :Usage ;
     rdfs:comment "A relation that refers to the relationship between two Usages."@en ;
-    rdfs:label "has a usage relationship with"@en, "a une relation d'usage avec"@fr .
+    rdfs:label "has usage relationship with"@en, "a une relation d'usage avec"@fr .
 
 :hasFacility a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Artifact ;
     rdfs:range :Facility ;
     rdfs:comment "A relation that refers to a Facility of an Artifact."@en ;
-    rdfs:label "has a facility"@en, "a une facilité"@fr .
+    rdfs:label "has facility"@en, "a pour potentialité d'usage"@fr .
 
 :isSettingOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Setting ;
     rdfs:range :Organization ;
     rdfs:comment "A relation that refers to a Setting of an Organization."@en ;
-    rdfs:label "is a setting of"@en, "est un contexte d'usage de"@fr .
+    rdfs:label "is setting of"@en, "est un contexte d'usage de"@fr .
 
 :proposesSetting a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
     rdfs:range :Setting ;
     rdfs:comment "A relation that refers to a Setting that can be used in the context of an Organization."@en ;
-    rdfs:label "proposes a setting"@en, "fourni un contexte d'usage"@fr .
+    rdfs:label "proposes setting"@en, "fournit un contexte d'usage"@fr .
