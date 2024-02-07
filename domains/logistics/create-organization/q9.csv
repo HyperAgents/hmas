@@ -1,3 +1,4 @@
 facility
-http://example.org/SL_ReceivingArea
-http://example.org/SL_PickingArea
+http://example.org/LiftDown
+http://example.org/LiftUp
+http://example.org/Move

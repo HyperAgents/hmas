@@ -26,7 +26,7 @@ select distinct ?key ?val {
   union
   {
     ?orgShape sh:property [
-		  sh:path hmas:providesRole ;
+		  sh:path hmas:proposesRole ;
 		  sh:hasValue ?val ;
 		  ] .
     bind ("role" as ?key)
@@ -35,9 +35,7 @@ select distinct ?key ?val {
   {
     ?orgShape sh:property [
 		  sh:path hmas:hasOrganizationalGoal ;
-		    sh:qualifiedValueShape [
-		      sh:class ?val
-		    ]
+      sh:hasValue ?val ;
 		  ] .
     bind ("orgGoal" as ?key)
   }
@@ -45,9 +43,7 @@ select distinct ?key ?val {
   {
     ?orgShape sh:property [
 		  sh:path hmas:proposesFacility ;
-		  sh:qualifiedValueShape [
-		    sh:class ?val
-		    ]
+		  sh:hasValue ?val ;
 		  ] .
     bind ("facility" as ?key)
   }

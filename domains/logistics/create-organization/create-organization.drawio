@@ -1,10 +1,10 @@
-<mxfile host="Electron" modified="2023-12-04T08:13:07.317Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="81K8R0OOAb4iVIM-eIjO" version="22.1.2" type="device">
+<mxfile host="app.diagrams.net" modified="2024-02-07T22:40:02.578Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="C-nbKj820JbtCCU37Mu0" version="23.1.2" type="device">
   <diagram id="Hftg7XpmBdPemrGdbaYa" name="Creating an Organization">
-    <mxGraphModel dx="1672" dy="845" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1389" dy="782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="vDsW0doGWwFkd0GuW18r-3" value="providesRole" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" parent="1" source="vDsW0doGWwFkd0GuW18r-8" target="vDsW0doGWwFkd0GuW18r-9" edge="1">
+        <mxCell id="vDsW0doGWwFkd0GuW18r-3" value="proposesRole" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" parent="1" source="vDsW0doGWwFkd0GuW18r-8" target="vDsW0doGWwFkd0GuW18r-9" edge="1">
           <mxGeometry x="0.3103" relative="1" as="geometry">
             <mxPoint x="540" y="410" as="sourcePoint" />
             <mxPoint x="120" y="310" as="targetPoint" />

@@ -40,7 +40,7 @@
 :Facility a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Facility defines functions of materials (i.e., Artifacts) in an Organization."@en ;
-    rdfs:label "facility"@en, "facilité"@fr .
+    rdfs:label "facility"@en, "potentialité d'usage"@fr .
 
 :OrganizationalValue a owl:Class ;
     rdfs:isDefinedBy :regulation ;
@@ -51,7 +51,7 @@
 #    Properties
 #################################################################
 
-:providesRole a owl:ObjectProperty ;
+:proposesRole a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
     rdfs:range :Role ;
@@ -71,7 +71,7 @@
     rdfs:domain :Organization ;
     rdfs:range :Facility ;
     rdfs:comment "A relation that refers to a Facility made available to Artifacts in the context of an Organization."@en ;
-    rdfs:label "proposes facility"@en, "fournit de facilité"@fr .
+    rdfs:label "proposes facility"@en, "fournit une potentialité d'usage"@fr .
 
 :hasOrganizationalValue a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;

@@ -8,7 +8,7 @@ where {
   ex:SL_Logistics a ?orgModel .
   ?orgModel rdfs:subClassOf hmas:Organization ;
             sh:property [
-              sh:path  hmas:providesRole ;
+              sh:path  hmas:proposesRole ;
               sh:hasValue ?role ;
             ] .
   { ?orgModel a sh:NodeShape . }

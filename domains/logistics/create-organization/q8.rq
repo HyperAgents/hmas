@@ -9,21 +9,7 @@ where {
   ?orgModel rdfs:subClassOf hmas:Organization ;
             sh:property [
               sh:path  hmas:hasOrganizationalGoal ;
-              sh:qualifiedValueShape [ sh:class ?orgGoalModel ] ;
+              sh:hasValue ?orgGoal ;
             ] .
-  { ?orgModel a sh:NodeShape . }
-  union
-  { ?orgShape a sh:NodeShape ;
-              sh:targetClass ?orgModel .
-  }
-
-  ?orgGoalModel rdfs:subClassOf hmas:OrganizationalGoal .
-  { ?orgGoalModel a sh:NodeShape . }
-  union
-  { ?orgGoalShape a sh:NodeShape ;
-                  sh:targetClass ?orgGoalModel .
-  }
-  
-  ?orgGoal a ?orgGoalModel
 }
 order by ?orgGoal

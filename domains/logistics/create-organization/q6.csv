@@ -1,6 +1,7 @@
 key,val
-facility,http://example.org/PickingArea
-facility,http://example.org/ReceivingArea
+facility,http://example.org/LiftDown
+facility,http://example.org/LiftUp
+facility,http://example.org/Move
 orgGoal,http://example.org/CarriedGoods
 orgGoal,http://example.org/CollectedGoods
 orgGoal,http://example.org/CommercialManaged

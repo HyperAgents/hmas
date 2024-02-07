@@ -1,8 +1,8 @@
 orgGoal
-http://example.org/SL_CarriedGoods
-http://example.org/SL_CollectedGoods
-http://example.org/SL_CommercialManaged
-http://example.org/SL_DeliveredGoods
-http://example.org/SL_FinancialManaged
-http://example.org/SL_HumanResourcesManaged
-http://example.org/SL_PlanningManaged
+http://example.org/CarriedGoods
+http://example.org/CollectedGoods
+http://example.org/CommercialManaged
+http://example.org/DeliveredGoods
+http://example.org/FinancialManaged
+http://example.org/HumanResourcesManaged
+http://example.org/PlanningManaged

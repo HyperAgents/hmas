@@ -22,21 +22,21 @@ The FL Logistics mirrors the composition of the SL Logistics and provides the fo
   6. _Collector_: Collect goods in customers or logistics warehouses according to the plan elaborated by the _Planner_.
   7. _Deliverer_: Deliver goods to customers or logistics warehouses according to the plan elaborated by the _Planner_.
   
-The FL Logistics also mirrors the functions of the spacial layout by defining a picking and receiving areas.
+The FL Logistics also has a forklift to load and unload pallets.
 
 ## Competency Questions
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What is the organization X's organization model that can be used to create a new organization?                                          | What is the SL Logistics' organization model that John can use to create the FL Logistics organization? `ex:Logistics`                             |
-| q2 | What are the organizations that follow a different organization model than organization X?                                              | What are the organizations that follows a different organization model than SL Logistics organization? `ex:HSG_Factory`, `ex:ITM_Factory`          |
-| q3 | What are the organizations with the same organization model as the organization X and situated on Y?                                    | What are the organizations with the same organization model as the SL Logistics organization and situated on the same Workspace? `ex:GL_Logistics` |
-| q4 | What are the available organization models that can be used to create a new organization?                                               | What are the available organization models that can be used by John to create the FL Logistics organization? `ex:Logistics`, `ex:Manufacturing`    |
-| q5 | What are the organizational values of a given organization? | What are the organizational values of the SL Logistics? `ex:Commitment`, `ex:IntegrityRespect`                                                     |
-| q6 | What are the elements composing a given organization model? | What are the values of the SL Logistics organization model? `ex:PickingArea`, `ex:ReceivingArea`, `ex:CarriedGoods`, `ex:CollectedGoods`, `ex:CommercialManaged`, `ex:DeliveredGoods`, `ex:FinancialManaged`, `ex:HumanResourcesManaged`, `ex:PlanningManaged`, `ex:Commitment`, `ex:IntegrityRespect`, `ex:AccountManager`, `ex:Carrier`, `ex:Collector`, `ex:Deliverer`, `ex:FinanceOfficer`, `ex:HumanResourcesOfficer`, `ex:Planner`                           |
-| q7 | What are the roles provided by the organization X?          | What are the roles provided by the SL Logistics organization? `ex:AccountManager`, `ex:Carrier`, `ex:Collector`, `ex:Deliverer`, `ex:FinanceOfficer`, `ex:HumanResourcesOfficer`, `ex:Planner`                                 |
-| q8 | What are the organizational goals of the organization X?    | What are the organizational goals of the SL Logistics organization? `ex:SL_CarriedGoods`, `ex:SL_CollectedGoods`, `ex:SL_CommercialManaged`, `ex:SL_DeliveredGoods`, `ex:SL_FinancialManaged`, `ex:SL_HumanResourcesManaged`, `ex:SL_PlanningManaged`                                                      |
-| q9 | What are the facilities proposed by the organization X?     | What are the facilities proposed by the SL Logistics organization? `ex:SL_PickingArea`, `ex:SL_ReceivingArea`                                      |
+| q1 | What is the organization X's organization model that can be used to create a new organization?                                          | What is the SL Logistics' organization model that John can use to create the FL Logistics organization? `ex:Logistics`                               |
+| q2 | What are the organizations that follow a different organization model than organization X?                                              | What are the organizations that follows a different organization model than SL Logistics organization? `ex:HSG_Factory`, `ex:ITM_Factory`            |
+| q3 | What are the organizations with the same organization model as the organization X and situated on Y?                                    | What are the organizations with the same organization model as the SL Logistics organization and situated on the same Workspace? `ex:GL_Logistics`   |
+| q4 | What are the available organization models that can be used to create a new organization?                                               | What are the available organization models that can be used by John to create the FL Logistics organization? `ex:Logistics`, `ex:Manufacturing`      |
+| q5 | What are the organizational values of a given organization? | What are the organizational values of the SL Logistics? `ex:Commitment`, `ex:IntegrityRespect`                                                       |
+| q6 | What are the elements composing a given organization model? | What are the values of the SL Logistics organization model? `ex:LiftDown`, `ex:LiftUp`, `ex:Move`, `ex:CarriedGoods`, `ex:CollectedGoods`, `ex:CommercialManaged`, `ex:DeliveredGoods`, `ex:FinancialManaged`, `ex:HumanResourcesManaged`, `ex:PlanningManaged`, `ex:Commitment`, `ex:IntegrityRespect`, `ex:AccountManager`, `ex:Carrier`, `ex:Collector`, `ex:Deliverer`, `ex:FinanceOfficer`, `ex:HumanResourcesOfficer`, `ex:Planner`                            |
+| q7 | What are the roles provided by the organization X?          | What are the roles provided by the SL Logistics organization? `ex:AccountManager`, `ex:Carrier`, `ex:Collector`, `ex:Deliverer`, `ex:FinanceOfficer`, `ex:HumanResourcesOfficer`, `ex:Planner`                                   |
+| q8 | What are the organizational goals of the organization X?    | What are the organizational goals of the SL Logistics organization? `ex:CarriedGoods`, `ex:CollectedGoods`, `ex:CommercialManaged`, `ex:DeliveredGoods`, `ex:FinancialManaged`, `ex:HumanResourcesManaged`, `ex:PlanningManaged` |
+| q9 | What are the facilities proposed by the organization X?     | What are the facilities proposed by the SL Logistics organization? `ex:LiftDown`, `ex:LiftUp`, `ex:Move`                                             |
 
 ## Glossary
 
