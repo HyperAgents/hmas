@@ -18,10 +18,7 @@ where {
   {
     ?pShape sh:hasValue ?parentGoal .
 
-    ?subGoal sh:property [
-      sh:path hmas:isSubOrganizationalGoalOf ;
-      sh:hasValue ?parentGoal ;
-      ] .
+    ?subGoal hmas:isSubOrganizationalGoalOf ?parentGoal .
 
     bind ( ?subGoal as ?orgGoal )
   }
