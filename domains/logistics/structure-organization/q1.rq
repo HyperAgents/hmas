@@ -5,7 +5,7 @@ prefix hmas: <https://purl.org/hmas/>
 
 select distinct ?role ?group ?membershipModel
 where {
-  ex:FL_Logistics hmas:providesRole ?role ;
+  ex:FL_Logistics hmas:proposesRole ?role ;
                   hmas:isStructuredBy ?group .
 
   ?group a ?groupModel .
