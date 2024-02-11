@@ -1,4 +1,4 @@
-# Configuring an Organization
+# Configure an Organization
 
 ## Description
 
