@@ -79,6 +79,7 @@ m5stack:CherrybotReadableTarget a sh:NodeShape ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
+            sh:class hctl:Form ;
             sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
@@ -100,6 +101,7 @@ m5stack:CherrybotReadableGripper a sh:NodeShape ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
+            sh:class hctl:Form ;
             sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
@@ -123,6 +125,7 @@ m5stack:CherrybotInitializableArm a sh:NodeShape ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
+            sh:class hctl:Form ;
             sh:property hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
@@ -139,6 +142,7 @@ m5stack:CherrybotSettableOperator a sh:NodeShape ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
+            sh:class hctl:Form ;
             sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
@@ -160,6 +164,7 @@ m5stack:CherrybotSettableTarget a sh:NodeShape ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
+            sh:class hctl:Form ;
             sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
@@ -181,6 +186,7 @@ m5stack:CherrybotSettableGripper a sh:NodeShape ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
+            sh:class hctl:Form ;
             sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
@@ -204,6 +210,7 @@ m5stack:CherrybotDeletableOperator a sh:NodeShape ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
+            sh:class hctl:Form ;
             sh:property hmas:InvokeAction, hmas:DeleteMethod, hmas:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
