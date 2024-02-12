@@ -1,16 +1,16 @@
 #http://10.2.2.183
-@prefix gmc: <https://www.gm.com/> .
+@prefix m5stack: <https://docs.m5stack.com/en/products/> .
 
-gmc:TruckCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier [ hmas:exposes gmc:TruckReadableBattery ] ,
-                           [ hmas:exposes gmc:TruckReadableAccelerometer ] ,
-                           [ hmas:exposes gmc:TruckSettableWheels ] .
+m5stack:TruckCatalog a hmas:SignifiersCatalog ;
+    hmas:proposesSignifier [ hmas:exposes m5stack:TruckReadableBattery ] ,
+                           [ hmas:exposes m5stack:TruckReadableAccelerometer ] ,
+                           [ hmas:exposes m5stack:TruckSettableWheels ] .
 
 ###################
 # Truck Endpoints #
 ###################
 
-gmc:TruckReadableBattery a sh:NodeShape ;
+m5stack:TruckReadableBattery a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -27,7 +27,7 @@ gmc:TruckReadableBattery a sh:NodeShape ;
         ]
     ] .
 
-gmc:TruckReadableAccelerometer a sh:NodeShape ;
+m5stack:TruckReadableAccelerometer a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -44,7 +44,7 @@ gmc:TruckReadableAccelerometer a sh:NodeShape ;
         ]
     ] .
 
-gmc:TruckSettableWheels a sh:NodeShape ;
+m5stack:TruckSettableWheels a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -63,7 +63,7 @@ gmc:TruckSettableWheels a sh:NodeShape ;
         sh:path hmas:hasInput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape gmc:JsonControlWheelBody
+        sh:qualifiedValueShape m5stack:JsonControlWheelBody
     ] .
 
 
@@ -71,7 +71,7 @@ gmc:TruckSettableWheels a sh:NodeShape ;
 # Json Specifications #
 #######################
 
-gmc:JsonControlWheelBody a sh:NodeShape ;
+m5stack:JsonControlWheelBody a sh:NodeShape ;
     sh:class traffic:Vehicle ;
     sh:property [
         sh:path traffic:hasDirectionValue ;
