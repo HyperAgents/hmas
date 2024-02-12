@@ -1,19 +1,21 @@
 @prefix : <https://purl.org/hmas/> .
+@prefix jacamo: <https://purl.org/hmas/jacamo/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix wotsec: <https://www.w3.org/2019/wot/security#> .
 @prefix http: <http://www.w3.org/2011/http#> .
 
-:JacamoWorkspaceCatalog a :SignifiersCatalog ;
-    :proposesSignifier [ :exposes :JacamoObservableWorkspace ] ,
-                       [ :exposes :JacamoPartionnableWorkspace ] ,
-                       [ :exposes :JacamoUpdatableWorkspace ] ,
-                       [ :exposes :JacamoDeletableWorkspace ] ,
-                       [ :exposes :JacamoJoinableWorkspace ] ,
-                       [ :exposes :JacamoLeavableWorkspace ] ,
-                       [ :exposes :JacamoFocusableWorkspace ] .
 
-:JacamoObservableWorkspace a sh:NodeShape ;
+jacamo:WorkspaceCatalog a :SignifiersCatalog ;
+    :proposesSignifier jacamo:PerceivableWorkspace ,
+                       jacamo:PartitionableWorkspace ,
+                       jacamo:UpdatableWorkspace ,
+                       jacamo:DeletableWorkspace ,
+                       jacamo:JoinableWorkspace ,
+                       jacamo:LeavableWorkspace ,
+                       jacamo:FocusableWorkspace .
+
+jacamo:PerceivableWorkspace :signifies [
     a sh:NodeShape ;
     sh:class :ActionExecution ;
     sh:property [
@@ -33,10 +35,11 @@
         sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape :JacamoWorkspaceSpecification
-    ] .
+        sh:qualifiedValueShape jacamo:WorkspaceProfile
+    ] 
+].
 
-:JacamoPartionnableWorkspace a sh:NodeShape ;
+jacamo:PartionableWorkspace :signifies [
     a sh:NodeShape ;
     sh:class:ActionExecution ;
     sh:property [
@@ -45,7 +48,35 @@
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property :InvokeAction :PostMethod, :forTextTurtle, [
+            sh:property :InvokeAction :PostMethod, :forTextTurtle, :SlugHeader, :XAgentWebIDHeader [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue ""
+            ]
+        ]
+    ] , [
+        sh:path :hasInput ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape jacamo:WorkspaceSpecification
+    ] , [
+        sh:path :hasOutput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape jacamo:WorkspaceSpecification
+    ] 
+].
+
+jacamo:UpdatableWorkspace :signifies [
+    a sh:NodeShape ;
+    sh:class:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property :InvokeAction :PutMethod, :forTextTurtle, :XAgentWebIDHeader [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -56,15 +87,16 @@
         sh:path :hasInput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape :JacamoWorkspaceSpecification
+        sh:qualifiedValueShape jacamo:WorkspaceProfile
     ] , [
         sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape :JacamoWorkspaceSpecification
-    ] .
+        sh:qualifiedValueShape jacamo:WorkspaceProfile
+    ] 
+].
 
-:JacamoUpdatableWorkspace a sh:NodeShape ;
+jacamo:DeletableWorkspace :signifies [
     a sh:NodeShape ;
     sh:class:ActionExecution ;
     sh:property [
@@ -73,7 +105,7 @@
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property :InvokeAction :PutMethod, :forTextTurtle, [
+            sh:property :InvokeAction :DeleteMethod, :XAgentWebIDHeader [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -81,27 +113,23 @@
             ]
         ]
     ] , [
-        sh:path :hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape :JacamoWorkspaceSpecification
-    ] , [
         sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape :JacamoWorkspaceSpecification
-    ] .
+        sh:qualifiedValueShape jacamo:WorkspaceProfile
+    ] 
+].
 
-:JacamoDeletableWorkspace a sh:NodeShape ;
+jacamo:JoinableWorkspace :signifies [
     a sh:NodeShape ;
-    sh:class:ActionExecution ;
+    sh:class :ActionExecution ;
     sh:property [
         sh:path prov:used ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property :InvokeAction :DeleteMethod, :forTextTurtle, [
+            sh:property :InvokeAction :PostMethod, :forTextTurtle, :XAgentWebIDHeader [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -109,18 +137,13 @@
             ]
         ]
     ] , [
-        sh:path :hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape :JacamoWorkspaceSpecification
-    ] , [
         sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape :JacamoWorkspaceSpecification
+        sh:qualifiedValueShape jacamo:ArtifactProfile
     ] .
 
-:JacamoJoinableWorkspace a sh:NodeShape ;
+jacamo:LeavableWorkspace a sh:NodeShape ;
     sh:class :ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -128,21 +151,22 @@
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property :InvokeAction :PostMethod, :forTextTurtle, [
+            sh:property :InvokeAction :PostMethod, :forTextTurtle, :XAgentWebIDHeader [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/join"
+                sh:hasValue ""
             ]
         ]
     ] , [
         sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape :JacamoWorkspaceJoinedSpecification
+        sh:qualifiedValueShape jacamo:BodyProfile
     ] .
 
-:JacamoLeavableWorkspace a sh:NodeShape ;
+jacamo:FocusableWorkspace :signifies [
+    a sh:NodeShape ;
     sh:class :ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -150,49 +174,35 @@
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property :InvokeAction :PostMethod, :forTextTurtle, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/leave"
-            ]
-        ]
-    ] , [
-        sh:path :hasOutput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape :JacamoWorkspaceJoinedSpecification
-    ] .
-
-:JacamoFocusableWorkspace a sh:NodeShape ;
-    sh:class :ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property :InvokeAction :PostMethod, :forTextTurtle, [
+            sh:property :InvokeAction :PostMethod, :XAgentWebIDHeader [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
                 sh:hasValue "/focus"
             ]
         ]
-    ] .
+    ] 
+].
 
 #######################
 # Body specifications #
 #######################
 
-:JacamoWorkspaceJoinedSpecification a sh:NodeShape ;
-    sh:class :Agent ;
+jacamo:BodyProfile a sh:NodeShape ;
+    sh:class :ResourceProfile ;
     sh:property [
-        sh:path hmas:isContainedIn ;
-        sh:datatype :Agent
-    ]
+        sh:path :isContainedIn ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype :Workspace
+    ], [ 
+        sh:path :isProfileOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype jcm:Body #TODO   
+    ] .
 
-:JacamoWorkspaceSpecification a sh:NodeShape ;
+jacamo:WorkspaceProfile a sh:NodeShape ;
     sh:class :Workspace ;
     sh:property [
         sh:path td:title ;
