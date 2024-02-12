@@ -32,6 +32,31 @@ agent-ra: a hmas:ResourceProfile ;
             sh:maxCount 1 ;
             sh:hasValue <http://eduroamverw-130-82-24-247.unisg.ch:7778>
         ]
+    ] ;
+    hmas:exposesSignifier [
+        hmas:signifies [
+            a sh:NodeShape ;
+            sh:class hmas:ActionExecution ;
+            sh:property [
+                sh:path prov:used ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape :FIPAMessageForm
+            ] , [
+                sh:path hmas:hasInput ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:class hmas:ACLMessageStructure ;
+                    sh:property :AgentMessage, :Request, :InteractionOrder, :FIPASL, [
+                        sh:path hmas:hasReceiver ;
+                        sh:hasValue agent-ra: ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1
+                    ]
+                ]
+            ]
+        ]
     ] .
 
 agent-rb: a hmas:ResourceProfile ;
@@ -44,7 +69,128 @@ agent-rb: a hmas:ResourceProfile ;
             sh:maxCount 1 ;
             sh:hasValue <http://eduroamverw-130-82-24-247.unisg.ch:7778>
         ]
-    ] .
+    ] ;
+    hmas:exposesSignifier [
+        hmas:signifies [
+            a sh:NodeShape ;
+            sh:class hmas:ActionExecution , dul:Action ;
+            sh:property [
+                sh:path prov:used ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape :FIPAMessageForm
+            ] , [
+                sh:path hmas:hasInput ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:class hmas:ACLMessage  ;
+                    sh:property :AgentMessage, :Agree, :InteractionOrder, :FIPASL, [
+                        sh:path hmas:hasReceiver ;
+                        sh:hasValue agent-rb: ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1
+                    ]
+                ]
+            ]
+        ]
+    ] , [
+        hmas:signifies [
+            a sh:NodeShape ;
+            sh:class hmas:ActionExecution , dul:Action ;
+            sh:property [
+                sh:path prov:used ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape :FIPAMessageForm
+            ] , [
+                sh:path hmas:hasInput ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:class hmas:ACLMessage  ;
+                    sh:property :AgentMessage, :Refuse, :InteractionOrder, :FIPASL, [
+                        sh:path hmas:hasReceiver ;
+                        sh:hasValue agent-rb: ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1
+                    ]
+                ]
+            ]
+        ]
+    ] , [
+        hmas:signifies [
+            a sh:NodeShape ;
+            sh:class hmas:ActionExecution , dul:Action ;
+            sh:property [
+                sh:path prov:used ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape :FIPAMessageForm
+            ] , [
+                sh:path hmas:hasInput ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:class hmas:ACLMessage  ;
+                    sh:property :AgentMessage, :Failure, :InteractionOrder, :FIPASL, [
+                        sh:path hmas:hasReceiver ;
+                        sh:hasValue agent-rb: ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1
+                    ]
+                ]
+            ]
+        ]
+    ] , [
+        hmas:signifies [
+            a sh:NodeShape ;
+            sh:class hmas:ActionExecution , dul:Action ;
+            sh:property [
+                sh:path prov:used ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape :FIPAMessageForm
+            ] , [
+                sh:path hmas:hasInput ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:class hmas:ACLMessage  ;
+                    sh:property :AgentMessage, :InformDone, :InteractionOrder, :FIPASL, [
+                        sh:path hmas:hasReceiver ;
+                        sh:hasValue agent-rb: ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1
+                    ]
+                ]
+            ]
+        ]
+    ] , [
+        hmas:signifies [
+            a sh:NodeShape ;
+            sh:class hmas:ActionExecution , dul:Action ;
+            sh:property [
+                sh:path prov:used ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape :FIPAMessageForm
+            ] , [
+                sh:path hmas:hasInput ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:class hmas:ACLMessage  ;
+                    sh:property :AgentMessage, :InformFailure, :InteractionOrder, :FIPASL, [
+                        sh:path hmas:hasReceiver ;
+                        sh:hasValue agent-rb: ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1
+                    ]
+                ]
+            ]
+        ]
+    ].
 
 #############
 # Workspace #

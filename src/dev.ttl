@@ -138,3 +138,67 @@ hmas:XAgentWebIDHeader a sh:NodeShape ;
             ]
         ]
     ] .
+# Messaging #
+
+:FIPAMessageForm a sh:NodeShape ;
+    sh:class hctl:Form ;
+    sh:property hmas:FipaMessagingProtocol, hmas:InvokeAction, [
+        sh:path hctl:hasTarget ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue ""
+    ] .
+
+:AgentMessage a sh:PropertyShape ;
+    sh:path fipa:hasSender ; # specifies that the sender should be an agent
+    sh:class hmas:Agent;
+    sh:minCount 1;
+    sh:maxCount 1 .
+
+:Request a sh:PropertyShape ;
+    sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:agree
+    sh:hasValue fipa:request ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:Agree a sh:PropertyShape ;
+    sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:agree
+    sh:hasValue fipa:agree ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:Refuse a sh:PropertyShape ;
+    sh:path fipa:hasPerformative ;
+    sh:hasValue fipa:refuse ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:Failure a sh:PropertyShape ;
+    sh:path fipa:hasPerformative ;
+    sh:hasValue fipa:failure ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:InformDone a sh:PropertyShape ;
+    sh:path fipa:informDone ;
+    sh:hasValue fipa:informDone ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:InformResult a sh:PropertyShape ;
+    sh:path fipa:informDone ;
+    sh:hasValue fipa:informResult ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:InteractionOrder a sh:PropertyShape ;
+    sh:path fipa:hasContent ; # specifies that the content should be an action execution specification
+    sh:minQualifiedShape 1 ;
+    sh:maxQualifiedShape 1 ;
+    sh:qualifiedValueShape [ sh:class hmas:ActionExecution ] .
+
+:FIPASL a sh:PropertyShape ;
+    sh:path fipa:hasLanguage ;
+    sh:hasValue fipa:FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
+    sh:minCount 1 ;
+    sh:maxCount 1 .
