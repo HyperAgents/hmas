@@ -91,7 +91,6 @@ hmas:SlugHeader a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path (
-            prov:used
             htv:headers
             [sh:zeroOrMorePath rdf:rest]
             rdf:first
