@@ -5,27 +5,13 @@
 @prefix http: <http://www.w3.org/2011/http#> .
 
 :JacamoWorkspaceCatalog a :SignifiersCatalog ;
-    :proposesSignifier [
-        :exposes :Jacamo ;
-        :hasOutput :JacamoWorkspaceSpecification
-    ] , [
-        :exposes :JacamoPartionnableWorkspace ;
-        :hasOutput :JacamoWorkspaceSpecification
-    ] , [
-        :exposes :JacamoUpdatableWorkspace ;
-        :hasOutput :JacamoWorkspaceSpecification
-    ] , [
-        :exposes :JacamoDeletableWorkspace ;
-        :hasOutput :JacamoWorkspaceSpecification
-    ] , [
-        :exposes :JacamoJoinableWorkspace ;
-        :hasOutput :JacamoWorkspaceJoinedSpecification
-    ] , [
-        :exposes :JacamoLeavableWorkspace ;
-        :hasOutput :JacamoLeavableWorkspace
-    ] , [
-        
-    ] , [ :exposes :JacamoFocusableWorkspace ].
+    :proposesSignifier [ :exposes :JacamoObservableWorkspace ] ,
+                       [ :exposes :JacamoPartionnableWorkspace ] ,
+                       [ :exposes :JacamoUpdatableWorkspace ] ,
+                       [ :exposes :JacamoDeletableWorkspace ] ,
+                       [ :exposes :JacamoJoinableWorkspace ] ,
+                       [ :exposes :JacamoLeavableWorkspace ] ,
+                       [ :exposes :JacamoFocusableWorkspace ] .
 
 :JacamoObservableWorkspace a sh:NodeShape ;
     a sh:NodeShape ;
@@ -43,6 +29,11 @@
                 sh:hasValue ""
             ]
         ]
+    ] , [
+        sh:path :hasOutput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape :JacamoWorkspaceSpecification
     ] .
 
 :JacamoPartionnableWorkspace a sh:NodeShape ;
@@ -63,6 +54,11 @@
         ]
     ] , [
         sh:path :hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape :JacamoWorkspaceSpecification
+    ] , [
+        sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape :JacamoWorkspaceSpecification
@@ -89,6 +85,11 @@
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape :JacamoWorkspaceSpecification
+    ] , [
+        sh:path :hasOutput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape :JacamoWorkspaceSpecification
     ] .
 
 :JacamoDeletableWorkspace a sh:NodeShape ;
@@ -112,6 +113,11 @@
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape :JacamoWorkspaceSpecification
+    ] , [
+        sh:path :hasOutput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape :JacamoWorkspaceSpecification
     ] .
 
 :JacamoJoinableWorkspace a sh:NodeShape ;
@@ -129,6 +135,11 @@
                 sh:hasValue "/join"
             ]
         ]
+    ] , [
+        sh:path :hasOutput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape :JacamoWorkspaceJoinedSpecification
     ] .
 
 :JacamoLeavableWorkspace a sh:NodeShape ;
@@ -146,6 +157,11 @@
                 sh:hasValue "/leave"
             ]
         ]
+    ] , [
+        sh:path :hasOutput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape :JacamoWorkspaceJoinedSpecification
     ] .
 
 :JacamoFocusableWorkspace a sh:NodeShape ;
