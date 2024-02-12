@@ -24,9 +24,8 @@
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
-@prefix siemens: <https://www.siemens.com/> .
-@prefix gmc: <https://www.gm.com/> .
-
+@prefix m5stack: <docs.m5stack.com/en/products/> .
+@prefix m5stack: <docs.m5stack.com/en/products/> .
 
 #############
 # Artifacts #
@@ -46,7 +45,7 @@ truck:artifact a hmas:Artifact ;
 ###############################
 
 ra1: a hmas:ResourceProfile ;
-    hmas:exposeSignifiersFrom siemens:CherrybotCatalog ;
+    hmas:exposeSignifiersFrom m5stack:CherrybotCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
@@ -58,7 +57,7 @@ ra1: a hmas:ResourceProfile ;
     ] .
 
 ra2: a hmas:ResourceProfile ;
-    hmas:exposeSignifiersFrom siemens:CherrybotCatalog ;
+    hmas:exposeSignifiersFrom m5stack:CherrybotCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
@@ -70,7 +69,7 @@ ra2: a hmas:ResourceProfile ;
     ] .
 
 truck: a hmas:ResourceProfile ;
-    hmas:exposeSignifiersFrom gmc:TruckCatalog ;
+    hmas:exposeSignifiersFrom m5stack:TruckCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
