@@ -345,6 +345,10 @@ _:norman2013 a owl:NamedIndividual ;
           rdfs:domain :ResourceProfile ;
           rdfs:range :Signifier ;
           owl:inverseOf :isExposedIn ;
+          owl:propertyChainAxiom (
+            hmas:exposeSignifiersFrom
+            hmas:proposesSignifier
+          ) ;
           rdfs:comment "A relation between a resource profile and a signifier it exposes."@en ; 
           rdfs:label "exposes signifier"@en, "expose le signifiant"@fr ;
           dct:source <https://github.com/HyperAgents/ns.hyperagents.org/issues/13#issuecomment-1029349488> ;
@@ -364,9 +368,23 @@ _:norman2013 a owl:NamedIndividual ;
           rdfs:comment "A relation between an Artifact and an Organization it belongs to."@en ;
           rdfs:label "is material of"@en .
 
+:SignifiersCatalog a owl:Class ;
+    rdfs:label "Catalog"@en, "Catalogue"@en ;
+    rdfs:comment "A catalogue of signifiers reusable from a resource profile" .
 
+:proposesSignifier a owl:ObjectProperty ;
+    rdfs:domain :SignifiersCatalog ;
+    rdfs:range :Signifier .
 
+:exposeSignifiersFrom a owl:ObjectProperty ;
+    rdfs:domain :ResourceProfile ;
+    rdfs:range :SignifiersCatalog .
 
+:globalSpecification a owl:ObjectProperty ;
+    rdfs:label "Global specification"@en ;
+    rdfs:label "Additional specification for the data involved in any Action Execution"@en ;
+    rdfs:domain :ResourceProfile ;
+    rdfs:range sh:NodeShape .
 
 #### 
 # Notions of HOME saved for later

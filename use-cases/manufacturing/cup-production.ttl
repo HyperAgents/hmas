@@ -1,0 +1,134 @@
+@base <https://ns.inria.fr/hmas/> .
+
+# Artifacts
+@prefix ra1: <workspaces/cup-production-site/artifacts/robotic-arm-1#> .
+@prefix ra2: <workspaces/cup-production-site/artifacts/robotic-arm-2#> .
+@prefix truck: <workspaces/cup-production-site/artifacts/truck#> .
+
+# Workspaces
+@prefix cpr: <workspaces/cup-production-site#> .
+
+# Agents
+@prefix ag-b: <workspaces/cup-production-site/agents/agent-b#> .
+@prefix ag-c: <workspaces/cup-production-site/agents/agent-c#> .
+@prefix ag-d: <workspaces/cup-production-site/agents/agent-d#> .
+
+# Organizations
+#   Nothing to see there... for now
+
+# Platforms
+@prefix plat: <#platform> .
+
+# Other prefixes
+@prefix hmas: <https://purl.org/hmas/> .
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+@prefix siemens: <https://www.siemens.com/> .
+@prefix gmc: <https://www.gm.com/> .
+
+
+#############
+# Artifacts #
+#############
+
+ra1:artifact a hmas:Artifact ;
+    hmas:isHostedOn plat:platform .
+
+ra2:artifact a hmas:Artifact ;
+    hmas:isHostedOn plat:platform .
+
+truck:artifact a hmas:Artifact ;
+    hmas:isHostedOn plat:platform .
+
+###############################
+# Artifacts Resource Profiles #
+###############################
+
+ra1: a hmas:ResourceProfile ;
+    hmas:exposeSignifiersFrom siemens:CherrybotCatalog ;
+    hmas:globalSpecification hmas:AuthorizationHeader, [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1>
+        ]
+    ] .
+
+ra2: a hmas:ResourceProfile ;
+    hmas:exposeSignifiersFrom siemens:CherrybotCatalog ;
+    hmas:globalSpecification hmas:AuthorizationHeader, [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2>
+        ]
+    ] .
+
+truck: a hmas:ResourceProfile ;
+    hmas:exposeSignifiersFrom gmc:TruckCatalog ;
+    hmas:globalSpecification hmas:AuthorizationHeader, [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://10.2.2.183>
+        ]
+    ] .
+
+##############
+# Workspaces #
+##############
+
+cpr:workspace a hmas:Workspace ;
+    hmas:isHostedOn plat:platform ;
+    cpr:hasProfile cpr: ;
+    hmas:contains ra1:artifact, ra2:artifact, truck:artifact .
+
+
+################################
+# Workspaces Resource Profiles #
+################################
+
+cpr: a hmas:ResourceProfile ; 
+    hmas:exposeSignifiersFrom hmas:JacamoWorkspaceCatalog ;
+    hmas:globalSpecification [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <workspaces/cup-production-site>
+        ]
+    ] .
+
+##########
+# Agents #
+##########
+
+ag-b:agent a hmas:Agent ;
+    hmas:isHostedOn plat:platform ;
+    hmas:hasProfile ag-b: ;
+    hmas:isContainedIn cpr:Workspace .
+
+ag-c:agent a hmas:Agent ;
+    hmas:isHostedOn plat:platform ;
+    hmas:hasProfile ag-c: ;
+    hmas:isContainedIn cpr:Workspace .
+
+ag-d:agent a hmas:Agent ;
+    hmas:isHostedOn plat:platform ;
+    hmas:hasProfile ag-d: ;
+    hmas:isContainedIn cpr:Workspace .
+
+############
+# Platform #
+############
+
+plat: a hmas:Platform ;
+    hmas:hasProfile <> .

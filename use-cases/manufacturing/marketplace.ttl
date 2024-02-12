@@ -1,0 +1,75 @@
+@base <http://localhost:3000/> .
+
+@prefix plat: <ap-description#> .
+@prefix mrk: <Market-Place#> .
+
+@prefix agent-ra: <Market-Place/agents/agent-ra#> .
+@prefix agent-rb: <Market-Place/agents/agent-rb#> .
+
+@prefix hmas: <https://purl.org/hmas/> .
+
+##########
+# Agents #
+##########
+
+agent-ra:agent a hmas:Agent ;
+    hmas:hasProfile agent-ra: ;
+    hmas:isHostedOn plat:platform ;
+    hmas:isContainedIn mrk:workspace .
+
+agent-rb:agent a hmas:Agent ;
+    hmas:hasProfile agent-rb: ;
+    hmas:isHostedOn plat:platform ;
+    hmas:isContainedIn mrk:workspace .
+
+agent-ra: a hmas:ResourceProfile ;
+    hmas:exposeSignifiersFrom hmas:JadeMessagingCatalog ;
+    hmas:globalSpecification [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://eduroamverw-130-82-24-247.unisg.ch:7778>
+        ]
+    ] .
+
+agent-rb: a hmas:ResourceProfile ;
+    hmas:exposeSignifiersFrom hmas:JadeMessagingCatalog ;
+    hmas:globalSpecification [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://eduroamverw-130-82-24-247.unisg.ch:7778>
+        ]
+    ] .
+
+#############
+# Workspace #
+#############
+
+mrk:workspace a hmas:Workspace ;
+    hmas:hasProfile mrk: ;
+    hmas:isHostedOn plat:platform .
+
+############
+# Platform #
+############
+
+plat:platform a hmas:HypermediaMASPlatform ;
+    hmas:hasProfile plat: ;
+    hmas:contains mrk: .
+
+plat: a hmas:ResourceProfile ;
+    hmas:exposeSignifiersFrom hmas:JadeMessagingCatalog ;
+    hmas:globalSpecification hmas:AuthorizationHeader, [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://eduroamverw-130-82-24-247.unisg.ch:7778>
+        ]
+    ] .

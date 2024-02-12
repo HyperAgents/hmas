@@ -1,0 +1,29 @@
+@prefix : <https://purl.org/hmas/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+:JadeMessagingCatalog a :SignifiersCatalog ;
+    :proposesSignifier [ :exposes :JadeAgentContactable ] .
+
+:JadeAgentContactable a sh:NodeShape ;
+    a sh:NodeShape ;
+    sh:class :ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property hmas:FipaHTTPProtocol, hmas:InvokeAction [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/acc"
+            ]
+        ]
+    ] , [
+        sh:path hmas:hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape hmas:ACLMessageStructure
+    ] .

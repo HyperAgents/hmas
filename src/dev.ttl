@@ -1,0 +1,88 @@
+#######################
+# Developer constants #
+#######################
+
+hmas:PathToBaseURI a rdf:List ;
+    rdf:first prov:used ;
+    rdf:rest ( td:baseURI ) .
+
+hmas:forApplicatonJson a sh:PropertyShape ;
+    sh:path hctl:forContentType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue "application/json" .
+
+hmas:forTextTurtle a sh:PropertyShape ;
+    sh:path hctl:forContentType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue "text/turtle" .
+
+hmas:FipaMessagingProtocol a sh:PropertyShape ;
+    sh:path hctl:forSubprotocol ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue "fipa.mts.mtp.http.std" .
+
+hmas:GetMethod a sh:PropertyShape ;
+    sh:path htv:methodName ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue "GET" .
+
+hmas:PutMethod a sh:PropertyShape ;
+    sh:path htv:methodName ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue "PUT" .
+
+hmas:PostMethod a sh:PropertyShape ;
+    sh:path htv:methodName ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue "POST" .
+
+hmas:DeleteMethod a sh:PropertyShape ;
+    sh:path htv:methodName ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue "DELETE" .
+
+hmas:InvokeAction a sh:PropertyShape ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:invokeAction .
+
+hmas:ReadAction a sh:PropertyShape ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:readProperty .
+
+hmas:AuthorizationHeader a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path (
+            prov:used
+            htv:headers
+            [sh:zeroOrMorePath rdf:rest]
+            rdf:first
+        ) ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class htv:messageHeader ;
+            sh:property [
+                sh:path htv:fieldName ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "Authorization"
+            ] , [
+                sh:path htv:fieldValue ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:datatype xsd:string
+            ]
+        ]
+    ] .

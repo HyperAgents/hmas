@@ -1,0 +1,238 @@
+@prefix : <https://purl.org/hmas/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix wotsec: <https://www.w3.org/2019/wot/security#> .
+@prefix http: <http://www.w3.org/2011/http#> .
+
+:JacamoWorkspaceCatalog a :SignifiersCatalog ;
+    :proposesSignifier [
+        :exposes :Jacamo ;
+        :hasOutput :JacamoWorkspaceSpecification
+    ] , [
+        :exposes :JacamoPartionnableWorkspace ;
+        :hasOutput :JacamoWorkspaceSpecification
+    ] , [
+        :exposes :JacamoUpdatableWorkspace ;
+        :hasOutput :JacamoWorkspaceSpecification
+    ] , [
+        :exposes :JacamoDeletableWorkspace ;
+        :hasOutput :JacamoWorkspaceSpecification
+    ] , [
+        :exposes :JacamoJoinableWorkspace ;
+        :hasOutput :JacamoWorkspaceJoinedSpecification
+    ] , [
+        :exposes :JacamoLeavableWorkspace ;
+        :hasOutput :JacamoLeavableWorkspace
+    ] , [
+        
+    ] , [ :exposes :JacamoFocusableWorkspace ].
+
+:JacamoObservableWorkspace a sh:NodeShape ;
+    a sh:NodeShape ;
+    sh:class :ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property :ReadAction, :GetMethod, :forTextTurtle, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue ""
+            ]
+        ]
+    ] .
+
+:JacamoPartionnableWorkspace a sh:NodeShape ;
+    a sh:NodeShape ;
+    sh:class:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property :InvokeAction :PostMethod, :forTextTurtle, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue ""
+            ]
+        ]
+    ] , [
+        sh:path :hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape :JacamoWorkspaceSpecification
+    ] .
+
+:JacamoUpdatableWorkspace a sh:NodeShape ;
+    a sh:NodeShape ;
+    sh:class:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property :InvokeAction :PutMethod, :forTextTurtle, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue ""
+            ]
+        ]
+    ] , [
+        sh:path :hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape :JacamoWorkspaceSpecification
+    ] .
+
+:JacamoDeletableWorkspace a sh:NodeShape ;
+    a sh:NodeShape ;
+    sh:class:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property :InvokeAction :DeleteMethod, :forTextTurtle, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue ""
+            ]
+        ]
+    ] , [
+        sh:path :hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape :JacamoWorkspaceSpecification
+    ] .
+
+:JacamoJoinableWorkspace a sh:NodeShape ;
+    sh:class :ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property :InvokeAction :PostMethod, :forTextTurtle, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/join"
+            ]
+        ]
+    ] .
+
+:JacamoLeavableWorkspace a sh:NodeShape ;
+    sh:class :ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property :InvokeAction :PostMethod, :forTextTurtle, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/leave"
+            ]
+        ]
+    ] .
+
+:JacamoFocusableWorkspace a sh:NodeShape ;
+    sh:class :ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property :InvokeAction :PostMethod, :forTextTurtle, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/focus"
+            ]
+        ]
+    ] .
+
+#######################
+# Body specifications #
+#######################
+
+:JacamoWorkspaceJoinedSpecification a sh:NodeShape ;
+    sh:class :Agent ;
+    sh:property [
+        sh:path hmas:isContainedIn ;
+        sh:datatype :Agent
+    ]
+
+:JacamoWorkspaceSpecification a sh:NodeShape ;
+    sh:class :Workspace ;
+    sh:property [
+        sh:path td:title ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string 
+    ] , [
+        sh:path td:hasSecurityConfiguration ;
+        sh:datatype wotsec:SecurityScheme
+    ] , [
+        sh:path td:hasActionAffordance ;
+        sh:minQualifiedCount 1 ;
+        sh:qualifiedValueShape [
+            sh:class td:ActionAffordance ;
+            sh:property [
+                sh:path td:name ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:datatype xsd:string
+            ] , [
+                sh:path td:hasForm ;
+                sh:minQualifiedCount 1 ;
+                sh:maxQualifiedCount 1 ;
+                sh:qualifiedValueShape [
+                    sh:class http:Request ;
+                    sh:property [
+                        sh:path htv:methodName ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1 ;
+                        sh:datatype xsd:string
+                    ] , [
+                        sh:path hctl:hasTarget ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1
+                    ] , [
+                        sh:path hctl:forContentType ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1 ;
+                        sh:datatype xsd:string
+                    ] , [
+                        sh:path hctl:hasOperationType ;
+                        sh:minCount 1 ;
+                        sh:maxCount 1 ;
+                        sh:datatype td:OperationType
+                    ]
+                ]
+            ] , [
+                sh:path td:hasInputSchema ;
+                sh:maxCount 1 ;
+                sh:datatype js:ObjectSchema
+            ]
+        ]
+    ] , [
+        sh:path :isContainedIn ;
+        sh:maxCount 1
+    ] , [
+        sh:path :contains ;
+        sh:maxCount 1
+    ] .
