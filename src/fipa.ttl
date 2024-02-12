@@ -239,15 +239,51 @@
 
 
 ###  https://ci.mines-stetienne.fr/fipa#ACLMessageStructure
-:ACLMessageStructure rdf:type sh:NodeShape ;
-                     rdfs:comment "The FIPA ACL message structure."@en ;
-                     rdfs:label "ACL Message Structure"@en ;
-                     sh:targetClass :ACLMessage ;
-                     sh:property [
-                                  sh:path :hasPerformative ;
-                                  sh:minCount 1;
-                                  sh:maxCount 1;
-                                  ] .
+hmas:ACLMessageStructure rdf:type sh:NodeShape ;
+    rdfs:comment "The FIPA ACL message structure."@en ;
+    rdfs:label "ACL Message Structure"@en ;
+    sh:targetClass hmas:ACLMessage ;
+    sh:property [
+        sh:path hmas:hasPerformative ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasSender ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasReceiver ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:isReplyTo ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasContent ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasLanguage ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasEncoding ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasOntology ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasProtocol ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasConversation ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:replyWith ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:isInReplyTo ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:replyBy ;
+        sh:maxCount 1
+    ] .
 
 
 ###  https://ci.mines-stetienne.fr/fipa#RequestInteractionProtocolEnactment
