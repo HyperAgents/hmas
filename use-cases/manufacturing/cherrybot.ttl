@@ -1,4 +1,4 @@
-@prefix siemens: <https://www.siemens.com/> .
+@prefix m5stack: <docs.m5stack.com/en/products/> .
 @prefix cherrybot: <https://interactions.ics.unisg.ch/cherrybot#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
@@ -13,22 +13,22 @@
 # Catalog Definition #
 ######################
 
-siemens:CherrybotCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier [ hmas:signifies siemens:CherrybotReadableOperator ] ,
-                           [ hmas:signifies siemens:CherrybotReadablePosition ] ,
-                           [ hmas:signifies siemens:CherrybotReadableTarget ] ,
-                           [ hmas:signifies siemens:CherrybotReadableGripper ] ,
-                           [ hmas:signifies siemens:CherrybotInitializableArm ] ,
-                           [ hmas:signifies siemens:CherrybotSettableOperator ] ,
-                           [ hmas:signifies siemens:CherrybotSettableTarget ] ,
-                           [ hmas:signifies siemens:CherrybotSettableGripper ] ,
-                           [ hmas:signifies siemens:CherrybotDeletableOperator ] .
+m5stack:CherrybotCatalog a hmas:SignifiersCatalog ;
+    hmas:proposesSignifier [ hmas:signifies m5stack:CherrybotReadableOperator ] ,
+                           [ hmas:signifies m5stack:CherrybotReadablePosition ] ,
+                           [ hmas:signifies m5stack:CherrybotReadableTarget ] ,
+                           [ hmas:signifies m5stack:CherrybotReadableGripper ] ,
+                           [ hmas:signifies m5stack:CherrybotInitializableArm ] ,
+                           [ hmas:signifies m5stack:CherrybotSettableOperator ] ,
+                           [ hmas:signifies m5stack:CherrybotSettableTarget ] ,
+                           [ hmas:signifies m5stack:CherrybotSettableGripper ] ,
+                           [ hmas:signifies m5stack:CherrybotDeletableOperator ] .
 
 #######################################
 # Robotic Arm Endpoint specifications #
 #######################################
 
-siemens:CherrybotReadableOperator a sh:NodeShape ;
+m5stack:CherrybotReadableOperator a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -47,10 +47,10 @@ siemens:CherrybotReadableOperator a sh:NodeShape ;
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape siemens:JsonGetOperatorOutputBody
+        sh:qualifiedValueShape m5stack:JsonGetOperatorOutputBody
     ] .
 
-siemens:CherrybotReadablePosition a sh:NodeShape ;
+m5stack:CherrybotReadablePosition a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -69,10 +69,10 @@ siemens:CherrybotReadablePosition a sh:NodeShape ;
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape siemens:JsonGetPositionOutputBody
+        sh:qualifiedValueShape m5stack:JsonGetPositionOutputBody
     ] .
 
-siemens:CherrybotReadableTarget a sh:NodeShape ;
+m5stack:CherrybotReadableTarget a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -90,10 +90,10 @@ siemens:CherrybotReadableTarget a sh:NodeShape ;
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape siemens:JsonGetPositionOutputBody
+        sh:qualifiedValueShape m5stack:JsonGetPositionOutputBody
     ].
 
-siemens:CherrybotReadableGripper a sh:NodeShape ;
+m5stack:CherrybotReadableGripper a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -116,7 +116,7 @@ siemens:CherrybotReadableGripper a sh:NodeShape ;
         sh:datatype xsd:integer
     ] .
 
-siemens:CherrybotInitializableArm a sh:NodeShape ;
+m5stack:CherrybotInitializableArm a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -132,7 +132,7 @@ siemens:CherrybotInitializableArm a sh:NodeShape ;
         ]
     ] .
 
-siemens:CherrybotSettableOperator a sh:NodeShape ;
+m5stack:CherrybotSettableOperator a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -150,10 +150,10 @@ siemens:CherrybotSettableOperator a sh:NodeShape ;
         sh:path hmas:hasInput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape siemens:JsonSetOperatorInputBody
+        sh:qualifiedValueShape m5stack:JsonSetOperatorInputBody
     ] .
 
-siemens:CherrybotSettableTarget a sh:NodeShape ;
+m5stack:CherrybotSettableTarget a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -171,10 +171,10 @@ siemens:CherrybotSettableTarget a sh:NodeShape ;
         sh:path hmas:hasInput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape siemens:JsonSetPositionInputBody
+        sh:qualifiedValueShape m5stack:JsonSetPositionInputBody
     ] .
 
-siemens:CherrybotSettableGripper a sh:NodeShape ;
+m5stack:CherrybotSettableGripper a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -197,7 +197,7 @@ siemens:CherrybotSettableGripper a sh:NodeShape ;
         sh:maxExclusive 800
     ] .
 
-siemens:CherrybotDeletableOperator a sh:NodeShape ;
+m5stack:CherrybotDeletableOperator a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -217,7 +217,7 @@ siemens:CherrybotDeletableOperator a sh:NodeShape ;
 # Intput/Output specifications #
 ################################
 
-siemens:JsonGetOperatorOutputBody a sh:NodeShape ;
+m5stack:JsonGetOperatorOutputBody a sh:NodeShape ;
     sh:class cherrybot:OperatorWithTokenSchema ;
     sh:property [
         sh:path foaf:Name;
@@ -236,7 +236,7 @@ siemens:JsonGetOperatorOutputBody a sh:NodeShape ;
         sh:datatype xsd:string
     ] .
 
-siemens:JsonSetOperatorInputBody a sh:NodeShape ;
+m5stack:JsonSetOperatorInputBody a sh:NodeShape ;
     sh:class cherrybot:OperatorSchema ;
     sh:property [
         sh:path foaf:name ;
@@ -250,7 +250,7 @@ siemens:JsonSetOperatorInputBody a sh:NodeShape ;
         sh:datatype xsd:string
     ] .
 
-siemens:JsonRotationElement a sh:NodeShape ;
+m5stack:JsonRotationElement a sh:NodeShape ;
     sh:class cherrybot:CoordinatesSchema ;
     sh:property [
         sh:path cherrybot:xCoordinate ;
@@ -275,7 +275,7 @@ siemens:JsonRotationElement a sh:NodeShape ;
         sh:datatype xsd:float 
     ] .
 
-siemens:JsonTranslationElement a sh:NodeShape ;
+m5stack:JsonTranslationElement a sh:NodeShape ;
     sh:class cherrybot:RotationSchema ;
     sh:property [
         sh:path cherrybot:roll ;
@@ -300,30 +300,30 @@ siemens:JsonTranslationElement a sh:NodeShape ;
         sh:datatype xsd:float 
     ] .
 
-siemens:JsonGetPositionOutputBody a sh:NodeShape ;
+m5stack:JsonGetPositionOutputBody a sh:NodeShape ;
     sh:class cherrybot:TcpTargetSchema ;
     sh:property [
         sh:path cherrybot:coordinate ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape siemens:JsonTranslationElement
+        sh:qualifiedValueShape m5stack:JsonTranslationElement
     ] , [
         sh:path cherrybot:rotation ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape siemens:JsonRotationElement
+        sh:qualifiedValueShape m5stack:JsonRotationElement
     ] .
 
-siemens:JsonSetPositionInputBody a sh:NodeShape ;
+m5stack:JsonSetPositionInputBody a sh:NodeShape ;
     sh:class cherrybot:TcpMovementSchema ;
     sh:property [
         sh:path cherrybot:coordinate ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape siemens:JsonTranslationElement
+        sh:qualifiedValueShape m5stack:JsonTranslationElement
     ] , [
         sh:path cherrybot:rotation ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape siemens:JsonRotationElement
+        sh:qualifiedValueShape m5stack:JsonRotationElement
     ] .
