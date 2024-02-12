@@ -86,3 +86,57 @@ hmas:AuthorizationHeader a sh:NodeShape ;
             ]
         ]
     ] .
+
+hmas:SlugHeader a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path (
+            prov:used
+            htv:headers
+            [sh:zeroOrMorePath rdf:rest]
+            rdf:first
+        ) ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class htv:messageHeader ;
+            sh:property [
+                sh:path htv:fieldName ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "Slug"
+            ] , [
+                sh:path htv:fieldValue ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:datatype xsd:string
+            ]
+        ]
+    ] .
+
+hmas:XAgentWebIDHeader a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path (
+            prov:used
+            htv:headers
+            [sh:zeroOrMorePath rdf:rest]
+            rdf:first
+        ) ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class htv:messageHeader ;
+            sh:property [
+                sh:path htv:fieldName ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "X-Agent-WebID"
+            ] , [
+                sh:path htv:fieldValue ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:datatype xsd:string
+            ]
+        ]
+    ] .
