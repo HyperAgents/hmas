@@ -58,6 +58,33 @@ ex:ur5 a td:Thing, pto:Robotic_arm ;
 
 ### 3.1.1 Signified Interaction Affordances
 
+```
+ex:ur5Profile a hmas:ResourceProfile;
+   hmas:exposesSignifier [ a hmas:Signifier ; hmas:signifies ex:affordance ];
+   hmas:isProfileOf ex:ur5.
+
+ex:ur5 a td:Thing, pto:Robotic_arm ;
+   td:title "UR5 Robotic Arm" ;
+   td:hasSecurityConfiguration [ a wotsec:NoSecurityScheme ];
+   td:hasInteractionAffordance ex:affordance .
+
+ex:affordance a td:PropertyAffordance, js:IntegerSchema ;
+    td:name "example affordance";
+	td:hasForm ex:form .
+
+ex:form a hctl:Form;
+    hctl:hasOperationType td:readProperty, td:writeProperty ;
+    hctl:hasTarget <https://api.interactions.ics.unisg.ch/example> .
+```
+
+### 3.1.2 SHACL Action Specifications and Interaction Affordances
+cf https://github.com/HyperAgents/hmas/issues/187#issuecomment-1857396274
+Property affordance : "the value assigned to op MUST be one of readproperty (has output), writeproperty (has input), observeproperty (same as readproperty), unobserveproperty (has definetely different target)"
+
+Action affordance: invokeaction (hasInput & hasOutput), queryaction (hasOutput), cancelaction 
+
+Event Affordance:  subscribeevent (input with a callbackURI & has output ), unsubscribeevent, or both 
+(see td:EventAffordance example here: https://www.w3.org/TR/wot-thing-description11/#example-70)
 
 # 4. SHACL and JSON Data Schema Alignment
 
