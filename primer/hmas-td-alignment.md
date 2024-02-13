@@ -26,39 +26,80 @@ This document presents the correspondance between the hMAS vocabulary and the W3
 
 # 2. hMAS Core and WoT TD Alignment
 ## 2.1 Artifacts and Things
+
 A WoT Thing is a subclass of hmas:Artifact
-(insert RDF of subclassing)
+
+```turtle
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix hmas: <https://purl.org/hmas/> .
+
+td:Thing rdfs:subClassOf hmas:Artifact .
+```
 
 ## 2.2 Resource Profiles and Thing Descriptions
 A WoT Thing is a subclass of hMAS Artifact whose hMAS Resource Profile is a WoT Thing Description. We can therefore represent:
-(insert RDF of hmas:Resource profile that is profile of a td:Thing, e.g. from issue https://github.com/HyperAgents/hmas/issues/187)
+
 ```rdf
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix onto: <https://ci.mines-stetienne.fr/kg/ontology#> .
-@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix pto:   <http://www.productontology.org/id/> .
-@prefix htv: <http://www.w3.org/2011/http#> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix xs: <https://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix wotsec: <https://www.w3.org/2019/wot/security#> .
 
 ex:ur5Profile a hmas:ResourceProfile;
    hmas:isProfileOf ex:ur5.
 
 ex:ur5 a td:Thing, pto:Robotic_arm ;
    td:title "UR5 Robotic Arm" ;
-   td:hasSecurityConfiguration [ a wotsec:NoSecurityScheme ].
+   td:hasSecurityConfiguration [ a wotsec:NoSecurityScheme ] .
 ```
 
-(Optional TODO: explain how td:baseURI is used in hmas:ResourceProfile)
+Constraints can be added on a hmas:ResourceProfile that will concern any request trying to reach a hmas:Signifier of that artifact.
+
+These constraints allows to check the td:baseURI property on the incoming data.
+
+```turtle
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix pto:   <http://www.productontology.org/id/> .
+@prefix ex: <http://example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix wotsec: <https://www.w3.org/2019/wot/security#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+ex:ur5Profile a hmas:ResourceProfile;
+   hmas:isProfileOf ex:ur5 ;
+   hmas:globalSpecification [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://link.to/my/artifact/base-uri>
+        ]
+    ] .
+
+ex:ur5 a td:Thing, pto:Robotic_arm ;
+   td:title "UR5 Robotic Arm" ;
+   td:hasSecurityConfiguration [ a wotsec:NoSecurityScheme ] .
+```
 # 3. hMAS Interaction and WoT TD Alignment
 
 ## 3.1 Signifiers and Interaction Affordances
 
 ### 3.1.1 Signified Interaction Affordances
 
+A td:InteractionAffordance can be used as specification for a hmas:Signifier using the property hmas:signifies
+
 ```
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix pto:   <http://www.productontology.org/id/> .
+@prefix wotsec: <https://www.w3.org/2019/wot/security#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix ex: <https://www.example.org/> .
+
 ex:ur5Profile a hmas:ResourceProfile;
    hmas:exposesSignifier [ a hmas:Signifier ; hmas:signifies ex:affordance ];
    hmas:isProfileOf ex:ur5.
@@ -78,13 +119,251 @@ ex:form a hctl:Form;
 ```
 
 ### 3.1.2 SHACL Action Specifications and Interaction Affordances
-cf https://github.com/HyperAgents/hmas/issues/187#issuecomment-1857396274
-Property affordance : "the value assigned to op MUST be one of readproperty (has output), writeproperty (has input), observeproperty (same as readproperty), unobserveproperty (has definetely different target)"
 
-Action affordance: invokeaction (hasInput & hasOutput), queryaction (hasOutput), cancelaction 
+A ShaCL constraint can be provided to describe the Affordances.
 
-Event Affordance:  subscribeevent (input with a callbackURI & has output ), unsubscribeevent, or both 
-(see td:EventAffordance example here: https://www.w3.org/TR/wot-thing-description11/#example-70)
+This constraint can embed a td:OperationType shape to force semantics to the ActionExecution.
+
+For the PropertyAffordances td:OperationType MUST be one of readproperty, writeproperty, observeproperty, unobserveproperty
+
+```turtle@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://www.example.org/> .
+
+# Example of readproperty Action Specification
+ex:TruckReadableBatterySpecification a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/properties/batteryvoltage"
+            ]
+        ]
+    ] .
+
+# Example of writeproperty Action Specification
+ex:TruckSettableWheels a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property hmas-dev:WriteProperty, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/actions/wheelControl"
+            ]
+        ]
+    ] , [
+        sh:path hmas:hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:JsonControlWheelBody
+    ] .
+
+
+# Example of observeproperty Action Specification
+ex:CherrybotObservableGripper a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property hmas-dev:ObserveProperty, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/gripper/observe"
+            ]
+        ]
+    ] , [
+        sh:path hmas:hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:CallbackURIBody
+    ] .
+
+# Example of unobserveproperty Action Specification
+ex:CherrybotUnobservableGripper a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property hmas-dev:UnobserveProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/gripper/unobserve"
+            ]
+        ]
+    ] .
+```
+
+For the Action affordance the following values are allowed invokeaction, queryaction, cancelaction 
+
+```turtle
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://www.example.org/> .
+
+# Example of invokeaction Action Specification
+ex:ActionablePrinting a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/print"
+            ]
+        ]
+    ] , [
+	sh:path: hmas:hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:documentDescriptionBody
+    ] , [
+        sh:path: hmas:hasOutput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:printerStatus
+    ] .
+
+# Example of invokeaction Action Specification
+ex:QueryableDatabase a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property hmas-dev:QueryAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/query"
+            ]
+        ]
+    ] , [
+	sh:path: hmas:hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:query
+    ] , [
+        sh:path: hmas:hasOutput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:printerStatus
+    ] .
+
+# Example of cancelaction Action Specification
+ex:CancelablePrinting a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property hmas-dev:CancelAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/print/cancel"
+            ]
+        ]
+    ] .
+```
+
+And finally for the Event Affordance the following terms are implemented: subscribeevent, unsubscribeevent, or both 
+
+```turtle
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://www.example.org/> .
+
+# Example of subscribeevent Action Specification
+ex:SubscribableOverheating a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/overheat/subscribe"
+            ]
+        ]
+    ] , [
+	sh:path: hmas:hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:callbackUrisBody
+    ] , [
+        sh:path: hmas:hasOutput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:subscriptionDetailsBody
+    ] .
+
+# Example of unsubscribeevent Action Specification
+ex:UnsubscribableOverheating a sh:NodeShape ;
+    sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "/overheat/unsubscribe"
+            ]
+        ]
+    ] , [
+	sh:path: hmas:hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:callbackUrisBody
+    ] .
+```
 
 # 4. SHACL and JSON Data Schema Alignment
 
