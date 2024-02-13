@@ -150,6 +150,11 @@ ex:TruckReadableBatterySpecification a sh:NodeShape ;
                 sh:hasValue "/properties/batteryvoltage"
             ]
         ]
+    ] , [
+        sh:path hmas:hasOutput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:TruckBatteryBody
     ] .
 
 # Example of writeproperty Action Specification
@@ -197,6 +202,11 @@ ex:CherrybotObservableGripper a sh:NodeShape ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape ex:CallbackURIBody
+    ] , [
+        sh:path hmas:hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:NotificationSpecification
     ] .
 
 # Example of unobserveproperty Action Specification
@@ -215,6 +225,11 @@ ex:CherrybotUnobservableGripper a sh:NodeShape ;
                 sh:hasValue "/gripper/unobserve"
             ]
         ]
+    ] , [
+        sh:path hmas:hasInput ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape ex:CallbackURIBody
     ] .
 ```
 
@@ -257,7 +272,7 @@ ex:ActionablePrinting a sh:NodeShape ;
     ] .
 
 # Example of invokeaction Action Specification
-ex:QueryableDatabase a sh:NodeShape ;
+ex:CheckableProcess a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -269,19 +284,14 @@ ex:QueryableDatabase a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/query"
+                sh:hasValue "/get-progress"
             ]
         ]
-    ] , [
-	sh:path: hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape ex:query
     ] , [
         sh:path: hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape ex:printerStatus
+        sh:qualifiedValueShape ex:progressStatus
     ] .
 
 # Example of cancelaction Action Specification
@@ -322,7 +332,7 @@ ex:SubscribableOverheating a sh:NodeShape ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas-dev:SubscribeEvent, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -338,7 +348,7 @@ ex:SubscribableOverheating a sh:NodeShape ;
         sh:path: hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape ex:subscriptionDetailsBody
+        sh:qualifiedValueShape ex:NotificationSpecification
     ] .
 
 # Example of unsubscribeevent Action Specification
