@@ -202,3 +202,22 @@ hmas:XAgentWebIDHeader a sh:NodeShape ;
     sh:hasValue fipa:FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
     sh:minCount 1 ;
     sh:maxCount 1 .
+
+:WorkspaceProfileSpecification a sh:NodeShape ;
+    sh:class :ResourceProfile ;
+    sh:property [ 
+        sh:path :isProfileOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype :Workspace   
+    ] .
+
+:ArtifactProfileSpecification a sh:NodeShape ;
+    sh:class :ResourceProfile ;
+    sh:property [ 
+        sh:path :isProfileOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype :Artifact
+    ] .
+    
