@@ -13,11 +13,11 @@ jade:MessagingCatalog a hmas-dev:SignifiersCatalog ;
 
 jade:PerformativeMessagingCatalog a hmas-dev:SignifiersCatalog ;
     hmas-dev:proposesSignifier jade:ReceivableRequest ,
-                               jade:ReceivableAccept ,
-                               jade:ReceivableRefuse ,
-                               jade:ReceivableFailure ,
-                               jade:ReceivableInformDone ,
-                               jade:ReceivableInformResult .
+                            jade:ReceivableAccept ,
+                            jade:ReceivableRefuse ,
+                            jade:ReceivableFailure ,
+                            jade:ReceivableInformDone ,
+                            jade:ReceivableInformResult .
 
 jade:AgentContactable a hmas:Signifier ;
     hmas:signifies [

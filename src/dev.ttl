@@ -1,4 +1,5 @@
 @prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/> .
 @prefix fipa: <https://purl.org/hmas/> .
 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,65 +15,65 @@
 # Developer constants #
 #######################
 
-hmas:PathToBaseURI a rdf:List ;
+hmas-dev:PathToBaseURI a rdf:List ;
     rdf:first prov:used ;
     rdf:rest ( td:baseURI ) .
 
-hmas:forApplicatonJson a sh:PropertyShape ;
+hmas-dev:forApplicatonJson a sh:PropertyShape ;
     sh:path hctl:forContentType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "application/json" .
 
-hmas:forTextTurtle a sh:PropertyShape ;
+hmas-dev:forTextTurtle a sh:PropertyShape ;
     sh:path hctl:forContentType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "text/turtle" .
 
-hmas:FipaMessagingProtocol a sh:PropertyShape ;
+hmas-dev:FipaMessagingProtocol a sh:PropertyShape ;
     sh:path hctl:forSubprotocol ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "fipa.mts.mtp.http.std" .
 
-hmas:GetMethod a sh:PropertyShape ;
+hmas-dev:GetMethod a sh:PropertyShape ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "GET" .
 
-hmas:PutMethod a sh:PropertyShape ;
+hmas-dev:PutMethod a sh:PropertyShape ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "PUT" .
 
-hmas:PostMethod a sh:PropertyShape ;
+hmas-dev:PostMethod a sh:PropertyShape ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "POST" .
 
-hmas:DeleteMethod a sh:PropertyShape ;
+hmas-dev:DeleteMethod a sh:PropertyShape ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "DELETE" .
 
-hmas:InvokeAction a sh:PropertyShape ;
+hmas-dev:InvokeAction a sh:PropertyShape ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:invokeAction .
 
-hmas:ReadAction a sh:PropertyShape ;
+hmas-dev:ReadAction a sh:PropertyShape ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:readProperty .
 
-hmas:AuthorizationHeader a sh:NodeShape ;
+hmas-dev:AuthorizationHeader a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path (
@@ -99,7 +100,7 @@ hmas:AuthorizationHeader a sh:NodeShape ;
         ]
     ] .
 
-hmas:SlugHeader a sh:NodeShape ;
+hmas-dev:SlugHeader a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path (
@@ -125,7 +126,7 @@ hmas:SlugHeader a sh:NodeShape ;
         ]
     ] .
 
-hmas:XAgentWebIDHeader a sh:NodeShape ;
+hmas-dev:XAgentWebIDHeader a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path (
@@ -152,64 +153,64 @@ hmas:XAgentWebIDHeader a sh:NodeShape ;
     ] .
 # Messaging #
 
-hmas:FIPAMessageForm a sh:NodeShape ;
+hmas-dev:FIPAMessageForm a sh:NodeShape ;
     sh:class hctl:Form ;
-    sh:property hmas:FipaMessagingProtocol, hmas:InvokeAction, [
+    sh:property hmas-dev:FipaMessagingProtocol, hmas-dev:InvokeAction, [
         sh:path hctl:hasTarget ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:hasValue ""
     ] .
 
-hmas:AgentMessage a sh:PropertyShape ;
+hmas-dev:AgentMessage a sh:PropertyShape ;
     sh:path fipa:hasSender ; # specifies that the sender should be an agent
     sh:class hmas:Agent;
     sh:minCount 1;
     sh:maxCount 1 .
 
-hmas:Request a sh:PropertyShape ;
+hmas-dev:Request a sh:PropertyShape ;
     sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:agree
     sh:hasValue fipa:request ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
-hmas:Agree a sh:PropertyShape ;
+hmas-dev:Agree a sh:PropertyShape ;
     sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:agree
     sh:hasValue fipa:agree ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
-hmas:Refuse a sh:PropertyShape ;
+hmas-dev:Refuse a sh:PropertyShape ;
     sh:path fipa:hasPerformative ;
     sh:hasValue fipa:refuse ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
-hmas:Failure a sh:PropertyShape ;
+hmas-dev:Failure a sh:PropertyShape ;
     sh:path fipa:hasPerformative ;
     sh:hasValue fipa:failure ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
-hmas:InformDone a sh:PropertyShape ;
+hmas-dev:InformDone a sh:PropertyShape ;
     sh:path fipa:informDone ;
     sh:hasValue fipa:informDone ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
-hmas:InformResult a sh:PropertyShape ;
+hmas-dev:InformResult a sh:PropertyShape ;
     sh:path fipa:informDone ;
     sh:hasValue fipa:informResult ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
-hmas:InteractionOrder a sh:PropertyShape ;
+hmas-dev:InteractionOrder a sh:PropertyShape ;
     sh:path fipa:hasContent ; # specifies that the content should be an action execution specification
     sh:minQualifiedShape 1 ;
     sh:maxQualifiedShape 1 ;
     sh:qualifiedValueShape [ sh:class hmas:ActionExecution ] .
 
-hmas:FIPASL a sh:PropertyShape ;
+hmas-dev:FIPASL a sh:PropertyShape ;
     sh:path fipa:hasLanguage ;
     sh:hasValue fipa:FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
     sh:minCount 1 ;
