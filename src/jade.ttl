@@ -1,6 +1,6 @@
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev> .
-@prefix jade: <https://purl.org/hmas/jade> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix jade: <https://purl.org/hmas/jade#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .

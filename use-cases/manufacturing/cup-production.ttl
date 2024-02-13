@@ -21,11 +21,12 @@
 
 # Other prefixes
 @prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
 @prefix ufactory: <https://eu.robotshop.com/fr/collections/ufactory/> .
-@prefix m5stack: <docs.m5stack.com/en/products/> .
+@prefix m5stack: <https://docs.m5stack.com/en/products/> .
 
 #############
 # Artifacts #
@@ -49,7 +50,7 @@ ra1: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path hmas-dev:PathToBaseURI ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1>
@@ -61,7 +62,7 @@ ra2: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path hmas-dev:PathToBaseURI ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2>
@@ -73,7 +74,7 @@ truck: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path hmas-dev:PathToBaseURI ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://10.2.2.183>
@@ -99,7 +100,7 @@ cpr: a hmas:ResourceProfile ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path hmas-dev:PathToBaseURI ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <workspaces/cup-production-site>

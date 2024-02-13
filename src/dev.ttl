@@ -1,5 +1,5 @@
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
 @prefix fipa: <https://purl.org/hmas/> .
 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -67,11 +67,53 @@ hmas-dev:InvokeAction a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:hasValue td:invokeAction .
 
-hmas-dev:ReadAction a sh:PropertyShape ;
+hmas-dev:ReadProperty a sh:PropertyShape ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:readProperty .
+
+hmas-dev:WriteProperty a sh:PropertyShape ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:writeProperty .
+
+hmas-dev:ObserveProperty a sh:PropertyShape ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:observeProperty .
+
+hmas-dev:UnobserveProperty a sh:PropertyShape ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:unobserveProperty .
+
+hmas-dev:QueryAction a sh:PropertyShape ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:queryAction .
+
+hmas-dev:CancelAction a sh:PropertyShape ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:cancelAction .
+
+hmas-dev:SubscribeEvent a sh:PropertyShape ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:subscribeEvent .
+
+hmas-dev:UnsubscribeEvent a sh:PropertyShape ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:unsubscribeEvent .
 
 hmas-dev:AuthorizationHeader a sh:NodeShape ;
     sh:class hmas:ActionExecution ;

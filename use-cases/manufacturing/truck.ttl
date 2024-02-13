@@ -2,6 +2,7 @@
 @prefix m5stack: <https://docs.m5stack.com/en/products/> .
 
 @prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -26,7 +27,7 @@ m5stack:TruckReadableBattery a sh:NodeShape ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
+            sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -43,7 +44,7 @@ m5stack:TruckReadableAccelerometer a sh:NodeShape ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
+            sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -60,7 +61,7 @@ m5stack:TruckSettableWheels a sh:NodeShape ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas:InvokeAction, hmas:GetMethod, hmas:forApplicatonJson, [
+            sh:property hmas-dev:InvokeAction, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;

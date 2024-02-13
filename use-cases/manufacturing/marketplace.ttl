@@ -7,7 +7,8 @@
 @prefix agent-rb: <Market-Place/agents/agent-rb#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix jade: <https://purl.org/hmas/jade> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix jade: <https://purl.org/hmas/jade#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
@@ -92,7 +93,7 @@ plat: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path hmas-dev:PathToBaseURI ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://eduroamverw-130-82-24-247.unisg.ch:7778>
