@@ -126,7 +126,7 @@ This constraint can embed a td:OperationType shape to force semantics to the Act
 
 For the PropertyAffordances td:OperationType MUST be one of readproperty, writeproperty, observeproperty, unobserveproperty
 
-**readproperty**
+**readProperty**
 
 The equivalent of the following td:PropertyAffordance:
 
@@ -187,7 +187,34 @@ ex:TruckReadableBatterySpecification a sh:NodeShape ;
     ] .
 ```
 
-**writeproperty**
+**writeProperty**
+
+The equivalent of the following td:PropertyAffordance 
+
+```turtle
+@prefix ex-td: <https://www.example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+
+ex-td:TruckSettableWheels a td:PropertyAffordance, ex-td:TruckWheels, js:ObjectSchema ;
+    td:name "wheels" ;
+    td:hasForm [
+        hctl:hasTarget <https://link.to/truck/actions/wheelControl> ;
+        hctl:forContentType "application/json" ;
+        hctl:hasOperationType td:writeProperty ;
+        htv:methodName "POST"
+    ] ;
+    td:isObservable false ;
+    js:properties [
+      a js:NumberSchema , ex-td:WheelSpeed ;
+      js:propertyName "speed"
+    ] ; 
+    js:required "speed" .
+```
+
+Would be the following in hMAS:
 
 ```
 # Example of writeproperty Action Specification
@@ -212,7 +239,11 @@ ex:TruckSettableWheels a sh:NodeShape ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape ex:JsonControlWheelBody
     ] .
+```
 
+**observeProperty**
+
+```
 
 # Example of observeproperty Action Specification
 ex:CherrybotObservableGripper a sh:NodeShape ;
