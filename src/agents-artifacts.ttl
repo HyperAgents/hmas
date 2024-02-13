@@ -3,6 +3,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
 @base <https://purl.org/hmas/> .
@@ -17,16 +18,37 @@
 #################################################################
 
 :hasBody rdf:type owl:ObjectProperty ;
-                rdfs:domain :Agent ;
-                rdfs:range :Body ;
-                rdfs:label "has Body"@en .
+         rdfs:domain :Agent ;
+         rdfs:range :Body ;
+         owl:inverseOf :isBodyOf ;
+         rdfs:label "has Body"@en .
 
 
 :isBodyOf rdf:type owl:ObjectProperty ;
-                rdfs:domain :Body ;
-                rdfs:range :Agent ;
-                owl:inverseOf :hasBody ;
-                rdfs:label "id Body Of"@en .
+          rdfs:domain :Body ;
+          rdfs:range :Agent ;
+          owl:inverseOf :hasBody ;
+          rdfs:label "id Body Of"@en .
+
+:hasInitialisationParameters rdf:type owl:ObjectProperty ; 
+                             rdfs:domain :Artifact ;
+                             rdfs:range rdf:List ;
+                             rdfs:label "has Initialisation Parameters"@en .
+
+
+#################################################################
+#    Datatype Properties
+#################################################################
+
+:hasName rdf:type owl:DatatypeProperty ; 
+         rdfs:domain :Artifact ;
+         rdfs:range xsd:sting ;
+         rdfs:label "has Name"@en .
+
+:hasClass rdf:type owl:DatatypeProperty ; 
+         rdfs:domain :Artifact ;
+         rdfs:range xsd:sting ;
+         rdfs:label "has Class"@en .
 
 
 #################################################################
@@ -35,7 +57,7 @@
 
 :Body rdf:type owl:Class ;
       rdfs:subClassOf :Artifact ;
-      rdfs:comment "TBA"@en ;
+      rdfs:comment "an artifact representing its owner in the environment. It offers affordances to other agents to interact with and observe the owner. It also contains information about the owner"@en ;
       rdfs:label "Body"@en .
 
 
