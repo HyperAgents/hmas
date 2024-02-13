@@ -137,7 +137,7 @@ The equivalent of the following td:PropertyAffordance:
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix htv: <http://www.w3.org/2011/http#> .
 
-ex-td:TruckReadableBatterySpecification a td:PropertyAffordance, ex-td:TruckBattery, js:ObjectSchema ;
+ex-td:TruckReadableBatterySpecification a td:PropertyAffordance, ex-td:GetTruckBattery, js:ObjectSchema ;
     td:name "battery" ;
     td:hasForm [
         hctl:hasTarget <https://link.to/truck/properties/batteryvoltage> ;
@@ -146,11 +146,14 @@ ex-td:TruckReadableBatterySpecification a td:PropertyAffordance, ex-td:TruckBatt
         htv:methodName "GET"
     ] ;
     td:isObservable false ;
-    js:properties [
-        a js:NumberSchema , ex-td:TruckBatteryPercentage ;
-        js:propertyName "percentage"
-    ] ;
-    js:required "percentage" .
+    td:hasOutputSchema [
+        a js:ObjectSchema , ex-td:TruckBattery ;
+        js:properties [
+            a js:NumberSchema , ex-td:TruckBatteryPercentage ;
+	    js:propertyName "percentage"
+        ] ;
+        js:required "percentage"
+    ] .
 ```
 
 Would be the following Action Execution specification in hMAS: 
@@ -199,7 +202,7 @@ The equivalent of the following td:PropertyAffordance
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix htv: <http://www.w3.org/2011/http#> .
 
-ex-td:TruckSettableWheels a td:PropertyAffordance, ex-td:TruckWheels, js:ObjectSchema ;
+ex-td:TruckSettableWheels a td:PropertyAffordance, ex-td:SetTruckWheels, js:ObjectSchema ;
     td:name "wheels" ;
     td:hasForm [
         hctl:hasTarget <https://link.to/truck/actions/wheelControl> ;
@@ -208,16 +211,27 @@ ex-td:TruckSettableWheels a td:PropertyAffordance, ex-td:TruckWheels, js:ObjectS
         htv:methodName "POST"
     ] ;
     td:isObservable false ;
-    js:properties [
-      a js:NumberSchema , ex-td:WheelSpeed ;
-      js:propertyName "speed"
-    ] ; 
-    js:required "speed" .
+    td:hasInputSchema [
+        a js:ObjectSchema , ex-td:TruckWheels ;
+        js:properties [
+            a js:NumberSchema , ex-td:WheelSpeed ;
+            js:propertyName "speed"
+        ] ;
+        js:required "speed"
+    ] .
 ```
 
 Would be the following in hMAS:
 
 ```turtle
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://www.example.org/> .
+
 # Example of writeproperty Action Specification
 ex:TruckSettableWheels a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -245,6 +259,14 @@ ex:TruckSettableWheels a sh:NodeShape ;
 **observeProperty**
 
 ```turtle
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://www.example.org/> .
+
 # Example of observeproperty Action Specification
 ex:CherrybotObservableGripper a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -275,10 +297,47 @@ ex:CherrybotObservableGripper a sh:NodeShape ;
 
 ```
 
-
 **unobserveProperty**
 
+The following td:Affordance :
+
 ```turtle
+@prefix ex-td: <https://www.example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+
+ex-td:CherrybotUnobservableGripper a td:PropertyAffordance, ex-td:unobserveGripper, js:ObjectSchema ;
+    td:name "gripper" ;
+    td:hasForm [
+        hctl:hasTarget <https://link.to/cherrybot/gripper/unobserve> ;
+        hctl:forContentType "application/json" ;
+        hctl:hasOperationType td:unobserveProperty ;
+        htv:methodName "POST"
+    ] ;
+    td:isObservable true ;
+    td:hasInputSchema [
+        a js:ObjectSchema , ex-td:CallbackURIObject
+        js:properties [
+            a js:StringSchema , ex-td:CallbackURI ;
+            js:propertyName "callback"
+        ] ;
+        js:required "callback"
+    ] .
+```
+
+Would have the following equivalent in hMAS
+
+```turtle
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://www.example.org/> .
+
 # Example of unobserveproperty Action Specification
 ex:CherrybotUnobservableGripper a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -345,7 +404,45 @@ ex:ActionablePrinting a sh:NodeShape ;
 ```
 **queryAction**
 
+The following td:Affordance:
+
 ```turtle
+@prefix ex-td: <https://www.example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+
+ex-td:CheckableProcess a td:PropertyAffordance, ex-td:QueryProgress, js:ObjectSchema ;
+    td:name "progress" ;
+    td:hasForm [
+        hctl:hasTarget <https://link.to/worker/get-progress> ;
+        hctl:forContentType "application/json" ;
+        hctl:hasOperationType td:queryAction ;
+        htv:methodName "GET"
+    ] ;
+    td:isObservable false ;
+    td:hasOutputSchema [
+        a js:ObjectSchema , ex-td:Progress ;
+        js:properties [
+            a js:NumberSchema , ex-td:ProgressPercentage ;
+            js:propertyName "percentage"
+        ] ;
+        js:required "percentage"
+    ] .
+```
+
+Would have the following equivalent in hMAS:
+
+```turtle
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://www.example.org/> .
+
 # Example of invokeaction Action Specification
 ex:CheckableProcess a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -371,7 +468,36 @@ ex:CheckableProcess a sh:NodeShape ;
 ```
 **cancelAction**
 
+The following td:ActionAffordance:
+
 ```turtle
+@prefix ex-td: <https://www.example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+
+ex-td:CancelablePrinting a td:ActionAffordance ;
+    td:name "progress" ;
+    td:hasForm [
+        hctl:hasTarget <https://link.to/printer/cancel> ;
+        hctl:forContentType "application/json" ;
+        hctl:hasOperationType td:cancelAction ;
+        htv:methodName "GET"
+    ] .
+```
+
+Would have this equivalent in hMAS:
+
+```turtle
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://www.example.org/> .
+
 # Example of cancelaction Action Specification
 ex:CancelablePrinting a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -432,6 +558,14 @@ ex:SubscribableOverheating a sh:NodeShape ;
 **unsubscribeEvent**
 
 ```turtle
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex: <https://www.example.org/> .
+
 # Example of unsubscribeevent Action Specification
 ex:UnsubscribableOverheating a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
