@@ -176,7 +176,7 @@ ex:TruckReadableBatterySpecification a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/properties/batteryvoltage"
+                sh:hasValue <https://link.to/truck/properties/batteryvoltage>
             ]
         ]
     ] , [
@@ -230,7 +230,7 @@ ex:TruckSettableWheels a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/actions/wheelControl"
+                sh:hasValue <https://link.to/truck/actions/wheelControl>
             ]
         ]
     ] , [
@@ -258,7 +258,7 @@ ex:CherrybotObservableGripper a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/gripper/observe"
+                sh:hasValue <https://link.to/cherrybot/gripper/observe>
             ]
         ]
     ] , [
@@ -286,7 +286,7 @@ ex:CherrybotUnobservableGripper a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/gripper/unobserve"
+                sh:hasValue <https://link.to/gripper/unobserve>
             ]
         ]
     ] , [
@@ -320,7 +320,7 @@ ex:ActionablePrinting a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/print"
+                sh:hasValue <https://link.to/printer/print>
             ]
         ]
     ] , [
@@ -348,7 +348,7 @@ ex:CheckableProcess a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/get-progress"
+                sh:hasValue <https://link.to/worker/get-progress>
             ]
         ]
     ] , [
@@ -371,7 +371,7 @@ ex:CancelablePrinting a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/print/cancel"
+                sh:hasValue <https://link.to/printer/print/cancel>
             ]
         ]
     ] .
@@ -400,7 +400,7 @@ ex:SubscribableOverheating a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/overheat/subscribe"
+                sh:hasValue <https://link.to/heater/overheat/subscribe>
             ]
         ]
     ] , [
@@ -428,7 +428,7 @@ ex:UnsubscribableOverheating a sh:NodeShape ;
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
-                sh:hasValue "/overheat/unsubscribe"
+                sh:hasValue <https://link.to/heater/overheat/unsubscribe>
             ]
         ]
     ] , [
