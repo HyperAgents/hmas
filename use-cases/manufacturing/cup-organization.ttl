@@ -1,0 +1,232 @@
+@base <https://ns.inria.fr/hmas/> .
+
+@prefix ex: <https://www.example.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hmas: <https://purl.org/hmas/> .
+
+@prefix ag-b: <workspaces/cup-production-site/agents/agent-b#> .
+@prefix ag-c: <workspaces/cup-production-site/agents/agent-c#> .
+@prefix agent-rb: <Market-Place/agents/agent-rb#> .
+
+@prefix cpr-org: <organizations/cpr#>
+
+######################################
+# Generic organization specification #
+######################################
+
+# Organizational value specification
+
+ex:IntegrityRespect a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalValue ;
+    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
+    rdfs:label "integrity and respect"@en, "intégrité et respect"@fr .
+
+# Roles specifications
+
+ex:SellerRepresentative a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role .
+
+ex:OrderManager a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role .
+
+ex:Operator a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role .
+
+# Groups specifications
+
+ex:BusinessGroup a sh:NodeShape ;
+    rdfs:subClassOf hmas:Group .
+
+ex:ProductionGroup a sh:NodeShape ;
+    rdfs:subClassOf hmas:Group .
+
+# Missions specifications
+
+ex:ConsentOrder a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+
+ex:CloseOrder a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+
+ex:FulfillOrder a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+
+ex:ProposeOrder a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+
+# Memberships specifications
+
+ex:ProductionOperator a sh:NodeShape ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class ex:Operator ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
+    ] .
+
+ex:ProductionOrderManager a sh:NodeShape ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class ex:OrderManager ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
+    ] .
+
+ex:BusinessSellerRepresentative a sh:NodeShape ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class ex:SellerRepresentative ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class ex:BusinessGroup ]
+    ] .
+
+## Relation Specifications
+ex:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
+
+# Generic organization specification
+
+ex:GenericCupCompanyOrganization a sh:NodeShape ;
+    rdfs:subClassOf hmas:Organization ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class ex:IntegrityRespect ]
+    ] , [
+        sh:path hmas:providesRole ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class ex:SellerRepresentative ]
+    ] , [
+        sh:path hmas:providesRole ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class ex:OrderManager ]
+    ] , [
+        sh:path hmas:providesRole ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class ex:Operator ]
+    ] , [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class ex:BusinessGroup ] ;
+        sh:qualifiedValuesShapeDisjoint true
+    ] , [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class ex:ProductionGroup ] ; 
+        sh:qualifiedValuesShapeDisjoint true
+    ] , [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:ConsentOrder ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+    ] , [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:CloseOrder ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+    ] , [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:FulfillOrder ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+    ] , [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:ProposeOrder ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+    ] , [
+        sh:path hmas:proposesFacility  ;
+        sh:qualifiedValueShape [ sh:class ex:ProductionArea ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+    ] , [
+        sh:path hmas:proposesFacility  ;
+        sh:qualifiedValueShape [ sh:class ex:BusinessArea ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+    ] .
+
+###########################################
+# Instanciation of the organization shape #
+###########################################
+
+ex:CPRIntegrityRespect a ex:IntegrityRespect .
+
+ex:CPRSellerRepresentative a ex:SellerRepresentative .
+ex:CPROrderManager a ex:OrderManager .
+ex:CPROperator a ex:Operator .
+
+ex:CPRBusinessGroup a ex:BusinessGroup .
+ex:CPRProductionGroup a ex:ProductionGroup .
+
+ex:CPRConsentOrder a ex:ConsentOrder .
+ex:CPRCloseOrder a ex:CloseOrder .
+ex:CPRFulfillOrder a ex:FulfillOrder .
+ex:CPRProposeOrder a ex:ProposeOrder .
+
+ex:CPRBusinessArea a ex:BusinessArea .
+ex:CPRProductionArea a ex:ProductionArea .
+
+ex:CPRProductionOperator a ex:ProductionOperator ;
+    hmas:isMembershipOf ag-c:agent ;
+    hmas:isMembershipFor ex:CPROperator ;
+    hmas:isMembershipIn ex:CPRProductionGroup .
+
+ex:CPRProductionOrderManager a ex:ProductionOrderManager ;
+    hmas:isMembershipOf ag-b:agent ;
+    hmas:isMembershipFor ex:CPROrderManager ;
+    hmas:isMembershipIn ex:CPRProductionGroup .
+
+ex:CPRBusinessSellerRepresentative a ex:BusinessSellerRepresentative ;
+    hmas:isMembershipFor ag-rb:agent ;
+    hmas:isMembershipFor ex:CPRSellerRepresentative ;
+    hmas:isMembershipIn ex:CPRBusinessGroup .
+
+# Finally define the CPR organization
+
+cpr-org:organization a ex:GenericCupCompanyOrganization ;
+    hmas:hasProfile cpr-org: ;
+    hmas:hasOrganizationalValue ex:CPRIntegrityRespect ;
+    hmas:providesRole ex:CPRSellerRepresentative , ex:CPROrderManager , ex:CPROperator ;
+    hmas:isStructuredBy ex:CPRBusinessGroup , ex:CPRProductionGroup ;
+    hmas:proposesMission ex:CPRProposeOrder , ex:CPRConsentOrder , ex:CPRCloseOrder , ex:CPRFulfillOrder ;
+    hmas:proposesFacility ex:CPRProductionArea , ex:CPRBusinessArea .
