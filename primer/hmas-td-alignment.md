@@ -126,6 +126,35 @@ This constraint can embed a td:OperationType shape to force semantics to the Act
 
 For the PropertyAffordances td:OperationType MUST be one of readproperty, writeproperty, observeproperty, unobserveproperty
 
+**readproperty**
+
+The equivalent of the following td:PropertyAffordance:
+
+```turtle
+@prefix ex-td: <https://www.example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+
+ex-td:TruckReadableBatterySpecification a td:PropertyAffordance, ex-td:TruckBattery, js:ObjectSchema ;
+    td:name "battery" ;
+    td:hasForm [
+        hctl:hasTarget <https://link.to/truck/properties/batteryvoltage> ;
+        hctl:forContentType "application/json" ;
+        hctl:hasOperationType td:readProperty ;
+        htv:methodName "GET"
+    ] ;
+    td:isObservable false ;
+    js:properties [
+        a js:NumberSchema , ex-td:TruckBatteryPercentage ;
+        js:propertyName "percentage"
+    ] ;
+    js:required "percentage" .
+```
+
+Would be the following Action Execution specification in hMAS: 
+
 ```turtle@prefix hmas: <https://purl.org/hmas/> .
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix hmas-dev: <https://purl.org/hmas/dev#> .
@@ -156,7 +185,11 @@ ex:TruckReadableBatterySpecification a sh:NodeShape ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape ex:TruckBatteryBody
     ] .
+```
 
+**writeproperty**
+
+```
 # Example of writeproperty Action Specification
 ex:TruckSettableWheels a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
