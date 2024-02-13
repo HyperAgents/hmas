@@ -1,6 +1,14 @@
 #http://10.2.2.183
 @prefix m5stack: <https://docs.m5stack.com/en/products/> .
 
+@prefix hmas: <https://purl.org/hmas/> .
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+
+
 m5stack:TruckCatalog a hmas:SignifiersCatalog ;
     hmas:proposesSignifier [ hmas:exposes m5stack:TruckReadableBattery ] ,
                            [ hmas:exposes m5stack:TruckReadableAccelerometer ] ,
@@ -72,23 +80,23 @@ m5stack:TruckSettableWheels a sh:NodeShape ;
 #######################
 
 m5stack:JsonControlWheelBody a sh:NodeShape ;
-    sh:class traffic:Vehicle ;
+    sh:class m5stack:Vehicle ;
     sh:property [
-        sh:path traffic:hasDirectionValue ;
+        sh:path m5stack:hasDirectionValue ;
         sh:minExclusive 0 ;
         sh:maxExclusive 2 ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer 
     ] , [
-        sh:path traffic:hasSpeedValue ;
+        sh:path m5stack:hasSpeedValue ;
         sh:minExclusive -7 ;
         sh:maxExclusive 7 ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer 
     ] , [
-        sh:path traffic:hasDurationValue ;
+        sh:path m5stack:hasDurationValue ;
         sh:minExclusive 0 ;
         sh:maxExclusive 5000 ;
         sh:minCount 1 ;

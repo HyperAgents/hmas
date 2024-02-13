@@ -1,4 +1,4 @@
-@prefix m5stack: <docs.m5stack.com/en/products/> .
+@prefix ufactory: <https://eu.robotshop.com/fr/collections/ufactory/> .
 @prefix cherrybot: <https://interactions.ics.unisg.ch/cherrybot#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
@@ -13,22 +13,22 @@
 # Catalog Definition #
 ######################
 
-m5stack:CherrybotCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier [ hmas:signifies m5stack:CherrybotReadableOperator ] ,
-                           [ hmas:signifies m5stack:CherrybotReadablePosition ] ,
-                           [ hmas:signifies m5stack:CherrybotReadableTarget ] ,
-                           [ hmas:signifies m5stack:CherrybotReadableGripper ] ,
-                           [ hmas:signifies m5stack:CherrybotInitializableArm ] ,
-                           [ hmas:signifies m5stack:CherrybotSettableOperator ] ,
-                           [ hmas:signifies m5stack:CherrybotSettableTarget ] ,
-                           [ hmas:signifies m5stack:CherrybotSettableGripper ] ,
-                           [ hmas:signifies m5stack:CherrybotDeletableOperator ] .
+ufactory:CherrybotCatalog a hmas:SignifiersCatalog ;
+    hmas:proposesSignifier [ hmas:signifies ufactory:CherrybotReadableOperator ] ,
+                           [ hmas:signifies ufactory:CherrybotReadablePosition ] ,
+                           [ hmas:signifies ufactory:CherrybotReadableTarget ] ,
+                           [ hmas:signifies ufactory:CherrybotReadableGripper ] ,
+                           [ hmas:signifies ufactory:CherrybotInitializableArm ] ,
+                           [ hmas:signifies ufactory:CherrybotSettableOperator ] ,
+                           [ hmas:signifies ufactory:CherrybotSettableTarget ] ,
+                           [ hmas:signifies ufactory:CherrybotSettableGripper ] ,
+                           [ hmas:signifies ufactory:CherrybotDeletableOperator ] .
 
 #######################################
 # Robotic Arm Endpoint specifications #
 #######################################
 
-m5stack:CherrybotReadableOperator a sh:NodeShape ;
+ufactory:CherrybotReadableOperator a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -47,10 +47,10 @@ m5stack:CherrybotReadableOperator a sh:NodeShape ;
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape m5stack:JsonGetOperatorOutputBody
+        sh:qualifiedValueShape ufactory:JsonGetOperatorOutputBody
     ] .
 
-m5stack:CherrybotReadablePosition a sh:NodeShape ;
+ufactory:CherrybotReadablePosition a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -69,10 +69,10 @@ m5stack:CherrybotReadablePosition a sh:NodeShape ;
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape m5stack:JsonGetPositionOutputBody
+        sh:qualifiedValueShape ufactory:JsonGetPositionOutputBody
     ] .
 
-m5stack:CherrybotReadableTarget a sh:NodeShape ;
+ufactory:CherrybotReadableTarget a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -91,10 +91,10 @@ m5stack:CherrybotReadableTarget a sh:NodeShape ;
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape m5stack:JsonGetPositionOutputBody
+        sh:qualifiedValueShape ufactory:JsonGetPositionOutputBody
     ].
 
-m5stack:CherrybotReadableGripper a sh:NodeShape ;
+ufactory:CherrybotReadableGripper a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -118,7 +118,7 @@ m5stack:CherrybotReadableGripper a sh:NodeShape ;
         sh:datatype xsd:integer
     ] .
 
-m5stack:CherrybotInitializableArm a sh:NodeShape ;
+ufactory:CherrybotInitializableArm a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -135,7 +135,7 @@ m5stack:CherrybotInitializableArm a sh:NodeShape ;
         ]
     ] .
 
-m5stack:CherrybotSettableOperator a sh:NodeShape ;
+ufactory:CherrybotSettableOperator a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -154,10 +154,10 @@ m5stack:CherrybotSettableOperator a sh:NodeShape ;
         sh:path hmas:hasInput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape m5stack:JsonSetOperatorInputBody
+        sh:qualifiedValueShape ufactory:JsonSetOperatorInputBody
     ] .
 
-m5stack:CherrybotSettableTarget a sh:NodeShape ;
+ufactory:CherrybotSettableTarget a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -176,10 +176,10 @@ m5stack:CherrybotSettableTarget a sh:NodeShape ;
         sh:path hmas:hasInput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape m5stack:JsonSetPositionInputBody
+        sh:qualifiedValueShape ufactory:JsonSetPositionInputBody
     ] .
 
-m5stack:CherrybotSettableGripper a sh:NodeShape ;
+ufactory:CherrybotSettableGripper a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -203,7 +203,7 @@ m5stack:CherrybotSettableGripper a sh:NodeShape ;
         sh:maxExclusive 800
     ] .
 
-m5stack:CherrybotDeletableOperator a sh:NodeShape ;
+ufactory:CherrybotDeletableOperator a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -224,7 +224,7 @@ m5stack:CherrybotDeletableOperator a sh:NodeShape ;
 # Intput/Output specifications #
 ################################
 
-m5stack:JsonGetOperatorOutputBody a sh:NodeShape ;
+ufactory:JsonGetOperatorOutputBody a sh:NodeShape ;
     sh:class cherrybot:OperatorWithTokenSchema ;
     sh:property [
         sh:path foaf:Name;
@@ -243,7 +243,7 @@ m5stack:JsonGetOperatorOutputBody a sh:NodeShape ;
         sh:datatype xsd:string
     ] .
 
-m5stack:JsonSetOperatorInputBody a sh:NodeShape ;
+ufactory:JsonSetOperatorInputBody a sh:NodeShape ;
     sh:class cherrybot:OperatorSchema ;
     sh:property [
         sh:path foaf:name ;
@@ -257,7 +257,7 @@ m5stack:JsonSetOperatorInputBody a sh:NodeShape ;
         sh:datatype xsd:string
     ] .
 
-m5stack:JsonRotationElement a sh:NodeShape ;
+ufactory:JsonRotationElement a sh:NodeShape ;
     sh:class cherrybot:CoordinatesSchema ;
     sh:property [
         sh:path cherrybot:xCoordinate ;
@@ -282,7 +282,7 @@ m5stack:JsonRotationElement a sh:NodeShape ;
         sh:datatype xsd:float 
     ] .
 
-m5stack:JsonTranslationElement a sh:NodeShape ;
+ufactory:JsonTranslationElement a sh:NodeShape ;
     sh:class cherrybot:RotationSchema ;
     sh:property [
         sh:path cherrybot:roll ;
@@ -307,30 +307,30 @@ m5stack:JsonTranslationElement a sh:NodeShape ;
         sh:datatype xsd:float 
     ] .
 
-m5stack:JsonGetPositionOutputBody a sh:NodeShape ;
+ufactory:JsonGetPositionOutputBody a sh:NodeShape ;
     sh:class cherrybot:TcpTargetSchema ;
     sh:property [
         sh:path cherrybot:coordinate ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape m5stack:JsonTranslationElement
+        sh:qualifiedValueShape ufactory:JsonTranslationElement
     ] , [
         sh:path cherrybot:rotation ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape m5stack:JsonRotationElement
+        sh:qualifiedValueShape ufactory:JsonRotationElement
     ] .
 
-m5stack:JsonSetPositionInputBody a sh:NodeShape ;
+ufactory:JsonSetPositionInputBody a sh:NodeShape ;
     sh:class cherrybot:TcpMovementSchema ;
     sh:property [
         sh:path cherrybot:coordinate ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape m5stack:JsonTranslationElement
+        sh:qualifiedValueShape ufactory:JsonTranslationElement
     ] , [
         sh:path cherrybot:rotation ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape m5stack:JsonRotationElement
+        sh:qualifiedValueShape ufactory:JsonRotationElement
     ] .

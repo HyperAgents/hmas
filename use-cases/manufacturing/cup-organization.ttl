@@ -9,7 +9,7 @@
 @prefix ag-c: <workspaces/cup-production-site/agents/agent-c#> .
 @prefix agent-rb: <Market-Place/agents/agent-rb#> .
 
-@prefix cpr-org: <organizations/cpr#>
+@prefix cpr-org: <organizations/cpr#> .
 
 ######################################
 # Generic organization specification #
@@ -217,7 +217,7 @@ ex:CPRProductionOrderManager a ex:ProductionOrderManager ;
     hmas:isMembershipIn ex:CPRProductionGroup .
 
 ex:CPRBusinessSellerRepresentative a ex:BusinessSellerRepresentative ;
-    hmas:isMembershipFor ag-rb:agent ;
+    hmas:isMembershipFor agent-rb:agent ;
     hmas:isMembershipFor ex:CPRSellerRepresentative ;
     hmas:isMembershipIn ex:CPRBusinessGroup .
 

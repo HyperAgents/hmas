@@ -24,7 +24,7 @@
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
-@prefix m5stack: <docs.m5stack.com/en/products/> .
+@prefix ufactory: <https://eu.robotshop.com/fr/collections/ufactory/> .
 @prefix m5stack: <docs.m5stack.com/en/products/> .
 
 #############
@@ -45,7 +45,7 @@ truck:artifact a hmas:Artifact ;
 ###############################
 
 ra1: a hmas:ResourceProfile ;
-    hmas:exposeSignifiersFrom m5stack:CherrybotCatalog ;
+    hmas:exposeSignifiersFrom ufactory:CherrybotCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
@@ -57,7 +57,7 @@ ra1: a hmas:ResourceProfile ;
     ] .
 
 ra2: a hmas:ResourceProfile ;
-    hmas:exposeSignifiersFrom m5stack:CherrybotCatalog ;
+    hmas:exposeSignifiersFrom ufactory:CherrybotCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
