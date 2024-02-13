@@ -35,7 +35,7 @@ jacamo:PerceivableWorkspace :signifies [
         sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape jacamo:WorkspaceProfile
+        sh:qualifiedValueShape :WorkspaceProfile
     ] 
 ].
 
@@ -58,12 +58,12 @@ jacamo:PartionableWorkspace :signifies [
     ] , [
         sh:path :hasInput ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape jacamo:WorkspaceSpecification
+        sh:qualifiedValueShape :WorkspaceProfile
     ] , [
         sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape jacamo:WorkspaceSpecification
+        sh:qualifiedValueShape :WorkspaceProfile
     ] 
 ].
 
@@ -87,12 +87,12 @@ jacamo:UpdatableWorkspace :signifies [
         sh:path :hasInput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape jacamo:WorkspaceProfile
+        sh:qualifiedValueShape :WorkspaceProfile
     ] , [
         sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape jacamo:WorkspaceProfile
+        sh:qualifiedValueShape :WorkspaceProfile
     ] 
 ].
 
@@ -116,7 +116,7 @@ jacamo:DeletableWorkspace :signifies [
         sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape jacamo:WorkspaceProfile
+        sh:qualifiedValueShape :WorkspaceProfile
     ] 
 ].
 
@@ -140,7 +140,7 @@ jacamo:JoinableWorkspace :signifies [
         sh:path :hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape jacamo:ArtifactProfile
+        sh:qualifiedValueShape :ArtifactProfile
     ] .
 
 jacamo:LeavableWorkspace a sh:NodeShape ;
@@ -199,66 +199,5 @@ jacamo:BodyProfile a sh:NodeShape ;
         sh:path :isProfileOf ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype jcm:Body #TODO   
-    ] .
-
-jacamo:WorkspaceProfile a sh:NodeShape ;
-    sh:class :Workspace ;
-    sh:property [
-        sh:path td:title ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:string 
-    ] , [
-        sh:path td:hasSecurityConfiguration ;
-        sh:datatype wotsec:SecurityScheme
-    ] , [
-        sh:path td:hasActionAffordance ;
-        sh:minQualifiedCount 1 ;
-        sh:qualifiedValueShape [
-            sh:class td:ActionAffordance ;
-            sh:property [
-                sh:path td:name ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:datatype xsd:string
-            ] , [
-                sh:path td:hasForm ;
-                sh:minQualifiedCount 1 ;
-                sh:maxQualifiedCount 1 ;
-                sh:qualifiedValueShape [
-                    sh:class http:Request ;
-                    sh:property [
-                        sh:path htv:methodName ;
-                        sh:minCount 1 ;
-                        sh:maxCount 1 ;
-                        sh:datatype xsd:string
-                    ] , [
-                        sh:path hctl:hasTarget ;
-                        sh:minCount 1 ;
-                        sh:maxCount 1
-                    ] , [
-                        sh:path hctl:forContentType ;
-                        sh:minCount 1 ;
-                        sh:maxCount 1 ;
-                        sh:datatype xsd:string
-                    ] , [
-                        sh:path hctl:hasOperationType ;
-                        sh:minCount 1 ;
-                        sh:maxCount 1 ;
-                        sh:datatype td:OperationType
-                    ]
-                ]
-            ] , [
-                sh:path td:hasInputSchema ;
-                sh:maxCount 1 ;
-                sh:datatype js:ObjectSchema
-            ]
-        ]
-    ] , [
-        sh:path :isContainedIn ;
-        sh:maxCount 1
-    ] , [
-        sh:path :contains ;
-        sh:maxCount 1
+        sh:datatype :Body   
     ] .
