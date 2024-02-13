@@ -124,6 +124,8 @@ A ShaCL constraint can be provided to describe the Affordances.
 
 This constraint can embed a td:OperationType shape to force semantics to the ActionExecution.
 
+* Property Affordances
+
 For the PropertyAffordances td:OperationType MUST be one of readproperty, writeproperty, observeproperty, unobserveproperty
 
 **readProperty**
@@ -258,6 +260,44 @@ ex:TruckSettableWheels a sh:NodeShape ;
 
 **observeProperty**
 
+The following td:PropertyAffordance :
+
+```turtle
+@prefix ex-td: <https://www.example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+
+ex-td:CherrybotObservableGripper a td:PropertyAffordance, ex-td:ObserveGripper, js:ObjectSchema ;
+    td:name "observe gripper" ;
+    td:hasForm [
+        hctl:hasTarget <https://link.to/cherrybot/gripper/observe> ;
+        hctl:forContentType "application/json" ;
+        hctl:hasOperationType td:observeProperty ;
+        htv:methodName "POST"
+    ] ;
+    td:isObservable true ;
+    td:hasInputSchema [
+        a js:ObjectSchema , ex-td:CallbackURIBody ;
+        js:properties [
+            a js:StringSchema , ex-td:CallbalURI ;
+            js:propertyName "callback"
+        ] ;
+        js:required "callback"
+    ] ;
+    td:hasOutputSchema [
+        a js:ObjectSchema , ex-td:GripperBody ;
+        js:properties [
+            a js:NumberSchema , ex-td:GripperValue ;
+            js:propertyName "gripper"
+        ] ;
+        js:required "gripper"
+    ] .
+```
+
+Would have the same equivalent in hMAS:
+
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix hmas: <https://purl.org/hmas/> .
@@ -362,9 +402,48 @@ ex:CherrybotUnobservableGripper a sh:NodeShape ;
     ] .
 ```
 
+* Action Affordances
+
 For the Action affordance the following values are allowed invokeaction, queryaction, cancelaction 
 
 **invokeAction**
+
+The following td:ActionAffordance :
+
+```turtle
+@prefix ex-td: <https://www.example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+
+ex-td:ActionablePrinting a td:ActionAffordance, ex-td:ActionPrinter, js:ObjectSchema ;
+    td:name "action print" ;
+    td:hasForm [
+        hctl:hasTarget <https://link.to/printer/print> ;
+        hctl:forContentType "application/json" ;
+        hctl:hasOperationType td:invokeAction ;
+        htv:methodName "POST"
+    ] ;
+    td:hasInputSchema [
+        a js:ObjectSchema , ex-td:PrinterRequestBody ;
+        js:properties [
+            a js:StringSchema , ex-td:DocumentURI ;
+            js:propertyName "document"
+        ] ;
+        js:required "document"
+    ] ;
+    td:hasOutputSchema [
+        a js:ObjectSchema , ex-td:PrintOutcomeBody ;
+        js:properties [
+            a js:BooleanSchema , ex-td:PrintOutcome ;
+            js:propertyName "outcome"
+        ] ;
+        js:required "outcome"
+    ] .
+```
+
+Would have the equivalent in hMAS:
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
@@ -402,6 +481,7 @@ ex:ActionablePrinting a sh:NodeShape ;
         sh:qualifiedValueShape ex:printerStatus
     ] .
 ```
+
 **queryAction**
 
 The following td:Affordance:
@@ -413,7 +493,7 @@ The following td:Affordance:
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix htv: <http://www.w3.org/2011/http#> .
 
-ex-td:CheckableProcess a td:PropertyAffordance, ex-td:QueryProgress, js:ObjectSchema ;
+ex-td:CheckableProcess a td:ActionAffordance, ex-td:QueryProgress, js:ObjectSchema ;
     td:name "progress" ;
     td:hasForm [
         hctl:hasTarget <https://link.to/worker/get-progress> ;
@@ -421,7 +501,6 @@ ex-td:CheckableProcess a td:PropertyAffordance, ex-td:QueryProgress, js:ObjectSc
         hctl:hasOperationType td:queryAction ;
         htv:methodName "GET"
     ] ;
-    td:isObservable false ;
     td:hasOutputSchema [
         a js:ObjectSchema , ex-td:Progress ;
         js:properties [
@@ -466,6 +545,7 @@ ex:CheckableProcess a sh:NodeShape ;
         sh:qualifiedValueShape ex:progressStatus
     ] .
 ```
+
 **cancelAction**
 
 The following td:ActionAffordance:
@@ -517,7 +597,48 @@ ex:CancelablePrinting a sh:NodeShape ;
     ] .
 ```
 
+* Event Affordances
+
 And finally for the Event Affordance the following terms are implemented: subscribeevent, unsubscribeevent, or both 
+
+**subscribeEvent**
+
+The followind td:EventAffordance :
+
+```turtle
+@prefix ex-td: <https://www.example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+
+ex-td:SubscribableOverheating a td:EventAffordance, ex-td:SubscribeOverheating, js:ObjectSchema ;
+    td:name "subscribe overheating" ;
+    td:hasForm [
+        hctl:hasTarget <https://link.to/heater/overheat/subscribe> ;
+        hctl:forContentType "application/json" ;
+        hctl:hasOperationType td:invokeAction ;
+        htv:methodName "POST"
+    ] ;
+    td:hasInputSchema [
+        a js:ObjectSchema , ex-td:CallbackURIBody ;
+        js:properties [
+            a js:StringSchema , ex-td:CallbackURI ;
+            js:propertyName "callback"
+        ] ;
+        js:required "callback"
+    ] ;
+    td:hasOutputSchema [
+        a js:ObjectSchema , ex-td:OverheatNotification ;
+        js:properties [
+            a js:StringSchema , ex-td:OverheatTime ;
+            js:propertyName "time"
+        ] ;
+        js:required "time"
+    ] .
+```
+
+Would have the following equivalent in hMAS
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
@@ -556,6 +677,31 @@ ex:SubscribableOverheating a sh:NodeShape ;
     ] .
 ```
 **unsubscribeEvent**
+
+```turtle
+@prefix ex-td: <https://www.example.org/> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+
+ex-td:UnsubscribableOverheating a td:EventAffordance, ex-td:UnsubscribeOverheating, js:ObjectSchema ;
+    td:name "unsubscribe overheating" ;
+    td:hasForm [
+        hctl:hasTarget <https://link.to/heater/overheat/unsubscribe> ;
+        hctl:forContentType "application/json" ;
+        hctl:hasOperationType td:unscubscribeEvent ;
+        htv:methodName "POST"
+    ] ;
+    td:hasInputSchema [
+        a js:ObjectSchema , ex-td:CallbackURIBody ;
+        js:properties [
+            a js:StringSchema , ex-td:CallbackURI ;
+            js:propertyName "callback"
+        ] ;
+        js:required "callback"
+    ] .
+```
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
