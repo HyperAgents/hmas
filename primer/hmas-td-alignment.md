@@ -40,7 +40,7 @@ td:Thing rdfs:subClassOf hmas:Artifact .
 ## 2.2 Resource Profiles and Thing Descriptions
 A WoT Thing is a subclass of hMAS Artifact whose hMAS Resource Profile is a WoT Thing Description. We can therefore represent:
 
-```rdf
+```turtle
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix pto:   <http://www.productontology.org/id/> .
 @prefix ex: <http://example.org/> .
@@ -91,7 +91,7 @@ ex:ur5 a td:Thing, pto:Robotic_arm ;
 
 A td:InteractionAffordance can be used as specification for a hmas:Signifier using the property hmas:signifies
 
-```
+```turtle
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix td: <https://www.w3.org/2019/wot/td#> .
 @prefix pto:   <http://www.productontology.org/id/> .
@@ -155,7 +155,8 @@ ex-td:TruckReadableBatterySpecification a td:PropertyAffordance, ex-td:TruckBatt
 
 Would be the following Action Execution specification in hMAS: 
 
-```turtle@prefix hmas: <https://purl.org/hmas/> .
+```turtle
+@prefix hmas: <https://purl.org/hmas/> .
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix hmas-dev: <https://purl.org/hmas/dev#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -216,7 +217,7 @@ ex-td:TruckSettableWheels a td:PropertyAffordance, ex-td:TruckWheels, js:ObjectS
 
 Would be the following in hMAS:
 
-```
+```turtle
 # Example of writeproperty Action Specification
 ex:TruckSettableWheels a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -243,8 +244,7 @@ ex:TruckSettableWheels a sh:NodeShape ;
 
 **observeProperty**
 
-```
-
+```turtle
 # Example of observeproperty Action Specification
 ex:CherrybotObservableGripper a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -273,6 +273,12 @@ ex:CherrybotObservableGripper a sh:NodeShape ;
         sh:qualifiedValueShape ex:NotificationSpecification
     ] .
 
+```
+
+
+**unobserveProperty**
+
+```turtle
 # Example of unobserveproperty Action Specification
 ex:CherrybotUnobservableGripper a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -298,6 +304,8 @@ ex:CherrybotUnobservableGripper a sh:NodeShape ;
 ```
 
 For the Action affordance the following values are allowed invokeaction, queryaction, cancelaction 
+
+**invokeAction**
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
@@ -334,7 +342,10 @@ ex:ActionablePrinting a sh:NodeShape ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape ex:printerStatus
     ] .
+```
+**queryAction**
 
+```turtle
 # Example of invokeaction Action Specification
 ex:CheckableProcess a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -357,7 +368,10 @@ ex:CheckableProcess a sh:NodeShape ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape ex:progressStatus
     ] .
+```
+**cancelAction**
 
+```turtle
 # Example of cancelaction Action Specification
 ex:CancelablePrinting a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -414,7 +428,10 @@ ex:SubscribableOverheating a sh:NodeShape ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape ex:NotificationSpecification
     ] .
+```
+**unsubscribeEvent**
 
+```turtle
 # Example of unsubscribeevent Action Specification
 ex:UnsubscribableOverheating a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
@@ -424,7 +441,7 @@ ex:UnsubscribableOverheating a sh:NodeShape ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas-dev:UnsubscribeEvent, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
