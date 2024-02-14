@@ -738,6 +738,141 @@ ex:UnsubscribableOverheating a sh:NodeShape ;
 
 # 4. SHACL and JSON Data Schema Alignment
 
+Here is a table summarizing the alignments for the different supported td:DataSchema types:
+
+|td:DataSchema - primitive|xsd equivalent datatype|
+|-------------------------|-----------------------|
+|td:IntegerSchema|xsd:integer|
+|td:NumberSchema|xsd:float|
+|td:StringSchema|xsd:string|
+|td:BooleanSchema|xsd:boolean|
+|td:NullSchema|rdf:nil|
+
+For example the following td:ObjectSchema :
+
+```turtle
+@prefix js: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix ex-td: <https://www.example.org/> .
+
+[
+    a js:ObjectSchema , ex-td:StatisticSummary ;
+    js:properties [
+        a js:IntegerSchema , ex-td:SampleNumber ;
+        js:propertyName "sampleNumber"
+    ] , [
+        a js:NumberSchema , ex-td:Average ;
+        js:propertyName "average"
+    ] , [
+        a js:StringSchema , ex-td:FileName ;
+        js:propertyName "fileName"
+    ] , [
+        a js:BooleanSchema , ex-td:DataValid ;
+        js:propertyName "dataValid"
+    ] , [
+        a js:NullSchema , ex-td:ErrorCode ;
+        js:propertyName "errorCode"
+    ] , [
+        a js:ArraySchema , ex-td:SampleData ;
+        js:propertyName "sampleData" ;
+        js:minItems 4 ;
+        js:maxItems 7 ;
+        js:items js:IntegerSchema
+    ] , [
+        a js:ObjectSchema , ex-td:DatasetDescription ;
+        js:propertyName "description"
+    ] ;
+    js:required "sampleNumber", "average", "fileName", "dataValid" , "errorCode" , "sampleData" , "description"
+] .
+```
+
+Would have the following equivalent using ShaCL constraints
+
+```turtle
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://www.example.org/> .
+
+[
+    sh:class ex:StatisticSummary ;
+    sh:property [
+        sh:path ex:hasSampleNumber ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer
+    ] , [
+        sh:path ex:hasAverage ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float
+    ] , [
+        sh:path ex:hasFileName ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] , [
+        sh:path ex:isDataValid ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] , [
+        sh:path ex:hasErrorCode ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue rdf:nil
+    ] , [
+        sh:path ex:hasSampleData ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape [
+            sh:class rdf:List ;
+            sh:property [
+                sh:path (
+                    rdf:rest
+                    rdf:rest
+                ) ;
+                sh:minQualifiedShape 1 ;
+                sh:maxQualifiedShape 1 ;
+                sh:qualifiedValueShape [
+                    sh:class owl:Thing ;
+                    sh:not [
+                        sh:path rdf:rest ;
+                        sh:hasValue rdf:nil
+                    ]
+                ]
+            ] , [
+                sh:property [
+                    sh:path (
+                        rdf:rest
+                        rdf:rest
+                        rdf:rest
+                        rdf:rest
+                        rdf:rest
+                        rdf:rest
+                    ) ;
+                    sh:minQualifiedShape 1 ;
+                    sh:maxQualifiedShape 1 ;
+                    sh:qualifiedValueShape [ sh:class rdf:nil ]
+                ] , [
+                    sh:property [
+                        sh:path (
+                            [sh:zeroOrMorePath rdf:rest]
+                            rdf:first
+                        ) ;
+                        sh:datatype xsd:integer
+                    ]
+                ]
+            ]
+        ]
+    ] , [
+	sh:path ex:hasDatasetDescription ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class ex:DatasetDescription ]
+    ]
+] .
+```
+
 # 5. Summary
 
 # 6. Acknowledgements
