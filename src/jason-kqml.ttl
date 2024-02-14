@@ -13,6 +13,38 @@
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <> .
 
+#################################################################
+#    Object Properties
+#################################################################
+
+:hasPerformative rdf:type owl:ObjectProperty ;
+                 rdfs:range :CommunicativeAct ;
+                 rdfs:comment "A relation between a message and the communicative act of the message."@en ;
+                 rdfs:label "has performative"@en .
+
+
+:hasReceiver rdf:type owl:ObjectProperty ;
+             rdfs:range :Agent ;
+             rdfs:comment "A relation between a message and agents that are the intended recipients of the message."@en ;
+             rdfs:label "has receiver"@en .
+
+
+:hasSender rdf:type owl:ObjectProperty ;
+           rdfs:range :Agent ;
+           rdfs:comment "A relation between a message and the agent that is the sender of the message."@en ;
+           rdfs:label "has sender"@en .
+
+
+:hasContent rdf:type owl:ObjectProperty ;
+           rdfs:comment "A relation between a message and the content of the message."@en ;
+           rdfs:label "has content"@en .
+
+
+:hasLanguage rdf:type owl:ObjectProperty ;
+             rdfs:range :Language ;
+             rdfs:comment "A relation between a message and the language in which the message content parameter is expressed."@en ;
+             rdfs:label "has language"@en .
+
 
 #################################################################
 #    Classes
