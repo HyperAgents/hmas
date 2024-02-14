@@ -9,7 +9,7 @@
 
 
 jade:MessagingCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier hmas-dev:AgentContactable .
+    hmas:proposesSignifier jade:AgentContactable .
 
 jade:PerformativeMessagingCatalog a hmas:SignifiersCatalog ;
     hmas:proposesSignifier jade:ReceivableRequest ,
