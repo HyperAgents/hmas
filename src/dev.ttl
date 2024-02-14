@@ -19,6 +19,11 @@ hmas-dev:PathToBaseURI a rdf:List ;
     rdf:first prov:used ;
     rdf:rest ( td:baseURI ) .
 
+hmas-dev:null a xsd:simpleType ;
+   dct:comment "The null type"@en .
+
+hmas-dev:nullValue a hmas-dev:null .
+
 hmas-dev:forApplicatonJson a sh:PropertyShape ;
     sh:path hctl:forContentType ;
     sh:minCount 1 ;
