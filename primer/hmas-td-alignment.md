@@ -746,7 +746,7 @@ Here is a table summarizing the alignments for the different supported td:DataSc
 |td:NumberSchema|xsd:float|
 |td:StringSchema|xsd:string|
 |td:BooleanSchema|xsd:boolean|
-|td:NullSchema|rdf:nil|
+|td:NullSchema|hmas-dev:null|
 
 For example the following td:ObjectSchema :
 
@@ -791,6 +791,7 @@ Would have the following equivalent using ShaCL constraints
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
 @prefix ex: <https://www.example.org/> .
 
 [
@@ -819,7 +820,7 @@ Would have the following equivalent using ShaCL constraints
         sh:path ex:hasErrorCode ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue rdf:nil
+        sh:datatype hmas-dev:null
     ] , [
         sh:path ex:hasSampleData ;
         sh:minQualifiedCount 1 ;
