@@ -61,7 +61,7 @@
 
 :Body rdf:type owl:Class ;
       rdfs:subClassOf :Artifact ;
-      rdfs:comment "an artifact representing its owner in the environment. It offers affordances to other agents to interact with and observe the owner. It also contains information about the owner"@en ;
+      rdfs:comment "An artifact representing the context of an agent in the environment. It enables the embodied agent to interact in the environment, and other agents to perceive and interact with the agent."@en ;
       rdfs:isDefinedBy :agents-artifacts ;
       rdfs:label "Body"@en .
 
