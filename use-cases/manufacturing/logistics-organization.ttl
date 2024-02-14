@@ -1,0 +1,125 @@
+@base <https://ns.inria.fr/hmas/> .
+
+@prefix ex: <https://www.example.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hmas: <https://purl.org/hmas/> .
+
+@prefix agent-d: <workspaces/cup-production-site/agents/agent-d#> .
+
+@prefix log-org: <organizations/log#> .
+
+######################################
+# Generic organization specification #
+######################################
+
+# Organizational value specification
+
+ex:IntegrityRespect a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalValue ;
+    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
+    rdfs:label "integrity and respect"@en, "intégrité et respect"@fr .
+
+# Roles specifications
+
+ex:Deliverer a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role .
+
+# Groups specifications
+
+ex:DeliveryGroup a sh:NodeShape ;
+    rdfs:subClassOf hmas:Group .
+
+# Missions specifications
+
+ex:Deliver a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+
+# Facilities specifications
+
+ex:DeliveryArea a sh:NodeShape ;
+    rdfs:subClassOf hmas:Facility .
+
+# Memberships specifications
+
+ex:DelivererMembership a sh:NodeShape ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class ex:Deliverer ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [ sh:class ex:DeliveryGroup ]
+    ] .
+
+## Relation Specifications
+ex:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
+
+# Generic organization specification
+
+ex:GenericLogisticsCompanyOrganization a sh:NodeShape ;
+    rdfs:subClassOf hmas:Organization ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class ex:IntegrityRespect ]
+    ] , [
+        sh:path hmas:providesRole ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class ex:Deliverer ]
+    ] , [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class ex:DeliveryGroup ]
+    ] , [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:Deliver ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+    ] , [
+        sh:path hmas:proposesFacility  ;
+        sh:qualifiedValueShape [ sh:class ex:DeliveryArea ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+    ] .
+
+###########################################
+# Instanciation of the organization shape #
+###########################################
+
+ex:LogIntegrityRespect a ex:IntegrityRespect .
+
+ex:LogDeliverer a ex:Deliverer .
+
+ex:LogDeliveryGroup a ex:DeliveryGroup .
+
+ex:LogDeliver a ex:Deliver .
+
+ex:LogDeliveryArea a ex:DeliveryArea .
+
+ex:LogDelivererMembership a ex:DelivererMembership ;
+    hmas:isMembershipFor agent-d:agent ;
+    hmas:isMembershipFor ex:LogDeliverer ;
+    hmas:isMembershipIn ex:LogDeliveryGroup .
+
+# Finally define the CPR organization
+
+log-org:organization a ex:GenericLogisticsCompanyOrganization ;
+    hmas:hasProfile log-org: ;
+    hmas:hasOrganizationalValue ex:LogIntegrityRespect ;
+    hmas:providesRole ex:LogDeliverer  ;
+    hmas:isStructuredBy ex:LogDeliveryGroup  ;
+    hmas:proposesMission ex:LogDeliver ;
+    hmas:proposesFacility ex:LogDeliveryArea .

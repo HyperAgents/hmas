@@ -1,4 +1,3 @@
-#http://10.2.2.183
 @prefix m5stack: <https://docs.m5stack.com/en/products/> .
 
 @prefix hmas: <https://purl.org/hmas/> .
