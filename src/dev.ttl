@@ -20,7 +20,7 @@ hmas-dev:PathToBaseURI a rdf:List ;
     rdf:rest ( td:baseURI ) .
 
 hmas-dev:null a xsd:simpleType ;
-   dct:comment "The null type"@en .
+   rdfs:comment "The null type"@en .
 
 hmas-dev:nullValue a hmas-dev:null .
 
