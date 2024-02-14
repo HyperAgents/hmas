@@ -8,16 +8,16 @@
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 
 
-jade:MessagingCatalog a hmas-dev:SignifiersCatalog ;
-    hmas-dev:proposesSignifier hmas-dev:AgentContactable .
+jade:MessagingCatalog a hmas:SignifiersCatalog ;
+    hmas:proposesSignifier hmas-dev:AgentContactable .
 
-jade:PerformativeMessagingCatalog a hmas-dev:SignifiersCatalog ;
-    hmas-dev:proposesSignifier jade:ReceivableRequest ,
-                            jade:ReceivableAccept ,
-                            jade:ReceivableRefuse ,
-                            jade:ReceivableFailure ,
-                            jade:ReceivableInformDone ,
-                            jade:ReceivableInformResult .
+jade:PerformativeMessagingCatalog a hmas:SignifiersCatalog ;
+    hmas:proposesSignifier jade:ReceivableRequest ,
+                           jade:ReceivableAccept ,
+                           jade:ReceivableRefuse ,
+                           jade:ReceivableFailure ,
+                           jade:ReceivableInformDone ,
+                           jade:ReceivableInformResult .
 
 jade:AgentContactable a hmas:Signifier ;
     hmas:signifies [
