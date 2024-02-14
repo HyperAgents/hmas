@@ -776,7 +776,7 @@ ex:Move a hmas:Facility ;
 ex:FL_LogisticsProfile a hmas:ResourceProfile .
 
 ex:FL_Logistics a ex:Logistics ;
-    hmas:hasResourceProfile ex:FL_LogisticsProfile ;
+    hmas:hasProfile ex:FL_LogisticsProfile ;
     hmas:hasOrganizationalValue ex:Commitment, ex:IntegrityRespect ;
     hmas:hasOrganizationalGoal ex:HumanResourcesManaged, ex:FinancialManaged, ex:CommercialManaged, ex:PlanningManaged, ex:CarriedGoods, ex:CollectedGoods, ex:DeliveredGoods, ex:Hired, ex:ContractSigned, ex:CandidateSelected, ex:RecommendationsAssessed, ex:CandidatesInterviewed, ex:InterviewsScheduled, ex:InterviewsConducted, ex:IntervieweesSelected, ex:JobPositionAnnounced, ex:JobPositionWritten ;
     hmas:proposesRole ex:Director, ex:HumanResourcesOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Carrier, ex:Collector, ex:Deliverer ;
