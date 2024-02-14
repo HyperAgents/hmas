@@ -1,6 +1,7 @@
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix jacamo: <https://purl.org/hmas/jacamo#> .
 @prefix aa: <https://purl.org/hmas/agents-artifacts#> .
+@prefix jason-kqml: <https://purl.org/hmas/json-kqml#> .
 @prefix hmas-dev: <https://purl.org/hmas/dev#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -257,9 +258,9 @@ jacamo:ArtifactContainableWorkspace hmas:signifies [
     ] 
 ].
 
-#######################
-# Body specifications #
-#######################
+###################################
+# Input and Output specifications #
+###################################
 
 jacamo:BodyProfileSpecification a sh:NodeShape ;
     sh:class hmas:ResourceProfile ;
@@ -293,9 +294,12 @@ jacamo:ArtifactCreationDetails a sh:NodeShape ;
         sh:datatype rdf:List
     ].
 
-#####################################
-# Performative Messaging Signifiers #
-#####################################
+########################
+# Messaging Signifiers #
+########################
+
+jacamo:MessagingCatalog a hmas:SignifiersCatalog ;
+    hmas:proposesSignifier jacamo:AgentContactable .
 
 jacamo:PerformativeMessagingCatalog a hmas:SignifiersCatalog ;
     hmas:proposesSignifier jacamo:PerceivableWorkspace ,
@@ -307,6 +311,57 @@ jacamo:PerformativeMessagingCatalog a hmas:SignifiersCatalog ;
                            jacamo:FocusableWorkspace,
                            jacamo:ArtifactCreatableWorkspace,
                            jacamo:ArtifactContainableWorkspace.
+
+jacamo:AgentContactable a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape ;
+        sh:class hmas-dev:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property  hmas-dev:InvokeAction, hmas-dev:PutMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/inbox"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape jacamo:ACLMessageStructure 
+        ]
+    ] .
+
+###################################
+# Input and Output specifications #
+###################################
+
+jacamo:ACLMessageStructure rdf:type sh:NodeShape ;
+    sh:targetClass hmas:ACLMessage ;
+    sh:property [
+        sh:path jason-kqml:hasPerformative ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path jason-kqml:hasSender ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path jason-kqml:hasReceiver ;
+        sh:maxCount 1
+    ] , [
+        sh:path jason-kqml:hasContent ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path jason-kqml:hasLanguage ;
+        sh:maxCount 1
+    ] .
 
 ###################
 # JSON-LD Context #
