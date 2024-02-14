@@ -301,16 +301,6 @@ jacamo:ArtifactCreationDetails a sh:NodeShape ;
 jacamo:MessagingCatalog a hmas:SignifiersCatalog ;
     hmas:proposesSignifier jacamo:AgentContactable .
 
-jacamo:PerformativeMessagingCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier jacamo:PerceivableWorkspace ,
-                           jacamo:PartitionableWorkspace ,
-                           jacamo:UpdatableWorkspace ,
-                           jacamo:DeletableWorkspace ,
-                           jacamo:JoinableWorkspace ,
-                           jacamo:LeavableWorkspace ,
-                           jacamo:FocusableWorkspace,
-                           jacamo:ArtifactCreatableWorkspace,
-                           jacamo:ArtifactContainableWorkspace.
 
 jacamo:AgentContactable a hmas:Signifier ;
     hmas:signifies [
