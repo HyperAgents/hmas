@@ -69,18 +69,18 @@ ex:ProductionOperator a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ]
     ] , [
         sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:Operator ]
     ] , [
-        sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
     ] .
 
@@ -88,18 +88,18 @@ ex:ProductionOrderManager a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ]
     ] , [
         sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:OrderManager ]
     ] , [
-        sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
     ] .
 
@@ -107,18 +107,18 @@ ex:BusinessSellerRepresentative a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ]
     ] , [
         sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:SellerRepresentative ]
     ] , [
-        sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:BusinessGroup ]
     ] .
 
@@ -206,14 +206,6 @@ ex:CPROperator a ex:Operator .
 ex:CPRBusinessGroup a ex:BusinessGroup .
 ex:CPRProductionGroup a ex:ProductionGroup .
 
-ex:CPRConsentOrder a ex:ConsentOrder .
-ex:CPRCloseOrder a ex:CloseOrder .
-ex:CPRFulfillOrder a ex:FulfillOrder .
-ex:CPRProposeOrder a ex:ProposeOrder .
-
-ex:CPRBusinessArea a ex:BusinessArea .
-ex:CPRProductionArea a ex:ProductionArea .
-
 ex:CPRProductionOperator a ex:ProductionOperator ;
     hmas:isMembershipOf ag-c:agent ;
     hmas:isMembershipFor ex:CPROperator ;
@@ -225,7 +217,7 @@ ex:CPRProductionOrderManager a ex:ProductionOrderManager ;
     hmas:isMembershipIn ex:CPRProductionGroup .
 
 ex:CPRBusinessSellerRepresentative a ex:BusinessSellerRepresentative ;
-    hmas:isMembershipFor agent-rb:agent ;
+    hmas:isMembershipOf agent-rb:agent ;
     hmas:isMembershipFor ex:CPRSellerRepresentative ;
     hmas:isMembershipIn ex:CPRBusinessGroup .
 
@@ -235,6 +227,4 @@ cpr-org:organization a ex:GenericCupCompanyOrganization ;
     hmas:hasProfile cpr-org: ;
     hmas:hasOrganizationalValue ex:CPRIntegrityRespect ;
     hmas:providesRole ex:CPRSellerRepresentative , ex:CPROrderManager , ex:CPROperator ;
-    hmas:isStructuredBy ex:CPRBusinessGroup , ex:CPRProductionGroup ;
-    hmas:proposesMission ex:CPRProposeOrder , ex:CPRConsentOrder , ex:CPRCloseOrder , ex:CPRFulfillOrder ;
-    hmas:proposesFacility ex:CPRProductionArea , ex:CPRBusinessArea .
+    hmas:isStructuredBy ex:CPRBusinessGroup , ex:CPRProductionGroup .

@@ -14,7 +14,7 @@
 @prefix ag-d: <workspaces/cup-production-site/agents/agent-d#> .
 
 # Organizations
-#   Nothing to see there... for now
+@prefix cpr-org: <organizations/cpr#> .
 
 # Platforms
 @prefix plat: <#platform> .
@@ -114,17 +114,20 @@ cpr: a hmas:ResourceProfile ;
 ag-b:agent a hmas:Agent ;
     hmas:isHostedOn plat:platform ;
     hmas:hasProfile ag-b: ;
-    hmas:isContainedIn cpr:Workspace .
+    hmas:isContainedIn cpr:Workspace ;
+    hmas:isMemberOf cpr-org:organization .
 
 ag-c:agent a hmas:Agent ;
     hmas:isHostedOn plat:platform ;
     hmas:hasProfile ag-c: ;
-    hmas:isContainedIn cpr:Workspace .
+    hmas:isContainedIn cpr:Workspace ;
+    hmas:isMemberOf cpr-org:organization .
 
 ag-d:agent a hmas:Agent ;
     hmas:isHostedOn plat:platform ;
     hmas:hasProfile ag-d: ;
-    hmas:isContainedIn cpr:Workspace .
+    hmas:isContainedIn cpr:Workspace ;
+    hmas:isMemberOf cpr-org:organization .
 
 ############
 # Platform #
