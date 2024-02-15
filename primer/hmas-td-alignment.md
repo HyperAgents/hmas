@@ -174,8 +174,8 @@ ex:TruckReadableBatterySpecification a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
             sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
@@ -187,8 +187,8 @@ ex:TruckReadableBatterySpecification a sh:NodeShape ;
         ]
     ] , [
         sh:path hmas:hasOutput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:TruckBatteryBody
     ] .
 ```
@@ -239,8 +239,8 @@ ex:TruckSettableWheels a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
             sh:property hmas-dev:WriteProperty, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
@@ -252,8 +252,8 @@ ex:TruckSettableWheels a sh:NodeShape ;
         ]
     ] , [
         sh:path hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:JsonControlWheelBody
     ] .
 ```
@@ -312,8 +312,8 @@ ex:CherrybotObservableGripper a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
             sh:property hmas-dev:ObserveProperty, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
@@ -325,13 +325,13 @@ ex:CherrybotObservableGripper a sh:NodeShape ;
         ]
     ] , [
         sh:path hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:CallbackURIBody
     ] , [
         sh:path hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:NotificationSpecification
     ] .
 
@@ -383,8 +383,8 @@ ex:CherrybotUnobservableGripper a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
             sh:property hmas-dev:UnobserveProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
@@ -396,8 +396,8 @@ ex:CherrybotUnobservableGripper a sh:NodeShape ;
         ]
     ] , [
         sh:path hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:CallbackURIBody
     ] .
 ```
@@ -458,8 +458,8 @@ ex:ActionablePrinting a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
             sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
@@ -471,13 +471,13 @@ ex:ActionablePrinting a sh:NodeShape ;
         ]
     ] , [
 	sh:path: hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:documentDescriptionBody
     ] , [
         sh:path: hmas:hasOutput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:printerStatus
     ] .
 ```
@@ -527,8 +527,8 @@ ex:CheckableProcess a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
             sh:property hmas-dev:QueryAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
@@ -540,8 +540,8 @@ ex:CheckableProcess a sh:NodeShape ;
         ]
     ] , [
         sh:path: hmas:hasOutput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:progressStatus
     ] .
 ```
@@ -583,8 +583,8 @@ ex:CancelablePrinting a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
             sh:property hmas-dev:CancelAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
@@ -653,8 +653,8 @@ ex:SubscribableOverheating a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
             sh:property hmas-dev:SubscribeEvent, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
@@ -666,13 +666,13 @@ ex:SubscribableOverheating a sh:NodeShape ;
         ]
     ] , [
 	sh:path: hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:callbackUrisBody
     ] , [
         sh:path: hmas:hasOutput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:NotificationSpecification
     ] .
 ```
@@ -717,8 +717,8 @@ ex:UnsubscribableOverheating a sh:NodeShape ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
             sh:property hmas-dev:UnsubscribeEvent, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
@@ -730,8 +730,8 @@ ex:UnsubscribableOverheating a sh:NodeShape ;
         ]
     ] , [
 	sh:path: hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape ex:callbackUrisBody
     ] .
 ```
@@ -832,8 +832,8 @@ Would have the following equivalent using ShaCL constraints
                     rdf:rest
                     rdf:rest
                 ) ;
-                sh:minQualifiedShape 1 ;
-                sh:maxQualifiedShape 1 ;
+                sh:qualifiedMinCount 1 ;
+                sh:qualifiedMaxCount 1 ;
                 sh:qualifiedValueShape [
                     sh:class owl:Thing ;
                     sh:not [
@@ -851,8 +851,8 @@ Would have the following equivalent using ShaCL constraints
                         rdf:rest
                         rdf:rest
                     ) ;
-                    sh:minQualifiedShape 1 ;
-                    sh:maxQualifiedShape 1 ;
+                    sh:qualifiedMinCount 1 ;
+                    sh:qualifiedMaxCount 1 ;
                     sh:qualifiedValueShape [ sh:class rdf:nil ]
                 ] , [
                     sh:property [
@@ -867,14 +867,132 @@ Would have the following equivalent using ShaCL constraints
         ]
     ] , [
 	sh:path ex:hasDatasetDescription ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:DatasetDescription ]
     ]
 ] .
 ```
 
 # 5. Summary
+
+A printer with the following Resource Profile
+
+```turtle
+@prefix ex: <https://www.example.org/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:GroundFloorPrinterResourceProfile a hmas:ResourceProfile ;
+    hmas:isProfileOf ex:GroundFloorPrinter ;
+    hmas:exposesSignifier [
+        a sh:NodeShape ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue <https://link.to/printer/print>
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class ex:PrintRequest ;
+                sh:property [
+                    sh:path ex:hasDocumeentURI ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string
+                ] , [
+                    sh:path ex:hasColor ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:boolean
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasOutput ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class ex:PrintReport ;
+                sh:property [
+                    sh:path ex:isSuccess ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:boolean
+                ] , [
+                    sh:path ex:message ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:datatype xsd:string
+                ]
+            ]
+        ]
+    ] .
+```
+
+* Accept POST requests at URI https://link.to/printer/print with json input
+* Accepts a request body with the following structure:
+
+```json
+{
+    "hasDocumentURI": "https://link.to/document"
+    "hasColor": true
+}
+```
+
+* Will output the following format:
+
+```json
+    "isSuccess": true,
+    "message": "Printing succeeded"
+```
+
+* Will represent the action execution this way:
+
+```turtle
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix ex: <https://www.example.org/> .
+
+[
+    a hmas:ActionExecution ;
+    prov:used [
+        a hctl:Form ;
+        hctl:hasOperationType td:invokeAction ;
+        htv:methodName "POST" ;
+        hctl:forContentType "application/json" ;
+        hctl:hasTarget <https://link.to/printer/print>
+    ] ;
+    hmas:hasInput [
+        a ex:PrintRequest ;
+        ex:hasDocumentURI <https://link.to/document> ;
+        ex:hasColor true
+    ] ;
+    hmas:hasOutput [
+        a ex:PrintReport ;
+        ex:isSuccess true ;
+        ex:message "Printing succeeded"
+    ]
+] .
+```
 
 # 6. Acknowledgements
 
