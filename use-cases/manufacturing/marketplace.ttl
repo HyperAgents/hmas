@@ -12,6 +12,9 @@
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
+@prefix cpr-org: <https://ns.inria.fr/hmas/organizations/cpr#> .
+@prefix ypr-org: <https://ns.inria.fr/hmas/organizations/ypr#> .
+
 ##########
 # Agents #
 ##########
@@ -19,12 +22,14 @@
 agent-ra:agent a hmas:Agent ;
     hmas:hasProfile agent-ra: ;
     hmas:isHostedOn plat:platform ;
-    hmas:isContainedIn mrk:workspace .
+    hmas:isContainedIn mrk:workspace ;
+    hmas:isMemberOf ypr-org:organization .
 
 agent-rb:agent a hmas:Agent ;
     hmas:hasProfile agent-rb: ;
     hmas:isHostedOn plat:platform ;
-    hmas:isContainedIn mrk:workspace .
+    hmas:isContainedIn mrk:workspace ;
+    hmas:isMemberOf cpr-org:organization .
 
 agent-ra: a hmas:ResourceProfile ;
     hmas:exposeSignifiersFrom hmas:JadeMessagingCatalog ;
@@ -45,7 +50,7 @@ agent-ra: a hmas:ResourceProfile ;
             sh:minCount 1 ;
             sh:maxCount 1
         ]
-    ].
+    ] .
 
 agent-rb: a hmas:ResourceProfile ;
     hmas:exposeSignifiersFrom hmas:JadeMessagingCatalog ;

@@ -1,0 +1,112 @@
+@base <https://ns.inria.fr/hmas/> .
+
+# Artifacts
+@prefix filling-machine: <workspaces/yogurt-production-site/artifacts/filling-machine#> .
+@prefix robotic-arm-3: <workspaces/yogurt-production-site/artifacts/robotic-arm-3#> .
+@prefix conveyor-belt: <workspaces/yogurt-production-site/artifacts/conveyor-belt#> .
+
+# Workspaces
+@prefix yogurt-production: <workspaces/yogurt-production-site#> .
+
+# Agents
+@prefix agent-a: <workspaces/yogurt-production-site/agents/agent-b#> .
+@prefix agent-e: <workspaces/yogurt-production-site/agents/agent-c#> .
+
+# Organizations
+@prefix ypr-organization: <organizations/ypr#> .
+
+# Platforms
+@prefix platform: <#platform> .
+
+# Other prefixes
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+#############
+# Artifacts #
+#############
+
+filling-machine:artifact a hmas:Artifact ;
+    hmas:isHostedOn platform:platform .
+
+robotic-arm-3:artifact a hmas:Artifact ;
+    hmas:isHostedOn platform:platform .
+
+conveyor-belt:artifact a hmas:Artifact ;
+    hmas:isHostedOn platform:platform .
+
+###############################
+# Artifacts Resource Profiles #
+###############################
+
+# Complete here
+
+filling-machine: a hmas:ResourceProfile ;
+    hmas:isProfileOf filling-machine:artifact .
+
+robotic-arm-3: a hmas:ResourceProfile ;
+    hmas:isProfileOf robotic-arm-3:artifact .
+
+conveyor-belt: a hmas:ResourceProfile ;
+    hmas:isProfileOf conveyor-belt:artifact .
+
+##############
+# Workspaces #
+##############
+
+yogurt-production:workspace a hmas:Workspace ;
+    hmas:isHostedOn platform:platform ;
+    hmas:contains filling-machine:artifact ,
+                  robotic-arm-3:artifact ,
+                  conveyor-belt:artifact .
+
+################################
+# Workspaces Resource Profiles #
+################################
+
+yogurt-production: a hmas:ResourceProfile ; 
+    hmas:exposeSignifiersFrom hmas:JacamoWorkspaceCatalog ;
+    hmas:globalSpecification [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas-dev:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <workspaces/yogurt-production-site>
+        ]
+    ] .
+
+##########
+# Agents #
+##########
+
+agent-a:agent a hmas:Agent ;
+    hmas:isHostedOn platform:platform ;
+    hmas:isContainedIn yogurt-production:Workspace ;
+    hmas:isMemberOf ypr-organization:organization .
+
+agent-e:agent a hmas:Agent ;
+    hmas:isHostedOn platform:platform ;
+    hmas:isContainedIn yogurt-production:Workspace ;
+    hmas:isMemberOf ypr-organization:organization .
+
+############################
+# Agents Resource Profiles #
+############################
+
+# Complete here
+
+agent-a: a hmas:ResourceProfile ;
+    hmas:isProfileOf agent-a:agent .
+
+agent-e: a hmas:ResourceProfile ;
+    hmas:isProfileOf agent-e:agent .
+
+############
+# Platform #
+############
+
+platform: a hmas:Platform ;
+    hmas:hasProfile <> .

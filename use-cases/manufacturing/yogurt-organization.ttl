@@ -69,18 +69,18 @@ ex:ProductionOperator a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ]
     ] , [
         sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:Operator ]
     ] , [
-        sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
     ] .
 
@@ -88,18 +88,18 @@ ex:ProductionFactoryManager a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ]
     ] , [
         sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:FactoryManager ]
     ] , [
-        sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
     ] .
 
@@ -107,18 +107,18 @@ ex:BusinessFactoryManagerRepresentative a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ]
     ] , [
         sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:FactoryManagerRepresentative ]
     ] , [
-        sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:BusinessGroup ]
     ] .
 
@@ -206,14 +206,6 @@ ex:YPROperator a ex:Operator .
 ex:YPRBusinessGroup a ex:BusinessGroup .
 ex:YPRProductionGroup a ex:ProductionGroup .
 
-ex:YPRSupplyOrder a ex:SupplyOrder .
-ex:YPRProvideFilledCups a ex:ProvideFilledCups .
-ex:YPRFillCups a ex:FillCups .
-ex:YPRBuyCups a ex:BuyCups .
-
-ex:YPRBusinessArea a ex:BusinessArea .
-ex:YPRProductionArea a ex:ProductionArea .
-
 ex:YPRProductionOperator a ex:ProductionOperator ;
     hmas:isMembershipOf agent-e:agent ;
     hmas:isMembershipFor ex:YPROperator ;
@@ -225,7 +217,7 @@ ex:YPRProductionFactoryManager a ex:ProductionFactoryManager ;
     hmas:isMembershipIn ex:YPRProductionGroup .
 
 ex:YPRBusinessFactoryManagerRepresentative a ex:BusinessFactoryManagerRepresentative ;
-    hmas:isMembershipFor agent-ra:agent ;
+    hmas:isMembershipOf agent-ra:agent ;
     hmas:isMembershipFor ex:YPRFactoryManagerRepresentative ;
     hmas:isMembershipIn ex:YPRBusinessGroup .
 
@@ -235,6 +227,4 @@ ypr-org:organization a ex:GenericYogurtCompanyOrganization ;
     hmas:hasProfile ypr-org: ;
     hmas:hasOrganizationalValue ex:YPRIntegrityRespect ;
     hmas:providesRole ex:YPRFactoryManagerRepresentative , ex:YPRFactoryManager , ex:YPROperator ;
-    hmas:isStructuredBy ex:YPRBusinessGroup , ex:YPRProductionGroup ;
-    hmas:proposesMission ex:YPRBuyCups , ex:YPRSupplyOrder , ex:YPRProvideFilledCups , ex:YPRFillCups ;
-    hmas:proposesFacility ex:YPRProductionArea , ex:YPRBusinessArea .
+    hmas:isStructuredBy ex:YPRBusinessGroup , ex:YPRProductionGroup .

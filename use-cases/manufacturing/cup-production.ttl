@@ -1,23 +1,23 @@
 @base <https://ns.inria.fr/hmas/> .
 
 # Artifacts
-@prefix ra1: <workspaces/cup-production-site/artifacts/robotic-arm-1#> .
-@prefix ra2: <workspaces/cup-production-site/artifacts/robotic-arm-2#> .
+@prefix robotic-arm-1: <workspaces/cup-production-site/artifacts/robotic-arm-1#> .
+@prefix robotic-arm-2: <workspaces/cup-production-site/artifacts/robotic-arm-2#> .
 @prefix truck: <workspaces/cup-production-site/artifacts/truck#> .
 
 # Workspaces
-@prefix cpr: <workspaces/cup-production-site#> .
+@prefix cup-production: <workspaces/cup-production-site#> .
 
 # Agents
-@prefix ag-b: <workspaces/cup-production-site/agents/agent-b#> .
-@prefix ag-c: <workspaces/cup-production-site/agents/agent-c#> .
-@prefix ag-d: <workspaces/cup-production-site/agents/agent-d#> .
+@prefix agent-b: <workspaces/cup-production-site/agents/agent-b#> .
+@prefix agent-c: <workspaces/cup-production-site/agents/agent-c#> .
+@prefix agent-d: <workspaces/cup-production-site/agents/agent-d#> .
 
 # Organizations
-@prefix cpr-org: <organizations/cpr#> .
+@prefix cpr-organization <organizations/cpr#> .
 
 # Platforms
-@prefix plat: <#platform> .
+@prefix platform: <#platform> .
 
 # Other prefixes
 @prefix hmas: <https://purl.org/hmas/> .
@@ -32,20 +32,21 @@
 # Artifacts #
 #############
 
-ra1:artifact a hmas:Artifact ;
-    hmas:isHostedOn plat:platform .
+robotic-arm-1:artifact a hmas:Artifact ;
+    hmas:isHostedOn platform:platform .
 
-ra2:artifact a hmas:Artifact ;
-    hmas:isHostedOn plat:platform .
+robotic-arm-2:artifact a hmas:Artifact ;
+    hmas:isHostedOn platform:platform .
 
 truck:artifact a hmas:Artifact ;
-    hmas:isHostedOn plat:platform .
+    hmas:isHostedOn platform:platform .
 
 ###############################
 # Artifacts Resource Profiles #
 ###############################
 
-ra1: a hmas:ResourceProfile ;
+robotic-arm-1: a hmas:ResourceProfile ;
+    hmas:isProfileOf robotic-arm-1:artifact ;
     hmas:exposeSignifiersFrom ufactory:CherrybotCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
@@ -57,7 +58,8 @@ ra1: a hmas:ResourceProfile ;
         ]
     ] .
 
-ra2: a hmas:ResourceProfile ;
+robotic-arm-2: a hmas:ResourceProfile ;
+    hmas:isProfileOf robotic-arm-2:artifact ;
     hmas:exposeSignifiersFrom ufactory:CherrybotCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
@@ -70,6 +72,7 @@ ra2: a hmas:ResourceProfile ;
     ] .
 
 truck: a hmas:ResourceProfile ;
+    hmas:isProfileOf truck:artifact ;
     hmas:exposeSignifiersFrom m5stack:TruckCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
@@ -85,17 +88,17 @@ truck: a hmas:ResourceProfile ;
 # Workspaces #
 ##############
 
-cpr:workspace a hmas:Workspace ;
-    hmas:isHostedOn plat:platform ;
-    cpr:hasProfile cpr: ;
-    hmas:contains ra1:artifact, ra2:artifact, truck:artifact .
+cup-production:workspace a hmas:Workspace ;
+    hmas:isHostedOn platform:platform ;
+    cup-production:hasProfile cup-production: ;
+    hmas:contains robotic-arm-1:artifact, robotic-arm-2:artifact, truck:artifact .
 
 
 ################################
 # Workspaces Resource Profiles #
 ################################
 
-cpr: a hmas:ResourceProfile ; 
+cup-production: a hmas:ResourceProfile ;
     hmas:exposeSignifiersFrom hmas:JacamoWorkspaceCatalog ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
@@ -111,27 +114,27 @@ cpr: a hmas:ResourceProfile ;
 # Agents #
 ##########
 
-ag-b:agent a hmas:Agent ;
-    hmas:isHostedOn plat:platform ;
-    hmas:hasProfile ag-b: ;
-    hmas:isContainedIn cpr:Workspace ;
-    hmas:isMemberOf cpr-org:organization .
+agent-b:agent a hmas:Agent ;
+    hmas:isHostedOn platform:platform ;
+    hmas:hasProfile agent-b: ;
+    hmas:isContainedIn cup-production:Workspace ;
+    hmas:isMemberOf cpr-organization:organization .
 
-ag-c:agent a hmas:Agent ;
-    hmas:isHostedOn plat:platform ;
-    hmas:hasProfile ag-c: ;
-    hmas:isContainedIn cpr:Workspace ;
-    hmas:isMemberOf cpr-org:organization .
+agent-c:agent a hmas:Agent ;
+    hmas:isHostedOn platform:platform ;
+    hmas:hasProfile agent-c: ;
+    hmas:isContainedIn cup-production:Workspace ;
+    hmas:isMemberOf cpr-organization:organization .
 
-ag-d:agent a hmas:Agent ;
-    hmas:isHostedOn plat:platform ;
-    hmas:hasProfile ag-d: ;
-    hmas:isContainedIn cpr:Workspace ;
-    hmas:isMemberOf cpr-org:organization .
+agent-d:agent a hmas:Agent ;
+    hmas:isHostedOn platform:platform ;
+    hmas:hasProfile agent-d: ;
+    hmas:isContainedIn cup-production:Workspace ;
+    hmas:isMemberOf cpr-organization:organization .
 
 ############
 # Platform #
 ############
 
-plat: a hmas:Platform ;
+platform: a hmas:Platform ;
     hmas:hasProfile <> .

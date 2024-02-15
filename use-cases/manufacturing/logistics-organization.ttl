@@ -46,18 +46,18 @@ ex:DelivererMembership a sh:NodeShape ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ]
     ] , [
         sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:Deliverer ]
     ] , [
-        sh:path hmas:isMembershipFor ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:DeliveryGroup ]
     ] .
 
@@ -105,12 +105,8 @@ ex:LogDeliverer a ex:Deliverer .
 
 ex:LogDeliveryGroup a ex:DeliveryGroup .
 
-ex:LogDeliver a ex:Deliver .
-
-ex:LogDeliveryArea a ex:DeliveryArea .
-
 ex:LogDelivererMembership a ex:DelivererMembership ;
-    hmas:isMembershipFor agent-d:agent ;
+    hmas:isMembershipOf agent-d:agent ;
     hmas:isMembershipFor ex:LogDeliverer ;
     hmas:isMembershipIn ex:LogDeliveryGroup .
 
@@ -120,6 +116,4 @@ log-org:organization a ex:GenericLogisticsCompanyOrganization ;
     hmas:hasProfile log-org: ;
     hmas:hasOrganizationalValue ex:LogIntegrityRespect ;
     hmas:providesRole ex:LogDeliverer  ;
-    hmas:isStructuredBy ex:LogDeliveryGroup  ;
-    hmas:proposesMission ex:LogDeliver ;
-    hmas:proposesFacility ex:LogDeliveryArea .
+    hmas:isStructuredBy ex:LogDeliveryGroup  .
