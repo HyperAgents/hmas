@@ -38,7 +38,7 @@ Jane, an artificial agent, is deployed as a  _carrier_. Jane can communicate wit
 ![image](structure-organization.png)
 
 * **Membership**: A Membership indicates the Role played by an Agent in a Group of an Organization.
-* **Membership Interaction**: A relation that refers to the interaction between Agents member of two Memberships.
+* **Membership Relationship**: A relation that refers to the relationship between members of two Memberships.
 * **Memberships Incompatibility**: A relation that imposes a constraint in which the same agent cannot be member of two memberships simultaneously.
 * **Group**: A Group structures an Organization.
 * **Sub-Group Relationship**: A relation that refers to a subgroup relationship between two Groups.
