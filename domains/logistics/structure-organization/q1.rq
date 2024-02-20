@@ -5,17 +5,15 @@ prefix hmas: <https://purl.org/hmas/>
 
 select distinct ?role ?group ?membershipModel
 where {
-  ex:FL_Logistics hmas:providesRole ?role ;
+  ex:FL_Logistics hmas:proposesRole ?role ;
                   hmas:isStructuredBy ?group .
-
-  ?role a ?roleModel .
 
   ?group a ?groupModel .
 
   ?membershipModel rdfs:subClassOf hmas:Membership ;
                    sh:property [
                      sh:path hmas:isMembershipFor ;
-                     sh:qualifiedValueShape [ sh:class ?roleModel ] ;
+                     sh:hasValue ?role ;
                      ] ;
                    sh:property [
                      sh:path hmas:isMembershipIn ;
