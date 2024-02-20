@@ -13,7 +13,7 @@
 @prefix agent-e: <workspaces/yogurt-production-site/agents/agent-c#> .
 
 # Organizations
-@prefix ypr-organization: <organizations/ypr#> .
+@prefix ypr-org: <organizations/ypr#> .
 
 # Platforms
 @prefix platform: <#platform> .
@@ -23,6 +23,8 @@
 @prefix hmas-dev: <https://purl.org/hmas/dev#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+
+@prefix ex: <https://www.example.org/> .
 
 #############
 # Artifacts #
@@ -85,12 +87,12 @@ yogurt-production: a hmas:ResourceProfile ;
 agent-a:agent a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:isContainedIn yogurt-production:Workspace ;
-    hmas:isMemberOf ypr-organization:organization .
+    hmas:isMemberOf ypr-org:organization .
 
 agent-e:agent a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:isContainedIn yogurt-production:Workspace ;
-    hmas:isMemberOf ypr-organization:organization .
+    hmas:isMemberOf ypr-org:organization .
 
 ############################
 # Agents Resource Profiles #
@@ -103,6 +105,16 @@ agent-a: a hmas:ResourceProfile ;
 
 agent-e: a hmas:ResourceProfile ;
     hmas:isProfileOf agent-e:agent .
+
+################
+# Organization #
+################
+
+ypr-org:organization a ex:GenericYogurtCompanyOrganization ;
+    hmas:hasProfile ypr-org: ;
+    hmas:hasOrganizationalValue ex:IntegrityRespect ;
+    hmas:providesRole ex:FactoryManagerRepresentative , ex:FactoryManager , ex:Operator ;
+    hmas:isStructuredBy ex:YPRBusinessGroup , ex:YPRProductionGroup .
 
 ############
 # Platform #

@@ -14,7 +14,7 @@
 @prefix agent-d: <workspaces/cup-production-site/agents/agent-d#> .
 
 # Organizations
-@prefix cpr-organization <organizations/cpr#> .
+@prefix cpr-org: <organizations/cpr#> .
 
 # Platforms
 @prefix platform: <#platform> .
@@ -27,6 +27,8 @@
 
 @prefix ufactory: <https://eu.robotshop.com/fr/collections/ufactory/> .
 @prefix m5stack: <https://docs.m5stack.com/en/products/> .
+
+@prefix ex: <https://www.example.org/> .
 
 #############
 # Artifacts #
@@ -118,19 +120,29 @@ agent-b:agent a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile agent-b: ;
     hmas:isContainedIn cup-production:Workspace ;
-    hmas:isMemberOf cpr-organization:organization .
+    hmas:isMemberOf cpr-org:organization .
 
 agent-c:agent a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile agent-c: ;
     hmas:isContainedIn cup-production:Workspace ;
-    hmas:isMemberOf cpr-organization:organization .
+    hmas:isMemberOf cpr-org:organization .
 
 agent-d:agent a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile agent-d: ;
     hmas:isContainedIn cup-production:Workspace ;
-    hmas:isMemberOf cpr-organization:organization .
+    hmas:isMemberOf cpr-org:organization .
+
+################
+# Organization #
+################
+
+cpr-org:organization a ex:GenericCupCompanyOrganization ;
+    hmas:hasProfile cpr-org: ;
+    hmas:hasOrganizationalValue ex:IntegrityRespect ;
+    hmas:providesRole ex:SellerRepresentative , ex:OrderManager , ex:Operator ;
+    hmas:isStructuredBy ex:CPRBusinessGroup , ex:CPRProductionGroup .
 
 ############
 # Platform #

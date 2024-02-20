@@ -15,26 +15,6 @@
 # Generic organization specification #
 ######################################
 
-# Organizational value specification
-
-ex:IntegrityRespect a hmas:OrganizationalValue ;
-    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
-    rdfs:label "integrity and respect"@en, "intégrité et respect"@fr .
-
-# Roles specifications
-
-ex:SellerRepresentative a hmas:Role .
-ex:OrderManager a hmas:Role .
-ex:Operator a hmas:Role .
-
-# Groups specifications
-
-ex:BusinessGroup a sh:NodeShape , rdfs:Class ;
-    rdfs:subClassOf hmas:Group .
-
-ex:ProductionGroup a sh:NodeShape , rdfs:Class ;
-    rdfs:subClassOf hmas:Group .
-
 # Memberships specifications
 
 ex:ProductionOperator a sh:NodeShape , rdfs:Class ;
@@ -94,9 +74,6 @@ ex:BusinessSellerRepresentative a sh:NodeShape , rdfs:Class ;
         sh:qualifiedValueShape [ sh:class ex:BusinessGroup ]
     ] .
 
-## Relation Specifications
-ex:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
-
 # Generic organization specification
 
 ex:GenericCupCompanyOrganization a sh:NodeShape , rdfs:Class ;
@@ -110,7 +87,7 @@ ex:GenericCupCompanyOrganization a sh:NodeShape , rdfs:Class ;
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue sh:class ex:SellerRepresentative 
+        sh:hasValue ex:SellerRepresentative 
     ] , [
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
@@ -120,7 +97,7 @@ ex:GenericCupCompanyOrganization a sh:NodeShape , rdfs:Class ;
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue sh:class ex:Operator
+        sh:hasValue ex:Operator
     ] , [
         sh:path hmas:isStructuredBy ;
         sh:qualifiedMinCount 1 ;
@@ -160,10 +137,4 @@ ex:CPRBusinessSellerRepresentative a ex:BusinessSellerRepresentative ;
 ex:CPRProductionOrderManager ex:canCommunicateWith ex:CPRBusinessSellerRepresentative .
 ex:CPRProductionOrderManager ex:canCommunicateWith ex:CPRProductionOperator .
 
-# Finally define the CPR organization
 
-cpr-org:organization a ex:GenericCupCompanyOrganization ;
-    hmas:hasProfile cpr-org: ;
-    hmas:hasOrganizationalValue ex:IntegrityRespect ;
-    hmas:providesRole ex:SellerRepresentative , ex:OrderManager , ex:Operator ;
-    hmas:isStructuredBy ex:CPRBusinessGroup , ex:CPRProductionGroup .

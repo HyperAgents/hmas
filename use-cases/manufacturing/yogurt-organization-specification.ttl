@@ -15,26 +15,6 @@
 # Generic organization specification #
 ######################################
 
-# Organizational value specification
-
-ex:IntegrityRespect a hmas:OrganizationalValue ;
-    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
-    rdfs:label "integrity and respect"@en, "intégrité et respect"@fr .
-
-# Roles specifications
-
-ex:FactoryManagerRepresentative a hmas:Role .
-ex:FactoryManager a hmas:Role .
-ex:Operator a hmas:Role .
-
-# Groups specifications
-
-ex:BusinessGroup a sh:NodeShape , rdfs:Class ;
-    rdfs:subClassOf hmas:Group .
-
-ex:ProductionGroup a sh:NodeShape , rdfs:Class ;
-    rdfs:subClassOf hmas:Group .
-
 # Memberships specifications
 
 ex:ProductionOperator a sh:NodeShape , rdfs:Class ;
@@ -93,9 +73,6 @@ ex:BusinessFactoryManagerRepresentative a sh:NodeShape , rdfs:Class ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:BusinessGroup ]
     ] .
-
-## Relation Specifications
-ex:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
 
 # Generic organization specification
 
@@ -159,11 +136,3 @@ ex:YPRBusinessFactoryManagerRepresentative a ex:BusinessFactoryManagerRepresenta
 
 ex:YPRProductionOperator ex:canCommunicateWith ex:YPRBusinessFactoryManagerRepresentative .
 ex:YPRProductionOperator ex:canCommunicateWith ex:YPRProductionOperator .
-
-# Finally define the YPR organization
-
-ypr-org:organization a ex:GenericYogurtCompanyOrganization ;
-    hmas:hasProfile ypr-org: ;
-    hmas:hasOrganizationalValue ex:IntegrityRespect ;
-    hmas:providesRole ex:FactoryManagerRepresentative , ex:FactoryManager , ex:Operator ;
-    hmas:isStructuredBy ex:YPRBusinessGroup , ex:YPRProductionGroup .
