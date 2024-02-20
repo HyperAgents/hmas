@@ -17,55 +17,27 @@
 
 # Organizational value specification
 
-ex:IntegrityRespect a sh:NodeShape ;
-    rdfs:subClassOf hmas:OrganizationalValue ;
+ex:IntegrityRespect a hmas:OrganizationalValue ;
     rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
     rdfs:label "integrity and respect"@en, "intégrité et respect"@fr .
 
 # Roles specifications
 
-ex:FactoryManagerRepresentative a sh:NodeShape ;
-    rdfs:subClassOf hmas:Role .
-
-ex:FactoryManager a sh:NodeShape ;
-    rdfs:subClassOf hmas:Role .
-
-ex:Operator a sh:NodeShape ;
-    rdfs:subClassOf hmas:Role .
+ex:FactoryManagerRepresentative a hmas:Role .
+ex:FactoryManager a hmas:Role .
+ex:Operator a hmas:Role .
 
 # Groups specifications
 
-ex:BusinessGroup a sh:NodeShape ;
+ex:BusinessGroup a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Group .
 
-ex:ProductionGroup a sh:NodeShape ;
+ex:ProductionGroup a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Group .
-
-# Missions specifications
-
-ex:SupplyOrder a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
-
-ex:ProvideFilledCups a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
-
-ex:FillCups a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
-
-ex:BuyCups a sh:NodeShape ;
-    rdfs:subClassOf hmas:Mission .
-
-# Facilities specifications
-
-ex:BusinessArea a sh:NodeShape ;
-    rdfs:subClassOf hmas:Facility .
-
-ex:ProductionArea a sh:NodeShape ;
-    rdfs:subClassOf hmas:Facility .
 
 # Memberships specifications
 
-ex:ProductionOperator a sh:NodeShape ;
+ex:ProductionOperator a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -84,7 +56,7 @@ ex:ProductionOperator a sh:NodeShape ;
         sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
     ] .
 
-ex:ProductionFactoryManager a sh:NodeShape ;
+ex:ProductionFactoryManager a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -103,7 +75,7 @@ ex:ProductionFactoryManager a sh:NodeShape ;
         sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
     ] .
 
-ex:BusinessFactoryManagerRepresentative a sh:NodeShape ;
+ex:BusinessFactoryManagerRepresentative a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -127,28 +99,28 @@ ex:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
 
 # Generic organization specification
 
-ex:GenericYogurtCompanyOrganization a sh:NodeShape ;
+ex:GenericYogurtCompanyOrganization a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Organization ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:IntegrityRespect ]
+        sh:hasValue ex:IntegrityRespect
     ] , [
         sh:path hmas:providesRole ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:FactoryManagerRepresentative ]
+        sh:hasValue ex:FactoryManagerRepresentative
     ] , [
         sh:path hmas:providesRole ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:FactoryManager ]
+        sh:hasValue ex:FactoryManager
     ] , [
         sh:path hmas:providesRole ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:Operator ]
+        sh:hasValue ex:Operator
     ] , [
         sh:path hmas:isStructuredBy ;
         sh:qualifiedMinCount 1 ;
@@ -161,70 +133,37 @@ ex:GenericYogurtCompanyOrganization a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [ sh:class ex:ProductionGroup ] ; 
         sh:qualifiedValuesShapeDisjoint true
-    ] , [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:SupplyOrder ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-    ] , [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:ProvideFilledCups ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-    ] , [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:FillCups ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-    ] , [
-        sh:path hmas:proposesMission ;
-        sh:qualifiedValueShape [ sh:class ex:BuyCups ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-    ] , [
-        sh:path hmas:proposesFacility  ;
-        sh:qualifiedValueShape [ sh:class ex:ProductionArea ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-    ] , [
-        sh:path hmas:proposesFacility  ;
-        sh:qualifiedValueShape [ sh:class ex:BusinessArea ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
     ] .
 
 ###########################################
 # Instanciation of the organization shape #
 ###########################################
 
-ex:YPRIntegrityRespect a ex:IntegrityRespect .
-
-ex:YPRFactoryManagerRepresentative a ex:FactoryManagerRepresentative .
-ex:YPRFactoryManager a ex:FactoryManager .
-ex:YPROperator a ex:Operator .
-
 ex:YPRBusinessGroup a ex:BusinessGroup .
 ex:YPRProductionGroup a ex:ProductionGroup .
 
 ex:YPRProductionOperator a ex:ProductionOperator ;
     hmas:isMembershipOf agent-e:agent ;
-    hmas:isMembershipFor ex:YPROperator ;
-    hmas:isMembershipIn ex:YPRProductionGroup .
+    hmas:isMembershipFor ex:Operator ;
+    hmas:isMembershipIn ex:ProductionGroup .
 
 ex:YPRProductionFactoryManager a ex:ProductionFactoryManager ;
     hmas:isMembershipOf agent-a:agent ;
-    hmas:isMembershipFor ex:YPRFactoryManager ;
-    hmas:isMembershipIn ex:YPRProductionGroup .
+    hmas:isMembershipFor ex:FactoryManager ;
+    hmas:isMembershipIn ex:ProductionGroup .
 
 ex:YPRBusinessFactoryManagerRepresentative a ex:BusinessFactoryManagerRepresentative ;
     hmas:isMembershipOf agent-ra:agent ;
-    hmas:isMembershipFor ex:YPRFactoryManagerRepresentative ;
-    hmas:isMembershipIn ex:YPRBusinessGroup .
+    hmas:isMembershipFor ex:FactoryManagerRepresentative ;
+    hmas:isMembershipIn ex:BusinessGroup .
 
-# Finally define the CPR organization
+ex:YPRProductionOperator ex:canCommunicateWith ex:YPRBusinessFactoryManagerRepresentative .
+ex:YPRProductionOperator ex:canCommunicateWith ex:YPRProductionOperator .
+
+# Finally define the YPR organization
 
 ypr-org:organization a ex:GenericYogurtCompanyOrganization ;
     hmas:hasProfile ypr-org: ;
-    hmas:hasOrganizationalValue ex:YPRIntegrityRespect ;
-    hmas:providesRole ex:YPRFactoryManagerRepresentative , ex:YPRFactoryManager , ex:YPROperator ;
+    hmas:hasOrganizationalValue ex:IntegrityRespect ;
+    hmas:providesRole ex:FactoryManagerRepresentative , ex:FactoryManager , ex:Operator ;
     hmas:isStructuredBy ex:YPRBusinessGroup , ex:YPRProductionGroup .
