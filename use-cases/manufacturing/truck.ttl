@@ -18,7 +18,7 @@ m5stack:TruckCatalog a hmas:SignifiersCatalog ;
 # Truck Endpoints #
 ###################
 
-m5stack:TruckReadableBattery a sh:NodeShape ;
+m5stack:TruckReadableBattery a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -35,7 +35,7 @@ m5stack:TruckReadableBattery a sh:NodeShape ;
         ]
     ] .
 
-m5stack:TruckReadableAccelerometer a sh:NodeShape ;
+m5stack:TruckReadableAccelerometer a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
@@ -52,7 +52,7 @@ m5stack:TruckReadableAccelerometer a sh:NodeShape ;
         ]
     ] .
 
-m5stack:TruckSettableWheels a sh:NodeShape ;
+m5stack:TruckSettableWheels a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path prov:used ;
