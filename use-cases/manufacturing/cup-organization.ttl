@@ -144,18 +144,18 @@ ex:CPRProductionGroup a ex:ProductionGroup .
 
 ex:CPRProductionOperator a ex:ProductionOperator ;
     hmas:isMembershipOf ag-c:agent ;
-    hmas:isMembershipFor ex:CPROperator ;
-    hmas:isMembershipIn ex:CPRProductionGroup .
+    hmas:isMembershipFor ex:Operator ;
+    hmas:isMembershipIn ex:ProductionGroup .
 
 ex:CPRProductionOrderManager a ex:ProductionOrderManager ;
     hmas:isMembershipOf ag-b:agent ;
-    hmas:isMembershipFor ex:CPROrderManager ;
-    hmas:isMembershipIn ex:CPRProductionGroup .
+    hmas:isMembershipFor ex:OrderManager ;
+    hmas:isMembershipIn ex:ProductionGroup .
 
 ex:CPRBusinessSellerRepresentative a ex:BusinessSellerRepresentative ;
     hmas:isMembershipOf agent-rb:agent ;
-    hmas:isMembershipFor ex:CPRSellerRepresentative ;
-    hmas:isMembershipIn ex:CPRBusinessGroup .
+    hmas:isMembershipFor ex:SellerRepresentative ;
+    hmas:isMembershipIn ex:BusinessGroup .
 
 ex:CPRProductionOrderManager ex:canCommunicateWith ex:CPRBusinessSellerRepresentative .
 ex:CPRProductionOrderManager ex:canCommunicateWith ex:CPRProductionOperator .
