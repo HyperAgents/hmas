@@ -15,208 +15,234 @@
 ######################
 
 ufactory:CherrybotCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier [ hmas:signifies ufactory:CherrybotReadableOperator ] ,
-                           [ hmas:signifies ufactory:CherrybotReadablePosition ] ,
-                           [ hmas:signifies ufactory:CherrybotReadableTarget ] ,
-                           [ hmas:signifies ufactory:CherrybotReadableGripper ] ,
-                           [ hmas:signifies ufactory:CherrybotInitializableArm ] ,
-                           [ hmas:signifies ufactory:CherrybotSettableOperator ] ,
-                           [ hmas:signifies ufactory:CherrybotSettableTarget ] ,
-                           [ hmas:signifies ufactory:CherrybotSettableGripper ] ,
-                           [ hmas:signifies ufactory:CherrybotDeletableOperator ] .
+    hmas:proposesSignifier ufactory:CherrybotReadableOperator ,
+                           ufactory:CherrybotReadablePosition ,
+                           ufactory:CherrybotReadableTarget ,
+                           ufactory:CherrybotReadableGripper ,
+                           ufactory:CherrybotInitializableArm ,
+                           ufactory:CherrybotSettableOperator ,
+                           ufactory:CherrybotSettableTarget ,
+                           ufactory:CherrybotSettableGripper ,
+                           ufactory:CherrybotDeletableOperator .
 
 #######################################
 # Robotic Arm Endpoint specifications #
 #######################################
 
-ufactory:CherrybotReadableOperator a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue  "/operator"
+ufactory:CherrybotReadableOperator a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue  "/operator"
+                ]
             ]
+        ] , [
+            sh:path hmas:hasOutput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape ufactory:JsonGetOperatorOutputBody
         ]
-    ] , [
-        sh:path hmas:hasOutput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape ufactory:JsonGetOperatorOutputBody
     ] .
 
-ufactory:CherrybotReadablePosition a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue  "/tcp"
+ufactory:CherrybotReadablePosition a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue  "/tcp"
+                ]
             ]
+        ] , [
+            sh:path hmas:hasOutput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape ufactory:JsonGetPositionOutputBody
         ]
-    ] , [
-        sh:path hmas:hasOutput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape ufactory:JsonGetPositionOutputBody
     ] .
 
-ufactory:CherrybotReadableTarget a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/tcp/target"
+ufactory:CherrybotReadableTarget a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/tcp/target"
+                ]
             ]
+        ] , [
+            sh:path hmas:hasOutput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape ufactory:JsonGetPositionOutputBody
         ]
-    ] , [
-        sh:path hmas:hasOutput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape ufactory:JsonGetPositionOutputBody
-    ].
+    ] .
 
 ufactory:CherrybotReadableGripper a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/gripper"
+    hmas:signifies [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/gripper"
+                ]
             ]
-        ]
-    ] , [
-        sh:path hmas:hasOutput ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:minExclusive 0 ;
-        sh:maxExclusive 800 ;
-        sh:datatype xsd:integer
-    ] .
-
-ufactory:CherrybotInitializableArm a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PutMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/initialize"
-            ]
+        ] , [
+            sh:path hmas:hasOutput ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:minExclusive 0 ;
+            sh:maxExclusive 800 ;
+            sh:datatype xsd:integer
         ]
     ] .
 
-ufactory:CherrybotSettableOperator a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/operator"
+ufactory:CherrybotInitializableArm a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:InvokeAction, hmas-dev:PutMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/initialize"
+                ]
             ]
         ]
-    ] , [
-        sh:path hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape ufactory:JsonSetOperatorInputBody
     ] .
 
-ufactory:CherrybotSettableTarget a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/tcp/target"
+ufactory:CherrybotSettableOperator a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/operator"
+                ]
             ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape ufactory:JsonSetOperatorInputBody
         ]
-    ] , [
-        sh:path hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape ufactory:JsonSetPositionInputBody
     ] .
 
-ufactory:CherrybotSettableGripper a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/gripper"
+ufactory:CherrybotSettableTarget a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/tcp/target"
+                ]
             ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape ufactory:JsonSetPositionInputBody
         ]
-    ] , [
-        sh:path hmas:hasInput ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:datatype xsd:integer ;
-        sh:minExclusive 0 ;
-        sh:maxExclusive 800
     ] .
 
-ufactory:CherrybotDeletableOperator a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:DeleteMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/operator/%7Btoken%7D"
+ufactory:CherrybotSettableGripper a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/gripper"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:datatype xsd:integer ;
+            sh:minExclusive 0 ;
+            sh:maxExclusive 800
+        ]
+    ] .
+
+ufactory:CherrybotDeletableOperator a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:InvokeAction, hmas-dev:DeleteMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/operator/%7Btoken%7D"
+                ]
             ]
         ]
     ] .

@@ -10,68 +10,77 @@
 
 
 m5stack:TruckCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier [ hmas:exposes m5stack:TruckReadableBattery ] ,
-                           [ hmas:exposes m5stack:TruckReadableAccelerometer ] ,
-                           [ hmas:exposes m5stack:TruckSettableWheels ] .
+    hmas:proposesSignifier m5stack:TruckReadableBattery ,
+                           m5stack:TruckReadableAccelerometer ,
+                           m5stack:TruckSettableWheels .
 
 ###################
 # Truck Endpoints #
 ###################
 
-m5stack:TruckReadableBattery a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/properties/batteryvoltage"
+m5stack:TruckReadableBattery a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/properties/batteryvoltage"
+                ]
             ]
         ]
     ] .
 
-m5stack:TruckReadableAccelerometer a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/properties/motorcurrent"
+m5stack:TruckReadableAccelerometer a hmas:Signifier ;
+    has:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/properties/motorcurrent"
+                ]
             ]
         ]
     ] .
 
-m5stack:TruckSettableWheels a sh:NodeShape , rdfs:Class ;
-    sh:class hmas:ActionExecution ;
-    sh:property [
-        sh:path prov:used ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape [
-            sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
-                sh:path hctl:hasTarget ;
-                sh:minCount 1 ;
-                sh:maxCount 1 ;
-                sh:hasValue "/actions/wheelControl"
+m5stack:TruckSettableWheels a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas-dev:InvokeAction, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/actions/wheelControl"
+                ]
             ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape m5stack:JsonControlWheelBody
         ]
-    ] , [
-        sh:path hmas:hasInput ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape m5stack:JsonControlWheelBody
     ] .
 
 
