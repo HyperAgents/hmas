@@ -158,6 +158,7 @@ ex:CPRBusinessSellerRepresentative a ex:BusinessSellerRepresentative ;
     hmas:isMembershipIn ex:CPRBusinessGroup .
 
 ex:CPRProductionOrderManager ex:canCommunicateWith ex:CPRBusinessSellerRepresentative .
+ex:CPRProductionOrderManager ex:canCommunicateWith ex:CPRProductionOperator .
 
 # Finally define the CPR organization
 
