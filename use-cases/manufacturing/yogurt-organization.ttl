@@ -103,23 +103,23 @@ ex:GenericYogurtCompanyOrganization a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Organization ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
         sh:hasValue ex:IntegrityRespect
     ] , [
         sh:path hmas:providesRole ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
         sh:hasValue ex:FactoryManagerRepresentative
     ] , [
         sh:path hmas:providesRole ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
         sh:hasValue ex:FactoryManager
     ] , [
         sh:path hmas:providesRole ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
         sh:hasValue ex:Operator
     ] , [
         sh:path hmas:isStructuredBy ;
