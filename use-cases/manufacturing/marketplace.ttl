@@ -83,7 +83,8 @@ agent-rb: a hmas:ResourceProfile ;
 
 mrk:workspace a hmas:Workspace ;
     hmas:hasProfile mrk: ;
-    hmas:isHostedOn plat:platform .
+    hmas:isHostedOn plat:platform ;
+    hmas:contains agent-ra:, agent-rb: .
 
 ############
 # Platform #
