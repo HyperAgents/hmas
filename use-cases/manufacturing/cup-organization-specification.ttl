@@ -28,7 +28,7 @@ ex:ProductionOperator a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:Operator ]
+        sh:hasValue ex:Operator
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
@@ -47,7 +47,7 @@ ex:ProductionOrderManager a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:OrderManager ]
+        sh:hasValue ex:OrderManager
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
@@ -66,7 +66,7 @@ ex:BusinessSellerRepresentative a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:SellerRepresentative ]
+        sh:hasValue ex:SellerRepresentative
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
