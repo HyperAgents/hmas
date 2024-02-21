@@ -1,0 +1,15 @@
+prefix hmas: <https://purl.org/hmas/>
+prefix ex: <http://example.org/>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix fipa: <http://ns.hyperagents.org/fipa#>
+
+select ?signifier
+where {
+    ex:agentBProfile hmas:exposesSignifier ?signifier .
+    ?signifier hmas:signifies ?actionExecutionSpec .
+    ?actionExecutionSpec sh:property [
+        sh:path hmas:hasInput ;
+        sh:qualifiedValueShape [ sh:class fipa:ACLMessage ]
+    ] .
+}
+order by ?signifier

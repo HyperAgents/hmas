@@ -1,0 +1,237 @@
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix fipa: <http://ns.hyperagents.org/fipa#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/> .
+
+ex:manufacturingWorkspace a hmas:Workspace ;
+  hmas:contains ex:agentA, ex:agentB .
+
+#### Agent A's profile (the agent can request actions to be performed) ####
+
+ex:agentAProfile a fipa:AgentDescription ;
+  hmas:isProfileOf ex:agentA ;
+  hmas:exposesSignifier ex:aggreable, ex:refusable .
+
+ex:agentA a hmas:Agent .
+
+ex:aggreable a hmas:Signifier ;
+      hmas:signifies  ex:agreeActionSpecification .
+
+ex:refusable a hmas:Signifier ;
+      hmas:signifies  ex:refuseActionSpecification .
+
+#### Endpoint for sending messages to Agent A ####
+ex:agentAMessageEndpointShape a sh:NodeShape ;
+	sh:class hmas:ActionExecution ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property [
+                sh:path hctl:forSubprotocol ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "fipa.mts.mtp.http.std" # identifier of the FIPA Agent Message Transport Protocol for HTTP Specification
+            ], [
+                sh:path htv:methodName ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "POST"
+            ], [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue  <http://eduroamverw-130-82-25-24.unisg.ch:7779/acc>
+            ]
+        ]
+    ].
+
+#### Send Agreement Action Specification ####
+ex:agreeActionSpecification a ex:agentAMessageEndpointShape ;
+	sh:class hmas:ActionExecution, dul:Action ;
+    sh:property [
+      sh:path hmas:hasInput ;
+      sh:qualifiedValueShape ex:agreeMessageSpecification ;
+      sh:qualifiedMinCount 1 ;
+      sh:qualifiedMaxCount 1
+    ], [
+      sh:path dul:isActionIncludedIn ;
+      sh:qualifiedValueShape [ sh:class fipa:RequestInteractionProtocolEnactment, dul:PlanExecution ] ;
+      sh:qualifiedMinCount 0 ;
+      sh:qualifiedMaxCount 1
+    ] .
+
+#### Send Refusal Action Specification ####
+ex:refuseActionSpecification a ex:agentAMessageEndpointShape ;
+	sh:class hmas:ActionExecution, dul:Action ;
+    sh:property [
+      sh:path hmas:hasInput ;
+      sh:qualifiedValueShape ex:refuseMessageSpecification ;
+      sh:qualifiedMinCount 1 ;
+      sh:qualifiedMaxCount 1
+    ], [
+      sh:path dul:isActionIncludedIn ;
+      sh:qualifiedValueShape [ sh:class fipa:RequestInteractionProtocolEnactment, dul:PlanExecution ] ;
+      sh:qualifiedMinCount 0 ;
+      sh:qualifiedMaxCount 1
+    ] .
+
+#### Agree Message Specification ####
+ex:agreeMessageSpecification a fipa:ACLMessageStructure ;
+  sh:class fipa:ACLMessage ;
+  sh:property [
+    sh:path fipa:hasReceiver ; # specifies itself as the receiver
+    sh:hasValue ex:agentA ;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasSender ; # specifies that the sender should be an agent
+    sh:class hmas:Agent;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:agree
+    sh:hasValue fipa:agree;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasContent ; # specifies that the content should be an action execution specification
+    sh:minQualifiedShape 1 ;
+    sh:maxQualifiedShape 1 ;
+    sh:qualifiedValueShape [ sh:class hmas:ActionExecution ]
+  ] ;
+  sh:property [
+    sh:path fipa:hasLanguage ;
+    sh:hasValue fipa:FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] .
+
+#### Refuse Message Specification ####
+ex:refuseMessageSpecification a fipa:ACLMessageStructure ;
+  sh:class fipa:ACLMessage ;
+  sh:property [
+    sh:path fipa:hasReceiver ; # specifies itself as the receiver
+    sh:hasValue ex:agentA ;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasSender ; # specifies that the sender should be an agent
+    sh:class hmas:Agent;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:refuse
+    sh:hasValue fipa:refuse;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasContent ; # specifies that the content should be an action execution specification
+    sh:minQualifiedShape 1 ;
+    sh:maxQualifiedShape 1 ;
+    sh:qualifiedValueShape [ sh:class hmas:ActionExecution ]
+  ] ;
+  sh:property [
+    sh:path fipa:hasLanguage ;
+    sh:hasValue fipa:FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] .
+
+#### Agent B's profile (the agent can perform actions upon requests) ####
+
+ex:agentBProfile a fipa:AgentDescription ;
+  hmas:isProfileOf ex:agentB ;
+  hmas:exposesSignifier ex:requestable .
+
+ex:agentB a hmas:Agent .
+
+ex:requestable a hmas:Signifier ;
+      hmas:signifies  ex:requestActionSpecification .
+
+#### Send Request Action Specification ####
+ex:requestActionSpecification a sh:NodeShape ;
+	sh:class hmas:ActionExecution, dul:Action ;
+    sh:property [
+        sh:path prov:used ;
+        sh:minQualifiedShape 1 ;
+        sh:maxQualifiedShape 1 ;
+        sh:qualifiedValueShape [
+            sh:class hctl:Form ;
+            sh:property [
+                sh:path hctl:forSubprotocol ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "fipa.mts.mtp.http.std" # identifier of the FIPA Agent Message Transport Protocol for HTTP Specification
+            ], [
+                sh:path htv:methodName ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue "POST"
+            ], [
+                sh:path hctl:hasTarget ;
+                sh:minCount 1 ;
+                sh:maxCount 1 ;
+                sh:hasValue  <http://eduroamverw-130-82-25-24.unisg.ch:7778/acc>
+            ]
+        ]
+    ], [
+      sh:path hmas:hasInput ;
+      sh:qualifiedValueShape ex:requestMessageSpecification ;
+      sh:qualifiedMinCount 1 ;
+      sh:qualifiedMaxCount 1
+    ], [
+      sh:path dul:isActionIncludedIn ;
+      sh:qualifiedValueShape [ sh:class fipa:RequestInteractionProtocolEnactment, dul:PlanExecution ] ;
+      sh:qualifiedMinCount 0 ;
+      sh:qualifiedMaxCount 1
+    ] .
+
+#### Request Message Specification
+ex:requestMessageSpecification a fipa:ACLMessageStructure ;
+  sh:class fipa:ACLMessage ;
+  sh:property [
+    sh:path fipa:hasReceiver ; # specifies itself as the receiver
+    sh:hasValue ex:agentB ;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasSender ; # specifies that the sender should be an agent
+    sh:class hmas:Agent;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:request
+    sh:hasValue fipa:request;
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] ;
+  sh:property [
+    sh:path fipa:hasContent ; # specifies that the content should be an action execution specification
+    sh:minQualifiedShape 1 ;
+    sh:maxQualifiedShape 1 ;
+    sh:qualifiedValueShape [ sh:class hmas:ActionExecution ]
+  ] ;
+  sh:property [
+    sh:path fipa:hasLanguage ;
+    sh:hasValue fipa:FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
+    sh:minCount 1;
+    sh:maxCount 1;
+  ] .

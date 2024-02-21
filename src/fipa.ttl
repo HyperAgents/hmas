@@ -5,12 +5,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
-@base <https://purl.org/hmas/> .
-
 :fipa rdf:type owl:Ontology ;
-    owl:imports :core ;
+    owl:imports :core, :interaction ;
     vann:preferredNamespacePrefix "hmas" ;
     vann:preferredNamespaceUri <> .
 
@@ -30,6 +29,108 @@
                 rdfs:label "has Service Type"@en .
 
 
+###  https://ci.mines-stetienne.fr/fipa#hasPerformative
+:hasPerformative rdf:type owl:ObjectProperty ;
+                 rdfs:domain :ACLMessage ;
+                 rdfs:range :CommunicativeAct ;
+                 rdfs:comment "A relation between a FIPA ACL message and the type of the communicative act of the ACL message."@en ;
+                 rdfs:label "has performative"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#hasReceiver
+:hasReceiver rdf:type owl:ObjectProperty ;
+             rdfs:domain :ACLMessage ;
+             rdfs:range :Agent ;
+             rdfs:comment "A relation between a FIPA ACL message and agents that are the intended recipients of the message."@en ;
+             rdfs:label "has receiver"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#hasSender
+:hasSender rdf:type owl:ObjectProperty ;
+           rdfs:domain :ACLMessage ;
+           rdfs:range :Agent ;
+           rdfs:comment "A relation between a FIPA ACL message and the agent that is the sender of the message, that is, the name (identifier) of the agent of the communicative act."@en ;
+           rdfs:label "has sender"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#isReplyTo
+:isReplyTo rdf:type owl:ObjectProperty ;
+           rdfs:domain :ACLMessage ;
+           rdfs:range :Agent ;
+           rdfs:comment "A relation between a FIPA ACL message and the agent to which subsequent messages in this conversation thread are to be directed, instead of to the agent named in the sender parameter."@en ;
+           rdfs:label "is reply to"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#hasLanguage
+:hasLanguage rdf:type owl:ObjectProperty ;
+             rdfs:domain :ACLMessage ;
+             rdfs:range :Language ;
+             rdfs:comment "A relation between a FIPA ACL message and the language in which the message content parameter is expressed."@en ;
+             rdfs:label "has language"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#hasOntology
+:hasOntology rdf:type owl:ObjectProperty ;
+             rdfs:domain :ACLMessage ;
+             rdfs:comment "A relation between a FIPA ACL message and the ontology(s) used to give a meaning to the symbols in the message content expression.."@en ;
+             rdfs:label "has ontology"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#hasProtocol
+:hasProtocol rdf:type owl:ObjectProperty ;
+             rdfs:domain :ACLMessage ;
+             rdfs:range :InteractionProtocol ;
+             rdfs:comment "A relation between a FIPA ACL message and the interaction protocol that the sending agent is employing with this ACL message."@en ;
+             rdfs:label "has protocol"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#hasConversation
+:hasConversation rdf:type owl:ObjectProperty ;
+                 rdfs:domain :ACLMessage ;
+                 rdfs:range :BehaviorExecution ;
+                 rdfs:comment "A relation between a FIPA ACL message and an expression (a conversation identifier) which is used to identify the ongoing sequence of communicative acts that together form a conversation."@en ;
+                 rdfs:label "has conversation"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#replyWith
+:replyWith rdf:type owl:ObjectProperty ;
+           rdfs:domain :ACLMessage ;
+           rdfs:comment "A relation between a FIPA ACL message and an expression that will be used by the responding agent to identify this message."@en ;
+           rdfs:label "reply with"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#isInReplyTo
+:isInReplyTo rdf:type owl:ObjectProperty ;
+             rdfs:domain :ACLMessage ;
+             rdfs:comment "A relation between a FIPA ACL message and an expression that references an earlier action to which this message is a reply."@en ;
+             rdfs:label "is in reply to"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#replyBy
+:replyBy rdf:type owl:ObjectProperty ;
+         rdfs:domain :ACLMessage ;
+         rdfs:comment "A relation between a FIPA ACL message and a time and/or date expression which indicates the latest time by which the sending agent would like to receive a reply."@en ;
+         rdfs:label "reply by"@en .
+
+
+#################################################################
+#    DataProperties
+#################################################################
+
+###  https://ci.mines-stetienne.fr/fipa#hasContent
+:hasContent rdf:type owl:DataProperty ;
+            rdfs:domain :ACLMessage ;
+            rdfs:comment "A relation between a FIPA ACL message and the content of the message; equivalently denotes the object of the action. The meaning of the content of any ACL message is intended to be interpreted by the receiver of the message. This is particularly relevant for instance when referring to referential expressions, whose interpretation might be different for the sender and the receiver.Denotes the language in which the content parameter is expressed."@en ;
+            rdfs:label "has content"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#hasEncoding
+:hasEncoding rdf:type owl:DataProperty ;
+             rdfs:domain :ACLMessage ;
+             rdfs:comment "A relation between a FIPA ACL message and the specific encoding of the message content language expression."@en ;
+             rdfs:label "has encoding"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -42,21 +143,21 @@
 
 ###  https://ci.mines-stetienne.fr/fipa#AgentIdentifierDescription
 :AgentIdentifierDescription rdf:type owl:Class ;
-                            rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#ResourceProfile> ;
+                            rdfs:subClassOf :ResourceProfile ;
                             rdfs:comment "A resource profile that describes an agent using the Agent Identifier Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)."@en ;
                             rdfs:label "Agent Identifier Description"@en .
 
 
 ###  https://ci.mines-stetienne.fr/fipa#AgentPlatformDescription
 :AgentPlatformDescription rdf:type owl:Class ;
-                          rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#ResourceProfile> ;
+                          rdfs:subClassOf :ResourceProfile ;
                           rdfs:comment "A resource profile that descripe a FIPA Agent Platform using the Agent Platform Description defined by the FIPA Agent Management Specification (http://fipa.org/specs/fipa00023/SC00023K.html)."@en ;
                           rdfs:label "Agent Platform Description"@en .
 
 
 ###  https://ci.mines-stetienne.fr/fipa#FIPAAgentPlatform
 :FIPAAgentPlatform rdf:type owl:Class ;
-                   rdfs:subClassOf <https://ci.mines-stetienne.fr/hmas#Platform> ;
+                   rdfs:subClassOf :HypermediaMASPlatform ;
                    rdfs:comment "A platform that conforms to the FIPA Abstract Architecture Specification (http://fipa.org/specs/fipa00001/SC00001L.html)."@en ;
                    rdfs:label "FIPA Agent Platform"@en .
 
@@ -82,4 +183,108 @@
                          rdfs:label "Message Transport Service"@en .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  https://ci.mines-stetienne.fr/fipa#CommunicativeAct
+:CommunicativeAct rdf:type owl:Class ;
+                  rdfs:comment "A communicative act defined in the FIPA Communicative Act Library."@en ;
+                  rdfs:label "FIPA Communicative act"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#ACLMessage
+:ACLMessage rdf:type owl:Class ;
+            rdfs:comment "A message that adheres to the FIPA ACL Message Structure Specification."@en ;
+            rdfs:label "FIPA ACL Message"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#Language
+:Language rdf:type owl:Class ;
+          rdfs:comment "The language in which the content of a message is expressed, for example, of a FIPA ACL message."@en ;
+          rdfs:label "Language"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#InteractionProtocol
+:InteractionProtocolEnactment rdf:type owl:Class ;
+                              rdfs:subClassOf :BehaviorExecution ;
+                              rdfs:comment "The enactment of a pre-agreed message exchange protocol for ACL messages."@en ;
+                              rdfs:label "Interaction protocol"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://ci.mines-stetienne.fr/fipa#request
+:request rdf:type :CommunicativeAct ;
+         rdfs:comment "A communicative act with which the sender requests the receiver to perform some action."@en ;
+         rdfs:label "request"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#agree
+:agree rdf:type :CommunicativeAct ;
+         rdfs:comment "A communicative act with which the sender agrees to perform some action, possibly in the future."@en ;
+         rdfs:label "agree"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#refuse
+:refuse rdf:type :CommunicativeAct ;
+         rdfs:comment "A communicative act with which the sender refuses to perform a given action, and explains the reason for the refusal."@en ;
+         rdfs:label "refuse"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#FIPASL
+:FIPASL rdf:type :Language ;
+        rdfs:comment "The FIPA SL Content Language"@en ;
+        rdfs:label "FIPA SL"@en .
+
+
+###  https://ci.mines-stetienne.fr/fipa#ACLMessageStructure
+hmas:ACLMessageStructure rdf:type sh:NodeShape ;
+    rdfs:comment "The FIPA ACL message structure."@en ;
+    rdfs:label "ACL Message Structure"@en ;
+    sh:targetClass hmas:ACLMessage ;
+    sh:property [
+        sh:path hmas:hasPerformative ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasSender ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasReceiver ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:isReplyTo ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasContent ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasLanguage ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasEncoding ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasOntology ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasProtocol ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:hasConversation ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:replyWith ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:isInReplyTo ;
+        sh:maxCount 1
+    ] , [
+        sh:path hmas:replyBy ;
+        sh:maxCount 1
+    ] .
+
+
+###  https://ci.mines-stetienne.fr/fipa#RequestInteractionProtocolEnactment
+:RequestInteractionProtocolEnactment rdf:type :InteractionProtocolEnactment ;
+                                     rdfs:comment "The enactment of a FIPA Interaction Protocol that allows one agent to request another to perform some action."@en ;
+                                     rdfs:label "Request Interaction Protocol"@en .

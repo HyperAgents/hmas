@@ -1,0 +1,16 @@
+prefix hmas: <https://purl.org/hmas/>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix prov: <http://www.w3.org/ns/prov#>
+prefix hctl: <https://www.w3.org/2019/wot/hypermedia#>
+prefix ex: <http://example.org/>
+
+select ?subprotocol
+where {
+    ex:requestActionSpecification sh:property ?propertySpec .
+    ?propertySpec sh:path prov:used ;
+                  sh:qualifiedValueShape ?form .
+    ?form sh:property ?formPropertySpec .
+    ?formPropertySpec sh:path hctl:forSubprotocol ;
+                      sh:hasValue ?subprotocol .
+}
+order by ?subprotocol
