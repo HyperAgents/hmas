@@ -1,0 +1,252 @@
+a@prefix ex: <http://example.org/> .
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+#################################################################
+#    Core Ontology
+#################################################################
+
+## Workspace
+ex:NewsNetworkWS a hmas:Workspace ;
+    hmas:contains ex:John, ex:Alice, ex:Bob, ex:Carol, ex:David, ex:Elton, ex:Walter, ex:AnnotatingService.
+
+## Agents
+ex:John a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:DPr_Network .
+ex:Alice a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:DPr_Network .
+ex:Bob a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:DPr_Network .
+ex:Carol a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:DPr_Network .
+ex:David a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:DPr_Network .
+ex:Elton a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:DPr_Network .
+ex:Walter a hmas:Agent ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMemberOf ex:DPr_Network .
+    
+## Artifacts
+ex:AnnotatingService a hmas:Artifact ;
+    hmas:isContainedIn ex:NewsNetworkWS ;
+    hmas:isMaterialOf ex:DPr_Network .
+
+#################################################################
+#    Regulation Ontology
+#################################################################
+
+# SPECIFICATION
+
+## NOTE: Regulation entities' specification can be represented
+##       using implicit or explicit Target Class SHACL. Here we
+##       decided to use implicit Target Class SHACL because we
+##       do not expect any extensions for this scenario and we
+##       wanted to avoid extra labels.
+
+## Organization Specification
+ex:NewsNetwork a sh:NodeShape ;
+    rdfs:subClassOf hmas:Organization ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:qualifiedValueShape [ sh:class ex:Accountability ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:qualifiedValueShape [ sh:class ex:Transparency ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:ActiveUser ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Journalist ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:GeneralEvaluator ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:GeneralInvestigator ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:MediaInvestigator ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Admin ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;        
+        ] ;
+    sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Aggregator ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;        
+        ] ;
+	sh:property [
+        sh:path hmas:providesRole ;
+        sh:qualifiedValueShape [ sh:class ex:Control ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;        
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:ContentEvaluationMission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:ArticleCredibilityMission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:ImageProvenanceMission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:SystemFunctionalityMission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesMission ;
+        sh:qualifiedValueShape [ sh:class ex:ControlMission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesFacility ;
+        sh:qualifiedValueShape [ sh:class ex:NewsNetworkAnnotatingService ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] .
+
+ex:Manufacturing a sh:NodeShape ;
+    rdfs:subClassOf hmas:Organization .
+
+## Organizational Values
+ex:Accountability a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalValue ;
+    rdfs:comment "Accompany information evaluations with details about who contributed to the tackling disinformation process, e.g. which agents evaluated the information."@en ;
+    rdfs:label "accountability"@en, "responsabilité"@fr .
+
+ex:Transparency a sh:NodeShape ;
+    rdfs:subClassOf hmas:OrganizationalValue ;
+    rdfs:comment "Accompany information evaluations with details about how one contributed to the tackling disinformation process, e.g. what external services were used to evaluate the information."@en ;
+    rdfs:label "transparency"@en, "transparence"@fr .
+    
+## Roles
+ex:ActiveUser a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role .
+ex:Journalist a sh:NodeShape ;
+    rdfs:subClassOf hmas:ActiveUser .
+ex:GeneralEvaluator a sh:NodeShape ;
+    rdfs:subClassOf hmas:Journalist .
+ex:GeneralInvestigator a sh:NodeShape ;
+    rdfs:subClassOf hmas:Journalist .
+ex:MediaInvestigator a sh:NodeShape ;
+    rdfs:subClassOf hmas:Journalist .
+ex:Admin a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role .
+ex:Agreegator a sh:NodeShape ;
+    rdfs:subClassOf hmas:Admin .
+ex:Control a sh:NodeShape ;
+    rdfs:subClassOf hmas:Role .
+
+## Missions
+ex:ContentEvaluationMission a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:ArticleCredibilityMission a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:ImageProvenanceMission a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:SystemFunctionalityMission a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+ex:ControlMission a sh:NodeShape ;
+    rdfs:subClassOf hmas:Mission .
+
+## Facilities
+ex:NewsNetworkAnnotatingService a sh:NodeShape ;
+    rdfs:subClassOf hmas:Facility .
+
+# INSTANTIATION
+
+## Organizational Values
+ex:DPr_Accountability a ex:Accountability .
+ex:DPr_Transparency a ex:Transparency .
+
+## Roles
+ex:DPr_ActiveUser a ex:ActiveUser .
+ex:DPr_Journalist a ex:Journalist .
+ex:DPr_GeneralEvaluator a ex:GeneralEvaluator .
+ex:DPr_GeneralInvestigator a ex:GeneralInvestigator .
+ex:DPr_MediaInvestigator a ex:MediaInvestigator .
+ex:DPr_Admin a ex:Admin .
+ex:DPr_Aggregator a ex:Aggregator .
+ex:DPr_Control a ex:Control .
+
+## Missions
+ex:DPr_ContentEvaluationMission a ex:ContentEvaluationMission .
+ex:DPr_ArticleCredibilityMission a ex:ArticleCredibilityMission .
+ex:DPr_ImageProvenanceMission a ex:ImageProvenanceMission .
+ex:DPr_SystemFunctionalityMission a ex:SystemFunctionalityMission .
+ex:DPr_ControlMission a ex:ControlMission .
+
+## Facility
+ex:DPr_NewsNetworkAnnotatingService a ex:NewsNetworkAnnotatingService.
+
+## Organizations
+ex:DPr_NetworkProfile a hmas:ResourceProfile; 
+    hmas:isProfileOf DPr_Network.
+
+ex:DPr_Network a ex:NewsNetwork ;
+    hmas:hasProfile ex:DPr_NetworkProfile ;
+    hmas:hasOrganizationalValue ex:DPr_Accountability, ex:DPr_Transparency ;
+    hmas:providesRole ex:DPr_ActiveUser, ex:DPr_Journalist, ex:DPr_GeneralEvaluator, ex:DPr_GeneralInvestigator, ex:DPr_MediaInvestigator, ex:DPr_Admin, ex:DPr_Aggregator, ex:DPr_Contol;
+    hmas:proposesMission ex:DPr_ContentEvaluationMission, ex:DPr_ArticleCredibilityMission, ex:DPr_ImageProvenanceMission, ex:DPr_SystemFunctionalityMission, ex:DPr_ControlMission ;
+    hmas:proposesFacility DPr_NewsNetworkAnnotatingService .
+
+ex:GG_NetworkProfile a hmas:ResourceProfile .
+
+ex:GG_Network a ex:NewsNetwork ;
+    hmas:hasProfile ex:GG_NetworkProfile .
+
+ex:HSG_FactoryProfile a hmas:ResourceProfile .
+
+ex:HSG_Factory a ex:Manufacturing ;
+    hmas:hasProfile ex:HSG_FactoryProfile .
+
+ex:ITM_FactoryProfile a hmas:ResourceProfile .
+
+ex:ITM_Factory a ex:Manufacturing ;
+    hmas:hasProfile ex:ITM_FactoryProfile .
