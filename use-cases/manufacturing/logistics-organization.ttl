@@ -39,9 +39,9 @@ ex:DelivererMembership a sh:NodeShape , rdfs:Class ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ]
     ] , [
         sh:path hmas:isMembershipFor ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:Deliverer ]
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue ex:Deliverer
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
