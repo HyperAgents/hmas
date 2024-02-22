@@ -5,5 +5,6 @@
         "syntax-error",
         "owl-rl-constraint-violation"
     ],
-    "gist_index": "c4128ff5fec462d83e2ae8a229917537"
+    "gist_index": "c4128ff5fec462d83e2ae8a229917537",
+    "skipped_files": []
 }
