@@ -1,9 +1,10 @@
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix jacamo: <https://purl.org/hmas/jacamo#> .
-@prefix aa: <https://purl.org/hmas/agents-artifacts#> .
-@prefix jason-kqml: <https://purl.org/hmas/json-kqml#> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix jacamo: <https://purl.org/hmas/> .
+@prefix aa: <https://purl.org/hmas/> .
+@prefix jason-kqml: <https://purl.org/hmas/> .
+@prefix hmas-dev: <https://purl.org/hmas/> .
 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix wotsec: <https://www.w3.org/2019/wot/security#> .
@@ -13,11 +14,17 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix jsonld: <http://www.w3.org/ns/json-ld#> .
 
+:jacamo rdf:type owl:Ontology ;
+    owl:imports :core ;
+    vann:preferredNamespacePrefix "hmas" ;
+    vann:preferredNamespaceUri <> .
+
 ########################
 # Workspace Signifiers #
 ########################
 
 jacamo:WorkspaceCatalog a hmas:SignifiersCatalog ;
+    rdfs:isDefinedBy :jacamo ;
     hmas:proposesSignifier jacamo:PerceivableWorkspace ,
                            jacamo:PartitionableWorkspace ,
                            jacamo:UpdatableWorkspace ,
@@ -28,7 +35,9 @@ jacamo:WorkspaceCatalog a hmas:SignifiersCatalog ;
                            jacamo:ArtifactCreatableWorkspace,
                            jacamo:ArtifactContainableWorkspace.
 
-jacamo:PerceivableWorkspace hmas:signifies [
+jacamo:PerceivableWorkspace a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
     a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
@@ -52,7 +61,9 @@ jacamo:PerceivableWorkspace hmas:signifies [
     ] 
 ].
 
-jacamo:PartionableWorkspace hmas:signifies [
+jacamo:PartionableWorkspace a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
     a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
@@ -80,7 +91,9 @@ jacamo:PartionableWorkspace hmas:signifies [
     ] 
 ].
 
-jacamo:UpdatableWorkspace hmas:signifies [
+jacamo:UpdatableWorkspace a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
     a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
@@ -109,7 +122,9 @@ jacamo:UpdatableWorkspace hmas:signifies [
     ] 
 ].
 
-jacamo:DeletableWorkspace hmas:signifies [
+jacamo:DeletableWorkspace a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
     a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
@@ -133,7 +148,9 @@ jacamo:DeletableWorkspace hmas:signifies [
     ] 
 ].
 
-jacamo:JoinableWorkspace hmas:signifies [
+jacamo:JoinableWorkspace a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
     a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
@@ -157,7 +174,9 @@ jacamo:JoinableWorkspace hmas:signifies [
     ] 
 ].
 
-jacamo:LeavableWorkspace hmas:signifies [
+jacamo:LeavableWorkspace a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
   	a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
@@ -181,7 +200,9 @@ jacamo:LeavableWorkspace hmas:signifies [
     ] 
 ].
 
-jacamo:FocusableWorkspace hmas:signifies [
+jacamo:FocusableWorkspace a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
     a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
@@ -200,7 +221,9 @@ jacamo:FocusableWorkspace hmas:signifies [
     ]
 ].
 
-jacamo:ArtifactCreatableWorkspace hmas:signifies [
+jacamo:ArtifactCreatableWorkspace a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
     a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
@@ -229,7 +252,9 @@ jacamo:ArtifactCreatableWorkspace hmas:signifies [
     ] 
 ].
 
-jacamo:ArtifactContainableWorkspace hmas:signifies [
+jacamo:ArtifactContainableWorkspace a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
     a sh:NodeShape , rdfs:Class ;
     sh:class hmas:ActionExecution ;
     sh:property [
@@ -263,6 +288,7 @@ jacamo:ArtifactContainableWorkspace hmas:signifies [
 ###################################
 
 jacamo:BodyProfileSpecification a sh:NodeShape ;
+    rdfs:isDefinedBy :jacamo ;
     sh:class hmas:ResourceProfile ;
     sh:property [
         sh:path hmas:isContainedIn ;
@@ -277,6 +303,7 @@ jacamo:BodyProfileSpecification a sh:NodeShape ;
     ] .
 
 jacamo:ArtifactCreationDetails a sh:NodeShape ;
+    rdfs:isDefinedBy :jacamo ;
     sh:property [
         sh:path aa:hasName ;
         sh:minCount 1 ;
@@ -299,10 +326,12 @@ jacamo:ArtifactCreationDetails a sh:NodeShape ;
 ########################
 
 jacamo:MessagingCatalog a hmas:SignifiersCatalog ;
+    rdfs:isDefinedBy :jacamo ;
     hmas:proposesSignifier jacamo:AgentContactable .
 
 
 jacamo:AgentContactable a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
     hmas:signifies [
         a sh:NodeShape ;
         sh:class hmas-dev:ActionExecution ;
@@ -332,6 +361,7 @@ jacamo:AgentContactable a hmas:Signifier ;
 ###################################
 
 jacamo:ACLMessageStructure rdf:type sh:NodeShape ;
+    rdfs:isDefinedBy :jacamo ;
     sh:targetClass hmas:ACLMessage ;
     sh:property [
         sh:path jason-kqml:hasPerformative ;
@@ -358,6 +388,7 @@ jacamo:ACLMessageStructure rdf:type sh:NodeShape ;
 ###################
 
 jacamo:context a jsonld:Context ;
+    rdfs:isDefinedBy :jacamo ;
     jsonld:version 1.1 ;
     jsonld:definition [
         a jsonld:TermDefinition;

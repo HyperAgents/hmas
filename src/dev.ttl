@@ -1,8 +1,9 @@
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-dev: <https://purl.org/hmas/> .
 @prefix fipa: <https://purl.org/hmas/> .
 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -10,117 +11,141 @@
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix htv: <http://www.w3.org/2011/http#> .
 
+:dev rdf:type owl:Ontology ;
+    owl:imports :core ;
+    vann:preferredNamespacePrefix "hmas" ;
+    vann:preferredNamespaceUri <> .
 
 #######################
 # Developer constants #
 #######################
 
 hmas-dev:PathToBaseURI a rdf:List ;
+    rdfs:isDefinedBy :dev ;
     rdf:first prov:used ;
     rdf:rest ( td:baseURI ) .
 
 hmas-dev:null a xsd:simpleType ;
-   rdfs:comment "The null type"@en .
+    rdfs:isDefinedBy :dev ;
+    rdfs:comment "The null type"@en .
 
-hmas-dev:nullValue a hmas-dev:null .
+hmas-dev:nullValue a hmas-dev:null ;
+    rdfs:isDefinedBy :dev .
 
 hmas-dev:forApplicatonJson a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:forContentType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "application/json" .
 
 hmas-dev:forTextTurtle a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:forContentType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "text/turtle" .
 
 hmas-dev:FipaMessagingProtocol a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:forSubprotocol ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "fipa.mts.mtp.http.std" .
 
 hmas-dev:GetMethod a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "GET" .
 
 hmas-dev:PutMethod a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "PUT" .
 
 hmas-dev:PostMethod a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "POST" .
 
 hmas-dev:DeleteMethod a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "DELETE" .
 
 hmas-dev:InvokeAction a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:invokeAction .
 
 hmas-dev:ReadProperty a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:readProperty .
 
 hmas-dev:WriteProperty a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:writeProperty .
 
 hmas-dev:ObserveProperty a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:observeProperty .
 
 hmas-dev:UnobserveProperty a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:unobserveProperty .
 
 hmas-dev:QueryAction a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:queryAction .
 
 hmas-dev:CancelAction a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:cancelAction .
 
 hmas-dev:SubscribeEvent a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:subscribeEvent .
 
 hmas-dev:UnsubscribeEvent a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path hctl:hasOperationType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue td:unsubscribeEvent .
 
 hmas-dev:AuthorizationHeader a sh:NodeShape ;
+    rdfs:isDefinedBy :dev ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path (
@@ -148,6 +173,7 @@ hmas-dev:AuthorizationHeader a sh:NodeShape ;
     ] .
 
 hmas-dev:SlugHeader a sh:NodeShape ;
+    rdfs:isDefinedBy :dev ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path (
@@ -174,6 +200,7 @@ hmas-dev:SlugHeader a sh:NodeShape ;
     ] .
 
 hmas-dev:XAgentWebIDHeader a sh:NodeShape ;
+    rdfs:isDefinedBy :dev ;
     sh:class hmas:ActionExecution ;
     sh:property [
         sh:path (
@@ -201,6 +228,7 @@ hmas-dev:XAgentWebIDHeader a sh:NodeShape ;
 # Messaging #
 
 hmas-dev:FIPAMessageForm a sh:NodeShape ;
+    rdfs:isDefinedBy :dev ;
     sh:class hctl:Form ;
     sh:property hmas-dev:FipaMessagingProtocol, hmas-dev:InvokeAction, [
         sh:path hctl:hasTarget ;
@@ -210,74 +238,85 @@ hmas-dev:FIPAMessageForm a sh:NodeShape ;
     ] .
 
 hmas-dev:AgentMessage a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path fipa:hasSender ; # specifies that the sender should be an agent
     sh:class hmas:Agent;
     sh:minCount 1;
     sh:maxCount 1 .
 
 hmas-dev:Request a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:agree
     sh:hasValue fipa:request ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
 hmas-dev:Agree a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path fipa:hasPerformative ; # specifies that the performative should be fipa:agree
     sh:hasValue fipa:agree ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
 hmas-dev:Refuse a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path fipa:hasPerformative ;
     sh:hasValue fipa:refuse ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
 hmas-dev:Failure a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path fipa:hasPerformative ;
     sh:hasValue fipa:failure ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
 hmas-dev:InformDone a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path fipa:informDone ;
     sh:hasValue fipa:informDone ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
 hmas-dev:InformResult a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path fipa:informDone ;
     sh:hasValue fipa:informResult ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
 hmas-dev:InteractionOrder a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path fipa:hasContent ; # specifies that the content should be an action execution specification
     sh:minQualifiedShape 1 ;
     sh:maxQualifiedShape 1 ;
     sh:qualifiedValueShape [ sh:class hmas:ActionExecution ] .
 
 hmas-dev:FIPASL a sh:PropertyShape ;
+    rdfs:isDefinedBy :dev ;
     sh:path fipa:hasLanguage ;
     sh:hasValue fipa:FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
     sh:minCount 1 ;
     sh:maxCount 1 .
 
-:WorkspaceProfileSpecification a sh:NodeShape ;
-    sh:class :ResourceProfile ;
+hmas-dev:WorkspaceProfileSpecification a sh:NodeShape ;
+    rdfs:isDefinedBy :dev ;
+    sh:class hmas:ResourceProfile ;
     sh:property [ 
-        sh:path :isProfileOf ;
+        sh:path hmas:isProfileOf ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype :Workspace   
+        sh:datatype hmas:Workspace   
     ] .
 
-:ArtifactProfileSpecification a sh:NodeShape ;
-    sh:class :ResourceProfile ;
+hmas-dev:ArtifactProfileSpecification a sh:NodeShape ;
+    rdfs:isDefinedBy :dev ;
+    sh:class hmas:ResourceProfile ;
     sh:property [ 
-        sh:path :isProfileOf ;
+        sh:path hmas:isProfileOf ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype :Artifact
+        sh:datatype hmas:Artifact
     ] .
     

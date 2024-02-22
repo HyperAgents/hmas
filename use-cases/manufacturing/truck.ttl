@@ -3,6 +3,7 @@
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix hmas-dev: <https://purl.org/hmas/dev#> .
 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
@@ -39,7 +40,7 @@ m5stack:TruckReadableBattery a hmas:Signifier ;
     ] .
 
 m5stack:TruckReadableAccelerometer a hmas:Signifier ;
-    has:signifies [
+    hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
         sh:property [

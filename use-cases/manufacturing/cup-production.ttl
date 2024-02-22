@@ -148,5 +148,5 @@ cpr-org:organization a ex:GenericCupCompanyOrganization ;
 # Platform #
 ############
 
-platform: a hmas:Platform ;
+platform: a hmas:HypermediaMASPlatform ;
     hmas:hasProfile <> .

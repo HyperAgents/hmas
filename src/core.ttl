@@ -10,6 +10,7 @@
 @prefix schema: <http://schema.org/>.
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 
 
 #################################################################
@@ -346,8 +347,8 @@ _:norman2013 a owl:NamedIndividual ;
           rdfs:range :Signifier ;
           owl:inverseOf :isExposedIn ;
           owl:propertyChainAxiom (
-            hmas:exposeSignifiersFrom
-            hmas:proposesSignifier
+            :exposeSignifiersFrom
+            :proposesSignifier
           ) ;
           rdfs:comment "A relation between a resource profile and a signifier it exposes."@en ; 
           rdfs:label "exposes signifier"@en, "expose le signifiant"@fr ;
@@ -373,16 +374,23 @@ _:norman2013 a owl:NamedIndividual ;
     rdfs:comment "A catalogue of signifiers reusable from a resource profile" .
 
 :proposesSignifier a owl:ObjectProperty ;
+    rdfs:isDefinedBy :core ;
     rdfs:domain :SignifiersCatalog ;
-    rdfs:range :Signifier .
+    rdfs:range :Signifier ;
+    rdfs:label "proposes signifiers"@en , "propose les signifiants"@fr ;
+    rdfs:comment "A relation between a catalog and signifiers it contains"@en .
 
 :exposeSignifiersFrom a owl:ObjectProperty ;
+    rdfs:isDefinedBy :core ;
     rdfs:domain :ResourceProfile ;
-    rdfs:range :SignifiersCatalog .
+    rdfs:range :SignifiersCatalog ;
+    rdfs:label "exposes signifiers from"@en , "expose les signifiants depuis"@fr ;
+    rdfs:comment "A relation beween a resource profile and signifiers it exposes from a catalog"@en .
 
 :globalSpecification a owl:ObjectProperty ;
-    rdfs:label "Global specification"@en ;
-    rdfs:label "Additional specification for the data involved in any Action Execution"@en ;
+    rdfs:isDefinedBy :core ;
+    rdfs:label "has global specification"@en ;
+    rdfs:comment "A relation between a resource profile and additional specifications for the data involved in any Action Execution targeting a signifier from this resource profile"@en ;
     rdfs:domain :ResourceProfile ;
     rdfs:range sh:NodeShape .
 
