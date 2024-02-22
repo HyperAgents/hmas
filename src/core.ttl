@@ -370,6 +370,7 @@ _:norman2013 a owl:NamedIndividual ;
           rdfs:label "is material of"@en .
 
 :SignifiersCatalog a owl:Class ;
+    rdfs:isDefinedBy :core ;
     rdfs:label "Catalog"@en, "Catalogue"@en ;
     rdfs:comment "A catalogue of signifiers reusable from a resource profile" .
 
