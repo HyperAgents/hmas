@@ -21,7 +21,6 @@
 
 # Other prefixes
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
@@ -53,7 +52,7 @@ robotic-arm-1: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas-dev:PathToBaseURI ;
+            sh:path hmas:PathToBaseURI ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1>
@@ -66,7 +65,7 @@ robotic-arm-2: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas-dev:PathToBaseURI ;
+            sh:path hmas:PathToBaseURI ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2>
@@ -79,7 +78,7 @@ truck: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas-dev:PathToBaseURI ;
+            sh:path hmas:PathToBaseURI ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://10.2.2.183>
@@ -105,7 +104,7 @@ cup-production: a hmas:ResourceProfile ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas-dev:PathToBaseURI ;
+            sh:path hmas:PathToBaseURI ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <workspaces/cup-production-site>

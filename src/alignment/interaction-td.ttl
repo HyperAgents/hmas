@@ -10,6 +10,7 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix td: <https://www.w3.org/2019/wot/td#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 
 #################################################################
 #    Ontology alignement between the Interaction Module and
@@ -37,3 +38,70 @@ td:InteractionAffordance
 #td:PropertyAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue :ActionExecution ] .
 #td:ActionAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue :ActionExecution ] .
 #td:EventAffordance rdfs:subClassOf [ a owl:Restriction ; owl:onProperty sh:class ; owl:hasValue :ActionExecution ] .
+
+#############################################################
+# Universals
+#############################################################
+
+:InvokeAction a sh:PropertyShape ;
+    rdfs:isDefinedBy :interaction-td ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:invokeAction .
+
+:ReadProperty a sh:PropertyShape ;
+    rdfs:isDefinedBy :interaction-td ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:readProperty .
+
+:WriteProperty a sh:PropertyShape ;
+    rdfs:isDefinedBy :interaction-td ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:writeProperty .
+
+:ObserveProperty a sh:PropertyShape ;
+    rdfs:isDefinedBy :interaction-td ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:observeProperty .
+
+:UnobserveProperty a sh:PropertyShape ;
+    rdfs:isDefinedBy :interaction-td ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:unobserveProperty .
+
+:QueryAction a sh:PropertyShape ;
+    rdfs:isDefinedBy :interaction-td ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:queryAction .
+
+:CancelAction a sh:PropertyShape ;
+    rdfs:isDefinedBy :interaction-td ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:cancelAction .
+
+:SubscribeEvent a sh:PropertyShape ;
+    rdfs:isDefinedBy :interaction-td ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:subscribeEvent .
+
+:UnsubscribeEvent a sh:PropertyShape ;
+    rdfs:isDefinedBy :interaction-td ;
+    sh:path hctl:hasOperationType ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue td:unsubscribeEvent .

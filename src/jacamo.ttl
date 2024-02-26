@@ -1,9 +1,10 @@
+@base <https://purl.org/hmas/> .
+@prefix : <> .
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix jacamo: <https://purl.org/hmas/> .
 @prefix aa: <https://purl.org/hmas/> .
 @prefix jason-kqml: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/> .
-
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -13,6 +14,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix jsonld: <http://www.w3.org/ns/json-ld#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 
 :jacamo rdf:type owl:Ontology ;
     owl:imports :core ;
@@ -46,7 +48,7 @@ jacamo:PerceivableWorkspace a hmas:Signifier ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:ReadAction, hmas-dev:GetMethod, hmas-dev:forTextTurtle, [
+            sh:property hmas:ReadAction, hmas:GetMethod, hmas:forTextTurtle, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -57,7 +59,7 @@ jacamo:PerceivableWorkspace a hmas:Signifier ;
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape hmas-dev:WorkspaceProfileSpecification
+        sh:qualifiedValueShape hmas:WorkspaceProfileSpecification
     ] 
 ].
 
@@ -72,7 +74,7 @@ jacamo:PartionableWorkspace a hmas:Signifier ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forTextTurtle, hmas-dev:SlugHeader, hmas-dev:XAgentWebIDHeader, [
+            sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forTextTurtle, hmas:SlugHeader, hmas:XAgentWebIDHeader, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -82,12 +84,12 @@ jacamo:PartionableWorkspace a hmas:Signifier ;
     ] , [
         sh:path hmas:hasInput ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape hmas-dev:WorkspaceProfileSpecification
+        sh:qualifiedValueShape hmas:WorkspaceProfileSpecification
     ] , [
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape hmas-dev:WorkspaceProfileSpecification
+        sh:qualifiedValueShape hmas:WorkspaceProfileSpecification
     ] 
 ].
 
@@ -102,7 +104,7 @@ jacamo:UpdatableWorkspace a hmas:Signifier ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PutMethod, hmas-dev:forTextTurtle, hmas-dev:XAgentWebIDHeader, [
+            sh:property hmas:InvokeAction, hmas:PutMethod, hmas:forTextTurtle, hmas:XAgentWebIDHeader, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -113,12 +115,12 @@ jacamo:UpdatableWorkspace a hmas:Signifier ;
         sh:path hmas:hasInput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape hmas-dev:WorkspaceProfileSpecification
+        sh:qualifiedValueShape hmas:WorkspaceProfileSpecification
     ] , [
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape hmas-dev:WorkspaceProfileSpecification
+        sh:qualifiedValueShape hmas:WorkspaceProfileSpecification
     ] 
 ].
 
@@ -133,7 +135,7 @@ jacamo:DeletableWorkspace a hmas:Signifier ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:DeleteMethod, hmas-dev:XAgentWebIDHeader, [
+            sh:property hmas:InvokeAction, hmas:DeleteMethod, hmas:XAgentWebIDHeader, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -144,7 +146,7 @@ jacamo:DeletableWorkspace a hmas:Signifier ;
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape hmas-dev:WorkspaceProfileSpecification
+        sh:qualifiedValueShape hmas:WorkspaceProfileSpecification
     ] 
 ].
 
@@ -159,7 +161,7 @@ jacamo:JoinableWorkspace a hmas:Signifier ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forTextTurtle, hmas-dev:XAgentWebIDHeader, [
+            sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forTextTurtle, hmas:XAgentWebIDHeader, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -170,7 +172,7 @@ jacamo:JoinableWorkspace a hmas:Signifier ;
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape hmas-dev:ArtifactProfileSpecification
+        sh:qualifiedValueShape hmas:ArtifactProfileSpecification
     ] 
 ].
 
@@ -185,7 +187,7 @@ jacamo:LeavableWorkspace a hmas:Signifier ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forTextTurtle, hmas-dev:XAgentWebIDHeader, [
+            sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forTextTurtle, hmas:XAgentWebIDHeader, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -211,7 +213,7 @@ jacamo:FocusableWorkspace a hmas:Signifier ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:XAgentWebIDHeader, [
+            sh:property hmas:InvokeAction, hmas:PostMethod, hmas:XAgentWebIDHeader, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -232,7 +234,7 @@ jacamo:ArtifactCreatableWorkspace a hmas:Signifier ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, hmas-dev:XAgentWebIDHeader, [
+            sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, hmas:XAgentWebIDHeader, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -248,7 +250,7 @@ jacamo:ArtifactCreatableWorkspace a hmas:Signifier ;
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape hmas-dev:ArtifactProfileSpecification
+        sh:qualifiedValueShape hmas:ArtifactProfileSpecification
     ] 
 ].
 
@@ -263,7 +265,7 @@ jacamo:ArtifactContainableWorkspace a hmas:Signifier ;
         sh:maxQualifiedShape 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forTextTurtle, hmas-dev:SlugHeader, hmas-dev:XAgentWebIDHeader, [
+            sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forTextTurtle, hmas:SlugHeader, hmas:XAgentWebIDHeader, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -274,12 +276,12 @@ jacamo:ArtifactContainableWorkspace a hmas:Signifier ;
         sh:path hmas:hasInput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape hmas-dev:ArtifactProfileSpecification
+        sh:qualifiedValueShape hmas:ArtifactProfileSpecification
     ], [
         sh:path hmas:hasOutput ;
         sh:minQualifiedShape 1 ;
         sh:maxQualifiedShape 1 ;
-        sh:qualifiedValueShape hmas-dev:ArtifactProfileSpecification
+        sh:qualifiedValueShape hmas:ArtifactProfileSpecification
     ] 
 ].
 
@@ -334,14 +336,14 @@ jacamo:AgentContactable a hmas:Signifier ;
     rdfs:isDefinedBy :jacamo ;
     hmas:signifies [
         a sh:NodeShape ;
-        sh:class hmas-dev:ActionExecution ;
+        sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
             sh:minQualifiedShape 1 ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property  hmas-dev:InvokeAction, hmas-dev:PutMethod, hmas-dev:forApplicatonJson, [
+                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
@@ -360,14 +362,14 @@ jacamo:AgentContactable a hmas:Signifier ;
     rdfs:isDefinedBy :jacamo ;
     hmas:signifies [
         a sh:NodeShape ;
-        sh:class hmas-dev:ActionExecution ;
+        sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
             sh:minQualifiedShape 1 ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property  hmas-dev:InvokeAction, hmas-dev:PutMethod, hmas-dev:forApplicatonJson, [
+                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
@@ -449,3 +451,28 @@ jacamo:context a jsonld:Context ;
 #  "initParams": [ 5 ],
 #  "artifactName": "c0"
 #}
+
+
+##################################
+# Universals
+##################################
+
+:WorkspaceProfileSpecification a sh:NodeShape ;
+    rdfs:isDefinedBy :jacamo ;
+    sh:class hmas:ResourceProfile ;
+    sh:property [ 
+        sh:path hmas:isProfileOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype hmas:Workspace   
+    ] .
+
+:ArtifactProfileSpecification a sh:NodeShape ;
+    rdfs:isDefinedBy :jacamo ;
+    sh:class hmas:ResourceProfile ;
+    sh:property [ 
+        sh:path hmas:isProfileOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype hmas:Artifact
+    ] .

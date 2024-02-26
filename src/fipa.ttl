@@ -6,6 +6,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 
 :fipa rdf:type owl:Ontology ;
     owl:imports :core ;
@@ -105,3 +107,87 @@
          rdfs:isDefinedBy :fipa ;
          rdfs:comment "A communicative act with which the sender informs the progress concerning a requested action"@en ;
          rdfs:label "inform result"@en .
+
+############################################################
+# Universal
+############################################################
+
+:FipaMessagingProtocol a sh:PropertyShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:path hctl:forSubprotocol ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue "fipa.mts.mtp.http.std" .
+
+:FIPAMessageForm a sh:NodeShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:class hctl:Form ;
+    sh:property :FipaMessagingProtocol, :InvokeAction, [
+        sh:path hctl:hasTarget ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue ""
+    ] .
+
+:AgentMessage a sh:PropertyShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:path :hasSender ; # specifies that the sender should be an agent
+    sh:class :Agent;
+    sh:minCount 1;
+    sh:maxCount 1 .
+
+:Request a sh:PropertyShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:path :hasPerformative ; # specifies that the performative should be fipa:agree
+    sh:hasValue :request ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:Agree a sh:PropertyShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:path :hasPerformative ; # specifies that the performative should be fipa:agree
+    sh:hasValue :agree ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:Refuse a sh:PropertyShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:path :hasPerformative ;
+    sh:hasValue :refuse ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:Failure a sh:PropertyShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:path :hasPerformative ;
+    sh:hasValue :failure ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:InformDone a sh:PropertyShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:path :informDone ;
+    sh:hasValue :informDone ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:InformResult a sh:PropertyShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:path :informDone ;
+    sh:hasValue :informResult ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:InteractionOrder a sh:PropertyShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:path :hasContent ; # specifies that the content should be an action execution specification
+    sh:minQualifiedShape 1 ;
+    sh:maxQualifiedShape 1 ;
+    sh:qualifiedValueShape [ sh:class :ActionExecution ] .
+
+:FIPASL a sh:PropertyShape ;
+    rdfs:isDefinedBy :fipa ;
+    sh:path :hasLanguage ;
+    sh:hasValue :FIPASL ; # specifies that the content should be expressed in the FIPA SL Content Language
+    sh:minCount 1 ;
+    sh:maxCount 1 .

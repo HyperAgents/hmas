@@ -2,7 +2,6 @@
 @prefix cherrybot: <https://interactions.ics.unisg.ch/cherrybot#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
@@ -40,7 +39,7 @@ ufactory:CherrybotReadableOperator a hmas:Signifier ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
@@ -65,7 +64,7 @@ ufactory:CherrybotReadablePosition a hmas:Signifier ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
@@ -90,7 +89,7 @@ ufactory:CherrybotReadableTarget a hmas:Signifier ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
@@ -114,7 +113,7 @@ ufactory:CherrybotReadableGripper a sh:NodeShape , rdfs:Class ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+                sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
@@ -141,7 +140,7 @@ ufactory:CherrybotInitializableArm a hmas:Signifier ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas-dev:InvokeAction, hmas-dev:PutMethod, hmas-dev:forApplicatonJson, [
+                sh:property hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
@@ -161,7 +160,7 @@ ufactory:CherrybotSettableOperator a hmas:Signifier ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
@@ -186,7 +185,7 @@ ufactory:CherrybotSettableTarget a hmas:Signifier ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
@@ -211,7 +210,7 @@ ufactory:CherrybotSettableGripper a hmas:Signifier ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
@@ -238,7 +237,7 @@ ufactory:CherrybotDeletableOperator a hmas:Signifier ;
             sh:maxQualifiedShape 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas-dev:InvokeAction, hmas-dev:DeleteMethod, hmas-dev:forApplicatonJson, [
+                sh:property hmas:InvokeAction, hmas:DeleteMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;

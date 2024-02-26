@@ -20,7 +20,6 @@
 
 # Other prefixes
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
@@ -73,7 +72,7 @@ yogurt-production: a hmas:ResourceProfile ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas-dev:PathToBaseURI ;
+            sh:path hmas:PathToBaseURI ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <workspaces/yogurt-production-site>
