@@ -33,6 +33,11 @@
 
 @prefix cherrybot: <https://interactions.ics.unisg.ch/cherrybot#> .
 
+@prefix ex: <https://www.example.org/> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
 
 #############
 # Artifacts #
@@ -121,11 +126,6 @@ ex:canBeFriendwithShape a sh:NodeShape ;
                  } """ ;
             ] .
 
-[
-    a sh:NodeShape ;
-    sh:class rdf:List ;
-]
-
 _:SecuredForm a owl:Class ;
     owl:equivalentClass [
         a owl:Class ;
@@ -140,7 +140,7 @@ _:SecuredForm a owl:Class ;
             ]
             owl:Class
         )
-    ]
+    ] .
 
 
 # An action execution with a sh:class set on hmas:ActionExecution
@@ -588,7 +588,7 @@ _:TruckSettableWheels a _:ActionExecutionShape ;
             a _:PostForm ;
             hctl:hasTarget <http://192.168.1.29/actions/wheelControl>
         ]
-    ]
+    ] .
 
 ###############################
 # Artifacts Resource Profiles #
