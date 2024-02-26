@@ -356,6 +356,33 @@ jacamo:AgentContactable a hmas:Signifier ;
         ]
     ] .
 
+jacamo:AgentContactable a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
+        a sh:NodeShape ;
+        sh:class hmas-dev:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property  hmas-dev:InvokeAction, hmas-dev:PutMethod, hmas-dev:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/inbox"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape jacamo:ACLMessageStructure 
+        ]
+    ] .
+
+
 ###################################
 # Input and Output specifications #
 ###################################
