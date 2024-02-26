@@ -1,0 +1,10 @@
+{
+    "ontology_url": "https://purl.org/hmas/",
+    "term_distance_threshold": 3,
+    "blocking_errors": [
+        "syntax-error",
+        "owl-rl-constraint-violation"
+    ],
+    "gist_index": "c4128ff5fec462d83e2ae8a229917537",
+    "skipped_files": []
+}
