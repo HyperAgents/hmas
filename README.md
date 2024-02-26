@@ -21,7 +21,9 @@ Data tests:
 [HyperAgents](https://www.hyperagents.org/) is an ANR/SNF project working towards the deployment of world-wide hybrid communities of people and artificial agents on the Web. For this purpose, we are defining a new class of multi-agent systems (MAS) that are: 
 1) aligned with the Web architecture to inherit the properties of the Web as a world-wide, open, and long-lived system ; 
 2) transparent and accountable to support acceptance by people. 
+
 Our systems use semantic hypermedia to enable uniform interaction among heterogeneous entities in MAS: people, artificial agents, devices, digital serivces, knowledge repositories, etc. We refer to this new class of Web-based MAS as Hypermedia MAS.
+
 To undertake this investigation, HyperAgents brings together internationally recognized researchers actively contributing to research on autonomous agents and MAS, the Web architecture and the Web of Things, Semantic Web and Linked Data, and to the standardization of the Web.
 ![view of the ontology](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/resources/hmas-webvowl-v2.jpg)
 ## I - General information
