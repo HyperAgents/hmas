@@ -2,7 +2,7 @@
 
 # Artifacts
 @prefix filling-machine: <workspaces/yogurt-production-site/artifacts/filling-machine#> .
-@prefix robotic-arm-3: <workspaces/yogurt-production-site/artifacts/robotic-arm-3#> .
+@prefix turtle-bot: <workspaces/yogurt-production-site/artifacts/turtle-bot#> .
 @prefix conveyor-belt: <workspaces/yogurt-production-site/artifacts/conveyor-belt#> .
 
 # Workspaces
@@ -29,10 +29,7 @@
 # Artifacts #
 #############
 
-filling-machine:artifact a hmas:Artifact ;
-    hmas:isHostedOn platform:platform .
-
-robotic-arm-3:artifact a hmas:Artifact ;
+turtle-bot:artifact a hmas:Artifact ;
     hmas:isHostedOn platform:platform .
 
 conveyor-belt:artifact a hmas:Artifact ;
@@ -45,10 +42,19 @@ conveyor-belt:artifact a hmas:Artifact ;
 # Complete here
 
 filling-machine: a hmas:ResourceProfile ;
-    hmas:isProfileOf filling-machine:artifact .
+    hmas:isProfileOf filling-machine:artifact ;
+    hmas:globalSpecification [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <ros+ws://172.16.1.111:9090>
+        ]
+    ] .
 
-robotic-arm-3: a hmas:ResourceProfile ;
-    hmas:isProfileOf robotic-arm-3:artifact .
+turtle-bot: a hmas:ResourceProfile ;
+    hmas:isProfileOf turtle-bot:artifact .
 
 conveyor-belt: a hmas:ResourceProfile ;
     hmas:isProfileOf conveyor-belt:artifact .
@@ -60,7 +66,7 @@ conveyor-belt: a hmas:ResourceProfile ;
 yogurt-production:workspace a hmas:Workspace ;
     hmas:isHostedOn platform:platform ;
     hmas:contains filling-machine:artifact ,
-                  robotic-arm-3:artifact ,
+                  turtle-bot:artifact ,
                   conveyor-belt:artifact .
 
 ################################

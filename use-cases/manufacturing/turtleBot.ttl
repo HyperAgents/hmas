@@ -1,0 +1,346 @@
+@prefix : <https://ns.inria.fr/hmas/artifacts#> .
+@prefix hmas: <https://purl.org/hmas/> .
+
+# See http://wiki.ros.org/move_base
+
+:SettableBotGoal a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class sh:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas:SubscribeEvent , [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/move_base/goal"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape :MoveBaseActionGoalShape
+        ]
+    ] .
+
+:NoSubscribeSettableBotGoal a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class sh:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas:InvokeAction , [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/move_base_simple/goal"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape :PoseStampedShape
+        ]
+    ] .
+
+:CancelableBotGoal a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class sh:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas:CancelAction , [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/move_base/cancel"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape :GoalIDShape
+        ]
+    ] .
+
+
+:ObservablePosition a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class sh:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas:SubscribeEvent , [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/move_base/feedback"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasOutput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape :MoveBaseActionFeedbackShape
+        ]
+    ] .
+
+:ObservableStatus a hmas:Signifier ;
+    hmas:signifies [
+        a sh:NodeShape , rdfs:Class ;
+        sh:class sh:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property hmas:SubscribeEvent , [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/move_base/status"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasOutput ;
+            sh:minQualifiedShape 1 ;
+            sh:maxQualifiedShape 1 ;
+            sh:qualifiedValueShape :GoalStatusArrayShape
+        ]
+    ] .
+
+##########################################
+# Object components
+##########################################
+
+:MoveBaseActionGoalShape a sh:NodeShape , rdfs:Class ;
+    sh:class :MoveBaseActionGoal ;
+    sh:property [
+        sh:path :header ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :HeaderShape
+    ] , [
+        sh:path :goal_id ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :GoalIDShape
+    ] , [
+        sh:path :goal ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :MoveBaseGoalShape
+    ] .
+
+:MoveBaseActionFeedbackShape a sh:NodeShape , rdfs:Class ;
+    sh:class :MoveBaseActionFeedback ;
+    sh:property [
+        sh:path :header ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :HeaderShape
+    ] , [
+        sh:path :status ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :GoalStatusShape
+    ] , [
+        sh:path :feedback ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :MoveBaseFeedbackShape
+    ] .
+
+:GoalStatusArrayShape a sh:NodeShape , rdfs:Class ;
+    sh:property [
+        sh:path :header ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :HeaderShape
+    ] , [
+        sh:path :status_list ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape [
+            sh:class rdf:List ;
+            sh:property [
+                sh:path ([ sh:zeroOrOnePath rdf:first ] rdf:rest) ;
+                sh:qualifiedValueShape :GoalStatusShape
+            ]
+        ]
+    ] .
+
+:MoveBaseGoalShape a sh:NodeShape , rdfs:Class ;
+    sh:class :MoveBaseGoal ;
+    sh:property [
+        sh:path :target_pose ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :PoseStampedShape
+    ] .
+
+:MoveBaseFeedbackShape a sh:NodeShape , rdfs:Class ;
+    sh:class :MoveBaseFeedback ;
+    sh:property [
+        sh:path :base_position ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :PoseStampedShape
+    ] .
+
+:GoalStatusShape a sh:NodeShape , rdfs:Class ;
+    sh:class :GoalStatus ;
+    sh:property [
+        sh:path :goal_id ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :GoalIDShape
+    ] , [
+        sh:path :status ;
+        sh:minCout 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer
+    ] , [
+        sh:path :text ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] .
+
+:GoalIDShape a sh:NodeShape , rdfs:Class ;
+    sh:class :GoalID ;
+    sh:property [
+        sh:path :time ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :StampShape
+    ] , [
+        sh:path :id ;
+        sh:minCount 1 ;
+        sh:maxCOunt 1 ;
+        sh:datatype xsd:string
+    ] .
+
+:PoseStampedShape a sh:NodeShape , rdfs:Class ;
+    sh:class :PoseStamped ;
+    sh:property [
+        sh:path :header ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape :HeaderShape
+    ] , [
+        sh:path :pose ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape :PoseShape
+    ] .
+
+:PoseShape a sh:NodeShape , rdfs:Class ;
+    sh:class :Pose ;
+    sh:property [
+        sh:path :position ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :PointShape
+    ] , [
+        sh:path :orientation ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :QuaternionShape
+    ] .
+
+:StampShape a sh:NodeShape , rdfs:Class ;
+    sh:class :Stamp ;
+    sh:property [
+        sh:path :secs ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer
+    ] , [
+        sh:path :nsecs ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer
+    ] .
+
+:HeaderShape a sh:NodeShape , rdfs:Class ;
+    sh:class :Header ;
+    sh:property [
+        sh:path :seq ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer
+    ] , [
+        sh:path :frame_id ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] , [
+        sh:path :stamp ;
+        sh:minQualifiedCount 1 ;
+        sh:maxQualifiedCount 1 ;
+        sh:qualifiedValueShape :StampShape
+    ] .
+
+:PointShape a sh:NodeShape , rdfs:Class ;
+    sh:class :Point ;
+    sh:property [
+        sh:path :x ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float
+    ] , [
+        sh:path :y ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float
+    ] , [
+        sh:path :z ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float
+    ].
+
+:QuaternionShape a sh:NodeShape , rdfs:Class ;
+    sh:class :Quaternion ;
+    sh:property [
+        sh:path :x ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float
+    ] , [
+        sh:path :y ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float
+    ] , [
+        sh:path :z ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float
+    ] , [
+        sh:path :w ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float
+    ] .
