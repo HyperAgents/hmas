@@ -16,7 +16,7 @@
         sh:class sh:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
+            sh:minQualifiedCount 1 ;
             sh:maxQualifiedCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
@@ -29,8 +29,8 @@
             ]
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:minQualifiedCount 1 ;
+            sh:maxQualifiedCount 1 ;
             sh:qualifiedValueShape :MoveBaseActionGoalShape
         ]
     ] .
@@ -41,7 +41,7 @@
         sh:class sh:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
+            sh:minQualifiedCount 1 ;
             sh:maxQualifiedCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
@@ -54,8 +54,8 @@
             ]
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:minQualifiedCount 1 ;
+            sh:maxQualifiedCount 1 ;
             sh:qualifiedValueShape :PoseStampedShape
         ]
     ] .
@@ -66,7 +66,7 @@
         sh:class sh:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
+            sh:minQualifiedCount 1 ;
             sh:maxQualifiedCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
@@ -79,8 +79,8 @@
             ]
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:minQualifiedCount 1 ;
+            sh:maxQualifiedCount 1 ;
             sh:qualifiedValueShape :GoalIDShape
         ]
     ] .
@@ -92,7 +92,7 @@
         sh:class sh:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
+            sh:minQualifiedCount 1 ;
             sh:maxQualifiedCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
@@ -105,8 +105,8 @@
             ]
         ] , [
             sh:path hmas:hasOutput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:minQualifiedCount 1 ;
+            sh:maxQualifiedCount 1 ;
             sh:qualifiedValueShape :MoveBaseActionFeedbackShape
         ]
     ] .
@@ -117,7 +117,7 @@
         sh:class sh:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
+            sh:minQualifiedCount 1 ;
             sh:maxQualifiedCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
@@ -130,8 +130,8 @@
             ]
         ] , [
             sh:path hmas:hasOutput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:minQualifiedCount 1 ;
+            sh:maxQualifiedCount 1 ;
             sh:qualifiedValueShape :GoalStatusArrayShape
         ]
     ] .
