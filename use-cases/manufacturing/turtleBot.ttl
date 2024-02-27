@@ -1,6 +1,13 @@
 @prefix : <https://ns.inria.fr/hmas/artifacts#> .
 @prefix hmas: <https://purl.org/hmas/> .
 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
 # See http://wiki.ros.org/move_base
 
 :SettableBotGoal a hmas:Signifier ;
