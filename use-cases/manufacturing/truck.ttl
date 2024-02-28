@@ -1,4 +1,4 @@
-@prefix artifacts: <https://docs.m5stack.com/en/products/> .
+@prefix artifacts: <http://ns.inria.fr/hmas/artifacts/> .
 
 @prefix hmas: <https://purl.org/hmas/> .
 
