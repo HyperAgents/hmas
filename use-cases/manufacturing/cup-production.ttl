@@ -212,7 +212,7 @@ body-agent-d: a hmas:ResourceProfile ;
 cpr-org:organization a org-cup:GenericCupCompanyOrganization ;
     hmas:hasProfile cpr-org: ;
     hmas:hasOrganizationalValue org-dataset:IntegrityRespect ;
-    hmas:providesRole org-cup:SellerRepresentative , org-cup:OrderManager , org-cup:Operator ;
+    hmas:providesRole org-dataset:SellerRepresentative , org-dataset:OrderManager , org-dataset:Operator ;
     hmas:isStructuredBy org-cup:CPRBusinessGroup , org-cup:CPRProductionGroup .
 
 ############

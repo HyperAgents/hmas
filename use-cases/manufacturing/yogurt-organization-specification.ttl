@@ -30,12 +30,12 @@ org-yogurt:ProductionOperator a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue org-yogurt:Operator
+        sh:hasValue org-dataset:Operator
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class org-yogurt:ProductionGroup ]
+        sh:qualifiedValueShape [ sh:class org-dataset:ProductionGroup ]
     ] .
 
 org-yogurt:ProductionFactoryManager a sh:NodeShape , rdfs:Class ;
@@ -49,12 +49,12 @@ org-yogurt:ProductionFactoryManager a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue org-yogurt:FactoryManager
+        sh:hasValue org-dataset:FactoryManager
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class org-yogurt:ProductionGroup ]
+        sh:qualifiedValueShape [ sh:class org-dataset:ProductionGroup ]
     ] .
 
 org-yogurt:BusinessFactoryManagerRepresentative a sh:NodeShape , rdfs:Class ;
@@ -68,12 +68,12 @@ org-yogurt:BusinessFactoryManagerRepresentative a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue org-yogurt:FactoryManagerRepresentative
+        sh:hasValue org-dataset:FactoryManagerRepresentative
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class org-yogurt:BusinessGroup ]
+        sh:qualifiedValueShape [ sh:class org-dataset:BusinessGroup ]
     ] .
 
 # Generic organization specification
@@ -89,28 +89,28 @@ org-yogurt:GenericYogurtCompanyOrganization a sh:NodeShape , rdfs:Class ;
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue org-yogurt:FactoryManagerRepresentative
+        sh:hasValue org-dataset:FactoryManagerRepresentative
     ] , [
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue org-yogurt:FactoryManager
+        sh:hasValue org-dataset:FactoryManager
     ] , [
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue org-yogurt:Operator
+        sh:hasValue org-dataset:Operator
     ] , [
         sh:path hmas:isStructuredBy ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class org-yogurt:BusinessGroup ] ;
+        sh:qualifiedValueShape [ sh:class org-dataset:BusinessGroup ] ;
         sh:qualifiedValuesShapeDisjoint true
     ] , [
         sh:path hmas:isStructuredBy ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class org-yogurt:ProductionGroup ] ; 
+        sh:qualifiedValueShape [ sh:class org-dataset:ProductionGroup ] ; 
         sh:qualifiedValuesShapeDisjoint true
     ] .
 
@@ -118,23 +118,23 @@ org-yogurt:GenericYogurtCompanyOrganization a sh:NodeShape , rdfs:Class ;
 # Instanciation of the organization shape #
 ###########################################
 
-org-yogurt:YPRBusinessGroup a org-yogurt:BusinessGroup .
-org-yogurt:YPRProductionGroup a org-yogurt:ProductionGroup .
+org-yogurt:YPRBusinessGroup a org-dataset:BusinessGroup .
+org-yogurt:YPRProductionGroup a org-dataset:ProductionGroup .
 
 org-yogurt:YPRProductionOperator a org-yogurt:ProductionOperator ;
     hmas:isMembershipOf agent-e:agent ;
-    hmas:isMembershipFor org-yogurt:Operator ;
-    hmas:isMembershipIn org-yogurt:ProductionGroup .
+    hmas:isMembershipFor org-dataset:Operator ;
+    hmas:isMembershipIn org-dataset:ProductionGroup .
 
 org-yogurt:YPRProductionFactoryManager a org-yogurt:ProductionFactoryManager ;
     hmas:isMembershipOf agent-a:agent ;
-    hmas:isMembershipFor org-yogurt:FactoryManager ;
-    hmas:isMembershipIn org-yogurt:ProductionGroup .
+    hmas:isMembershipFor org-dataset:FactoryManager ;
+    hmas:isMembershipIn org-dataset:ProductionGroup .
 
 org-yogurt:YPRBusinessFactoryManagerRepresentative a org-yogurt:BusinessFactoryManagerRepresentative ;
     hmas:isMembershipOf agent-ra:agent ;
-    hmas:isMembershipFor org-yogurt:FactoryManagerRepresentative ;
-    hmas:isMembershipIn org-yogurt:BusinessGroup .
+    hmas:isMembershipFor org-dataset:FactoryManagerRepresentative ;
+    hmas:isMembershipIn org-dataset:BusinessGroup .
 
-org-yogurt:YPRProductionOperator org-yogurt:canCommunicateWith org-yogurt:YPRBusinessFactoryManagerRepresentative .
-org-yogurt:YPRProductionOperator org-yogurt:canCommunicateWith org-yogurt:YPRProductionOperator .
+org-yogurt:YPRProductionOperator org-dataset:canCommunicateWith org-yogurt:YPRBusinessFactoryManagerRepresentative .
+org-yogurt:YPRProductionOperator org-dataset:canCommunicateWith org-yogurt:YPRProductionOperator .
