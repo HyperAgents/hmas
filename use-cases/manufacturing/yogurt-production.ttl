@@ -177,7 +177,7 @@ body-agent-e: a hmas:ResourceProfile ;
 ypr-org:organization a org-yogurt:GenericYogurtCompanyOrganization ;
     hmas:hasProfile ypr-org: ;
     hmas:hasOrganizationalValue org-dataset:IntegrityRespect ;
-    hmas:providesRole org-dataset:FactoryManagerRepresentative , org-yogurt:FactoryManager , org-dataset:Operator ;
+    hmas:providesRole org-dataset:FactoryManagerRepresentative , org-dataset:FactoryManager , org-dataset:Operator ;
     hmas:isStructuredBy org-yogurt:YPRBusinessGroup , org-yogurt:YPRProductionGroup .
 
 ############
