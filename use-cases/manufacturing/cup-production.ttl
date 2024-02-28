@@ -13,6 +13,11 @@
 @prefix agent-c: <workspaces/cup-production-site/agents/agent-c#> .
 @prefix agent-d: <workspaces/cup-production-site/agents/agent-d#> .
 
+# Agent Bodies
+@prefix body-agent-b: <workspaces/cup-production-site/artifacts/body-agent-b#> .
+@prefix body-agent-c: <workspaces/cup-production-site/artifacts/body-agent-c#> .
+@prefix body-agent-d: <workspaces/cup-production-site/artifacts/body-agent-d#> .
+
 # Organizations
 @prefix cpr-org: <organizations/cpr#> .
 
@@ -119,19 +124,85 @@ agent-b:agent a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile agent-b: ;
     hmas:isContainedIn cup-production:Workspace ;
-    hmas:isMemberOf cpr-org:organization .
+    hmas:isMemberOf cpr-org:organization ;
+    aa:hasBody body-agent-b:artifact.
 
 agent-c:agent a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile agent-c: ;
     hmas:isContainedIn cup-production:Workspace ;
-    hmas:isMemberOf cpr-org:organization .
+    hmas:isMemberOf cpr-org:organization ;
+    aa:hasBody body-agent-c:artifact.
 
 agent-d:agent a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile agent-d: ;
     hmas:isContainedIn cup-production:Workspace ;
-    hmas:isMemberOf cpr-org:organization .
+    hmas:isMemberOf cpr-org:organization ;
+    aa:hasBody body-agent-d:artifact.
+
+################
+# Agent Bodies #
+################
+
+body-agent-b:artifact hmas:Artifact ;
+    hmas:isHostedOn platform:platform ;
+    hmas:hasProfile body-agent-b: ;
+    aa:isBodyOf agent-b:agent.
+
+body-agent-c:artifact hmas:Artifact ;
+    hmas:isHostedOn platform:platform ;
+    hmas:hasProfile body-agent-c: ;
+    aa:isBodyOf agent-c:agent.
+
+body-agent-d:artifact hmas:Artifact ;
+    hmas:isHostedOn platform:platform ;
+    hmas:hasProfile body-agent-d: ;
+    aa:isBodyOf agent-d:agent.
+
+#########################
+# Agent Bodies Profiles #
+#########################
+
+body-agent-b: a hmas:ResourceProfile ;
+    hmas:isProfileOf body-agent-c:artifact ;
+    hmas:exposeSignifiersFrom jacamo:PerformativeMessagingCatalog ;
+    hmas:exposesSignifier jacamo:ReceivableRequest ;
+    hmas:globalSpecification hmas:AuthorizationHeader, [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://example.org/TBA>
+        ]
+    ] .
+
+body-agent-c: a hmas:ResourceProfile ;
+    hmas:isProfileOf body-agent-c:artifact ;
+    hmas:exposeSignifiersFrom jacamo:MessagingCatalog ;
+    hmas:globalSpecification hmas:AuthorizationHeader, [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://example.org/TBA>
+        ]
+    ] .
+
+body-agent-d: a hmas:ResourceProfile ;
+    hmas:isProfileOf body-agent-d:artifact ;
+    hmas:exposeSignifiersFrom jacamo:MessagingCatalog ;
+    hmas:globalSpecification hmas:AuthorizationHeader, [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://example.org/TBA>
+        ]
+    ] .
 
 ################
 # Organization #
