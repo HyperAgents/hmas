@@ -331,6 +331,15 @@ jacamo:MessagingCatalog a hmas:SignifiersCatalog ;
     rdfs:isDefinedBy :jacamo ;
     hmas:proposesSignifier jacamo:AgentContactable .
 
+jacamo:PerformativeMessagingCatalog a hmas:SignifiersCatalog ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:proposesSignifier jacamo:ReceivableRequest ,
+                           jacamo:ReceivableAccept ,
+                           jacamo:ReceivableRefuse ,
+                           jacamo:ReceivableFailure ,
+                           jacamo:ReceivableInformDone ,
+                           jacamo:ReceivableInformResult .
+
 
 jacamo:AgentContactable a hmas:Signifier ;
     rdfs:isDefinedBy :jacamo ;
@@ -358,7 +367,7 @@ jacamo:AgentContactable a hmas:Signifier ;
         ]
     ] .
 
-jacamo:AgentContactable a hmas:Signifier ;
+jacamo:ReceivableRequest a hmas:Signifier ;
     rdfs:isDefinedBy :jacamo ;
     hmas:signifies [
         a sh:NodeShape ;
@@ -380,10 +389,187 @@ jacamo:AgentContactable a hmas:Signifier ;
             sh:path hmas:hasInput ;
             sh:qualifiedMinCount 1 ;
             sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape jacamo:ACLMessageStructure 
+            sh:qualifiedValueShape [
+                sh:class hmas:ACLMessage  ;
+                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
+                    sh:path jason-kqml:hasPerformative ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue fipa:request
+                ]
+            ]
         ]
     ] .
 
+jacamo:ReceivableAccept a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
+        a sh:NodeShape ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/inbox"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hmas:ACLMessage  ;
+                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
+                    sh:path jason-kqml:hasPerformative ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue fipa:accept
+                ]
+            ]
+        ]
+    ] .
+
+jacamo:ReceivableRefuse a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
+        a sh:NodeShape ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/inbox"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hmas:ACLMessage  ;
+                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
+                    sh:path jason-kqml:hasPerformative ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue fipa:refuse
+                ]
+            ]
+        ]
+    ] .
+
+jacamo:ReceivableFailure a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
+        a sh:NodeShape ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/inbox"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hmas:ACLMessage  ;
+                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
+                    sh:path jason-kqml:hasPerformative ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue fipa:failure
+                ]
+            ]
+        ]
+    ] .
+
+jacamo:ReceivableInformDone a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
+        a sh:NodeShape ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/inbox"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hmas:ACLMessage  ;
+                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
+                    sh:path jason-kqml:hasPerformative ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue fipa:informDone
+                ]
+            ]
+        ]
+    ] .
+
+jacamo:ReceivableInformResult a hmas:Signifier ;
+    rdfs:isDefinedBy :jacamo ;
+    hmas:signifies [
+        a sh:NodeShape ;
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path prov:used ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hctl:Form ;
+                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
+                    sh:path hctl:hasTarget ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue "/inbox"
+                ]
+            ]
+        ] , [
+            sh:path hmas:hasInput ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape [
+                sh:class hmas:ACLMessage  ;
+                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
+                    sh:path jason-kqml:hasPerformative ;
+                    sh:minCount 1 ;
+                    sh:maxCount 1 ;
+                    sh:hasValue fipa:informResult
+                ]
+            ]
+        ]
+    ] .
 
 ###################################
 # Input and Output specifications #
