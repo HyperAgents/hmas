@@ -24,8 +24,8 @@ artifacts:TruckReadableBattery a hmas:Signifier ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
@@ -44,8 +44,8 @@ artifacts:TruckReadableAccelerometer a hmas:Signifier ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
@@ -64,8 +64,8 @@ artifacts:TruckSettableWheels a hmas:Signifier ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:InvokeAction, hmas:GetMethod, hmas:forApplicatonJson, [
@@ -77,8 +77,8 @@ artifacts:TruckSettableWheels a hmas:Signifier ;
             ]
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape artifacts:JsonControlWheelBody
         ]
     ] .
