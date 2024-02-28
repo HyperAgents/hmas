@@ -68,7 +68,7 @@ jade:ReceivableRequest a hmas:Signifier ;
             sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
-                sh:property hmas:AgentMessage, hmas:Request, hmas:InteractionOrder, hmas:FIPASL
+                sh:property hmas:AgentFIPASenderMessage, hmas:Request, hmas:InteractionOrder, hmas:FIPASL
             ]
         ]
     ] .
@@ -89,7 +89,7 @@ jade:ReceivableAccept a hmas:Signifier ;
             sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
-                sh:property hmas:AgentMessage, hmas:Accept, hmas:InteractionOrder, hmas:FIPASL
+                sh:property hmas:AgentFIPASenderMessage, hmas:Accept, hmas:InteractionOrder, hmas:FIPASL
             ]
         ]
     ] .
@@ -110,7 +110,7 @@ jade:ReceivableRefuse a hmas:Signifier ;
             sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
-                sh:property hmas:AgentMessage, hmas:Refuse, hmas:InteractionOrder, hmas:FIPASL
+                sh:property hmas:AgentFIPASenderMessage, hmas:Refuse, hmas:InteractionOrder, hmas:FIPASL
             ]
         ]
     ] .
@@ -131,7 +131,7 @@ jade:ReceivableFailure a hmas:Signifier ;
             sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
-                sh:property hmas:AgentMessage, hmas:Failure, hmas:InteractionOrder, hmas:FIPASL
+                sh:property hmas:AgentFIPASenderMessage, hmas:Failure, hmas:InteractionOrder, hmas:FIPASL
             ]
         ]
     ] .
@@ -152,7 +152,7 @@ jade:ReceivableInformDone a hmas:Signifier ;
             sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
-                sh:property hmas:AgentMessage, hmas:InformDone, hmas:InteractionOrder, hmas:FIPASL
+                sh:property hmas:AgentFIPASenderMessage, hmas:InformDone, hmas:InteractionOrder, hmas:FIPASL
             ]
         ]
     ] .
@@ -173,7 +173,7 @@ jade:ReceivableInformResult a hmas:Signifier ;
             sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
-                sh:property hmas:AgentMessage, hmas:InformResult, hmas:InteractionOrder, hmas:FIPASL
+                sh:property hmas:AgentFIPASenderMessage, hmas:InformResult, hmas:InteractionOrder, hmas:FIPASL
             ]
         ]
     ] .
