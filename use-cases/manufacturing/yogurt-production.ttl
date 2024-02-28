@@ -92,12 +92,14 @@ yogurt-production: a hmas:ResourceProfile ;
 agent-a:agent a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:isContainedIn yogurt-production:Workspace ;
-    hmas:isMemberOf ypr-org:organization .
+    hmas:isMemberOf ypr-org:organization ;
+    aa:hasBody body-agent-a:artifact.
 
 agent-e:agent a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:isContainedIn yogurt-production:Workspace ;
-    hmas:isMemberOf ypr-org:organization .
+    hmas:isMemberOf ypr-org:organization ;
+    aa:hasBody body-agent-e:artifact.
 
 ############################
 # Agents Resource Profiles #
@@ -110,6 +112,56 @@ agent-a: a hmas:ResourceProfile ;
 
 agent-e: a hmas:ResourceProfile ;
     hmas:isProfileOf agent-e:agent .
+
+################
+# Agent Bodies #
+################
+
+body-agent-a:artifact hmas:Artifact ;
+    hmas:isHostedOn platform:platform ;
+    hmas:hasProfile body-agent-b: ;
+    aa:isBodyOf agent-a:agent.
+
+body-agent-e:artifact hmas:Artifact ;
+    hmas:isHostedOn platform:platform ;
+    hmas:hasProfile body-agent-c: ;
+    aa:isBodyOf agent-e:agent.
+
+#########################
+# Agent Bodies Profiles #
+#########################
+
+body-agent-b: a hmas:ResourceProfile ;
+    hmas:isProfileOf body-agent-c:artifact ;
+    hmas:exposeSignifiersFrom jacamo:PerformativeMessagingCatalog ;
+    hmas:exposesSignifier jacamo:ReceivableAccept, 
+                          jacamo:ReceivableRefuse,
+                          jacamo:ReceivableFailure,
+                          jacamo:ReceivableInformDone,
+                          jacamo:ReceivableInformResult ;
+    hmas:globalSpecification hmas:AuthorizationHeader, [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://example.org/TBA>
+        ]
+    ] .
+
+body-agent-e: a hmas:ResourceProfile ;
+    hmas:isProfileOf body-agent-e:artifact ;
+    hmas:exposeSignifiersFrom jacamo:MessagingCatalog ;
+    hmas:globalSpecification hmas:AuthorizationHeader, [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path hmas:PathToBaseURI ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue <http://example.org/TBA>
+        ]
+    ] .
+
 
 ################
 # Organization #
