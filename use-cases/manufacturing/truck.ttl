@@ -1,4 +1,4 @@
-@prefix m5stack: <https://docs.m5stack.com/en/products/> .
+@prefix artifacts: <https://docs.m5stack.com/en/products/> .
 
 @prefix hmas: <https://purl.org/hmas/> .
 
@@ -9,16 +9,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema> .
 
 
-m5stack:TruckCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier m5stack:TruckReadableBattery ,
-                           m5stack:TruckReadableAccelerometer ,
-                           m5stack:TruckSettableWheels .
+artifacts:TruckCatalog a hmas:SignifiersCatalog ;
+    hmas:proposesSignifier artifacts:TruckReadableBattery ,
+                           artifacts:TruckReadableAccelerometer ,
+                           artifacts:TruckSettableWheels .
 
 ###################
 # Truck Endpoints #
 ###################
 
-m5stack:TruckReadableBattery a hmas:Signifier ;
+artifacts:TruckReadableBattery a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -38,7 +38,7 @@ m5stack:TruckReadableBattery a hmas:Signifier ;
         ]
     ] .
 
-m5stack:TruckReadableAccelerometer a hmas:Signifier ;
+artifacts:TruckReadableAccelerometer a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -58,7 +58,7 @@ m5stack:TruckReadableAccelerometer a hmas:Signifier ;
         ]
     ] .
 
-m5stack:TruckSettableWheels a hmas:Signifier ;
+artifacts:TruckSettableWheels a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -79,7 +79,7 @@ m5stack:TruckSettableWheels a hmas:Signifier ;
             sh:path hmas:hasInput ;
             sh:minQualifiedShape 1 ;
             sh:maxQualifiedShape 1 ;
-            sh:qualifiedValueShape m5stack:JsonControlWheelBody
+            sh:qualifiedValueShape artifacts:JsonControlWheelBody
         ]
     ] .
 
@@ -88,24 +88,24 @@ m5stack:TruckSettableWheels a hmas:Signifier ;
 # Json Specifications #
 #######################
 
-m5stack:JsonControlWheelBody a sh:NodeShape ;
-    sh:class m5stack:Vehicle ;
+artifacts:JsonControlWheelBody a sh:NodeShape ;
+    sh:class artifacts:Vehicle ;
     sh:property [
-        sh:path m5stack:hasDirectionValue ;
+        sh:path artifacts:hasDirectionValue ;
         sh:minExclusive 0 ;
         sh:maxExclusive 2 ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer 
     ] , [
-        sh:path m5stack:hasSpeedValue ;
+        sh:path artifacts:hasSpeedValue ;
         sh:minExclusive -7 ;
         sh:maxExclusive 7 ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer 
     ] , [
-        sh:path m5stack:hasDurationValue ;
+        sh:path artifacts:hasDurationValue ;
         sh:minExclusive 0 ;
         sh:maxExclusive 5000 ;
         sh:minCount 1 ;

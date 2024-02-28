@@ -33,8 +33,8 @@ jade:AgentContactable a hmas:Signifier ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:FipaHTTPProtocol, hmas:InvokeAction, [
@@ -46,8 +46,8 @@ jade:AgentContactable a hmas:Signifier ;
             ]
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape hmas:ACLMessageStructure
         ]
     ] .
@@ -59,13 +59,13 @@ jade:ReceivableRequest a hmas:Signifier ;
         sh:class hmas:ActionExecution , dul:Action ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape hmas:FIPAMessageForm
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
                 sh:property hmas:AgentMessage, hmas:Request, hmas:InteractionOrder, hmas:FIPASL
@@ -80,13 +80,13 @@ jade:ReceivableAccept a hmas:Signifier ;
         sh:class hmas:ActionExecution , dul:Action ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape hmas:FIPAMessageForm
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
                 sh:property hmas:AgentMessage, hmas:Accept, hmas:InteractionOrder, hmas:FIPASL
@@ -101,13 +101,13 @@ jade:ReceivableRefuse a hmas:Signifier ;
         sh:class hmas:ActionExecution , dul:Action ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape hmas:FIPAMessageForm
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
                 sh:property hmas:AgentMessage, hmas:Refuse, hmas:InteractionOrder, hmas:FIPASL
@@ -122,13 +122,13 @@ jade:ReceivableFailure a hmas:Signifier ;
         sh:class hmas:ActionExecution , dul:Action ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape hmas:FIPAMessageForm
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
                 sh:property hmas:AgentMessage, hmas:Failure, hmas:InteractionOrder, hmas:FIPASL
@@ -143,13 +143,13 @@ jade:ReceivableInformDone a hmas:Signifier ;
         sh:class hmas:ActionExecution , dul:Action ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape hmas:FIPAMessageForm
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
                 sh:property hmas:AgentMessage, hmas:InformDone, hmas:InteractionOrder, hmas:FIPASL
@@ -164,13 +164,13 @@ jade:ReceivableInformResult a hmas:Signifier ;
         sh:class hmas:ActionExecution , dul:Action ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape hmas:FIPAMessageForm
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hmas:ACLMessage  ;
                 sh:property hmas:AgentMessage, hmas:InformResult, hmas:InteractionOrder, hmas:FIPASL

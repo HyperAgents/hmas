@@ -1,4 +1,4 @@
-@prefix ufactory: <https://eu.robotshop.com/fr/collections/ufactory/> .
+@prefix artifacts: <http://ns.inria.fr/hmas/artifacts/> .
 @prefix cherrybot: <https://interactions.ics.unisg.ch/cherrybot#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
@@ -14,29 +14,29 @@
 # Catalog Definition #
 ######################
 
-ufactory:CherrybotCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier ufactory:CherrybotReadableOperator ,
-                           ufactory:CherrybotReadablePosition ,
-                           ufactory:CherrybotReadableTarget ,
-                           ufactory:CherrybotReadableGripper ,
-                           ufactory:CherrybotInitializableArm ,
-                           ufactory:CherrybotSettableOperator ,
-                           ufactory:CherrybotSettableTarget ,
-                           ufactory:CherrybotSettableGripper ,
-                           ufactory:CherrybotDeletableOperator .
+artifacts:CherrybotCatalog a hmas:SignifiersCatalog ;
+    hmas:proposesSignifier artifacts:CherrybotReadableOperator ,
+                           artifacts:CherrybotReadablePosition ,
+                           artifacts:CherrybotReadableTarget ,
+                           artifacts:CherrybotReadableGripper ,
+                           artifacts:CherrybotInitializableArm ,
+                           artifacts:CherrybotSettableOperator ,
+                           artifacts:CherrybotSettableTarget ,
+                           artifacts:CherrybotSettableGripper ,
+                           artifacts:CherrybotDeletableOperator .
 
 #######################################
 # Robotic Arm Endpoint specifications #
 #######################################
 
-ufactory:CherrybotReadableOperator a hmas:Signifier ;
+artifacts:CherrybotReadableOperator a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
@@ -48,20 +48,20 @@ ufactory:CherrybotReadableOperator a hmas:Signifier ;
             ]
         ] , [
             sh:path hmas:hasOutput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
-            sh:qualifiedValueShape ufactory:JsonGetOperatorOutputBody
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape artifacts:JsonGetOperatorOutputBody
         ]
     ] .
 
-ufactory:CherrybotReadablePosition a hmas:Signifier ;
+artifacts:CherrybotReadablePosition a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
@@ -73,20 +73,20 @@ ufactory:CherrybotReadablePosition a hmas:Signifier ;
             ]
         ] , [
             sh:path hmas:hasOutput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
-            sh:qualifiedValueShape ufactory:JsonGetPositionOutputBody
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape artifacts:JsonGetPositionOutputBody
         ]
     ] .
 
-ufactory:CherrybotReadableTarget a hmas:Signifier ;
+artifacts:CherrybotReadableTarget a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
@@ -98,19 +98,19 @@ ufactory:CherrybotReadableTarget a hmas:Signifier ;
             ]
         ] , [
             sh:path hmas:hasOutput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
-            sh:qualifiedValueShape ufactory:JsonGetPositionOutputBody
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape artifacts:JsonGetPositionOutputBody
         ]
     ] .
 
-ufactory:CherrybotReadableGripper a sh:NodeShape , rdfs:Class ;
+artifacts:CherrybotReadableGripper a sh:NodeShape , rdfs:Class ;
     hmas:signifies [
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:ReadProperty, hmas:GetMethod, hmas:forApplicatonJson, [
@@ -130,14 +130,14 @@ ufactory:CherrybotReadableGripper a sh:NodeShape , rdfs:Class ;
         ]
     ] .
 
-ufactory:CherrybotInitializableArm a hmas:Signifier ;
+artifacts:CherrybotInitializableArm a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
@@ -150,14 +150,14 @@ ufactory:CherrybotInitializableArm a hmas:Signifier ;
         ]
     ] .
 
-ufactory:CherrybotSettableOperator a hmas:Signifier ;
+artifacts:CherrybotSettableOperator a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, [
@@ -169,20 +169,20 @@ ufactory:CherrybotSettableOperator a hmas:Signifier ;
             ]
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
-            sh:qualifiedValueShape ufactory:JsonSetOperatorInputBody
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape artifacts:JsonSetOperatorInputBody
         ]
     ] .
 
-ufactory:CherrybotSettableTarget a hmas:Signifier ;
+artifacts:CherrybotSettableTarget a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, [
@@ -194,20 +194,20 @@ ufactory:CherrybotSettableTarget a hmas:Signifier ;
             ]
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
-            sh:qualifiedValueShape ufactory:JsonSetPositionInputBody
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
+            sh:qualifiedValueShape artifacts:JsonSetPositionInputBody
         ]
     ] .
 
-ufactory:CherrybotSettableGripper a hmas:Signifier ;
+artifacts:CherrybotSettableGripper a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, [
@@ -227,14 +227,14 @@ ufactory:CherrybotSettableGripper a hmas:Signifier ;
         ]
     ] .
 
-ufactory:CherrybotDeletableOperator a hmas:Signifier ;
+artifacts:CherrybotDeletableOperator a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedShape 1 ;
-            sh:maxQualifiedShape 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:InvokeAction, hmas:DeleteMethod, hmas:forApplicatonJson, [
@@ -251,7 +251,7 @@ ufactory:CherrybotDeletableOperator a hmas:Signifier ;
 # Intput/Output specifications #
 ################################
 
-ufactory:JsonGetOperatorOutputBody a sh:NodeShape ;
+artifacts:JsonGetOperatorOutputBody a sh:NodeShape ;
     sh:class cherrybot:OperatorWithTokenSchema ;
     sh:property [
         sh:path foaf:Name;
@@ -270,7 +270,7 @@ ufactory:JsonGetOperatorOutputBody a sh:NodeShape ;
         sh:datatype xsd:string
     ] .
 
-ufactory:JsonSetOperatorInputBody a sh:NodeShape ;
+artifacts:JsonSetOperatorInputBody a sh:NodeShape ;
     sh:class cherrybot:OperatorSchema ;
     sh:property [
         sh:path foaf:name ;
@@ -284,7 +284,7 @@ ufactory:JsonSetOperatorInputBody a sh:NodeShape ;
         sh:datatype xsd:string
     ] .
 
-ufactory:JsonRotationElement a sh:NodeShape ;
+artifacts:JsonRotationElement a sh:NodeShape ;
     sh:class cherrybot:CoordinatesSchema ;
     sh:property [
         sh:path cherrybot:xCoordinate ;
@@ -309,7 +309,7 @@ ufactory:JsonRotationElement a sh:NodeShape ;
         sh:datatype xsd:float 
     ] .
 
-ufactory:JsonTranslationElement a sh:NodeShape ;
+artifacts:JsonTranslationElement a sh:NodeShape ;
     sh:class cherrybot:RotationSchema ;
     sh:property [
         sh:path cherrybot:roll ;
@@ -334,30 +334,30 @@ ufactory:JsonTranslationElement a sh:NodeShape ;
         sh:datatype xsd:float 
     ] .
 
-ufactory:JsonGetPositionOutputBody a sh:NodeShape ;
+artifacts:JsonGetPositionOutputBody a sh:NodeShape ;
     sh:class cherrybot:TcpTargetSchema ;
     sh:property [
         sh:path cherrybot:coordinate ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape ufactory:JsonTranslationElement
+        sh:qualifiedValueShape artifacts:JsonTranslationElement
     ] , [
         sh:path cherrybot:rotation ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape ufactory:JsonRotationElement
+        sh:qualifiedValueShape artifacts:JsonRotationElement
     ] .
 
-ufactory:JsonSetPositionInputBody a sh:NodeShape ;
+artifacts:JsonSetPositionInputBody a sh:NodeShape ;
     sh:class cherrybot:TcpMovementSchema ;
     sh:property [
         sh:path cherrybot:coordinate ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape ufactory:JsonTranslationElement
+        sh:qualifiedValueShape artifacts:JsonTranslationElement
     ] , [
         sh:path cherrybot:rotation ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape ufactory:JsonRotationElement
+        sh:qualifiedValueShape artifacts:JsonRotationElement
     ] .

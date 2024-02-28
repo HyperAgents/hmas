@@ -16,8 +16,8 @@
         sh:class sh:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:SubscribeEvent , [
@@ -29,8 +29,8 @@
             ]
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape :MoveBaseActionGoalShape
         ]
     ] .
@@ -41,8 +41,8 @@
         sh:class sh:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:InvokeAction , [
@@ -54,8 +54,8 @@
             ]
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape :PoseStampedShape
         ]
     ] .
@@ -66,8 +66,8 @@
         sh:class sh:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:CancelAction , [
@@ -79,8 +79,8 @@
             ]
         ] , [
             sh:path hmas:hasInput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape :GoalIDShape
         ]
     ] .
@@ -92,8 +92,8 @@
         sh:class sh:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:SubscribeEvent , [
@@ -105,8 +105,8 @@
             ]
         ] , [
             sh:path hmas:hasOutput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape :MoveBaseActionFeedbackShape
         ]
     ] .
@@ -117,8 +117,8 @@
         sh:class sh:ActionExecution ;
         sh:property [
             sh:path prov:used ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
                 sh:property hmas:SubscribeEvent , [
@@ -130,8 +130,8 @@
             ]
         ] , [
             sh:path hmas:hasOutput ;
-            sh:minQualifiedCount 1 ;
-            sh:maxQualifiedCount 1 ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape :GoalStatusArrayShape
         ]
     ] .
@@ -144,18 +144,18 @@
     sh:class :MoveBaseActionGoal ;
     sh:property [
         sh:path :header ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :HeaderShape
     ] , [
         sh:path :goal_id ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :GoalIDShape
     ] , [
         sh:path :goal ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :MoveBaseGoalShape
     ] .
 
@@ -163,31 +163,31 @@
     sh:class :MoveBaseActionFeedback ;
     sh:property [
         sh:path :header ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :HeaderShape
     ] , [
         sh:path :status ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :GoalStatusShape
     ] , [
         sh:path :feedback ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :MoveBaseFeedbackShape
     ] .
 
 :GoalStatusArrayShape a sh:NodeShape , rdfs:Class ;
     sh:property [
         sh:path :header ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :HeaderShape
     ] , [
         sh:path :status_list ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class rdf:List ;
             sh:property [
@@ -201,8 +201,8 @@
     sh:class :MoveBaseGoal ;
     sh:property [
         sh:path :target_pose ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :PoseStampedShape
     ] .
 
@@ -210,8 +210,8 @@
     sh:class :MoveBaseFeedback ;
     sh:property [
         sh:path :base_position ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :PoseStampedShape
     ] .
 
@@ -219,8 +219,8 @@
     sh:class :GoalStatus ;
     sh:property [
         sh:path :goal_id ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :GoalIDShape
     ] , [
         sh:path :status ;
@@ -238,8 +238,8 @@
     sh:class :GoalID ;
     sh:property [
         sh:path :time ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :StampShape
     ] , [
         sh:path :id ;
@@ -266,13 +266,13 @@
     sh:class :Pose ;
     sh:property [
         sh:path :position ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :PointShape
     ] , [
         sh:path :orientation ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :QuaternionShape
     ] .
 
@@ -304,8 +304,8 @@
         sh:datatype xsd:string
     ] , [
         sh:path :stamp ;
-        sh:minQualifiedCount 1 ;
-        sh:maxQualifiedCount 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape :StampShape
     ] .
 

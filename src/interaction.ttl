@@ -132,8 +132,8 @@
             [sh:zeroOrMorePath rdf:rest]
             rdf:first
         ) ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class htv:messageHeader ;
             sh:property [
@@ -159,8 +159,8 @@
             [sh:zeroOrMorePath rdf:rest]
             rdf:first
         ) ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class htv:messageHeader ;
             sh:property [
@@ -186,8 +186,8 @@
             [sh:zeroOrMorePath rdf:rest]
             rdf:first
         ) ;
-        sh:minQualifiedShape 1 ;
-        sh:maxQualifiedShape 1 ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class htv:messageHeader ;
             sh:property [
