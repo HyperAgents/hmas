@@ -26,6 +26,8 @@
 
 # Other prefixes
 @prefix hmas: <https://purl.org/hmas/> .
+@prefix aa: <https://purl.org/hmas/> .
+@prefix jacamo: <https://purl.org/hmas/> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
@@ -140,26 +142,26 @@ agent-d:agent a hmas:Agent ;
     hmas:hasProfile agent-d: ;
     hmas:isContainedIn cup-production:Workspace ;
     hmas:isMemberOf cpr-org:organization ;
-    aa:hasBody body-agent-d:artifact.
+    aa:hasBody body-agent-d:artifact .
 
 ################
 # Agent Bodies #
 ################
 
-body-agent-b:artifact hmas:Artifact ;
+body-agent-b:artifact a hmas:Artifact ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile body-agent-b: ;
-    aa:isBodyOf agent-b:agent.
+    aa:isBodyOf agent-b:agent .
 
-body-agent-c:artifact hmas:Artifact ;
+body-agent-c:artifact a hmas:Artifact ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile body-agent-c: ;
-    aa:isBodyOf agent-c:agent.
+    aa:isBodyOf agent-c:agent .
 
-body-agent-d:artifact hmas:Artifact ;
+body-agent-d:artifact a hmas:Artifact ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile body-agent-d: ;
-    aa:isBodyOf agent-d:agent.
+    aa:isBodyOf agent-d:agent .
 
 #########################
 # Agent Bodies Profiles #

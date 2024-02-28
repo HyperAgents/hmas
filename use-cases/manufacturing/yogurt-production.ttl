@@ -12,6 +12,9 @@
 @prefix agent-a: <workspaces/yogurt-production-site/agents/agent-b#> .
 @prefix agent-e: <workspaces/yogurt-production-site/agents/agent-c#> .
 
+@prefix body-agent-a: <workspaces/cup-production-site/artifacts/body-agent-a#> .
+@prefix body-agent-e: <workspaces/cup-production-site/artifacts/body-agent-e#> .
+
 # Organizations
 @prefix ypr-org: <organizations/ypr#> .
 
@@ -25,6 +28,9 @@
 
 @prefix org-dataset: <http://ns.inria.fr/hmas/organizations/organization-dataset.ttl#> .
 @prefix org-yogurt: <http://ns.inria.fr/hmas/organizations/yogurt-organization-specification.ttl#> .
+
+@prefix aa: <https://purl.org/hmas/> .
+@prefix jacamo: <https://purl.org/hmas/> .
 
 #############
 # Artifacts #
@@ -118,22 +124,22 @@ agent-e: a hmas:ResourceProfile ;
 # Agent Bodies #
 ################
 
-body-agent-a:artifact hmas:Artifact ;
+body-agent-a:artifact a hmas:Artifact ;
     hmas:isHostedOn platform:platform ;
-    hmas:hasProfile body-agent-b: ;
-    aa:isBodyOf agent-a:agent.
+    hmas:hasProfile body-agent-a: ;
+    aa:isBodyOf agent-a:agent .
 
-body-agent-e:artifact hmas:Artifact ;
+body-agent-e:artifact a hmas:Artifact ;
     hmas:isHostedOn platform:platform ;
-    hmas:hasProfile body-agent-c: ;
-    aa:isBodyOf agent-e:agent.
+    hmas:hasProfile body-agent-e: ;
+    aa:isBodyOf agent-e:agent .
 
 #########################
 # Agent Bodies Profiles #
 #########################
 
-body-agent-b: a hmas:ResourceProfile ;
-    hmas:isProfileOf body-agent-c:artifact ;
+body-agent-a: a hmas:ResourceProfile ;
+    hmas:isProfileOf body-agent-a:artifact ;
     hmas:exposeSignifiersFrom jacamo:PerformativeMessagingCatalog ;
     hmas:exposesSignifier jacamo:ReceivableAccept, 
                           jacamo:ReceivableRefuse,
