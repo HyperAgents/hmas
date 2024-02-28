@@ -1,29 +1,30 @@
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix ex: <https://www.example.org/> .
+
+@prefix org-dataset: <http://ns.inria.fr/hmas/organizations/organization-dataset.ttl#> .
 
 # Organizational value specification
 
-ex:IntegrityRespect a hmas:OrganizationalValue ;
+org-dataset:IntegrityRespect a hmas:OrganizationalValue ;
     rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
     rdfs:label "integrity and respect"@en, "intégrité et respect"@fr .
 
 # Roles specifications
 
-ex:SellerRepresentative a hmas:Role .
-ex:OrderManager a hmas:Role .
-ex:Operator a hmas:Role .
-ex:FactoryManagerRepresentative a hmas:Role .
-ex:FactoryManager a hmas:Role .
+org-dataset:SellerRepresentative a hmas:Role .
+org-dataset:OrderManager a hmas:Role .
+org-dataset:Operator a hmas:Role .
+org-dataset:FactoryManagerRepresentative a hmas:Role .
+org-dataset:FactoryManager a hmas:Role .
 
 # Groups specifications
 
-ex:BusinessGroup a sh:NodeShape , rdfs:Class ;
+org-dataset:BusinessGroup a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Group .
 
-ex:ProductionGroup a sh:NodeShape , rdfs:Class ;
+org-dataset:ProductionGroup a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Group .
 
 ## Relation Specifications
-ex:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
+org-dataset:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .

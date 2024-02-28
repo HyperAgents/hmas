@@ -1,6 +1,8 @@
 @base <https://ns.inria.fr/hmas/> .
 
-@prefix ex: <https://www.example.org/> .
+@prefix org-dataset: <http://ns.inria.fr/hmas/organizations/organization-dataset.ttl#> .
+@prefix org-yogurt: <http://ns.inria.fr/hmas/organizations/yogurt-organization-specification.ttl#> .
+
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix hmas: <https://purl.org/hmas/> .
@@ -17,7 +19,7 @@
 
 # Memberships specifications
 
-ex:ProductionOperator a sh:NodeShape , rdfs:Class ;
+org-yogurt:ProductionOperator a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -28,15 +30,15 @@ ex:ProductionOperator a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:Operator
+        sh:hasValue org-yogurt:Operator
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
+        sh:qualifiedValueShape [ sh:class org-yogurt:ProductionGroup ]
     ] .
 
-ex:ProductionFactoryManager a sh:NodeShape , rdfs:Class ;
+org-yogurt:ProductionFactoryManager a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -47,15 +49,15 @@ ex:ProductionFactoryManager a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:FactoryManager
+        sh:hasValue org-yogurt:FactoryManager
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
+        sh:qualifiedValueShape [ sh:class org-yogurt:ProductionGroup ]
     ] .
 
-ex:BusinessFactoryManagerRepresentative a sh:NodeShape , rdfs:Class ;
+org-yogurt:BusinessFactoryManagerRepresentative a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -66,49 +68,49 @@ ex:BusinessFactoryManagerRepresentative a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:FactoryManagerRepresentative
+        sh:hasValue org-yogurt:FactoryManagerRepresentative
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:BusinessGroup ]
+        sh:qualifiedValueShape [ sh:class org-yogurt:BusinessGroup ]
     ] .
 
 # Generic organization specification
 
-ex:GenericYogurtCompanyOrganization a sh:NodeShape , rdfs:Class ;
+org-yogurt:GenericYogurtCompanyOrganization a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Organization ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:IntegrityRespect
+        sh:hasValue org-dataset:IntegrityRespect
     ] , [
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:FactoryManagerRepresentative
+        sh:hasValue org-yogurt:FactoryManagerRepresentative
     ] , [
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:FactoryManager
+        sh:hasValue org-yogurt:FactoryManager
     ] , [
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:Operator
+        sh:hasValue org-yogurt:Operator
     ] , [
         sh:path hmas:isStructuredBy ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:BusinessGroup ] ;
+        sh:qualifiedValueShape [ sh:class org-yogurt:BusinessGroup ] ;
         sh:qualifiedValuesShapeDisjoint true
     ] , [
         sh:path hmas:isStructuredBy ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:ProductionGroup ] ; 
+        sh:qualifiedValueShape [ sh:class org-yogurt:ProductionGroup ] ; 
         sh:qualifiedValuesShapeDisjoint true
     ] .
 
@@ -116,23 +118,23 @@ ex:GenericYogurtCompanyOrganization a sh:NodeShape , rdfs:Class ;
 # Instanciation of the organization shape #
 ###########################################
 
-ex:YPRBusinessGroup a ex:BusinessGroup .
-ex:YPRProductionGroup a ex:ProductionGroup .
+org-yogurt:YPRBusinessGroup a org-yogurt:BusinessGroup .
+org-yogurt:YPRProductionGroup a org-yogurt:ProductionGroup .
 
-ex:YPRProductionOperator a ex:ProductionOperator ;
+org-yogurt:YPRProductionOperator a org-yogurt:ProductionOperator ;
     hmas:isMembershipOf agent-e:agent ;
-    hmas:isMembershipFor ex:Operator ;
-    hmas:isMembershipIn ex:ProductionGroup .
+    hmas:isMembershipFor org-yogurt:Operator ;
+    hmas:isMembershipIn org-yogurt:ProductionGroup .
 
-ex:YPRProductionFactoryManager a ex:ProductionFactoryManager ;
+org-yogurt:YPRProductionFactoryManager a org-yogurt:ProductionFactoryManager ;
     hmas:isMembershipOf agent-a:agent ;
-    hmas:isMembershipFor ex:FactoryManager ;
-    hmas:isMembershipIn ex:ProductionGroup .
+    hmas:isMembershipFor org-yogurt:FactoryManager ;
+    hmas:isMembershipIn org-yogurt:ProductionGroup .
 
-ex:YPRBusinessFactoryManagerRepresentative a ex:BusinessFactoryManagerRepresentative ;
+org-yogurt:YPRBusinessFactoryManagerRepresentative a org-yogurt:BusinessFactoryManagerRepresentative ;
     hmas:isMembershipOf agent-ra:agent ;
-    hmas:isMembershipFor ex:FactoryManagerRepresentative ;
-    hmas:isMembershipIn ex:BusinessGroup .
+    hmas:isMembershipFor org-yogurt:FactoryManagerRepresentative ;
+    hmas:isMembershipIn org-yogurt:BusinessGroup .
 
-ex:YPRProductionOperator ex:canCommunicateWith ex:YPRBusinessFactoryManagerRepresentative .
-ex:YPRProductionOperator ex:canCommunicateWith ex:YPRProductionOperator .
+org-yogurt:YPRProductionOperator org-yogurt:canCommunicateWith org-yogurt:YPRBusinessFactoryManagerRepresentative .
+org-yogurt:YPRProductionOperator org-yogurt:canCommunicateWith org-yogurt:YPRProductionOperator .

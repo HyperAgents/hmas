@@ -23,7 +23,8 @@
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
-@prefix ex: <https://www.example.org/> .
+@prefix org-dataset: <http://ns.inria.fr/hmas/organizations/organization-dataset.ttl#> .
+@prefix org-yogurt: <http://ns.inria.fr/hmas/organizations/yogurt-organization-specification.ttl#> .
 
 #############
 # Artifacts #
@@ -167,11 +168,11 @@ body-agent-e: a hmas:ResourceProfile ;
 # Organization #
 ################
 
-ypr-org:organization a ex:GenericYogurtCompanyOrganization ;
+ypr-org:organization a org-yogurt:GenericYogurtCompanyOrganization ;
     hmas:hasProfile ypr-org: ;
-    hmas:hasOrganizationalValue ex:IntegrityRespect ;
-    hmas:providesRole ex:FactoryManagerRepresentative , ex:FactoryManager , ex:Operator ;
-    hmas:isStructuredBy ex:YPRBusinessGroup , ex:YPRProductionGroup .
+    hmas:hasOrganizationalValue org-dataset:IntegrityRespect ;
+    hmas:providesRole org-yogurt:FactoryManagerRepresentative , org-yogurt:FactoryManager , org-yogurt:Operator ;
+    hmas:isStructuredBy org-yogurt:YPRBusinessGroup , org-yogurt:YPRProductionGroup .
 
 ############
 # Platform #

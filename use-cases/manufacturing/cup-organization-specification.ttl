@@ -1,6 +1,8 @@
 @base <https://ns.inria.fr/hmas/> .
 
-@prefix ex: <https://www.example.org/> .
+@prefix org-dataset: <http://ns.inria.fr/hmas/organizations/organization-dataset.ttl#> .
+@prefix org-cup: <http://ns.inria.fr/hmas/organizations/cup-organization-specification.ttl#> .
+
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix hmas: <https://purl.org/hmas/> .
@@ -17,7 +19,7 @@
 
 # Memberships specifications
 
-ex:ProductionOperator a sh:NodeShape , rdfs:Class ;
+org-cup:ProductionOperator a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -28,15 +30,15 @@ ex:ProductionOperator a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:Operator
+        sh:hasValue org-cup:Operator
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
+        sh:qualifiedValueShape [ sh:class org-cup:ProductionGroup ]
     ] .
 
-ex:ProductionOrderManager a sh:NodeShape , rdfs:Class ;
+org-cup:ProductionOrderManager a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -47,15 +49,15 @@ ex:ProductionOrderManager a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:OrderManager
+        sh:hasValue org-cup:OrderManager
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:ProductionGroup ]
+        sh:qualifiedValueShape [ sh:class org-cup:ProductionGroup ]
     ] .
 
-ex:BusinessSellerRepresentative a sh:NodeShape , rdfs:Class ;
+org-cup:BusinessSellerRepresentative a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Membership , rdfs:Class ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -66,49 +68,49 @@ ex:BusinessSellerRepresentative a sh:NodeShape , rdfs:Class ;
         sh:path hmas:isMembershipFor ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:SellerRepresentative
+        sh:hasValue org-cup:SellerRepresentative
     ] , [
         sh:path hmas:isMembershipIn ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:BusinessGroup ]
+        sh:qualifiedValueShape [ sh:class org-cup:BusinessGroup ]
     ] .
 
 # Generic organization specification
 
-ex:GenericCupCompanyOrganization a sh:NodeShape , rdfs:Class ;
+org-cup:GenericCupCompanyOrganization a sh:NodeShape , rdfs:Class ;
     rdfs:subClassOf hmas:Organization ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:IntegrityRespect
+        sh:hasValue org-dataset:IntegrityRespect
     ] , [
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:SellerRepresentative 
+        sh:hasValue org-cup:SellerRepresentative 
     ] , [
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:OrderManager
+        sh:hasValue org-cup:OrderManager
     ] , [
         sh:path hmas:providesRole ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:hasValue ex:Operator
+        sh:hasValue org-cup:Operator
     ] , [
         sh:path hmas:isStructuredBy ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:BusinessGroup ] ;
+        sh:qualifiedValueShape [ sh:class org-cup:BusinessGroup ] ;
         sh:qualifiedValuesShapeDisjoint true
     ] , [
         sh:path hmas:isStructuredBy ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class ex:ProductionGroup ] ; 
+        sh:qualifiedValueShape [ sh:class org-cup:ProductionGroup ] ; 
         sh:qualifiedValuesShapeDisjoint true
     ] .
 
@@ -116,25 +118,25 @@ ex:GenericCupCompanyOrganization a sh:NodeShape , rdfs:Class ;
 # Instanciation of the organization shape #
 ###########################################
 
-ex:CPRBusinessGroup a ex:BusinessGroup .
-ex:CPRProductionGroup a ex:ProductionGroup .
+org-cup:CPRBusinessGroup a org-cup:BusinessGroup .
+org-cup:CPRProductionGroup a org-cup:ProductionGroup .
 
-ex:CPRProductionOperator a ex:ProductionOperator ;
+org-cup:CPRProductionOperator a org-cup:ProductionOperator ;
     hmas:isMembershipOf ag-c:agent ;
-    hmas:isMembershipFor ex:Operator ;
-    hmas:isMembershipIn ex:ProductionGroup .
+    hmas:isMembershipFor org-cup:Operator ;
+    hmas:isMembershipIn org-cup:ProductionGroup .
 
-ex:CPRProductionOrderManager a ex:ProductionOrderManager ;
+org-cup:CPRProductionOrderManager a org-cup:ProductionOrderManager ;
     hmas:isMembershipOf ag-b:agent ;
-    hmas:isMembershipFor ex:OrderManager ;
-    hmas:isMembershipIn ex:ProductionGroup .
+    hmas:isMembershipFor org-cup:OrderManager ;
+    hmas:isMembershipIn org-cup:ProductionGroup .
 
-ex:CPRBusinessSellerRepresentative a ex:BusinessSellerRepresentative ;
+org-cup:CPRBusinessSellerRepresentative a org-cup:BusinessSellerRepresentative ;
     hmas:isMembershipOf agent-rb:agent ;
-    hmas:isMembershipFor ex:SellerRepresentative ;
-    hmas:isMembershipIn ex:BusinessGroup .
+    hmas:isMembershipFor org-cup:SellerRepresentative ;
+    hmas:isMembershipIn org-cup:BusinessGroup .
 
-ex:CPRProductionOrderManager ex:canCommunicateWith ex:CPRBusinessSellerRepresentative .
-ex:CPRProductionOrderManager ex:canCommunicateWith ex:CPRProductionOperator .
+org-cup:CPRProductionOrderManager org-cup:canCommunicateWith org-cup:CPRBusinessSellerRepresentative .
+org-cup:CPRProductionOrderManager org-cup:canCommunicateWith org-cup:CPRProductionOperator .
 
 
