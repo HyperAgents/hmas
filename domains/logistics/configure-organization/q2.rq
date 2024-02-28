@@ -1,0 +1,8 @@
+prefix ex: <http://example.org/>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?setting
+where {
+  ex:FL_Logistics hmas:proposesSetting ?setting . 
+}
+order by ?setting

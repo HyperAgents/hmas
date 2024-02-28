@@ -1,0 +1,12 @@
+prefix ex: <http://example.org/>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?artifact
+where {
+  ?artifact hmas:isMaterialOf ex:FL_Logistics .
+  
+  ?usage a ?usageModel ;
+         hmas:isUsageIn ex:ReceivingSetting ;
+         hmas:isUsageOf ?artifact .
+}
+order by ?artifact
