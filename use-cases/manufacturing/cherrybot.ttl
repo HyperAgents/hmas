@@ -1,4 +1,4 @@
-@prefix artifacts: <http://ns.inria.fr/hmas/artifacts/> .
+@prefix artifacts-cherrybot: <http://ns.inria.fr/hmas/artifacts/cherrybot.ttl#> .
 @prefix cherrybot: <https://interactions.ics.unisg.ch/cherrybot#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
@@ -14,22 +14,22 @@
 # Catalog Definition #
 ######################
 
-artifacts:CherrybotCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier artifacts:CherrybotReadableOperator ,
-                           artifacts:CherrybotReadablePosition ,
-                           artifacts:CherrybotReadableTarget ,
-                           artifacts:CherrybotReadableGripper ,
-                           artifacts:CherrybotInitializableArm ,
-                           artifacts:CherrybotSettableOperator ,
-                           artifacts:CherrybotSettableTarget ,
-                           artifacts:CherrybotSettableGripper ,
-                           artifacts:CherrybotDeletableOperator .
+artifacts-cherrybot:CherrybotCatalog a hmas:SignifiersCatalog ;
+    hmas:proposesSignifier artifacts-cherrybot:CherrybotReadableOperator ,
+                           artifacts-cherrybot:CherrybotReadablePosition ,
+                           artifacts-cherrybot:CherrybotReadableTarget ,
+                           artifacts-cherrybot:CherrybotReadableGripper ,
+                           artifacts-cherrybot:CherrybotInitializableArm ,
+                           artifacts-cherrybot:CherrybotSettableOperator ,
+                           artifacts-cherrybot:CherrybotSettableTarget ,
+                           artifacts-cherrybot:CherrybotSettableGripper ,
+                           artifacts-cherrybot:CherrybotDeletableOperator .
 
 #######################################
 # Robotic Arm Endpoint specifications #
 #######################################
 
-artifacts:CherrybotReadableOperator a hmas:Signifier ;
+artifacts-cherrybot:CherrybotReadableOperator a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -50,11 +50,11 @@ artifacts:CherrybotReadableOperator a hmas:Signifier ;
             sh:path hmas:hasOutput ;
             sh:qualifiedMinCount 1 ;
             sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape artifacts:JsonGetOperatorOutputBody
+            sh:qualifiedValueShape artifacts-cherrybot:JsonGetOperatorOutputBody
         ]
     ] .
 
-artifacts:CherrybotReadablePosition a hmas:Signifier ;
+artifacts-cherrybot:CherrybotReadablePosition a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -75,11 +75,11 @@ artifacts:CherrybotReadablePosition a hmas:Signifier ;
             sh:path hmas:hasOutput ;
             sh:qualifiedMinCount 1 ;
             sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape artifacts:JsonGetPositionOutputBody
+            sh:qualifiedValueShape artifacts-cherrybot:JsonGetPositionOutputBody
         ]
     ] .
 
-artifacts:CherrybotReadableTarget a hmas:Signifier ;
+artifacts-cherrybot:CherrybotReadableTarget a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -100,11 +100,11 @@ artifacts:CherrybotReadableTarget a hmas:Signifier ;
             sh:path hmas:hasOutput ;
             sh:qualifiedMinCount 1 ;
             sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape artifacts:JsonGetPositionOutputBody
+            sh:qualifiedValueShape artifacts-cherrybot:JsonGetPositionOutputBody
         ]
     ] .
 
-artifacts:CherrybotReadableGripper a sh:NodeShape , rdfs:Class ;
+artifacts-cherrybot:CherrybotReadableGripper a sh:NodeShape , rdfs:Class ;
     hmas:signifies [
         sh:class hmas:ActionExecution ;
         sh:property [
@@ -130,7 +130,7 @@ artifacts:CherrybotReadableGripper a sh:NodeShape , rdfs:Class ;
         ]
     ] .
 
-artifacts:CherrybotInitializableArm a hmas:Signifier ;
+artifacts-cherrybot:CherrybotInitializableArm a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -150,7 +150,7 @@ artifacts:CherrybotInitializableArm a hmas:Signifier ;
         ]
     ] .
 
-artifacts:CherrybotSettableOperator a hmas:Signifier ;
+artifacts-cherrybot:CherrybotSettableOperator a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -171,11 +171,11 @@ artifacts:CherrybotSettableOperator a hmas:Signifier ;
             sh:path hmas:hasInput ;
             sh:qualifiedMinCount 1 ;
             sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape artifacts:JsonSetOperatorInputBody
+            sh:qualifiedValueShape artifacts-cherrybot:JsonSetOperatorInputBody
         ]
     ] .
 
-artifacts:CherrybotSettableTarget a hmas:Signifier ;
+artifacts-cherrybot:CherrybotSettableTarget a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -196,11 +196,11 @@ artifacts:CherrybotSettableTarget a hmas:Signifier ;
             sh:path hmas:hasInput ;
             sh:qualifiedMinCount 1 ;
             sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape artifacts:JsonSetPositionInputBody
+            sh:qualifiedValueShape artifacts-cherrybot:JsonSetPositionInputBody
         ]
     ] .
 
-artifacts:CherrybotSettableGripper a hmas:Signifier ;
+artifacts-cherrybot:CherrybotSettableGripper a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -227,7 +227,7 @@ artifacts:CherrybotSettableGripper a hmas:Signifier ;
         ]
     ] .
 
-artifacts:CherrybotDeletableOperator a hmas:Signifier ;
+artifacts-cherrybot:CherrybotDeletableOperator a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -251,7 +251,7 @@ artifacts:CherrybotDeletableOperator a hmas:Signifier ;
 # Intput/Output specifications #
 ################################
 
-artifacts:JsonGetOperatorOutputBody a sh:NodeShape ;
+artifacts-cherrybot:JsonGetOperatorOutputBody a sh:NodeShape ;
     sh:class cherrybot:OperatorWithTokenSchema ;
     sh:property [
         sh:path foaf:Name;
@@ -270,7 +270,7 @@ artifacts:JsonGetOperatorOutputBody a sh:NodeShape ;
         sh:datatype xsd:string
     ] .
 
-artifacts:JsonSetOperatorInputBody a sh:NodeShape ;
+artifacts-cherrybot:JsonSetOperatorInputBody a sh:NodeShape ;
     sh:class cherrybot:OperatorSchema ;
     sh:property [
         sh:path foaf:name ;
@@ -284,7 +284,7 @@ artifacts:JsonSetOperatorInputBody a sh:NodeShape ;
         sh:datatype xsd:string
     ] .
 
-artifacts:JsonRotationElement a sh:NodeShape ;
+artifacts-cherrybot:JsonRotationElement a sh:NodeShape ;
     sh:class cherrybot:CoordinatesSchema ;
     sh:property [
         sh:path cherrybot:xCoordinate ;
@@ -309,7 +309,7 @@ artifacts:JsonRotationElement a sh:NodeShape ;
         sh:datatype xsd:float 
     ] .
 
-artifacts:JsonTranslationElement a sh:NodeShape ;
+artifacts-cherrybot:JsonTranslationElement a sh:NodeShape ;
     sh:class cherrybot:RotationSchema ;
     sh:property [
         sh:path cherrybot:roll ;
@@ -334,30 +334,30 @@ artifacts:JsonTranslationElement a sh:NodeShape ;
         sh:datatype xsd:float 
     ] .
 
-artifacts:JsonGetPositionOutputBody a sh:NodeShape ;
+artifacts-cherrybot:JsonGetPositionOutputBody a sh:NodeShape ;
     sh:class cherrybot:TcpTargetSchema ;
     sh:property [
         sh:path cherrybot:coordinate ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape artifacts:JsonTranslationElement
+        sh:qualifiedValueShape artifacts-cherrybot:JsonTranslationElement
     ] , [
         sh:path cherrybot:rotation ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape artifacts:JsonRotationElement
+        sh:qualifiedValueShape artifacts-cherrybot:JsonRotationElement
     ] .
 
-artifacts:JsonSetPositionInputBody a sh:NodeShape ;
+artifacts-cherrybot:JsonSetPositionInputBody a sh:NodeShape ;
     sh:class cherrybot:TcpMovementSchema ;
     sh:property [
         sh:path cherrybot:coordinate ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape artifacts:JsonTranslationElement
+        sh:qualifiedValueShape artifacts-cherrybot:JsonTranslationElement
     ] , [
         sh:path cherrybot:rotation ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape artifacts:JsonRotationElement
+        sh:qualifiedValueShape artifacts-cherrybot:JsonRotationElement
     ] .

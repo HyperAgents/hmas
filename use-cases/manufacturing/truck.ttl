@@ -1,4 +1,4 @@
-@prefix artifacts: <http://ns.inria.fr/hmas/artifacts/> .
+@prefix artifacts-truck: <http://ns.inria.fr/hmas/artifacts/truck.ttl#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
 
@@ -9,16 +9,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema> .
 
 
-artifacts:TruckCatalog a hmas:SignifiersCatalog ;
-    hmas:proposesSignifier artifacts:TruckReadableBattery ,
-                           artifacts:TruckReadableAccelerometer ,
-                           artifacts:TruckSettableWheels .
+artifacts-truck:TruckCatalog a hmas:SignifiersCatalog ;
+    hmas:proposesSignifier artifacts-truck:TruckReadableBattery ,
+                           artifacts-truck:TruckReadableAccelerometer ,
+                           artifacts-truck:TruckSettableWheels .
 
 ###################
 # Truck Endpoints #
 ###################
 
-artifacts:TruckReadableBattery a hmas:Signifier ;
+artifacts-truck:TruckReadableBattery a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -38,7 +38,7 @@ artifacts:TruckReadableBattery a hmas:Signifier ;
         ]
     ] .
 
-artifacts:TruckReadableAccelerometer a hmas:Signifier ;
+artifacts-truck:TruckReadableAccelerometer a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -58,7 +58,7 @@ artifacts:TruckReadableAccelerometer a hmas:Signifier ;
         ]
     ] .
 
-artifacts:TruckSettableWheels a hmas:Signifier ;
+artifacts-truck:TruckSettableWheels a hmas:Signifier ;
     hmas:signifies [
         a sh:NodeShape , rdfs:Class ;
         sh:class hmas:ActionExecution ;
@@ -79,7 +79,7 @@ artifacts:TruckSettableWheels a hmas:Signifier ;
             sh:path hmas:hasInput ;
             sh:qualifiedMinCount 1 ;
             sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape artifacts:JsonControlWheelBody
+            sh:qualifiedValueShape artifacts-truck:JsonControlWheelBody
         ]
     ] .
 
@@ -88,24 +88,24 @@ artifacts:TruckSettableWheels a hmas:Signifier ;
 # Json Specifications #
 #######################
 
-artifacts:JsonControlWheelBody a sh:NodeShape ;
-    sh:class artifacts:Vehicle ;
+artifacts-truck:JsonControlWheelBody a sh:NodeShape ;
+    sh:class artifacts-truck:Vehicle ;
     sh:property [
-        sh:path artifacts:hasDirectionValue ;
+        sh:path artifacts-truck:hasDirectionValue ;
         sh:minExclusive 0 ;
         sh:maxExclusive 2 ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer 
     ] , [
-        sh:path artifacts:hasSpeedValue ;
+        sh:path artifacts-truck:hasSpeedValue ;
         sh:minExclusive -7 ;
         sh:maxExclusive 7 ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer 
     ] , [
-        sh:path artifacts:hasDurationValue ;
+        sh:path artifacts-truck:hasDurationValue ;
         sh:minExclusive 0 ;
         sh:maxExclusive 5000 ;
         sh:minCount 1 ;
