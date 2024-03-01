@@ -35,6 +35,11 @@ artifacts-truck:TruckReadableBattery a hmas:Signifier ;
                     sh:hasValue "/properties/batteryvoltage"
                 ]
             ]
+        ], [
+           sh:path hmas:hasOutput ;
+           sh:datatype xsd:float ;
+           sh:minCount 1 ;
+           sh:maxCount 1 
         ]
     ] .
 
@@ -55,6 +60,11 @@ artifacts-truck:TruckReadableAccelerometer a hmas:Signifier ;
                     sh:hasValue "/properties/motorcurrent"
                 ]
             ]
+        ], [
+           sh:path hmas:hasOutput ;
+           sh:datatype xsd:float ;
+           sh:minCount 1 ;
+           sh:maxCount 1 
         ]
     ] .
 
@@ -68,7 +78,7 @@ artifacts-truck:TruckSettableWheels a hmas:Signifier ;
             sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas:InvokeAction, hmas:GetMethod, hmas:forApplicatonJson, [
+                sh:property hmas:InvokeAction, hmas:PostMethod, hmas:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
