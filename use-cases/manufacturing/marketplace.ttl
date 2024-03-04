@@ -31,7 +31,7 @@ agent-rb:agent a hmas:Agent ;
     hmas:isMemberOf cpr-org:organization .
 
 agent-ra: a hmas:ResourceProfile ;
-    hmas:exposeSignifiersFrom hmas:JadeMessagingCatalog ;
+    hmas:exposeSignifiersFrom jade:JadeMessagingCatalog ;
     hmas:exposesSignifier jade:ReceivableRequest ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
@@ -52,7 +52,7 @@ agent-ra: a hmas:ResourceProfile ;
     ] .
 
 agent-rb: a hmas:ResourceProfile ;
-    hmas:exposeSignifiersFrom hmas:JadeMessagingCatalog ;
+    hmas:exposeSignifiersFrom jade:JadeMessagingCatalog ;
     hmas:exposesSignifier jade:ReceivableAccept ,
                           jade:ReceivableRefuse ,
                           jade:ReceivableFailure ,
@@ -94,7 +94,8 @@ plat:platform a hmas:HypermediaMASPlatform ;
     hmas:contains mrk: .
 
 plat: a hmas:ResourceProfile ;
-    hmas:exposeSignifiersFrom hmas:JadeMessagingCatalog ;
+    hmas:exposeSignifiersFrom jade:JadeMessagingCatalog ;
+    hmas:exposesSignifier jade:AgentContactable ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
