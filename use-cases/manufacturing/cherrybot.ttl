@@ -10,6 +10,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
+##################
+# Artifact Types #
+##################
+
+artifacts-cherrybot:XArmRoboticArm a owl:Class ;
+    rdfs:label "XArm Robotic Arm"@en .
+
 ######################
 # Catalog Definition #
 ######################
