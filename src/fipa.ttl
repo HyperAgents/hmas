@@ -178,7 +178,7 @@
     sh:minCount 1 ;
     sh:maxCount 1 .
 
-:InteractionOrder a sh:PropertyShape ;
+:ActionExecutionContent a sh:PropertyShape ;
     rdfs:isDefinedBy :fipa ;
     sh:path :hasContent ; # specifies that the content should be an action execution specification
     sh:minQualifiedShape 1 ;
