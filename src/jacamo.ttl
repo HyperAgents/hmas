@@ -1301,7 +1301,31 @@
         a jsonld:TermDefinition ;
         jsonld:term "hub.callback" ;
         jsonld:iri <http://example.org/websub/callback> 
-    ] .
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "performative" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasPerformative> ;
+        jsonld:type jsonld:idContainerType 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "sender" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasSender> ;
+        jsonld:type jsonld:idContainerType 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "receiver" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasReceiver> ;
+        jsonld:type jsonld:idContainerType 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "content" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasContent> 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "language" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasLanguage> ;
+        jsonld:type jsonld:idContainerType 
+    ].
 
 # Equivalent JSON-LD context
 #{
