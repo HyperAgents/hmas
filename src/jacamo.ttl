@@ -38,15 +38,21 @@
                   rdfs:comment "A KQML communicative act that can be used as a performative for communicating with Jason agents."@en ;
                   rdfs:label "communicative act"@en .
 
+:Language rdf:type owl:Class ;
+          rdfs:isDefinedBy : ;
+          rdfs:comment "The language in which the content of an ACL message is expressed, for example, the AgentSpeak language"@en ;
+          rdfs:label "language"@en .
+
 :ACLMessage rdf:type owl:Class ;
             rdfs:isDefinedBy : ;
             rdfs:comment "A message that uses the KQML Agent Communication Language and that can be used for communication Jason agents."@en ;
             rdfs:label "ACL Message"@en .
 
-:Language rdf:type owl:Class ;
-          rdfs:isDefinedBy : ;
-          rdfs:comment "The language in which the content of an ACL message is expressed, for example, the AgentSpeak language"@en ;
-          rdfs:label "language"@en .
+:SendMessage rdf:type owl:Class ;
+             rdfs:isDefinedBy : ;
+             rdfs:subClassOf hmas:ActionExecution ;
+             rdfs:comment "The execution of the action to send a message to an agent."@en ;
+             rdfs:label "send message"@en .
 
 :Focus rdf:type owl:Class ;
        rdfs:isDefinedBy : ;
@@ -325,15 +331,7 @@
                              sh:path prov:used ;
                              sh:qualifiedMinCount 1 ;
                              sh:qualifiedMaxCount 1 ;
-                             sh:qualifiedValueShape [
-                                 sh:class hctl:Form ;
-                                 sh:property interaction-http:ReadAction, interaction-http:GetMethod, interaction-http:forTextTurtle, [
-                                     sh:path hctl:hasTarget ;
-                                     sh:minCount 1 ;
-                                     sh:maxCount 1 ;
-                                     sh:hasValue ""
-                                 ]
-                             ]
+                             sh:qualifiedValueShape :perceiveResourceFormSpecification
                          ] , [
                            sh:path hmas:hasOutput ;
                            sh:qualifiedMinCount 1 ;
@@ -450,15 +448,7 @@
                               sh:path prov:used ;
                               sh:qualifiedMinCount 1 ;
                               sh:qualifiedMaxCount 1 ;
-                              sh:qualifiedValueShape [
-                                  sh:class hctl:Form ;
-                                  sh:property interaction-http:ReadAction, interaction-http:GetMethod, interaction-http:forTextTurtle, [
-                                      sh:path hctl:hasTarget ;
-                                      sh:minCount 1 ;
-                                      sh:maxCount 1 ;
-                                      sh:hasValue ""
-                                  ]
-                              ]
+                              sh:qualifiedValueShape :perceiveResourceFormSpecification
                           ] , [
                             sh:path hmas:hasOutput ;
                             sh:qualifiedMinCount 1 ;
@@ -528,15 +518,7 @@
                             sh:path prov:used ;
                             sh:qualifiedMinCount 1 ;
                             sh:qualifiedMaxCount 1 ;
-                            sh:qualifiedValueShape [
-                                sh:class hctl:Form ;
-                                sh:property interaction-http:InvokeAction, interaction-http:PutMethod, interaction-http:forTextTurtle, interaction-http:XAgentWebIDHeader, [
-                                    sh:path hctl:hasTarget ;
-                                    sh:minCount 1 ;
-                                    sh:maxCount 1 ;
-                                    sh:hasValue ""
-                                ]
-                            ]
+                            sh:qualifiedValueShape :updateResourceFormSpecification
                         ] , [
                             sh:path hmas:hasInput ;
                             sh:qualifiedMinCount 1 ;
@@ -561,15 +543,7 @@
                             sh:path prov:used ;
                             sh:qualifiedMinCount 1 ;
                             sh:qualifiedMaxCount 1 ;
-                            sh:qualifiedValueShape [
-                                sh:class hctl:Form ;
-                                sh:property interaction-http:InvokeAction, interaction-http:DeleteMethod, interaction-http:XAgentWebIDHeader, [
-                                    sh:path hctl:hasTarget ;
-                                    sh:minCount 1 ;
-                                    sh:maxCount 1 ;
-                                    sh:hasValue ""
-                                ]
-                            ]
+                            sh:qualifiedValueShape :deleteResourceFormSpecification
                         ] , [
                             sh:path hmas:hasOutput ;
                             sh:qualifiedMinCount 1 ;
@@ -635,7 +609,7 @@
                                     sh:path hmas:hasInput ;
                                     sh:qualifiedMinCount 1 ;
                                     sh:qualifiedMaxCount 1 ;
-                                    sh:qualifiedValueShape :artifactCreationDetails
+                                    sh:qualifiedValueShape :artifactCreationSpecification
                                 ] , [
                                     sh:path hmas:hasOutput ;
                                     sh:qualifiedMinCount 1 ;
@@ -755,15 +729,7 @@
                              sh:path prov:used ;
                              sh:qualifiedMinCount 1 ;
                              sh:qualifiedMaxCount 1 ;
-                             sh:qualifiedValueShape [
-                                 sh:class hctl:Form ;
-                                 sh:property interaction-http:ReadAction, interaction-http:GetMethod, interaction-http:forTextTurtle, [
-                                     sh:path hctl:hasTarget ;
-                                     sh:minCount 1 ;
-                                     sh:maxCount 1 ;
-                                     sh:hasValue ""
-                                 ]
-                             ]
+                             sh:qualifiedValueShape :perceiveResourceFormSpecification
                          ] , [
                            sh:path hmas:hasOutput ;
                            sh:qualifiedMinCount 1 ;
@@ -847,9 +813,9 @@
                        ] 
                    ].
 
-:unbservablePlatform rdf:type hmas:Signifier ;
+:unbservableArtifact rdf:type hmas:Signifier ;
                      rdfs:isDefinedBy : ;
-                     rdfs:comment "The artifact affords unobserving it."@en ;
+                     rdfs:comment "The resource affords unobserving an artifact."@en ;
                      rdfs:label "unobservable"@en ;
                      hmas:signifies [
                           a sh:NodeShape , rdfs:Class ;
@@ -872,42 +838,34 @@
                           ] 
                      ].
 
-:updatableWorkspace a hmas:Signifier ;
-                    rdfs:isDefinedBy : ;
-                    rdfs:comment "The artifact affords updating it."@en ;
-                    rdfs:label "updatable"@en ;
-                    hmas:signifies [
-                        a sh:NodeShape , rdfs:Class ;
-                        sh:class hmas:ActionExecution, :UpdateArtifact ;
-                        sh:property [
-                            sh:path prov:used ;
-                            sh:qualifiedMinCount 1 ;
-                            sh:qualifiedMaxCount 1 ;
-                            sh:qualifiedValueShape [
-                                sh:class hctl:Form ;
-                                sh:property interaction-http:InvokeAction, interaction-http:PutMethod, interaction-http:forTextTurtle, interaction-http:XAgentWebIDHeader, [
-                                    sh:path hctl:hasTarget ;
-                                    sh:minCount 1 ;
-                                    sh:maxCount 1 ;
-                                    sh:hasValue ""
-                                ]
-                            ]
-                        ] , [
-                            sh:path hmas:hasInput ;
-                            sh:qualifiedMinCount 1 ;
-                            sh:qualifiedMaxCount 1 ;
-                            sh:qualifiedValueShape :artifactProfileSpecification
-                        ] , [
-                            sh:path hmas:hasOutput ;
-                            sh:qualifiedMinCount 1 ;
-                            sh:qualifiedMaxCount 1 ;
-                            sh:qualifiedValueShape :artifactProfileSpecification
-                        ] 
-                    ].
+:updatableArtifact a hmas:Signifier ;
+                   rdfs:isDefinedBy : ;
+                   rdfs:comment "The resource affords updating an artifact."@en ;
+                   rdfs:label "updatable"@en ;
+                   hmas:signifies [
+                       a sh:NodeShape , rdfs:Class ;
+                       sh:class hmas:ActionExecution, :UpdateArtifact ;
+                       sh:property [
+                           sh:path prov:used ;
+                           sh:qualifiedMinCount 1 ;
+                           sh:qualifiedMaxCount 1 ;
+                           sh:qualifiedValueShape :updateResourceFormSpecification
+                       ] , [
+                           sh:path hmas:hasInput ;
+                           sh:qualifiedMinCount 1 ;
+                           sh:qualifiedMaxCount 1 ;
+                           sh:qualifiedValueShape :artifactProfileSpecification
+                       ] , [
+                           sh:path hmas:hasOutput ;
+                           sh:qualifiedMinCount 1 ;
+                           sh:qualifiedMaxCount 1 ;
+                           sh:qualifiedValueShape :artifactProfileSpecification
+                       ] 
+                   ].
 
 :deletableArtifact a hmas:Signifier ;
                     rdfs:isDefinedBy : ;
-                    rdfs:comment "The artifact affords deleting it."@en ;
+                    rdfs:comment "The resource affords deleting an artifact."@en ;
                     rdfs:label "deletable"@en ;
                     hmas:signifies [
                         a sh:NodeShape , rdfs:Class ;
@@ -916,15 +874,7 @@
                             sh:path prov:used ;
                             sh:qualifiedMinCount 1 ;
                             sh:qualifiedMaxCount 1 ;
-                            sh:qualifiedValueShape [
-                                sh:class hctl:Form ;
-                                sh:property interaction-http:InvokeAction, interaction-http:DeleteMethod, interaction-http:XAgentWebIDHeader, [
-                                    sh:path hctl:hasTarget ;
-                                    sh:minCount 1 ;
-                                    sh:maxCount 1 ;
-                                    sh:hasValue ""
-                                ]
-                            ]
+                            sh:qualifiedValueShape :deleteResourceFormSpecification
                         ] , [
                             sh:path hmas:hasOutput ;
                             sh:qualifiedMinCount 1 ;
@@ -937,253 +887,169 @@
 # Individuals - Messaging Signifiers Catalog #
 ##############################################
 
-:MessagingCatalog a hmas:SignifiersCatalog ;
-    rdfs:isDefinedBy : ;
-    hmas:proposesSignifier :AgentContactable .
+:messagingCatalog a hmas:SignifiersCatalog ;
+                  rdfs:isDefinedBy : ;
+                  hmas:proposesSignifier :agentContactable .
 
-:PerformativeMessagingCatalog a hmas:SignifiersCatalog ;
-    rdfs:isDefinedBy : ;
-    hmas:proposesSignifier :ReceivableRequest ,
-                           :ReceivableAccept ,
-                           :ReceivableRefuse ,
-                           :ReceivableFailure ,
-                           :ReceivableInformDone ,
-                           :ReceivableInformResult .
+:FIPARequestProtocolCatalog a hmas:SignifiersCatalog ;
+                            rdfs:isDefinedBy : ;
+                            hmas:proposesSignifier :receivableRequest ,
+                                                   :receivableAccept ,
+                                                   :receivableRefuse ,
+                                                   :receivableFailure ,
+                                                   :receivableInformDone .
 
+:agentContactable a hmas:Signifier ;
+                  rdfs:isDefinedBy : ;
+                  hmas:signifies [
+                      a sh:NodeShape ;
+                      sh:class hmas:ActionExecution, :SendMessage ;
+                      sh:property [
+                          sh:path prov:used ;
+                          sh:qualifiedMinCount 1 ;
+                          sh:qualifiedMaxCount 1 ;
+                          sh:qualifiedValueShape :inboxFormSpecification 
+                      ] , [
+                          sh:path hmas:hasInput ;
+                          sh:qualifiedMinCount 1 ;
+                          sh:qualifiedMaxCount 1 ;
+                          sh:qualifiedValueShape :ACLMessageSpecification 
+                      ]
+                  ].
 
-:AgentContactable a hmas:Signifier ;
-    rdfs:isDefinedBy : ;
-    hmas:signifies [
-        a sh:NodeShape ;
-        sh:class hmas:ActionExecution ;
-        sh:property [
-            sh:path prov:used ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class hctl:Form ;
-                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
-                    sh:path hctl:hasTarget ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue "/inbox"
-                ]
-            ]
-        ] , [
-            sh:path hmas:hasInput ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape :ACLMessageStructure 
-        ]
-    ] .
+:receivableRequest a hmas:Signifier ;
+                   rdfs:isDefinedBy : ;
+                   hmas:signifies [
+                       a sh:NodeShape ;
+                       sh:class hmas:ActionExecution ;
+                       sh:property [
+                           sh:path prov:used ;
+                           sh:qualifiedMinCount 1 ;
+                           sh:qualifiedMaxCount 1 ;
+                           sh:qualifiedValueShape :inboxFormSpecification 
+                       ] , [
+                           sh:path hmas:hasInput ;
+                           sh:qualifiedMinCount 1 ;
+                           sh:qualifiedMaxCount 1 ;
+                           sh:qualifiedValueShape [
+                              sh:class :ACLMessage  ;
+                              sh:property :agentSender, :agentReceiver, fipa:actionExecutionContent, :AgentSpeakContentLanguage , [
+                                  sh:path :hasPerformative ;
+                                  sh:minCount 1 ;
+                                  sh:maxCount 1 ;
+                                  sh:hasValue fipa:request
+                              ]
+                           ]
+                       ]
+                   ] .
 
-:ReceivableRequest a hmas:Signifier ;
-    rdfs:isDefinedBy : ;
-    hmas:signifies [
-        a sh:NodeShape ;
-        sh:class hmas:ActionExecution ;
-        sh:property [
-            sh:path prov:used ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class hctl:Form ;
-                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
-                    sh:path hctl:hasTarget ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue "/inbox"
-                ]
-            ]
-        ] , [
-            sh:path hmas:hasInput ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class :ACLMessage  ;
-                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
-                    sh:path :hasPerformative ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue fipa:request
-                ]
-            ]
-        ]
-    ] .
+:receivableAccept a hmas:Signifier ;
+                  rdfs:isDefinedBy : ;
+                  hmas:signifies [
+                      a sh:NodeShape ;
+                      sh:class hmas:ActionExecution ;
+                      sh:property [
+                          sh:path prov:used ;
+                          sh:qualifiedMinCount 1 ;
+                          sh:qualifiedMaxCount 1 ;
+                          sh:qualifiedValueShape :inboxFormSpecification 
+                      ] , [
+                          sh:path hmas:hasInput ;
+                          sh:qualifiedMinCount 1 ;
+                          sh:qualifiedMaxCount 1 ;
+                          sh:qualifiedValueShape [
+                             sh:class :ACLMessage  ;
+                             sh:property :agentSender, :agentReceiver, fipa:actionExecutionContent, :AgentSpeakContentLanguage , [
+                                 sh:path :hasPerformative ;
+                                 sh:minCount 1 ;
+                                 sh:maxCount 1 ;
+                                 sh:hasValue fipa:accept
+                             ]
+                          ]
+                      ]
+                  ] .
 
-:ReceivableAccept a hmas:Signifier ;
-    rdfs:isDefinedBy : ;
-    hmas:signifies [
-        a sh:NodeShape ;
-        sh:class hmas:ActionExecution ;
-        sh:property [
-            sh:path prov:used ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class hctl:Form ;
-                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
-                    sh:path hctl:hasTarget ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue "/inbox"
-                ]
-            ]
-        ] , [
-            sh:path hmas:hasInput ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class :ACLMessage  ;
-                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
-                    sh:path :hasPerformative ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue fipa:accept
-                ]
-            ]
-        ]
-    ] .
+:receivableRefuse a hmas:Signifier ;
+                  rdfs:isDefinedBy : ;
+                  hmas:signifies [
+                      a sh:NodeShape ;
+                      sh:class hmas:ActionExecution ;
+                      sh:property [
+                          sh:path prov:used ;
+                          sh:qualifiedMinCount 1 ;
+                          sh:qualifiedMaxCount 1 ;
+                          sh:qualifiedValueShape :inboxFormSpecification 
+                      ] , [
+                          sh:path hmas:hasInput ;
+                          sh:qualifiedMinCount 1 ;
+                          sh:qualifiedMaxCount 1 ;
+                          sh:qualifiedValueShape [
+                             sh:class :ACLMessage  ;
+                             sh:property :agentSender, :agentReceiver, fipa:actionExecutionContent, :AgentSpeakContentLanguage , [
+                                 sh:path :hasPerformative ;
+                                 sh:minCount 1 ;
+                                 sh:maxCount 1 ;
+                                 sh:hasValue fipa:refuse
+                             ]
+                          ]
+                      ]
+                  ] .
 
-:ReceivableRefuse a hmas:Signifier ;
-    rdfs:isDefinedBy : ;
-    hmas:signifies [
-        a sh:NodeShape ;
-        sh:class hmas:ActionExecution ;
-        sh:property [
-            sh:path prov:used ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class hctl:Form ;
-                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
-                    sh:path hctl:hasTarget ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue "/inbox"
-                ]
-            ]
-        ] , [
-            sh:path hmas:hasInput ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class :ACLMessage  ;
-                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
-                    sh:path :hasPerformative ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue fipa:refuse
-                ]
-            ]
-        ]
-    ] .
+:receivableFailure a hmas:Signifier ;
+                   rdfs:isDefinedBy : ;
+                   hmas:signifies [
+                       a sh:NodeShape ;
+                       sh:class hmas:ActionExecution ;
+                       sh:property [
+                           sh:path prov:used ;
+                           sh:qualifiedMinCount 1 ;
+                           sh:qualifiedMaxCount 1 ;
+                           sh:qualifiedValueShape :inboxFormSpecification 
+                       ] , [
+                           sh:path hmas:hasInput ;
+                           sh:qualifiedMinCount 1 ;
+                           sh:qualifiedMaxCount 1 ;
+                           sh:qualifiedValueShape [
+                              sh:class :ACLMessage  ;
+                              sh:property :agentSender, :agentReceiver, fipa:actionExecutionContent, :AgentSpeakContentLanguage , [
+                                  sh:path :hasPerformative ;
+                                  sh:minCount 1 ;
+                                  sh:maxCount 1 ;
+                                  sh:hasValue fipa:failure
+                              ]
+                           ]
+                       ]
+                   ] .
 
-:ReceivableFailure a hmas:Signifier ;
-    rdfs:isDefinedBy : ;
-    hmas:signifies [
-        a sh:NodeShape ;
-        sh:class hmas:ActionExecution ;
-        sh:property [
-            sh:path prov:used ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class hctl:Form ;
-                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
-                    sh:path hctl:hasTarget ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue "/inbox"
-                ]
-            ]
-        ] , [
-            sh:path hmas:hasInput ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class hmas:ACLMessage  ;
-                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
-                    sh:path :hasPerformative ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue fipa:failure
-                ]
-            ]
-        ]
-    ] .
+:receivableInformDone a hmas:Signifier ;
+                      rdfs:isDefinedBy : ;
+                      hmas:signifies [
+                          a sh:NodeShape ;
+                          sh:class hmas:ActionExecution ;
+                          sh:property [
+                              sh:path prov:used ;
+                              sh:qualifiedMinCount 1 ;
+                              sh:qualifiedMaxCount 1 ;
+                              sh:qualifiedValueShape :inboxFormSpecification 
+                          ] , [
+                              sh:path hmas:hasInput ;
+                              sh:qualifiedMinCount 1 ;
+                              sh:qualifiedMaxCount 1 ;
+                              sh:qualifiedValueShape [
+                                 sh:class :ACLMessage  ;
+                                 sh:property :agentSender, :agentReceiver, fipa:actionExecutionContent, :AgentSpeakContentLanguage , [
+                                     sh:path :hasPerformative ;
+                                     sh:minCount 1 ;
+                                     sh:maxCount 1 ;
+                                     sh:hasValue fipa:informDone
+                                 ]
+                              ]
+                          ]
+                      ] .
 
-:ReceivableInformDone a hmas:Signifier ;
-    rdfs:isDefinedBy : ;
-    hmas:signifies [
-        a sh:NodeShape ;
-        sh:class hmas:ActionExecution ;
-        sh:property [
-            sh:path prov:used ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class hctl:Form ;
-                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
-                    sh:path hctl:hasTarget ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue "/inbox"
-                ]
-            ]
-        ] , [
-            sh:path hmas:hasInput ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class :ACLMessage  ;
-                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
-                    sh:path :hasPerformative ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue fipa:informDone
-                ]
-            ]
-        ]
-    ] .
-
-:ReceivableInformResult a hmas:Signifier ;
-    rdfs:isDefinedBy :;
-    hmas:signifies [
-        a sh:NodeShape ;
-        sh:class hmas:ActionExecution ;
-        sh:property [
-            sh:path prov:used ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class hctl:Form ;
-                sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
-                    sh:path hctl:hasTarget ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue "/inbox"
-                ]
-            ]
-        ] , [
-            sh:path hmas:hasInput ;
-            sh:qualifiedMinCount 1 ;
-            sh:qualifiedMaxCount 1 ;
-            sh:qualifiedValueShape [
-                sh:class :ACLMessage  ;
-                sh:property hmas:AgentJasonSenderMessage, hmas:InteractionOrder, hmas:AgentSpeak , [
-                    sh:path :hasPerformative ;
-                    sh:minCount 1 ;
-                    sh:maxCount 1 ;
-                    sh:hasValue fipa:informResult
-                ]
-            ]
-        ]
-    ] .
-
-##############
-# Universals #
-##############
+##################################
+# Universals - SHACL Node Shapes #
+##################################
 
 :platformProfileSpecification a sh:NodeShape ;
     rdfs:isDefinedBy : ;
@@ -1240,8 +1106,9 @@
         sh:datatype hmas:Agent
     ] .
 
-:artifactCreationDetails a sh:NodeShape ;
+:artifactCreationSpecification  a sh:NodeShape ;
     rdfs:isDefinedBy : ;
+    sh:class hmas:Artifact ;
     sh:property [
         sh:path :hasName ;
         sh:minCount 1 ;
@@ -1269,54 +1136,9 @@
     sh:class websub:Unsubscription ;
     sh:property :hubUnsuscribeMode, :hubCallback , :hubTopic.
 
-:hubSubscribeMode a sh:NodeShape ;
+:ACLMessageSpecification rdf:type sh:NodeShape ;
     rdfs:isDefinedBy : ;
-    sh:path websub:mode ;
-    sh:name "hub.mode";
-    sh:description "The goal of the subscription request is to subscribe";
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:hasValue "subscribe" .
-
-:hubUnsubscribeMode a sh:NodeShape ;
-    rdfs:isDefinedBy : ;
-    sh:path websub:mode ;
-    sh:name "hub.mode";
-    sh:description "The goal of the subscription request is to unsubscribe";
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:hasValue "unsubscribe" .
-
-:hubCallback a sh:NodeShape ;
-    rdfs:isDefinedBy : ;
-    sh:path websub:callback ;
-    sh:name "hub.callback";
-    sh:description "The subscriber's callback URL where content distribution notifications should be delivered";
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:datatype xsd:string .
-
-:hubTopic a sh:NodeShape ;
-    rdfs:isDefinedBy : ;
-    sh:path websub:topic ;
-    sh:name "hub.topic";
-    sh:description "The topic URL that the subscriber wishes to subscribe to";
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:datatype xsd:string .
-
-:hubFormSpecification a sh:NodeShape ;
-    sh:class hctl:Form ;
-    sh:property interaction-http:InvokeAction, interaction-http:PostMethod, interaction-http:forTextTurtle, [
-        sh:path hctl:hasTarget ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:hasValue "/hub/"
-    ].
-
-:ACLMessageStructure rdf:type sh:NodeShape ;
-    rdfs:isDefinedBy : ;
-    sh:targetClass hmas:ACLMessage ;
+    sh:class hmas:ACLMessage ;
     sh:property [
         sh:path :hasPerformative ;
         sh:minCount 1 ;
@@ -1336,6 +1158,116 @@
         sh:path :hasLanguage ;
         sh:maxCount 1
     ] .
+
+:perceiveResourceFormSpecification a sh:NodeShape ;
+    sh:class hctl:Form ;
+    sh:property interaction-http:ReadAction, interaction-http:GetMethod, interaction-http:forTextTurtle, [
+        sh:path hctl:hasTarget ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue ""
+    ].
+
+:hubFormSpecification a sh:NodeShape ;
+    sh:class hctl:Form ;
+    sh:property interaction-http:InvokeAction, interaction-http:PostMethod, interaction-http:forTextTurtle, [
+        sh:path hctl:hasTarget ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue "/hub/"
+    ].
+
+:updateResourceFormSpecification a sh:NodeShape ;
+     sh:class hctl:Form ;
+     sh:property interaction-http:InvokeAction, interaction-http:PutMethod, interaction-http:forTextTurtle, interaction-http:XAgentWebIDHeader, [
+         sh:path hctl:hasTarget ;
+         sh:minCount 1 ;
+         sh:maxCount 1 ;
+         sh:hasValue ""
+     ].
+                           
+:deleteResourceFormSpecification a sh:NodeShape ;
+    sh:class hctl:Form ;
+    sh:property interaction-http:InvokeAction, interaction-http:DeleteMethod, interaction-http:XAgentWebIDHeader, [
+        sh:path hctl:hasTarget ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue ""
+    ].
+
+:inboxFormSpecification a sh:NodeShape ;
+    sh:class hctl:Form ;
+    sh:property  hmas:InvokeAction, hmas:PutMethod, hmas:forApplicatonJson, [
+        sh:path hctl:hasTarget ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue "/inbox"
+    ].
+
+######################################
+# Universals - SHACL Property Shapes #
+######################################
+
+:hubSubscribeMode a sh:PropertyShape ;
+    rdfs:isDefinedBy : ;
+    sh:path websub:mode ;
+    sh:name "hub.mode";
+    sh:description "The goal of the subscription request is to subscribe";
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue "subscribe" .
+
+:hubUnsubscribeMode a sh:PropertyShape ;
+    rdfs:isDefinedBy : ;
+    sh:path websub:mode ;
+    sh:name "hub.mode";
+    sh:description "The goal of the subscription request is to unsubscribe";
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue "unsubscribe" .
+
+:hubCallback a sh:PropertyShape ;
+    rdfs:isDefinedBy : ;
+    sh:path websub:callback ;
+    sh:name "hub.callback";
+    sh:description "The subscriber's callback URL where content distribution notifications should be delivered";
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string .
+
+:hubTopic a sh:PropertyShape ;
+    rdfs:isDefinedBy : ;
+    sh:path websub:topic ;
+    sh:name "hub.topic";
+    sh:description "The topic URL that the subscriber wishes to subscribe to";
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string .
+
+:agentSender a sh:PropertyShape ;
+             rdfs:isDefinedBy : ;
+             sh:path :hasSender ;
+             sh:name "sender";
+             sh:description "The agent that sends the message";
+             sh:minCount 1 ;
+             sh:maxCount 1 ;
+             sh:datatype hmas:Agent .
+
+:agentReceiver a sh:PropertyShape ;
+               rdfs:isDefinedBy : ;
+               sh:path :hasReceiver ;
+               sh:name "receiver";
+               sh:description "The agent that receives the message";
+               sh:maxCount 1 ;
+               sh:datatype hmas:Agent .
+
+:AgentSpeakContentLanguage a sh:PropertyShape ;
+                           rdfs:isDefinedBy : ;
+                           sh:path :hasLanguage ;
+                           sh:name "language";
+                           sh:description "The content of the message is in the AgentSpeak language";
+                           sh:maxCount 1 ;
+                           sh:hasValue :AgentSpeak .
 
 ###################
 # JSON-LD Context #
@@ -1380,7 +1312,13 @@
 #    "initParams": {"@id": "https://purl.org/hmas/jacamo/hasInitialisationParameters", "@container": "@list"},
 #    "hub.topic" : "http://example.org/websub/topic",
 #    "hub.mode" : "http://example.org/websub/mode",
-#    "hub.callback": "http://example.org/websub/callback" }
+#    "hub.callback": "http://example.org/websub/callback",
+#    "performative" : {"@id": "https://purl.org/hmas/jacamo/hasPerformative", "@type": "@id"} ,
+#    "sender" : {"@id": "https://purl.org/hmas/jacamo/hasSender", "@type": "@id"} ,
+#    "receiver" : {"@id": "https://purl.org/hmas/jacamo/hasReceiver", "@type": "@id"} ,
+#    "content" : "https://purl.org/hmas/jacamo/hasContent", 
+#    "language" : {"@id": "https://purl.org/hmas/jacamo/hasLanguage", "@type": "@id"}
+#  }
 #}
                          
 # Generated JSON-LD Examples
@@ -1397,4 +1335,13 @@
 #  "hub.topic": "https://yggdrasil.interactions.ics.unisg.ch/workspaces/wksp1",
 #  "hub.mode": "subscription",
 #  "hub.callback": "https://yggdrasil.interactions.ics.unisg.ch/workspaces/wksp1/artifacts/agent1-body"
+#}
+#{
+#  "@id": "https://example.org/example-message",
+#  "@type": "https://purl.org/hmas/jacamo/ACLMessage",
+#  "performative": " "https://purl.org/hmas/fipa/informDone",
+#  "sender": "http://172.27.48.1:3272/agent-a",
+#  "receiver": "http://172.27.48.1:3272/agent-b",
+#  "content": "produce(10)",
+#  "language": "https://purl.org/hmas/jacamo/AgentSpeak"
 #}
