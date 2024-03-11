@@ -30,6 +30,8 @@
 @prefix jacamo: <https://purl.org/hmas/> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
 
 @prefix ufactory: <https://eu.robotshop.com/fr/collections/ufactory/> .
 @prefix m5stack: <https://docs.m5stack.com/en/products/> .
@@ -60,7 +62,7 @@ robotic-arm-1: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1>
@@ -73,7 +75,7 @@ robotic-arm-2: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2>
@@ -86,7 +88,7 @@ truck: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://10.2.2.183>
@@ -112,7 +114,7 @@ cup-production: a hmas:ResourceProfile ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <workspaces/cup-production-site>
@@ -174,7 +176,7 @@ body-agent-b: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://example.org/TBA>
@@ -187,7 +189,7 @@ body-agent-c: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://example.org/TBA>
@@ -200,7 +202,7 @@ body-agent-d: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://example.org/TBA>

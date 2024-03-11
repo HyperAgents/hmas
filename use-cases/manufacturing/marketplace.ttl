@@ -10,6 +10,8 @@
 @prefix jade: <https://purl.org/hmas/jade#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
 
 @prefix cpr-org: <https://ns.inria.fr/hmas/organizations/cpr#> .
 @prefix ypr-org: <https://ns.inria.fr/hmas/organizations/ypr#> .
@@ -36,7 +38,7 @@ agent-ra: a hmas:ResourceProfile ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://eduroamverw-130-82-24-247.unisg.ch:7778>
@@ -61,7 +63,7 @@ agent-rb: a hmas:ResourceProfile ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://eduroamverw-130-82-24-247.unisg.ch:7778>
@@ -99,7 +101,7 @@ plat: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://eduroamverw-130-82-24-247.unisg.ch:7778>

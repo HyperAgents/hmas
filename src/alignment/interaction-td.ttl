@@ -43,6 +43,13 @@ td:InteractionAffordance
 # Universals
 #############################################################
 
+:null a xsd:simpleType ;
+    rdfs:isDefinedBy :interaction ;
+    rdfs:comment "The null type"@en .
+
+:nullValue a :null ;
+    rdfs:isDefinedBy :interaction .
+
 :InvokeAction a sh:PropertyShape ;
     rdfs:isDefinedBy :interaction-td ;
     sh:path hctl:hasOperationType ;

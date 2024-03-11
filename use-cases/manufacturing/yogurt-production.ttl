@@ -25,6 +25,8 @@
 @prefix hmas: <https://purl.org/hmas/> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix td: <https://www.w3.org/2019/wot/td#> .
 
 @prefix org-dataset: <http://ns.inria.fr/hmas/organizations/organization-dataset.ttl#> .
 @prefix org-yogurt: <http://ns.inria.fr/hmas/organizations/yogurt-organization-specification.ttl#> .
@@ -53,7 +55,7 @@ filling-machine: a hmas:ResourceProfile ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <ros+ws://172.16.1.111:9090>
@@ -85,7 +87,7 @@ yogurt-production: a hmas:ResourceProfile ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <workspaces/yogurt-production-site>
@@ -149,7 +151,7 @@ body-agent-a: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://example.org/TBA>
@@ -162,7 +164,7 @@ body-agent-e: a hmas:ResourceProfile ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://example.org/TBA>
