@@ -1,0 +1,563 @@
+@base <http://ns.inria.fr/hmas/artifacts/xarm.ttl#> .
+@prefix : <> .
+
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix jsonld: <http://www.w3.org/ns/json-ld#> .
+@prefix interaction-http: <https://purl.org/hmas/interaction-http/> .
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+: rdf:type owl:Ontology ;
+  owl:imports hmas:core, hmas:interaction ;
+  vann:preferredNamespacePrefix "xarm" ;
+  vann:preferredNamespaceUri <> .
+
+###########
+# Classes #
+###########
+
+:XArmRoboticArm a owl:Class ;
+                rdfs:isDefinedBy : ;
+                rdfs:comment "An XArm robotic arm."@en ;
+    		rdfs:label "XArm robotic arm"@en .
+
+:AuthorizedOperator a owl:Class ;
+		    rdfs:isDefinedBy : ;
+                    rdfs:comment "An operator that holds a authorization token for operating a robotic arm."@en ;
+    		    rdfs:label "authorized operator"@en .
+
+:Operator a owl:Class ;
+	  rdfs:isDefinedBy : ;
+          rdfs:comment "An operator of a robotic arm."@en ;
+          rdfs:label "operator"@en .
+
+:Coordinates a owl:Class ;
+    	     rdfs:isDefinedBy : ;
+    	     rdfs:comment "Euclidian coordinates, for example, the coordinates of the TCP target of a robotic arm."@en ;
+             rdfs:label "coordinates"@en .
+
+:Rotation a owl:Class ;
+          rdfs:isDefinedBy : ;
+          rdfs:comment "Euler angles, for example, the angles of the TCP target of a robotic arm."@en ;
+          rdfs:label "rotation"@en .
+
+:TCP a owl:Class ;
+     rdfs:isDefinedBy : ;
+     rdfs:comment "The Tool Center Point (TCP) of a robotic arm."@en ;
+     rdfs:label "TCP"@en .
+
+:TCPMovement a owl:Class ;
+             rdfs:isDefinedBy : ;
+             rdfs:comment "A movement of the TCP of a robotic arm."@en ;
+	         rdfs:label "TCP movement"@en .
+
+:PerceiveOperator a owl:Class ;
+                  rdfs:isDefinedBy : ;
+                  rdfs:comment "The execution of the action to perceive an operator of a robotic arm."@en ;
+	          	  rdfs:label "perceive operator"@en .
+
+:PerceiveTCP a owl:Class ;
+             rdfs:isDefinedBy : ;
+             rdfs:comment "The execution of the action to perceive the TCP of a robotic arm, for example, the coordinates and rotation of its TCP."@en ;
+	     	 rdfs:label "perceive TCP"@en .
+
+:PerceiveTargetTCP a owl:Class ;
+                   rdfs:isDefinedBy : ;
+                   rdfs:comment "The execution of the action to perceive the target of a robotic arm, for example, the target of a TCP movement."@en ;
+	           	   rdfs:label "perceive target TCP"@en .
+
+:PerceiveGripper a owl:Class ;
+                 rdfs:isDefinedBy : ;
+                 rdfs:comment "The execution of the action to perceive the gripper of a robotic arm, for example, the aperture of the gripper."@en ;
+	         	 rdfs:label "perceive gripper"@en .
+
+:Reset a owl:Class ;
+       rdfs:isDefinedBy : ;
+       rdfs:comment "The execution of the action to reset a robotic arm, for example, by setting its TCP to its original position."@en ;
+       rdfs:label "reset"@en .
+
+:Register a owl:Class ;
+          rdfs:isDefinedBy : ;
+          rdfs:comment "The execution of the action to register as an operator of a robotic arm"@en ;
+          rdfs:label "register"@en .
+
+:UpdateTargetTCP a owl:Class ;
+           		 rdfs:isDefinedBy : ;
+           		 rdfs:comment "The execution of the action to update the target TCP of a robotic arm, initiating a TCP movement."@en ;
+           		 rdfs:label "update target TCP"@en .
+
+:UpdateGripper a owl:Class ;
+               rdfs:isDefinedBy : ;
+               rdfs:comment "The execution of the action to update the gripper of a robotic arm, for example, by modifying the gripper's aperture."@en ;
+               rdfs:label "update gripper"@en .
+
+###################
+# Data Properties #
+###################
+
+:hasOperatorToken a owl:DatatypeProperty ;
+	          	  rdfs:isDefinedBy : ;
+                  rdfs:comment "A relationship between an operator of a robotic arm and their authorization token."@en ;
+	    	  	  rdfs:domain :AuthorizedOperator ;
+		  		  rdfs:label "has operator token"@en .
+
+:hasXCoordinate a owl:DatatypeProperty ;
+				rdfs:isDefinedBy : ;
+                rdfs:comment "A relationship between a set of Cartesian coordinates and the X coordinate of the set."@en ;
+				rdfs:domain :Coordinates ;
+				rdfs:label "has X coordinate"@en .
+
+:hasYCoordinate a owl:DatatypeProperty ;
+				rdfs:isDefinedBy : ;
+                rdfs:comment "A relationship between a set of Cartesian coordinates and the Y coordinate of the set."@en ;
+				rdfs:domain :Coordinates ;
+				rdfs:label "has Y coordinate"@en .
+
+:hasZCoordinate a owl:DatatypeProperty ;
+				rdfs:isDefinedBy : ;
+                rdfs:comment "A relationship between a set of Cartesian coordinates and the Z coordinate of the set."@en ;
+				rdfs:domain :Coordinates ;
+				rdfs:label "has Z coordinate"@en .
+
+:hasRoll a owl:DatatypeProperty ;
+		 rdfs:isDefinedBy : ;
+    	 rdfs:comment "A relationship between a set of Euler angles and the roll coordinate of the set."@en ;
+		 rdfs:domain :Rotation ;
+		 rdfs:label "has roll"@en .
+
+:hasPitch a owl:DatatypeProperty ;
+	  	  rdfs:isDefinedBy : ;
+      	  rdfs:comment "A relationship between a set of Euler angles and the pitch coordinate of the set."@en ;
+	  	  rdfs:domain :Rotation ;
+	  	  rdfs:label "has pitch"@en .
+
+:hasYaw a owl:DatatypeProperty ;
+		rdfs:isDefinedBy : ;
+    	rdfs:comment "A relationship between a set of Euler angles and the yaw coordinate of the set."@en ;
+		rdfs:domain :Rotation ;
+		rdfs:label "has yaw"@en .
+
+
+:hasSpeed a owl:DatatypeProperty ;
+		  rdfs:isDefinedBy : ;
+		  rdfs:comment "A relationship between a TCP movement and its speed."@en ;
+		  rdfs:domain :TCPMovement ;
+		  rdfs:label "has speed"@en .
+
+#####################
+# Object Properties #
+#####################
+
+:hasCoordinates a owl:ObjectProperty ;
+				rdfs:isDefinedBy : ;
+                rdfs:comment "A relationship between a TCP and its Cartesian coordinates."@en ;
+	 			rdfs:domain :TCP ;
+	 			rdfs:range :Coordinates ;
+				rdfs:label "has coordinates"@en .
+
+:hasRotation a owl:ObjectProperty ;
+             rdfs:isDefinedBy : ;
+             rdfs:comment "A relationship between a TCP and its Euler angles."@en ;
+	     	 rdfs:domain :TCP ;
+	     	 rdfs:range :Rotation ;
+	     	 rdfs:label "has rotation"@en .
+
+:hasTargetTCP a owl:ObjectProperty ;
+              rdfs:isDefinedBy : ;
+              rdfs:comment "A relationship a TCP movement and its TCP target."@en ;
+	     	  rdfs:domain :TCPMovement ;
+	     	  rdfs:range :TCP ;
+	     	  rdfs:label "has rotation"@en .
+
+#########################################
+# Individuals - XArm Signifiers Catalog #
+#########################################
+
+:CherrybotCatalog a hmas:SignifiersCatalog ;
+    		  	  rdfs:comment "A catalog that proposes signifiers revealing how to interact with an XArm robotic arm."@en ;
+                  rdfs:label "XArm catalog"@en ;
+    		  	  hmas:proposesSignifier :perceivableOperator ,
+                                         :perceivableTCP ,
+                           	         	 :perceivableTargetTCP ,
+                                         :perceivableGripper ,
+                                         :resetableArm ,
+                                         :registrableOperator ,
+                                         :updatableTargetTCP ,
+                                         :updatableGripper ,
+                                         :deregistrableOperator .
+
+#######################################
+# Robotic Arm Endpoint specifications #
+#######################################
+
+:perceivableOperator a hmas:Signifier ;
+					 rdfs:isDefinedBy : ;
+                     rdfs:comment "The robotic arm affords perceiving its operator."@en ;
+					 rdfs:label "perceivable operator"@en ;
+    		     	 hmas:signifies [
+        	     	 	a sh:NodeShape , rdfs:Class ;
+        	     	 	sh:class hmas:ActionExecution, :PerceiveOperator ;
+        	     		sh:property [
+            				sh:path prov:used ;
+            				sh:qualifiedMinCount 1 ;
+            				sh:qualifiedMaxCount 1 ;
+            				sh:qualifiedValueShape [
+                				sh:class hctl:Form ;
+                				sh:property interaction-http:ReadProperty, interaction-http:GetMethod, interaction-http:forApplicatonJson, [
+                    				sh:path hctl:hasTarget ;
+                    				sh:minCount 1 ;
+                    				sh:maxCount 1 ;
+                    				sh:hasValue  "/operator"
+                				]
+            				]
+        				] , [
+            				sh:path hmas:hasOutput ;
+            				sh:qualifiedMinCount 1 ;
+				            sh:qualifiedMaxCount 1 ;
+            				sh:qualifiedValueShape :authorizedOperatorSpecification
+        				]
+    				].
+
+:perceivableTCP a hmas:Signifier ;
+			    rdfs:isDefinedBy : ;
+                rdfs:comment "The robotic arm affords perceiving its TCP."@en ;
+				rdfs:label "perceivable TCP"@en ;
+    			hmas:signifies [
+        			a sh:NodeShape , rdfs:Class ;
+        			sh:class hmas:ActionExecution, :PerceiveTCP ;
+        				sh:property [
+            				sh:path prov:used ;
+            				sh:qualifiedMinCount 1 ;
+            				sh:qualifiedMaxCount 1 ;
+            				sh:qualifiedValueShape [
+                				sh:class hctl:Form ;
+                				sh:property interaction-http:ReadProperty, interaction-http:GetMethod, interaction-http:forApplicatonJson, [
+				                    sh:path hctl:hasTarget ;
+                    				sh:minCount 1 ;
+                    				sh:maxCount 1 ;
+                    				sh:hasValue  "/tcp"
+                				]
+            				]
+        				] , [
+            				sh:path hmas:hasOutput ;
+            				sh:qualifiedMinCount 1 ;
+            				sh:qualifiedMaxCount 1 ;
+            				sh:qualifiedValueShape :TCPSpecification
+        				]
+    				].
+
+:perceivableTargetTCP a hmas:Signifier ;
+					  rdfs:isDefinedBy : ;
+                	  rdfs:comment "The robotic arm affords perceiving its target TCP."@en ;
+					  rdfs:label "perceivable target TCP"@en ;
+    				  hmas:signifies [
+        			  	a sh:NodeShape , rdfs:Class ;
+        				sh:class hmas:ActionExecution, :PerceiveTargetTCP ;
+        				sh:property [
+            				sh:path prov:used ;
+            				sh:qualifiedMinCount 1 ;
+            				sh:qualifiedMaxCount 1 ;
+            				sh:qualifiedValueShape [
+                				sh:class hctl:Form ;
+                				sh:property interaction-http:ReadProperty, interaction-http:GetMethod, interaction-http:forApplicatonJson, [
+				                	sh:path hctl:hasTarget ;
+                    				sh:minCount 1 ;
+                    				sh:maxCount 1 ;
+                    				sh:hasValue "/tcp/target"
+                				]
+            				]
+        				] , [
+            				sh:path hmas:hasOutput ;
+            				sh:qualifiedMinCount 1 ;
+            				sh:qualifiedMaxCount 1 ;
+            				sh:qualifiedValueShape :TCPSpecification
+        				]
+    				].
+
+:perceivableGripper a hmas:Signifier ;
+					rdfs:isDefinedBy : ;
+		            rdfs:comment "The robotic arm affords perceiving its gripper."@en ;
+					rdfs:label "perceivable gripper"@en ;
+				    hmas:signifies [
+						a sh:NodeShape , rdfs:Class ;
+        				sh:class hmas:ActionExecution, :PerceiveGripper ;
+        				sh:property [
+            				sh:path prov:used ;
+            				sh:qualifiedMinCount 1 ;
+            				sh:qualifiedMaxCount 1 ;
+            				sh:qualifiedValueShape [
+                				sh:class hctl:Form ;
+                				sh:property interaction-http:ReadProperty, interaction-http:GetMethod, interaction-http:forApplicatonJson, [
+                    				sh:path hctl:hasTarget ;
+                    				sh:minCount 1 ;
+                    				sh:maxCount 1 ;
+                    				sh:hasValue "/gripper"
+                				]
+            				]
+        				] , [
+            				sh:path hmas:hasOutput ;
+            				sh:minCount 1 ;
+            				sh:maxCount 1 ;
+            				sh:minExclusive 0 ;
+            				sh:maxExclusive 800 ;
+            				sh:datatype xsd:int
+        				]
+    				].
+
+:resetableArm a hmas:Signifier ;
+			  rdfs:isDefinedBy : ;
+			  rdfs:comment "The robotic arm affords reseting it."@en ;
+			  rdfs:label "resetable"@en ;
+    		  hmas:signifies [
+        	  	a sh:NodeShape , rdfs:Class ;
+        		sh:class hmas:ActionExecution, :Reset ;
+        		sh:property [
+            		sh:path prov:used ;
+            		sh:qualifiedMinCount 1 ;
+            		sh:qualifiedMaxCount 1 ;
+            		sh:qualifiedValueShape [
+                		sh:class hctl:Form ;
+                		sh:property interaction-http:InvokeAction, interaction-http:PutMethod, interaction-http:forApplicatonJson, [
+                    		sh:path hctl:hasTarget ;
+                    		sh:minCount 1 ;
+                    		sh:maxCount 1 ;
+                    		sh:hasValue "/initialize"
+                		]
+            		]
+       			]
+    		].
+
+:registrableOperator a hmas:Signifier ;
+					 rdfs:isDefinedBy : ;
+					 rdfs:comment "The robotic arm affords registering as its operator."@en ;
+			  		 rdfs:label "registrable"@en ;
+    				 hmas:signifies [
+        			 	a sh:NodeShape , rdfs:Class ;
+        				sh:class hmas:ActionExecution, :Register ;
+        				sh:property [
+            				sh:path prov:used ;
+            				sh:qualifiedMinCount 1 ;
+            				sh:qualifiedMaxCount 1 ;
+				            sh:qualifiedValueShape [
+                				sh:class hctl:Form ;
+                				sh:property interaction-http:InvokeAction, interaction-http:PostMethod, interaction-http:forApplicatonJson, [
+                    				sh:path hctl:hasTarget ;
+                    				sh:minCount 1 ;
+                    				sh:maxCount 1 ;
+                    				sh:hasValue "/operator"
+                				]
+            				]
+        				] , [
+            				sh:path hmas:hasInput ;
+            				sh:qualifiedMinCount 1 ;
+            				sh:qualifiedMaxCount 1 ;
+            				sh:qualifiedValueShape :operatorSpecification
+        				]
+    				].
+
+:updatableTargetTCP a hmas:Signifier ;
+					rdfs:isDefinedBy : ;
+					rdfs:comment "The robotic arm affords updating its target TCP."@en ;
+			  		rdfs:label "updatable target TCP"@en ;
+    				hmas:signifies [
+        				a sh:NodeShape , rdfs:Class ;
+        				sh:class hmas:ActionExecution, :UpdateTargetTCP ;
+        				sh:property [
+            				sh:path prov:used ;
+            				sh:qualifiedMinCount 1 ;
+            				sh:qualifiedMaxCount 1 ;
+            				sh:qualifiedValueShape [
+                				sh:class hctl:Form ;
+                				sh:property interaction-http:InvokeAction, interaction-http:PostMethod, interaction-http:forApplicatonJson, [
+                    				sh:path hctl:hasTarget ;
+                    				sh:minCount 1 ;
+                    				sh:maxCount 1 ;
+                    				sh:hasValue "/tcp/target"
+                				]
+           					 ]
+        				 ] , [
+            				 sh:path hmas:hasInput ;
+            				 sh:qualifiedMinCount 1 ;
+            				 sh:qualifiedMaxCount 1 ;
+            				 sh:qualifiedValueShape :TCPMovement
+        				 ]
+    				 ].
+
+:updatableGripper a hmas:Signifier ;
+				  rdfs:isDefinedBy : ;
+				  rdfs:comment "The robotic arm affords updating its gripper."@en ;
+			  	  rdfs:label "updatable gripper"@en ;
+    			  hmas:signifies [
+        		  	a sh:NodeShape , rdfs:Class ;
+        			sh:class hmas:ActionExecution, :UpdateGripper ;
+        			sh:property [
+            			sh:path prov:used ;
+            			sh:qualifiedMinCount 1 ;
+            			sh:qualifiedMaxCount 1 ;
+            			sh:qualifiedValueShape [
+                			sh:class hctl:Form ;
+                			sh:property interaction-http:InvokeAction, interaction-http:PostMethod, interaction-http:forApplicatonJson, [
+                    			sh:path hctl:hasTarget ;
+                    			sh:minCount 1 ;
+                    			sh:maxCount 1 ;
+                    			sh:hasValue "/gripper"
+                			]
+            			]
+        			] , [
+            			sh:path hmas:hasInput ;
+            			sh:minCount 1 ;
+            			sh:maxCount 1 ;
+            			sh:minExclusive 0 ;
+            			sh:maxExclusive 800 ;
+            			sh:datatype xsd:int
+       				 ]
+    ] .
+
+:deregistrableOperator a hmas:Signifier ;
+					   rdfs:isDefinedBy : ;
+				  	   rdfs:comment "The robotic arm affords de-registering as an operator."@en ;
+			  	  	   rdfs:label "de-registrable"@en ;
+    				   hmas:signifies [
+        			   	  a sh:NodeShape , rdfs:Class ;
+        				  sh:class hmas:ActionExecution, :Deregister ;
+        				  sh:property [
+            			  	sh:path prov:used ;
+            				sh:qualifiedMinCount 1 ;
+            				sh:qualifiedMaxCount 1 ;
+            				sh:qualifiedValueShape [
+                				sh:class hctl:Form ;
+                				sh:property interaction-http:InvokeAction, interaction-http:DeleteMethod, interaction-http:forApplicatonJson, [
+                    				sh:path hctl:hasTarget ;
+                    				sh:minCount 1 ;
+                    				sh:maxCount 1 ;
+                    				sh:hasValue ""
+                				]
+            				]
+        				]
+    				].
+
+##################################
+# Universals - SHACL Node Shapes #
+##################################
+
+:authorizedOperatorSpecification a sh:NodeShape ;
+    sh:class :AuthorizedOperator ;
+    sh:property [
+        sh:path foaf:Name;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] , [
+        sh:path foaf:mbox ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] , [
+        sh:path :hasOperatorToken ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] .
+
+:operatorSpecification a sh:NodeShape ;
+    sh:class :Operator ;
+    sh:property [
+        sh:path foaf:name ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] , [
+        sh:path foaf:mbox ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string
+    ] .
+
+:coordinatesSpecification a sh:NodeShape ;
+    sh:class :Coordinates ;
+    sh:property [
+        sh:path :hasXCoordinate ;
+        sh:minExclusive -7.2E2 ;
+        sh:maxExclusive 7.2E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] , [
+        sh:path :hasYCoordinate ;
+        sh:minExclusive -7.2E2 ;
+        sh:maxExclusive 7.2E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] , [
+        sh:path :hasZCoordinate ;
+        sh:minExclusive -7.2E2 ;
+        sh:maxExclusive 7.2E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] .
+
+:rotationSpecification a sh:NodeShape ;
+    sh:class :Rotation ;
+    sh:property [
+        sh:path :hasRoll ;
+        sh:minExclusive -1.8E2 ;
+        sh:maxExclusive 1.8E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] , [
+        sh:path :hasPitch ;
+        sh:minExclusive -1.8E2 ;
+        sh:maxExclusive 1.8E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] , [
+        sh:path :hasYaw ;
+        sh:minExclusive -1.8E2 ;
+        sh:maxExclusive 1.8E2 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float 
+    ] .
+
+:TCPSpecification a sh:NodeShape ;
+    sh:class :TCP ;
+    sh:property [
+        sh:path :hasCoordinates ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape :coordinatesSpecification
+    ] , [
+        sh:path :hasRotation ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape :rotationSpecification
+    ] .
+
+:TCPMovementSpecification a sh:NodeShape ;
+    sh:class :TCPMovement ;
+    sh:property [
+        sh:path :hasTargetTCP ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape :TCPSpecification
+    ] , [
+        sh:path :hasSpeed ;
+        sh:minInclusive 10 ;
+        sh:maxInclusive 400 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:int
+    ] .
