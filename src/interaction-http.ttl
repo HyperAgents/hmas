@@ -1,4 +1,4 @@
-@base <https://purl.org/hmas/> .
+@base <https://purl.org/hmas/interaction-http/> .
 @prefix : <> .
 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,59 +11,59 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
-:http rdf:type owl:Ontology ;
-    owl:imports :interaction ;
-    vann:preferredNamespacePrefix "hmas" ;
-    vann:preferredNamespaceUri <> .
+: rdf:type owl:Ontology ;
+  owl:imports :interaction ;
+  vann:preferredNamespacePrefix "interaction-http" ;
+  vann:preferredNamespaceUri <> .
 
 ##############
 # Universals #
 ##############
 
 :forApplicatonJson a sh:PropertyShape ;
-    rdfs:isDefinedBy :http ;
+    rdfs:isDefinedBy : ;
     sh:path hctl:forContentType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "application/json" .
 
 :forTextTurtle a sh:PropertyShape ;
-    rdfs:isDefinedBy :http ;
+    rdfs:isDefinedBy : ;
     sh:path hctl:forContentType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "text/turtle" .
 
 :GetMethod a sh:PropertyShape ;
-    rdfs:isDefinedBy :http ;
+    rdfs:isDefinedBy : ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "GET" .
 
 :PutMethod a sh:PropertyShape ;
-    rdfs:isDefinedBy :http ;
+    rdfs:isDefinedBy : ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "PUT" .
 
 :PostMethod a sh:PropertyShape ;
-    rdfs:isDefinedBy :http ;
+    rdfs:isDefinedBy : ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "POST" .
 
 :DeleteMethod a sh:PropertyShape ;
-    rdfs:isDefinedBy :http ;
+    rdfs:isDefinedBy : ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "DELETE" .
 
 :AuthorizationHeader a sh:NodeShape ;
-    rdfs:isDefinedBy :http ;
+    rdfs:isDefinedBy : ;
     sh:class :ActionExecution ;
     sh:property [
         sh:path (
@@ -91,7 +91,7 @@
     ] .
 
 :SlugHeader a sh:NodeShape ;
-    rdfs:isDefinedBy :http ;
+    rdfs:isDefinedBy : ;
     sh:class :ActionExecution ;
     sh:property [
         sh:path (
@@ -118,7 +118,7 @@
     ] .
 
 :XAgentWebIDHeader a sh:NodeShape ;
-    rdfs:isDefinedBy :http ;
+    rdfs:isDefinedBy : ;
     sh:class :ActionExecution ;
     sh:property [
         sh:path (
