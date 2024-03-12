@@ -367,7 +367,7 @@
 
 :unbservablePlatform rdf:type hmas:Signifier ;
                      rdfs:isDefinedBy : ;
-                     rdfs:comment "The workspace affords unobserving it."@en ;
+                     rdfs:comment "The platform affords unobserving it."@en ;
                      rdfs:label "unobservable"@en ;
                      hmas:signifies [
                           a sh:NodeShape , rdfs:Class ;
@@ -392,7 +392,7 @@
 
 :workspaceHostablePlatform rdf:type hmas:Signifier ;
                            rdfs:isDefinedBy : ;
-                           rdfs:comment "The workspace affords making new workspaces."@en ;
+                           rdfs:comment "The platform affords making new workspaces."@en ;
                            rdfs:label "hosting-able"@en ;
                            hmas:signifies [
                                a sh:NodeShape , rdfs:Class ;
