@@ -1,6 +1,8 @@
 @base <https://purl.org/hmas/interaction-http/> .
 @prefix : <> .
 
+
+@prefix hmas: <https://purl.org/hmas/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -12,7 +14,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 
 : rdf:type owl:Ontology ;
-  owl:imports :interaction ;
+  owl:imports hmas:interaction ;
   vann:preferredNamespacePrefix "interaction-http" ;
   vann:preferredNamespaceUri <> .
 
@@ -20,51 +22,51 @@
 # Universals #
 ##############
 
-:forApplicatonJson a sh:PropertyShape ;
+:forApplicatonJson rdf:type sh:PropertyShape ;
     rdfs:isDefinedBy : ;
     sh:path hctl:forContentType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "application/json" .
 
-:forTextTurtle a sh:PropertyShape ;
+:forTextTurtle rdf:type sh:PropertyShape ;
     rdfs:isDefinedBy : ;
     sh:path hctl:forContentType ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "text/turtle" .
 
-:GetMethod a sh:PropertyShape ;
+:GetMethod rdf:type sh:PropertyShape ;
     rdfs:isDefinedBy : ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "GET" .
 
-:PutMethod a sh:PropertyShape ;
+:PutMethod rdf:type sh:PropertyShape ;
     rdfs:isDefinedBy : ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "PUT" .
 
-:PostMethod a sh:PropertyShape ;
+:PostMethod rdf:type sh:PropertyShape ;
     rdfs:isDefinedBy : ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "POST" .
 
-:DeleteMethod a sh:PropertyShape ;
+:DeleteMethod rdf:type sh:PropertyShape ;
     rdfs:isDefinedBy : ;
     sh:path htv:methodName ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue "DELETE" .
 
-:AuthorizationHeader a sh:NodeShape ;
+:AuthorizationHeader rdf:type sh:NodeShape ;
     rdfs:isDefinedBy : ;
-    sh:class :ActionExecution ;
+    sh:class hmas:ActionExecution ;
     sh:property [
         sh:path (
             prov:used
@@ -90,9 +92,9 @@
         ]
     ] .
 
-:SlugHeader a sh:NodeShape ;
+:SlugHeader rdf:type sh:NodeShape ;
     rdfs:isDefinedBy : ;
-    sh:class :ActionExecution ;
+    sh:class hmas:ActionExecution ;
     sh:property [
         sh:path (
             htv:headers
@@ -117,9 +119,9 @@
         ]
     ] .
 
-:XAgentWebIDHeader a sh:NodeShape ;
+:XAgentWebIDHeader rdf:type sh:NodeShape ;
     rdfs:isDefinedBy : ;
-    sh:class :ActionExecution ;
+    sh:class hmas:ActionExecution ;
     sh:property [
         sh:path (
             htv:headers
