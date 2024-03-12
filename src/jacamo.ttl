@@ -19,9 +19,9 @@
 
 
 : rdf:type owl:Ontology ;
-    owl:imports hmas:core, hmas:interaction ;
-    vann:preferredNamespacePrefix "jacamo" ;
-    vann:preferredNamespaceUri <> .
+  owl:imports hmas:core, hmas:interaction ;
+  vann:preferredNamespacePrefix "jacamo" ;
+  vann:preferredNamespaceUri <> .
 
 ###########
 # Classes #
