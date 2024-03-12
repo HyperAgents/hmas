@@ -571,53 +571,57 @@
     jsonld:version 1.1 ;
     jsonld:definition [
         a jsonld:TermDefinition;
-        jsonld:term "artifactName" ;
-        jsonld:iri <https://purl.org/hmas/jacamo/hasName>
+        jsonld:term "target" ;
+        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasTargetTCP>
     ], [
         a jsonld:TermDefinition ;
-        jsonld:term "hasClass";
-        jsonld:iri <https://purl.org/hmas/jacamo/hasClass> 
+        jsonld:term "speed";
+        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasSpeed> 
     ], [
         a jsonld:TermDefinition ;
-        jsonld:term "initParams" ;
-        jsonld:iri <https://purl.org/hmas/jacamo/hasInitialisationParameters> ;
+        jsonld:term "coordinate" ;
+        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasCoordinates> ;
         jsonld:container jsonld:listContainerType  
     ], [
         a jsonld:TermDefinition ;
-        jsonld:term "hub.topic" ;
-        jsonld:iri <http://example.org/websub/topic> 
+        jsonld:term "rotation" ;
+        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasRotation> 
     ], [
         a jsonld:TermDefinition ;
-        jsonld:term "hub.mode" ;
-        jsonld:iri <http://example.org/websub/mode> 
+        jsonld:term "x" ;
+        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasXCoordinate> 
     ], [
         a jsonld:TermDefinition ;
-        jsonld:term "hub.callback" ;
-        jsonld:iri <http://example.org/websub/callback> 
+        jsonld:term "y" ;
+        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasYCoordinate> 
     ], [
         a jsonld:TermDefinition ;
-        jsonld:term "performative" ;
-        jsonld:iri <https://purl.org/hmas/jacamo/hasPerformative> ;
-        jsonld:type jsonld:idContainerType 
+        jsonld:term "z" ;
+        jsonld:iri <hasZCoordinate> 
     ], [
         a jsonld:TermDefinition ;
-        jsonld:term "sender" ;
-        jsonld:iri <https://purl.org/hmas/jacamo/hasSender> ;
-        jsonld:type jsonld:idContainerType 
+        jsonld:term "roll" ;
+        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasRoll> 
     ], [
         a jsonld:TermDefinition ;
-        jsonld:term "receiver" ;
-        jsonld:iri <https://purl.org/hmas/jacamo/hasReceiver> ;
-        jsonld:type jsonld:idContainerType 
+        jsonld:term "pitch" ;
+        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasPitch> ;
     ], [
         a jsonld:TermDefinition ;
-        jsonld:term "content" ;
-        jsonld:iri <https://purl.org/hmas/jacamo/hasContent> 
+        jsonld:term "yaw" ;
+        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasYaw> 
     ], [
         a jsonld:TermDefinition ;
-        jsonld:term "language" ;
-        jsonld:iri <https://purl.org/hmas/jacamo/hasLanguage> ;
-        jsonld:type jsonld:idContainerType 
+        jsonld:term "token" ;
+        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasOperatorToken> ;
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "name" ;
+        jsonld:iri <http://xmlns.com/foaf/0.1/name> ;
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "email" ;
+        jsonld:iri <http://xmlns.com/foaf/0.1/Mbox> ;
     ].
 
 # Equivalent JSON-LD context
@@ -629,8 +633,8 @@
 #    "coordinate": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasCoordinates",
 #    "rotation" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasRotation",
 #    "x" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasXCoordinate",
-#    "y": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasXCoordinate",
-#    "z" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasXCoordinate",
+#    "y": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasYCoordinate",
+#    "z" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasZCoordinate",
 #    "roll" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasRoll",
 #    "pitch": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasPitch",
 #    "yaw" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasYaw",
@@ -642,25 +646,46 @@
                          
 # Generated JSON-LD Examples
 #{
-#  "@id": "https://example.org/example-artifact",
-#  "@type": "https://purl.org/hmas/Artifact",
-#  "artifactClass": "http://example.org/Counter",
-#  "initParams": [ 5 ],
-#  "artifactName": "c0"
+#  "@id": "http://example.org/example-operator",
+#  "@type": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#AuthorizedOperator",
+#  "token": "example-token",
+#  "email": "nicolas@example.org",
+#  "name": "Nicolas"
 #}
 #{
-#  "@id": "https://example.org/example-subscription",
-#  "@type": "http://example.org/websub/Subscription",
-#  "hub.topic": "https://yggdrasil.interactions.ics.unisg.ch/workspaces/wksp1",
-#  "hub.mode": "subscription",
-#  "hub.callback": "https://yggdrasil.interactions.ics.unisg.ch/workspaces/wksp1/artifacts/agent1-body"
+#  "@id": "http://example.org/example-tcp",
+#  "@type": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#TCP",
+#  "coordinate": {
+#    "@id": "_:b0",
+#    "x": 300,
+#    "y": 0,
+#    "z": 400
+#  },
+#  "rotation": {
+#     "@id": "_:b1",
+#     "pitch": 0,
+#     "roll": 180,
+#     "yaw": 0
+#  }
 #}
 #{
-#  "@id": "https://example.org/example-message",
-#  "@type": "https://purl.org/hmas/jacamo/ACLMessage",
-#  "performative": " "https://purl.org/hmas/fipa/informDone",
-#  "sender": "http://172.27.48.1:3272/agent-a",
-#  "receiver": "http://172.27.48.1:3272/agent-b",
-#  "content": "produce(10)",
-#  "language": "https://purl.org/hmas/jacamo/AgentSpeak"
+#  "@id": "http://example.org/example-tcp-movement",
+#  "@type": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#TCPMovement",
+#  "speed": 50,
+#  "target": {
+#     "@id": "_:b0",
+#     "coordinate": {
+#         "@id": "_:b1",
+#         "x": 300,
+#         "y": 0,
+#         "z": 400
+#     },
+#     "rotation": {
+#         "@id": "_:b2",
+#         "pitch": 0,
+#         "roll": 180,
+#         "yaw": 0
+#     }
+#  }
 #}
+
