@@ -58,27 +58,27 @@
 :TCPMovement a owl:Class ;
              rdfs:isDefinedBy : ;
              rdfs:comment "A movement of the TCP of a robotic arm."@en ;
-	         rdfs:label "TCP movement"@en .
+	     rdfs:label "TCP movement"@en .
 
 :PerceiveOperator a owl:Class ;
                   rdfs:isDefinedBy : ;
                   rdfs:comment "The execution of the action to perceive an operator of a robotic arm."@en ;
-	          	  rdfs:label "perceive operator"@en .
+	          rdfs:label "perceive operator"@en .
 
 :PerceiveTCP a owl:Class ;
              rdfs:isDefinedBy : ;
              rdfs:comment "The execution of the action to perceive the TCP of a robotic arm, for example, the coordinates and rotation of its TCP."@en ;
-	     	 rdfs:label "perceive TCP"@en .
+	     rdfs:label "perceive TCP"@en .
 
 :PerceiveTargetTCP a owl:Class ;
                    rdfs:isDefinedBy : ;
                    rdfs:comment "The execution of the action to perceive the target of a robotic arm, for example, the target of a TCP movement."@en ;
-	           	   rdfs:label "perceive target TCP"@en .
+	           rdfs:label "perceive target TCP"@en .
 
 :PerceiveGripper a owl:Class ;
                  rdfs:isDefinedBy : ;
                  rdfs:comment "The execution of the action to perceive the gripper of a robotic arm, for example, the aperture of the gripper."@en ;
-	         	 rdfs:label "perceive gripper"@en .
+	         rdfs:label "perceive gripper"@en .
 
 :Reset a owl:Class ;
        rdfs:isDefinedBy : ;
@@ -105,53 +105,53 @@
 ###################
 
 :hasOperatorToken a owl:DatatypeProperty ;
-	          	  rdfs:isDefinedBy : ;
+	          rdfs:isDefinedBy : ;
                   rdfs:comment "A relationship between an operator of a robotic arm and their authorization token."@en ;
-	    	  	  rdfs:domain :AuthorizedOperator ;
-		  		  rdfs:label "has operator token"@en .
+	    	  rdfs:domain :AuthorizedOperator ;
+		  rdfs:label "has operator token"@en .
 
 :hasXCoordinate a owl:DatatypeProperty ;
-				rdfs:isDefinedBy : ;
+		rdfs:isDefinedBy : ;
                 rdfs:comment "A relationship between a set of Cartesian coordinates and the X coordinate of the set."@en ;
-				rdfs:domain :Coordinates ;
-				rdfs:label "has X coordinate"@en .
+		rdfs:domain :Coordinates ;
+		rdfs:label "has X coordinate"@en .
 
 :hasYCoordinate a owl:DatatypeProperty ;
-				rdfs:isDefinedBy : ;
+		rdfs:isDefinedBy : ;
                 rdfs:comment "A relationship between a set of Cartesian coordinates and the Y coordinate of the set."@en ;
-				rdfs:domain :Coordinates ;
-				rdfs:label "has Y coordinate"@en .
+		rdfs:domain :Coordinates ;
+		rdfs:label "has Y coordinate"@en .
 
 :hasZCoordinate a owl:DatatypeProperty ;
-				rdfs:isDefinedBy : ;
+		rdfs:isDefinedBy : ;
                 rdfs:comment "A relationship between a set of Cartesian coordinates and the Z coordinate of the set."@en ;
-				rdfs:domain :Coordinates ;
-				rdfs:label "has Z coordinate"@en .
+		rdfs:domain :Coordinates ;
+		rdfs:label "has Z coordinate"@en .
 
 :hasRoll a owl:DatatypeProperty ;
-		 rdfs:isDefinedBy : ;
-    	 rdfs:comment "A relationship between a set of Euler angles and the roll coordinate of the set."@en ;
+	 rdfs:isDefinedBy : ;
+    	 	 rdfs:comment "A relationship between a set of Euler angles and the roll coordinate of the set."@en ;
 		 rdfs:domain :Rotation ;
 		 rdfs:label "has roll"@en .
 
 :hasPitch a owl:DatatypeProperty ;
 	  	  rdfs:isDefinedBy : ;
-      	  rdfs:comment "A relationship between a set of Euler angles and the pitch coordinate of the set."@en ;
+      	  	  rdfs:comment "A relationship between a set of Euler angles and the pitch coordinate of the set."@en ;
 	  	  rdfs:domain :Rotation ;
 	  	  rdfs:label "has pitch"@en .
 
 :hasYaw a owl:DatatypeProperty ;
-		rdfs:isDefinedBy : ;
+	rdfs:isDefinedBy : ;
     	rdfs:comment "A relationship between a set of Euler angles and the yaw coordinate of the set."@en ;
-		rdfs:domain :Rotation ;
-		rdfs:label "has yaw"@en .
+	rdfs:domain :Rotation ;
+	rdfs:label "has yaw"@en .
 
 
 :hasSpeed a owl:DatatypeProperty ;
-		  rdfs:isDefinedBy : ;
-		  rdfs:comment "A relationship between a TCP movement and its speed."@en ;
-		  rdfs:domain :TCPMovement ;
-		  rdfs:label "has speed"@en .
+	  rdfs:isDefinedBy : ;
+	  rdfs:comment "A relationship between a TCP movement and its speed."@en ;
+	  rdfs:domain :TCPMovement ;
+	  rdfs:label "has speed"@en .
 
 #####################
 # Object Properties #
@@ -159,7 +159,7 @@
 
 :hasCoordinates a owl:ObjectProperty ;
 				rdfs:isDefinedBy : ;
-                rdfs:comment "A relationship between a TCP and its Cartesian coordinates."@en ;
+                		rdfs:comment "A relationship between a TCP and its Cartesian coordinates."@en ;
 	 			rdfs:domain :TCP ;
 	 			rdfs:range :Coordinates ;
 				rdfs:label "has coordinates"@en .
@@ -167,16 +167,16 @@
 :hasRotation a owl:ObjectProperty ;
              rdfs:isDefinedBy : ;
              rdfs:comment "A relationship between a TCP and its Euler angles."@en ;
-	     	 rdfs:domain :TCP ;
-	     	 rdfs:range :Rotation ;
-	     	 rdfs:label "has rotation"@en .
+	     rdfs:domain :TCP ;
+	     rdfs:range :Rotation ;
+	     rdfs:label "has rotation"@en .
 
 :hasTargetTCP a owl:ObjectProperty ;
               rdfs:isDefinedBy : ;
               rdfs:comment "A relationship a TCP movement and its TCP target."@en ;
-	     	  rdfs:domain :TCPMovement ;
-	     	  rdfs:range :TCP ;
-	     	  rdfs:label "has rotation"@en .
+	      rdfs:domain :TCPMovement ;
+	      rdfs:range :TCP ;
+	      rdfs:label "has rotation"@en .
 
 #########################################
 # Individuals - XArm Signifiers Catalog #
@@ -561,3 +561,106 @@
         sh:maxCount 1 ;
         sh:datatype xsd:int
     ] .
+
+###################
+# JSON-LD Context #
+###################
+
+:context a jsonld:Context ;
+    rdfs:isDefinedBy : ;
+    jsonld:version 1.1 ;
+    jsonld:definition [
+        a jsonld:TermDefinition;
+        jsonld:term "artifactName" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasName>
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "hasClass";
+        jsonld:iri <https://purl.org/hmas/jacamo/hasClass> 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "initParams" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasInitialisationParameters> ;
+        jsonld:container jsonld:listContainerType  
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "hub.topic" ;
+        jsonld:iri <http://example.org/websub/topic> 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "hub.mode" ;
+        jsonld:iri <http://example.org/websub/mode> 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "hub.callback" ;
+        jsonld:iri <http://example.org/websub/callback> 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "performative" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasPerformative> ;
+        jsonld:type jsonld:idContainerType 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "sender" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasSender> ;
+        jsonld:type jsonld:idContainerType 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "receiver" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasReceiver> ;
+        jsonld:type jsonld:idContainerType 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "content" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasContent> 
+    ], [
+        a jsonld:TermDefinition ;
+        jsonld:term "language" ;
+        jsonld:iri <https://purl.org/hmas/jacamo/hasLanguage> ;
+        jsonld:type jsonld:idContainerType 
+    ].
+
+# Equivalent JSON-LD context
+#{
+#  "@context": {
+#    "@version" : 1.1,
+#    "target" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasTargetTCP",
+#    "speed": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasSpeed",
+#    "coordinate": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasCoordinates",
+#    "rotation" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasRotation",
+#    "x" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasXCoordinate",
+#    "y": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasXCoordinate",
+#    "z" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasXCoordinate",
+#    "roll" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasRoll",
+#    "pitch": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasPitch",
+#    "yaw" : "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasYaw",
+#    "token": "http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasOperatorToken",
+#    "name" : "http://xmlns.com/foaf/0.1/name",
+#    "email" : "http://xmlns.com/foaf/0.1/Mbox"
+#  }
+#}
+                         
+# Generated JSON-LD Examples
+#{
+#  "@id": "https://example.org/example-artifact",
+#  "@type": "https://purl.org/hmas/Artifact",
+#  "artifactClass": "http://example.org/Counter",
+#  "initParams": [ 5 ],
+#  "artifactName": "c0"
+#}
+#{
+#  "@id": "https://example.org/example-subscription",
+#  "@type": "http://example.org/websub/Subscription",
+#  "hub.topic": "https://yggdrasil.interactions.ics.unisg.ch/workspaces/wksp1",
+#  "hub.mode": "subscription",
+#  "hub.callback": "https://yggdrasil.interactions.ics.unisg.ch/workspaces/wksp1/artifacts/agent1-body"
+#}
+#{
+#  "@id": "https://example.org/example-message",
+#  "@type": "https://purl.org/hmas/jacamo/ACLMessage",
+#  "performative": " "https://purl.org/hmas/fipa/informDone",
+#  "sender": "http://172.27.48.1:3272/agent-a",
+#  "receiver": "http://172.27.48.1:3272/agent-b",
+#  "content": "produce(10)",
+#  "language": "https://purl.org/hmas/jacamo/AgentSpeak"
+#}
