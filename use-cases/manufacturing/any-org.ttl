@@ -1,0 +1,35 @@
+@prefix hmas: <https://purl.org/hmas/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+@prefix any-org: <http://ns.inria.fr/hmas/organizations/any-org#> .
+
+# Organizational value specification
+
+any-org:IntegrityRespect a hmas:OrganizationalValue ;
+    rdfs:comment "Communicate openly and honestly with the customers and other members of the organization."@en ;
+    rdfs:label "integrity and respect"@en, "intégrité et respect"@fr .
+
+# Roles specifications
+
+any-org:SellerRepresentative a hmas:Role .
+any-org:OrderManager a hmas:Role .
+any-org:Operator a hmas:Role .
+any-org:FactoryManagerRepresentative a hmas:Role .
+any-org:FactoryManager a hmas:Role .
+any-org:Deliverer a hmas:Role .
+
+# Groups specifications
+
+any-org:BusinessGroup a sh:NodeShape , rdfs:Class ;
+    rdfs:subClassOf hmas:Group .
+
+any-org:ProductionGroup a sh:NodeShape , rdfs:Class ;
+    rdfs:subClassOf hmas:Group .
+
+any-org:DeliveryGroup a sh:NodeShape , rdfs:Class ;
+    rdfs:subClassOf hmas:Group .
+
+## Relation Specifications
+any-org:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .

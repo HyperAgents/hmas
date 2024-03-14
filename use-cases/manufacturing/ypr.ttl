@@ -1,0 +1,38 @@
+@base <https://ns.inria.fr/hmas/> .
+
+@prefix any-org: <organizations/any-org#> .
+@prefix yogurt-spec: <organizations/specifications/yogurt#> .
+@prefix ypr: <organizations/instances/ypr#> .
+
+@prefix agent-a: <workspaces/cup-production-site/agents/agent-a#> .
+@prefix agent-e: <workspaces/cup-production-site/agents/agent-e#> .
+@prefix agent-ra: <market-place/agents/agent-ra#> .
+
+@prefix hmas: <https://purl.org/hmas/> .
+
+ypr:BusinessGroup a any-org:BusinessGroup .
+ypr:ProductionGroup a any-org:ProductionGroup .
+
+ypr:ProductionOperator a yogurt-spec:ProductionOperator ;
+    hmas:isMembershipOf agent-e:agent ;
+    hmas:isMembershipFor any-org:Operator ;
+    hmas:isMembershipIn ypr:ProductionGroup .
+
+ypr:ProductionFactoryManager a yogurt-spec:ProductionFactoryManager ;
+    hmas:isMembershipOf agent-a:agent ;
+    hmas:isMembershipFor any-org:FactoryManager ;
+    hmas:isMembershipIn ypr:ProductionGroup .
+
+ypr:BusinessFactoryManagerRepresentative a yogurt-spec:BusinessFactoryManagerRepresentative ;
+    hmas:isMembershipOf agent-ra:agent ;
+    hmas:isMembershipFor any-org:FactoryManagerRepresentative ;
+    hmas:isMembershipIn ypr:BusinessGroup .
+
+ypr:ProductionFactoryManager any-org:canCommunicateWith ypr:BusinessFactoryManagerRepresentative .
+ypr:ProductionFactoryManager any-org:canCommunicateWith ypr:ProductionOperator .
+
+ypr:organization a yogurt-spec:GenericYogurtCompanyOrganization ;
+    hmas:hasProfile ypr: ;
+    hmas:hasOrganizationalValue any-org:IntegrityRespect ;
+    hmas:providesRole any-org:FactoryManagerRepresentative , any-org:FactoryManager , any-org:Operator ;
+    hmas:isStructuredBy ypr:BusinessGroup , ypr:ProductionGroup .

@@ -1,0 +1,111 @@
+@base <http://ns.inria.fr/hmas/organizations/> .
+
+@prefix any-org: <any-org#> .
+@prefix cup-spec: <specifications/cup#> .
+@prefix cpr: <instances/cpr#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hmas: <https://purl.org/hmas/> .
+
+######################################
+# Generic organization specification #
+######################################
+
+# Memberships specifications
+
+cup-spec:ProductionOperator a sh:NodeShape , rdfs:Class ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue any-org:Operator
+    ] , [
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class any-org:ProductionGroup ]
+    ] .
+
+cup-spec:ProductionOrderManager a sh:NodeShape , rdfs:Class ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue any-org:OrderManager
+    ] , [
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class any-org:ProductionGroup ]
+    ] .
+
+cup-spec:BusinessSellerRepresentative a sh:NodeShape , rdfs:Class ;
+    rdfs:subClassOf hmas:Membership , rdfs:Class ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ]
+    ] , [
+        sh:path hmas:isMembershipFor ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue any-org:SellerRepresentative
+    ] , [
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class any-org:BusinessGroup ]
+    ] .
+
+# Generic organization specification
+
+cup-spec:GenericCupCompanyOrganization a sh:NodeShape , rdfs:Class ;
+    rdfs:subClassOf hmas:Organization ;
+    sh:property [
+        sh:path hmas:hasOrganizationalValue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue any-org:IntegrityRespect
+    ] , [
+        sh:path hmas:providesRole ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue any-org:SellerRepresentative 
+    ] , [
+        sh:path hmas:providesRole ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue any-org:OrderManager
+    ] , [
+        sh:path hmas:providesRole ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:hasValue any-org:Operator
+    ] , [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class any-org:BusinessGroup ] ;
+        sh:qualifiedValuesShapeDisjoint true
+    ] , [
+        sh:path hmas:isStructuredBy ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        sh:qualifiedValueShape [ sh:class any-org:ProductionGroup ] ; 
+        sh:qualifiedValuesShapeDisjoint true
+    ] .

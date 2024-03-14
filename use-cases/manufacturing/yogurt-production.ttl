@@ -28,9 +28,6 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix td: <https://www.w3.org/2019/wot/td#> .
 
-@prefix org-dataset: <http://ns.inria.fr/hmas/organizations/organization-dataset.ttl#> .
-@prefix org-yogurt: <http://ns.inria.fr/hmas/organizations/yogurt-organization-specification.ttl#> .
-
 @prefix aa: <https://purl.org/hmas/> .
 @prefix jacamo: <https://purl.org/hmas/> .
 
@@ -170,17 +167,6 @@ body-agent-e: a hmas:ResourceProfile ;
             sh:hasValue <http://example.org/TBA>
         ]
     ] .
-
-
-################
-# Organization #
-################
-
-ypr-org:organization a org-yogurt:GenericYogurtCompanyOrganization ;
-    hmas:hasProfile ypr-org: ;
-    hmas:hasOrganizationalValue org-dataset:IntegrityRespect ;
-    hmas:providesRole org-dataset:FactoryManagerRepresentative , org-dataset:FactoryManager , org-dataset:Operator ;
-    hmas:isStructuredBy org-yogurt:YPRBusinessGroup , org-yogurt:YPRProductionGroup .
 
 ############
 # Platform #

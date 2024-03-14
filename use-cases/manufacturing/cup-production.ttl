@@ -36,9 +36,6 @@
 @prefix ufactory: <https://eu.robotshop.com/fr/collections/ufactory/> .
 @prefix m5stack: <https://docs.m5stack.com/en/products/> .
 
-@prefix org-dataset: <http://ns.inria.fr/hmas/organizations/organization-dataset.ttl#> .
-@prefix org-cup: <http://ns.inria.fr/hmas/organizations/cup-organization-specification.ttl#> .
-
 #############
 # Artifacts #
 #############
@@ -208,16 +205,6 @@ body-agent-d: a hmas:ResourceProfile ;
             sh:hasValue <http://example.org/TBA>
         ]
     ] .
-
-################
-# Organization #
-################
-
-cpr-org:organization a org-cup:GenericCupCompanyOrganization ;
-    hmas:hasProfile cpr-org: ;
-    hmas:hasOrganizationalValue org-dataset:IntegrityRespect ;
-    hmas:providesRole org-dataset:SellerRepresentative , org-dataset:OrderManager , org-dataset:Operator ;
-    hmas:isStructuredBy org-cup:CPRBusinessGroup , org-cup:CPRProductionGroup .
 
 ############
 # Platform #

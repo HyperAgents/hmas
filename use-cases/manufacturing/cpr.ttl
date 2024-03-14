@@ -1,0 +1,39 @@
+@base <https://ns.inria.fr/hmas/> .
+
+@prefix any-org: <organizations/any-org#> .
+@prefix cup-spec: <organizations/specifications/cup#> .
+@prefix cpr: <organizations/instances/cpr#> .
+
+@prefix agent-b: <workspaces/cup-production-site/agents/agent-b#> .
+@prefix agent-c: <workspaces/cup-production-site/agents/agent-c#> .
+@prefix agent-rb: <market-place/agents/agent-rb#> .
+
+@prefix hmas: <https://purl.org/hmas/> .
+
+cpr:BusinessGroup a any-org:BusinessGroup .
+cpr:ProductionGroup a any-org:ProductionGroup .
+
+cpr:ProductionOperator a cup-spec:ProductionOperator ;
+    hmas:isMembershipOf agent-c:agent ;
+    hmas:isMembershipFor any-org:Operator ;
+    hmas:isMembershipIn cpr:ProductionGroup .
+
+cpr:ProductionOrderManager a cup-spec:ProductionOrderManager ;
+    hmas:isMembershipOf agent-b:agent ;
+    hmas:isMembershipFor any-org:OrderManager ;
+    hmas:isMembershipIn cpr:ProductionGroup .
+
+cpr:BusinessSellerRepresentative a cup-spec:BusinessSellerRepresentative ;
+    hmas:isMembershipOf agent-rb:agent ;
+    hmas:isMembershipFor any-org:SellerRepresentative ;
+    hmas:isMembershipIn cpr:BusinessGroup .
+
+cpr:ProductionOrderManager any-org:canCommunicateWith cpr:BusinessSellerRepresentative .
+cpr:ProductionOrderManager any-org:canCommunicateWith cpr:ProductionOperator .
+
+
+cpr:organization a cup-spec:GenericCupCompanyOrganization ;
+    hmas:hasProfile cpr: ;
+    hmas:hasOrganizationalValue any-org:IntegrityRespect ;
+    hmas:providesRole any-org:SellerRepresentative , any-org:OrderManager , any-org:Operator ;
+    hmas:isStructuredBy cpr:BusinessGroup , cpr:ProductionGroup .
