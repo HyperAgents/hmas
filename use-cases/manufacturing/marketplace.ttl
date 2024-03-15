@@ -13,8 +13,8 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix td: <https://www.w3.org/2019/wot/td#> .
 
-@prefix cpr-org: <https://ns.inria.fr/hmas/organizations/cpr#> .
-@prefix ypr-org: <https://ns.inria.fr/hmas/organizations/ypr#> .
+@prefix cpr-org: <https://ns.inria.fr/hmas/organizations/instances/cpr#> .
+@prefix ypr-org: <https://ns.inria.fr/hmas/organizations/instances/ypr#> .
 
 ##########
 # Agents #

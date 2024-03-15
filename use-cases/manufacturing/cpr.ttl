@@ -6,7 +6,7 @@
 
 @prefix agent-b: <workspaces/cup-production-site/agents/agent-b#> .
 @prefix agent-c: <workspaces/cup-production-site/agents/agent-c#> .
-@prefix agent-rb: <market-place/agents/agent-rb#> .
+@prefix agent-rb: <workspaces/market-place/agents/agent-rb#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
 

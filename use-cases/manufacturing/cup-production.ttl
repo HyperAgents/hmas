@@ -19,7 +19,7 @@
 @prefix body-agent-d: <workspaces/cup-production-site/artifacts/body-agent-d#> .
 
 # Organizations
-@prefix cpr-org: <organizations/cpr#> .
+@prefix cpr-org: <organizations/instances/cpr#> .
 
 # Platforms
 @prefix platform: <#platform> .
