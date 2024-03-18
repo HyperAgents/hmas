@@ -33,8 +33,8 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix td: <https://www.w3.org/2019/wot/td#> .
 
-@prefix ufactory: <https://eu.robotshop.com/fr/collections/ufactory/> .
-@prefix m5stack: <https://docs.m5stack.com/en/products/> .
+@prefix xarm: <artifacts/xarm#> .
+@prefix roverbot: <artifacts/truck#> .
 
 #############
 # Artifacts #
@@ -55,33 +55,33 @@ truck:artifact a hmas:Artifact ;
 
 robotic-arm-1: a hmas:ResourceProfile ;
     hmas:isProfileOf robotic-arm-1:artifact ;
-    hmas:exposeSignifiersFrom ufactory:CherrybotCatalog ;
+    hmas:exposeSignifiersFrom xarm:XArmCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot1>
+            sh:hasValue <https://api.interactions.ics.unisg.ch/xarm1>
         ]
     ] .
 
 robotic-arm-2: a hmas:ResourceProfile ;
     hmas:isProfileOf robotic-arm-2:artifact ;
-    hmas:exposeSignifiersFrom ufactory:CherrybotCatalog ;
+    hmas:exposeSignifiersFrom xarm:XArmCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
-            sh:hasValue <https://api.interactions.ics.unisg.ch/cherrybot2>
+            sh:hasValue <https://api.interactions.ics.unisg.ch/xarm2>
         ]
     ] .
 
 truck: a hmas:ResourceProfile ;
     hmas:isProfileOf truck:artifact ;
-    hmas:exposeSignifiersFrom m5stack:TruckCatalog ;
+    hmas:exposeSignifiersFrom roverbot:TruckCatalog ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
         sh:property [

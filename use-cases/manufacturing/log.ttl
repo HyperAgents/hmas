@@ -1,52 +1,22 @@
-@base <https://ns.inria.fr/hmas/organizations/> .
+@base <https://ns.inria.fr/hmas/> .
 
-@prefix any-org: <any-org#> .
-@prefix logistics-spec: <specifications/logistics#> .
+@prefix any-org: <organizations/any-org#> .
+@prefix logistics-spec: <organizations/specifications/logistics#> .
+@prefix log: <organizations/instances/log#> .
 
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix agent-d: <workspaces/cup-production-site/agents/agent-d#> .
+
 @prefix hmas: <https://purl.org/hmas/> .
 
-######################################
-# Generic organization specification #
-######################################
+log:DeliveryGroup a any-org:DeliveryGroup .
 
-# Memberships specifications
+log:DelivererMembership a logistics-spec:DelivererMembership ;
+    hmas:isMembershipOf agent-d:agent ;
+    hmas:isMembershipFor any-org:Deliverer ;
+    hmas:isMembershipIn log:DeliveryGroup .
 
-logistics-spec:DelivererMembership a sh:NodeShape , rdfs:Class ;
-    rdfs:subClassOf hmas:Membership ;
-    sh:property [
-        sh:path hmas:isMembershipOf ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class hmas:Agent ]
-    ] , [
-        sh:path hmas:isMembershipFor ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:hasValue any-org:Deliverer
-    ] , [
-        sh:path hmas:isMembershipIn ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class logistics-spec:DeliveryGroup ]
-    ] .
-
-logistics-spec:GenericLogisticsCompanyOrganization a sh:NodeShape , rdfs:Class ;
-    rdfs:subClassOf hmas:Organization ;
-    sh:property [
-        sh:path hmas:hasOrganizationalValue ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:hasValue any-org:IntegrityRespect
-    ] , [
-        sh:path hmas:providesRole ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:hasValue any-org:Deliverer
-    ] , [
-        sh:path hmas:isStructuredBy ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        sh:qualifiedValueShape [ sh:class logistics-spec:DeliveryGroup ]
-    ] .
+log:organization a logistics-spec:GenericLogisticsCompanyOrganization ;
+    hmas:hasProfile log: ;
+    hmas:hasOrganizationalValue any-org:IntegrityRespect ;
+    hmas:providesRole any-org:Deliverer  ;
+    hmas:isStructuredBy log:DeliveryGroup  .

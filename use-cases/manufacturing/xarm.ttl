@@ -1,4 +1,4 @@
-@base <http://ns.inria.fr/hmas/artifacts/xarm.ttl#> .
+@base <http://ns.inria.fr/hmas/artifacts/xarm#> .
 @prefix : <> .
 
 @prefix hmas: <https://purl.org/hmas/> .
@@ -182,7 +182,7 @@
 # Individuals - XArm Signifiers Catalog #
 #########################################
 
-:CherrybotCatalog a hmas:SignifiersCatalog ;
+:XArmCatalog a hmas:SignifiersCatalog ;
     		  	  rdfs:comment "A catalog that proposes signifiers revealing how to interact with an XArm robotic arm."@en ;
                   rdfs:label "XArm catalog"@en ;
     		  	  hmas:proposesSignifier :perceivableOperator ,
@@ -572,48 +572,48 @@
     jsonld:definition [
         a jsonld:TermDefinition;
         jsonld:term "target" ;
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasTargetTCP>
+        jsonld:iri <hasTargetTCP>
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "speed";
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasSpeed> 
+        jsonld:iri <hasSpeed> 
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "coordinate" ;
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasCoordinates> ;
+        jsonld:iri <hasCoordinates> ;
         jsonld:container jsonld:listContainerType  
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "rotation" ;
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasRotation> 
+        jsonld:iri <hasRotation> 
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "x" ;
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasXCoordinate> 
+        jsonld:iri <hasXCoordinate> 
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "y" ;
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasYCoordinate> 
+        jsonld:iri <hasYCoordinate> 
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "z" ;
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasZCoordinate> 
+        jsonld:iri <hasZCoordinate> 
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "roll" ;
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasRoll> 
+        jsonld:iri <hasRoll> 
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "pitch" ;
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasPitch> ;
+        jsonld:iri <hasPitch> ;
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "yaw" ;
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasYaw> 
+        jsonld:iri <hasYaw> 
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "token" ;
-        jsonld:iri <http://ns.inria.fr/hmas/artifacts/xarm.ttl#hasOperatorToken> ;
+        jsonld:iri <hasOperatorToken> ;
     ], [
         a jsonld:TermDefinition ;
         jsonld:term "name" ;
