@@ -27,7 +27,7 @@
 # Other prefixes
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix aa: <https://purl.org/hmas/> .
-@prefix jacamo: <https://purl.org/hmas/> .
+@prefix jacamo: <https://purl.org/hmas/demo/jacamo#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -107,7 +107,7 @@ cup-production:workspace a hmas:Workspace ;
 ################################
 
 cup-production: a hmas:ResourceProfile ;
-    hmas:exposeSignifiersFrom hmas:JacamoWorkspaceCatalog ;
+    hmas:exposeSignifiersFrom hmas:workspaceCatalog ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [

@@ -29,7 +29,7 @@
 @prefix td: <https://www.w3.org/2019/wot/td#> .
 
 @prefix aa: <https://purl.org/hmas/> .
-@prefix jacamo: <https://purl.org/hmas/> .
+@prefix jacamo: <https://purl.org/hmas/demo/jacamo#> .
 
 #############
 # Artifacts #
@@ -80,7 +80,7 @@ yogurt-production:workspace a hmas:Workspace ;
 ################################
 
 yogurt-production: a hmas:ResourceProfile ; 
-    hmas:exposeSignifiersFrom hmas:JacamoWorkspaceCatalog ;
+    hmas:exposeSignifiersFrom hmas:workspaceCatalog ;
     hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [

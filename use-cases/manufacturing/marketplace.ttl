@@ -7,7 +7,7 @@
 @prefix agent-rb: <Market-Place/agents/agent-rb#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix jade: <https://purl.org/hmas/jade#> .
+@prefix jade: <https://purl.org/hmas/demo/jade#> .
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -96,7 +96,7 @@ plat:platform a hmas:HypermediaMASPlatform ;
     hmas:contains mrk: .
 
 plat: a hmas:ResourceProfile ;
-    hmas:exposeSignifiersFrom jade:JadeMessagingCatalog ;
+    hmas:exposeSignifiersFrom jade:MessagingCatalog ;
     hmas:exposesSignifier jade:AgentContactable ;
     hmas:globalSpecification hmas:AuthorizationHeader, [
         sh:class hmas:ActionExecution ;
