@@ -98,7 +98,7 @@ plat:platform a hmas:HypermediaMASPlatform ;
 plat: a hmas:ResourceProfile ;
     hmas:exposeSignifiersFrom jade:MessagingCatalog ;
     hmas:exposesSignifier jade:AgentContactable ;
-    hmas:globalSpecification hmas:AuthorizationHeader, [
+    hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [
             sh:path ( prov:used td:baseURI ) ;
