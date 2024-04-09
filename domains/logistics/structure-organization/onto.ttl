@@ -14,7 +14,8 @@
     
 :Group a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Group structures an Organization."@en ;
+    rdfs:comment "A Group is a subset of Agents in an Organization that belong together."@en ;
+    skos:example "In a human organization, a HR department is seen as a group." ;
     rdfs:label "group"@en, "groupe"@fr .
     
 #################################################################
@@ -43,7 +44,7 @@
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Membership ;
     rdfs:range :Membership ;
-    rdfs:comment "A relation that refers to the relationship between members of two Memberships."@en ;
+    rdfs:comment "A relation that refers to the relationship between Agents member of two Memberships."@en ;
     rdfs:label "has membership interaction with"@en, "a une relation d'affiliation avec"@fr .
 
 :structures a owl:ObjectProperty ;

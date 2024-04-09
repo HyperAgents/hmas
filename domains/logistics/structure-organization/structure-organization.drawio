@@ -1,1 +1,92 @@
-<mxfile host="Electron" modified="2023-09-04T11:38:17.320Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/20.8.16 Chrome/106.0.5249.199 Electron/21.4.0 Safari/537.36" etag="55SdPPdEd53OEi9DWelX" version="20.8.16" type="device"><diagram id="p43ppZqfukiyictN-buK" name="Structure an Organization">3VrZkps6EP0aPzrFjv04XmaSulmmxqlMJm8yyEa5GHGFvH79FSCMBMYGPF4SpyoFrZYQrdOnjzR09OFi80RA6H3BLvQ7muJuOvqoo2n9Xo/9Hxu2qcHs6alhTpCbmtTcMEE7yI0Kty6RCyPJkWLsUxTKRgcHAXSoZAOE4LXsNsO+/NQQzGHJMHGAX7a+Ipd63Kpa/bzhI0Rzjz+6p9lpwwJkzvxNIg+4eC2Y9HFHHxKMaXq12AyhH8cui0va77GidT8xAgNap8Pux+hZ202fP+qr0fCr8zL+/p/Z5aOsgL/kLxwSvIpD/oJZCNKJ020WDYKXgQvjAZWOPsCEeniOA+B/xjhkRpUZf0NKt3wdwZJiZvLowuetcIPoT949vn6Lrz+Y/G60EZpG2+wmoGT7M3eMb9+y8eKbvFtyt+/nspXkc8+nOs6tg3IIeTwivCQOPBI3k0MRkDmkR/ys1C+eivAAvkBPEC8gmzFz4OmifDBshfch0AcUrWQcAg7n+b7rfrRnjNhb7IeyFI67LPEMRR4ifUfeS8RNYSDdMKWB9OJAaRCODJQ54tksgpIPuxDCkJsS6DaAsV6CMYq+wMUUkm+zC4J4D9w3oaUZiJUTII5YdOlDTGTM4PggipCTmR+Rv59S4GZOAQ5gauHtylWQ3muKdJX9JGBllN8W+JeHmXEAZhNKlg5dEugOtiWonaag88GYA8tuRI8zHNBsbjKqbRHWylFYXx5XGUjqAqvLkGVZ9qWgVOZZq8CzSj2efS9MmiVMfiNzEKAde3EcHCG/eM3XHqJwEoJkpdZMwMnYqlzdFSQUbuosR6kMZVm+FtRUJpE8QUhZSvVqSTFsGjCrFLATUuc6gdJNOVC6futA2ZVFNfJQeKCwXoPtztKPUuHN6/BlS6/Ms635sleXL42mhdjUWrEle2mwFRzCmOGiakGqF5jA6hf2Kyf8C/sbdpHO4OoqoFfKi4c55OR+T1S7r0w3Y5CM64VQRZlcio7E62xdrrUS5lojZf5OeZ3pm5OJbZ6hgzgiuvcvsdXyicQTA0Z4XnbNGB0PsY9J0lefmfE/voaCPf0lHE/wv1BosZJf7VVvn7S3L/uqdqDuT5bTZBluW/XVjlj1tdrHRnb7LTcv6WLRv0Xyt9kF9fraNeq6XRSu/Lyoqq4X/bUTOiDTCRX+t9MBannrJQrkR8Ydd6OQ7XZHrO+RKoI+zkV0LpHVd8wmo2Y2NT6VTcrCvVfO8sZWhOOn8lnAzZi7NhibKbI/FI1NuZ3B0TbvHo3ls9Ici3+rmDMKZ4Fq/4pi7u3rr0+2Q4e/Zv4/6+/j0NdU2tVuWoLkfdjxk+SqUxrt1DHNNTK07pnKmX+zK+FHK+Ci4iy5qWQzCpJKtY5LMMM4z19TJEkoS7YWjHMQ6mXC8YBQ/16SpcFBfP2KWDYeSozPYAp9GczAR/MgrhYMXpARyCCmA+QA/4E3LJDrpnkDI7QD02S8GJh8Fdjg5qBjjk7zzbEMLpHQ/pMH/sSO+FVBxZaAaXNdWphs9DNx27WMAm7lEdqUGXabfxuRuucfmOjj/wE=</diagram></mxfile>
+<mxfile host="Electron" modified="2024-04-08T10:50:18.741Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="1rxrOM7y-jwF7TPQeXT3" version="22.1.2" type="device">
+  <diagram id="p43ppZqfukiyictN-buK" name="Structure an Organization">
+    <mxGraphModel dx="1432" dy="845" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-1" value="proposesRole" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="zVDP2zbPH3vDCNcRETq5-5" target="zVDP2zbPH3vDCNcRETq5-6" edge="1">
+          <mxGeometry x="0.4706" relative="1" as="geometry">
+            <mxPoint x="600" y="540" as="sourcePoint" />
+            <mxPoint x="345" y="340" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-3" value="isMemberOf" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="zVDP2zbPH3vDCNcRETq5-5" target="zVDP2zbPH3vDCNcRETq5-8" edge="1">
+          <mxGeometry x="0.1111" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-4" value="isStructuredBy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fontStyle=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="zVDP2zbPH3vDCNcRETq5-5" target="zVDP2zbPH3vDCNcRETq5-11" edge="1">
+          <mxGeometry x="-0.1667" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="660" y="500" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-5" value="Organization" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-6" value="Role" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-7" value="isMembershipOf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;fontStyle=1" parent="1" source="zVDP2zbPH3vDCNcRETq5-8" target="zVDP2zbPH3vDCNcRETq5-14" edge="1">
+          <mxGeometry x="0.527" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="690" />
+              <mxPoint x="300" y="220" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-8" value="Agent" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-10" value="structures" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontStyle=1" parent="1" source="zVDP2zbPH3vDCNcRETq5-11" target="zVDP2zbPH3vDCNcRETq5-5" edge="1">
+          <mxGeometry x="-0.1667" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-11" value="Group" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="600" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-12" value="isSubGroupOf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;fontStyle=1" parent="1" source="zVDP2zbPH3vDCNcRETq5-11" target="zVDP2zbPH3vDCNcRETq5-11" edge="1">
+          <mxGeometry x="-0.1892" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="345" />
+              <mxPoint x="750" y="290" />
+              <mxPoint x="690" y="290" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-15" value="isMembershipFor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontStyle=1" parent="1" source="zVDP2zbPH3vDCNcRETq5-14" target="zVDP2zbPH3vDCNcRETq5-6" edge="1">
+          <mxGeometry x="0.3333" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-16" value="isMembershipIn" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=classic;endFill=1;fontStyle=1" parent="1" source="zVDP2zbPH3vDCNcRETq5-14" target="zVDP2zbPH3vDCNcRETq5-11" edge="1">
+          <mxGeometry x="0.375" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zVDP2zbPH3vDCNcRETq5-14" value="Membership" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="460" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YNZI7ctCZflKwTEpl21t-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="zVDP2zbPH3vDCNcRETq5-14" target="zVDP2zbPH3vDCNcRETq5-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="120" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="490" y="160" />
+              <mxPoint x="440" y="160" />
+              <mxPoint x="440" y="205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YNZI7ctCZflKwTEpl21t-4" value="hasMembershipRelationshipWith" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1" parent="YNZI7ctCZflKwTEpl21t-2" vertex="1" connectable="0">
+          <mxGeometry x="-0.2343" y="-2" relative="1" as="geometry">
+            <mxPoint x="-64" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

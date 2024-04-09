@@ -41,7 +41,7 @@
 
 :OrganizationModel a skos:Concept ;
     skos:prefLabel "organization model"@en ;
-    skos:definition "An Organization Model is the combination of Roles, Missions, and Facilities in a consistent way used to enact one or multiple Organizations."@en ;
+    skos:definition "An Organization Model is the combination of Roles, Organizational Goals, and Facilities in a consistent way used to enact one or multiple Organizations."@en ;
     skos:editorialNote "The Organization Model is represented as SHACL Shapes."@en ;
     skos:related :Organization .
 
@@ -76,20 +76,21 @@
     
 :Group a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Group structures an Organization."@en ;
+    rdfs:comment "A Group is a subset of Agents in an Organization that belong together."@en ;
+    skos:example "In a human organization, a HR department is seen as a group." ;
     rdfs:label "group"@en, "groupe"@fr .
 
 #################################################################
 #    Object Properties
 #################################################################
       
-:providesRole a owl:ObjectProperty ;
+:proposesRole a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
     rdfs:range :Role ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A relation that refers to a Role made available to Agents in the context of an Organization."@en ;
-    rdfs:label "provides role"@en, "fournit un rôle"@fr .
+    rdfs:label "proposes role"@en, "fournit un rôle"@fr .
 
 :hasOrganizationalGoal a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
@@ -137,7 +138,7 @@
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Membership ;
     rdfs:range :Membership ;
-    rdfs:comment "A relation that refers to the relationship between members of two Memberships."@en ;
+    rdfs:comment "A relation that refers to the relationship between Agents member of two Memberships."@en ;
     rdfs:label "has membership relationship with"@en, "a une relation d'affiliation avec"@fr .
 
 :structures a owl:ObjectProperty ;

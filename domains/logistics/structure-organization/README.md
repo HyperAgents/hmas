@@ -26,11 +26,11 @@ Jane, an artificial agent, is deployed as a  _carrier_. Jane can communicate wit
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the job positions including their department and associated membership that are not being played by anyone in the organization X?      | What are the job positions including their department and associated membership that are not being played by anyone in the FL Logistics organization? `ex:AccountManager,ex:FL_CommercialDepartment,ex:AccountManager_Commercial_Membership`                                                       |
+| q1 | What are the job positions including their department and associated membership that are not being played by anyone in the organization X?      | What are the job positions including their department and associated membership that are not being played by anyone in the FL Logistics organization? `ex:AccountManager,ex:FL_CommercialDepartment,ex:AccountManager_Commercial_Membership`                                           |
 | q2 | What are the agents to whom agent A can interact with in the organization X?                                                                    | What are the agents to whom Jane can interact with in the FL Logistics organization? `ex:Igor`                                             |
-| q3 | What are the job positions of agent A in the organization X?        | What are the job positions played by agent Igor in the FL Logistics organization? `ex:Planner`                                             |
-| q4 | What are the departments in the organization X                      | What are the departments in the FL Logistics organization? `ex:FL_AdministrativeDepartment`, `ex:FL_CommercialDepartment`, `ex:FL_FinanceDepartment`, `ex:FL_HumanResourcesDepartment`, `ex:FL_OperationsDepartment`, `ex:FL_PlanningDepartment`, `ex:FL_ShippingDepartment`                       |
-| q5 | What are the departments under the department Y in the organization X?                                                                          | What are the departments under the Administrative department in the FL Logistics organization? `ex:FL_FinanceDepartment`, `ex:FL_HumanResourcesDepartment`                                                             |
+| q3 | What are the job positions of agent A in the organization X?        | What are the job positions played by agent Igor in the FL Logistics organization? `ex:Planner`                                                   |
+| q4 | What are the departments in the organization X                      | What are the departments in the FL Logistics organization? `ex:FL_AdministrativeDepartment`, `ex:FL_CommercialDepartment`, `ex:FL_FinanceDepartment`, `ex:FL_HumanResourcesDepartment`, `ex:FL_OperationsDepartment`, `ex:FL_PlanningDepartment`, `ex:FL_ShippingDepartment`                 |
+| q5 | What are the departments under the department Y in the organization X?                                                                          | What are the departments under the Administrative department in the FL Logistics organization? `ex:FL_FinanceDepartment`, `ex:FL_HumanResourcesDepartment`                                                       |
 | q6 | What are the memberships incompatibility constraints applied to agents in the organization X?                                                   | What are the memberships incompatibility constraints applied to agents in the FL Logistics organization? `ex:directorIncompatibilityShape` |
 
 ## Glossary
@@ -38,14 +38,14 @@ Jane, an artificial agent, is deployed as a  _carrier_. Jane can communicate wit
 ![image](structure-organization.png)
 
 * **Membership**: A Membership indicates the Role played by an Agent in a Group of an Organization.
-* **Membership Relationship**: A relation that refers to the relationship between members of two Memberships.
+* **Membership Interaction**: A relation that refers to the interaction between Agents member of two Memberships.
 * **Memberships Incompatibility**: A relation that imposes a constraint in which the same agent cannot be member of two memberships simultaneously.
-* **Group**: A Group structures an Organization.
+* **Group**: A Group is a subset of Agents in an Organization that belong together.
 * **Sub-Group Relationship**: A relation that refers to a subgroup relationship between two Groups.
-* **Organization Model**: see [Create an Organization](https://github.com/HyperAgents/hmas/blob/master/domains/logistics/create-organization/README.md) scenario.
-* **Role**: see [Create an Organization](https://github.com/HyperAgents/hmas/blob/master/domains/logistics/create-organization/README.md) scenario.
-* **Organization**: see [Discover Organizations, their Members and Materials in Hypermedia Environments](https://github.com/HyperAgents/hmas/blob/master/domains/manufacturing-environments/discover-organization/README.md) scenario.
-* **Agent**: see [Discover Organizations, their Members and Materials in Hypermedia Environments](https://github.com/HyperAgents/hmas/blob/master/domains/manufacturing-environments/discover-organization/README.md) scenario.
+* **Organization Model**: see [Create an Organization](https://github.com/HyperAgents/hmas/blob/master/domains/logistics/create-organization/README.md) scenario
+* **Role**: see [Create an Organization](https://github.com/HyperAgents/hmas/blob/master/domains/logistics/create-organization/README.md) scenario
+* **Organization**: see [Discover Organizations, their Members and Materials in Hypermedia Environments](https://github.com/HyperAgents/hmas/blob/master/domains/manufacturing-environments/discover-organization/README.md) scenario
+* **Agent**: see [Discover Organizations, their Members and Materials in Hypermedia Environments](https://github.com/HyperAgents/hmas/blob/master/domains/manufacturing-environments/discover-organization/README.md) scenario
 
 ## Recommendations
 
