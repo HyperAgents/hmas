@@ -1,5 +1,6 @@
 @prefix ex: <http://example.org/> .
 @prefix hmas: <https://purl.org/hmas/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
@@ -52,7 +53,7 @@ ex:Forklift a hmas:Artifact ;
 ##       wanted to avoid extra labels.
 
 ## Organization Specification
-ex:Logistics a sh:NodeShape, rdfs:Class ;
+ex:Logistics a sh:NodeShape, owl:Class ;
     rdfs:subClassOf hmas:Organization ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
@@ -147,7 +148,7 @@ ex:Logistics a sh:NodeShape, rdfs:Class ;
         sh:hasValue ex:Move ;
         ] .
 
-ex:Manufacturing a sh:NodeShape, rdfs:Class ;
+ex:Manufacturing a sh:NodeShape, owl:Class ;
     rdfs:subClassOf hmas:Organization .
 
 # INSTANTIATION
