@@ -1,6 +1,5 @@
 @prefix ex: <http://example.org/> .
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
@@ -67,7 +66,7 @@ ex:Forklift a hmas:Artifact ;
 ##       wanted to avoid extra labels.
 
 ## Organization Specifications
-ex:Logistics a sh:NodeShape, owl:Class ;
+ex:Logistics a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Organization ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
@@ -225,11 +224,11 @@ ex:Logistics a sh:NodeShape, owl:Class ;
         ] .
 
 ## Group Specifications
-ex:AdministrativeDepartment a sh:NodeShape, owl:Class ;
+ex:AdministrativeDepartment a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Group .
-ex:OperationsDepartment a sh:NodeShape, owl:Class ;
+ex:OperationsDepartment a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Group .
-ex:HumanResourcesDepartment a sh:NodeShape, owl:Class ;
+ex:HumanResourcesDepartment a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Group ;
     sh:property [
         sh:path hmas:isSubGroupOf ;
@@ -237,7 +236,7 @@ ex:HumanResourcesDepartment a sh:NodeShape, owl:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:FinanceDepartment a sh:NodeShape, owl:Class ;
+ex:FinanceDepartment a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Group ;
     sh:property [
         sh:path hmas:isSubGroupOf ;
@@ -245,7 +244,7 @@ ex:FinanceDepartment a sh:NodeShape, owl:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:CommercialDepartment a sh:NodeShape, owl:Class ;
+ex:CommercialDepartment a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Group ;
     sh:property [
         sh:path hmas:isSubGroupOf ;
@@ -253,7 +252,7 @@ ex:CommercialDepartment a sh:NodeShape, owl:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:PlanningDepartment a sh:NodeShape, owl:Class ;
+ex:PlanningDepartment a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Group ;
     sh:property [
         sh:path hmas:isSubGroupOf ;
@@ -261,7 +260,7 @@ ex:PlanningDepartment a sh:NodeShape, owl:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:ShippingDepartment a sh:NodeShape, owl:Class ;
+ex:ShippingDepartment a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Group ;
     sh:property [
         sh:path hmas:isSubGroupOf ;
@@ -271,7 +270,7 @@ ex:ShippingDepartment a sh:NodeShape, owl:Class ;
         ] .
         
 ## Membership Specifications
-ex:Director_Administrative_Membership a sh:NodeShape, owl:Class ;
+ex:Director_Administrative_Membership a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -289,7 +288,7 @@ ex:Director_Administrative_Membership a sh:NodeShape, owl:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:Director_Operations_Membership a sh:NodeShape, owl:Class ;
+ex:Director_Operations_Membership a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -307,7 +306,7 @@ ex:Director_Operations_Membership a sh:NodeShape, owl:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:Officer_HumanResources_Membership a sh:NodeShape, owl:Class ;
+ex:Officer_HumanResources_Membership a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -325,7 +324,7 @@ ex:Officer_HumanResources_Membership a sh:NodeShape, owl:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:Officer_Finance_Membership a sh:NodeShape, owl:Class ;
+ex:Officer_Finance_Membership a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -343,7 +342,7 @@ ex:Officer_Finance_Membership a sh:NodeShape, owl:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:AccountManager_Commercial_Membership a sh:NodeShape, owl:Class ;
+ex:AccountManager_Commercial_Membership a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -361,7 +360,7 @@ ex:AccountManager_Commercial_Membership a sh:NodeShape, owl:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:Planner_Planning_Membership a sh:NodeShape, owl:Class ;
+ex:Planner_Planning_Membership a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
@@ -379,7 +378,7 @@ ex:Planner_Planning_Membership a sh:NodeShape, owl:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:Carrier_Shipping_Membership a sh:NodeShape, owl:Class ;
+ex:Carrier_Shipping_Membership a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Membership ;
     sh:property [
         sh:path hmas:isMembershipOf ;
