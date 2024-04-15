@@ -6,7 +6,7 @@
 
 @prefix agent-a: <workspaces/cup-production-site/agents/agent-a#> .
 @prefix agent-e: <workspaces/cup-production-site/agents/agent-e#> .
-@prefix agent-ra: <workspaces/market-place/agents/agent-ra#> .
+@prefix agent-ra: <https://jade.interactions.ics.unisg.ch/containers/Market-Place/agents/agent-ra#/> .
 
 @prefix hmas: <https://purl.org/hmas/> .
 

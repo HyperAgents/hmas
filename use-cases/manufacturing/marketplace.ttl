@@ -1,10 +1,10 @@
-@base <http://localhost:3000/> .
+@base <https://jade.interactions.ics.unisg.ch/> .
 
 @prefix plat: <ap-description#> .
-@prefix mrk: <Market-Place#> .
+@prefix mrk: <containers/Market-Place#> .
 
-@prefix agent-ra: <Market-Place/agents/agent-ra#> .
-@prefix agent-rb: <Market-Place/agents/agent-rb#> .
+@prefix agent-ra: <containers/Market-Place/agents/agent-ra#> .
+@prefix agent-rb: <containers/Market-Place/agents/agent-rb#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix jade: <https://purl.org/hmas/demo/jade#> .
