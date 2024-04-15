@@ -17,92 +17,63 @@
 #    Classes
 #################################################################
 
-:ProcessScheme a owl:Class ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Process Scheme is an entity that represents a set of connected Activity Schemes."@en ;
-    rdfs:label "process scheme"@en, "schéma de processus"@fr .
-    
-:ActivityScheme a owl:Class ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:comment "An Activity Scheme is a plan for an activity intended to achieve an Organizational Goal."@en ;
-    rdfs:label "activity scheme"@en, "schéma d'activité"@fr ;
-    skos:note "The concept of activity can be the execution of a simple action, a complex set of actions, or any other useful arrangement employed to achieving organizational goals. An activity can be represented using, for instance, the PROV Ontology (https://www.w3.org/TR/prov-o/)."@en .
-
 :Mission a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Mission gathers the Organizational Goals that Agents have to achieve in the context of a Process Scheme."@en ;
+    rdfs:comment "A set of duties that Agents can commit to for achieving Organizational Goals."@en ;
     rdfs:label "mission"@en, "mission"@fr .
+
+:Process a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A plan specified as a set of Missions to be executed by several coordinating Agents."@en ;
+    rdfs:label "process"@en, "processus"@fr .
+
+:Commitment a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "An engagement of an Agent with the duties of a Mission."@en ;
+    rdfs:label "commitment"@en, "engagement"@fr .
     
 #################################################################
 #    Properties
 #################################################################
 
-:isMissionOf a owl:ObjectProperty ;
+:proposesProcess a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Mission ;
-    rdfs:range :Agent ;
-    rdfs:comment "A relation that refers to an Agent involved in a Mission."@en ;
-    rdfs:label "is a mission of"@en, "est une mission de"@fr .
+    rdfs:domain :Organization ;
+    rdfs:range :Process ;
+    rdfs:comment "A relation that refers to a Process that can be executed in the context of an Organization. "@en ;
+    rdfs:label "proposes process"@en, "fournit un processus"@fr .
+    
+:includesMission a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Process ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a Mission part of a Process."@en ;
+    rdfs:label "includes mission"@en, "inclut la mission"@fr .
 
-:isMissionFor a owl:ObjectProperty ;
+:includesOrganizationalGoal a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Mission ;
     rdfs:range :OrganizationalGoal ;
     rdfs:comment "A relation that refers to an Organizational Goal involved in a Mission."@en ;
-    rdfs:label "is a mission for"@en, "est une mission pour"@fr .
+    rdfs:label "includes organizational goal"@en, "inclut le but de l'organization"@fr .
 
-:isMissionIn a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Mission ;
-    rdfs:range :ProcessScheme ;
-    rdfs:comment "A relation that refers to a Process Scheme involved in a Mission."@en ;
-    rdfs:label "is a mission in"@en, "est une mission en"@fr .
-
-:hasMissionRelationshipWith a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Mission ;
-    rdfs:range :Mission ;
-    rdfs:comment "A relation that refers to the relationship between two Missions, e.g., complementary missions."@en ;
-    rdfs:label "has a mission relationship with"@en, "a une relation de mission avec"@fr .
-    
-:isSubOrganizationalGoalOf a owl:ObjectProperty ;
+:isDependentOnOrganizationalGoal a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :OrganizationalGoal ;
     rdfs:range :OrganizationalGoal ;
-    rdfs:comment "A relation that refers to a hierarchical relationship between two Organizational Goals. A Sub-Organizational Goal is an Organizational Goal that has to be achieved for the parent Organizational Goal to be achieved."@en ;
-    rdfs:label "is a sub-organizational goal of"@en, "est un but sous-organisationnel de"@fr .
+    rdfs:comment "A relation that refers to the way in which two Organizational Goals are related to each other, and one is affected by the other."@en ;
+    rdfs:label "is dependent on organizational goal"@en, "dépend du but de l'organisation"@fr .
     
-:achievesOrganizationalGoal a owl:ObjectProperty ;
+:isCommitmentFor a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :ActivityScheme ;
-    rdfs:range :OrganizationalGoal ;
-    rdfs:comment "A relation that refers to an Organizational Goal coordinated by an Activity Scheme."@en ;
-    rdfs:label "achieves an organizational goal"@en, "coordonner une but organisationnel"@fr .
+    rdfs:domain :Commitment ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a commitment for a Mission."@en ;
+    rdfs:label "is commitment for"@en, "est engagement pour"@fr .
 
-:proposesProcessScheme a owl:ObjectProperty ;
+:isCommitmentOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Organization ;
-    rdfs:range :ProcessScheme ;
-    rdfs:comment "A relation that refers to a Process Scheme that can be carried out within an Organization."@en ;
-    rdfs:label "proposes activity scheme"@en, "propose schéma d'activité"@fr .
-
-:hasRootActivityScheme a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :ProcessScheme ;
-    rdfs:range :RootActivityScheme ;
-    rdfs:comment "A relation that refers to the Root Activity Scheme (i.e., an Activity Scheme origin of a set of connected Activity Schemes) associated to a Process Scheme."@en ;
-    rdfs:label "has root activity scheme"@en, "a schéma d'activité racine"@fr .
-    
-:proposesActivityScheme a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Organization ;
-    rdfs:range :ActivityScheme ;
-    rdfs:comment "A relation that refers to an Activity Scheme that can be carried out within an Organization."@en ;
-    rdfs:label "proposes an activity scheme"@en, "propose une schéma d'activité"@fr .
-    
-:isDependentOnActivityScheme a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :ActivityScheme ;
-    rdfs:range :ActivityScheme ;
-    rdfs:comment "A relation that refers to the way in which two Activity Schemes are related to each other, and one is affected by the other."@en ;
-    rdfs:label "is dependent on activity scheme"@en, "dépend du schéma d'activité"@fr .
+    rdfs:domain :Commitment ;
+    rdfs:range :Agent ;
+    rdfs:comment "A relation that refers to a commitment of an Agent."@en ;
+    rdfs:label "is commitment of"@en, "est engagement de"@fr .

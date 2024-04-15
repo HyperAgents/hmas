@@ -5,8 +5,9 @@ prefix hmas: <https://purl.org/hmas/>
 
 select ?agent
 where {
-  ?mission a ?missionModel ;
-    hmas:isMissionOf ?agent ;
-    hmas:isMissionIn ex:FL_AccountManager_HiringProcess .
+  ex:AccountManager_Hire_Process hmas:includesMission ?mission .
+  
+  ?commitment hmas:isCommitmentOf ?agent ;
+              hmas:isCommitmentFor ?mission .
 }
 order by ?agent

@@ -3,24 +3,14 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
-select ?orgGoal
+select distinct ?orgGoal
 where {
-  ex:Dept_Hiring sh:property ?pShape .
+  ex:Dept_Hire_Mission
+    sh:property [
+      sh:path hmas:includesOrganizationalGoal ;
+      sh:hasValue ?parentGoal ;
+      ] .
 
-  ?pShape sh:path hmas:isMissionFor .
-
-  {
-    ?pShape sh:hasValue ?parentGoal .
-
-    bind ( ?parentGoal as ?orgGoal )
-  }
-  union
-  {
-    ?pShape sh:hasValue ?parentGoal .
-
-    ?subGoal hmas:isSubOrganizationalGoalOf ?parentGoal .
-
-    bind ( ?subGoal as ?orgGoal )
-  }
+  ?orgGoal ex:isSubOrganizationalGoalOf* ?parentGoal .
 }
 order by ?orgGoal

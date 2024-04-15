@@ -3,12 +3,17 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix sh: <http://www.w3.org/ns/shacl#>
 prefix hmas: <https://purl.org/hmas/>
 
-select distinct ?activity ?dependence ?activityOther
+select distinct ?orgGoal ?dependence ?orgGoalOther
 where {
-  ex:FL_Logistics hmas:proposesActivityScheme ?activity .
+  ex:FL_Logistics hmas:proposesProcess ?process .
 
-  ?activity ?dependence ?activityOther .
+  ?process a ex:Hire_Process ;
+           hmas:includesMission ?mission .
 
-  ?dependence rdfs:subPropertyOf hmas:isDependentOnActivityScheme .  
+  ?mission hmas:includesOrganizationalGoal ?orgGoal .
+
+  ?orgGoal ?dependence ?orgGoalOther .
+  
+  ?dependence rdfs:subPropertyOf hmas:isDependentOnOrganizationalGoal .  
 }
-order by ?activity
+order by ?orgGoal
