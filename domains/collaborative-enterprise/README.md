@@ -47,4 +47,3 @@ HSG, MSE respectively containted in workspace PW and FW. EE includes HSG and MSE
 ### Feature: Multiple Artifacts belonging to one Organization
 
 ### Feature: Organization Evolution
-
