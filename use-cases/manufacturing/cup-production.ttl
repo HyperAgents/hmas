@@ -9,14 +9,14 @@
 @prefix cup-production: <workspaces/cup-production-site#> .
 
 # Agents
-@prefix agent-b: <workspaces/cup-production-site/agents/agent-b#> .
-@prefix agent-c: <workspaces/cup-production-site/agents/agent-c#> .
-@prefix agent-d: <workspaces/cup-production-site/agents/agent-d#> .
+@prefix agent-b: <https://wiser-solid-xi.interactions.ics.unisg.ch/agent-b/profile/card#> .
+@prefix agent-c: <https://wiser-solid-xi.interactions.ics.unisg.ch/agent-c/profile/card#> .
+@prefix agent-d: <https://wiser-solid-xi.interactions.ics.unisg.ch/agent-d/profile/card#> .
 
 # Agent Bodies
-@prefix body-agent-b: <workspaces/cup-production-site/artifacts/body-agent-b#> .
-@prefix body-agent-c: <workspaces/cup-production-site/artifacts/body-agent-c#> .
-@prefix body-agent-d: <workspaces/cup-production-site/artifacts/body-agent-d#> .
+@prefix body-agent-b: <https://yggdrasil.interactions.ics.unisg.ch/workspaces/cup-production/agents/agent-b#> .
+@prefix body-agent-c: <https://yggdrasil.interactions.ics.unisg.ch/workspaces/cup-production/agents/agent-c#> .
+@prefix body-agent-d: <https://yggdrasil.interactions.ics.unisg.ch/workspaces/cup-production/agents/agent-d#> .
 
 # Organizations
 @prefix cpr-org: <organizations/instances/cpr#> .
@@ -122,21 +122,21 @@ cup-production: a hmas:ResourceProfile ;
 # Agents #
 ##########
 
-agent-b:agent a hmas:Agent ;
+agent-b:me a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile agent-b: ;
     hmas:isContainedIn cup-production:Workspace ;
     hmas:isMemberOf cpr-org:organization ;
     aa:hasBody body-agent-b:artifact.
 
-agent-c:agent a hmas:Agent ;
+agent-c:me a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile agent-c: ;
     hmas:isContainedIn cup-production:Workspace ;
     hmas:isMemberOf cpr-org:organization ;
     aa:hasBody body-agent-c:artifact.
 
-agent-d:agent a hmas:Agent ;
+agent-d:me a hmas:Agent ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile agent-d: ;
     hmas:isContainedIn cup-production:Workspace ;
@@ -150,17 +150,17 @@ agent-d:agent a hmas:Agent ;
 body-agent-b:artifact a hmas:Artifact ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile body-agent-b: ;
-    aa:isBodyOf agent-b:agent .
+    aa:isBodyOf agent-b:me .
 
 body-agent-c:artifact a hmas:Artifact ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile body-agent-c: ;
-    aa:isBodyOf agent-c:agent .
+    aa:isBodyOf agent-c:me .
 
 body-agent-d:artifact a hmas:Artifact ;
     hmas:isHostedOn platform:platform ;
     hmas:hasProfile body-agent-d: ;
-    aa:isBodyOf agent-d:agent .
+    aa:isBodyOf agent-d:me .
 
 #########################
 # Agent Bodies Profiles #

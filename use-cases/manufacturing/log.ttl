@@ -4,14 +4,14 @@
 @prefix logistics-spec: <organizations/specifications/logistics#> .
 @prefix log: <organizations/instances/log#> .
 
-@prefix agent-d: <workspaces/cup-production-site/agents/agent-d#> .
+@prefix agent-d: <https://wiser-solid-xi.interactions.ics.unisg.ch/agent-d/profile/card#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
 
 log:DeliveryGroup a any-org:DeliveryGroup .
 
 log:DelivererMembership a logistics-spec:DelivererMembership ;
-    hmas:isMembershipOf agent-d:agent ;
+    hmas:isMembershipOf agent-d:me ;
     hmas:isMembershipFor any-org:Deliverer ;
     hmas:isMembershipIn log:DeliveryGroup .
 

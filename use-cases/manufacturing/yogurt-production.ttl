@@ -9,8 +9,8 @@
 @prefix yogurt-production: <workspaces/yogurt-production-site#> .
 
 # Agents
-@prefix agent-a: <workspaces/yogurt-production-site/agents/agent-b#> .
-@prefix agent-e: <workspaces/yogurt-production-site/agents/agent-c#> .
+@prefix agent-a: <workspaces/yogurt-production-site/agents/agent-a#> .
+@prefix agent-e: <workspaces/yogurt-production-site/agents/agent-e#> .
 
 @prefix body-agent-a: <workspaces/cup-production-site/artifacts/body-agent-a#> .
 @prefix body-agent-e: <workspaces/cup-production-site/artifacts/body-agent-e#> .

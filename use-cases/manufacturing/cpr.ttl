@@ -4,8 +4,8 @@
 @prefix cup-spec: <organizations/specifications/cup#> .
 @prefix cpr: <organizations/instances/cpr#> .
 
-@prefix agent-b: <workspaces/cup-production-site/agents/agent-b#> .
-@prefix agent-c: <workspaces/cup-production-site/agents/agent-c#> .
+@prefix agent-b: <https://wiser-solid-xi.interactions.ics.unisg.ch/agent-b/profile/card#> .
+@prefix agent-c: <https://wiser-solid-xi.interactions.ics.unisg.ch/agent-c/profile/card#> .
 @prefix agent-rb: <https://jade.interactions.ics.unisg.ch/containers/Market-Place/agents/agent-rb#> .
 
 @prefix hmas: <https://purl.org/hmas/> .
@@ -14,12 +14,12 @@ cpr:BusinessGroup a any-org:BusinessGroup .
 cpr:ProductionGroup a any-org:ProductionGroup .
 
 cpr:ProductionOperator a cup-spec:ProductionOperator ;
-    hmas:isMembershipOf agent-c:agent ;
+    hmas:isMembershipOf agent-c:me ;
     hmas:isMembershipFor any-org:Operator ;
     hmas:isMembershipIn cpr:ProductionGroup .
 
 cpr:ProductionOrderManager a cup-spec:ProductionOrderManager ;
-    hmas:isMembershipOf agent-b:agent ;
+    hmas:isMembershipOf agent-b:me ;
     hmas:isMembershipFor any-org:OrderManager ;
     hmas:isMembershipIn cpr:ProductionGroup .
 
