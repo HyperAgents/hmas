@@ -258,14 +258,7 @@ ex:Logistics a sh:NodeShape, rdfs:Class ;
     sh:property [
         sh:path hmas:proposesFacility ;
         sh:hasValue ex:Move ;
-        ] ;
-    sh:property [
-        sh:path [ sh:inversePath hmas:isMemberOf ] ;
-        sh:node ex:DirectorIncompatibilityShape ;
-        ] ;
-    sh:property [
-        sh:path (hmas:hasOrganizationalGoal [ sh:inversePath hmas:includesOrganizationalGoal ] ) ;
-        sh:node ex:MissionCardinalityShape ] .
+        ] .
 
 ## Group Specifications
 ex:AdministrativeDepartment a sh:NodeShape, rdfs:Class ;
@@ -451,10 +444,9 @@ ex:DirectorIncompatibilityShape a sh:NodeShape ;
 			      SELECT (?agent as $this) (COUNT(?s) as ?c)
             WHERE {
               ?s hmas:isMembershipOf ?agent .
-              ?s hmas:isMembershipFor ?role .
-              ?role a ex:Director .
+              ?s hmas:isMembershipFor ?ex:Director .
             }
-            GROUP BY ?agent ?role
+            GROUP BY ?agent
             HAVING (COUNT(?s) > 1)
 			    """ ;
         ] .
@@ -531,7 +523,7 @@ ex:Dept_Hire_Mission a sh:NodeShape, rdfs:Class ;
 
 ## Mission Constraint Specifications
 ex:MissionCardinalityShape a sh:NodeShape ;
-    sh:targetClass hmas:Mission ;
+    sh:targetObjectsOf hmas:isCommitmentFor ;
     sh:property [
         sh:path [ sh:inversePath hmas:isCommitmentFor ] ;
         sh:maxCount 1 ;

@@ -40,7 +40,7 @@ A new person has to be hired in the Commercial department for the Account Manage
 
 ```
 ex:MissionCardinalityShape a sh:NodeShape ;
-    sh:targetClass hmas:Mission ;
+    sh:targetObjectsOf hmas:isCommitmentFor ;
     sh:property [
         sh:path [ sh:inversePath hmas:isCommitmentFor ] ;
         sh:maxCount 1 ;
