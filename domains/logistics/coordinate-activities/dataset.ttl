@@ -529,6 +529,14 @@ ex:MissionCardinalityShape a sh:NodeShape ;
         sh:maxCount 1 ;
         ] .
 
+## Commitment Constraint Specifications
+ex:CommitmentCardinalityShape a sh:NodeShape ;
+    sh:targetClass hmas:Commitment ;
+    sh:property [
+        sh:path hmas:isCommitmentOf ;
+        sh:maxCount 1 ;
+        ] .
+
 # INSTANTIATION
 
 ## Organizational Values
