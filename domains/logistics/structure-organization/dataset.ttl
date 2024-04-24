@@ -217,10 +217,6 @@ ex:Logistics a sh:NodeShape, rdfs:Class ;
     sh:property [
         sh:path hmas:proposesFacility ;
         sh:hasValue ex:Move ;
-        ] ;
-    sh:property [
-        sh:path [ sh:inversePath hmas:isMemberOf ] ;
-        sh:node ex:directorIncompatibilityShape ;
         ] .
 
 ## Group Specifications
@@ -407,10 +403,9 @@ ex:directorIncompatibilityShape a sh:NodeShape ;
 			      SELECT (?agent as $this) (COUNT(?s) as ?c)
             WHERE {
               ?s hmas:isMembershipOf ?agent .
-              ?s hmas:isMembershipFor ?role .
-              ?role a ex:Director .
+              ?s hmas:isMembershipFor ex:Director .
             }
-            GROUP BY ?agent ?role
+            GROUP BY ?agent
             HAVING (COUNT(?s) > 1)
 			    """ ;
         ] .

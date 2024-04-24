@@ -80,23 +80,10 @@ Jane, an artificial agent, is deployed as a  _carrier_. Jane can communicate wit
                 SELECT (?agent as $this) (COUNT(?s) as ?c)
                 WHERE {
                     ?s hmas:isMembershipOf ?agent .
-                    ?s hmas:isMembershipFor ?role .
-                    ?role a ex:Director .
+                    ?s hmas:isMembershipFor ex:Director .
                 }
-                GROUP BY ?agent ?role
+                GROUP BY ?agent
                 HAVING (COUNT(?s) > 1)
 			    """ ;
-            ] .
-    ```
-    
-    The association of the constraints applied to the memberships of an organization is done by adding a SHACL property in the organization model. For example, add the following SHACL property into the `ex:Logistics` organization model to associate it with the `ex:directorIncompatibilityShape`
-    
-    ```
-    ex:Logistics a sh:NodeShape ;
-        rdfs:subClassOf hmas:Organization ;
-        
-        sh:property [
-            sh:path [ sh:inversePath hmas:isMemberOf ] ;
-            sh:node ex:directorIncompatibilityShape ;
             ] .
     ```
