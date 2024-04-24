@@ -4,7 +4,10 @@ prefix hmas: <https://purl.org/hmas/>
 select distinct ?agent
 where {
   ?usage a ?usageModel ;
-         hmas:isUsageBy ?agent ;
          hmas:isUsageIn ex:PickingSetting .
+
+  ?use a hmas:Use ;
+       hmas:isUseFor ?usage ;
+       hmas:isUseBy ?agent .
 }
 order by ?agent

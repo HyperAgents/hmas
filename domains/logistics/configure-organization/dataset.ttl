@@ -1,6 +1,5 @@
 @prefix ex: <http://example.org/> .
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
@@ -27,7 +26,7 @@ rdfs:
 
 ## Workspace
 ex:LogisticsWS a hmas:Workspace ;
-    hmas:contains ex:John, ex:Frank, ex:Gabriel, ex:Igor, ex:Jane, ex:Kate, ex:Leo, ex:Marie, ex:Nancy, ex:Forklift_1, ex:Forklift_2, ex:Forklift_3, ex:Forklift_4, ex:Barcode_Reader_1, ex:Barcode_Reader_2, ex:Label_Printer_1, ex:Label_Printer_2 .
+    hmas:contains ex:John, ex:Frank, ex:Gabriel, ex:Igor, ex:Jane, ex:Kate, ex:Leo, ex:Marie, ex:Nancy, ex:Forklift_1, ex:Forklift_2, ex:Forklift_3, ex:Forklift_4, ex:Palletjack_1, ex:Palletjack_2, ex:Palletjack_3, ex:Palletjack_4, ex:Barcode_Reader_1, ex:Barcode_Reader_2, ex:Label_Printer_1, ex:Label_Printer_2 .
 
 ## Agents
 ex:John a hmas:Agent ;
@@ -72,6 +71,22 @@ ex:Forklift_3 a hmas:Artifact ;
     hmas:isMaterialOf ex:FL_Logistics ;
     hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
 ex:Forklift_4 a hmas:Artifact ;
+    hmas:isContainedIn ex:LogisticsWS ;
+    hmas:isMaterialOf ex:FL_Logistics ;
+    hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
+ex:Palletjack_1 a hmas:Artifact ;
+    hmas:isContainedIn ex:LogisticsWS ;
+    hmas:isMaterialOf ex:FL_Logistics ;
+    hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
+ex:Palletjack_2 a hmas:Artifact ;
+    hmas:isContainedIn ex:LogisticsWS ;
+    hmas:isMaterialOf ex:FL_Logistics ;
+    hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
+ex:Palletjack_3 a hmas:Artifact ;
+    hmas:isContainedIn ex:LogisticsWS ;
+    hmas:isMaterialOf ex:FL_Logistics ;
+    hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
+ex:Palletjack_4 a hmas:Artifact ;
     hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMaterialOf ex:FL_Logistics ;
     hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
@@ -121,7 +136,11 @@ ex:Logistics a sh:NodeShape, rdfs:Class ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalValue ;
-        sh:maxCount 7 ;
+        sh:maxCount 8 ;
+        ] ;
+    sh:property [
+        sh:path hmas:proposesRole ;
+        sh:hasValue ex:Director ;
         ] ;
     sh:property [
         sh:path hmas:proposesRole ;
@@ -235,99 +254,48 @@ ex:Logistics a sh:NodeShape, rdfs:Class ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
-        sh:hasValue ex:Hired
+        sh:hasValue ex:ContractSigned ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
-        sh:hasValue ex:ContractSigned
+        sh:hasValue ex:CandidateSelected ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
-        sh:hasValue ex:CandidateSelected
+        sh:hasValue ex:RecommendationsAssessed ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
-        sh:hasValue ex:RecommendationsAssessed
+        sh:hasValue ex:CandidatesInterviewed ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
-        sh:hasValue ex:CandidatesInterviewed
+        sh:hasValue ex:InterviewsScheduled ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
-        sh:hasValue ex:InterviewsScheduled
+        sh:hasValue ex:InterviewsConducted ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
-        sh:hasValue ex:InterviewsConducted
+        sh:hasValue ex:IntervieweesSelected ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
-        sh:hasValue ex:IntervieweesSelected
+        sh:hasValue ex:JobPositionAnnounced ;
         ] ;
     sh:property [
         sh:path hmas:hasOrganizationalGoal ;
-        sh:hasValue ex:JobPositionAnnounced
+        sh:hasValue ex:JobPositionWritten ;
         ] ;
     sh:property [
-        sh:path hmas:hasOrganizationalGoal ;
-        sh:hasValue ex:JobPositionWritten
-        ] ;
-    sh:property [
-        sh:path hmas:proposesProcessScheme ;
-        sh:maxCount 4 ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesProcessScheme ;
-        sh:hasValue ex:HiringProcess ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesProcessScheme ;
-        sh:hasValue ex:HandlingInvoiceProcess ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesProcessScheme ;
-        sh:hasValue ex:ProspectingClientProcess ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesProcessScheme ;
-        sh:hasValue ex:DeliveringServicesProcess ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesActivityScheme ;
-        sh:maxCount 8 ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesActivityScheme ;
-        sh:hasValue ex:Hiring ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesActivityScheme ;
-        sh:hasValue ex:SigningContract ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesActivityScheme ;
-        sh:hasValue ex:SelectingCandidate ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesActivityScheme ;
-        sh:hasValue ex:AssessingRecommendations ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesActivityScheme ;
-        sh:hasValue ex:InterviewingCandidates ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesActivityScheme ;
-        sh:hasValue ex:SelectingInterviewees ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesActivityScheme ;
-        sh:hasValue ex:AnnouncingJobPosition ;
-        ] ;
-    sh:property [
-        sh:path hmas:proposesActivityScheme ;
-        sh:hasValue ex:WritingJobPosition ;
+        sh:path hmas:proposesProcess ;
+        sh:or (
+            [ sh:class ex:Hire_Process ]
+            [ sh:class ex:Handle_Invoice_Process ]
+            [ sh:class ex:Prospect_Client_Process ]
+            [ sh:class ex:Deliver_Goods_Process ]
+            )
         ] ;
     sh:property [
         sh:path hmas:proposesSetting ;
@@ -364,10 +332,6 @@ ex:Logistics a sh:NodeShape, rdfs:Class ;
     sh:property [
         sh:path hmas:proposesFacility ;
         sh:hasValue ex:PrintLabel ;
-        ] ;
-    sh:property [
-        sh:path [ sh:inversePath hmas:isMemberOf ] ;
-        sh:node ex:DirectorIncompatibilityShape ;
         ] .
 
 ## Group Specifications
@@ -531,6 +495,7 @@ ex:Carrier_Shipping_Membership a sh:NodeShape, rdfs:Class ;
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
         sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
@@ -542,42 +507,7 @@ ex:Carrier_Shipping_Membership a sh:NodeShape, rdfs:Class ;
         sh:qualifiedMinCount 1 ;
         sh:qualifiedMaxCount 1 ;
         ] .
-ex:Collector_Shipping_Membership a sh:NodeShape, rdfs:Class ;
-    rdfs:subClassOf hmas:Membership ;
-    sh:property [
-        sh:path hmas:isMembershipOf ;
-        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:qualifiedMinCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMembershipFor ;
-        sh:hasValue ex:Collector ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] .
-ex:Deliverer_Shipping_Membership a sh:NodeShape, rdfs:Class ;
-    rdfs:subClassOf hmas:Membership ;
-    sh:property [
-        sh:path hmas:isMembershipOf ;
-        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:qualifiedMinCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMembershipFor ;
-        sh:hasValue ex:Deliverer ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMembershipIn ;
-        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] .
 
-## Membership Incompatibility Specifications
 ex:DirectorIncompatibilityShape a sh:NodeShape ;
     sh:targetClass hmas:Agent ;
     sh:sparql [
@@ -588,207 +518,194 @@ ex:DirectorIncompatibilityShape a sh:NodeShape ;
 			      SELECT (?agent as $this) (COUNT(?s) as ?c)
             WHERE {
               ?s hmas:isMembershipOf ?agent .
-              ?s hmas:isMembershipFor ?role .
-              ?role a ex:Director .
-            }
-            GROUP BY ?agent ?role
-            HAVING (COUNT(?s) > 1)
-			    """ ;
-        ] .
-        
-## Membership Relation Specifications
-ex:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
-
-## Dependence on Activity Scheme Specifications
-ex:isPrecededBy rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
-ex:isFacilitatedBy rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
-ex:isBiasedBy rdfs:subPropertyOf hmas:isDependentOnActivityScheme .
-
-## Mission Specifications
-ex:HR_Hiring a sh:NodeShape, rdfs:Class ;
-    rdfs:subClassOf hmas:Mission ;
-    sh:property [
-        sh:path hmas:isMissionOf ;
-        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionIn ;
-        sh:hasValue ex:HiringProcess ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionFor ;
-        sh:maxCount 3 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionFor ;
-        sh:hasValue ex:Hired ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionFor ;
-        sh:hasValue ex:ContractSigned ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionFor ;
-        sh:hasValue ex:JobPositionAnnounced ;
-        ] .
-ex:Dept_Hiring a sh:NodeShape, rdfs:Class ;
-    rdfs:subClassOf hmas:Mission ;
-    sh:property [
-        sh:path hmas:isMissionOf ;
-        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionIn ;
-        sh:hasValue ex:HiringProcess ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionFor ;
-        sh:minCount 5 ;
-        sh:maxCount 5 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionFor ;
-        sh:hasValue ex:CandidateSelected ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionFor ;
-        sh:hasValue ex:RecommendationsAssessed ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionFor ;
-        sh:hasValue ex:CandidatesInterviewed ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionFor ;
-        sh:hasValue ex:IntervieweesSelected ;
-        ] ;
-    sh:property [
-        sh:path hmas:isMissionFor ;
-        sh:hasValue ex:JobPositionWritten ;
-        ] .
-
-## Mission Relationship Specifications
-ex:complements rdfs:subPropertyOf hmas:hasMissionRelationshipWith ;
-    a owl:SymmetricProperty .
-
-## Mission Constraint Specifications
-ex:MissionCardinalityShape a sh:NodeShape ;
-    sh:targetClass hmas:Mission ;
-    sh:sparql [
-        a sh:SPARQLConstraint ;
-        sh:message "The number of agents member of a mission cannot be greater than 1." ;
-        sh:prefixes ex:, hmas:, rdfs: ;
-        sh:select """
-			      SELECT (?agent as $this) (COUNT(?s) as ?c)
-            WHERE {
-              ?s hmas:isMissionOf ?agent .
+              ?s hmas:isMembershipFor ex:Director .
             }
             GROUP BY ?agent
             HAVING (COUNT(?s) > 1)
 			    """ ;
+        ] .
+
+## Dependence on Organizational Goal Specifications
+ex:isSubOrganizationalGoalOf rdfs:subPropertyOf hmas:isDependentOnOrganizationalGoal .
+ex:isPrecededBy rdfs:subPropertyOf hmas:isDependentOnOrganizationalGoal .
+ex:isFacilitatedBy rdfs:subPropertyOf hmas:isDependentOnOrganizationalGoal .
+ex:isBiasedBy rdfs:subPropertyOf hmas:isDependentOnOrganizationalGoal .
+
+## Process Specifications
+ex:Hire_Process a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf hmas:Process ;
+    sh:property [
+        sh:path hmas:includesMission ;
+        sh:qualifiedValueShape [ sh:class ex:HR_Hire_Mission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:includesMission ;
+        sh:qualifiedValueShape [ sh:class ex:Dept_Hire_Mission ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] .
+ex:Handle_Invoice_Process a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf hmas:Process .
+ex:Prospect_Client_Process a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf hmas:Process .
+ex:Deliver_Goods_Process a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf hmas:Process .
+
+## Mission Specifications
+ex:HR_Hire_Mission a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf hmas:Mission ;
+    sh:property [
+        sh:path hmas:includesOrganizationalGoal ;
+        sh:maxCount 2 ;
+        ] ;
+    sh:property [
+        sh:path hmas:includesOrganizationalGoal ;
+        sh:hasValue ex:ContractSigned ;
+        ] ;
+    sh:property [
+        sh:path hmas:includesOrganizationalGoal ;
+        sh:hasValue ex:JobPositionAnnounced ;
+        ] .
+ex:Dept_Hire_Mission a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf hmas:Mission ;
+    sh:property [
+        sh:path hmas:includesOrganizationalGoal ;
+        sh:maxCount 5 ;
+        ] ;
+    sh:property [
+        sh:path hmas:includesOrganizationalGoal ;
+        sh:hasValue ex:CandidateSelected ;
+        ] ;
+    sh:property [
+        sh:path hmas:includesOrganizationalGoal ;
+        sh:hasValue ex:RecommendationsAssessed ;
+        ] ;
+    sh:property [
+        sh:path hmas:includesOrganizationalGoal ;
+        sh:hasValue ex:CandidatesInterviewed ;
+        ] ;
+    sh:property [
+    sh:path hmas:includesOrganizationalGoal ;
+        sh:hasValue ex:IntervieweesSelected ;
+        ] ;
+    sh:property [
+        sh:path hmas:includesOrganizationalGoal ;
+        sh:hasValue ex:JobPositionWritten ;
+        ] .
+
+## Mission Constraint Specifications
+ex:MissionCardinalityShape a sh:NodeShape ;
+    sh:targetObjectsOf hmas:isCommitmentFor ;
+    sh:property [
+        sh:path [ sh:inversePath hmas:isCommitmentFor ] ;
+        sh:maxCount 1 ;
+        ] .
+
+## Commitment Constraint Specifications
+ex:CommitmentCardinalityShape a sh:NodeShape ;
+    sh:targetClass hmas:Commitment ;
+    sh:property [
+        sh:path hmas:isCommitmentOf ;
+        sh:maxCount 1 ;
         ] .
 
 ## Usage Specifications
 ex:Collecting_Usage a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Usage ;
     sh:property [
-        sh:path hmas:isUsageBy ;
-        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:path hmas:isUsageOf ;
+        sh:maxCount 4 ;
         ] ;
     sh:property [
         sh:path hmas:isUsageOf ;
-        sh:qualifiedValueShape [
-            sh:or (
-                [ sh:and (
-                        [ sh:class hmas:Artifact ]
-                        [ sh:path hmas:hasFacility ;
-                            sh:and (
-                                [ sh:node ex:LiftUp ]
-                                [ sh:node ex:LiftDown ]
-                                [ sh:node ex:Move ]
-                                )
-                            ]
-                        )
-                    ]
-                [ sh:and (
-                        [ sh:class hmas:Artifact ]
-                        [ sh:path hmas:hasFacility ;
-                            sh:node ex:PrintLabel ;
-                            ]
-                        )
-                    ]
-                )
-            ] ;
-        sh:qualifiedMinCount 2 ;
-        sh:qualifiedMaxCount 2 ;
+        sh:hasValue ex:LiftUp ;
+        ] ;
+    sh:property [
+        sh:path hmas:isUsageOf ;
+        sh:hasValue ex:LiftDown ;
+        ] ;
+    sh:property [
+        sh:path hmas:isUsageOf ;
+        sh:hasValue ex:Move ;
+        ] ;
+    sh:property [
+        sh:path hmas:isUsageOf ;
+        sh:hasValue ex:ReadBarcode ;
         ] ;
     sh:property [
         sh:path hmas:isUsageIn ;
         sh:hasValue ex:ReceivingSetting ;
+        sh:maxCount 1 ;
         ] .
 ex:Delivering_Usage a sh:NodeShape, rdfs:Class ;
     rdfs:subClassOf hmas:Usage ;
     sh:property [
-        sh:path hmas:isUsageBy ;
-        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
+        sh:path hmas:isUsageOf ;
+        sh:maxCount 4 ;
         ] ;
     sh:property [
         sh:path hmas:isUsageOf ;
-        sh:qualifiedValueShape [
-            sh:or (
-                [ sh:and (
-                        [ sh:class hmas:Artifact ]
-                        [ sh:path hmas:hasFacility ;
-                            sh:and (
-                                [ sh:node ex:LiftUp ]
-                                [ sh:node ex:LiftDown ]
-                                [ sh:node ex:Move ]
-                                )
-                            ]
-                        )
-                    ]
-                [ sh:and (
-                        [ sh:class hmas:Artifact ]
-                        [ sh:path hmas:hasFacility ;
-                            sh:node ex:PrintLabel ;
-                            ]
-                        )
-                    ]
-                )
-            ] ;
-        sh:qualifiedMinCount 2 ;
-        sh:qualifiedMaxCount 2 ;
+        sh:hasValue ex:LiftUp ;
+        ] ;
+    sh:property [
+        sh:path hmas:isUsageOf ;
+        sh:hasValue ex:LiftDown ;
+        ] ;
+    sh:property [
+        sh:path hmas:isUsageOf ;
+        sh:hasValue ex:Move ;
+        ] ;
+    sh:property [
+        sh:path hmas:isUsageOf ;
+        sh:hasValue ex:PrintLabel ;
         ] ;
     sh:property [
         sh:path hmas:isUsageIn ;
         sh:hasValue ex:PickingSetting ;
+        sh:maxCount 1 ;
         ] .
 
 ## Usage Relationship Specifications
 ex:compatibleUsage rdfs:subPropertyOf hmas:hasUsageRelationshipWith .
 
-## Usage Constraint Specifications
-ex:UsageCardinalityShape a sh:NodeShape ;
-    sh:targetClass hmas:Usage ;
+## Use Constraint Specifications
+ex:UseCardinalityShape a sh:NodeShape ;
+    sh:targetClass hmas:Use ;
+    sh:property [
+        sh:path hmas:isUseFor ;
+        sh:qualifiedValueShape [ sh:class hmas:Usage ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isUseBy ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] .
+        
+ex:UseFacilitiesShape a sh:NodeShape ;
+    sh:targetClass hmas:Use ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "The number of agents participating in a usage cannot begreater than 1." ;
+        sh:message "The artifacts should have all the facilities specified in the usage." ;
         sh:prefixes ex:, hmas:, rdfs: ;
         sh:select """
-			      SELECT (?agent as $this) (COUNT(?s) as ?c)
-            WHERE {
-              ?s hmas:isUsageBy ?agent .
+          SELECT (?use as $this)
+          WHERE {
+            ?use hmas:isUseFor ?usage .
+            ?usage hmas:isUsageOf ?facility .
+
+            FILTER NOT EXISTS {
+              ?use hmas:isUseOf ?artifact .
+              ?artifact hmas:hasFacility ?f .
+
+              FILTER(?f = ?facility)
             }
-            GROUP BY ?agent
-            HAVING (COUNT(?s) > 1)
+          }
+          GROUP BY ?use
           """ ;
         ] .
 
@@ -854,52 +771,12 @@ ex:FL_Planner_Planning a ex:Planner_Planning_Membership ;
     hmas:isMembershipFor ex:Planner ;
     hmas:isMembershipIn ex:FL_PlanningDepartment .
 ex:FL_Carrier_Shipping a ex:Carrier_Shipping_Membership ;
-    hmas:isMembershipOf ex:Jane, ex:Marie, ex:Nancy, ex:Leo ;
+    hmas:isMembershipOf ex:Jane ;
     hmas:isMembershipFor ex:Carrier ;
-    hmas:isMembershipIn ex:FL_ShippingDepartment .
-ex:FL_Collector_Shipping a ex:Collector_Shipping_Membership ;
-    hmas:isMembershipOf ex:Marie, ex:Leo ;
-    hmas:isMembershipFor ex:Collector ;
-    hmas:isMembershipIn ex:FL_ShippingDepartment .
-ex:FL_Deliverer_Shipping a ex:Deliverer_Shipping_Membership ;
-    hmas:isMembershipOf ex:Nancy, ex:Leo ;
-    hmas:isMembershipFor ex:Deliverer ;
     hmas:isMembershipIn ex:FL_ShippingDepartment .
 
 ex:FL_Planner_Planning ex:canCommunicateWith ex:FL_Carrier_Shipping .
 ex:FL_Carrier_Shipping ex:canCommunicateWith ex:FL_Planner_Planning .
-
-## Process Schemes
-ex:HiringProcess a hmas:ProcessScheme ;
-    hmas:hasRootActivityScheme ex:Hiring .
-ex:HandlingInvoiceProcess a hmas:ProcessScheme .
-ex:ProspectingClientProcess a hmas:ProcessScheme .
-ex:DeliveringServicesProcess a hmas:ProcessScheme .
-
-## Activity Schemes
-ex:Hiring a hmas:ActivityScheme ;
-    ex:isPrecededBy ex:SigningContract ;
-    hmas:achievesOrganizationalGoal ex:Hired .
-ex:SigningContract a hmas:ActivityScheme ;
-    ex:isPrecededBy ex:SelectingCandidate ;
-    hmas:achievesOrganizationalGoal ex:ContractSigned .
-ex:SelectingCandidate a hmas:ActivityScheme ;
-    ex:isPrecededBy ex:AssessingRecommendations, ex:InterviewingCandidates ;
-    ex:isBiasedBy ex:AssessingRecommendations ;
-    hmas:achievesOrganizationalGoal ex:CandidateSelected .
-ex:AssessingRecommendations a hmas:ActivityScheme ;
-    ex:isPrecededBy ex:SelectingInterviewees .
-ex:InterviewingCandidates a hmas:ActivityScheme ;
-    ex:isPrecededBy ex:SelectingInterviewees ;
-    ex:isFacilitatedBy ex:AssessingRecommendations .
-ex:SelectingInterviewees a hmas:ActivityScheme ;
-    ex:isPrecededBy ex:AnnouncingJobPosition ;
-    hmas:achievesOrganizationalGoal ex:IntervieweesSelected .
-ex:AnnouncingJobPosition a hmas:ActivityScheme ;
-    ex:isPrecededBy ex:WritingJobPosition ;
-    hmas:achievesOrganizationalGoal ex:JobPositionAnnounced .
-ex:WritingJobPosition a hmas:ActivityScheme ;
-    hmas:achievesOrganizationalGoal ex:JobPositionWritten .
 
 ## Organizational Goals
 ex:HumanResourcesManaged a hmas:OrganizationalGoal .
@@ -909,30 +786,43 @@ ex:PlanningManaged a hmas:OrganizationalGoal .
 ex:CarriedGoods a hmas:OrganizationalGoal .
 ex:CollectedGoods a hmas:OrganizationalGoal .
 ex:DeliveredGoods a hmas:OrganizationalGoal .
-ex:Hired a hmas:OrganizationalGoal .
-ex:ContractSigned a hmas:OrganizationalGoal .
-ex:CandidateSelected a hmas:OrganizationalGoal .
-ex:RecommendationsAssessed a hmas:OrganizationalGoal .
-ex:CandidatesInterviewed a hmas:OrganizationalGoal .
+ex:ContractSigned a hmas:OrganizationalGoal ;
+    ex:isPrecededBy ex:CandidateSelected .
+ex:CandidateSelected a hmas:OrganizationalGoal ;
+    ex:isPrecededBy ex:RecommendationsAssessed, ex:CandidatesInterviewed ;
+    ex:isBiasedBy ex:RecommendationsAssessed .
+ex:RecommendationsAssessed a hmas:OrganizationalGoal ;
+    ex:isPrecededBy ex:IntervieweesSelected .
+ex:CandidatesInterviewed a hmas:OrganizationalGoal ;
+    ex:isPrecededBy ex:IntervieweesSelected ;
+    ex:isFacilitatedBy ex:RecommendationsAssessed .
 ex:InterviewsScheduled a hmas:OrganizationalGoal ;
-    hmas:isSubOrganizationalGoalOf ex:CandidatesInterviewed .
+    ex:isSubOrganizationalGoalOf ex:CandidatesInterviewed .
 ex:InterviewsConducted a hmas:OrganizationalGoal ;
-    hmas:isSubOrganizationalGoalOf ex:CandidatesInterviewed .
-ex:IntervieweesSelected a hmas:OrganizationalGoal .
-ex:JobPositionAnnounced a hmas:OrganizationalGoal .
+    ex:isSubOrganizationalGoalOf ex:CandidatesInterviewed .
+ex:IntervieweesSelected a hmas:OrganizationalGoal ;
+    ex:isPrecededBy ex:JobPositionAnnounced .
+ex:JobPositionAnnounced a hmas:OrganizationalGoal ;
+    ex:isPrecededBy ex:JobPositionWritten .
 ex:JobPositionWritten a hmas:OrganizationalGoal .
 
-## Missions
-ex:FL_AccountManager_HR_Hiring a ex:HR_Hiring ;
-    hmas:isMissionOf ex:Frank ;
-    hmas:isMissionIn ex:HiringProcess ;
-    hmas:isMissionFor ex:Hired, ex:ContractSigned, ex:JobPositionAnnounced .
-ex:FL_AccountManager_Dept_Hiring a ex:Dept_Hiring ;
-    hmas:isMissionOf ex:Kate ;
-    hmas:isMissionIn ex:HiringProcess ;
-    hmas:isMissionFor ex:CandidateSelected, ex:RecommendationsAssessed, ex:CandidatesInterviewed, ex:IntervieweesSelected, ex:JobPositionWritten .
+## Processes
+ex:AccountManager_Hire_Process a ex:Hire_Process ;
+    hmas:includesMission ex:AccountManager_HR_Hire_Mission, ex:AccountManager_Dept_Hire_Mission .
 
-ex:FL_AccountManager_Dept_Hiring ex:complements ex:FL_AccountManager_HR_Hiring .
+## Missions
+ex:AccountManager_HR_Hire_Mission a ex:HR_Hire_Mission ;
+    hmas:includesOrganizationalGoal ex:ContractSigned, ex:JobPositionAnnounced .
+ex:AccountManager_Dept_Hire_Mission a ex:Dept_Hire_Mission ;
+    hmas:includesOrganizationalGoal ex:CandidateSelected, ex:RecommendationsAssessed, ex:CandidatesInterviewed, ex:IntervieweesSelected, ex:JobPositionWritten .
+
+## Commitments
+ex:AccountManager_HR_Hire_Commitment a hmas:Commitment ;
+    hmas:isCommitmentOf ex:Frank ;
+    hmas:isCommitmentFor ex:AccountManager_HR_Hire_Mission .
+ex:AccountManager_Dept_Hire_Commitment a hmas:Commitment ;
+    hmas:isCommitmentOf ex:Kate ;
+    hmas:isCommitmentFor ex:AccountManager_Dept_Hire_Mission .
 
 ## Settings
 ex:PickingSetting a hmas:Setting ;
@@ -963,23 +853,37 @@ ex:PrintLabel a hmas:Facility ;
 
 ## Usages
 ex:FL_Lyon_Collecting_Usage a ex:Collecting_Usage ;
-    hmas:isUsageBy ex:Marie ;
     hmas:isUsageIn ex:ReceivingSetting ;
-    hmas:isUsageOf ex:Forklift_1, ex:Barcode_Reader_1 .
+    hmas:isUsageOf ex:LiftUp, ex:LiftDown, ex:Move, ex:ReadBarcode .
 ex:FL_StEtienne_Collecting_Usage a ex:Collecting_Usage ;
-    hmas:isUsageBy ex:Leo ;
     hmas:isUsageIn ex:ReceivingSetting ;
-    hmas:isUsageOf ex:Forklift_2, ex:Barcode_Reader_2 .
+    hmas:isUsageOf ex:LiftUp, ex:LiftDown, ex:Move, ex:ReadBarcode .
 ex:FL_Lyon_Delivering_Usage a ex:Delivering_Usage ;
-    hmas:isUsageBy ex:Nancy ;
     hmas:isUsageIn ex:PickingSetting ;
-    hmas:isUsageOf ex:Forklift_3, ex:Label_Printer_1 .
+    hmas:isUsageOf ex:LiftUp, ex:LiftDown, ex:Move, ex:PrintLabel .
 ex:FL_StEtienne_Delivering_Usage a ex:Delivering_Usage ;
-    hmas:isUsageBy ex:Leo ;
     hmas:isUsageIn ex:PickingSetting ;
-    hmas:isUsageOf ex:Forklift_4, ex:Label_Printer_2 .
+    hmas:isUsageOf ex:LiftUp, ex:LiftDown, ex:Move, ex:PrintLabel .
 
 ex:FL_StEtienne_Collecting_Usage ex:compatibleUsage ex:FL_StEtienne_Delivering_Usage .
+
+## Use
+ex:FL_Lyon_Collecting_Use a hmas:Use ;
+    hmas:isUseBy ex:Marie ;
+    hmas:isUseOf ex:Forklift_1, ex:Palletjack_1, ex:Barcode_Reader_1 ;
+    hmas:isUseFor ex:FL_Lyon_Collecting_Usage .
+ex:FL_StEtienne_Collecting_Use a hmas:Use ;
+    hmas:isUseBy ex:Leo ;
+    hmas:isUseOf ex:Forklift_2, ex:Palletjack_2, ex:Barcode_Reader_2 ;
+    hmas:isUseFor ex:FL_StEtienne_Collecting_Usage .
+ex:FL_Lyon_Delivering_Use a hmas:Use ;
+    hmas:isUseBy ex:Nancy ;
+    hmas:isUseOf ex:Forklift_3, ex:Palletjack_3, ex:Label_Printer_1 ;
+    hmas:isUseFor ex:FL_Lyon_Delivering_Usage .
+ex:FL_StEtienne_Delivering_Use a hmas:Use ;
+    hmas:isUseBy ex:Leo ;
+    hmas:isUseOf ex:Forklift_4, ex:Palletjack_4, ex:Label_Printer_2 ;
+    hmas:isUseFor ex:FL_StEtienne_Delivering_Usage .
     
 ## Organizations
 ex:FL_LogisticsProfile a hmas:ResourceProfile .
@@ -987,10 +891,9 @@ ex:FL_LogisticsProfile a hmas:ResourceProfile .
 ex:FL_Logistics a ex:Logistics ;
     hmas:hasProfile ex:FL_LogisticsProfile ;
     hmas:hasOrganizationalValue ex:Commitment, ex:IntegrityRespect ;
-    hmas:hasOrganizationalGoal ex:HumanResourcesManaged, ex:FinancialManaged, ex:CommercialManaged, ex:PlanningManaged, ex:CarriedGoods, ex:CollectedGoods, ex:DeliveredGoods, ex:Hired, ex:ContractSigned, ex:CandidateSelected, ex:RecommendationsAssessed, ex:CandidatesInterviewed, ex:InterviewsScheduled, ex:InterviewsConducted, ex:IntervieweesSelected, ex:JobPositionAnnounced, ex:JobPositionWritten ;
+    hmas:hasOrganizationalGoal ex:HumanResourcesManaged, ex:FinancialManaged, ex:CommercialManaged, ex:PlanningManaged, ex:CarriedGoods, ex:CollectedGoods, ex:DeliveredGoods, ex:ContractSigned, ex:CandidateSelected, ex:RecommendationsAssessed, ex:CandidatesInterviewed, ex:InterviewsScheduled, ex:InterviewsConducted, ex:IntervieweesSelected, ex:JobPositionAnnounced, ex:JobPositionWritten ;
     hmas:proposesRole ex:Director, ex:HumanResourcesOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Carrier, ex:Collector, ex:Deliverer ;
     hmas:isStructuredBy ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment, ex:FL_HumanResourcesDepartment, ex:FL_FinanceDepartment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment ;
-    hmas:proposesProcessScheme ex:HiringProcess, ex:HandlingInvoiceProcess, ex:ProspectingClientProcess, ex:DeliveringServicesProcess ;
-    hmas:proposesActivityScheme ex:Hiring, ex:SigningContract, ex:SelectingCandidate, ex:AssessingRecommendations, ex:InterviewingCandidates, ex:SelectingInterviewees, ex:AnnouncingJobPosition, ex:WritingJobPosition ;
+    hmas:proposesProcess ex:AccountManager_Hire_Process ;
     hmas:proposesSetting ex:PickingSetting, ex:ReceivingSetting ;
     hmas:proposesFacility ex:LiftUp, ex:LiftDown, ex:Move, ex:ReadBarcode, ex:PrintLabel .

@@ -3,10 +3,11 @@ prefix hmas: <https://purl.org/hmas/>
 
 select distinct ?artifact
 where {
-  ?artifact hmas:isMaterialOf ex:FL_Logistics .
-  
   ?usage a ?usageModel ;
          hmas:isUsageIn ex:ReceivingSetting ;
-         hmas:isUsageOf ?artifact .
+         hmas:isUsageOf ?facility .
+
+  ?artifact hmas:isMaterialOf ex:FL_Logistics ;
+            hmas:hasFacility ?facility .
 }
 order by ?artifact

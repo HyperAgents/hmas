@@ -19,30 +19,49 @@
 
 :Usage a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Usage is a state of affairs in which an Agent uses Artifacts' Facilities in a Setting."@en ;
+    rdfs:comment "A set of Facilities that Agents can use in a Setting."@en ;
     rdfs:label "usage"@en, "usage"@fr .
     
 :Setting a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Setting is the context in which a Usage is set."@en ;
-    rdfs:label "setting"@en, "contexte d'usage"@fr ;
+    rdfs:label "setting"@en, "contexte d'usage"@fr .
+
+:Use a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "An engagement of an Agent of using an Artifact in the context of an Usage."@en ;
+    rdfs:label "use"@en, "utilisation"@fr .
     
 #################################################################
 #    Properties
 #################################################################
 
-:isUsageBy a owl:ObjectProperty ;
+:isUseOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Usage ;
+    rdfs:domain :Use ;
+    rdfs:range :Artifact ;
+    rdfs:comment "A relation that refers to an Artifact involved in a Use."@en ;
+    rdfs:label "is use of"@en, "est l'utilisation de"@fr .
+
+:isUseBy a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Use ;
     rdfs:range :Agent ;
-    rdfs:comment "A relation that refers to an Agent involved in a Usage."@en ;
-    rdfs:label "is usage by"@en, "est un usage par"@fr .
+    rdfs:comment "A relation that refers to an Agent involved in a Use."@en ;
+    rdfs:label "is use by"@en, "est utilisé par"@fr .
+
+:isUseFor a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Use ;
+    rdfs:range :Usage ;
+    rdfs:comment "A relation that refers to a Usage involved in a Use."@en ;
+    rdfs:label "is use for"@en, "est utilisé pour"@fr .
 
 :isUsageOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Usage ;
-    rdfs:range :Artifact ;
-    rdfs:comment "A relation that refers to an Artifact involved in a Usage."@en ;
+    rdfs:range :Facility ;
+    rdfs:comment "A relation that refers to a Facility involved in a Usage."@en ;
     rdfs:label "is usage of"@en, "est un usage de"@fr .
 
 :isUsageIn a owl:ObjectProperty ;

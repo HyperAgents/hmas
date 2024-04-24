@@ -19,9 +19,9 @@
 
 :regulation rdf:type owl:Ontology ;
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
-    dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en,
-    "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
+    dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en, "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
     dct:issued "2022-05-01"^^xsd:date ;
+    dct:modified "2024-04-17"^^xsd:date ;
     owl:imports :core ;
     dct:creator <https://orcid.org/0000-0002-4506-2745> ;
     dct:contributor <https://orcid.org/0000-0002-2956-0533> ; 
@@ -36,28 +36,38 @@
     vann:preferredNamespaceUri <> .
 
 #################################################################
-#    Classes
+#    Concepts
 #################################################################
 
-:OrganizationalValue a owl:Class ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an Organization."@en ;
-    rdfs:label "organizational value"@en, "valeur organisationnelle"@fr .
-        
+:OrganizationModel a skos:Concept ;
+    skos:prefLabel "organization model"@en ;
+    skos:definition "An Organization Model is the combination of Roles, Organizational Goals, and Facilities in a consistent way used to enact one or multiple Organizations."@en ;
+    skos:editorialNote "The Organization Model is represented as SHACL Shapes."@en ;
+    skos:related :Organization .
+
+#################################################################
+#    Classes
+#################################################################
+       
 :Role a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization."@en ;
     rdfs:label "role"@en, "rôle"@fr .
 
-:Mission a owl:Class ;
+:OrganizationalGoal a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Mission gathers what Agents have to achieve in an Organization."@en ;
-    rdfs:label "mission"@en, "mission"@fr .
+    rdfs:comment "An Organizational Goal is a pursued state of affairs."@en ;
+    rdfs:label "organizational goal"@en, "but organisationnel"@fr .
     
 :Facility a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Facility defines functions of materials (i.e., Artifacts) in an Organization."@en ;
     rdfs:label "facility"@en, "facilité"@fr .
+
+:OrganizationalValue a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an Organization."@en ;
+    rdfs:label "organizational value"@en, "valeur organisationnelle"@fr .
 
 :Membership a owl:Class ;
     rdfs:isDefinedBy :regulation ;
@@ -66,34 +76,58 @@
     
 :Group a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Group structures an Organization."@en ;
+    rdfs:comment "A Group is a subset of Agents in an Organization that belong together."@en ;
+    skos:example "In a human organization, a HR department is seen as a group." ;
     rdfs:label "group"@en, "groupe"@fr .
 
+:Mission a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A set of duties that Agents can commit to for achieving Organizational Goals."@en ;
+    rdfs:label "mission"@en, "mission"@fr .
+
+:Process a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A plan specified as a set of Missions to be executed by several coordinating Agents."@en ;
+    rdfs:label "process"@en, "processus"@fr .
+
+:Commitment a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A Commitment is an engagement of an Agent with the duties of a Mission."@en ;
+    rdfs:label "commitment"@en, "engagement"@fr .
+
+:Usage a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A set of Facilities that Agents can use in a Setting."@en ;
+    rdfs:label "usage"@en, "usage"@fr .
+    
+:Setting a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A Setting is the context in which a Usage is set."@en ;
+    rdfs:label "setting"@en, "contexte d'usage"@fr .
+
+:Use a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "An engagement of an Agent of using an Artifact in the context of an Usage."@en ;
+    rdfs:label "use"@en, "utilisation"@fr .
+    
 #################################################################
 #    Object Properties
 #################################################################
 
-:hasOrganizationalValue a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Organization ;
-    rdfs:range :OrganizationalValue ;
-    rdfs:comment "A relation that refers to an Organization Value of an Organization."@en ;
-    rdfs:label "has organizational value"@en, "a une valeur organisationnelle"@fr .
-      
-:providesRole a owl:ObjectProperty ;
+:proposesRole a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
     rdfs:range :Role ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A relation that refers to a Role made available to Agents in the context of an Organization."@en ;
-    rdfs:label "provides role"@en, "fournit un rôle"@fr .
+    rdfs:label "proposes role"@en, "fournit un rôle"@fr .
 
-:proposesMission a owl:ObjectProperty ;
+:hasOrganizationalGoal a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
-    rdfs:range :Mission ;
-    rdfs:comment "A relation that refers to a Mission that can be executed in the context of an Organization."@en ;
-    rdfs:label "proposes mission"@en, "fournit une mission"@fr .
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to an Organizational Goal of an Organization."@en ;
+    rdfs:label "has organizational goal"@en, "a un but organisationnel"@fr .
     
 :proposesFacility a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
@@ -101,6 +135,13 @@
     rdfs:range :Facility ;
     rdfs:comment "A relation that refers to a Facility made available to Artifacts in the context of an Organization."@en ;
     rdfs:label "proposes facility"@en, "fournit de facilité"@fr .
+
+:hasOrganizationalValue a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :OrganizationalValue ;
+    rdfs:comment "A relation that refers to an Organization Value of an Organization."@en ;
+    rdfs:label "has organizational value"@en, "a une valeur organisationnelle"@fr .
 
 :isMembershipOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
@@ -152,3 +193,108 @@
     rdfs:range :Group ;
     rdfs:comment "A relation that refers to a subgroup relationship between two Groups."@en ;
     rdfs:label "is subgroup of"@en, "est un sous-groupe de"@fr .
+
+:proposesProcess a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :Process ;
+    rdfs:comment "A relation that refers to a Process that can be executed in the context of an Organization. "@en ;
+    rdfs:label "proposes process"@en, "fournit un processus"@fr .
+
+:includesMission a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Process ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a Mission part of a Process."@en ;
+    rdfs:label "includes mission"@en, "inclut la mission"@fr .
+
+:includesOrganizationalGoal a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Mission ;
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to an Organizational Goal involved in a Mission."@en ;
+    rdfs:label "includes organizational goal"@en, "inclut le but de l'organization"@fr .
+
+:isDependentOnOrganizationalGoal a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :OrganizationalGoal ;
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to the way in which two Organizational Goals are related to each other, and one is affected by the other."@en ;
+    rdfs:label "is dependent on organizational goal"@en, "dépend du but de l'organisation"@fr .
+    
+:isCommitmentFor a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Commitment ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a commitment for a Mission."@en ;
+    rdfs:label "is commitment for"@en, "est engagement pour"@fr .
+
+:isCommitmentOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Commitment ;
+    rdfs:range :Agent ;
+    rdfs:comment "A relation that refers to a commitment of an Agent."@en ;
+    rdfs:label "is commitment of"@en, "est engagement de"@fr .
+
+:isUseOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Use ;
+    rdfs:range :Artifact ;
+    rdfs:comment "A relation that refers to an Artifact involved in a Use."@en ;
+    rdfs:label "is use of"@en, "est l'utilisation de"@fr .
+
+:isUseBy a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Use ;
+    rdfs:range :Agent ;
+    rdfs:comment "A relation that refers to an Agent involved in a Use."@en ;
+    rdfs:label "is use by"@en, "est utilisé par"@fr .
+
+:isUseFor a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Use ;
+    rdfs:range :Usage ;
+    rdfs:comment "A relation that refers to a Usage involved in a Use."@en ;
+    rdfs:label "is use for"@en, "est utilisé pour"@fr .
+
+:isUsageOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Usage ;
+    rdfs:range :Facility ;
+    rdfs:comment "A relation that refers to a Facility involved in a Usage."@en ;
+    rdfs:label "is usage of"@en, "est un usage de"@fr .
+
+:isUsageIn a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Usage ;
+    rdfs:range :Setting ;
+    rdfs:comment "A relation that refers to a Setting involved in a Usage."@en ;
+    rdfs:label "is usage in"@en, "est un usage dans"@fr .
+
+:hasUsageRelationshipWith a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Usage ;
+    rdfs:range :Usage ;
+    rdfs:comment "A relation that refers to the relationship between two Usages."@en ;
+    rdfs:label "has usage relationship with"@en, "a une relation d'usage avec"@fr .
+
+:hasFacility a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Artifact ;
+    rdfs:range :Facility ;
+    rdfs:comment "A relation that refers to a Facility of an Artifact."@en ;
+    rdfs:label "has facility"@en, "a pour potentialité d'usage"@fr .
+
+:isSettingOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Setting ;
+    rdfs:range :Organization ;
+    rdfs:comment "A relation that refers to a Setting of an Organization."@en ;
+    rdfs:label "is setting of"@en, "est un contexte d'usage de"@fr .
+
+:proposesSetting a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :Setting ;
+    rdfs:comment "A relation that refers to a Setting that can be used in the context of an Organization."@en ;
+    rdfs:label "proposes setting"@en, "fournit un contexte d'usage"@fr .
