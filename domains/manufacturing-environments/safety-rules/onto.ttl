@@ -96,12 +96,3 @@
   rdfs:range xsd:boolean ;
   rdfs:comment "Indicates whether a norm has been respected or not"@en ;
   rdfs:label "has respect status"@en .
-
-
-
-
-
-
-
-
-

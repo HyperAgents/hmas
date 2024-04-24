@@ -9,24 +9,7 @@ where {
   ?orgModel rdfs:subClassOf hmas:Organization ;
             sh:property [
               sh:path  hmas:proposesFacility ;
-              sh:qualifiedValueShape [ sh:class ?facilityModel ] ;
+              sh:hasValue ?facility ;
             ] .
-  { ?orgModel a sh:NodeShape . }
-  union
-  { ?orgShape a sh:NodeShape ;
-              sh:targetClass ?orgModel .
-  }
-
-  ?facilityModel rdfs:subClassOf hmas:Facility .
-  { ?facilityModel a sh:NodeShape . }
-  union
-  { ?facilityShape a sh:NodeShape ;
-                   sh:targetClass ?facilityModel .
-  }
-  
-  ?facilityModel a sh:NodeShape ;
-                 rdfs:subClassOf hmas:Facility .
-  
-  ?facility a ?facilityModel
 }
-order by ?mission
+order by ?facility
