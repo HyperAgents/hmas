@@ -671,21 +671,6 @@ ex:Delivering_Usage a sh:NodeShape, rdfs:Class ;
 ex:compatibleUsage rdfs:subPropertyOf hmas:hasUsageRelationshipWith .
 
 ## Use Constraint Specifications
-ex:UseCardinalityShape a sh:NodeShape ;
-    sh:targetClass hmas:Use ;
-    sh:property [
-        sh:path hmas:isUseFor ;
-        sh:qualifiedValueShape [ sh:class hmas:Usage ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isUseBy ;
-        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
-        sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
-        ] .
-        
 ex:UseFacilitiesShape a sh:NodeShape ;
     sh:targetClass hmas:Use ;
     sh:sparql [
@@ -700,12 +685,9 @@ ex:UseFacilitiesShape a sh:NodeShape ;
 
             FILTER NOT EXISTS {
               ?use hmas:isUseOf ?artifact .
-              ?artifact hmas:hasFacility ?f .
-
-              FILTER(?f = ?facility)
+              ?artifact hmas:hasFacility ?facility .
             }
           }
-          GROUP BY ?use
           """ ;
         ] .
 
@@ -867,7 +849,7 @@ ex:FL_StEtienne_Delivering_Usage a ex:Delivering_Usage ;
 
 ex:FL_StEtienne_Collecting_Usage ex:compatibleUsage ex:FL_StEtienne_Delivering_Usage .
 
-## Use
+## Uses
 ex:FL_Lyon_Collecting_Use a hmas:Use ;
     hmas:isUseBy ex:Marie ;
     hmas:isUseOf ex:Forklift_1, ex:Palletjack_1, ex:Barcode_Reader_1 ;

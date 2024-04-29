@@ -18,10 +18,10 @@ Leo can use the forklift and pallet jack to unload trucks (i.e., lift pallets an
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the artifacts that an agent of the organization X can have in setting Y? | What are the artifacts that an agent of the FL Logistics can have in the _receiving_ setting? `ex:Barcode_Reader_1`, `ex:Barcode_Reader_2`, `ex:Forklift_1`, `ex:Forklift_2`, `ex:Forklift_3`, `ex:Forklift_4`, `ex:Palletjack_1`, `ex:Palletjack_2`, `ex:Palletjack_3`, `ex:Palletjack_4`                    |
-| q2 | What are the settings that set the organization X?                                | What are the settings that set the FL Logistics? `ex:PickingSetting`, `ex:ReceivingSetting` |
-| q3 | What are the facilities that the artifact X have?                                 | What are the facilities that Forklift 1 have? `ex:LiftDown`, `ex:LiftUp`, `ex:Move`         |
-| q4 | What are the agents currently in the setting Y?                                   | What are the agents currently in the _picking_ setting? `ex:Leo`, `ex:Nancy`                |
+| q1 | What are the artifacts that an agent of the organization X can have in setting Y? | What are the artifacts that an agent of the FL Logistics can have in the _receiving_ setting? `ex:Barcode_Reader_1`, `ex:Barcode_Reader_2`, `ex:Forklift_1`, `ex:Forklift_2`, `ex:Forklift_3`, `ex:Forklift_4`, `ex:Palletjack_1`, `ex:Palletjack_2`, `ex:Palletjack_3`, `ex:Palletjack_4` |
+| q2 | What are the settings of an organization X?                                       | What are the settings of the FL Logistics? `ex:PickingSetting`, `ex:ReceivingSetting`                                              |
+| q3 | What are the facilities that the artifact X have?                                 | What are the facilities that Forklift 1 have? `ex:LiftDown`, `ex:LiftUp`, `ex:Move`                                                |
+| q4 | What are the agents currently in the setting Y?                                   | What are the agents currently in the _picking_ setting? `ex:Leo`, `ex:Nancy`                                                       |
 
 ## Glossary
 
@@ -38,15 +38,26 @@ Leo can use the forklift and pallet jack to unload trucks (i.e., lift pallets an
 
 ## Recommendations
 
-* The Use Constraint is represented as a SHACL shape instead of an RDF triple. For example, the SHACL shape constraining the use of a Usage by a single Agent whose Artifacts is
+* The Use Constraint is represented as a SHACL shape instead of an RDF triple. For example, the SHACL shape constraining that the artifacts in a use have all facilities that are also facilities of a usage.
 
 ```
-ex:UsageCardinalityShape a sh:NodeShape ;
-    sh:targetObjectsOf hmas:isUseFor;
-    sh:property [
-        sh:path ( [ sh:inversePath hmas:isUseFor ] hmas:isUseBy ) ;
-        sh:maxCount 1 ;
+ex:UseFacilitiesShape a sh:NodeShape ;
+    sh:targetClass hmas:Use ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "The artifacts should have all the facilities specified in the usage." ;
+        sh:prefixes ex:, hmas:, rdfs: ;
+        sh:select """
+          SELECT (?use as $this)
+          WHERE {
+            ?use hmas:isUseFor ?usage .
+            ?usage hmas:isUsageOf ?facility .
+
+            FILTER NOT EXISTS {
+              ?use hmas:isUseOf ?artifact .
+              ?artifact hmas:hasFacility ?facility .
+            }
+          }
+          """ ;
         ] .
 ```
-
-In the same way, the Use Constraint uses SHACL shape instead of an RDF triple. For example, the SHACL shape constraining the use 
