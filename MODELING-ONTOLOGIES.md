@@ -53,6 +53,3 @@ Apply the philosophy of an Occam's razor.
 
 Related issues :
 https://github.com/HyperAgents/ns.hyperagents.org/issues/6
-
-
-

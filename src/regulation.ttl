@@ -48,7 +48,7 @@
 #################################################################
 #    Classes
 #################################################################
-       
+
 :Role a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Role defines positions of members (i.e., Agents) in an Organization."@en ;
@@ -62,7 +62,12 @@
 :Facility a owl:Class ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A Facility defines functions of materials (i.e., Artifacts) in an Organization."@en ;
-    rdfs:label "facility"@en, "facilité"@fr .
+    rdfs:label "facility"@en, "potentialité d'usage"@fr .
+
+:OrganizationalValue a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "An Organizational Value is a belief about socially or personally desirable end state or action that are explicitly or implicitly shared by members of an Organization."@en ;
+    rdfs:label "organizational value"@en, "valeur organisationnelle"@fr .
 
 :OrganizationalValue a owl:Class ;
     rdfs:isDefinedBy :regulation ;
@@ -83,7 +88,7 @@
 #################################################################
 #    Object Properties
 #################################################################
-      
+
 :proposesRole a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
@@ -104,7 +109,7 @@
     rdfs:domain :Organization ;
     rdfs:range :Facility ;
     rdfs:comment "A relation that refers to a Facility made available to Artifacts in the context of an Organization."@en ;
-    rdfs:label "proposes facility"@en, "fournit de facilité"@fr .
+    rdfs:label "proposes facility"@en, "fournit une potentialité d'usage"@fr .
 
 :hasOrganizationalValue a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;

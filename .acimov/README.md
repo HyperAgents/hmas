@@ -32,4 +32,3 @@ Then call the script:
 ```
 .acimov/process_core.py
 ```
-

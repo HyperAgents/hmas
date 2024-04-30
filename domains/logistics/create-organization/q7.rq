@@ -8,22 +8,13 @@ where {
   ex:SL_Logistics a ?orgModel .
   ?orgModel rdfs:subClassOf hmas:Organization ;
             sh:property [
-              sh:path  hmas:providesRole ;
-              sh:qualifiedValueShape [ sh:class ?roleModel ] ;
+              sh:path  hmas:proposesRole ;
+              sh:hasValue ?role ;
             ] .
   { ?orgModel a sh:NodeShape . }
   union
   { ?orgShape a sh:NodeShape ;
               sh:targetClass ?orgModel .
   }
-
-  ?roleModel rdfs:subClassOf hmas:Role .
-  { ?roleModel a sh:NodeShape . }
-  union
-  { ?roleShape a sh:NodeShape ;
-               sh:targetClass ?roleModel .
-  }
-  
-  ?role a ?roleModel
 }
 order by ?role
