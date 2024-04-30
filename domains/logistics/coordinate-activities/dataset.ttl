@@ -434,6 +434,7 @@ ex:Carrier_Shipping_Membership a sh:NodeShape, rdfs:Class ;
         sh:qualifiedMaxCount 1 ;
         ] .
 
+## Membership Incompatibility Specifications
 ex:DirectorIncompatibilityShape a sh:NodeShape ;
     sh:targetClass hmas:Agent ;
     sh:sparql [
@@ -450,6 +451,9 @@ ex:DirectorIncompatibilityShape a sh:NodeShape ;
             HAVING (COUNT(?s) > 1)
 			    """ ;
         ] .
+
+## Membership Relation Specifications
+ex:canCommunicateWith rdfs:subPropertyOf hmas:hasMembershipRelationshipWith .
 
 ## Dependence on Organizational Goal Specifications
 ex:isSubOrganizationalGoalOf rdfs:subPropertyOf hmas:isDependentOnOrganizationalGoal .
