@@ -1,0 +1,16 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?orgGoal
+where {
+  ex:Dept_Hire_Mission
+    sh:property [
+      sh:path hmas:includesOrganizationalGoal ;
+      sh:hasValue ?parentGoal ;
+      ] .
+
+  ?orgGoal ex:isSubOrganizationalGoalOf* ?parentGoal .
+}
+order by ?orgGoal

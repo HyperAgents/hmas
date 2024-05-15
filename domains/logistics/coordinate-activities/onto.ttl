@@ -1,0 +1,79 @@
+@base <https://purl.org/hmas/> .
+@prefix : <> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+#################################################################
+#    Classes
+#################################################################
+
+:Mission a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A set of duties that Agents can commit to for achieving Organizational Goals."@en ;
+    rdfs:label "mission"@en, "mission"@fr .
+
+:Process a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A plan specified as a set of Missions to be executed by several coordinating Agents."@en ;
+    rdfs:label "process"@en, "processus"@fr .
+
+:Commitment a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "An engagement of an Agent with the duties of a Mission."@en ;
+    rdfs:label "commitment"@en, "engagement"@fr .
+    
+#################################################################
+#    Properties
+#################################################################
+
+:proposesProcess a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :Process ;
+    rdfs:comment "A relation that refers to a Process that can be executed in the context of an Organization. "@en ;
+    rdfs:label "proposes process"@en, "fournit un processus"@fr .
+    
+:includesMission a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Process ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a Mission part of a Process."@en ;
+    rdfs:label "includes mission"@en, "inclut la mission"@fr .
+
+:includesOrganizationalGoal a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Mission ;
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to an Organizational Goal involved in a Mission."@en ;
+    rdfs:label "includes organizational goal"@en, "inclut le but de l'organization"@fr .
+
+:isDependentOnOrganizationalGoal a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :OrganizationalGoal ;
+    rdfs:range :OrganizationalGoal ;
+    rdfs:comment "A relation that refers to the way in which two Organizational Goals are related to each other, and one is affected by the other."@en ;
+    rdfs:label "is dependent on organizational goal"@en, "dépend du but de l'organisation"@fr .
+    
+:isCommitmentFor a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Commitment ;
+    rdfs:range :Mission ;
+    rdfs:comment "A relation that refers to a commitment for a Mission."@en ;
+    rdfs:label "is commitment for"@en, "est engagement pour"@fr .
+
+:isCommitmentOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Commitment ;
+    rdfs:range :Agent ;
+    rdfs:comment "A relation that refers to a commitment of an Agent."@en ;
+    rdfs:label "is commitment of"@en, "est engagement de"@fr .

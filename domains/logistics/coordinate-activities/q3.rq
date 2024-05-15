@@ -1,0 +1,13 @@
+prefix ex: <http://example.org/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix hmas: <https://purl.org/hmas/>
+
+select ?agent
+where {
+  ex:AccountManager_Hire_Process hmas:includesMission ?mission .
+  
+  ?commitment hmas:isCommitmentOf ?agent ;
+              hmas:isCommitmentFor ?mission .
+}
+order by ?agent
