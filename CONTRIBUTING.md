@@ -203,12 +203,3 @@ git.io :
 * * Respect  Medical  Secret
 * * Respectful Medical Data Sharing (-> exceptions, ... )
 * * ...
-
-
-
-
-
-
-
-
-

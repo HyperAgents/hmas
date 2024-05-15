@@ -1,0 +1,247 @@
+@prefix acimov-model-test: <https://github.com/Wimmics/olivaw/blob/main/olivaw/test/model/model-test-onto.ttl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix earl: <https://www.w3.org/ns/earl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:NotTested ;
+                    dcterms:description "The subject and its recursive imports must be syntaxically correct"@en ;
+                    dcterms:title "The test could not be run"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:manufacturing ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:logistics-structure-organization ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-organization ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:logistics-create-organization ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a acimov-model-test:MajorFail ;
+                    dcterms:description "Encountered \".\" at line 21, column 112."@en ;
+                    dcterms:title "Test subject has syntax errors"@en ] ] ;
+    earl:subject _:manufacturing-environments-safety-rules ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:domain-template-scenario-template ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:logistics-structure-organization ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:domain-template-scenario-template ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-signifiers ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-behavior-specifications ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-core ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "The provided graph is consistent for any OWL RL constraint"@en ;
+                    dcterms:title "OWL RL consistent"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:owl-rl-constraint .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:logistics-create-organization ;
+    earl:test acimov-model-test:syntax .
+
+[] a earl:Assertion ;
+    earl:assertedBy _:NicoRobertIn-actions ;
+    earl:result [ a earl:TestResult ;
+            earl:outcome [ a earl:Pass ;
+                    dcterms:description "Test subject has a correct syntax"@en ;
+                    dcterms:title "Correct syntax"@en ] ] ;
+    earl:subject _:manufacturing-environments-discover-platforms ;
+    earl:test acimov-model-test:syntax .
+
+_:NicoRobertIn a foaf:Person ;
+    schema:mainEntityOfPage <https://github.com/NicoRobertIn> .
+
+_:domain-template-scenario-template a earl:TestSubject ;
+    dcterms:hasPart <https://github.com/HyperAgents/hmas/blob/refs/heads/olivaw/domains/domain-template/scenario-template/dataset.ttl> ;
+    dcterms:identifier "domain-template-scenario-template" ;
+    dcterms:title "Standalone dataset domains/domain-template/scenario-template/dataset.ttl from branch refs/heads/olivaw"@en .
+
+_:logistics-create-organization a earl:TestSubject ;
+    dcterms:hasPart <https://github.com/HyperAgents/hmas/blob/refs/heads/olivaw/domains/logistics/create-organization/dataset.ttl> ;
+    dcterms:identifier "logistics-create-organization" ;
+    dcterms:title "Standalone dataset domains/logistics/create-organization/dataset.ttl from branch refs/heads/olivaw"@en .
+
+_:logistics-structure-organization a earl:TestSubject ;
+    dcterms:hasPart <https://github.com/HyperAgents/hmas/blob/refs/heads/olivaw/domains/logistics/structure-organization/dataset.ttl> ;
+    dcterms:identifier "logistics-structure-organization" ;
+    dcterms:title "Standalone dataset domains/logistics/structure-organization/dataset.ttl from branch refs/heads/olivaw"@en .
+
+_:manufacturing a earl:TestSubject ;
+    dcterms:hasPart <https://github.com/HyperAgents/hmas/blob/refs/heads/olivaw/use-cases/manufacturing/dataset-v1.ttl> ;
+    dcterms:identifier "manufacturing" ;
+    dcterms:title "Standalone use case use-cases/manufacturing/dataset-v1.ttl from branch refs/heads/olivaw"@en .
+
+_:manufacturing-environments-discover-behavior-specifications a earl:TestSubject ;
+    dcterms:hasPart <https://github.com/HyperAgents/hmas/blob/refs/heads/olivaw/domains/manufacturing-environments/discover-behavior-specifications/dataset.ttl> ;
+    dcterms:identifier "manufacturing-environments-discover-behavior-specifications" ;
+    dcterms:title "Standalone dataset domains/manufacturing-environments/discover-behavior-specifications/dataset.ttl from branch refs/heads/olivaw"@en .
+
+_:manufacturing-environments-discover-core a earl:TestSubject ;
+    dcterms:hasPart <https://github.com/HyperAgents/hmas/blob/refs/heads/olivaw/domains/manufacturing-environments/discover-core/dataset.ttl> ;
+    dcterms:identifier "manufacturing-environments-discover-core" ;
+    dcterms:title "Standalone dataset domains/manufacturing-environments/discover-core/dataset.ttl from branch refs/heads/olivaw"@en .
+
+_:manufacturing-environments-discover-organization a earl:TestSubject ;
+    dcterms:hasPart <https://github.com/HyperAgents/hmas/blob/refs/heads/olivaw/domains/manufacturing-environments/discover-organization/dataset.ttl> ;
+    dcterms:identifier "manufacturing-environments-discover-organization" ;
+    dcterms:title "Standalone dataset domains/manufacturing-environments/discover-organization/dataset.ttl from branch refs/heads/olivaw"@en .
+
+_:manufacturing-environments-discover-platforms a earl:TestSubject ;
+    dcterms:hasPart <https://github.com/HyperAgents/hmas/blob/refs/heads/olivaw/domains/manufacturing-environments/discover-platforms/dataset.ttl> ;
+    dcterms:identifier "manufacturing-environments-discover-platforms" ;
+    dcterms:title "Standalone dataset domains/manufacturing-environments/discover-platforms/dataset.ttl from branch refs/heads/olivaw"@en .
+
+_:manufacturing-environments-discover-signifiers a earl:TestSubject ;
+    dcterms:hasPart <https://github.com/HyperAgents/hmas/blob/refs/heads/olivaw/domains/manufacturing-environments/discover-signifiers/dataset.ttl> ;
+    dcterms:identifier "manufacturing-environments-discover-signifiers" ;
+    dcterms:title "Standalone dataset domains/manufacturing-environments/discover-signifiers/dataset.ttl from branch refs/heads/olivaw"@en .
+
+_:manufacturing-environments-safety-rules a earl:TestSubject ;
+    dcterms:hasPart <https://github.com/HyperAgents/hmas/blob/refs/heads/olivaw/domains/manufacturing-environments/safety-rules/dataset.ttl> ;
+    dcterms:identifier "manufacturing-environments-safety-rules" ;
+    dcterms:title "Standalone dataset domains/manufacturing-environments/safety-rules/dataset.ttl from branch refs/heads/olivaw"@en .
+
+_:NicoRobertIn-actions a foaf:OnlineAccount ;
+    dcterms:date "2024-01-15T10:28:26.339569"^^xsd:dateTime ;
+    dcterms:description "Test triggered by @NicoRobertIn by actions trigger"@en ;
+    dcterms:title "NicoRobertIn using actions script"@en ;
+    foaf:member <https://github.com/Wimmics/olivaw/blob/main/olivaw/test/data/suite.py> ;
+    earl:mainAssertor _:NicoRobertIn .
+

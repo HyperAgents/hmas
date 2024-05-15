@@ -6,5 +6,3 @@ labels: ontology, question
 assignees: ''
 
 ---
-
-

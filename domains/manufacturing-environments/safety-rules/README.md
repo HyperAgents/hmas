@@ -29,7 +29,3 @@ In the i3S Organization, if there is a fire, then all the doors must be closed, 
 * [link toward issues that are associated to the domain](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=manufacturing+environment)
 * [link toward issues that are associated to this motivating scenario](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=safety+rules)
 * [link toward related features that are associated to this motivating scenario](https://github.com/HyperAgents/ns.hyperagents.org/issues?q=norm)
-
-
-
-
