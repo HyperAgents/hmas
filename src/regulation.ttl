@@ -21,7 +21,7 @@
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en, "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
     dct:issued "2022-05-01"^^xsd:date ;
-    dct:modified "2024-04-10"^^xsd:date ;
+    dct:modified "2024-05-15"^^xsd:date ;
     owl:imports :core ;
     dct:creator <https://orcid.org/0000-0002-4506-2745> ;
     dct:contributor <https://orcid.org/0000-0002-2956-0533> ; 
@@ -99,13 +99,13 @@
 #    Object Properties
 #################################################################
 
-:proposesRole a owl:ObjectProperty ;
+:providesRole a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
     rdfs:range :Role ;
     rdfs:isDefinedBy :regulation ;
     rdfs:comment "A relation that refers to a Role made available to Agents in the context of an Organization."@en ;
-    rdfs:label "proposes role"@en, "fournit un rôle"@fr .
+    rdfs:label "provides role"@en, "fournit un rôle"@fr .
 
 :hasOrganizationalGoal a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
