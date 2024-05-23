@@ -1,0 +1,52 @@
+@base <https://ci.mines-stetienne.fr/fna> .
+@prefix : <#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix hmas: <https://ci.mines-stetienne.fr/hmas> .
+@prefix hreg: <https://ci.mines-stetienne.fr/regulation> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<#> rdf:type owl:Ontology ;
+                                       owl:imports <https://ci.mines-stetienne.fr/hmas#> .
+
+:LocalKnowledge rdfs:subClassOf :NAryRelation .
+
+:indinstinguishes a rdf:Property ;
+rdfs:domain :LocalKnowledge ;
+rdfs:range :PossibleWorld .
+
+:associatedToAgent a rdf:Property ;
+rdfs:domain :LocalKnowledge ;
+rdfs:range :Agent .
+
+
+:w1 :hasNAryRelation [ 
+a :LocalKnowledge ;
+:indinstinguishes :w2 ;
+:associatedToAgent :celiano .
+] ;
+[ 
+a :LocalKnowledge ;
+:indinstinguishes :w1 ;
+:associatedToAgent :celiano .
+] .
+
+:w2 :hasNAryRelation [ 
+a :LocalKnowledge ;
+:indinstinguishes :w2 ;
+:associatedToAgent :celiano .
+] ;
+[ 
+a :LocalKnowledge ;
+:indinstinguishes :w1 ;
+:associatedToAgent :celiano .
+] .
+
+:w1 :hasNAryRelation [ 
+a :LocalKnowledge ;
+:indinstinguishes :w1 ;
+:associatedToAgent :christiano .
+] .
