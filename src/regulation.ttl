@@ -21,7 +21,7 @@
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en, "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
     dct:issued "2022-05-01"^^xsd:date ;
-    dct:modified "2024-04-17"^^xsd:date ;
+    dct:modified "2024-05-27"^^xsd:date ;
     owl:imports :core ;
     dct:creator <https://orcid.org/0000-0002-4506-2745> ;
     dct:contributor <https://orcid.org/0000-0002-2956-0533> ; 
@@ -105,10 +105,10 @@
     rdfs:comment "A Setting is the context in which a Usage is set."@en ;
     rdfs:label "setting"@en, "contexte d'usage"@fr .
 
-:Use a owl:Class ;
+:Access a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "An engagement of an Agent of using an Artifact in the context of an Usage."@en ;
-    rdfs:label "use"@en, "utilisation"@fr .
+    rdfs:comment "An opportunity an Agent have to use an Artifact in the context of a Usage."@en ;
+    rdfs:label "access"@en, "accès"@fr .
     
 #################################################################
 #    Object Properties
@@ -236,26 +236,26 @@
     rdfs:comment "A relation that refers to a commitment of an Agent."@en ;
     rdfs:label "is commitment of"@en, "est engagement de"@fr .
 
-:isUseOf a owl:ObjectProperty ;
+:isAccessTo a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Use ;
+    rdfs:domain :Access ;
     rdfs:range :Artifact ;
-    rdfs:comment "A relation that refers to an Artifact involved in a Use."@en ;
-    rdfs:label "is use of"@en, "est l'utilisation de"@fr .
+    rdfs:comment "A relation that refers to an Artifact involved in an Access."@en ;
+    rdfs:label "is access to"@en, "est l'accès à"@fr .
 
-:isUseBy a owl:ObjectProperty ;
+:isAccessOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Use ;
+    rdfs:domain :Access ;
     rdfs:range :Agent ;
-    rdfs:comment "A relation that refers to an Agent involved in a Use."@en ;
-    rdfs:label "is use by"@en, "est utilisé par"@fr .
+    rdfs:comment "A relation that refers to an Agent involved in an Access."@en ;
+    rdfs:label "is access of"@en, "est l'accès de"@fr .
 
-:isUseFor a owl:ObjectProperty ;
+:isAccessFor a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Use ;
+    rdfs:domain :Access ;
     rdfs:range :Usage ;
-    rdfs:comment "A relation that refers to a Usage involved in a Use."@en ;
-    rdfs:label "is use for"@en, "est utilisé pour"@fr .
+    rdfs:comment "A relation that refers to a Usage involved in an Access."@en ;
+    rdfs:label "is access for"@en, "est l'accès pour"@fr .
 
 :isUsageOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;

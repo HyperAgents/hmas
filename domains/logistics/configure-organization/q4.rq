@@ -6,8 +6,8 @@ where {
   ?usage a ?usageModel ;
          hmas:isUsageIn ex:PickingSetting .
 
-  ?use a hmas:Use ;
-       hmas:isUseFor ?usage ;
-       hmas:isUseBy ?agent .
+  ?use a hmas:Access ;
+       hmas:isAccessFor ?usage ;
+       hmas:isAccessOf ?agent .
 }
 order by ?agent

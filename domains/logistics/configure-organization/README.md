@@ -4,9 +4,9 @@
 
 The FL Logistics has a depot in Lyon and another in Saint-Étienne. Each depot has one _receiving_ and one _picking_ setting. Each _receiving_ setting has one forklift, one pallet jack, and one barcode reader. Each _picking_ setting has one forklift, one pallet jack, and one label printer. Only one employee can be associated with the usage of one setting, but the same employee can be associated with the usage of multiple settings.
 
-Forklifts are capable of raising and lowering materials on pallets to/from high shelves, as well as moving them from one location to another. Pallet jacks are capable of raising and lowering the materials on pallets placed on the floor and move them from one location to another. They both are used for loading and unloading trucks by moving materials in the _receiving_ and the _picking_ settings.
+Forklifts are capable of lifting up and lifting down materials on pallets to/from high shelves, as well as moving them from one location to another. Pallet jacks are capable of lifting up and lifting down materials on pallets placed on the floor and move them from one location to another. They both are used for loading and unloading trucks by moving materials in the _receiving_ and the _picking_ settings.
 
-The barcode reader is capable of reading barcodes identifying the materials on a pallet. The label machine is capable of printing labels with barcode to identify the materials on a pallet.
+The barcode reader is capable of reading barcodes identifying materials on a pallet. The label machine is capable of printing labels with barcode to identify the materials on a pallet.
 
 Marie can use the forklift and pallet jack to unload trucks (i.e., lift pallets and move them in the _receiving_ setting) and the barcode reader to check the pallet content.
 
@@ -28,7 +28,7 @@ Leo can use the forklift and pallet jack to unload trucks (i.e., lift pallets an
 ![image](configure-organization.png)
 
 * **Usage**: A set of Facilities that Agents can use in a Setting.
-* **Use**: An engagement of an Agent of using an Artifact in the context of an Usage.
+* **Access**: An opportunity an Agent have to use an Artifact in the context of a Usage.
 * **Usage Constraint**: A constraint imposed on Usages, e.g., limiting the number of Agents participating in that Usage or the same Agent cannot be part of two Usages simultaneously.
 * **Setting**: A Setting is the context in which a Usage is set.
 * **Facility**: see [Create an Organization](https://github.com/HyperAgents/ns.hyperagents.org/blob/master/domains/logistics/create-organization/README.md) scenario.
@@ -38,23 +38,23 @@ Leo can use the forklift and pallet jack to unload trucks (i.e., lift pallets an
 
 ## Recommendations
 
-* The Use Constraint is represented as a SHACL shape instead of an RDF triple. For example, the SHACL shape constraining that the artifacts in a use have all facilities that are also facilities of a usage.
+* The Access Constraint is represented as a SHACL shape instead of an RDF triple. For example, the SHACL shape constraining that the artifacts in an access have all facilities that are also facilities of a usage.
 
 ```
-ex:UseFacilitiesShape a sh:NodeShape ;
-    sh:targetClass hmas:Use ;
+ex:AccessFacilitiesShape a sh:NodeShape ;
+    sh:targetClass hmas:Access ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:message "The artifacts should have all the facilities specified in the usage." ;
         sh:prefixes ex:, hmas:, rdfs: ;
         sh:select """
-          SELECT (?use as $this)
+          SELECT (?access as $this)
           WHERE {
-            ?use hmas:isUseFor ?usage .
+            ?access hmas:isAccessFor ?usage .
             ?usage hmas:isUsageOf ?facility .
 
             FILTER NOT EXISTS {
-              ?use hmas:isUseOf ?artifact .
+              ?access hmas:isAccessTo ?artifact .
               ?artifact hmas:hasFacility ?facility .
             }
           }

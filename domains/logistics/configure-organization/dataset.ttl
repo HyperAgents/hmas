@@ -674,21 +674,21 @@ ex:Delivering_Usage a sh:NodeShape, rdfs:Class ;
 ## Usage Relationship Specifications
 ex:compatibleUsage rdfs:subPropertyOf hmas:hasUsageRelationshipWith .
 
-## Use Constraint Specifications
-ex:UseFacilitiesShape a sh:NodeShape ;
-    sh:targetClass hmas:Use ;
+## Access Constraint Specifications
+ex:AccessFacilitiesShape a sh:NodeShape ;
+    sh:targetClass hmas:Access ;
     sh:sparql [
         a sh:SPARQLConstraint ;
         sh:message "The artifacts should have all the facilities specified in the usage." ;
         sh:prefixes ex:, hmas:, rdfs: ;
         sh:select """
-          SELECT (?use as $this)
+          SELECT (?access as $this)
           WHERE {
-            ?use hmas:isUseFor ?usage .
+            ?access hmas:isAccessFor ?usage .
             ?usage hmas:isUsageOf ?facility .
 
             FILTER NOT EXISTS {
-              ?use hmas:isUseOf ?artifact .
+              ?access hmas:isAccessTo ?artifact .
               ?artifact hmas:hasFacility ?facility .
             }
           }
@@ -853,23 +853,23 @@ ex:FL_StEtienne_Delivering_Usage a ex:Delivering_Usage ;
 
 ex:FL_StEtienne_Collecting_Usage ex:compatibleUsage ex:FL_StEtienne_Delivering_Usage .
 
-## Uses
-ex:FL_Lyon_Collecting_Use a hmas:Use ;
-    hmas:isUseBy ex:Marie ;
-    hmas:isUseOf ex:Forklift_1, ex:Palletjack_1, ex:Barcode_Reader_1 ;
-    hmas:isUseFor ex:FL_Lyon_Collecting_Usage .
-ex:FL_StEtienne_Collecting_Use a hmas:Use ;
-    hmas:isUseBy ex:Leo ;
-    hmas:isUseOf ex:Forklift_2, ex:Palletjack_2, ex:Barcode_Reader_2 ;
-    hmas:isUseFor ex:FL_StEtienne_Collecting_Usage .
-ex:FL_Lyon_Delivering_Use a hmas:Use ;
-    hmas:isUseBy ex:Nancy ;
-    hmas:isUseOf ex:Forklift_3, ex:Palletjack_3, ex:Label_Printer_1 ;
-    hmas:isUseFor ex:FL_Lyon_Delivering_Usage .
-ex:FL_StEtienne_Delivering_Use a hmas:Use ;
-    hmas:isUseBy ex:Leo ;
-    hmas:isUseOf ex:Forklift_4, ex:Palletjack_4, ex:Label_Printer_2 ;
-    hmas:isUseFor ex:FL_StEtienne_Delivering_Usage .
+## Accesses
+ex:FL_Lyon_Collecting_Access a hmas:Access ;
+    hmas:isAccessOf ex:Marie ;
+    hmas:isAccessTo ex:Forklift_1, ex:Palletjack_1, ex:Barcode_Reader_1 ;
+    hmas:isAccessFor ex:FL_Lyon_Collecting_Usage .
+ex:FL_StEtienne_Collecting_Access a hmas:Access ;
+    hmas:isAccessOf ex:Leo ;
+    hmas:isAccessTo ex:Forklift_2, ex:Palletjack_2, ex:Barcode_Reader_2 ;
+    hmas:isAccessFor ex:FL_StEtienne_Collecting_Usage .
+ex:FL_Lyon_Delivering_Access a hmas:Access ;
+    hmas:isAccessOf ex:Nancy ;
+    hmas:isAccessTo ex:Forklift_3, ex:Palletjack_3, ex:Label_Printer_1 ;
+    hmas:isAccessFor ex:FL_Lyon_Delivering_Usage .
+ex:FL_StEtienne_Delivering_Access a hmas:Access ;
+    hmas:isAccessOf ex:Leo ;
+    hmas:isAccessTo ex:Forklift_4, ex:Palletjack_4, ex:Label_Printer_2 ;
+    hmas:isAccessFor ex:FL_StEtienne_Delivering_Usage .
     
 ## Organizations
 ex:FL_LogisticsProfile a hmas:ResourceProfile .
