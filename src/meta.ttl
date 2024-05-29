@@ -53,4 +53,3 @@
                 rdfs:domain :MotivatingScenario ;
                 rdfs:range doco:Glossary;
                 rdfs:label "has a glossary"@en .
-

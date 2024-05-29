@@ -1,0 +1,19 @@
+name: tests
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  tests:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Wimmics/olivaw/test-actions@v0.0.4
+      with:
+        repository: ${{ github.repository }}
+        ref: ${{ github.ref }}
+        gist-secret: ${{ secrets.GIST_SECRET }}
+        model-test: true
+        data-test: true

@@ -1,8 +1,8 @@
-mission
-http://example.org/SL_CarryGoods
-http://example.org/SL_CollectGoods
-http://example.org/SL_CommercialManagement
-http://example.org/SL_DeliverGoods
-http://example.org/SL_FinancialManagement
-http://example.org/SL_HumanResourcesManagement
-http://example.org/SL_PlanningManagement
+orgGoal
+http://example.org/CarriedGoods
+http://example.org/CollectedGoods
+http://example.org/CommercialManaged
+http://example.org/DeliveredGoods
+http://example.org/FinancialManaged
+http://example.org/HumanResourcesManaged
+http://example.org/PlanningManaged
