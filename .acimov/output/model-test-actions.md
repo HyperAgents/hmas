@@ -15,7 +15,7 @@ Here is some context about under which context this test was made
 |Title|NicoRobertIn using actions script|
 |Description|Test triggered by [@NicoRobertIn](https://github.com/NicoRobertIn) by actions trigger|
 |Script|[complete-test.py](https://github.com/HyperAgents/hmas/blob/primer/.acimov/model-test/complete-test.py)
-|Date|2024-06-04 15:29:54|
+|Date|2024-06-04 16:40:25|
 
 ***
 
