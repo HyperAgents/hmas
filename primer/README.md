@@ -8,26 +8,26 @@ This documents provides an overview of the key concepts of the hMAS ontology as 
 
 # Table of contents
 
-1. [Introduction](./README.md#1-introduction)
-2. [Overview of HMAS](./README.md#2-overview-of-hmas)<br/>
-    2.1. [Agent](./README.md#21-agent)<br/>
-    2.2. [Artifact](./README.md#22-artifact)<br/>
-    2.3. [Resource Profile](./README.md#23-resource-profile)<br/>
-    2.4. [Signifier](./README.md#24-signifier)<br/>
-    2.5. [Workspace](./README.md#25-workspace)<br/>
-    2.6. [Organization](./README.md#26-organization)<br/>
-    2.7. [Platform](./README.md#27-platform)<br/>
-3. [Examples of key concepts of HMAS](./README.md#3-examples-of-key-concepts-of-hmas)<br/>
-    3.1. [Agent](./README.md#31-agent)<br/>
-    3.2. [Artifact](./README.md#31-agent)<br/>
-    3.3. [Resource Profile](./README.md#33-resource-profile)<br/>
-    3.4. [Signifier](./README.md#34-signifier)<br/>
-    3.5. [Workspace](./README.md#35-workspace)<br/>
-    3.6. [Organization](./README.md#36-organization)<br/>
-    3.7. [Platform](./README.md#37-platform)<br/>
-4. [Summary](./README.md#4-summary)
-5. [Acknowledgements](./README.md#5-acknowledgements)
-6. [References](./README.md#6-references)
+1. [Introduction](#1-introduction)
+2. [Overview of HMAS](#2-overview-of-hmas)<br/>
+    2.1. [Agent](#21-agent)<br/>
+    2.2. [Artifact](#22-artifact)<br/>
+    2.3. [Resource Profile](#23-resource-profile)<br/>
+    2.4. [Signifier](#24-signifier)<br/>
+    2.5. [Workspace](#25-workspace)<br/>
+    2.6. [Organization](#26-organization)<br/>
+    2.7. [Platform](#27-platform)<br/>
+3. [Examples of key concepts of HMAS](#3-examples-of-key-concepts-of-hmas)<br/>
+    3.1. [Agent](#31-agent)<br/>
+    3.2. [Artifact](#31-agent)<br/>
+    3.3. [Resource Profile](#33-resource-profile)<br/>
+    3.4. [Signifier](#34-signifier)<br/>
+    3.5. [Workspace](#35-workspace)<br/>
+    3.6. [Organization](#36-organization)<br/>
+    3.7. [Platform](#37-platform)<br/>
+4. [Summary](#4-summary)
+5. [Acknowledgements](#5-acknowledgements)
+6. [References](#6-references)
 
 # 1. Introduction
 
@@ -133,22 +133,22 @@ Here we simply want the software HyperReader2000, to be agent on our platform pl
 
 <details>
 <summary>Turtle Example</summary>
-<pre>
+<pre lang="Turtle"><code>
 @prefix hmas: &#8249;https://purl.org/hmas/> .
 @prefix platf: &#8249;http://www.example.org/platforms/platf#> .
 @prefix forumPlatf: &#8249;http://www.example.org/workspaces/forumPlatf#> .
 @prefix HyperReader2000: &#8249;http://www.example.org/agents/HyperReader2000#> .
-
+ &#10;
 HyperReader2000:agent a hmas:Agent ;
 &nbsp;&nbsp;hmas:isHostedOn platf:platform ;
 &nbsp;&nbsp;hmas:isContainedIn forumPlatf:workspace ;
 &nbsp;&nbsp;hmas:hasProfile HyperReader2000: .
-</pre>
+</code></pre>
 </details>
 
 <details>
 <summary>XML Example</summary>
-<pre>
+<pre lang="XML"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -159,7 +159,7 @@ HyperReader2000:agent a hmas:Agent ;
     &#8249;hmas:hasProfile rdf:resource="http://www.example.org/agents/HyperReader2000#"/>
   &#8249;/rdf:Description>
 &#8249;/rdf:RDF>
-</pre>
+</code></pre>
 </details>
 
 ## 3.2. Artifact
@@ -168,19 +168,19 @@ Here we want an artifact named forumAccount contained in the workspace forumPlat
 
 <details>
 <summary>Turtle Example</summary>
-<pre>
+<pre lang="Turtle"><code>
 @prefix forumPlatf: &#8249;http://www.example.org/artifacts/forumAccount#> .
-
+ &#10;
 forumAccount:artifact a hmas:Artifact ;
 &nbsp;&nbsp;hmas:hasProfile forumAccount: ;
 &nbsp;&nbsp;hmas:isHostedOn platf:platform ;
 &nbsp;&nbsp;hmas:isContainedIn forumPlatf:workspace .
-</pre>
+</code></pre>
 </details>
 
 <details>
 <summary>XML Example</summary>
-<pre>
+<pre lang="XML"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -192,7 +192,7 @@ forumAccount:artifact a hmas:Artifact ;
 &nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:hasProfile rdf:resource="http://www.example.org/artifacts/forumAccount#"/
 &nbsp;&nbsp;&#8249;/rdf:Description>
 &#8249;/rdf:RDF>
-</pre>
+</code></pre>
 </details>
 
 ## 3.3. Resource Profile
@@ -201,19 +201,19 @@ Our artifact ForumAccount should have a Resource Profile exposing one signifier 
 
 <details>
 <summary>Turtle Example</summary>
-<pre>
+<pre lang="Turtle"><code>
 @prefix sign: &#8249;http://www.example.org/signifiers/> .
 
 forumAccount: a hmas:ResourceProfile ;
 &#35;not mandatory since we defined the hmas:hasProfile of the artifact earlier
 &nbsp;&nbsp;hmas:isProfileOf forumAccount:artifact ;
 &nbsp;&nbsp;hmas:exposesSignifier sign:getPost .
-</pre>
+</code></pre>
 </details>
 
 <details>
 <summary>XML Example</summary>
-<pre>
+<pre lang="XML"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -225,7 +225,7 @@ forumAccount: a hmas:ResourceProfile ;
 &nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:exposesSignifier rdf:resource="http://www.example.org/signifiers/moderatePost"/>
 &nbsp;&nbsp;&#8249;/rdf:Description>
 &#8249;/rdf:RDF>
-</pre>
+</code></pre>
 </details>
 
 ## 3.4. Signifier
@@ -234,7 +234,7 @@ In this part we will implement the signifiers themselves for the same artifact t
 
 <details>
 <summary>Turtle Example</summary>
-<pre>
+<pre lang="Turtle"><code>
 @prefix shape: &#8249;http://www.example.org/shapes/> .
 @prefix sh: &#8249;http://www.w3.org/ns/shacl#> .
 @prefix hctl: &#8249;https://www.w3.org/2019/wot/hypermedia#> .
@@ -309,12 +309,12 @@ shape:getPost a sh:NodeShape ;
 &nbsp;&nbsp;&nbsp;&nbsp;sh:maxQualifiedShape 1 ;
 &nbsp;&nbsp;&nbsp;&nbsp;sh:qualifiedValueShape shape:getPostOutput
 &nbsp;&nbsp;] .
-</pre>
+</code></pre>
 </details>
 
 <details>
 <summary>XML Example</summary>
-<pre>
+<pre lang="XML"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/"
@@ -406,7 +406,7 @@ shape:getPost a sh:NodeShape ;
 &nbsp;&nbsp;&nbsp;&nbsp;&#8249;/hmas:signifies>
 &nbsp;&nbsp;&#8249;/rdf:Description>
 &#8249;/rdf:RDF>
-</pre>
+</code></pre>
 </details>
 
 ## 3.5. Workspace
@@ -415,17 +415,17 @@ We will now describe a workspace in the platform containing our agent and our pl
 
 <details>
 <summary>Turtle Example</summary>
-<pre>
+<pre lang="Turtle"><code>
 forumPlatf:workspace a hmas:Workspace ;
 &#35; this line is not mandatory since we already defined the agent and the artifact as contained in this workspace
 &nbsp;&nbsp;hmas:contains forumAccount:artifact , HyperReader2000:agent ;
 &nbsp;&nbsp;hmas:isHostedOn platf:platform .
-</pre>
+</code></pre>
 </details>
 
 <details>
 <summary>XML Example</summary>
-<pre>
+<pre lang="XML"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -438,7 +438,7 @@ forumPlatf:workspace a hmas:Workspace ;
 &nbsp;&nbsp;&#8249;/rdf:Description>
 
 &#8249;/rdf:RDF>
-</pre>
+</code></pre>
 </details>
 
 ## 3.6. Organization
@@ -447,7 +447,7 @@ Now we can define our Reader organization
 
 <details>
 <summary>Turtle Example</summary>
-<pre>
+<pre lang="Turtle"><code>
 @prefix HRorg: &#8249;http://www.example.org/organisations/HyperReaderOrg/> .
 @prefix val: &#8249;http://www.example.org/values/> .
 @prefix roles: &#8249;http://www.example.org/roles/> .
@@ -476,12 +476,12 @@ HRorg:organization a orgs:ReaderOrg ;
 &nbsp;&nbsp;hmas:isStructuredBy groups:HyperReadingDepartment ;
 &nbsp;&nbsp;hmas:proposesMission missions:HyperReadingPosts ;
 &nbsp;&nbsp;hmas:proposesFacility facility:HyperReadingArea .
-</pre>
+</code></pre>
 </details>
 
 <details>
 <summary>XML Example</summary>
-<pre>
+<pre lang="XML"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -515,7 +515,7 @@ HRorg:organization a orgs:ReaderOrg ;
 &nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:proposesFacility rdf:resource="http://www.example.org/facilities/HyperReadingArea"/>
 &nbsp;&nbsp;&#8249;/rdf:Description>
 &#8249;/rdf:RDF>
-</pre>
+</code></pre>
 </details>
 
 ## 3.7. Platform
@@ -524,16 +524,16 @@ Finally, we need to define our HMASPlatform hosting all of our artifacts, worksp
 
 <details>
 <summary>Turtle Example</summary>
-<pre>
+<pre lang="Turtle"><code>
 platf:platform a HypermediaMASPlatform ;
 &#35; the rest of the statement is also not mandatory
 &nbsp;&nbsp;platf:hosts forumAccount:artifact , forumPlatf:workspace , HyperReader2000:agent .
-</pre>
+</code></pre>
 </details>
 
 <details>
 <summary>XML Example</summary>
-<pre>
+<pre lang="XML"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -545,7 +545,7 @@ platf:platform a HypermediaMASPlatform ;
 &nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:hosts rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
 &nbsp;&nbsp;&#8249;/rdf:Description>
 &#8249;/rdf:RDF>
-</pre>
+</code></pre>
 </details>
 
 # 4. Summary
