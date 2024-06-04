@@ -6,19 +6,19 @@ This document presents the correspondance between the hMAS vocabulary and the W3
 
 # Table of contents
 
-1. [Introduction](./README.md#1-introduction)
-2. [hMAS Core and WoT TD Alignment](./README.md#2-hmas-core-and-wot-td-alignment)<br/>
-    2.1. [Artifacts and Things](./README.md#21-artifacts-and-things)<br/>
-    2.2. [Resource Profiles and Thing Descriptions](./README.md#22-resource-profiles-and-thing-descriptions)<br/>
-3. [hMAS Interaction and WoT TD Alignment](./README.md#3-hmas-interaction-and-wot-td-alignment)<br/>
-    3.1. [Signifiers and Interaction Affordances](./README.md#31-signifiers-and-interaction-affordances)<br/>
-       &emsp; 3.3.1. [Signified Interaction Affordances](./README.md#31-signifiers-and-interaction-affordances)<br/>
-       &emsp; 3.3.2. [SHACL Action Specifications and Interaction Affordances](./README.md#31-signifiers-and-interaction-affordances)<br/>
-    3.2  [Security Definitions](./README.md#32-security-definitions)<br/>
-6. [SHACL and JSON Data Schema Alignment](./README.md#3-shacl-and-json-data-schema-alignment)<br/>
-7. [Summary](./README.md#5-summary)
-8. [Acknowledgements](./README.md#6-acknowledgements)
-9. [References](./README.md#7-references)
+1. [Introduction](#1-introduction)
+2. [hMAS Core and WoT TD Alignment](#2-hmas-core-and-wot-td-alignment)<br/>
+    2.1. [Artifacts and Things](#21-artifacts-and-things)<br/>
+    2.2. [Resource Profiles and Thing Descriptions](#22-resource-profiles-and-thing-descriptions)<br/>
+3. [hMAS Interaction and WoT TD Alignment](#3-hmas-interaction-and-wot-td-alignment)<br/>
+    3.1. [Signifiers and Interaction Affordances](#31-signifiers-and-interaction-affordances)<br/>
+       &emsp; 3.3.1. [Signified Interaction Affordances](#31-signifiers-and-interaction-affordances)<br/>
+       &emsp; 3.3.2. [SHACL Action Specifications and Interaction Affordances](#31-signifiers-and-interaction-affordances)<br/>
+    3.2  [Security Definitions](#32-security-definitions)<br/>
+6. [SHACL and JSON Data Schema Alignment](#3-shacl-and-json-data-schema-alignment)<br/>
+7. [Summary](#5-summary)
+8. [Acknowledgements](#6-acknowledgements)
+9. [References](#7-references)
 
 
 
@@ -72,7 +72,7 @@ ex:ur5Profile a hmas:ResourceProfile;
    hmas:globalSpecification [
         sh:class hmas:ActionExecution ;
         sh:property [
-            sh:path hmas:PathToBaseURI ;
+            sh:path ( prov:used td:baseURI ) ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:hasValue <http://link.to/my/artifact/base-uri>
@@ -162,8 +162,7 @@ Would be the following Action Execution specification in hMAS:
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-http: <https://purl.org/hmas/interaction-http/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -178,7 +177,7 @@ ex:TruckReadableBatterySpecification a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:ReadProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas:ReadProperty, hmas-http:GetMethod, hmas-http:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -227,8 +226,7 @@ Would be the following in hMAS:
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-http: <https://purl.org/hmas/interaction-http/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -243,7 +241,7 @@ ex:TruckSettableWheels a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:WriteProperty, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas:WriteProperty, hmas-http:PostMethod, hmas-http:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -301,7 +299,7 @@ Would have the same equivalent in hMAS:
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-http: <https://purl.org/hmas/interaction-http/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -316,7 +314,7 @@ ex:CherrybotObservableGripper a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:ObserveProperty, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas:ObserveProperty, hmas-http:PostMethod, hmas-http:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -372,7 +370,7 @@ Would have the following equivalent in hMAS
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-http: <https://purl.org/hmas/interaction-http/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -387,7 +385,7 @@ ex:CherrybotUnobservableGripper a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:UnobserveProperty, hmas-dev:GetMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas:UnobserveProperty, hmas-http:GetMethod, hmas-http:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -447,7 +445,7 @@ Would have the equivalent in hMAS:
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-http: <https://purl.org/hmas/interaction-http/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -462,7 +460,7 @@ ex:ActionablePrinting a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas:InvokeAction, hmas-http:PostMethod, hmas-http:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -515,8 +513,7 @@ Would have the following equivalent in hMAS:
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-http: <https://purl.org/hmas/interaction-http/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -531,7 +528,7 @@ ex:CheckableProcess a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:QueryAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas:QueryAction, hmas-http:PostMethod, hmas-http:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -571,8 +568,7 @@ Would have this equivalent in hMAS:
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-http: <https://purl.org/hmas/interaction-http/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -587,7 +583,7 @@ ex:CancelablePrinting a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:CancelAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas:CancelAction, hmas-http:PostMethod, hmas-http:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -642,7 +638,7 @@ Would have the following equivalent in hMAS
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-http: <https://purl.org/hmas/interaction-http/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -657,7 +653,7 @@ ex:SubscribableOverheating a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:SubscribeEvent, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas:SubscribeEvent, hmas-http:PostMethod, hmas-http:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -705,8 +701,7 @@ ex-td:UnsubscribableOverheating a td:EventAffordance, ex-td:UnsubscribeOverheati
 
 ```turtle
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-http: <https://purl.org/hmas/interaction-http/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -721,7 +716,7 @@ ex:UnsubscribableOverheating a sh:NodeShape ;
         sh:qualifiedMaxCount 1 ;
         sh:qualifiedValueShape [
             sh:class hctl:Form ;
-            sh:property hmas-dev:UnsubscribeEvent, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+            sh:property hmas:UnsubscribeEvent, hmas-http:PostMethod, hmas-http:forApplicatonJson, [
                 sh:path hctl:hasTarget ;
                 sh:minCount 1 ;
                 sh:maxCount 1 ;
@@ -746,7 +741,7 @@ Here is a table summarizing the alignments for the different supported td:DataSc
 |td:NumberSchema|xsd:float|
 |td:StringSchema|xsd:string|
 |td:BooleanSchema|xsd:boolean|
-|td:NullSchema|hmas-dev:null|
+|td:NullSchema|hmas:null|
 
 For example the following td:ObjectSchema :
 
@@ -791,7 +786,7 @@ Would have the following equivalent using ShaCL constraints
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas: <https://purl.org/hmas/> .
 @prefix ex: <https://www.example.org/> .
 
 [
@@ -820,7 +815,7 @@ Would have the following equivalent using ShaCL constraints
         sh:path ex:hasErrorCode ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype hmas-dev:null
+        sh:datatype hmas:null
     ] , [
         sh:path ex:hasSampleData ;
         sh:minQualifiedCount 1 ;
@@ -881,7 +876,7 @@ A printer with the following Resource Profile
 ```turtle
 @prefix ex: <https://www.example.org/> .
 @prefix hmas: <https://purl.org/hmas/> .
-@prefix hmas-dev: <https://purl.org/hmas/dev#> .
+@prefix hmas-http: <https://purl.org/hmas/interaction-http/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
@@ -898,7 +893,7 @@ ex:GroundFloorPrinterResourceProfile a hmas:ResourceProfile ;
             sh:qualifiedMaxCount 1 ;
             sh:qualifiedValueShape [
                 sh:class hctl:Form ;
-                sh:property hmas-dev:InvokeAction, hmas-dev:PostMethod, hmas-dev:forApplicatonJson, [
+                sh:property hmas:InvokeAction, hmas-http:PostMethod, hmas-http:forApplicatonJson, [
                     sh:path hctl:hasTarget ;
                     sh:minCount 1 ;
                     sh:maxCount 1 ;
