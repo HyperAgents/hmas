@@ -134,10 +134,10 @@ Here we simply want the software HyperReader2000, to be agent on our platform pl
 <details>
 <summary>Turtle Example</summary>
 <pre lang="Turtle"><code>
-@prefix hmas: &#8249;https://purl.org/hmas/> .
-@prefix platf: &#8249;http://www.example.org/platforms/platf#> .
-@prefix forumPlatf: &#8249;http://www.example.org/workspaces/forumPlatf#> .
-@prefix HyperReader2000: &#8249;http://www.example.org/agents/HyperReader2000#> .
+@prefix hmas: &#60;https://purl.org/hmas/> .
+@prefix platf: &#60;http://www.example.org/platforms/platf#> .
+@prefix forumPlatf: &#60;http://www.example.org/workspaces/forumPlatf#> .
+@prefix HyperReader2000: &#60;http://www.example.org/agents/HyperReader2000#> .
  &#10;
 HyperReader2000:agent a hmas:Agent ;
 &nbsp;&nbsp;hmas:isHostedOn platf:platform ;
@@ -149,16 +149,16 @@ HyperReader2000:agent a hmas:Agent ;
 <details>
 <summary>XML Example</summary>
 <pre lang="xml"><code>
-&#8249;?xml version="1.0" encoding="utf-8" ?>
-&#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+&#60;?xml version="1.0" encoding="utf-8" ?>
+&#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
-  &#8249;rdf:Description rdf:about="http://www.example.org/agents/HyperReader2000#agent">
-    &#8249;rdf:type rdf:resource="https://purl.org/hmas/Agent"/>
-    &#8249;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform"/>
-    &#8249;hmas:isContainedIn rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
-    &#8249;hmas:hasProfile rdf:resource="http://www.example.org/agents/HyperReader2000#"/>
-  &#8249;/rdf:Description>
-&#8249;/rdf:RDF>
+  &#60;rdf:Description rdf:about="http://www.example.org/agents/HyperReader2000#agent">
+    &#60;rdf:type rdf:resource="https://purl.org/hmas/Agent"/>
+    &#60;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform"/>
+    &#60;hmas:isContainedIn rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
+    &#60;hmas:hasProfile rdf:resource="http://www.example.org/agents/HyperReader2000#"/>
+  &#60;/rdf:Description>
+&#60;/rdf:RDF>
 </code></pre>
 </details>
 
@@ -169,7 +169,10 @@ Here we want an artifact named forumAccount contained in the workspace forumPlat
 <details>
 <summary>Turtle Example</summary>
 <pre lang="Turtle"><code>
-@prefix forumPlatf: &#8249;http://www.example.org/artifacts/forumAccount#> .
+@prefix hmas: &#60;https://purl.org/hmas/> .
+@prefix platf: &#60;http://www.example.org/platforms/platf#> .
+@prefix forumPlatf: &#60;http://www.example.org/artifacts/forumAccount#> .
+@prefix forumAccount: &#60;https://www.example.org/forumAccount/> .
  &#10;
 forumAccount:artifact a hmas:Artifact ;
 &nbsp;&nbsp;hmas:hasProfile forumAccount: ;
@@ -181,17 +184,17 @@ forumAccount:artifact a hmas:Artifact ;
 <details>
 <summary>XML Example</summary>
 <pre lang="xml"><code>
-&#8249;?xml version="1.0" encoding="utf-8" ?>
-&#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+&#60;?xml version="1.0" encoding="utf-8" ?>
+&#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
 
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/artifacts/forumAccount#artifact">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="https://purl.org/hmas/Artifact"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:isContainedIn rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:hasProfile rdf:resource="http://www.example.org/artifacts/forumAccount#"/
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&#8249;/rdf:RDF>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/artifacts/forumAccount#artifact">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="https://purl.org/hmas/Artifact"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:isContainedIn rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:hasProfile rdf:resource="http://www.example.org/artifacts/forumAccount#"/
+&nbsp;&nbsp;&#60;/rdf:Description>
+&#60;/rdf:RDF>
 </code></pre>
 </details>
 
@@ -202,7 +205,15 @@ Our artifact ForumAccount should have a Resource Profile exposing one signifier 
 <details>
 <summary>Turtle Example</summary>
 <pre lang="Turtle"><code>
-@prefix sign: &#8249;http://www.example.org/signifiers/> .
+@prefix hmas: &#60;https://purl.org/hmas/> .
+@prefix shape: &#60;http://www.example.org/shapes/> .
+@prefix sh: &#60;http://www.w3.org/ns/shacl#> .
+@prefix hctl: &#60;https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: &#60;http://www.w3.org/2011/http#> .
+@prefix dcterms: &#60;http://purl.org/dc/> .
+@prefix xsd: &#60;http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: &#60;http://www.w3.org/ns/prov#> .
+@prefix sign: &#60;http://www.example.org/signifiers/> .
 
 forumAccount: a hmas:ResourceProfile ;
 &#35;not mandatory since we defined the hmas:hasProfile of the artifact earlier
@@ -214,17 +225,17 @@ forumAccount: a hmas:ResourceProfile ;
 <details>
 <summary>XML Example</summary>
 <pre lang="xml"><code>
-&#8249;?xml version="1.0" encoding="utf-8" ?>
-&#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+&#60;?xml version="1.0" encoding="utf-8" ?>
+&#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
 
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/artifacts/forumAccount#">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="https://purl.org/hmas/ResourceProfile"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:isProfileOf rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:exposesSignifier rdf:resource="http://www.example.org/signifiers/getPost"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:exposesSignifier rdf:resource="http://www.example.org/signifiers/moderatePost"/>
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&#8249;/rdf:RDF>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/artifacts/forumAccount#">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="https://purl.org/hmas/ResourceProfile"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:isProfileOf rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:exposesSignifier rdf:resource="http://www.example.org/signifiers/getPost"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:exposesSignifier rdf:resource="http://www.example.org/signifiers/moderatePost"/>
+&nbsp;&nbsp;&#60;/rdf:Description>
+&#60;/rdf:RDF>
 </code></pre>
 </details>
 
@@ -235,13 +246,13 @@ In this part we will implement the signifiers themselves for the same artifact t
 <details>
 <summary>Turtle Example</summary>
 <pre lang="Turtle"><code>
-@prefix shape: &#8249;http://www.example.org/shapes/> .
-@prefix sh: &#8249;http://www.w3.org/ns/shacl#> .
-@prefix hctl: &#8249;https://www.w3.org/2019/wot/hypermedia#> .
-@prefix htv: &#8249;http://www.w3.org/2011/http#> .
-@prefix dcterms: &#8249;http://purl.org/dc/> .
-@prefix xsd: &#8249;http://www.w3.org/2001/XMLSchema#> .
-@prefix prov: &#8249;http://www.w3.org/ns/prov#> .
+@prefix shape: &#60;http://www.example.org/shapes/> .
+@prefix sh: &#60;http://www.w3.org/ns/shacl#> .
+@prefix hctl: &#60;https://www.w3.org/2019/wot/hypermedia#> .
+@prefix htv: &#60;http://www.w3.org/2011/http#> .
+@prefix dcterms: &#60;http://purl.org/dc/> .
+@prefix xsd: &#60;http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: &#60;http://www.w3.org/ns/prov#> .
 
 &#35; Defining the signifier itself
 
@@ -266,7 +277,7 @@ shape:getPostForm a sh:NodeShape ;
 &nbsp;&nbsp;&nbsp;&nbsp;sh:path hctl:hasTarget ;
 &nbsp;&nbsp;&nbsp;&nbsp;sh:minCount 1 ;
 &nbsp;&nbsp;&nbsp;&nbsp;sh:maxCount 1 ;
-&nbsp;&nbsp;&nbsp;&nbsp;sh:hasValue &#8249;http://www.example.org/api/getPost>
+&nbsp;&nbsp;&nbsp;&nbsp;sh:hasValue &#60;http://www.example.org/api/getPost>
 &nbsp;&nbsp;] .
 
 &#35; Defining the form of the output
@@ -315,97 +326,97 @@ shape:getPost a sh:NodeShape ;
 <details>
 <summary>XML Example</summary>
 <pre lang="xml"><code>
-&#8249;?xml version="1.0" encoding="utf-8" ?>
-&#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+&#60;?xml version="1.0" encoding="utf-8" ?>
+&#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/"
          xmlns:sh="http://www.w3.org/ns/shacl#">
 
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/signifiers/getPost">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="https://purl.org/hmas/Signifier"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:signifies>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/shapes/getPost">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:class rdf:resource="https://purl.org/hmas/ActionExecution"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:path rdf:resource="http://www.w3.org/ns/prov#used"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:minQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:minQualifiedShape>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:maxQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:maxQualifiedShape>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:qualifiedValueShape>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:NodeShape rdf:about="http://www.example.org/shapes/getPostForm">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:class rdf:resource="https://www.w3.org/2019/wot/hypermedia#Form"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:path rdf:resource="https://www.w3.org/2019/wot/hypermedia#forContentType"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:minCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:maxCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:hasValue>application/json&#8249;/sh:hasValue>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:path rdf:resource="http://www.w3.org/2011/http#methodName"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:minCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:maxCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:hasValue>POST&#8249;/sh:hasValue>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:path rdf:resource="https://www.w3.org/2019/wot/hypermedia#hasTarget"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:minCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:maxCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:hasValue rdf:resource="http://www.example.org/api/getPost"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:NodeShape>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:qualifiedValueShape>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:path rdf:resource="https://purl.org/hmas/hasInput"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:minCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:maxCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:datatype rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#8249;/sh:datatype>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#8249;/sh:minExclusive>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000 &#8249;/sh:maxExclusive>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:path rdf:resource="https://purl.org/hmas/hasOutput"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:minQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:minQualifiedShape>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:maxQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:maxQualifiedShape>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:qualifiedValueShape>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:NodeShape rdf:about="http://www.example.org/shapes/getPostOutput">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:class rdf:resource="http://www.example.org/shapes/postSchema"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:path rdf:resource="http://purl.org/dc/identifier"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:minCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:maxCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#8249;/sh:minExclusive>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000 &#8249;/sh:maxExclusive>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:path rdf:resource="http://purl.org/dc/description"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:minCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#8249;/sh:maxCount>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;sh:datatype: rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:NodeShape>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:qualifiedValueShape>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/sh:property>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;/hmas:signifies>
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&#8249;/rdf:RDF>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/signifiers/getPost">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="https://purl.org/hmas/Signifier"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:signifies>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/shapes/getPost">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:class rdf:resource="https://purl.org/hmas/ActionExecution"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:path rdf:resource="http://www.w3.org/ns/prov#used"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minQualifiedShape>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxQualifiedShape>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:qualifiedValueShape>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:NodeShape rdf:about="http://www.example.org/shapes/getPostForm">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:class rdf:resource="https://www.w3.org/2019/wot/hypermedia#Form"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:path rdf:resource="https://www.w3.org/2019/wot/hypermedia#forContentType"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:hasValue>application/json&#60;/sh:hasValue>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:path rdf:resource="http://www.w3.org/2011/http#methodName"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:hasValue>POST&#60;/sh:hasValue>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:path rdf:resource="https://www.w3.org/2019/wot/hypermedia#hasTarget"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:hasValue rdf:resource="http://www.example.org/api/getPost"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:NodeShape>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:qualifiedValueShape>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:path rdf:resource="https://purl.org/hmas/hasInput"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:datatype rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#60;/sh:datatype>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#60;/sh:minExclusive>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000 &#60;/sh:maxExclusive>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:path rdf:resource="https://purl.org/hmas/hasOutput"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minQualifiedShape>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxQualifiedShape>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:qualifiedValueShape>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:NodeShape rdf:about="http://www.example.org/shapes/getPostOutput">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:class rdf:resource="http://www.example.org/shapes/postSchema"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:path rdf:resource="http://purl.org/dc/identifier"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#60;/sh:minExclusive>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000 &#60;/sh:maxExclusive>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:path rdf:resource="http://purl.org/dc/description"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:datatype: rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:NodeShape>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:qualifiedValueShape>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;/hmas:signifies>
+&nbsp;&nbsp;&#60;/rdf:Description>
+&#60;/rdf:RDF>
 </code></pre>
 </details>
 
@@ -416,6 +427,12 @@ We will now describe a workspace in the platform containing our agent and our pl
 <details>
 <summary>Turtle Example</summary>
 <pre lang="Turtle"><code>
+@prefix hmas: &#60;https://purl.org/hmas/> .
+@prefix platf: &#60;http://www.example.org/platforms/platf#> .
+@prefix forumPlatf: &#60;http://www.example.org/artifacts/forumAccount#> .
+@prefix forumAccount: &#60;https://www.example.org/forumAccount/> .
+@prefix HyperReader2000: &#60;http://www.example.org/agents/HyperReader2000#> .
+ &#10;
 forumPlatf:workspace a hmas:Workspace ;
 &#35; this line is not mandatory since we already defined the agent and the artifact as contained in this workspace
 &nbsp;&nbsp;hmas:contains forumAccount:artifact , HyperReader2000:agent ;
@@ -426,18 +443,89 @@ forumPlatf:workspace a hmas:Workspace ;
 <details>
 <summary>XML Example</summary>
 <pre lang="xml"><code>
-&#8249;?xml version="1.0" encoding="utf-8" ?>
-&#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+&#60;?xml version="1.0" encoding="utf-8" ?>
+&#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
 
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/workspaces/forumPlatf#workspace">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="https://purl.org/hmas/Workspace"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:contains rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
-		&#8249;hmas:contains rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform "/>
-&nbsp;&nbsp;&#8249;/rdf:Description>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/workspaces/forumPlatf#workspace">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="https://purl.org/hmas/Workspace"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:contains rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
+		&#60;hmas:contains rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform "/>
+&nbsp;&nbsp;&#60;/rdf:Description>
 
-&#8249;/rdf:RDF>
+&#60;/rdf:RDF>
+</code></pre>
+</details>
+
+It is possible to instanciate a Jacamo Workspace with the entire API in a straight-forward way. Here would be an implementation of the previous Workspace, which would be a hosted on a Jacamo platform.
+
+<details>
+<summary>Turtle Example</summary>
+<pre lang="Turtle"><code>
+@prefix hmas: &#60;https://purl.org/hmas/> .
+@prefix hmas-jacamo: &#60;https://purl.org/hmas/jacamo/> .
+@prefix td: &#60;https://www.w3.org/2019/wot/td#> .
+@prefix prov: &#60;http://www.w3.org/ns/prov#> .
+@prefix sh: &#60;http://www.w3.org/ns/shacl#> .
+@prefix forumPlatf: &#60;https://www.example.org/forumPlatf/> .
+@prefix my-workspace: &#60;https://www.example.org/my-workspace/> .
+ &#10;
+forumPlatf: a hmas-jacamo:ResourceProfile ;
+    hmas:exposeSignifiersFrom hmas-jacamo:workspaceCatalog ;
+    hmas:globalSpecification [
+        sh:class hmas:ActionExecution ;
+        sh:property [
+            sh:path ( prov:used td:baseURI ) ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:hasValue my-workspace:
+        ]
+    ] .
+</code></pre>
+</details>
+
+<details>
+<summary>XML Example</summary>
+<pre lang="xml"><code>
+&#60;?xml version="1.0" encoding="utf-8" ?>
+&#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlns:hmas="https://purl.org/hmas/"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmlns:sh="http://www.w3.org/ns/shacl#">
+
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="https://www.example.org/forumPlatf/">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="https://purl.org/hmas/jacamo/ResourceProfile"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:exposeSignifiersFrom rdf:resource="https://purl.org/hmas/jacamo/workspaceCatalog"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:globalSpecification>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:class rdf:resource="https://purl.org/hmas/ActionExecution"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:property>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:path>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:first rdf:resource="http://www.w3.org/ns/prov#used"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:rest>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:first rdf:resource="https://www.w3.org/2019/wot/td#baseURI"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:rest>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:path>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;sh:hasValue rdf:resource="https://www.example.org/my-workspace/"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/sh:property>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;/hmas:globalSpecification>
+
+&nbsp;&nbsp;&#60;/rdf:Description>
+
+&#60;/rdf:RDF>
 </code></pre>
 </details>
 
@@ -448,13 +536,17 @@ Now we can define our Reader organization
 <details>
 <summary>Turtle Example</summary>
 <pre lang="Turtle"><code>
-@prefix HRorg: &#8249;http://www.example.org/organisations/HyperReaderOrg/> .
-@prefix val: &#8249;http://www.example.org/values/> .
-@prefix roles: &#8249;http://www.example.org/roles/> .
-@prefix groups: &#8249;http://www.example.org/groups/> .
-@prefix missions: &#8249;http://www.example.org/missions/> .
-@prefix facility: &#8249;http://www.example.org/facilities/> .
-@prefix memship: &#8249;http://www.example.org/memberships/> .
+@prefix hmas: &#60;https://purl.org/hmas/> .
+@prefix sh: &#60;http://www.w3.org/ns/shacl#> .
+@prefix HyperReader2000: &#60;http://www.example.org/agents/HyperReader2000#> .
+@prefix HRorg: &#60;http://www.example.org/organisations/HyperReaderOrg/> .
+@prefix val: &#60;http://www.example.org/values/> .
+@prefix roles: &#60;http://www.example.org/roles/> .
+@prefix groups: &#60;http://www.example.org/groups/> .
+@prefix missions: &#60;http://www.example.org/missions/> .
+@prefix facility: &#60;http://www.example.org/facilities/> .
+@prefix memship: &#60;http://www.example.org/memberships/> .
+@prefix orgs: &#60;http://www.example.org/organizations/> .
 
 val:HyperIntenseReading a sh:NodeShape .
 
@@ -482,39 +574,39 @@ HRorg:organization a orgs:ReaderOrg ;
 <details>
 <summary>XML Example</summary>
 <pre lang="xml"><code>
-&#8249;?xml version="1.0" encoding="utf-8" ?>
-&#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+&#60;?xml version="1.0" encoding="utf-8" ?>
+&#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
 
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/values/HyperIntenseReading">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape">
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/roles/HyperReader">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/groups/HyperReadingDepartment">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/memberships/HyperReaderMembership">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:isMembershipOf rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/missions/HyperReadingPosts">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/facilities/HyperReadingArea">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/organisations/HyperReaderOrg/organization">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="http://www.example.org/organisations/ReaderOrg"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:hasResourceProfile rdf:resource="http://www.example.org/organisations/HyperReaderOrg/"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:hasOrganizationalValue rdf:resource="http://www.example.org/values/HyperIntenseReading"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:providesRole rdf:resource="http://www.example.org/roles/HyperReader"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:isStructuredBy rdf:resource="http://www.example.org/groups/HyperReadingDepartment"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:proposesMission rdf:resource="http://www.example.org/missions/HyperReadingPosts"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:proposesFacility rdf:resource="http://www.example.org/facilities/HyperReadingArea"/>
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&#8249;/rdf:RDF>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/values/HyperIntenseReading">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape">
+&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/roles/HyperReader">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/groups/HyperReadingDepartment">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/memberships/HyperReaderMembership">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:isMembershipOf rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
+&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/missions/HyperReadingPosts">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/facilities/HyperReadingArea">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&nbsp;&nbsp;&#60;/rdf:Description>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/organisations/HyperReaderOrg/organization">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="http://www.example.org/organisations/ReaderOrg"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:hasResourceProfile rdf:resource="http://www.example.org/organisations/HyperReaderOrg/"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:hasOrganizationalValue rdf:resource="http://www.example.org/values/HyperIntenseReading"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:providesRole rdf:resource="http://www.example.org/roles/HyperReader"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:isStructuredBy rdf:resource="http://www.example.org/groups/HyperReadingDepartment"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:proposesMission rdf:resource="http://www.example.org/missions/HyperReadingPosts"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:proposesFacility rdf:resource="http://www.example.org/facilities/HyperReadingArea"/>
+&nbsp;&nbsp;&#60;/rdf:Description>
+&#60;/rdf:RDF>
 </code></pre>
 </details>
 
@@ -525,6 +617,12 @@ Finally, we need to define our HMASPlatform hosting all of our artifacts, worksp
 <details>
 <summary>Turtle Example</summary>
 <pre lang="Turtle"><code>
+@prefix hmas: &#60;https://purl.org/hmas/> .
+@prefix platf: &#60;http://www.example.org/platforms/platf#> .
+@prefix forumPlatf: &#60;http://www.example.org/artifacts/forumAccount#> .
+@prefix forumAccount: &#60;https://www.example.org/forumAccount/> .
+@prefix HyperReader2000: &#60;http://www.example.org/agents/HyperReader2000#> .
+ &#10;
 platf:platform a HypermediaMASPlatform ;
 &#35; the rest of the statement is also not mandatory
 &nbsp;&nbsp;platf:hosts forumAccount:artifact , forumPlatf:workspace , HyperReader2000:agent .
@@ -534,17 +632,17 @@ platf:platform a HypermediaMASPlatform ;
 <details>
 <summary>XML Example</summary>
 <pre lang="xml"><code>
-&#8249;?xml version="1.0" encoding="utf-8" ?>
-&#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+&#60;?xml version="1.0" encoding="utf-8" ?>
+&#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
 
-&nbsp;&nbsp;&#8249;rdf:Description rdf:about="http://www.example.org/platforms/platf#platform">
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="https://purl.org/hmas/HypermediaMASPlatform"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:hosts rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:hosts rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:hosts rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
-&nbsp;&nbsp;&#8249;/rdf:Description>
-&#8249;/rdf:RDF>
+&nbsp;&nbsp;&#60;rdf:Description rdf:about="http://www.example.org/platforms/platf#platform">
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;rdf:type rdf:resource="https://purl.org/hmas/HypermediaMASPlatform"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:hosts rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:hosts rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&#60;hmas:hosts rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
+&nbsp;&nbsp;&#60;/rdf:Description>
+&#60;/rdf:RDF>
 </code></pre>
 </details>
 
