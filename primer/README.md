@@ -148,7 +148,7 @@ HyperReader2000:agent a hmas:Agent ;
 
 <details>
 <summary>XML Example</summary>
-<pre lang="XML"><code>
+<pre lang="xml"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -180,7 +180,7 @@ forumAccount:artifact a hmas:Artifact ;
 
 <details>
 <summary>XML Example</summary>
-<pre lang="XML"><code>
+<pre lang="xml"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -213,7 +213,7 @@ forumAccount: a hmas:ResourceProfile ;
 
 <details>
 <summary>XML Example</summary>
-<pre lang="XML"><code>
+<pre lang="xml"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -314,7 +314,7 @@ shape:getPost a sh:NodeShape ;
 
 <details>
 <summary>XML Example</summary>
-<pre lang="XML"><code>
+<pre lang="xml"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/"
@@ -425,7 +425,7 @@ forumPlatf:workspace a hmas:Workspace ;
 
 <details>
 <summary>XML Example</summary>
-<pre lang="XML"><code>
+<pre lang="xml"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -434,7 +434,7 @@ forumPlatf:workspace a hmas:Workspace ;
 &nbsp;&nbsp;&nbsp;&nbsp;&#8249;rdf:type rdf:resource="https://purl.org/hmas/Workspace"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:contains rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
 		&#8249;hmas:contains rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform "/
+&nbsp;&nbsp;&nbsp;&nbsp;&#8249;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform "/>
 &nbsp;&nbsp;&#8249;/rdf:Description>
 
 &#8249;/rdf:RDF>
@@ -481,7 +481,7 @@ HRorg:organization a orgs:ReaderOrg ;
 
 <details>
 <summary>XML Example</summary>
-<pre lang="XML"><code>
+<pre lang="xml"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
@@ -533,7 +533,7 @@ platf:platform a HypermediaMASPlatform ;
 
 <details>
 <summary>XML Example</summary>
-<pre lang="XML"><code>
+<pre lang="xml"><code>
 &#8249;?xml version="1.0" encoding="utf-8" ?>
 &#8249;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
