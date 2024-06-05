@@ -140,9 +140,9 @@ Here we simply want the software HyperReader2000, to be agent on our platform pl
 @prefix HyperReader2000: &#60;http://www.example.org/agents/HyperReader2000#> .
  &#10;
 HyperReader2000:agent a hmas:Agent ;
-&#160;&#160;hmas:isHostedOn platf:platform ;
-&#160;&#160;hmas:isContainedIn forumPlatf:workspace ;
-&#160;&#160;hmas:hasProfile HyperReader2000: .
+&#32;&#32;hmas:isHostedOn platf:platform ;
+&#32;&#32;hmas:isContainedIn forumPlatf:workspace ;
+&#32;&#32;hmas:hasProfile HyperReader2000: .
 </code></pre>
 </details>
 
@@ -175,9 +175,9 @@ Here we want an artifact named forumAccount contained in the workspace forumPlat
 @prefix forumAccount: &#60;https://www.example.org/forumAccount/> .
  &#10;
 forumAccount:artifact a hmas:Artifact ;
-&#160;&#160;hmas:hasProfile forumAccount: ;
-&#160;&#160;hmas:isHostedOn platf:platform ;
-&#160;&#160;hmas:isContainedIn forumPlatf:workspace .
+&#32;&#32;hmas:hasProfile forumAccount: ;
+&#32;&#32;hmas:isHostedOn platf:platform ;
+&#32;&#32;hmas:isContainedIn forumPlatf:workspace .
 </code></pre>
 </details>
 
@@ -188,12 +188,12 @@ forumAccount:artifact a hmas:Artifact ;
 &#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
 
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/artifacts/forumAccount#artifact">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="https://purl.org/hmas/Artifact"/>
-&#160;&#160;&#160;&#160;&#60;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform"/>
-&#160;&#160;&#160;&#160;&#60;hmas:isContainedIn rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
-&#160;&#160;&#160;&#160;&#60;hmas:hasProfile rdf:resource="http://www.example.org/artifacts/forumAccount#"/
-&#160;&#160;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/artifacts/forumAccount#artifact">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="https://purl.org/hmas/Artifact"/>
+&#32;&#32;&#32;&#32;&#60;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform"/>
+&#32;&#32;&#32;&#32;&#60;hmas:isContainedIn rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
+&#32;&#32;&#32;&#32;&#60;hmas:hasProfile rdf:resource="http://www.example.org/artifacts/forumAccount#"/
+&#32;&#32;&#60;/rdf:Description>
 &#60;/rdf:RDF>
 </code></pre>
 </details>
@@ -217,8 +217,8 @@ Our artifact ForumAccount should have a Resource Profile exposing one signifier 
 
 forumAccount: a hmas:ResourceProfile ;
 &#35;not mandatory since we defined the hmas:hasProfile of the artifact earlier
-&#160;&#160;hmas:isProfileOf forumAccount:artifact ;
-&#160;&#160;hmas:exposesSignifier sign:getPost .
+&#32;&#32;hmas:isProfileOf forumAccount:artifact ;
+&#32;&#32;hmas:exposesSignifier sign:getPost .
 </code></pre>
 </details>
 
@@ -229,12 +229,12 @@ forumAccount: a hmas:ResourceProfile ;
 &#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
 
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/artifacts/forumAccount#">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="https://purl.org/hmas/ResourceProfile"/>
-&#160;&#160;&#160;&#160;&#60;hmas:isProfileOf rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
-&#160;&#160;&#160;&#160;&#60;hmas:exposesSignifier rdf:resource="http://www.example.org/signifiers/getPost"/>
-&#160;&#160;&#160;&#160;&#60;hmas:exposesSignifier rdf:resource="http://www.example.org/signifiers/moderatePost"/>
-&#160;&#160;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/artifacts/forumAccount#">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="https://purl.org/hmas/ResourceProfile"/>
+&#32;&#32;&#32;&#32;&#60;hmas:isProfileOf rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
+&#32;&#32;&#32;&#32;&#60;hmas:exposesSignifier rdf:resource="http://www.example.org/signifiers/getPost"/>
+&#32;&#32;&#32;&#32;&#60;hmas:exposesSignifier rdf:resource="http://www.example.org/signifiers/moderatePost"/>
+&#32;&#32;&#60;/rdf:Description>
 &#60;/rdf:RDF>
 </code></pre>
 </details>
@@ -257,69 +257,69 @@ In this part we will implement the signifiers themselves for the same artifact t
 &#35; Defining the signifier itself
 
 sign:getPost a hmas:Signifier ;
-&#160;&#160;hmas:signifies shape:getPost .
+&#32;&#32;hmas:signifies shape:getPost .
 
 &#35; Defining the form of the input
 
 shape:getPostForm a sh:NodeShape ;
-&#160;&#160;sh:class hctl:Form ;
-&#160;&#160;sh:property [
-&#160;&#160;&#160;&#160;sh:path hctl:forContentType ;
-&#160;&#160;&#160;&#160;sh:minCount 1 ;
-&#160;&#160;&#160;&#160;sh:maxCount 1 ;
-&#160;&#160;&#160;&#160;sh:hasValue "application/json"
-&#160;&#160;] , [
-&#160;&#160;&#160;&#160;sh:path htv:methodName ;
-&#160;&#160;&#160;&#160;sh:minCount 1 ;
-&#160;&#160;&#160;&#160;sh:maxCount 1 ;
-&#160;&#160;&#160;&#160;sh:hasValue "POST"
-&#160;&#160;] , [
-&#160;&#160;&#160;&#160;sh:path hctl:hasTarget ;
-&#160;&#160;&#160;&#160;sh:minCount 1 ;
-&#160;&#160;&#160;&#160;sh:maxCount 1 ;
-&#160;&#160;&#160;&#160;sh:hasValue &#60;http://www.example.org/api/getPost>
-&#160;&#160;] .
+&#32;&#32;sh:class hctl:Form ;
+&#32;&#32;sh:property [
+&#32;&#32;&#32;&#32;sh:path hctl:forContentType ;
+&#32;&#32;&#32;&#32;sh:minCount 1 ;
+&#32;&#32;&#32;&#32;sh:maxCount 1 ;
+&#32;&#32;&#32;&#32;sh:hasValue "application/json"
+&#32;&#32;] , [
+&#32;&#32;&#32;&#32;sh:path htv:methodName ;
+&#32;&#32;&#32;&#32;sh:minCount 1 ;
+&#32;&#32;&#32;&#32;sh:maxCount 1 ;
+&#32;&#32;&#32;&#32;sh:hasValue "POST"
+&#32;&#32;] , [
+&#32;&#32;&#32;&#32;sh:path hctl:hasTarget ;
+&#32;&#32;&#32;&#32;sh:minCount 1 ;
+&#32;&#32;&#32;&#32;sh:maxCount 1 ;
+&#32;&#32;&#32;&#32;sh:hasValue &#60;http://www.example.org/api/getPost>
+&#32;&#32;] .
 
 &#35; Defining the form of the output
 
 shape:getPostOutput a sh:NodeShape ;
-&#160;&#160;sh:class shape:postSchema ;
-&#160;&#160;sh:property [
-&#160;&#160;&#160;&#160;sh:path dcterms:identifier ;
-&#160;&#160;&#160;&#160;sh:minCount 1 ;
-&#160;&#160;&#160;&#160;sh:maxCount 1 ;
-&#160;&#160;&#160;&#160;sh:datatype xsd:int ;
-&#160;&#160;&#160;&#160;sh:minExclusive 0 ;
-&#160;&#160;&#160;&#160;sh:maxExclusive 10000
-&#160;&#160;] , [
-&#160;&#160;&#160;&#160;sh:path dcterms:description ;
-&#160;&#160;&#160;&#160;sh:minCount 1 ;
-&#160;&#160;&#160;&#160;sh:maxCount 1 ;
-&#160;&#160;&#160;&#160;sh:datatype: xsd:string
-&#160;&#160;] .
+&#32;&#32;sh:class shape:postSchema ;
+&#32;&#32;sh:property [
+&#32;&#32;&#32;&#32;sh:path dcterms:identifier ;
+&#32;&#32;&#32;&#32;sh:minCount 1 ;
+&#32;&#32;&#32;&#32;sh:maxCount 1 ;
+&#32;&#32;&#32;&#32;sh:datatype xsd:int ;
+&#32;&#32;&#32;&#32;sh:minExclusive 0 ;
+&#32;&#32;&#32;&#32;sh:maxExclusive 10000
+&#32;&#32;] , [
+&#32;&#32;&#32;&#32;sh:path dcterms:description ;
+&#32;&#32;&#32;&#32;sh:minCount 1 ;
+&#32;&#32;&#32;&#32;sh:maxCount 1 ;
+&#32;&#32;&#32;&#32;sh:datatype: xsd:string
+&#32;&#32;] .
 
 &#35; Defining the whole signifier shape
 
 shape:getPost a sh:NodeShape ;
-&#160;&#160;sh:class hmas:ActionExecution ;
-&#160;&#160;sh:property [
-&#160;&#160;&#160;&#160;sh:path prov:used ;
-&#160;&#160;&#160;&#160;sh:minQualifiedShape 1 ;
-&#160;&#160;&#160;&#160;sh:maxQualifiedShape 1 ;
-&#160;&#160;&#160;&#160;sh:qualifiedValueShape shape:getPostForm
-&#160;&#160;] , [
-&#160;&#160;&#160;&#160;sh:path hmas:hasInput ;
-&#160;&#160;&#160;&#160;sh:minCount 1 ;
-&#160;&#160;&#160;&#160;sh:maxCount 1 ;
-&#160;&#160;&#160;&#160;sh:datatype 0 ;
-&#160;&#160;&#160;&#160;sh:minExclusive 0 ;
-&#160;&#160;&#160;&#160;sh:maxExclusive 10000
-&#160;&#160;] , [
-&#160;&#160;&#160;&#160;sh:path hmas:hasOutput ;
-&#160;&#160;&#160;&#160;sh:minQualifiedShape 1 ;
-&#160;&#160;&#160;&#160;sh:maxQualifiedShape 1 ;
-&#160;&#160;&#160;&#160;sh:qualifiedValueShape shape:getPostOutput
-&#160;&#160;] .
+&#32;&#32;sh:class hmas:ActionExecution ;
+&#32;&#32;sh:property [
+&#32;&#32;&#32;&#32;sh:path prov:used ;
+&#32;&#32;&#32;&#32;sh:minQualifiedShape 1 ;
+&#32;&#32;&#32;&#32;sh:maxQualifiedShape 1 ;
+&#32;&#32;&#32;&#32;sh:qualifiedValueShape shape:getPostForm
+&#32;&#32;] , [
+&#32;&#32;&#32;&#32;sh:path hmas:hasInput ;
+&#32;&#32;&#32;&#32;sh:minCount 1 ;
+&#32;&#32;&#32;&#32;sh:maxCount 1 ;
+&#32;&#32;&#32;&#32;sh:datatype 0 ;
+&#32;&#32;&#32;&#32;sh:minExclusive 0 ;
+&#32;&#32;&#32;&#32;sh:maxExclusive 10000
+&#32;&#32;] , [
+&#32;&#32;&#32;&#32;sh:path hmas:hasOutput ;
+&#32;&#32;&#32;&#32;sh:minQualifiedShape 1 ;
+&#32;&#32;&#32;&#32;sh:maxQualifiedShape 1 ;
+&#32;&#32;&#32;&#32;sh:qualifiedValueShape shape:getPostOutput
+&#32;&#32;] .
 </code></pre>
 </details>
 
@@ -331,91 +331,91 @@ shape:getPost a sh:NodeShape ;
          xmlns:hmas="https://purl.org/hmas/"
          xmlns:sh="http://www.w3.org/ns/shacl#">
 
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/signifiers/getPost">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="https://purl.org/hmas/Signifier"/>
-&#160;&#160;&#160;&#160;&#60;hmas:signifies>
-&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/shapes/getPost">
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:class rdf:resource="https://purl.org/hmas/ActionExecution"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:path rdf:resource="http://www.w3.org/ns/prov#used"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minQualifiedShape>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxQualifiedShape>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:qualifiedValueShape>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:NodeShape rdf:about="http://www.example.org/shapes/getPostForm">
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:class rdf:resource="https://www.w3.org/2019/wot/hypermedia#Form"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:path rdf:resource="https://www.w3.org/2019/wot/hypermedia#forContentType"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:hasValue>application/json&#60;/sh:hasValue>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:path rdf:resource="http://www.w3.org/2011/http#methodName"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:hasValue>POST&#60;/sh:hasValue>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:path rdf:resource="https://www.w3.org/2019/wot/hypermedia#hasTarget"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:hasValue rdf:resource="http://www.example.org/api/getPost"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:NodeShape>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:qualifiedValueShape>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:path rdf:resource="https://purl.org/hmas/hasInput"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:datatype rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#60;/sh:datatype>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#60;/sh:minExclusive>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000 &#60;/sh:maxExclusive>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:path rdf:resource="https://purl.org/hmas/hasOutput"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minQualifiedShape>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxQualifiedShape>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:qualifiedValueShape>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:NodeShape rdf:about="http://www.example.org/shapes/getPostOutput">
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:class rdf:resource="http://www.example.org/shapes/postSchema"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:path rdf:resource="http://purl.org/dc/identifier"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#60;/sh:minExclusive>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000 &#60;/sh:maxExclusive>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:path rdf:resource="http://purl.org/dc/description"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:datatype: rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:NodeShape>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:qualifiedValueShape>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#60;/hmas:signifies>
-&#160;&#160;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/signifiers/getPost">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="https://purl.org/hmas/Signifier"/>
+&#32;&#32;&#32;&#32;&#60;hmas:signifies>
+&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/shapes/getPost">
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:class rdf:resource="https://purl.org/hmas/ActionExecution"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:path rdf:resource="http://www.w3.org/ns/prov#used"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minQualifiedShape>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxQualifiedShape>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:qualifiedValueShape>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:NodeShape rdf:about="http://www.example.org/shapes/getPostForm">
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:class rdf:resource="https://www.w3.org/2019/wot/hypermedia#Form"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:path rdf:resource="https://www.w3.org/2019/wot/hypermedia#forContentType"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:hasValue>application/json&#60;/sh:hasValue>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:path rdf:resource="http://www.w3.org/2011/http#methodName"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:hasValue>POST&#60;/sh:hasValue>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:path rdf:resource="https://www.w3.org/2019/wot/hypermedia#hasTarget"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:hasValue rdf:resource="http://www.example.org/api/getPost"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:NodeShape>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:qualifiedValueShape>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:path rdf:resource="https://purl.org/hmas/hasInput"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:datatype rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#60;/sh:datatype>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#60;/sh:minExclusive>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000 &#60;/sh:maxExclusive>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:path rdf:resource="https://purl.org/hmas/hasOutput"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minQualifiedShape>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxQualifiedShape rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxQualifiedShape>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:qualifiedValueShape>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:NodeShape rdf:about="http://www.example.org/shapes/getPostOutput">
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:class rdf:resource="http://www.example.org/shapes/postSchema"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:path rdf:resource="http://purl.org/dc/identifier"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0 &#60;/sh:minExclusive>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000 &#60;/sh:maxExclusive>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:path rdf:resource="http://purl.org/dc/description"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:datatype: rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:NodeShape>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:qualifiedValueShape>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#60;/hmas:signifies>
+&#32;&#32;&#60;/rdf:Description>
 &#60;/rdf:RDF>
 </code></pre>
 </details>
@@ -435,8 +435,8 @@ We will now describe a workspace in the platform containing our agent and our pl
  &#10;
 forumPlatf:workspace a hmas:Workspace ;
 &#35; this line is not mandatory since we already defined the agent and the artifact as contained in this workspace
-&#160;&#160;hmas:contains forumAccount:artifact , HyperReader2000:agent ;
-&#160;&#160;hmas:isHostedOn platf:platform .
+&#32;&#32;hmas:contains forumAccount:artifact , HyperReader2000:agent ;
+&#32;&#32;hmas:isHostedOn platf:platform .
 </code></pre>
 </details>
 
@@ -447,12 +447,12 @@ forumPlatf:workspace a hmas:Workspace ;
 &#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
 
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/workspaces/forumPlatf#workspace">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="https://purl.org/hmas/Workspace"/>
-&#160;&#160;&#160;&#160;&#60;hmas:contains rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/workspaces/forumPlatf#workspace">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="https://purl.org/hmas/Workspace"/>
+&#32;&#32;&#32;&#32;&#60;hmas:contains rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
 		&#60;hmas:contains rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
-&#160;&#160;&#160;&#160;&#60;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform "/>
-&#160;&#160;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#60;hmas:isHostedOn rdf:resource="http://www.example.org/platforms/platf#platform "/>
+&#32;&#32;&#60;/rdf:Description>
 
 &#60;/rdf:RDF>
 </code></pre>
@@ -490,40 +490,40 @@ forumPlatf: a hmas-jacamo:ResourceProfile ;
 <pre lang="xml"><code>
 &#60;?xml version="1.0" encoding="utf-8" ?>
 &#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;xmlns:hmas="https://purl.org/hmas/"
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;xmlns:sh="http://www.w3.org/ns/shacl#">
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xmlns:hmas="https://purl.org/hmas/"
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xmlns:sh="http://www.w3.org/ns/shacl#">
 
-&#160;&#160;&#60;rdf:Description rdf:about="https://www.example.org/forumPlatf/">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="https://purl.org/hmas/jacamo/ResourceProfile"/>
-&#160;&#160;&#160;&#160;&#60;hmas:exposeSignifiersFrom rdf:resource="https://purl.org/hmas/jacamo/workspaceCatalog"/>
-&#160;&#160;&#160;&#160;&#60;hmas:globalSpecification>
-&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:class rdf:resource="https://purl.org/hmas/ActionExecution"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:property>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:path>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:first rdf:resource="http://www.w3.org/ns/prov#used"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:rest>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:first rdf:resource="https://www.w3.org/2019/wot/td#baseURI"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:rest>
+&#32;&#32;&#60;rdf:Description rdf:about="https://www.example.org/forumPlatf/">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="https://purl.org/hmas/jacamo/ResourceProfile"/>
+&#32;&#32;&#32;&#32;&#60;hmas:exposeSignifiersFrom rdf:resource="https://purl.org/hmas/jacamo/workspaceCatalog"/>
+&#32;&#32;&#32;&#32;&#60;hmas:globalSpecification>
+&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:class rdf:resource="https://purl.org/hmas/ActionExecution"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:path>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:first rdf:resource="http://www.w3.org/ns/prov#used"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:rest>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:first rdf:resource="https://www.w3.org/2019/wot/td#baseURI"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:rest>
 
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:path>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:path>
 
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;sh:hasValue rdf:resource="https://www.example.org/my-workspace/"/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#60;/sh:property>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:hasValue rdf:resource="https://www.example.org/my-workspace/"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:property>
 
-&#160;&#160;&#160;&#160;&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#160;&#160;&#60;/hmas:globalSpecification>
+&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#32;&#32;&#60;/hmas:globalSpecification>
 
-&#160;&#160;&#60;/rdf:Description>
+&#32;&#32;&#60;/rdf:Description>
 
 &#60;/rdf:RDF>
 </code></pre>
@@ -555,19 +555,19 @@ roles:HyperReader a sh:NodeShape .
 groups:HyperReadingDepartment a sh:NodeShape .
 
 memship:HyperReaderMembership a sh:NodeShape ;
-&#160;&#160;hmas:isMembershipOf HyperReader2000:agent .
+&#32;&#32;hmas:isMembershipOf HyperReader2000:agent .
 
 missions:HyperReadingPosts a sh:NodeShape .
 
 facility:HyperReadingArea a sh:NodeShape .
 
 HRorg:organization a orgs:ReaderOrg ;
-&#160;&#160;hmas:hasResourceProfile HRorg: ;
-&#160;&#160;hmas:hasOrganizationalValue val:HyperIntenseReading ;
-&#160;&#160;hmas:providesRole roles:HyperReader ;
-&#160;&#160;hmas:isStructuredBy groups:HyperReadingDepartment ;
-&#160;&#160;hmas:proposesMission missions:HyperReadingPosts ;
-&#160;&#160;hmas:proposesFacility facility:HyperReadingArea .
+&#32;&#32;hmas:hasResourceProfile HRorg: ;
+&#32;&#32;hmas:hasOrganizationalValue val:HyperIntenseReading ;
+&#32;&#32;hmas:providesRole roles:HyperReader ;
+&#32;&#32;hmas:isStructuredBy groups:HyperReadingDepartment ;
+&#32;&#32;hmas:proposesMission missions:HyperReadingPosts ;
+&#32;&#32;hmas:proposesFacility facility:HyperReadingArea .
 </code></pre>
 </details>
 
@@ -578,34 +578,34 @@ HRorg:organization a orgs:ReaderOrg ;
 &#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
 
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/values/HyperIntenseReading">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape">
-&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/roles/HyperReader">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/groups/HyperReadingDepartment">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/memberships/HyperReaderMembership">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&#160;&#160;&#160;&#160;&#60;hmas:isMembershipOf rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
-&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/missions/HyperReadingPosts">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/facilities/HyperReadingArea">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-&#160;&#160;&#60;/rdf:Description>
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/organisations/HyperReaderOrg/organization">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="http://www.example.org/organisations/ReaderOrg"/>
-&#160;&#160;&#160;&#160;&#60;hmas:hasResourceProfile rdf:resource="http://www.example.org/organisations/HyperReaderOrg/"/>
-&#160;&#160;&#160;&#160;&#60;hmas:hasOrganizationalValue rdf:resource="http://www.example.org/values/HyperIntenseReading"/>
-&#160;&#160;&#160;&#160;&#60;hmas:providesRole rdf:resource="http://www.example.org/roles/HyperReader"/>
-&#160;&#160;&#160;&#160;&#60;hmas:isStructuredBy rdf:resource="http://www.example.org/groups/HyperReadingDepartment"/>
-&#160;&#160;&#160;&#160;&#60;hmas:proposesMission rdf:resource="http://www.example.org/missions/HyperReadingPosts"/>
-&#160;&#160;&#160;&#160;&#60;hmas:proposesFacility rdf:resource="http://www.example.org/facilities/HyperReadingArea"/>
-&#160;&#160;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/values/HyperIntenseReading">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape">
+&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/roles/HyperReader">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/groups/HyperReadingDepartment">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/memberships/HyperReaderMembership">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&#32;&#32;&#32;&#32;&#60;hmas:isMembershipOf rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
+&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/missions/HyperReadingPosts">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/facilities/HyperReadingArea">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+&#32;&#32;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/organisations/HyperReaderOrg/organization">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="http://www.example.org/organisations/ReaderOrg"/>
+&#32;&#32;&#32;&#32;&#60;hmas:hasResourceProfile rdf:resource="http://www.example.org/organisations/HyperReaderOrg/"/>
+&#32;&#32;&#32;&#32;&#60;hmas:hasOrganizationalValue rdf:resource="http://www.example.org/values/HyperIntenseReading"/>
+&#32;&#32;&#32;&#32;&#60;hmas:providesRole rdf:resource="http://www.example.org/roles/HyperReader"/>
+&#32;&#32;&#32;&#32;&#60;hmas:isStructuredBy rdf:resource="http://www.example.org/groups/HyperReadingDepartment"/>
+&#32;&#32;&#32;&#32;&#60;hmas:proposesMission rdf:resource="http://www.example.org/missions/HyperReadingPosts"/>
+&#32;&#32;&#32;&#32;&#60;hmas:proposesFacility rdf:resource="http://www.example.org/facilities/HyperReadingArea"/>
+&#32;&#32;&#60;/rdf:Description>
 &#60;/rdf:RDF>
 </code></pre>
 </details>
@@ -625,7 +625,7 @@ Finally, we need to define our HMASPlatform hosting all of our artifacts, worksp
  &#10;
 platf:platform a HypermediaMASPlatform ;
 &#35; the rest of the statement is also not mandatory
-&#160;&#160;platf:hosts forumAccount:artifact , forumPlatf:workspace , HyperReader2000:agent .
+&#32;&#32;platf:hosts forumAccount:artifact , forumPlatf:workspace , HyperReader2000:agent .
 </code></pre>
 </details>
 
@@ -636,12 +636,12 @@ platf:platform a HypermediaMASPlatform ;
 &#60;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:hmas="https://purl.org/hmas/">
 
-&#160;&#160;&#60;rdf:Description rdf:about="http://www.example.org/platforms/platf#platform">
-&#160;&#160;&#160;&#160;&#60;rdf:type rdf:resource="https://purl.org/hmas/HypermediaMASPlatform"/>
-&#160;&#160;&#160;&#160;&#60;hmas:hosts rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
-&#160;&#160;&#160;&#160;&#60;hmas:hosts rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
-&#160;&#160;&#160;&#160;&#60;hmas:hosts rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
-&#160;&#160;&#60;/rdf:Description>
+&#32;&#32;&#60;rdf:Description rdf:about="http://www.example.org/platforms/platf#platform">
+&#32;&#32;&#32;&#32;&#60;rdf:type rdf:resource="https://purl.org/hmas/HypermediaMASPlatform"/>
+&#32;&#32;&#32;&#32;&#60;hmas:hosts rdf:resource="http://www.example.org/artifacts/forumAccount#artifact"/>
+&#32;&#32;&#32;&#32;&#60;hmas:hosts rdf:resource="http://www.example.org/agents/HyperReader2000#agent"/>
+&#32;&#32;&#32;&#32;&#60;hmas:hosts rdf:resource="http://www.example.org/workspaces/forumPlatf#workspace"/>
+&#32;&#32;&#60;/rdf:Description>
 &#60;/rdf:RDF>
 </code></pre>
 </details>
