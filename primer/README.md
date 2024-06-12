@@ -465,23 +465,27 @@ It is possible to instanciate a Jacamo Workspace with the entire API in a straig
 <pre lang="Turtle"><code>
 @prefix hmas: &#60;https://purl.org/hmas/> .
 @prefix hmas-jacamo: &#60;https://purl.org/hmas/jacamo/> .
-@prefix td: &#60;https://www.w3.org/2019/wot/td#> .
 @prefix prov: &#60;http://www.w3.org/ns/prov#> .
+@prefix td: &#60;https://www.w3.org/2019/wot/td#> .
 @prefix sh: &#60;http://www.w3.org/ns/shacl#> .
-@prefix forumPlatf: &#60;https://www.example.org/forumPlatf/> .
-@prefix my-workspace: &#60;https://www.example.org/my-workspace/> .
+@prefix platf: &#60;http://www.example.org/platforms/platf#> .
+@prefix forumPlatf: &#60;http://www.example.org/artifacts/forumAccount#> .
+@prefix forumAccount: &#60;https://www.example.org/forumAccount/> .
+@prefix HyperReader2000: &#60;http://www.example.org/agents/HyperReader2000#> .
  &#10;
-forumPlatf: a hmas-jacamo:ResourceProfile ;
-    hmas:exposeSignifiersFrom hmas-jacamo:workspaceCatalog ;
-    hmas:globalSpecification [
-        sh:class hmas:ActionExecution ;
-        sh:property [
-            sh:path ( prov:used td:baseURI ) ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
-            sh:hasValue my-workspace:
-        ]
-    ] .
+forumPlatf:workspace a hmas:Workspace ;
+&#32;&#32;hmas:contains forumAccount:artifact , HyperReader2000:agent ;
+&#32;&#32;hmas:isHostedOn platf:platform ;
+&#32;&#32;hmas:exposeSignifiersFrom hmas-jacamo:workspaceCatalog ;
+&#32;&#32;&#32;&#32;hmas:globalSpecification &#91;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sh:class hmas:ActionExecution ;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sh:property &#91;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sh:path ( prov:used td:baseURI ) ;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sh:minCount 1 ;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sh:maxCount 1 ;
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sh:hasValue &#60;https://my.domain.ch/the.jacamo.plateform/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;]
+&#32;&#32;&#32;&#32;] .
 </code></pre>
 </details>
 
@@ -516,7 +520,7 @@ forumPlatf: a hmas-jacamo:ResourceProfile ;
 
 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:minCount>
 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1 &#60;/sh:maxCount>
-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:hasValue rdf:resource="https://www.example.org/my-workspace/"/>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;sh:hasValue rdf:resource="https://my.domain.ch/the.jacamo.plateform/"/>
 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/rdf:Description>
 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#60;/sh:property>
 
