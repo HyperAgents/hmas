@@ -17,6 +17,13 @@ Data tests:
 ![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_DATA_MINORFAIL.json)
 ![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_DATA_MAJORFAIL.json)
  
+Query tests:	
+![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QUERY_PASS.json)
+![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QUERY_NOTTESTED.json)
+![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QUERY_CANNOTTELL.json)
+![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QUERY_MINORFAIL.json)
+![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QUERY_MAJORFAIL.json)
+ 
 # Hyperagent ontology git space
 [HyperAgents](https://www.hyperagents.org/) is an ANR/SNF project working towards the deployment of world-wide hybrid communities of people and artificial agents on the Web. For this purpose, we are defining a new class of multi-agent systems (MAS) that are: 
 1) aligned with the Web architecture to inherit the properties of the Web as a world-wide, open, and long-lived system ; 
