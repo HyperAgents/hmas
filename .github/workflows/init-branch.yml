@@ -1,0 +1,21 @@
+name: init-branch
+on: create
+
+jobs:
+  init-branch:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+    - name: Getting ref type information
+      shell: bash
+      run: |
+        IFS='/' read -ra PATHS <<< "${{ inputs.ref }}"
+        echo "REF_TYPE=$(echo ${PATHS[1]})" >> $GITHUB_ENV
+    - uses: Wimmics/olivaw/init-branch@v0.0.5
+      if: ${{ env.REF_TYPE != 'tags' }}
+      with:
+        repository: ${{ github.repository }}
+        ref: ${{ github.ref }}
+        gist-secret: ${{ secrets.GIST_SECRET }}
+        init-badges: true
