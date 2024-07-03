@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this ontology, please cite it as below."
+authors:
+- family-names: "Author1"
+  given-names: "Author1"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Author"
+  given-names: "Author"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "Hypermedia Multi-Agent Systems Ontology"
+version: 1.0.0
+doi: TODO_SETUP_ZENODO_TO_TRACK_RELEASES
+date-released: 2023-12-01
+url: "https://github.com/HyperAgents/hmas/"
