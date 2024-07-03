@@ -1,0 +1,11 @@
+PREFIX : <#>
+
+
+CONSTRUCT {
+    ?w1 :links ?w2 .
+}
+WHERE {
+    ?w1 :epistemicRelation _:edge1 .
+    _:edge1 :indinstinguishes ?w2 .
+    _:edge1 :agent :i .
+}
