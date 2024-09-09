@@ -1,28 +1,28 @@
 Profiles:	
-![OWL EL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_EL.json)
-![OWL QL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QL.json)
-![OWL RL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_RL.json)
+![OWL EL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_EL.json)
+![OWL QL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_QL.json)
+![OWL RL Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_RL.json)
  
 Model tests:	
-![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_MODEL_PASS.json)
-![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_MODEL_NOTTESTED.json)
-![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_MODEL_CANNOTTELL.json)
-![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_MODEL_MINORFAIL.json)
-![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_MODEL_MAJORFAIL.json)
+![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_MODEL_PASS.json)
+![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_MODEL_NOTTESTED.json)
+![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_MODEL_CANNOTTELL.json)
+![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_MODEL_MINORFAIL.json)
+![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_MODEL_MAJORFAIL.json)
  
 Data tests:	
-![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_DATA_PASS.json)
-![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_DATA_NOTTESTED.json)
-![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_DATA_CANNOTTELL.json)
-![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_DATA_MINORFAIL.json)
-![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_DATA_MAJORFAIL.json)
+![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_DATA_PASS.json)
+![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_DATA_NOTTESTED.json)
+![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_DATA_CANNOTTELL.json)
+![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_DATA_MINORFAIL.json)
+![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_DATA_MAJORFAIL.json)
  
 Query tests:	
-![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QUERY_PASS.json)
-![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QUERY_NOTTESTED.json)
-![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QUERY_CANNOTTELL.json)
-![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QUERY_MINORFAIL.json)
-![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NicoRobertIn/c4128ff5fec462d83e2ae8a229917537/raw/heads_main_QUERY_MAJORFAIL.json)
+![Pass Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_QUERY_PASS.json)
+![NotTested Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_QUERY_NOTTESTED.json)
+![CannotTell Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_QUERY_CANNOTTELL.json)
+![MinorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_QUERY_MINORFAIL.json)
+![MajorFail Badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gnardin/c4128ff5fec462d83e2ae8a229917537/raw/heads_update-scenario-logistics-configure-organization_QUERY_MAJORFAIL.json)
  
 # Hyperagent ontology git space
 [HyperAgents](https://www.hyperagents.org/) is an ANR/SNF project working towards the deployment of world-wide hybrid communities of people and artificial agents on the Web. For this purpose, we are defining a new class of multi-agent systems (MAS) that are: 
