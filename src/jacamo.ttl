@@ -1060,7 +1060,7 @@
         sh:description "The platform described by the profile";
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype hmas:HypermediaMASPlatform    
+        sh:class hmas:HypermediaMASPlatform    
     ] .
 
 :workspaceProfileSpecification a sh:NodeShape ;
@@ -1072,7 +1072,7 @@
         sh:description "The workspace described by the profile";
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype hmas:Workspace   
+        sh:class hmas:Workspace   
     ] .
 
 :artifactProfileSpecification a sh:NodeShape ;
@@ -1084,7 +1084,7 @@
         sh:description "The artifact described by the profile";
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype hmas:Artifact
+        sh:class hmas:Artifact
     ] .
 
 :bodyProfileSpecification a sh:NodeShape ;
@@ -1096,14 +1096,14 @@
         sh:description "The body described by the profile";
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype :Body
+        sh:class :Body
     ], [ 
         sh:path :isBodyOf ;
         sh:name "agent";
         sh:description "The agent whose body is described by the profile";
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:datatype hmas:Agent
+        sh:class hmas:Agent
     ] .
 
 :artifactCreationSpecification  a sh:NodeShape ;
