@@ -21,7 +21,7 @@
     dct:title "Hypermedia MAS Regulation Ontology"@en, "Ontologie de Régulation des SMA Hypermédias"@fr ;
     dct:description "An ontology to describe the regulation of Hypermedia Multi-Agent Systems."@en, "L'ontologie pour décrire la régulation des systèmes multi-agents hypermédias."@fr ;
     dct:issued "2022-05-01"^^xsd:date ;
-    dct:modified "2024-05-27"^^xsd:date ;
+    dct:modified "2024-12-09"^^xsd:date ;
     owl:imports :core ;
     dct:creator <https://orcid.org/0000-0002-4506-2745> ;
     dct:contributor <https://orcid.org/0000-0002-2956-0533> ; 
@@ -110,19 +110,14 @@
     rdfs:comment "A Commitment is an engagement of an Agent with the duties of a Mission."@en ;
     rdfs:label "commitment"@en, "engagement"@fr .
 
-:Usage a owl:Class ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A set of Facilities that Agents can use in a Setting."@en ;
-    rdfs:label "usage"@en, "usage"@fr .
-    
 :Setting a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "A Setting is the context in which a Usage is set."@en ;
-    rdfs:label "setting"@en, "contexte d'usage"@fr .
+    rdfs:comment "A Setting is the context in which an Access is set."@en ;
+    rdfs:label "setting"@en, "contexte d'accès"@fr .
 
 :Access a owl:Class ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:comment "An opportunity an Agent have to use an Artifact in the context of a Usage."@en ;
+    rdfs:comment "An opportunity an Agent has to use Facilities of Artifacts in a Setting. Agents have access even if they never use these Facilities. One Access should not be understood as one 'use' of these Facilities."@en ;
     rdfs:label "access"@en, "accès"@fr .
     
 #################################################################
@@ -263,42 +258,28 @@
     rdfs:domain :Access ;
     rdfs:range :Artifact ;
     rdfs:comment "A relation that refers to an Artifact involved in an Access."@en ;
-    rdfs:label "is access to"@en, "est l'accès à"@fr .
+    rdfs:label "is access to"@en, "est accès à"@fr .
 
 :isAccessOf a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Access ;
     rdfs:range :Agent ;
     rdfs:comment "A relation that refers to an Agent involved in an Access."@en ;
-    rdfs:label "is access of"@en, "est l'accès de"@fr .
+    rdfs:label "is access of"@en, "est accès de"@fr .
 
 :isAccessFor a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Access ;
-    rdfs:range :Usage ;
-    rdfs:comment "A relation that refers to a Usage involved in an Access."@en ;
-    rdfs:label "is access for"@en, "est l'accès pour"@fr .
-
-:isUsageOf a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Usage ;
     rdfs:range :Facility ;
-    rdfs:comment "A relation that refers to a Facility involved in a Usage."@en ;
-    rdfs:label "is usage of"@en, "est un usage de"@fr .
+    rdfs:comment "A relation that refers to a Facility involved in an Access."@en ;
+    rdfs:label "is access for"@en, "est accès pour"@fr .
 
-:isUsageIn a owl:ObjectProperty ;
+:isAccessIn a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Usage ;
+    rdfs:domain :Access ;
     rdfs:range :Setting ;
-    rdfs:comment "A relation that refers to a Setting involved in a Usage."@en ;
-    rdfs:label "is usage in"@en, "est un usage dans"@fr .
-
-:hasUsageRelationshipWith a owl:ObjectProperty ;
-    rdfs:isDefinedBy :regulation ;
-    rdfs:domain :Usage ;
-    rdfs:range :Usage ;
-    rdfs:comment "A relation that refers to the relationship between two Usages."@en ;
-    rdfs:label "has usage relationship with"@en, "a une relation d'usage avec"@fr .
+    rdfs:comment "A relation that refers to a Setting involved in an Access."@en ;
+    rdfs:label "is access in"@en, "est accès dans"@fr .
 
 :hasFacility a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
@@ -312,11 +293,11 @@
     rdfs:domain :Setting ;
     rdfs:range :Organization ;
     rdfs:comment "A relation that refers to a Setting of an Organization."@en ;
-    rdfs:label "is setting of"@en, "est un contexte d'usage de"@fr .
+    rdfs:label "is setting of"@en, "est contexte d'usage de"@fr .
 
 :proposesSetting a owl:ObjectProperty ;
     rdfs:isDefinedBy :regulation ;
     rdfs:domain :Organization ;
     rdfs:range :Setting ;
     rdfs:comment "A relation that refers to a Setting that can be used in the context of an Organization."@en ;
-    rdfs:label "proposes setting"@en, "fournit un contexte d'usage"@fr .
+    rdfs:label "proposes setting"@en, "fournit contexte d'usage"@fr .

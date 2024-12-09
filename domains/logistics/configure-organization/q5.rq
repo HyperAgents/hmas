@@ -1,0 +1,11 @@
+prefix ex: <http://example.org/>
+prefix hmas: <https://purl.org/hmas/>
+
+select distinct ?access ?facility
+where {
+  ex:Forklift_1 hmas:hasFacility ?facility .
+  
+  ?access hmas:isAccessTo ex:Forklift_1 ;
+          hmas:isAccessFor ?facility .
+}
+order by ?access ?facility

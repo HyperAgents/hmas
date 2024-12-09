@@ -26,7 +26,7 @@ rdfs:
 
 ## Workspace
 ex:LogisticsWS a hmas:Workspace ;
-    hmas:contains ex:John, ex:Frank, ex:Gabriel, ex:Igor, ex:Jane, ex:Kate, ex:Leo, ex:Marie, ex:Nancy, ex:Forklift_1, ex:Forklift_2, ex:Forklift_3, ex:Forklift_4, ex:Palletjack_1, ex:Palletjack_2, ex:Palletjack_3, ex:Palletjack_4, ex:Barcode_Reader_1, ex:Barcode_Reader_2, ex:Label_Printer_1, ex:Label_Printer_2 .
+    hmas:contains ex:John, ex:Frank, ex:Gabriel, ex:Igor, ex:Jane, ex:Kate, ex:Leo, ex:Marie, ex:Nancy, ex:Forklift_1, ex:Forklift_2, ex:Forklift_3, ex:Palletjack_1, ex:Palletjack_2, ex:Palletjack_3, ex:Barcode_Reader_1, ex:Barcode_Reader_2, ex:Label_Printer_1, ex:Label_Printer_2 .
 
 ## Agents
 ex:John a hmas:Agent ;
@@ -70,10 +70,6 @@ ex:Forklift_3 a hmas:Artifact ;
     hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMaterialOf ex:FL_Logistics ;
     hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
-ex:Forklift_4 a hmas:Artifact ;
-    hmas:isContainedIn ex:LogisticsWS ;
-    hmas:isMaterialOf ex:FL_Logistics ;
-    hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
 ex:Palletjack_1 a hmas:Artifact ;
     hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMaterialOf ex:FL_Logistics ;
@@ -83,10 +79,6 @@ ex:Palletjack_2 a hmas:Artifact ;
     hmas:isMaterialOf ex:FL_Logistics ;
     hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
 ex:Palletjack_3 a hmas:Artifact ;
-    hmas:isContainedIn ex:LogisticsWS ;
-    hmas:isMaterialOf ex:FL_Logistics ;
-    hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
-ex:Palletjack_4 a hmas:Artifact ;
     hmas:isContainedIn ex:LogisticsWS ;
     hmas:isMaterialOf ex:FL_Logistics ;
     hmas:hasFacility ex:LiftUp, ex:LiftDown, ex:Move .
@@ -303,11 +295,11 @@ ex:Logistics a sh:NodeShape, rdfs:Class ;
         ] ;
     sh:property [
         sh:path hmas:proposesSetting ;
-        sh:hasValue ex:ReceivingSetting ;
+        sh:hasValue ex:ReceiveSetting ;
         ] ;
     sh:property [
         sh:path hmas:proposesSetting ;
-        sh:hasValue ex:PickingSetting ;
+        sh:hasValue ex:PickSetting ;
         ] ;
     sh:property [
         sh:path hmas:proposesFacility ;
@@ -477,7 +469,6 @@ ex:Planner_Planning_Membership a sh:NodeShape, rdfs:Class ;
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
         sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
@@ -495,11 +486,44 @@ ex:Carrier_Shipping_Membership a sh:NodeShape, rdfs:Class ;
         sh:path hmas:isMembershipOf ;
         sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
         sh:qualifiedMinCount 1 ;
-        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipFor ;
         sh:hasValue ex:Carrier ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] .
+ex:Collector_Shipping_Membership a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:qualifiedMinCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipFor ;
+        sh:hasValue ex:Collector ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipIn ;
+        sh:qualifiedValueShape [ sh:class ex:ShippingDepartment ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+        ] .
+ex:Deliverer_Shipping_Membership a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf hmas:Membership ;
+    sh:property [
+        sh:path hmas:isMembershipOf ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:qualifiedMinCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isMembershipFor ;
+        sh:hasValue ex:Deliverer ;
         ] ;
     sh:property [
         sh:path hmas:isMembershipIn ;
@@ -615,77 +639,79 @@ ex:CommitmentCardinalityShape a sh:NodeShape ;
         sh:maxCount 1 ;
         ] .
 
-## Usage Specifications
-ex:Collecting_Usage a sh:NodeShape, rdfs:Class ;
-    rdfs:subClassOf hmas:Usage ;
+## Access Specifications
+ex:Receive_Move_Access a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf hmas:Access ;
     sh:property [
-        sh:path hmas:isUsageOf ;
-        sh:maxCount 4 ;
+        sh:path hmas:isAccessOf ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
-        sh:path hmas:isUsageOf ;
+        sh:path hmas:isAccessTo ;
+        sh:qualifiedValueShape [ sh:class hmas:Artifact ] ;
+        sh:qualifiedMinCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isAccessIn ;
+        sh:hasValue ex:ReceiveSetting ;
+        ] ;
+    sh:property [
+        sh:path hmas:isAccessFor ;
+        sh:minCount 3 ;
+        sh:maxCount 3 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isAccessFor ;
         sh:hasValue ex:LiftUp ;
         ] ;
     sh:property [
-        sh:path hmas:isUsageOf ;
+        sh:path hmas:isAccessFor ;
         sh:hasValue ex:LiftDown ;
         ] ;
     sh:property [
-        sh:path hmas:isUsageOf ;
+        sh:path hmas:isAccessFor ;
         sh:hasValue ex:Move ;
+        ] .
+ex:Receive_ReadBarCode_Access a sh:NodeShape, rdfs:Class ;
+    rdfs:subClassOf hmas:Access ;
+    sh:property [
+        sh:path hmas:isAccessOf ;
+        sh:qualifiedValueShape [ sh:class hmas:Agent ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
         ] ;
     sh:property [
-        sh:path hmas:isUsageOf ;
+        sh:path hmas:isAccessTo ;
+        sh:qualifiedValueShape [ sh:class hmas:Artifact ] ;
+        sh:qualifiedMinCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isAccessIn ;
+        sh:hasValue ex:ReceiveSetting ;
+        ] ;
+    sh:property [
+        sh:path hmas:isAccessFor ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        ] ;
+    sh:property [
+        sh:path hmas:isAccessFor ;
         sh:hasValue ex:ReadBarcode ;
-        ] ;
-    sh:property [
-        sh:path hmas:isUsageIn ;
-        sh:hasValue ex:ReceivingSetting ;
-        sh:maxCount 1 ;
         ] .
-ex:Delivering_Usage a sh:NodeShape, rdfs:Class ;
-    rdfs:subClassOf hmas:Usage ;
-    sh:property [
-        sh:path hmas:isUsageOf ;
-        sh:maxCount 4 ;
-        ] ;
-    sh:property [
-        sh:path hmas:isUsageOf ;
-        sh:hasValue ex:LiftUp ;
-        ] ;
-    sh:property [
-        sh:path hmas:isUsageOf ;
-        sh:hasValue ex:LiftDown ;
-        ] ;
-    sh:property [
-        sh:path hmas:isUsageOf ;
-        sh:hasValue ex:Move ;
-        ] ;
-    sh:property [
-        sh:path hmas:isUsageOf ;
-        sh:hasValue ex:PrintLabel ;
-        ] ;
-    sh:property [
-        sh:path hmas:isUsageIn ;
-        sh:hasValue ex:PickingSetting ;
-        sh:maxCount 1 ;
-        ] .
-
-## Usage Relationship Specifications
-ex:compatibleUsage rdfs:subPropertyOf hmas:hasUsageRelationshipWith .
 
 ## Access Constraint Specifications
 ex:AccessFacilitiesShape a sh:NodeShape ;
     sh:targetClass hmas:Access ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "The artifacts should have all the facilities specified in the usage." ;
+        sh:message "The artifacts associated to an access should jointly have all the facilities associated to that access." ;
         sh:prefixes ex:, hmas:, rdfs: ;
         sh:select """
           SELECT (?access as $this)
           WHERE {
-            ?access hmas:isAccessFor ?usage .
-            ?usage hmas:isUsageOf ?facility .
+            ?access hmas:isAccessFor ?facility .
 
             FILTER NOT EXISTS {
               ?access hmas:isAccessTo ?artifact .
@@ -713,6 +739,8 @@ ex:FinanceOfficer a hmas:Role .
 ex:AccountManager a hmas:Role .
 ex:Planner a hmas:Role .
 ex:Carrier a hmas:Role .
+ex:Collector a hmas:Role .
+ex:Deliverer a hmas:Role .
 
 ## Groups
 ex:FL_AdministrativeDepartment a ex:AdministrativeDepartment ;
@@ -760,9 +788,21 @@ ex:FL_Carrier_Shipping a ex:Carrier_Shipping_Membership ;
     hmas:isMembershipOf ex:Jane ;
     hmas:isMembershipFor ex:Carrier ;
     hmas:isMembershipIn ex:FL_ShippingDepartment .
-
+ex:FL_Collector_Shipping a ex:Collector_Shipping_Membership ;
+    hmas:isMembershipOf ex:Marie, ex:Leo ;
+    hmas:isMembershipFor ex:Collector ;
+    hmas:isMembershipIn ex:FL_ShippingDepartment .
+ex:FL_Deliverer_Shipping a ex:Deliverer_Shipping_Membership ;
+    hmas:isMembershipOf ex:Nancy, ex:Leo ;
+    hmas:isMembershipFor ex:Deliverer ;
+    hmas:isMembershipIn ex:FL_ShippingDepartment .
+    
 ex:FL_Planner_Planning ex:canCommunicateWith ex:FL_Carrier_Shipping .
+ex:FL_Planner_Planning ex:canCommunicateWith ex:FL_Colletor_Shipping .
+ex:FL_Planner_Planning ex:canCommunicateWith ex:FL_Deliverer_Shipping .
 ex:FL_Carrier_Shipping ex:canCommunicateWith ex:FL_Planner_Planning .
+ex:FL_Collector_Shipping ex:canCommunicateWith ex:FL_Planner_Planning .
+ex:FL_Deliverer_Shipping ex:canCommunicateWith ex:FL_Planner_Planning .
 
 ## Organizational Goals
 ex:HumanResourcesManaged a hmas:OrganizationalGoal .
@@ -811,9 +851,9 @@ ex:AccountManager_Dept_Hire_Commitment a hmas:Commitment ;
     hmas:isCommitmentFor ex:AccountManager_Dept_Hire_Mission .
 
 ## Settings
-ex:PickingSetting a hmas:Setting ;
+ex:PickSetting a hmas:Setting ;
     hmas:isSettingOf ex:FL_Logistics .
-ex:ReceivingSetting a hmas:Setting ;
+ex:ReceiveSetting a hmas:Setting ;
     hmas:isSettingOf ex:FL_Logistics .
 
 ## Facilities
@@ -837,39 +877,50 @@ ex:PrintLabel a hmas:Facility ;
     rdfs:comment "Ability to print a label with barcode."@en ;
     rdfs:label "print label"@en, "imprimer l'étiquette"@fr .
 
-## Usages
-ex:FL_Lyon_Collecting_Usage a ex:Collecting_Usage ;
-    hmas:isUsageIn ex:ReceivingSetting ;
-    hmas:isUsageOf ex:LiftUp, ex:LiftDown, ex:Move, ex:ReadBarcode .
-ex:FL_StEtienne_Collecting_Usage a ex:Collecting_Usage ;
-    hmas:isUsageIn ex:ReceivingSetting ;
-    hmas:isUsageOf ex:LiftUp, ex:LiftDown, ex:Move, ex:ReadBarcode .
-ex:FL_Lyon_Delivering_Usage a ex:Delivering_Usage ;
-    hmas:isUsageIn ex:PickingSetting ;
-    hmas:isUsageOf ex:LiftUp, ex:LiftDown, ex:Move, ex:PrintLabel .
-ex:FL_StEtienne_Delivering_Usage a ex:Delivering_Usage ;
-    hmas:isUsageIn ex:PickingSetting ;
-    hmas:isUsageOf ex:LiftUp, ex:LiftDown, ex:Move, ex:PrintLabel .
-
-ex:FL_StEtienne_Collecting_Usage ex:compatibleUsage ex:FL_StEtienne_Delivering_Usage .
-
 ## Accesses
-ex:FL_Lyon_Collecting_Access a hmas:Access ;
+ex:FL_Lyon_Receive_Move_Access a ex:Receive_Move_Access ;
     hmas:isAccessOf ex:Marie ;
-    hmas:isAccessTo ex:Forklift_1, ex:Palletjack_1, ex:Barcode_Reader_1 ;
-    hmas:isAccessFor ex:FL_Lyon_Collecting_Usage .
-ex:FL_StEtienne_Collecting_Access a hmas:Access ;
-    hmas:isAccessOf ex:Leo ;
-    hmas:isAccessTo ex:Forklift_2, ex:Palletjack_2, ex:Barcode_Reader_2 ;
-    hmas:isAccessFor ex:FL_StEtienne_Collecting_Usage .
-ex:FL_Lyon_Delivering_Access a hmas:Access ;
+    hmas:isAccessTo ex:Forklift_1, ex:Palletjack_1 ;
+    hmas:isAccessIn ex:ReceiveSetting ;
+    hmas:isAccessFor ex:LiftUp, ex:LiftDown, ex:Move .
+ex:FL_Lyon_Receive_ReadBarcode_Access a ex:Receive_ReadBarCode_Access ;
+    hmas:isAccessOf ex:Marie ;
+    hmas:isAccessTo ex:Barcode_Reader_1 ;
+    hmas:isAccessIn ex:ReceiveSetting ;
+    hmas:isAccessFor ex:ReadBarcode .
+
+ex:FL_Lyon_Pick_Move_Access a hmas:Access ;
     hmas:isAccessOf ex:Nancy ;
-    hmas:isAccessTo ex:Forklift_3, ex:Palletjack_3, ex:Label_Printer_1 ;
-    hmas:isAccessFor ex:FL_Lyon_Delivering_Usage .
-ex:FL_StEtienne_Delivering_Access a hmas:Access ;
+    hmas:isAccessTo ex:Forklift_2, ex:Palletjack_2 ;
+    hmas:isAccessIn ex:PickSetting ;
+    hmas:isAccessFor ex:LiftUp, ex:LiftDown, ex:Move .
+ex:FL_Lyon_Pick_PrintLabel_Access a hmas:Access ;
+    hmas:isAccessOf ex:Nancy ;
+    hmas:isAccessTo ex:Label_Printer_1 ;
+    hmas:isAccessIn ex:PickSetting ;
+    hmas:isAccessFor ex:PrintLabel .
+
+ex:FL_StEtienne_Receive_Move_Access a ex:Receive_Move_Access ;
     hmas:isAccessOf ex:Leo ;
-    hmas:isAccessTo ex:Forklift_4, ex:Palletjack_4, ex:Label_Printer_2 ;
-    hmas:isAccessFor ex:FL_StEtienne_Delivering_Usage .
+    hmas:isAccessTo ex:Forklift_3, ex:Palletjack_3 ;
+    hmas:isAccessIn ex:ReceiveSetting ;
+    hmas:isAccessFor ex:LiftUp, ex:LiftDown, ex:Move .
+ex:FL_StEtienne_Receive_ReadBarcode_Access a ex:Receive_ReadBarCode_Access ;
+    hmas:isAccessOf ex:Leo ;
+    hmas:isAccessTo ex:Barcode_Reader_2 ;
+    hmas:isAccessIn ex:ReceiveSetting ;
+    hmas:isAccessFor ex:ReadBarcode .
+
+ex:FL_StEtienne_Pick_Move_Access a hmas:Access ;
+    hmas:isAccessOf ex:Leo ;
+    hmas:isAccessTo ex:Forklift_3, ex:Palletjack_3 ;
+    hmas:isAccessIn ex:PickSetting ;
+    hmas:isAccessFor ex:LiftUp, ex:LiftDown, ex:Move .
+ex:FL_StEtienne_Pick_PrintLabel_Access a hmas:Access ;
+    hmas:isAccessOf ex:Leo ;
+    hmas:isAccessTo ex:Label_Printer_2 ;
+    hmas:isAccessIn ex:PickSetting ;
+    hmas:isAccessFor ex:PrintLabel .
     
 ## Organizations
 ex:FL_LogisticsProfile a hmas:ResourceProfile .
@@ -881,5 +932,5 @@ ex:FL_Logistics a ex:Logistics ;
     hmas:proposesRole ex:Director, ex:HumanResourcesOfficer, ex:FinanceOfficer, ex:AccountManager, ex:Planner, ex:Carrier, ex:Collector, ex:Deliverer ;
     hmas:isStructuredBy ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment, ex:FL_HumanResourcesDepartment, ex:FL_FinanceDepartment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment ;
     hmas:proposesProcess ex:AccountManager_Hire_Process ;
-    hmas:proposesSetting ex:PickingSetting, ex:ReceivingSetting ;
+    hmas:proposesSetting ex:PickSetting, ex:ReceiveSetting ;
     hmas:proposesFacility ex:LiftUp, ex:LiftDown, ex:Move, ex:ReadBarcode, ex:PrintLabel .

@@ -1,0 +1,4 @@
+access,facility
+http://example.org/FL_Lyon_Receive_Move_Access,http://example.org/LiftDown
+http://example.org/FL_Lyon_Receive_Move_Access,http://example.org/LiftUp
+http://example.org/FL_Lyon_Receive_Move_Access,http://example.org/Move

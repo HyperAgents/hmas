@@ -3,9 +3,9 @@ prefix hmas: <https://purl.org/hmas/>
 
 select distinct ?artifact
 where {
-  ?usage a ?usageModel ;
-         hmas:isUsageIn ex:ReceivingSetting ;
-         hmas:isUsageOf ?facility .
+  ?access hmas:isAccessIn ex:ReceiveSetting ;
+          hmas:isAccessFor ?facility ;
+          hmas:isAccessTo ?artifact .
 
   ?artifact hmas:isMaterialOf ex:FL_Logistics ;
             hmas:hasFacility ?facility .
