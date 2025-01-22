@@ -4,13 +4,13 @@
 
 The FL Logistics has a depot in Lyon and another in Saint-Étienne. Each depot has one _receive_ and one _pick_ setting.
 
-In the _receive_ setting, agents have access to equipment that can handle (i.e., lift and move) pallets, and list the products in a pallet based on barcode.
+In the _receive_ setting, agents have access to equipment that can handle (i.e., lift and move) pallets and can read barcodes identifying the pallets' content.
 
-In the _pick_ setting, agents have access to equipment that can handle (i.e., lift and move) pallets, and print barcode labels identifying the list the products in a pallet.
+In the _pick_ setting, agents have access to equipment that can handle (i.e., lift and move) pallets and print labels with barcode identifying the pallets' content.
 
-Forklifts are capable of lifting up and down materials on pallets to/from high shelves, as well as moving them from one location to another. Pallet jacks are capable of lifting up and down materials on pallets and move them from one location to another.
+Forklifts are capable of lifting up and down pallets to/from high shelves, as well as moving them from one location to another. Pallet jacks are capable of lifting up and down pallets and move them from one location to another.
 
-The barcode reader is capable of reading barcodes identifying materials recorded in the barcode. The label machine is capable of printing labels with barcode to identify materials.
+The barcode reader is capable of reading barcodes and the label machine is capable of printing labels with barcode.
 
 Each depot makes available one forklift, one pallet jack, and one barcode reader in the _receive_ setting, and one forklift, one pallet jack, and one label printer in the _pick_ setting.
 
