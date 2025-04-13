@@ -1,0 +1,6 @@
+PREFIX : <#>
+
+SELECT ?w
+WHERE {
+  ?w rdf:type :PossibleWorld .
+}

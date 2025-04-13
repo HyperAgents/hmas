@@ -1,0 +1,36 @@
+@base <https://purl.org/hmas/> .
+@prefix : <> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix hmas: <https://ci.mines-stetienne.fr/hmas> .
+@prefix hreg: <https://ci.mines-stetienne.fr/regulation> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<#> rdf:type owl:Ontology ;
+                                       owl:imports <https://ci.mines-stetienne.fr/hmas#> .
+
+
+:possible-worlds a owl:Ontology .
+
+:PossibleWorld a rdfs:Class ;
+    rdfs:comment "A possible world is a reified set of RDF triples."@en ;
+    rdfs:isDefinedBy :possible-worlds ;
+    rdfs:label "PossibleWorld"@en .
+
+
+:NAryRelation a rdfs:Class ; 
+    rdfs:comment "A specification of the standard behaviors one expects from others in an organization."@en ;
+    rdfs:isDefinedBy :possible-worlds ;
+    rdfs:label "NAryRelation"@en .
+
+:hasNAryRelation a rdf:Property ;
+    rdfs:comment "A specification of the standard behaviors one expects from others in an organization."@en ;
+    rdfs:isDefinedBy :possible-worlds ;
+    rdfs:label "hasNAryRelation"@en ;
+    rdfs:range :NAryRelation .
+    
+
+
