@@ -69,6 +69,35 @@
     rdfs:comment "A Group structures an Organization."@en ;
     rdfs:label "group"@en, "groupe"@fr .
 
+:Regulation a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A rule, principle, or condition that governs procedure or behavior."@en ;
+    rdfs:label "regulation"@en, "règlementation"@fr .
+
+:RegulativeNorm a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:subClassOf :Regulation ;
+    rdfs:comment "A specification of constraints on a behavior and/or a state of affairs that are expected to be regulated in an Organization." ;
+    rdfs:label "regulative norm"@en, "norme de régulation"@fr .
+
+:Obligation a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:subClassOf :RegulativeNorm ;
+    rdfs:comment "A specification of a behavior that an Agent is required to perform or a state of affairs an Agent is required to achieve."@en ;
+    rdfs:label "obligation"@en, "obligation"@fr .
+
+:Permission a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:subClassOf :RegulativeNorm ;
+    rdfs:comment "A specification of a behavior that an Agent is permitted to perform or a state of affairs an Agent is permitted to achieve."@en ;
+    rdfs:label "permission"@en, "permission"@fr .
+
+:Prohibition a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:subClassOf :RegulativeNorm ;
+    rdfs:comment "A specification of a behavior that an Agent is forbidden to perform or a state of affairs an Agent is forbidden to achieve."@en ;
+    rdfs:label "prohibition"@en, "prohibition"@fr .
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -152,3 +181,17 @@
     rdfs:range :Group ;
     rdfs:comment "A relation that refers to a subgroup relationship between two Groups."@en ;
     rdfs:label "is subgroup of"@en, "est un sous-groupe de"@fr .
+
+:regulates a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Regulation ;
+    rdfs:range :Organization ;
+    rdfs:comment "A relation that refers to a Regulation that regulates an Organization."@en ;
+    rdfs:label "regulates"@en, "régule"@fr .
+
+:regulatedBy a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :Regulation ;
+    rdfs:comment "A relation that refers to an Organization regulated by a Regulation."@en ;
+    rdfs:label "regulated by"@en, "régulé par"@fr .

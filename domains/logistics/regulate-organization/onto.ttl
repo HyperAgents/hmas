@@ -1,0 +1,65 @@
+@base <https://purl.org/hmas/> .
+@prefix : <> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+#################################################################
+#    Classes
+#################################################################
+
+:Regulation a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:comment "A rule, principle, or condition that governs procedure or behavior."@en ;
+    rdfs:label "regulation"@en, "règlementation"@fr .
+
+:RegulativeNorm a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:subClassOf :Regulation ;
+    rdfs:comment "A specification of constraints on a behavior and/or a state of affairs that are expected to be regulated in an Organization." ;
+    rdfs:label "regulative norm"@en, "norme de régulation"@fr .
+
+:Obligation a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:subClassOf :RegulativeNorm ;
+    rdfs:comment "A specification of a behavior that an Agent is required to perform or a state of affairs an Agent is required to achieve."@en ;
+    rdfs:label "obligation"@en, "obligation"@fr .
+
+:Permission a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:subClassOf :RegulativeNorm ;
+    rdfs:comment "A specification of a behavior that an Agent is permitted to perform or a state of affairs an Agent is permitted to achieve."@en ;
+    rdfs:label "permission"@en, "permission"@fr .
+
+:Prohibition a owl:Class ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:subClassOf :RegulativeNorm ;
+    rdfs:comment "A specification of a behavior that an Agent is forbidden to perform or a state of affairs an Agent is forbidden to achieve."@en ;
+    rdfs:label "prohibition"@en, "prohibition"@fr .
+
+#################################################################
+#    Properties
+#################################################################
+
+:regulates a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Regulation ;
+    rdfs:range :Organization ;
+    rdfs:comment "A relation that refers to a Regulation that regulates an Organization."@en ;
+    rdfs:label "regulates"@en, "régule"@fr .
+
+:regulatedBy a owl:ObjectProperty ;
+    rdfs:isDefinedBy :regulation ;
+    rdfs:domain :Organization ;
+    rdfs:range :Regulation ;
+    rdfs:comment "A relation that refers to an Organization regulated by a Regulation."@en ;
+    rdfs:label "regulated by"@en, "régulé par"@fr .
