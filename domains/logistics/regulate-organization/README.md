@@ -14,7 +14,7 @@ Jane is a carrier in the FL Logistics.
 
 Collectors are responsible for unloading pallets from trucks, checking, and storing them in the storage area. They are allowed to use equipment that lifts and moves pallets to transport the pallets from the truck to the storage area. He also uses a barcode reader to check the pallet contents.
 
-Once a truck arrives at the Saint-Étienne depot, Leo, a collector at the Saint-Étienne depot, uses the Pallet Jack 3 to unload the pallets from the truck and transport them to the receiving area. Leo then checks the pallet contents against the description on the pallet label using the Barcode Reader 2. Since the pallet contents correspond to the label description, Leo uses the Forklift 3 to transport and lift the pallets up in the shelves in the storage area.
+Once a truck arrives at the Saint-Étienne depot, Leo, a collector at the Saint-Étienne depot, uses the Pallet Jack 3 to unload the pallets from the truck and transport them to the receiving area. Leo then checks the pallet contents against the description on the pallet label using the Barcode Reader 2. Since the pallet contents correspond to the label description, Leo uses the Forklift 3 to transport and lift the pallets up into the shelves in the storage area.
 
 ### Regulations
 
@@ -31,9 +31,11 @@ Once a truck arrives at the Saint-Étienne depot, Leo, a collector at the Saint-
 
 | ID | Question in Natural Language | Example |
 |----|------------------------------|---------|
-| q1 | What are the violated regulations? | |
-| q2 | What are the agents using a Permission regulation? | |
-
+| q1 | What are the regulative norms in organization X?                | What are the regulative norms in the FL Logistics organization? `ex:R1`, `ex:R2`, `ex:R3`, `ex:R4`, `ex:R5`, `ex:R6`                            |
+| q2 | What are the violated regulative norms in organization X?       | What are the violated regulative norms in the FL Logistics organization? `ex:R2`, `ex:R6`                                                       |
+| q3 | Who are the agents doing something permitted in organization X? | Who are the agents doing something permitted in the FL Logistics organization? `ex:Marie`, `ex:Leo`                                             |
+| q4 | What are the regulated missions in organization X?              | What are the regulated missions in the FL Logistics organization? `ex:DeliverGoods_Mission`, `ex:CarryGoods_Mission`, `ex:CollectGoods_Mission` |
+| q5 | What are the regulated settings in organization X?              | What are the regulated settings in the FL Logistics organization? `ex:PickSetting`, `ex:ReceiveSetting`                                         |
 
 ## Glossary
 
@@ -65,3 +67,9 @@ It is also assumed that
   * _Obligation_ describes what must be done
   * _Prohibition_ describes what must not be done
   * _Permission_ describes what can be done
+
+* To verify the **Regulative Norms** R1-R6 specified using SHACL, we created a data file per regulative norm representing a violation to the SHACL specification. We used [Apache Jena v5.4.0](https://jena.apache.org) to check if the SHACL do not validate the content, as expected. The Apache Jena command line syntax used is
+
+`$JENA_HOME/bin/shacl v --shapes=shape.ttl --data=data-[RX].ttl`
+
+where `[RX]` refers to the regulation Id.

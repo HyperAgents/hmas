@@ -341,5 +341,5 @@ ex:FL_Logistics a ex:Logistics ;
     hmas:isStructuredBy ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment, ex:FL_HumanResourcesDepartment, ex:FL_FinanceDepartment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment ;
     hmas:proposesProcess ex:AccountManager_Hire_Process, ex:Order1_TransferGoods_Process ;
     hmas:proposesSetting ex:PickSetting, ex:ReceiveSetting, ex:CarrySetting ;
-    hmas:proposesFacility ex:LiftUp, ex:LiftDown, ex:Move, ex:ReadBarcode, ex:PrintLabel, ex:Carry .
-    
+    hmas:proposesFacility ex:LiftUp, ex:LiftDown, ex:Move, ex:ReadBarcode, ex:PrintLabel, ex:Carry ;
+    hmas:isRegulatedBy ex:R1, ex:R2, ex:R3, ex:R4, ex:R5, ex:R6 .    

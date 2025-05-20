@@ -253,9 +253,9 @@ ex:AccountManager_Dept_Hire_Commitment a hmas:Commitment ;
 ex:Order1_DeliverGoods_Commitment a hmas:Commitment ;
     hmas:isCommitmentOf ex:Marie ;
     hmas:isCommitmentFor ex:Order1_DeliverGoods_Mission .
-#ex:Order1_CarryGoods_Commitment a hmas:Commitment ;
-#    hmas:isCommitmentOf ex:Jane ;
-#    hmas:isCommitmentFor ex:Order1_CarryGoods_Mission .
+ex:Order1_CarryGoods_Commitment a hmas:Commitment ;
+    hmas:isCommitmentOf ex:Jane ;
+    hmas:isCommitmentFor ex:Order1_CarryGoods_Mission .
 ex:Order1_CollectGoods_Commitment a hmas:Commitment ;
     hmas:isCommitmentOf ex:Leo ;
     hmas:isCommitmentFor ex:Order1_CollectGoods_Mission .
@@ -300,16 +300,16 @@ ex:Carry a hmas:Facility ;
 #    hmas:isAccessIn ex:PickSetting ;
 #    hmas:isAccessFor ex:PrintLabel .
 
-#ex:FL_StEtienne_Receive_Move_Access a ex:Receive_Move_Access ;
-#    hmas:isAccessOf ex:Leo ;
-#    hmas:isAccessTo ex:Forklift_3, ex:Palletjack_3 ;
-#    hmas:isAccessIn ex:ReceiveSetting ;
-#    hmas:isAccessFor ex:LiftUp, ex:LiftDown, ex:Move .
-#ex:FL_StEtienne_Receive_ReadBarcode_Access a ex:Receive_ReadBarCode_Access ;
-#    hmas:isAccessOf ex:Leo ;
-#    hmas:isAccessTo ex:Barcode_Reader_2 ;
-#    hmas:isAccessIn ex:ReceiveSetting ;
-#    hmas:isAccessFor ex:ReadBarcode .
+ex:FL_StEtienne_Receive_Move_Access a ex:Receive_Move_Access ;
+    hmas:isAccessOf ex:Leo ;
+    hmas:isAccessTo ex:Forklift_3, ex:Palletjack_3 ;
+    hmas:isAccessIn ex:ReceiveSetting ;
+    hmas:isAccessFor ex:LiftUp, ex:LiftDown, ex:Move .
+ex:FL_StEtienne_Receive_ReadBarcode_Access a ex:Receive_ReadBarCode_Access ;
+    hmas:isAccessOf ex:Leo ;
+    hmas:isAccessTo ex:Barcode_Reader_2 ;
+    hmas:isAccessIn ex:ReceiveSetting ;
+    hmas:isAccessFor ex:ReadBarcode .
 
 ex:FL_Carry_Truck_Access a hmas:Access ;
     hmas:isAccessOf ex:Jane ;

@@ -767,6 +767,7 @@ ex:AccessFacilitiesShape a sh:NodeShape ;
 
 ### R1
 ex:R1 a sh:NodeShape, hmas:Obligation ;
+    hmas:regulates ex:FL_Logistics ;
     sh:targetClass hmas:Agent ;
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -794,6 +795,7 @@ ex:R1 a sh:NodeShape, hmas:Obligation ;
 
 ### R2
 ex:R2 a sh:NodeShape, hmas:Permission ;
+    hmas:regulates ex:FL_Logistics ;
     sh:targetClass hmas:Agent ;
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -819,6 +821,7 @@ ex:R2 a sh:NodeShape, hmas:Permission ;
 
 ### R3
 ex:R3 a sh:NodeShape, hmas:Obligation ;
+    hmas:regulates ex:FL_Logistics ;
     sh:targetClass hmas:Agent ;
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -846,6 +849,7 @@ ex:R3 a sh:NodeShape, hmas:Obligation ;
 
 ### R4
 ex:R4 a sh:NodeShape, hmas:Prohibition ;
+    hmas:regulates ex:FL_Logistics ;
     sh:targetClass hmas:Agent ;
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -879,6 +883,7 @@ ex:R4 a sh:NodeShape, hmas:Prohibition ;
 
 ### R5
 ex:R5 a sh:NodeShape, hmas:Obligation ;
+    hmas:regulates ex:FL_Logistics ;
     sh:targetClass hmas:Agent ;
     sh:sparql [
         a sh:SPARQLConstraint ;
@@ -906,6 +911,7 @@ ex:R5 a sh:NodeShape, hmas:Obligation ;
 
 ### R6
 ex:R6 a sh:NodeShape, hmas:Permission ;
+    hmas:regulates ex:FL_Logistics ;
     sh:targetClass hmas:Agent ;
     sh:sparql [
         a sh:SPARQLConstraint ;

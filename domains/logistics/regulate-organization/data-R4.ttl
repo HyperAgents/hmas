@@ -289,27 +289,27 @@ ex:Carry a hmas:Facility ;
     rdfs:label "carry"@en, "porter"@fr .
 
 ## Accesses
-ex:FL_Lyon_Pick_Move_Access a hmas:Access ;
-    hmas:isAccessOf ex:Marie ;
-    hmas:isAccessTo ex:Forklift_2, ex:Palletjack_2 ;
-    hmas:isAccessIn ex:PickSetting ;
-    hmas:isAccessFor ex:LiftUp, ex:LiftDown, ex:Move .
-ex:FL_Lyon_Pick_PrintLabel_Access a hmas:Access ;
-    hmas:isAccessOf ex:Marie ;
-    hmas:isAccessTo ex:Label_Printer_1 ;
-    hmas:isAccessIn ex:PickSetting ;
-    hmas:isAccessFor ex:PrintLabel .
+#ex:FL_Lyon_Pick_Move_Access a hmas:Access ;
+#    hmas:isAccessOf ex:Marie ;
+#    hmas:isAccessTo ex:Forklift_2, ex:Palletjack_2 ;
+#    hmas:isAccessIn ex:PickSetting ;
+#    hmas:isAccessFor ex:LiftUp, ex:LiftDown, ex:Move .
+#ex:FL_Lyon_Pick_PrintLabel_Access a hmas:Access ;
+#    hmas:isAccessOf ex:Marie ;
+#    hmas:isAccessTo ex:Label_Printer_1 ;
+#    hmas:isAccessIn ex:PickSetting ;
+#    hmas:isAccessFor ex:PrintLabel .
 
-ex:FL_StEtienne_Receive_Move_Access a ex:Receive_Move_Access ;
-    hmas:isAccessOf ex:Leo ;
-    hmas:isAccessTo ex:Forklift_3, ex:Palletjack_3 ;
-    hmas:isAccessIn ex:ReceiveSetting ;
-    hmas:isAccessFor ex:LiftUp, ex:LiftDown, ex:Move .
-ex:FL_StEtienne_Receive_ReadBarcode_Access a ex:Receive_ReadBarCode_Access ;
-    hmas:isAccessOf ex:Leo ;
-    hmas:isAccessTo ex:Barcode_Reader_2 ;
-    hmas:isAccessIn ex:ReceiveSetting ;
-    hmas:isAccessFor ex:ReadBarcode .
+#ex:FL_StEtienne_Receive_Move_Access a ex:Receive_Move_Access ;
+#    hmas:isAccessOf ex:Leo ;
+#    hmas:isAccessTo ex:Forklift_3, ex:Palletjack_3 ;
+#    hmas:isAccessIn ex:ReceiveSetting ;
+#    hmas:isAccessFor ex:LiftUp, ex:LiftDown, ex:Move .
+#ex:FL_StEtienne_Receive_ReadBarcode_Access a ex:Receive_ReadBarCode_Access ;
+#    hmas:isAccessOf ex:Leo ;
+#    hmas:isAccessTo ex:Barcode_Reader_2 ;
+#    hmas:isAccessIn ex:ReceiveSetting ;
+#    hmas:isAccessFor ex:ReadBarcode .
 
 ex:FL_Carry_Truck_Access a hmas:Access ;
     hmas:isAccessOf ex:Jane ;
@@ -341,5 +341,5 @@ ex:FL_Logistics a ex:Logistics ;
     hmas:isStructuredBy ex:FL_AdministrativeDepartment, ex:FL_OperationsDepartment, ex:FL_HumanResourcesDepartment, ex:FL_FinanceDepartment, ex:FL_CommercialDepartment, ex:FL_PlanningDepartment, ex:FL_ShippingDepartment ;
     hmas:proposesProcess ex:AccountManager_Hire_Process, ex:Order1_TransferGoods_Process ;
     hmas:proposesSetting ex:PickSetting, ex:ReceiveSetting, ex:CarrySetting ;
-    hmas:proposesFacility ex:LiftUp, ex:LiftDown, ex:Move, ex:ReadBarcode, ex:PrintLabel, ex:Carry .
-    
+    hmas:proposesFacility ex:LiftUp, ex:LiftDown, ex:Move, ex:ReadBarcode, ex:PrintLabel, ex:Carry ;
+    hmas:isRegulatedBy ex:R1, ex:R2, ex:R3, ex:R4, ex:R5, ex:R6 .

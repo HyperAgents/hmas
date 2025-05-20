@@ -1,0 +1,13 @@
+prefix ex: <http://example.org/>
+prefix hmas: <https://purl.org/hmas/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+
+select distinct ?reg_norm
+where {
+  ?reg_norm a ?type ;
+            hmas:regulates ex:FL_Logistics .
+
+  FILTER (?type IN (hmas:Obligation, hmas:Prohibition, hmas:Permission))
+}
+order by ?reg_norm
