@@ -63,7 +63,7 @@ Once a truck arrives at the Saint-Étienne depot, Leo, a collector at the Saint-
 | Permission  | Validation          | Empty (SELECT) / False (ASK)    | -               |
 | Permission  | Violation           | Not Empty (SELECT) / True (ASK) | -               |
 
-It is also assumed that
+* It is also assumed that
   * _Obligation_ describes what must be done
   * _Prohibition_ describes what must not be done
   * _Permission_ describes what can be done
